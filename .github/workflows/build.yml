@@ -1,0 +1,69 @@
+# autobleem-manuals CI: the user manuals (manuals/<lang>/*.md) -> HTML + PDF with tools/build_manuals.py
+# (headless Chrome, which the hosted Ubuntu image ships) on every push and PR; on a v* tag or a dispatch with
+# publish on, the PDFs go to the download site's manuals/ (the self-hosted runner - the site is its disk).
+# Gated by AB_CI_ENABLED.
+name: build
+
+on:
+  push:
+    branches: [develop, master]
+    tags: ['v*']
+  pull_request:
+    branches: [develop, master]
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: publish the PDFs to the download site
+        type: boolean
+        default: false
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    if: vars.AB_CI_ENABLED == 'true'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - name: Build HTML + PDF
+        run: |
+          set -euo pipefail
+          command -v google-chrome
+          python3 tools/build_manuals.py
+          ls -l build_manuals/*/
+          n=$(ls build_manuals/*/*.pdf | wc -l)
+          [ "$n" -ge 1 ] || { echo "::error::no PDF was produced"; exit 1; }
+      - uses: actions/upload-artifact@v7
+        with:
+          name: manuals
+          path: build_manuals/
+          retention-days: 30
+
+  publish:
+    if: >-
+      vars.AB_CI_ENABLED == 'true' &&
+      (startsWith(github.ref, 'refs/tags/v') || (github.event_name == 'workflow_dispatch' && inputs.publish))
+    needs: build
+    runs-on: [self-hosted, linux, x64]
+    env:
+      AB_REPO_DIR: /home/claude/autobleem-repo
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          repository: autobleem2/autobleem-repo
+          path: autobleem-repo-tools
+      - uses: actions/download-artifact@v8
+        with:
+          name: manuals
+          path: build_manuals
+      - name: Publish manuals/ to the site
+        # --local: this runner is the build server; a sibling container over the socket (a container job
+        # cannot nest in this runner), the site tree bind-mounted at its own path
+        run: |
+          set -euo pipefail
+          docker run --rm \
+            -v "$PWD:$PWD" -w "$PWD" -v "$AB_REPO_DIR:$AB_REPO_DIR" -e REPO_DIR="$AB_REPO_DIR" \
+            ghcr.io/autobleem2/autobleem-build:latest \
+            bash autobleem-repo-tools/tools/repo_publish.sh --local manuals build_manuals/*/*.pdf
