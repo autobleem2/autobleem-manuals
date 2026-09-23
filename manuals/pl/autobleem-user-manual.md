@@ -38,8 +38,12 @@ poprosisz) i konsoli. AutoBleem działa z pendrive'a bez żadnej zmiany w konsol
 AutoBleem (ABFlashKit, rozdział 6) uruchamia się także z pendrive'a exFAT, co znosi limit 4 GB na plik w FAT32.
 
 1. Pobierz **AutoBleemInstaller-<wersja>.zip** z panelu PlayStation Classic na stronie i rozpakuj gdziekolwiek.
-   W środku jest `AutoBleemInstaller.exe` i pakiet AutoBleem, który instaluje.
-2. Włóż pendrive i uruchom `AutoBleemInstaller.exe`. Wybierz dysk u góry. Zaznacz, co chcesz:
+   W środku jest `AutoBleemInstaller.exe` i jego README; sam AutoBleem jest pobierany podczas instalacji,
+   więc PC potrzebuje internetu.
+2. Włóż pendrive i uruchom `AutoBleemInstaller.exe`. Wybierz **kanał** - *Release* (wersja przetestowana),
+   *Testing* (następna wersja, w trakcie testów) albo *Nightly* (najnowsza wersja rozwojowa, może nie
+   działać) - i dysk. Wiersz pod nimi mówi, którą wersję AutoBleem kanał by zainstalował i co jest teraz
+   na pendrivie. Zaznacz, co chcesz:
    - **Formatowanie pendrive'a** - tylko dla nowego pendrive'a (wszystko na nim zostanie skasowane). Wybierz
      FAT32, chyba że konsola ma kernel AutoBleem.
    - **Bazy okładek** - grafika i opisy biblioteki PS1 (zaznaczone domyślnie; ok. 300 MB).
@@ -62,9 +66,11 @@ sekund. **Gdy dioda jest czerwona, pendrive można wyjąć** i włożyć do PC b
 sprawdzenie dysku; włóż go z powrotem przed naciśnięciem Power. Po odłączeniu zasilania konsola
 następnym razem znów przechodzi przez czuwanie przy starcie.
 
-Żeby **zaktualizować** pendrive, uruchom na nim nowszy instalator: gry, zapisy, ustawienia i zawartość
-RetroArch zostają; wymieniane są tylko pliki samego AutoBleem. Pendrive zrobiony AutoBleem 1.0 albo
-AutoBleem-NG jest automatycznie przenoszony do nowego układu folderów.
+Żeby **zaktualizować** pendrive, uruchom na nim instalator ponownie (przycisk mówi *Update*): instaluje
+najnowszą wersję wybranego kanału, a gry, zapisy, ustawienia i zawartość RetroArch zostają; wymieniane są
+tylko pliki samego AutoBleem. Pendrive zrobiony AutoBleem 1.0 albo AutoBleem-NG jest automatycznie
+przenoszony do nowego układu folderów. Konsola z kernelem AutoBleem i WiFi może też zaktualizować się sama
+(punkt 3.11).
 
 > Fabryczna konsola nie ma zegara ani sieci: daty pokazują się dopiero po instalacji kernela AutoBleem
 > (rozdział 6), a okładki gier RetroArch robi UpdateRoms na PC (rozdział 5).
@@ -131,8 +137,13 @@ inne systemy, `System/Bios/` na BIOS PS1 (punkt 3.10), `Themes/` na motywy.
 Ta sama "konsola" dla dowolnego komputera uruchamianego z USB - system 32-bitowy, więc działają też stare
 maszyny:
 
-1. Pobierz `autobleem-<wersja>-pcusb-i386.img.xz` z panelu PC i zapisz na pendrive 8 GB lub większym
-   przez Raspberry Pi Imager (*Use custom*), balenaEtcher albo Rufus (tryb DD).
+1. Zapisz obraz na pendrive 8 GB lub większym. **Na Windows** użyj **AutoBleemFlasher** (panel PC na
+   stronie - rozpakuj i uruchom `AutoBleemFlasher.exe`; prosi o uprawnienia administratora, bo zapisuje
+   cały dysk): wybierz kanał i pendrive, naciśnij *Write* i potwierdź dwa razy - pobiera obraz, sprawdza
+   go, zapisuje i odczytuje z powrotem. Oferuje tylko pendrive'y USB i karty SD, nigdy dysku, z którego
+   działa Windows, a **wszystko na wybranym pendrivie zostanie skasowane**. Na Linuksie albo macOS pobierz
+   `autobleem-<wersja>-pcusb-i386.img.xz` z panelu PC i zapisz przez
+   `xzcat autobleem-*.img.xz | sudo dd of=/dev/sdX bs=4M status=progress` (albo balenaEtcher).
 2. Uruchom PC z pendrive'a (klawisz menu rozruchowego twojego PC - F12, F8, Esc...). Działa rozruch BIOS
    i UEFI; **Secure Boot musi być wyłączony**.
 3. Pierwsze uruchomienie jest takie jak na Pi: pytanie o sieć, jeśli nie ma kabla, pytanie o RetroArch,
@@ -238,7 +249,7 @@ i zapisuje. Każda zmiana działa od razu.
 | Aktualizuj konfigurację RA | AutoBleem wpisuje swoje ustawienia do konfiguracji RetroArch, gdy uruchamia tam grę. |
 | **Biblioteka**: Pokaż gry wewnętrzne | Wbudowane gry konsoli na listach PlayStation (tylko PlayStation Classic). |
 | Pobieraj okładki z sieci | Skan pobiera brakujące okładki z serwerów libretro (Raspberry Pi, PC, Windows). |
-| **Aktualizacje** | (Raspberry Pi, PC, Windows) `stable`, `latest` (także wydania wstępne) albo `off`. |
+| **Aktualizacje** | Kanał aktualizacji: `release` (wersja przetestowana), `testing` (następna wersja, w trakcie testów), `nightly` (najnowsza wersja rozwojowa) albo `off`. Domyślny wynika z zainstalowanej wersji. |
 
 ![Opcje, w grupach](../images/pl/options.jpg)
 
@@ -339,12 +350,20 @@ emulator działa na wbudowanym BIOS-ie HLE, który wiele gier toleruje, a niekt�
 
 ### 3.11 Aktualizacje
 
-- **Raspberry Pi, pendrive PC, Windows**: launcher sprawdza stronę przy starcie i raz dziennie (Opcje →
-  *Aktualizacje* to kanał; *Aktualizacja* w menu systemowym sprawdza od razu). Gdy jest nowszy AutoBleem
-  lub RetroArch, pyta: *Aktualizuj teraz* pobiera wszystko i uruchamia ponownie instalator z ekranem
-  postępu z pierwszego uruchomienia; *Przypomnij jutro* i *Pomiń tę wersję* to pozostałe odpowiedzi. Gry i
-  ustawienia zostają; po aktualizacji launcher raz skanuje ponownie.
-- **PlayStation Classic**: uruchom nowszy `AutoBleemInstaller.exe` na pendrivie (punkt 2.1).
+Launcher sprawdza stronę przy starcie i raz dziennie, czy na jego **kanale** jest nowa wersja (Opcje →
+*Aktualizacje*: `release`, `testing`, `nightly` albo `off`); *Aktualizacja oprogramowania* w menu systemowym
+sprawdza od razu. Gdy jest, pyta: *Aktualizuj teraz* ją pobiera, *Przypomnij jutro* i *Pomiń tę wersję* to
+pozostałe odpowiedzi. Gry, zapisy i ustawienia zawsze zostają; po aktualizacji launcher raz skanuje ponownie.
+
+- **Raspberry Pi, pendrive PC**: po pobraniu instalator uruchamia się ponownie z ekranem postępu (proponowany
+  jest też nowszy RetroArch), potem wraca launcher.
+- **Windows**: pobrany instalator otwiera się, instaluje i uruchamia nowy launcher.
+- **PlayStation Classic**: sprawdza tylko konsola z **kernelem AutoBleem** (ABFlashKit, punkt 6.2) i **siecią
+  WiFi** ustawioną w PSC-Bios (punkt 6.1) - fabryczna konsola nie ma sieci i launcher nawet nie próbuje. Po
+  *Aktualizuj teraz* launcher się zamyka, na ekranie zostaje obraz AutoBleem, gdy pendrive jest
+  aktualizowany (kilka minut), i startuje nowy launcher. Bez sieci *Aktualizacja oprogramowania* mówi
+  *Nie połączono*. Każdy pendrive konsoli można też zaktualizować z PC przez `AutoBleemInstaller.exe`
+  (punkt 2.1).
 
 <!-- pagebreak -->
 

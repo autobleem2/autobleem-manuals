@@ -38,8 +38,12 @@ stock console. AutoBleem runs from the stick without any change to the console. 
 installed (ABFlashKit, chapter 6) also boots from an exFAT stick, which lifts FAT32's 4 GB file limit.
 
 1. Download **AutoBleemInstaller-<version>.zip** from the PlayStation Classic panel of the site and unpack
-   it anywhere. It holds `AutoBleemInstaller.exe` and the AutoBleem package it installs.
-2. Plug the stick in and start `AutoBleemInstaller.exe`. Pick the drive at the top. Tick what you want:
+   it anywhere. It holds `AutoBleemInstaller.exe` and its README; AutoBleem itself is downloaded while it
+   installs, so the PC needs the internet.
+2. Plug the stick in and start `AutoBleemInstaller.exe`. Pick the **channel** - *Release* (the tested
+   version), *Testing* (the next version, being tested) or *Nightly* (the newest development build, which
+   may not work) - and the drive. The line under them says which AutoBleem version the channel would
+   install, and what is on the stick now. Tick what you want:
    - **Format the stick** - only for a fresh stick (everything on it is erased). Pick FAT32 unless the console
      has the AutoBleem kernel.
    - **Cover databases** - the box art and details of the PS1 library (ticked by default; about 300 MB).
@@ -63,9 +67,10 @@ few seconds. **While the light is red the stick can be pulled** and put into a P
 to check it; put it back before pressing Power. Unplugging the console's power goes through the boot
 standby again next time.
 
-To **update** a stick, run a newer installer over it: your games, saves, settings and RetroArch content
-stay; only AutoBleem's own files are replaced. A stick made with AutoBleem 1.0 or AutoBleem-NG is brought
-to the new layout automatically.
+To **update** a stick, run the installer over it again (the button says *Update*): it installs the chosen
+channel's newest version, and your games, saves, settings and RetroArch content stay; only AutoBleem's own
+files are replaced. A stick made with AutoBleem 1.0 or AutoBleem-NG is brought to the new layout
+automatically. A console with the AutoBleem kernel and WiFi can also update itself (section 3.11).
 
 > The stock console has no clock and no network: dates are only shown after the AutoBleem kernel is
 > installed (chapter 6), and box art for RetroArch games comes from UpdateRoms on the PC (chapter 5).
@@ -130,8 +135,13 @@ other systems, `System/Bios/` for the PS1 BIOS (section 3.10), `Themes/` for the
 
 The same appliance for any PC that boots from USB - a 32-bit system, so old machines work too:
 
-1. Download `autobleem-<version>-pcusb-i386.img.xz` from the PC panel and write it to a stick of 8 GB or
-   more with Raspberry Pi Imager (*Use custom*), balenaEtcher or Rufus (DD mode).
+1. Write the image to a stick of 8 GB or more. **On Windows** use **AutoBleemFlasher** (PC panel of the
+   site - unzip it and run `AutoBleemFlasher.exe`; it asks for administrator rights, since it writes a
+   whole disk): pick the channel and the stick, press *Write* and confirm twice - it downloads the image,
+   checks it, writes it and reads it back. Only USB sticks and SD cards are offered, never the disk Windows
+   runs from, and **everything on the chosen stick is erased**. On Linux or macOS, download
+   `autobleem-<version>-pcusb-i386.img.xz` from the PC panel and write it with
+   `xzcat autobleem-*.img.xz | sudo dd of=/dev/sdX bs=4M status=progress` (or balenaEtcher).
 2. Boot the PC from the stick (the boot menu key of your PC - F12, F8, Esc...). Both BIOS and UEFI boot
    work; **Secure Boot must be off**.
 3. The first boot is the Pi's: a network question if there is no cable, the RetroArch question, then the
@@ -237,7 +247,7 @@ saves. Every change is applied at once.
 | Update RA Config | AutoBleem writes its settings into RetroArch's config when it starts a game there. |
 | **Library**: Show Internal Games | The console's built-in games in the PlayStation lists (PlayStation Classic only). |
 | Fetch box art online | The scan fetches missing covers from libretro's servers (Raspberry Pi, PC, Windows). |
-| **Updates** | (Raspberry Pi, PC, Windows) `stable`, `latest` (the pre-releases too) or `off`. |
+| **Updates** | The update channel: `release` (the tested version), `testing` (the next version, being tested), `nightly` (the newest development build) or `off`. The default follows the version installed. |
 
 ![The options, in groups](../images/en/options.jpg)
 
@@ -338,12 +348,20 @@ tolerate and some do not.
 
 ### 3.11 Updates
 
-- **Raspberry Pi, PC stick, Windows**: the launcher checks the site at start and once a day (Options →
-  *Updates* is the channel; *Software Update* in the system menu checks now). When there is a newer
-  AutoBleem or RetroArch it asks: *Update now* downloads everything and re-runs the installer with the
-  first-boot progress screen; *Remind me tomorrow* and *Skip this version* are the other answers. Your
-  games and settings stay; the launcher rescans once after an update.
-- **PlayStation Classic**: run a newer `AutoBleemInstaller.exe` over the stick (section 2.1).
+The launcher checks the site at start and once a day for a new version on its **channel** (Options →
+*Updates*: `release`, `testing`, `nightly` or `off`); *Software Update* in the system menu checks now. When
+there is one it asks: *Update now* downloads it, *Remind me tomorrow* and *Skip this version* are the other
+answers. Your games, saves and settings always stay; the launcher rescans once after an update.
+
+- **Raspberry Pi, PC stick**: after the download the installer runs again with its progress screen (a
+  newer RetroArch is offered too), then the launcher is back.
+- **Windows**: the downloaded setup opens, installs, and starts the new launcher.
+- **PlayStation Classic**: only a console with the **AutoBleem kernel** (ABFlashKit, section 6.2) and a
+  **WiFi network** set up in PSC-Bios (section 6.1) checks - a stock console has no network, and the
+  launcher does not look. After *Update now* the launcher closes, the AutoBleem picture stays on screen
+  while the stick is updated (a few minutes), and the new launcher starts. Without a network *Software
+  Update* says *Not connected*. Any console stick can also be updated from a PC with
+  `AutoBleemInstaller.exe` (section 2.1).
 
 <!-- pagebreak -->
 
