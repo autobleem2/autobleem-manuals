@@ -93,8 +93,11 @@ so the 64-bit build runs PS1 games slower. The 64-bit image has the larger set o
 
 1. Install Raspberry Pi Imager (raspberrypi.com/software). In *Choose OS* pick *Use custom* and the
    `autobleem-<version>-rpi-armhf.img.xz` (32-bit) or `-arm64.img.xz` (64-bit) you downloaded - or add
-   the repository URL `https://autobleem.retromenele.pl/rpi-imager/os_list.json` in the app's settings and
-   pick AutoBleem from the list.
+   a repository URL in the app's settings and pick AutoBleem from the list. There is one per channel:
+   `https://autobleem.retromenele.pl/rpi-imager/os_list.json` for the latest release,
+   `.../os_list-testing.json` for the build being tested and `.../os_list-nightly.json` for the newest
+   development build. The download page's Raspberry Pi tab lists the ones that exist, with a *Copy*
+   button each.
 2. Use Imager's customisation screen (the gear, or the question after *Next*) to set the **user name and
    password, the WiFi network and country, and enable SSH**. AutoBleem needs a network on its first boot.
 3. Write the card, put it in the Pi with a screen and a keyboard or pad connected, and power it on.

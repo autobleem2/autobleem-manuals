@@ -92,8 +92,11 @@ więc na 64 bitach gry PS1 chodzą wolniej. Obraz 64-bitowy ma za to większy ze
 
 1. Zainstaluj Raspberry Pi Imager (raspberrypi.com/software). W *Choose OS* wybierz *Use custom* i pobrany
    `autobleem-<wersja>-rpi-armhf.img.xz` (32-bit) albo `-arm64.img.xz` (64-bit) - albo dodaj w ustawieniach
-   programu adres repozytorium `https://autobleem.retromenele.pl/rpi-imager/os_list.json` i wybierz
-   AutoBleem z listy.
+   programu adres repozytorium i wybierz AutoBleem z listy. Jest jeden na kanał:
+   `https://autobleem.retromenele.pl/rpi-imager/os_list.json` dla najnowszego wydania,
+   `.../os_list-testing.json` dla wersji w testach i `.../os_list-nightly.json` dla najnowszej wersji
+   rozwojowej. Zakładka Raspberry Pi na stronie pobierania pokazuje te, które istnieją, każdy z przyciskiem
+   *Copy*.
 2. W ekranie dostosowania Imagera (koło zębate albo pytanie po *Next*) ustaw **nazwę użytkownika i hasło,
    sieć WiFi z krajem oraz włącz SSH**. AutoBleem potrzebuje sieci przy pierwszym uruchomieniu.
 3. Zapisz kartę, włóż ją do Pi z podłączonym ekranem oraz klawiaturą lub padem i włącz zasilanie.
