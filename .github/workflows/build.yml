@@ -1,6 +1,9 @@
 # autobleem-manuals CI: the user manuals (manuals/<lang>/*.md) -> HTML + PDF with tools/build_manuals.py
-# (headless Chrome, which the hosted Ubuntu image ships) on every push and PR; on a v* tag or a dispatch with
-# publish on, the PDFs go to the download site's manuals/ (the self-hosted runner - the site is its disk).
+# (headless Chrome, which the hosted Ubuntu image ships) on every push and PR; the PDFs go to the download
+# site's manuals/ (the self-hosted runner - the site is its disk) on every push to develop, on a v* tag, or
+# on a dispatch with publish on run from develop - never from a feature branch, so a dispatch run there is a
+# build-only dry run (R19, 2026-09-26: the Team Manager merges a manual update to develop, this workflow puts
+# it on the site - decisions.md's rule, replacing the manual `repo_publish.sh manuals` run).
 # Gated by AB_CI_ENABLED.
 name: build
 
@@ -42,11 +45,21 @@ jobs:
           retention-days: 30
 
   publish:
+    # tags always publish (a release); develop publishes on every push, and on a manual dispatch with
+    # publish on - a dispatch from any other branch (a feature branch's dry run) never reaches here, whatever
+    # the input says, because github.ref there is that branch's ref, not develop's
     if: >-
       vars.AB_CI_ENABLED == 'true' &&
-      (startsWith(github.ref, 'refs/tags/v') || (github.event_name == 'workflow_dispatch' && inputs.publish))
+      (startsWith(github.ref, 'refs/tags/v') ||
+       (github.ref == 'refs/heads/develop' &&
+        (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.publish))))
     needs: build
     runs-on: [self-hosted, linux, x64]
+    # a site write is never cancelled mid-way by a newer push (unlike the build job's per-ref group above,
+    # which may legitimately supersede an old build): one publish at a time, queued, not cancelled
+    concurrency:
+      group: site-manuals-publish
+      cancel-in-progress: false
     env:
       AB_REPO_DIR: /home/claude/autobleem-repo
     steps:
