@@ -393,7 +393,7 @@ kører på (en PlayStation Classic har brug for AutoBleem-kernels WiFi). Dets fi
 
 ![Store's Apps-fane](../images/da/store-apps.jpg)
 
-![En kilde's menu](../images/da/store-source-menu.jpg)
+![En kilde's menu](../images/en/store-source-menu.jpg)
 
 Hvad AutoBleem's katalog tilbyder er også listet på download-siden `https://autobleem.retromenele.pl/store/`.
 **Du er ansvarlig for hvad kilder du tilføjer indeholder.**
@@ -510,7 +510,7 @@ server på dit hjemmenetværk - en `abstored` på en Raspberry Pi NAS eller ande
 CD/DVD-drev til det. Store på konsol Pi eller PC installerer dem da fra der. Intet at installere; indstillinger
 bliver holdt i `%LOCALAPPDATA%\AutoBleem LAN Share\`.
 
-![LAN Share-vinduet](../images/da/lanshare.jpg)
+![LAN Share-vinduet](../images/en/lanshare.jpg)
 
 1. **Serveren**: indtast dens adresse (`http://<dens adresse>:<port>` som Store har det) og tryk **Connect**.
    Dets spil og problemer dets scanning fandt bliver listet til venstre. For at sætte spil på det giv en af:
@@ -556,7 +556,7 @@ og hver tilsluttet controller med om det har knap-kortlægning. Netværk og Blue
 AutoBleem-kernelen på konsol (afsnit 6.2) eller systemværktøjer på Raspberry Pi / PC-stick; gamepad-guiden
 fungerer på ethvert system.
 
-![PSC-Bios: Network & Controllers-hub](../images/da/pscbios-main.jpg)
+![PSC-Bios: Network & Controllers-hub](../images/en/pscbios-main.jpg)
 
 - **Select - Wi-Fi Network** (kernel eller NetworkManager): netværks-navn (tastet eller plukket fra scan)
   adgangskode driver-mode og *Apply / Restart Network*. Tidszone indstilles her også. Konsolens IP-adresse
@@ -576,7 +576,7 @@ kortlægges som normalt. På tastatur står Esc / Mellemrum / Enter ind for POWE
 bliver nye kortlægning tilføjet til test og OPEN gemmer det under navn du vælger; launcher indlæser det
 derefter.
 
-![PSC-Bios: controller-kortlægnings-guiden](../images/da/pscbios-wizard.jpg)
+![PSC-Bios: controller-kortlægnings-guiden](../images/en/pscbios-wizard.jpg)
 
 ### 6.2 ABFlashKit - AutoBleem-kernelen
 
@@ -590,7 +590,7 @@ Sony's egen recovery.
 > dens garanti. Hold konsollen strøm og stick i indtil den genstarter af sig selv. ABFlashKit åbner på denne
 > advarsel; *I understand* går videre *Quit* forlader.
 
-![ABFlashKit's menu](../images/da/abflashkit-menu.jpg)
+![ABFlashKit's menu](../images/en/abflashkit-menu.jpg)
 
 - **Flash Kernel**: laver recovery backup af konsolens partitioner på stick (`LBOOT.EPB`) hvis der ikke er
   en endnu, tjekker den og kernel-image skriver kernel og AutoBleem's system-filer og genstarter. *All done
