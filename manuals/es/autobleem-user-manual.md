@@ -169,6 +169,8 @@ reproducción. La barra en la parte inferior enumera lo que hacen los botones. U
 se ejecuta en segundo plano en cada inicio; mientras se ejecuta, una burbuja en la parte superior derecha muestra
 su progreso, y los nuevos juegos aparecen en la estantería a medida que se descubren.
 
+Un mando inalámbrico con lectura de batería disponible - en la consola, una Pi o el USB para PC, no en Windows - se muestra como un pequeño icono con su porcentaje, apilado desde la esquina superior izquierda sobre su propia placa. Un mando emparejado con el Jugador 1 o el Jugador 2 (según la opción Intercambiar Jugador 1 / Jugador 2) lleva la etiqueta P1/P2; un mando no emparejado, o un tercero, no lleva etiqueta. Cuando la batería de un mando se agota, una línea de notificación lo indica una vez, con su nombre y porcentaje.
+
 ![El selector de conjuntos: tres pestañas y los grupos del actual con sus números de juegos](../images/en/set-picker.jpg)
 
 ### 3.2 Controles
@@ -257,6 +259,7 @@ Circle sale y guarda. Cada cambio se aplica inmediatamente.
 | Pantalla panorámica | La forma de la imagen del emulador PS1 para cada juego. |
 | Reproducir todos los juegos de PSX con RA | Cada juego de PS1 inicia en el núcleo PS1 de RetroArch. |
 | Actualizar configuración de RA | AutoBleem escribe su configuración en la configuración de RetroArch cuando inicia un juego allí. |
+| Intercambiar Jugador 1 / Jugador 2 (emuladores PS1) | Intercambia cuál de los dos primeros controles es el Jugador 1 y cuál el Jugador 2, en ambos emuladores PS1 (pcsx-abnxt y el pcsx-ab clásico). Solo tiene efecto con dos o más controles conectados; con un solo control, siempre es el Jugador 1. RetroArch no se ve afectado. |
 | **Biblioteca**: Mostrar juegos internos | Los juegos incorporados de la consola en las listas de PlayStation (solo PlayStation Classic). |
 | Descargar carátulas en línea | El escaneo descarga carátulas faltantes de los servidores de libretro (Raspberry Pi, PC, Windows). |
 | **Actualizaciones** | (Raspberry Pi, PC, Windows) `stable`, `latest` (también los pre-lanzamientos) o `off`. |

@@ -167,6 +167,8 @@ yıl, seri, bölge, oyuncular, son ne zaman oynanması - ve oynat düğmesi. Alt
 yaptığını listeler. Oyun klasöründün taraması her başlangıçta arka planda çalışır; çalışırken sağ üst
 köşedeki bir balon ilerlemeyi gösterir ve yeni oyunlar raf üzerinde bulundukça görünür.
 
+Pil düzeyi bilinen kablosuz bir kumanda - konsolda, bir Pi'de veya PC bellek çubuğunda, Windows'ta değil - yüzdesiyle birlikte küçük bir simge olarak, sol üst köşeden kendi levhası üzerinde istiflenerek gösterilir. Oyuncu 1 veya Oyuncu 2 ile eşleşen bir kumanda (Oyuncu 1 / Oyuncu 2'yi Değiştir seçeneğine göre) P1/P2 etiketi alır; eşleşmeyen veya üçüncü bir kumanda etiket almaz. Bir kumandanın pili azaldığında, bir bildirim satırı bunu bir kez, adı ve yüzdesiyle bildirir.
+
 ![Set Seçici: üç sekme ve mevcut sekmenin grupları numara sayımlarıyla](../images/en/set-picker.jpg)
 
 ### 3.2 Kontroller
@@ -254,6 +256,7 @@ Circle ayrılır ve kaydeder. Her değişiklik hemen uygulanır.
 | Geniş Ekran | Her oyun için PS1 emülatörü resim şekli. |
 | Tüm PSX Oyunlarını RA ile Oyna | Her PS1 oyunu RetroArch'ın PS1 çekirdeğinde başlar. |
 | RA Yapılandırmasını Güncelle | AutoBleem, orada oyun başlattığında ayarlarını RetroArch'ın yapılandırmasına yazar. |
+| Oyuncu 1 / Oyuncu 2'yi Değiştir (PS1 emülatörleri) | İlk iki kumandadan hangisinin Oyuncu 1, hangisinin Oyuncu 2 olduğunu her iki PS1 emülatöründe de (pcsx-abnxt ve klasik pcsx-ab) değiştirir. Yalnızca iki veya daha fazla kumanda bağlıyken etkili olur; tek kumandayla her zaman Oyuncu 1'dir. RetroArch etkilenmez. |
 | **Kütüphane**: Dahili Oyunları Göster | Konsol oyunlarını PlayStation listelerinde (yalnızca PlayStation Classic). |
 | Kapak Resmini Çevrimiçi Getir | Tarama, libretro sunucularından eksik kapakları getirir (Raspberry Pi, PC, Windows). |
 | **Güncellemeler** | (Raspberry Pi, PC, Windows) `kararlı`, `en son` (ön sürümler de) veya `kapalı`. |

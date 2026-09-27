@@ -168,6 +168,8 @@ luettelee mitä painikkeet tekevät. Pelikansion skannaus käynnistyy taustalla 
 sen käydessä kupla oikealla ylhäällä näyttää sen edistyksen uudet pelit ilmestyvät hyllylle sitä mukaa
 kuin ne löydetään.
 
+Langaton ohjain, jonka akun varaustaso on tiedossa - konsolilla, Pi:llä tai PC-tikulla, ei Windowsissa - näkyy pienenä kuvakkeena prosenttilukemineen, pinottuna vasemmasta yläkulmasta omalle levylleen. Pelaajaan 1 tai Pelaajaan 2 kohdistettu ohjain (Vaihda pelaaja 1 / pelaaja 2 -asetuksen mukaan) merkitään tunnisteella P1/P2; kohdistamaton tai kolmas ohjain jää ilman tunnistetta. Kun ohjaimen akku on vähissä, ilmoitusrivi kertoo siitä kerran nimellä ja prosenttiluvulla.
+
 ![Sarja-valitsin: kolme välilehteä ja nykyisen joukosta ryhmät pelien laskujen kera](../images/fi/set-picker.jpg)
 
 ### 3.2 Ohjaimet
@@ -256,6 +258,7 @@ tallentaa. Jokainen muutos käytetään välittömästi.
 | Widescreen | PS1-emulaattorin kuvasuhde jokaiselle pelille. |
 | Play all PSX games with RA | Jokainen PS1-peli käynnistyy RetroArchin PS1-ytimessä. |
 | Update RA Config | AutoBleem kirjoittaa asetuksensa RetroArchin määritykseen kun se käynnistää pelin siellä. |
+| Vaihda pelaaja 1 / pelaaja 2 (PS1-emulaattorit) | Vaihtaa, kumpi kahdesta ensimmäisestä ohjaimesta on Pelaaja 1 ja kumpi Pelaaja 2, molemmissa PS1-emulaattoreissa (pcsx-abnxt ja klassinen pcsx-ab). Se vaikuttaa vain, kun ohjaimia on kytkettynä kaksi tai enemmän; yhdellä ohjaimella pelaaja on aina Pelaaja 1. RetroArch ei vaikutu. |
 | **Library**: Show Internal Games | Konsolinin sisäänrakennetut pelit PlayStation-luetteloissa (vain PlayStation Classic). |
 | Fetch box art online | Skannaus noutaa puuttuvat kannet libretron palvelimista (Raspberry Pi PC Windows). |
 | **Updates** | (Raspberry Pi PC Windows) `stable` `latest` (esijulkaisut myös) tai `off`. |

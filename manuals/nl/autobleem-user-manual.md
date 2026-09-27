@@ -105,6 +105,8 @@ Het uitvoeren van een nieuwere setup erover werkt het programma bij en behoudt d
 
 De launcher opent op de boekenplank: de hoezen van de huidige set, degene die in het midden is geselecteerd, de details ervan - uitgever, jaar, serienummer, regio, spelers, wanneer het voor het laatst is gespeeld - en een playknop. De balk onderaan toont wat de knoppen doen. Een scan van de gamemap wordt op elke start op de achtergrond uitgevoerd; terwijl deze wordt uitgevoerd, toont een bubble rechtsboven de voortgang, en verschijnen nieuwe games op de boekenplank naarmate ze worden gevonden.
 
+Een draadloze controller met een bekende batterijstatus - op de console, een Pi of de pc-stick, niet onder Windows - wordt getoond als een klein pictogram met het percentage, gestapeld vanaf de linkerbovenhoek op een eigen plaatje. Een controller die is gekoppeld aan Speler 1 of Speler 2 (volgens de optie Speler 1 / Speler 2 wisselen) krijgt het label P1/P2; een niet-gekoppelde of een derde controller krijgt geen label. Wanneer de batterij van een controller laag wordt, meldt een notificatieregel dit eenmalig, met naam en percentage.
+
 ![De set-selector: drie tabbladen en de groepen van het huidige tabblad met hun aantallen](../images/en/set-picker.jpg)
 
 ### 3.2 Besturing
@@ -172,6 +174,7 @@ De instellingen zijn in groepen; Omhoog / Omlaag beweegt tussen groepen, Links /
 | Widescreen | De beeldverhoudingsaanpassing van PS1-emulator voor elk spel. |
 | Play all PSX games with RA | Elk PS1-spel start in RetroArch's PS1-core. |
 | Update RA Config | AutoBleem schrijft zijn instellingen in RetroArch's config wanneer het daar een spel start. |
+| Speler 1 / Speler 2 wisselen (PS1-emulators) | Wisselt welke van de eerste twee controllers Speler 1 is en welke Speler 2, in beide PS1-emulators (pcsx-abnxt en de klassieke pcsx-ab). Het heeft alleen effect met twee of meer controllers aangesloten; met één controller is het altijd Speler 1. RetroArch wordt niet beïnvloed. |
 | **Library**: Show Internal Games | De ingebouwde games van de console in PlayStation-lijsten (alleen PlayStation Classic). |
 | Fetch box art online | De scan haalt ontbrekende hoezen van libretro's servers (Raspberry Pi, PC, Windows). |
 | **Updates** | (Raspberry Pi, PC, Windows) `stable`, `latest` (ook pre-releases) of `off`. |

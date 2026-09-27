@@ -163,6 +163,8 @@ udgiver, år, serienummer, region, spillere, hvornår det sidst blev spillet - o
 nederst viser hvad knapperne gør. En scanning af spillemappen kører i baggrunden ved hver start; mens den
 kører viser en boble øverst til højre dens fremskridt, og nye spil vises på hylden efterhånden som de findes.
 
+En trådløs controller med et batteriniveau - på konsollen, en Pi eller PC-pinden, ikke på Windows - vises som et lille ikon med procenten, stablet fra øverste venstre hjørne på sin egen plade. En controller matchet til Spiller 1 eller Spiller 2 (efter indstillingen Byt spiller 1 / spiller 2) er mærket P1/P2; en umatchet eller en tredje controller får ingen mærkning. Når en controllers batteri bliver lavt, rapporterer en notifikationslinje det én gang, med navn og procent.
+
 ![Sæt-vælger: tre faner og grupperne fra det aktuelle med deres spilletal](../images/da/set-picker.jpg)
 
 ### 3.2 Kontroller
@@ -247,6 +249,7 @@ gemmer. Hver ændring påføres øjeblikkeligt.
 | Widescreen | PS1-emulatorens billedform til hvert spil. |
 | Play all PSX games with RA | Hvert PS1-spil starter i RetroArch's PS1-kerne. |
 | Update RA Config | AutoBleem skriver dets indstillinger ind i RetroArch's konfiguration når det starter et spil der. |
+| Byt spiller 1 / spiller 2 (PS1-emulatorer) | Bytter om på hvilken af de to første controllere der er Spiller 1, og hvilken der er Spiller 2, i begge PS1-emulatorer (pcsx-abnxt og den klassiske pcsx-ab). Det virker kun med to eller flere controllere tilsluttet; med én controller er det altid Spiller 1. RetroArch påvirkes ikke. |
 | **Library**: Show Internal Games | Konsolens indbyggede spil i PlayStation-listerne (kun PlayStation Classic). |
 | Fetch box art online | Scanning henter manglende omslag fra libretro's servere (Raspberry Pi, PC, Windows). |
 | **Updates** | (Raspberry Pi, PC, Windows) `stable`, `latest` (pre-udgivelserne også) eller `off`. |

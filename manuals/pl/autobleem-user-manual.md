@@ -178,6 +178,8 @@ numer seryjny, region, liczba graczy, kiedy ostatnio grano - i przycisk odtwarza
 robią przyciski. Przy każdym starcie w tle działa skanowanie folderu gier; póki trwa, dymek w prawym górnym
 rogu pokazuje postęp, a nowe gry pojawiają się na półce w miarę znajdowania.
 
+Bezprzewodowy pad z dostępnym odczytem baterii - na konsoli, Pi lub pendrive'ie PC, nie w Windows - jest pokazywany jako mała ikona z procentami, ułożona od lewego górnego rogu na własnej płytce. Pad dopasowany do Gracza 1 lub Gracza 2 (zgodnie z opcją Zamień Gracza 1 / Gracza 2) ma etykietę P1/P2; pad niedopasowany albo trzeci nie ma etykiety. Gdy bateria pada się wyczerpuje, linia powiadomienia zgłasza to raz, podając nazwę i procent.
+
 ![Wybór zestawu: trzy zakładki i grupy bieżącej z liczbą gier](../images/pl/set-picker.jpg)
 
 ### 3.2 Sterowanie
@@ -258,6 +260,7 @@ i zapisuje. Każda zmiana działa od razu.
 | Szeroki ekran | Proporcje obrazu emulatora PS1 dla każdej gry. |
 | Graj we wszystkie gry PSX w RA | Każda gra PS1 startuje w rdzeniu PS1 RetroArch. |
 | Aktualizuj konfigurację RA | AutoBleem wpisuje swoje ustawienia do konfiguracji RetroArch, gdy uruchamia tam grę. |
+| Zamień Gracza 1 / Gracza 2 (emulatory PS1) | Zamienia, który z dwóch pierwszych padów jest Graczem 1, a który Graczem 2, w obu emulatorach PS1 (pcsx-abnxt i klasycznym pcsx-ab). Działa to tylko przy podłączonych dwóch lub więcej padach; z jednym padem zawsze grasz jako Gracz 1. RetroArch tego nie dotyczy. |
 | **Biblioteka**: Pokaż gry wewnętrzne | Wbudowane gry konsoli na listach PlayStation (tylko PlayStation Classic). |
 | Pobieraj okładki z sieci | Skan pobiera brakujące okładki z serwerów libretro (Raspberry Pi, PC, Windows). |
 | **Aktualizacje** | Kanał aktualizacji: `release` (wersja przetestowana), `testing` (następna wersja, w trakcie testów), `nightly` (najnowsza wersja rozwojowa) albo `off`. Domyślny wynika z zainstalowanej wersji. |
