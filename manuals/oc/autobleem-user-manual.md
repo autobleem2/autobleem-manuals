@@ -181,7 +181,7 @@ fons alista çò qu'aqueles botons fan. Un escandalhatge del dorsièr de jòcs s
 mentre se fai, una bombola al tope drech aficha sa progression, e los jòcs novèls aparisson sus la
 tablada coma se trobon.
 
-Cada maneta sens fial s'aficha amb una icòna de batariá a l'angle superior esquèrra de l'ecran sus una pichòta placa etiketada amb lo numèro del jogaire (P1, P2 o sensa eticòta se la maneta es pas Jogaire 1 o 2). Quand la batariá d'una maneta es bassa, una linha de notificacion aficha son nivèl de carga.
+Una maneta sens fial amb un nivèl de batariá conegut - sus la consòla, un Pi o la clau PC, pas jos Windows - s'aficha coma una pichòta icòna amb son percentatge, empilada dempuèi l'angle superior esquèrra sus sa pròpria placa. Una maneta aparelhada a Jogaire 1 o Jogaire 2 (segon l'opcion Escambiar Jogaire 1 / Jogaire 2) pòrta l'eticòta P1/P2; una maneta pas aparelhada, o una tresena, a pas cap d'eticòta. Quand la batariá d'una maneta es bassa, una linha de notificacion o senhala un còp, amb son nom e son percentatge.
 
 ![Lo causidor de grupós : tres ongletas, e los grupós del actual amb lors contes de jòcs](../images/en/set-picker.jpg)
 
@@ -273,7 +273,7 @@ se'n va e salva. Cada cambiament s'aplica al moment.
 | Grand ecran | La forma de l'imatge de l'emulator PS1 per cada jòc. |
 | Jogar a totes los jòcs PSX amb RA | Cada jòc PS1 s'avie dins lo còr PS1 de RetroArch. |
 | Metre a jorn la configuracion RA | AutoBleem escríu sos paramètres dins la configuracion de RetroArch quand l'avie un jòc aicí. |
-| Escambiar Jogaire 1 / Jogaire 2 (emuladors PS1) | Quand son connectats dos o mai de manèts, escambia qual es Jogaire 1 e qual es Jogaire 2 dins los dos emuladors PS1. Amb l'escambi activat, lo teclat se desplaça tanben al pòrt 2. RetroArch es pas afectat. |
+| Escambiar Jogaire 1 / Jogaire 2 (emuladors PS1) | Escambia quala de las doas primièras manetas es Jogaire 1 e quala es Jogaire 2, dins pcsx-abnxt - lo pcsx-ab classic o pren pas en carga encara (una notificacion o senhala se s'utiliza amb el). A d'efièch sonque amb doas manetas o mai connectadas; amb una sola maneta, es totjorn Jogaire 1. RetroArch es pas afectat. |
 | **Bibliotèca** : Afichar los jòcs intèrnes | Los jòcs fornits de la consòla en las listas PlayStation (PlayStation Classic sols). |
 | Recuperar las cobertas en linha | L'escandalhatge telecarga las cobertas manquantas dempuèi los servidors de libretro (Raspberry Pi, PC, Windows). |
 | **Mesas a jorn** | (Raspberry Pi, PC, Windows) `stable`, `latest` (los pre-sortidas tanben) o `off`. |

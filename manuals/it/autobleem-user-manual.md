@@ -168,6 +168,8 @@ pulsante di riproduzione. La barra in basso elenca quello che fanno i pulsanti. 
 giochi viene eseguita in background ad ogni avvio; mentre viene eseguita, una bolla in alto a destra mostra il suo
 progresso, e i nuovi giochi appaiono sullo scaffale mentre vengono trovati.
 
+Un controller wireless con una lettura della batteria disponibile - sulla console, un Pi o la chiavetta PC, non su Windows - viene mostrato come una piccola icona con la sua percentuale, impilata dall'angolo in alto a sinistra sulla propria targhetta. Un controller associato al Giocatore 1 o al Giocatore 2 (secondo l'opzione Scambia Giocatore 1 / Giocatore 2) porta l'etichetta P1/P2; un controller non associato, o un terzo, non ha etichetta. Quando la batteria di un controller è scarica, una riga di notifica lo segnala una volta, con nome e percentuale.
+
 ![Il selettore di set: tre schede e i gruppi del presente con i loro numeri di giochi](../images/en/set-picker.jpg)
 
 ### 3.2 Controlli
@@ -254,7 +256,7 @@ salva. Ogni modifica viene applicata immediatamente.
 | Widescreen | La forma dell'immagine dell'emulatore PS1 per ogni gioco. |
 | Riproduci tutti i giochi PSX con RA | Ogni gioco PS1 si avvia nel nucleo PS1 di RetroArch. |
 | Aggiorna config RA | AutoBleem scrive le sue impostazioni nella configurazione di RetroArch quando avvia un gioco lì. |
-| Scambia Giocatore 1 / Giocatore 2 (emulatori PS1) | Quando sono collegati due o più controller, scambia quale è Giocatore 1 e quale è Giocatore 2 in entrambi gli emulatori PS1. Con lo scambio attivato, la tastiera si sposta anche alla porta 2. RetroArch non è interessato. |
+| Scambia Giocatore 1 / Giocatore 2 (emulatori PS1) | Scambia quale dei primi due controller è il Giocatore 1 e quale il Giocatore 2, in pcsx-abnxt - il pcsx-ab classico non lo supporta ancora (una notifica lo segnala se viene usato con esso). Ha effetto solo con due o più controller collegati; con un solo controller si gioca sempre come Giocatore 1. RetroArch non è interessato. |
 | **Biblioteca**: Mostra giochi interni | I giochi incorporati della console negli elenchi PlayStation (solo PlayStation Classic). |
 | Scarica copertine online | La scansione scarica le copertine mancanti dai server di libretro (Raspberry Pi, PC, Windows). |
 | **Aggiornamenti** | (Raspberry Pi, PC, Windows) `stable`, `latest` (anche i pre-rilasci) o `off`. |

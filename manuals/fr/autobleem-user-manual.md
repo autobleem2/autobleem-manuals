@@ -176,7 +176,7 @@ bouton de lecture. La barre en bas énumère ce que font les boutons. Un scan du
 arrière-plan à chaque démarrage ; pendant son exécution, une bulle en haut à droite affiche sa progression, et
 les nouveaux jeux apparaissent sur l'étagère au fur et à mesure de leur découverte.
 
-Chaque manette sans fil est affichée avec une icône de batterie dans le coin supérieur gauche de l'écran sur une petite plaque étiquetée avec le numéro du joueur (P1, P2 ou sans étiquette si la manette n'est pas Joueur 1 ou 2). Quand la batterie d'une manette est faible, une ligne de notification affiche son niveau de charge.
+Une manette sans fil dont le niveau de batterie est connu - sur la console, un Pi ou la clé PC, pas sous Windows - s'affiche sous forme d'une petite icône avec son pourcentage, empilée depuis le coin supérieur gauche sur sa propre plaque. Une manette associée au Joueur 1 ou au Joueur 2 (selon l'option Échanger Joueur 1 / Joueur 2) porte l'étiquette P1/P2 ; une manette non associée, ou une troisième, n'en porte aucune. Quand la batterie d'une manette devient faible, une ligne de notification le signale une fois, avec son nom et son pourcentage.
 
 ![Le sélecteur de liste : trois onglets et les groupes du courant avec leurs nombres de jeux](../images/en/set-picker.jpg)
 
@@ -266,7 +266,7 @@ quitte et enregistre. Chaque changement s'applique immédiatement.
 | Écran large | La forme de l'image de l'émulateur PS1 pour chaque jeu. |
 | Jouer tous les jeux PSX avec RA | Chaque jeu PS1 démarre dans le cœur PS1 de RetroArch. |
 | Mettre à jour la configuration RA | AutoBleem écrit ses paramètres dans la configuration de RetroArch quand il lance un jeu là. |
-| Échanger Joueur 1 / Joueur 2 (émulateurs PS1) | Lorsque deux manettes ou plus sont connectées, changez celle qui est Joueur 1 et celle qui est Joueur 2 dans les deux émulateurs PS1. Avec l'échange activé, le clavier se déplace également au port 2. RetroArch n'est pas affecté. |
+| Échanger Joueur 1 / Joueur 2 (émulateurs PS1) | Échange lequel des deux premières manettes est Joueur 1 et lequel est Joueur 2, dans pcsx-abnxt - le pcsx-ab classique ne le prend pas encore en charge (une notification le signale si on l'utilise avec). Cela ne prend effet qu'avec deux manettes ou plus connectées ; avec une seule manette, c'est toujours le Joueur 1. RetroArch n'est pas affecté. |
 | **Bibliothèque** : Afficher les jeux internes | Les jeux intégrés de la console dans les listes PlayStation (PlayStation Classic uniquement). |
 | Récupérer les jaquettes en ligne | Le scan récupère les jaquettes manquantes depuis les serveurs de libretro (Raspberry Pi, PC, Windows). |
 | **Mises à jour** | (Raspberry Pi, PC, Windows) `stable`, `latest` (également les pré-versions) ou `off`. |

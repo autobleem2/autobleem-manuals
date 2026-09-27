@@ -168,6 +168,8 @@ luettelee mitä painikkeet tekevät. Pelikansion skannaus käynnistyy taustalla 
 sen käydessä kupla oikealla ylhäällä näyttää sen edistyksen uudet pelit ilmestyvät hyllylle sitä mukaa
 kuin ne löydetään.
 
+Langaton ohjain, jonka akun varaustaso on tiedossa - konsolilla, Pi:llä tai PC-tikulla, ei Windowsissa - näkyy pienenä kuvakkeena prosenttilukemineen, pinottuna vasemmasta yläkulmasta omalle levylleen. Pelaajaan 1 tai Pelaajaan 2 kohdistettu ohjain (Vaihda pelaaja 1 / pelaaja 2 -asetuksen mukaan) merkitään tunnisteella P1/P2; kohdistamaton tai kolmas ohjain jää ilman tunnistetta. Kun ohjaimen akku on vähissä, ilmoitusrivi kertoo siitä kerran nimellä ja prosenttiluvulla.
+
 ![Sarja-valitsin: kolme välilehteä ja nykyisen joukosta ryhmät pelien laskujen kera](../images/fi/set-picker.jpg)
 
 ### 3.2 Ohjaimet
@@ -256,7 +258,7 @@ tallentaa. Jokainen muutos käytetään välittömästi.
 | Widescreen | PS1-emulaattorin kuvasuhde jokaiselle pelille. |
 | Play all PSX games with RA | Jokainen PS1-peli käynnistyy RetroArchin PS1-ytimessä. |
 | Update RA Config | AutoBleem kirjoittaa asetuksensa RetroArchin määritykseen kun se käynnistää pelin siellä. |
-| Vaihda pelaaja 1 / pelaaja 2 (PS1-emulaattorit) | Kun on kytkettynä kaksi tai useampia ohjaimia, vaihda kumpi on Pelaaja 1 ja kumpi on Pelaaja 2 molemmissa PS1-emulaattoreissa. Kun vaihto on käytössä, näppäimistö siirtyy myös portille 2. RetroArch ei ole vaikutuksissa. |
+| Vaihda pelaaja 1 / pelaaja 2 (PS1-emulaattorit) | Vaihtaa, kumpi kahdesta ensimmäisestä ohjaimesta on Pelaaja 1 ja kumpi Pelaaja 2, pcsx-abnxt:ssä - klassinen pcsx-ab ei vielä tue tätä (ilmoitus kertoo siitä, jos sitä yritetään sen kanssa). Se vaikuttaa vain, kun ohjaimia on kytkettynä kaksi tai enemmän; yhdellä ohjaimella pelaaja on aina Pelaaja 1. RetroArch ei vaikutu. |
 | **Library**: Show Internal Games | Konsolinin sisäänrakennetut pelit PlayStation-luetteloissa (vain PlayStation Classic). |
 | Fetch box art online | Skannaus noutaa puuttuvat kannet libretron palvelimista (Raspberry Pi PC Windows). |
 | **Updates** | (Raspberry Pi PC Windows) `stable` `latest` (esijulkaisut myös) tai `off`. |
@@ -405,7 +407,7 @@ välilehteä L1 / R1 niiden välillä:
 
 ![Storen Apps-välilehti](../images/fi/store-apps.jpg)
 
-![Lähteen valikko](../images/fi/store-source-menu.jpg)
+![Lähteen valikko](../images/en/store-source-menu.jpg)
 
 Mitä AutoBleemin luettelo tarjoaa on myös lueteltu lataus sivulla `https://autobleem.retromenele.pl/store/`.
 **Olet vastuussa siitä mitä lähteet joita lisäät sisältävät.**
@@ -524,7 +526,7 @@ palvelimelle kotiverkollasi - `abstored` Raspberry Pi:llä NAS:lla tai toisella 
 PC:n CD/DVD-asemasta sille. Store konsolissa Pi:ssä tai PC:ssä asentaa ne sieltä. Mitään asennettavaa;
 asetukset säilytetään `%LOCALAPPDATA%\AutoBleem LAN Share\`-kansiossa.
 
-![LAN Share-ikkuna](../images/fi/lanshare.jpg)
+![LAN Share-ikkuna](../images/en/lanshare.jpg)
 
 1. **Palvelin**: kirjoita sen osoite (`http://<sen osoite>:<portti>` kuten Store siinä) ja paina **Connect**.
    Sen pelit ja ongelmat sen skannaus löysi ovat listattuna vasemmalla. Pelien laittamiseksi siihen anna yksi:
@@ -571,7 +573,7 @@ ja jokainen liitetty ohjain olivatko sillä painike karttoitus. Verkon ja Blueto
 kerneliin konsolilla (osio 6.2) tai järjestelmä välineisiin Pi:llä / PC-tikulla; ohjaimen ohjaussuutari
 toimii millä tahansa järjestelmällä.
 
-![PSC-Bios: Network & Controllers-keskityttin](../images/fi/pscbios-main.jpg)
+![PSC-Bios: Network & Controllers-keskityttin](../images/en/pscbios-main.jpg)
 
 - **Select - Wi-Fi Network** (kernel tai NetworkManager): verkon nimi (kirjoitettu tai poimittu skannauksesta)
   salasana ajaja tilaksi ja *Apply / Restart Network*. Aikavyöhyke asetetaan myös täällä. Konsolinin
@@ -593,7 +595,7 @@ painiketta 2 sekuntia tekee sen ("Hold any button 2 s: Exit"). Lyhyt paina kartt
 Näppäimistöllä Esc / Välilyönti / Enter seisovat POWER / RESET / OPEN:lle. Lopussa uusi karttoitus lisätään
 testiksi ja OPEN tallentaa sen nimen joka valitset; käynnistäjä lataa sen siitä.
 
-![PSC-Bios: ohjaimen karttoitus ohjaussuutari](../images/fi/pscbios-wizard.jpg)
+![PSC-Bios: ohjaimen karttoitus ohjaussuutari](../images/en/pscbios-wizard.jpg)
 
 ### 6.2 ABFlashKit - AutoBleem kernel
 
@@ -607,7 +609,7 @@ stock:iin Sony:n oman palautuksen kautta.
 > Pidä konsoli virta ja tikku sisällä kunnes se käynnistyy itse uudelleen. ABFlashKit avautuu tähän
 > varoitukseen; *I understand* menee eteenpäin *Quit* poistuu.
 
-![ABFlashkit:n valikko](../images/fi/abflashkit-menu.jpg)
+![ABFlashkit:n valikko](../images/en/abflashkit-menu.jpg)
 
 - **Flash Kernel**: tekee palautus varmuuskopian konsolinin osioista tikulle (`LBOOT.EPB`) jos sitä ei ole
   vielä tarkistaa sen ja kernel-kuvan kirjoittaa kerneliin ja AutoBleemin järjestelmä tiedostoihin ja

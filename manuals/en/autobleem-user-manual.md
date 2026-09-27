@@ -177,8 +177,7 @@ button. The bar at the bottom lists what the buttons do. A scan of the games fol
 on every start; while it runs, a bubble at the top right shows its progress, and new games appear on the
 shelf as they are found.
 
-
-Each wireless pad is shown with a battery icon in the top-left corner of the screen on a small plate labelled with the player number (P1, P2, or no label if the pad is not Player 1 or 2). When a pad's battery is low, a notification line displays its charge level.
+A wireless pad with a battery reading - the console, a Pi or the PC stick, not Windows - shows as a small icon with its percentage, stacked from the top-left corner on its own plate. A pad matched to Player 1 or Player 2 (following the Swap Player 1 / Player 2 option) is tagged P1/P2; an unmatched pad, or a third one, has no tag. When a pad's battery runs low, a notification line reports it once, by name and percentage.
 
 ![The set picker: three tabs, and the groups of the current one with their game counts](../images/en/set-picker.jpg)
 
@@ -259,7 +258,7 @@ saves. Every change is applied at once.
 | Widescreen | The PS1 emulator's picture shape for every game. |
 | Play all PSX games with RA | Every PS1 game starts in RetroArch's PS1 core. |
 | Update RA Config | AutoBleem writes its settings into RetroArch's config when it starts a game there. |
-| Swap Player 1 / Player 2 (PS1 emulators) | When two or more pads are connected, swap which one is Player 1 and which is Player 2 in both PS1 emulators. With the swap on, the keyboard also moves to port 2. RetroArch is not affected. |
+| Swap Player 1 / Player 2 (PS1 emulators) | Swaps which of the first two controllers is Player 1 and which is Player 2 in pcsx-abnxt - the classic pcsx-ab does not support it yet (a notification says so if it is used there). It only takes effect with two or more pads connected; with one pad, play is always Player 1. RetroArch is not affected. |
 | **Library**: Show Internal Games | The console's built-in games in the PlayStation lists (PlayStation Classic only). |
 | Fetch box art online | The scan fetches missing covers from libretro's servers (Raspberry Pi, PC, Windows). |
 | **Updates** | The update channel: `release` (the tested version), `testing` (the next version, being tested), `nightly` (the newest development build) or `off`. The default follows the version installed. |

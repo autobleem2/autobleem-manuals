@@ -185,6 +185,8 @@ Lišta dole uvádí, co tlačítka dělají. Skenování složky her běží na 
 startu; během jeho běhu bublina vpravo nahoře ukazuje jeho průběh a nové hry se objevují
 na polici, jak jsou nalezeny.
 
+Bezdrátový ovladač s dostupným stavem baterie - na konzoli, Pi nebo USB disku pro PC, ne na Windows - se zobrazuje jako malá ikona s procenty, umístěná v levém horním rohu na vlastní destičce. Ovladač přiřazený Hráči 1 nebo Hráči 2 (podle nastavení Prohodit hráče 1 / hráče 2) má značku P1/P2; nepřiřazený nebo třetí ovladač značku nemá. Když baterie ovladače klesne na nízkou úroveň, řádek s upozorněním to jednou oznámí i s procenty.
+
 ![Výběr sady: tři karty a skupiny aktuální sady s počty her](../images/en/set-picker.jpg)
 
 ### 3.2 Ovládání
@@ -276,7 +278,7 @@ hodnotu, Circle opustí a uloží. Každá změna se použije okamžitě.
 | Widescreen | Tvar obrázku emulátoru PS1 pro každou hru. |
 | Play all PSX games with RA | Každá PS1 hra se spustí v jádře PS1 RetroArch. |
 | Update RA Config | AutoBleem zapisuje nastavení do konfigurace RetroArch, když tam spustí hru. |
-| Prohodit hráče 1 / hráče 2 (emulátory PS1) | Pokud jsou připojeny dva nebo více ovladačů, vyměňte si, který je Hráč 1 a který je Hráč 2 v obou emulátorech PS1. Se zapnutou výměnou se také klávesnice přesune na port 2. RetroArch není ovlivněn. |
+| Prohodit hráče 1 / hráče 2 (emulátory PS1) | Prohodí, který z prvních dvou ovladačů je Hráč 1 a který Hráč 2, v pcsx-abnxt - klasický pcsx-ab to zatím nepodporuje (pokud se o to pokusíte, zobrazí se upozornění). Funguje to jen při připojení dvou nebo více ovladačů; s jedním ovladačem je vždy Hráč 1. RetroArch není ovlivněn. |
 | **Library**: Show Internal Games | Zabudované hry konzoly v seznamech PlayStation (pouze PlayStation Classic). |
 | Fetch box art online | Skenování stahuje chybějící obálky ze serverů libretro (Raspberry Pi, PC, Windows). |
 | **Updates** | (Raspberry Pi, PC, Windows) `stable`, `latest` (včetně předvydaní) nebo `off`. |

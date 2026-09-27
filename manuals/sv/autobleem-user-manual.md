@@ -176,6 +176,8 @@ Startaren öppnas på hyllan: omslaget från aktuell uppsättning, det som är v
 längst ner listar vad knapparna gör. En skanning av spelmappen körs i bakgrunden vid varje start; medan
 den körs visar en bubbla längst upp till höger framstegen, och nya spel dyker upp på hyllan när de hittas.
 
+En trådlös kontroll med känt batteriläge - på konsolen, en Pi eller PC-stickan, inte i Windows - visas som en liten ikon med sin procentandel, staplad från övre vänstra hörnet på sin egen platta. En kontroll matchad till Spelare 1 eller Spelare 2 (enligt inställningen Byt spelare 1 / spelare 2) märks P1/P2; en omatchad kontroll, eller en tredje, får ingen märkning. När en kontrolls batteri blir lågt rapporterar en notisrad det en gång, med namn och procent.
+
 ![Set-väljaren: tre flikar och grupperna av den nuvarande fliken med deras antal](../images/en/set-picker.jpg)
 
 ### 3.2 Kontroller
@@ -262,7 +264,7 @@ lämnar och sparar. Varje förändring tillämpas omedelbar.
 | Bredbildsskärm | PS1-emulatorns bildförhållande för varje spel. |
 | Spela alla PSX-spel med RA | Varje PS1-spel startar i RetroArch:s PS1-kärna. |
 | Uppdatera RA Config | AutoBleem skriver sina inställningar in i RetroArch:s config när det startar ett spel där. |
-| Byt spelare 1 / spelare 2 (PS1-emulatorer) | När två eller fler kontroller är anslutna, byt vilken som är Spelare 1 och vilken som är Spelare 2 i båda PS1-emulatorerna. Med byte aktiverat flyttas även tangentbordet till port 2. RetroArch påverkas inte. |
+| Byt spelare 1 / spelare 2 (PS1-emulatorer) | Byter vilken av de två första kontrollerna som är Spelare 1 och vilken som är Spelare 2, i pcsx-abnxt - klassiska pcsx-ab stöder det inte än (en notis säger det om det används där). Det får bara effekt med två eller fler kontroller anslutna; med en kontroller är det alltid Spelare 1. RetroArch påverkas inte. |
 | **Bibliotek**: Visa interna spel | Konsolens inbyggda spel i PlayStation-listerna (endast PlayStation Classic). |
 | Hämta box art online | Skanningen hämtar saknade omslag från libretro:s servrar (Raspberry Pi, PC, Windows). |
 | **Uppdateringar** | (Raspberry Pi, PC, Windows) `stable`, `latest` (även förhandsversioner) eller `off`. |

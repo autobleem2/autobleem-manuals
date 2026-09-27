@@ -166,6 +166,8 @@ parte inferior lista o que os botões fazem. Uma verificação da pasta de jogos
 inicialização; enquanto é executada, uma bolha no canto superior direito mostra seu progresso, e novos jogos aparecem
 na prateleira conforme são encontrados.
 
+Um controle sem fio com leitura de bateria disponível - no console, em um Pi ou no pendrive de PC, não no Windows - aparece como um pequeno ícone com sua porcentagem, empilhado a partir do canto superior esquerdo sobre sua própria placa. Um controle associado ao Jogador 1 ou ao Jogador 2 (seguindo a opção Trocar Jogador 1 / Jogador 2) recebe a etiqueta P1/P2; um controle não associado, ou um terceiro, não recebe etiqueta. Quando a bateria de um controle fica baixa, uma linha de notificação avisa uma vez, com o nome e a porcentagem.
+
 ![O seletor de conjuntos: três abas e os grupos do presente com seus números de jogos](../images/en/set-picker.jpg)
 
 ### 3.2 Controles
@@ -250,7 +252,7 @@ salva. Cada mudança é aplicada imediatamente.
 | Widescreen | A forma da imagem do emulador PS1 para cada jogo. |
 | Reproduzir todos os jogos PSX com RA | Cada jogo PS1 inicia no núcleo PS1 do RetroArch. |
 | Atualizar Config RA | AutoBleem escreve suas configurações na configuração do RetroArch quando inicia um jogo lá. |
-| Trocar Jogador 1 / Jogador 2 (emuladores PS1) | Quando dois ou mais controles estão conectados, troque qual é o Jogador 1 e qual é o Jogador 2 em ambos os emuladores PS1. Com a troca ativada, o teclado também se move para a porta 2. RetroArch não é afetado. |
+| Trocar Jogador 1 / Jogador 2 (emuladores PS1) | Troca qual dos dois primeiros controles é o Jogador 1 e qual é o Jogador 2, no pcsx-abnxt - o pcsx-ab clássico ainda não suporta isso (uma notificação avisa se for usado com ele). Só tem efeito com dois ou mais controles conectados; com um único controle, é sempre o Jogador 1. O RetroArch não é afetado. |
 | **Biblioteca**: Mostrar Jogos Internos | Os jogos incorporados do console nas listas PlayStation (apenas PlayStation Classic). |
 | Buscar capas online | A verificação baixa capas faltantes dos servidores libretro (Raspberry Pi, PC, Windows). |
 | **Atualizações** | (Raspberry Pi, PC, Windows) `stable`, `latest` (também pré-lançamentos) ou `off`. |
