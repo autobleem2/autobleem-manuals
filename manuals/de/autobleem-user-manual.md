@@ -178,6 +178,8 @@ Die Leiste unten listet auf, was die Buttons tun. Ein Scan des Spielordners läu
 während er läuft, zeigt eine Blase oben rechts seinen Fortschritt, und neue Spiele erscheinen auf dem Regal, wenn
 sie gefunden werden.
 
+Jeder drahtlose Controller wird mit einem Batterie-Symbol in der oberen linken Ecke des Bildschirms auf einer kleinen Platte angezeigt, gekennzeichnet mit der Spielernummer (P1, P2 oder ohne Markierung, wenn der Controller nicht Spieler 1 oder 2 ist). Wenn der Akku schwach ist, wird eine Nachricht in der Benachrichtigungszeile angezeigt.
+
 ![Der Set-Picker: drei Tabs und die Gruppen des aktuellen mit ihren Spielzahlen](../images/en/set-picker.jpg)
 
 ### 3.2 Steuerelemente
@@ -266,6 +268,7 @@ Circle verlässt und speichert. Jede Änderung wird sofort angewendet.
 | Widescreen | Die PS1-Emulator-Bildform für jedes Spiel. |
 | Alle PSX-Spiele mit RA spielen | Jedes PS1-Spiel startet in RetroArch's PS1-Core. |
 | RA-Konfiguration aktualisieren | AutoBleem schreibt seine Einstellungen in RetroArch's Konfiguration, wenn es dort ein Spiel startet. |
+| Spieler 1 / Spieler 2 tauschen (PS1-Emulatoren) | Wenn zwei oder mehr Controller angeschlossen sind, kann festgelegt werden, welcher Spieler 1 und welcher Spieler 2 in beiden PS1-Emulatoren ist. Mit aktiviertem Tausch wird die Tastatur auch auf Port 2 verschoben. RetroArch ist nicht betroffen. |
 | **Bibliothek**: Interne Spiele anzeigen | Die eingebauten Spiele der Console in den PlayStation-Listen (nur PlayStation Classic). |
 | Box Art online abrufen | Der Scan ruft fehlende Cover von libretro's Servern ab (Raspberry Pi, PC, Windows). |
 | **Updates** | (Raspberry Pi, PC, Windows) `stable`, `latest` (auch die Pre-Releases) oder `off`. |

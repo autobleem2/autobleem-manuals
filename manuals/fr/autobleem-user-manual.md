@@ -176,6 +176,8 @@ bouton de lecture. La barre en bas énumère ce que font les boutons. Un scan du
 arrière-plan à chaque démarrage ; pendant son exécution, une bulle en haut à droite affiche sa progression, et
 les nouveaux jeux apparaissent sur l'étagère au fur et à mesure de leur découverte.
 
+Chaque manette sans fil est affichée avec une icône de batterie dans le coin supérieur gauche de l'écran sur une petite plaque étiquetée avec le numéro du joueur (P1, P2 ou sans étiquette si la manette n'est pas Joueur 1 ou 2). Quand la batterie d'une manette est faible, une ligne de notification affiche son niveau de charge.
+
 ![Le sélecteur de liste : trois onglets et les groupes du courant avec leurs nombres de jeux](../images/en/set-picker.jpg)
 
 ### 3.2 Contrôles
@@ -264,6 +266,7 @@ quitte et enregistre. Chaque changement s'applique immédiatement.
 | Écran large | La forme de l'image de l'émulateur PS1 pour chaque jeu. |
 | Jouer tous les jeux PSX avec RA | Chaque jeu PS1 démarre dans le cœur PS1 de RetroArch. |
 | Mettre à jour la configuration RA | AutoBleem écrit ses paramètres dans la configuration de RetroArch quand il lance un jeu là. |
+| Échanger Joueur 1 / Joueur 2 (émulateurs PS1) | Lorsque deux manettes ou plus sont connectées, changez celle qui est Joueur 1 et celle qui est Joueur 2 dans les deux émulateurs PS1. Avec l'échange activé, le clavier se déplace également au port 2. RetroArch n'est pas affecté. |
 | **Bibliothèque** : Afficher les jeux internes | Les jeux intégrés de la console dans les listes PlayStation (PlayStation Classic uniquement). |
 | Récupérer les jaquettes en ligne | Le scan récupère les jaquettes manquantes depuis les serveurs de libretro (Raspberry Pi, PC, Windows). |
 | **Mises à jour** | (Raspberry Pi, PC, Windows) `stable`, `latest` (également les pré-versions) ou `off`. |

@@ -180,6 +180,8 @@ Bara din jos listează ce fac butoanele. O scanare a folderului de jocuri ruleaz
 pornire; în timp ce rulează, o bulă în colțul din dreapta sus arată progresul, iar jocuri noi apar pe
 raft pe măsură ce sunt găsite.
 
+Fiecare gamepad wireless este afișat cu o pictogramă de baterie în colțul superior stâng al ecranului pe o mică placă etichetată cu numărul jucătorului (P1, P2 sau fără etichetă dacă gamepad-ul nu este Jucătorul 1 sau 2). Când bateria unui gamepad este scăzută, o linie de notificare afișează nivelul de încărcare al acestuia.
+
 ![Selectorul de seturi: trei file și grupele curente cu numărătorile lor](../images/en/set-picker.jpg)
 
 ### 3.2 Controale
@@ -269,6 +271,7 @@ pleacă și salvează. Fiecare schimbare este aplicată imediat.
 | Ecran Lat | Forma imaginii emulatorului PS1 pentru fiecare joc. |
 | Joaca toate jocurile PSX cu RA | Fiecare joc PS1 pornește în nucleul PS1 al RetroArch. |
 | Actualizează Configurație RA | AutoBleem scrie setările sale în configurația RetroArch când pornește un joc acolo. |
+| Schimbă Jucătorul 1 / Jucătorul 2 (emulatoare PS1) | Când două sau mai multe gamepad-uri sunt conectate, schimbă care este Jucătorul 1 și care este Jucătorul 2 în ambele emulatoare PS1. Cu schimbul activat, tastatura se mișcă și ea la portul 2. RetroArch nu este afectat. |
 | **Bibliotecă**: Arată Jocuri Interne | Jocurile încorporate ale consolei în listele PlayStation (numai PlayStation Classic). |
 | Preia cover art online | Scanarea prelucrează coperțile lipsă de pe serverele libretro (Raspberry Pi, PC, Windows). |
 | **Actualizări** | (Raspberry Pi, PC, Windows) `stabil`, `cel mai nou` (și pre-versiunile) sau `oprit`. |
