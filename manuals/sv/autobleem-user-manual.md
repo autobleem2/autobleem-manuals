@@ -264,7 +264,7 @@ lämnar och sparar. Varje förändring tillämpas omedelbar.
 | Bredbildsskärm | PS1-emulatorns bildförhållande för varje spel. |
 | Spela alla PSX-spel med RA | Varje PS1-spel startar i RetroArch:s PS1-kärna. |
 | Uppdatera RA Config | AutoBleem skriver sina inställningar in i RetroArch:s config när det startar ett spel där. |
-| Byt spelare 1 / spelare 2 (PS1-emulatorer) | Byter vilken av de två första kontrollerna som är Spelare 1 och vilken som är Spelare 2, i pcsx-abnxt - klassiska pcsx-ab stöder det inte än (en notis säger det om det används där). Det får bara effekt med två eller fler kontroller anslutna; med en kontroller är det alltid Spelare 1. RetroArch påverkas inte. |
+| Byt spelare 1 / spelare 2 (PS1-emulatorer) | Byter vilken av de två första kontrollerna som är Spelare 1 och vilken som är Spelare 2, i båda PS1-emulatorerna (pcsx-abnxt och klassiska pcsx-ab). Det får bara effekt med två eller fler kontroller anslutna; med en kontroller är det alltid Spelare 1. RetroArch påverkas inte. |
 | **Bibliotek**: Visa interna spel | Konsolens inbyggda spel i PlayStation-listerna (endast PlayStation Classic). |
 | Hämta box art online | Skanningen hämtar saknade omslag från libretro:s servrar (Raspberry Pi, PC, Windows). |
 | **Uppdateringar** | (Raspberry Pi, PC, Windows) `stable`, `latest` (även förhandsversioner) eller `off`. |

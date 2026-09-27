@@ -258,7 +258,7 @@ saves. Every change is applied at once.
 | Widescreen | The PS1 emulator's picture shape for every game. |
 | Play all PSX games with RA | Every PS1 game starts in RetroArch's PS1 core. |
 | Update RA Config | AutoBleem writes its settings into RetroArch's config when it starts a game there. |
-| Swap Player 1 / Player 2 (PS1 emulators) | Swaps which of the first two controllers is Player 1 and which is Player 2 in pcsx-abnxt - the classic pcsx-ab does not support it yet (a notification says so if it is used there). It only takes effect with two or more pads connected; with one pad, play is always Player 1. RetroArch is not affected. |
+| Swap Player 1 / Player 2 (PS1 emulators) | Swaps which of the first two pads is Player 1 and which is Player 2, in both PS1 emulators (pcsx-abnxt and the classic pcsx-ab). It only takes effect with two or more pads connected; with one pad, play is always Player 1. RetroArch is not affected. |
 | **Library**: Show Internal Games | The console's built-in games in the PlayStation lists (PlayStation Classic only). |
 | Fetch box art online | The scan fetches missing covers from libretro's servers (Raspberry Pi, PC, Windows). |
 | **Updates** | The update channel: `release` (the tested version), `testing` (the next version, being tested), `nightly` (the newest development build) or `off`. The default follows the version installed. |

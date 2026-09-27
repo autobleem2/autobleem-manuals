@@ -273,7 +273,7 @@ se'n va e salva. Cada cambiament s'aplica al moment.
 | Grand ecran | La forma de l'imatge de l'emulator PS1 per cada jòc. |
 | Jogar a totes los jòcs PSX amb RA | Cada jòc PS1 s'avie dins lo còr PS1 de RetroArch. |
 | Metre a jorn la configuracion RA | AutoBleem escríu sos paramètres dins la configuracion de RetroArch quand l'avie un jòc aicí. |
-| Escambiar Jogaire 1 / Jogaire 2 (emuladors PS1) | Escambia quala de las doas primièras manetas es Jogaire 1 e quala es Jogaire 2, dins pcsx-abnxt - lo pcsx-ab classic o pren pas en carga encara (una notificacion o senhala se s'utiliza amb el). A d'efièch sonque amb doas manetas o mai connectadas; amb una sola maneta, es totjorn Jogaire 1. RetroArch es pas afectat. |
+| Escambiar Jogaire 1 / Jogaire 2 (emuladors PS1) | Escambia quala de las doas primièras manetas es Jogaire 1 e quala es Jogaire 2, dins los dos emuladors PS1 (pcsx-abnxt e lo pcsx-ab classic). A d'efièch sonque amb doas manetas o mai connectadas; amb una sola maneta, es totjorn Jogaire 1. RetroArch es pas afectat. |
 | **Bibliotèca** : Afichar los jòcs intèrnes | Los jòcs fornits de la consòla en las listas PlayStation (PlayStation Classic sols). |
 | Recuperar las cobertas en linha | L'escandalhatge telecarga las cobertas manquantas dempuèi los servidors de libretro (Raspberry Pi, PC, Windows). |
 | **Mesas a jorn** | (Raspberry Pi, PC, Windows) `stable`, `latest` (los pre-sortidas tanben) o `off`. |

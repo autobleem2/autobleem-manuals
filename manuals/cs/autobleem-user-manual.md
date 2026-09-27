@@ -278,7 +278,7 @@ hodnotu, Circle opustí a uloží. Každá změna se použije okamžitě.
 | Widescreen | Tvar obrázku emulátoru PS1 pro každou hru. |
 | Play all PSX games with RA | Každá PS1 hra se spustí v jádře PS1 RetroArch. |
 | Update RA Config | AutoBleem zapisuje nastavení do konfigurace RetroArch, když tam spustí hru. |
-| Prohodit hráče 1 / hráče 2 (emulátory PS1) | Prohodí, který z prvních dvou ovladačů je Hráč 1 a který Hráč 2, v pcsx-abnxt - klasický pcsx-ab to zatím nepodporuje (pokud se o to pokusíte, zobrazí se upozornění). Funguje to jen při připojení dvou nebo více ovladačů; s jedním ovladačem je vždy Hráč 1. RetroArch není ovlivněn. |
+| Prohodit hráče 1 / hráče 2 (emulátory PS1) | Prohodí, který z prvních dvou ovladačů je Hráč 1 a který Hráč 2, v obou emulátorech PS1 (pcsx-abnxt i klasický pcsx-ab). Funguje to jen při připojení dvou nebo více ovladačů; s jedním ovladačem je vždy Hráč 1. RetroArch není ovlivněn. |
 | **Library**: Show Internal Games | Zabudované hry konzoly v seznamech PlayStation (pouze PlayStation Classic). |
 | Fetch box art online | Skenování stahuje chybějící obálky ze serverů libretro (Raspberry Pi, PC, Windows). |
 | **Updates** | (Raspberry Pi, PC, Windows) `stable`, `latest` (včetně předvydaní) nebo `off`. |

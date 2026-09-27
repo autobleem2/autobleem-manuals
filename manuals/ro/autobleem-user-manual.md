@@ -271,7 +271,7 @@ pleacă și salvează. Fiecare schimbare este aplicată imediat.
 | Ecran Lat | Forma imaginii emulatorului PS1 pentru fiecare joc. |
 | Joaca toate jocurile PSX cu RA | Fiecare joc PS1 pornește în nucleul PS1 al RetroArch. |
 | Actualizează Configurație RA | AutoBleem scrie setările sale în configurația RetroArch când pornește un joc acolo. |
-| Schimbă Jucătorul 1 / Jucătorul 2 (emulatoare PS1) | Schimbă care dintre primele două gamepad-uri este Jucătorul 1 și care este Jucătorul 2, în pcsx-abnxt - pcsx-ab clasic nu suportă încă acest lucru (o notificare avertizează dacă este folosit cu el). Are efect doar cu două sau mai multe gamepad-uri conectate; cu un singur gamepad, este mereu Jucătorul 1. RetroArch nu este afectat. |
+| Schimbă Jucătorul 1 / Jucătorul 2 (emulatoare PS1) | Schimbă care dintre primele două gamepad-uri este Jucătorul 1 și care este Jucătorul 2, în ambele emulatoare PS1 (pcsx-abnxt și pcsx-ab clasic). Are efect doar cu două sau mai multe gamepad-uri conectate; cu un singur gamepad, este mereu Jucătorul 1. RetroArch nu este afectat. |
 | **Bibliotecă**: Arată Jocuri Interne | Jocurile încorporate ale consolei în listele PlayStation (numai PlayStation Classic). |
 | Preia cover art online | Scanarea prelucrează coperțile lipsă de pe serverele libretro (Raspberry Pi, PC, Windows). |
 | **Actualizări** | (Raspberry Pi, PC, Windows) `stabil`, `cel mai nou` (și pre-versiunile) sau `oprit`. |

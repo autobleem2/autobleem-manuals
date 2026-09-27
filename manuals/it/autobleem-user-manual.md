@@ -256,7 +256,7 @@ salva. Ogni modifica viene applicata immediatamente.
 | Widescreen | La forma dell'immagine dell'emulatore PS1 per ogni gioco. |
 | Riproduci tutti i giochi PSX con RA | Ogni gioco PS1 si avvia nel nucleo PS1 di RetroArch. |
 | Aggiorna config RA | AutoBleem scrive le sue impostazioni nella configurazione di RetroArch quando avvia un gioco lì. |
-| Scambia Giocatore 1 / Giocatore 2 (emulatori PS1) | Scambia quale dei primi due controller è il Giocatore 1 e quale il Giocatore 2, in pcsx-abnxt - il pcsx-ab classico non lo supporta ancora (una notifica lo segnala se viene usato con esso). Ha effetto solo con due o più controller collegati; con un solo controller si gioca sempre come Giocatore 1. RetroArch non è interessato. |
+| Scambia Giocatore 1 / Giocatore 2 (emulatori PS1) | Scambia quale dei primi due controller è il Giocatore 1 e quale il Giocatore 2, in entrambi gli emulatori PS1 (pcsx-abnxt e il pcsx-ab classico). Ha effetto solo con due o più controller collegati; con un solo controller si gioca sempre come Giocatore 1. RetroArch non è interessato. |
 | **Biblioteca**: Mostra giochi interni | I giochi incorporati della console negli elenchi PlayStation (solo PlayStation Classic). |
 | Scarica copertine online | La scansione scarica le copertine mancanti dai server di libretro (Raspberry Pi, PC, Windows). |
 | **Aggiornamenti** | (Raspberry Pi, PC, Windows) `stable`, `latest` (anche i pre-rilasci) o `off`. |

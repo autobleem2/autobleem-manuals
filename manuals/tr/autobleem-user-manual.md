@@ -256,7 +256,7 @@ Circle ayrılır ve kaydeder. Her değişiklik hemen uygulanır.
 | Geniş Ekran | Her oyun için PS1 emülatörü resim şekli. |
 | Tüm PSX Oyunlarını RA ile Oyna | Her PS1 oyunu RetroArch'ın PS1 çekirdeğinde başlar. |
 | RA Yapılandırmasını Güncelle | AutoBleem, orada oyun başlattığında ayarlarını RetroArch'ın yapılandırmasına yazar. |
-| Oyuncu 1 / Oyuncu 2'yi Değiştir (PS1 emülatörleri) | İlk iki kumandadan hangisinin Oyuncu 1, hangisinin Oyuncu 2 olduğunu pcsx-abnxt'te değiştirir - klasik pcsx-ab bunu henüz desteklemiyor (orada kullanılırsa bir bildirim bunu belirtir). Yalnızca iki veya daha fazla kumanda bağlıyken etkili olur; tek kumandayla her zaman Oyuncu 1'dir. RetroArch etkilenmez. |
+| Oyuncu 1 / Oyuncu 2'yi Değiştir (PS1 emülatörleri) | İlk iki kumandadan hangisinin Oyuncu 1, hangisinin Oyuncu 2 olduğunu her iki PS1 emülatöründe de (pcsx-abnxt ve klasik pcsx-ab) değiştirir. Yalnızca iki veya daha fazla kumanda bağlıyken etkili olur; tek kumandayla her zaman Oyuncu 1'dir. RetroArch etkilenmez. |
 | **Kütüphane**: Dahili Oyunları Göster | Konsol oyunlarını PlayStation listelerinde (yalnızca PlayStation Classic). |
 | Kapak Resmini Çevrimiçi Getir | Tarama, libretro sunucularından eksik kapakları getirir (Raspberry Pi, PC, Windows). |
 | **Güncellemeler** | (Raspberry Pi, PC, Windows) `kararlı`, `en son` (ön sürümler de) veya `kapalı`. |

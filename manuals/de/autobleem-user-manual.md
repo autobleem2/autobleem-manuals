@@ -268,7 +268,7 @@ Circle verlässt und speichert. Jede Änderung wird sofort angewendet.
 | Widescreen | Die PS1-Emulator-Bildform für jedes Spiel. |
 | Alle PSX-Spiele mit RA spielen | Jedes PS1-Spiel startet in RetroArch's PS1-Core. |
 | RA-Konfiguration aktualisieren | AutoBleem schreibt seine Einstellungen in RetroArch's Konfiguration, wenn es dort ein Spiel startet. |
-| Spieler 1 / Spieler 2 tauschen (PS1-Emulatoren) | Vertauscht, welcher der ersten beiden Controller Spieler 1 ist und welcher Spieler 2, in pcsx-abnxt - der klassische pcsx-ab unterstützt das noch nicht (eine Benachrichtigung weist darauf hin, wenn er damit verwendet wird). Es wirkt sich nur aus, wenn zwei oder mehr Controller angeschlossen sind; mit einem Controller ist es immer Spieler 1. RetroArch ist nicht betroffen. |
+| Spieler 1 / Spieler 2 tauschen (PS1-Emulatoren) | Vertauscht, welcher der ersten beiden Controller Spieler 1 ist und welcher Spieler 2, in beiden PS1-Emulatoren (pcsx-abnxt und dem klassischen pcsx-ab). Es wirkt sich nur aus, wenn zwei oder mehr Controller angeschlossen sind; mit einem Controller ist es immer Spieler 1. RetroArch ist nicht betroffen. |
 | **Bibliothek**: Interne Spiele anzeigen | Die eingebauten Spiele der Console in den PlayStation-Listen (nur PlayStation Classic). |
 | Box Art online abrufen | Der Scan ruft fehlende Cover von libretro's Servern ab (Raspberry Pi, PC, Windows). |
 | **Updates** | (Raspberry Pi, PC, Windows) `stable`, `latest` (auch die Pre-Releases) oder `off`. |

@@ -249,7 +249,7 @@ gemmer. Hver ændring påføres øjeblikkeligt.
 | Widescreen | PS1-emulatorens billedform til hvert spil. |
 | Play all PSX games with RA | Hvert PS1-spil starter i RetroArch's PS1-kerne. |
 | Update RA Config | AutoBleem skriver dets indstillinger ind i RetroArch's konfiguration når det starter et spil der. |
-| Byt spiller 1 / spiller 2 (PS1-emulatorer) | Bytter om på hvilken af de to første controllere der er Spiller 1, og hvilken der er Spiller 2, i pcsx-abnxt - den klassiske pcsx-ab understøtter det endnu ikke (en notifikation siger det, hvis det bruges der). Det virker kun med to eller flere controllere tilsluttet; med én controller er det altid Spiller 1. RetroArch påvirkes ikke. |
+| Byt spiller 1 / spiller 2 (PS1-emulatorer) | Bytter om på hvilken af de to første controllere der er Spiller 1, og hvilken der er Spiller 2, i begge PS1-emulatorer (pcsx-abnxt og den klassiske pcsx-ab). Det virker kun med to eller flere controllere tilsluttet; med én controller er det altid Spiller 1. RetroArch påvirkes ikke. |
 | **Library**: Show Internal Games | Konsolens indbyggede spil i PlayStation-listerne (kun PlayStation Classic). |
 | Fetch box art online | Scanning henter manglende omslag fra libretro's servere (Raspberry Pi, PC, Windows). |
 | **Updates** | (Raspberry Pi, PC, Windows) `stable`, `latest` (pre-udgivelserne også) eller `off`. |
