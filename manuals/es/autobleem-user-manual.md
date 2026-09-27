@@ -257,6 +257,7 @@ Circle sale y guarda. Cada cambio se aplica inmediatamente.
 | Pantalla panorámica | La forma de la imagen del emulador PS1 para cada juego. |
 | Reproducir todos los juegos de PSX con RA | Cada juego de PS1 inicia en el núcleo PS1 de RetroArch. |
 | Actualizar configuración de RA | AutoBleem escribe su configuración en la configuración de RetroArch cuando inicia un juego allí. |
+| Intercambiar Jugador 1 / Jugador 2 (emuladores PS1) | Cuando hay dos o más controles conectados, cambia cuál es el Jugador 1 y cuál es el Jugador 2 en ambos emuladores PS1. Con el intercambio activado, el teclado también se mueve al puerto 2. RetroArch no se ve afectado. | La información de **Batería** para cada control inalámbrico se muestra como un icono etiquetado con el número del jugador (P1, P2).
 | **Biblioteca**: Mostrar juegos internos | Los juegos incorporados de la consola en las listas de PlayStation (solo PlayStation Classic). |
 | Descargar carátulas en línea | El escaneo descarga carátulas faltantes de los servidores de libretro (Raspberry Pi, PC, Windows). |
 | **Actualizaciones** | (Raspberry Pi, PC, Windows) `stable`, `latest` (también los pre-lanzamientos) o `off`. |

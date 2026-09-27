@@ -256,6 +256,7 @@ saves. Every change is applied at once.
 | Widescreen | The PS1 emulator's picture shape for every game. |
 | Play all PSX games with RA | Every PS1 game starts in RetroArch's PS1 core. |
 | Update RA Config | AutoBleem writes its settings into RetroArch's config when it starts a game there. |
+| Swap Player 1 / Player 2 (PS1 emulators) | When two or more pads are connected, swap which one is Player 1 and which is Player 2 in both PS1 emulators. With the swap on, the keyboard also moves to port 2. RetroArch is not affected. |
 | **Library**: Show Internal Games | The console's built-in games in the PlayStation lists (PlayStation Classic only). |
 | Fetch box art online | The scan fetches missing covers from libretro's servers (Raspberry Pi, PC, Windows). |
 | **Updates** | The update channel: `release` (the tested version), `testing` (the next version, being tested), `nightly` (the newest development build) or `off`. The default follows the version installed. |
@@ -467,7 +468,8 @@ kernel this item opens **PSC-Bios** instead (chapter 6).
 The first two controllers are shown as Player 1 and Player 2 - the ports the PS1 emulator gives them.
 Any further controller is shown as not used by the PS1 emulator. RetroArch assigns controllers by its own
 settings and may order them differently. When a controller is plugged in or pulled out, the launcher
-briefly shows which pad is Player 1 and Player 2.
+briefly shows which pad is Player 1 and Player 2. **Battery** information is shown for each wireless pad
+as an icon labelled with the player number (P1, P2).
 
 ![Hardware Information](../images/en/hardware-info.jpg)
 

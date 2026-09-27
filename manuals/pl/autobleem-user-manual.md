@@ -258,6 +258,7 @@ i zapisuje. Każda zmiana działa od razu.
 | Szeroki ekran | Proporcje obrazu emulatora PS1 dla każdej gry. |
 | Graj we wszystkie gry PSX w RA | Każda gra PS1 startuje w rdzeniu PS1 RetroArch. |
 | Aktualizuj konfigurację RA | AutoBleem wpisuje swoje ustawienia do konfiguracji RetroArch, gdy uruchamia tam grę. |
+| Zamień Gracza 1 / Gracza 2 (emulatory PS1) | Jeśli są podłączone dwa lub więcej padów, zamień, który jest Graczem 1 a który Graczem 2 w obu emulatorach PS1. Z włączoną zamianą klawiatura również przechodzi na port 2. RetroArch nie jest objęty. |
 | **Biblioteka**: Pokaż gry wewnętrzne | Wbudowane gry konsoli na listach PlayStation (tylko PlayStation Classic). |
 | Pobieraj okładki z sieci | Skan pobiera brakujące okładki z serwerów libretro (Raspberry Pi, PC, Windows). |
 | **Aktualizacje** | Kanał aktualizacji: `release` (wersja przetestowana), `testing` (następna wersja, w trakcie testów), `nightly` (najnowsza wersja rozwojowa) albo `off`. Domyślny wynika z zainstalowanej wersji. |
@@ -479,7 +480,8 @@ zamiast tego **PSC-Bios** (rozdział 6).
 Pierwsze dwa kontrolery są wyświetlane jako Gracz 1 i Gracz 2 – porty, które emulator PS1 im przydziela.
 Każdy dodatkowy kontroler jest wyświetlany jako nieużywany przez emulator PS1. RetroArch przydziela kontrolery
 według własnych ustawień i może je uporządkować inaczej. Gdy kontroler zostanie podłączony lub odłączony, launcher
-krótko pokazuje, który pad to Gracz 1 i Gracz 2.
+krótko pokazuje, który pad to Gracz 1 i Gracz 2. Informacja o **Baterię** jest wyświetlana dla każdego bezprzewodowego pada
+jako ikona z etykietą numeru gracza (P1, P2).
 
 ![Informacje o sprzęcie](../images/pl/hardware-info.jpg)
 

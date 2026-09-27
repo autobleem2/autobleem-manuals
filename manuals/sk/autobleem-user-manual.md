@@ -504,7 +504,7 @@ displej a zvukový ovládač, pripojené herné ovládače - znovu čítané ka�
 PlayStation Classic s jadrom AutoBleem sa táto položka otvorí **PSC-Bios** namiesto
 (kapitola 6).
 
-Prvé dva ovládače sú zobrazené ako Hráč 1 a Hráč 2 – porty, ktoré im emulátor PS1 priradí.
+Prvé dva ovládače sú zobrazené ako Hráč 1 a Hráč 2 – porty, ktoré im emulátor PS1 priradí. Informácie o **Batérii** pre každý bezdrôtový ovládač sa zobrazujú ako ikona označená číslom hráča (P1, P2).
 Akýkoľvek ďalší ovládač je zobrazený ako nepoužitý emulátorom PS1. RetroArch priradí ovládače
 podľa svojich vlastných nastavení a môže ich usporiadať inak. Keď je ovládač pripojený alebo
 odpojený, spúšťač krátko zobrazuje, ktorý pad je Hráč 1 a Hráč 2.

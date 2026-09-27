@@ -254,6 +254,7 @@ Circle ayrılır ve kaydeder. Her değişiklik hemen uygulanır.
 | Geniş Ekran | Her oyun için PS1 emülatörü resim şekli. |
 | Tüm PSX Oyunlarını RA ile Oyna | Her PS1 oyunu RetroArch'ın PS1 çekirdeğinde başlar. |
 | RA Yapılandırmasını Güncelle | AutoBleem, orada oyun başlattığında ayarlarını RetroArch'ın yapılandırmasına yazar. |
+| Oyuncu 1 / Oyuncu 2'yi Değiştir (PS1 emülatörleri) | İki veya daha fazla kumanda bağlı olduğunda, hangisinin Oyuncu 1 ve hangisinin Oyuncu 2 olduğunu her iki PS1 emülatöründe de değiştirin. Değiştirme açık olduğunda, klavye de port 2'ye taşınır. RetroArch etkilenmez. |
 | **Kütüphane**: Dahili Oyunları Göster | Konsol oyunlarını PlayStation listelerinde (yalnızca PlayStation Classic). |
 | Kapak Resmini Çevrimiçi Getir | Tarama, libretro sunucularından eksik kapakları getirir (Raspberry Pi, PC, Windows). |
 | **Güncellemeler** | (Raspberry Pi, PC, Windows) `kararlı`, `en son` (ön sürümler de) veya `kapalı`. |
@@ -460,7 +461,7 @@ köşede. Oyun Yöneticisi tarama çalışana kadar bekler.
 Makine gerçekleri - sistem, donanım, depolama boş alanla, ağ adresleri, ekran ve ses sürücüleri, bağlı
 kontrolcüler - her saniye yeniden okunan. AutoBleem kernel'i olan konsolda bu **PSC-Bios** açar (bölüm 6).
 
-İlk iki kontrolcü, Oyuncu 1 ve Oyuncu 2 olarak gösterilir – PS1 emülatörünün onlara atadığı portlar.
+İlk iki kontrolcü, Oyuncu 1 ve Oyuncu 2 olarak gösterilir – PS1 emülatörünün onlara atadığı portlar. Her kablosuz kumandanın **Pil** bilgileri oyuncu numarası (P1, P2) ile etiketlenmiş bir simge olarak görüntülenir.
 Diğer tüm kontrolcüler PS1 emülatörü tarafından kullanılmayan olarak gösterilir. RetroArch, kendi
 ayarlarına göre kontrolcüleri atar ve onları farklı şekilde sıralayabilir. Bir kontrolcü bağlandığında
 veya bağlantısı kesildiğinde, başlatıcı hangi pad'in Oyuncu 1 ve Oyuncu 2 olduğunu kısaca gösterir.

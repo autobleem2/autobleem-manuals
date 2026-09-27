@@ -264,6 +264,7 @@ quitte et enregistre. Chaque changement s'applique immédiatement.
 | Écran large | La forme de l'image de l'émulateur PS1 pour chaque jeu. |
 | Jouer tous les jeux PSX avec RA | Chaque jeu PS1 démarre dans le cœur PS1 de RetroArch. |
 | Mettre à jour la configuration RA | AutoBleem écrit ses paramètres dans la configuration de RetroArch quand il lance un jeu là. |
+| Échanger Joueur 1 / Joueur 2 (émulateurs PS1) | Lorsque deux manettes ou plus sont connectées, changez celle qui est Joueur 1 et celle qui est Joueur 2 dans les deux émulateurs PS1. Avec l'échange activé, le clavier se déplace également au port 2. RetroArch n'est pas affecté. |
 | **Bibliothèque** : Afficher les jeux internes | Les jeux intégrés de la console dans les listes PlayStation (PlayStation Classic uniquement). |
 | Récupérer les jaquettes en ligne | Le scan récupère les jaquettes manquantes depuis les serveurs de libretro (Raspberry Pi, PC, Windows). |
 | **Mises à jour** | (Raspberry Pi, PC, Windows) `stable`, `latest` (également les pré-versions) ou `off`. |
@@ -481,7 +482,7 @@ Les faits de la machine - système, matériel, stockage avec son espace libre, a
 d'affichage et audio, les manettes connectées - relus chaque seconde. Sur une PlayStation Classic avec le noyau
 AutoBleem cet élément ouvre **PSC-Bios** à la place (chapitre 6).
 
-Les deux premiers contrôleurs sont affichés comme Joueur 1 et Joueur 2 – les ports que l'émulateur PS1 leur attribue.
+Les deux premiers contrôleurs sont affichés comme Joueur 1 et Joueur 2 – les ports que l'émulateur PS1 leur attribue. Les informations de **Batterie** pour chaque manette sans fil s'affichent sous forme d'icône étiquetée par le numéro du joueur (P1, P2).
 Tout contrôleur supplémentaire est affiché comme non utilisé par l'émulateur PS1. RetroArch attribue les contrôleurs
 selon ses propres paramètres et peut les ordonner différemment. Quand un contrôleur est branché ou débranché, le lanceur
 affiche brièvement quel pad est Joueur 1 et Joueur 2.

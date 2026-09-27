@@ -271,6 +271,7 @@ se'n va e salva. Cada cambiament s'aplica al moment.
 | Grand ecran | La forma de l'imatge de l'emulator PS1 per cada jòc. |
 | Jogar a totes los jòcs PSX amb RA | Cada jòc PS1 s'avie dins lo còr PS1 de RetroArch. |
 | Metre a jorn la configuracion RA | AutoBleem escríu sos paramètres dins la configuracion de RetroArch quand l'avie un jòc aicí. |
+| Escambiar Jogaire 1 / Jogaire 2 (emuladors PS1) | Quand son connectats dos o mai de manèts, escambia qual es Jogaire 1 e qual es Jogaire 2 dins los dos emuladors PS1. Amb l'escambi activat, lo teclat se desplaça tanben al pòrt 2. RetroArch es pas afectat. |
 | **Bibliotèca** : Afichar los jòcs intèrnes | Los jòcs fornits de la consòla en las listas PlayStation (PlayStation Classic sols). |
 | Recuperar las cobertas en linha | L'escandalhatge telecarga las cobertas manquantas dempuèi los servidors de libretro (Raspberry Pi, PC, Windows). |
 | **Mesas a jorn** | (Raspberry Pi, PC, Windows) `stable`, `latest` (los pre-sortidas tanben) o `off`. |
@@ -493,7 +494,7 @@ Los faches de la maquina - sistèma, material, emmagazinatge amb son espaci liur
 d'afichatge e àudio, las manetas connectadas - ra-legits cada segonda. Sus una PlayStation Classic amb lo
 nucli AutoBleem aqueste element dobrís **PSC-Bios** en plaça (capítol 6).
 
-Los dos primièrs controllers se presentan coma Jogaire 1 e Jogaire 2 – los pòrts que l'emulatòr PS1 lor assigna.
+Los dos primièrs controllers se presentan coma Jogaire 1 e Jogaire 2 – los pòrts que l'emulatòr PS1 lor assigna. Las informacions de **Batariá** per cada joystick sens fial se mostran coma una icòna etiketada pel numèro del jogaire (P1, P2).
 Tota maneta suplimentària se presenta coma non utilizat per l'emulatòr PS1. RetroArch assigna los controllers
 segont sas paramètres e pòt los ordenar diferentes. Quand un controller se branca o se debranca, lo llançador
 mostra breu quau pad es Jogaire 1 e Jogaire 2.

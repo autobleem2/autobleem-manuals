@@ -269,6 +269,7 @@ pleacă și salvează. Fiecare schimbare este aplicată imediat.
 | Ecran Lat | Forma imaginii emulatorului PS1 pentru fiecare joc. |
 | Joaca toate jocurile PSX cu RA | Fiecare joc PS1 pornește în nucleul PS1 al RetroArch. |
 | Actualizează Configurație RA | AutoBleem scrie setările sale în configurația RetroArch când pornește un joc acolo. |
+| Schimbă Jucătorul 1 / Jucătorul 2 (emulatoare PS1) | Când două sau mai multe gamepad-uri sunt conectate, schimbă care este Jucătorul 1 și care este Jucătorul 2 în ambele emulatoare PS1. Cu schimbul activat, tastatura se mișcă și ea la portul 2. RetroArch nu este afectat. |
 | **Bibliotecă**: Arată Jocuri Interne | Jocurile încorporate ale consolei în listele PlayStation (numai PlayStation Classic). |
 | Preia cover art online | Scanarea prelucrează coperțile lipsă de pe serverele libretro (Raspberry Pi, PC, Windows). |
 | **Actualizări** | (Raspberry Pi, PC, Windows) `stabil`, `cel mai nou` (și pre-versiunile) sau `oprit`. |
@@ -494,7 +495,7 @@ Faptele mașinii - sistem, hardware, stocare cu spațiul liber, adrese de rețea
 audio, gamepad-urile conectate - re-cite o dată la fiecare secundă. Pe PlayStation Classic cu kernel
 AutoBleem aceasta deschide **PSC-Bios** în loc (capitolul 6).
 
-Primele două controllere sunt afișate ca Jucător 1 și Jucător 2 – porturile pe care emilatorul PS1 le atribuie.
+Primele două controllere sunt afișate ca Jucător 1 și Jucător 2 – porturile pe care emilatorul PS1 le atribuie. Informațiile despre **Baterie** pentru fiecare gamepad wireless se afișează ca o pictogramă etichetată cu numărul jucătorului (P1, P2).
 Orice controller suplimentar este afișat ca neutilizat de emilatorul PS1. RetroArch atribuie controllere
 conform setărilor proprii și le poate ordona diferit. Când un controller este conectat sau deconectat,
 launcher-ul arată pe scurt care pad este Jucător 1 și Jucător 2.

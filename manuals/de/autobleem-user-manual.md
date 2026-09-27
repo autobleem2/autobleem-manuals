@@ -266,6 +266,7 @@ Circle verlässt und speichert. Jede Änderung wird sofort angewendet.
 | Widescreen | Die PS1-Emulator-Bildform für jedes Spiel. |
 | Alle PSX-Spiele mit RA spielen | Jedes PS1-Spiel startet in RetroArch's PS1-Core. |
 | RA-Konfiguration aktualisieren | AutoBleem schreibt seine Einstellungen in RetroArch's Konfiguration, wenn es dort ein Spiel startet. |
+| Spieler 1 / Spieler 2 tauschen (PS1-Emulatoren) | Wenn zwei oder mehr Controller angeschlossen sind, kann festgelegt werden, welcher Spieler 1 und welcher Spieler 2 in beiden PS1-Emulatoren ist. Mit aktiviertem Tausch wird die Tastatur auch auf Port 2 verschoben. RetroArch ist nicht betroffen. |
 | **Bibliothek**: Interne Spiele anzeigen | Die eingebauten Spiele der Console in den PlayStation-Listen (nur PlayStation Classic). |
 | Box Art online abrufen | Der Scan ruft fehlende Cover von libretro's Servern ab (Raspberry Pi, PC, Windows). |
 | **Updates** | (Raspberry Pi, PC, Windows) `stable`, `latest` (auch die Pre-Releases) oder `off`. |
@@ -488,9 +489,10 @@ und Audio-Treiber, die verbundenen Pads - neu gelesen jede Sekunde. Auf einer Pl
 AutoBleem-Kernel öffnet dieses Element stattdessen **PSC-Bios** (Kapitel 6).
 
 Die erste und zweite Steuerung werden als Spieler 1 und Spieler 2 angezeigt – die Anschlüsse, die der PS1-Emulator ihnen gibt.
-Jede weitere Steuerung wird als „wird vom PS1-Emulator nicht verwendet“ angezeigt. RetroArch weist Steuerungen nach seinen eigenen
+Jede weitere Steuerung wird als „wird vom PS1-Emulator nicht verwendet” angezeigt. RetroArch weist Steuerungen nach seinen eigenen
 Einstellungen zu und kann sie anders anordnen. Wenn eine Steuerung angeschlossen oder abgezogen wird, zeigt der Launcher kurz,
-welches Pad Spieler 1 und Spieler 2 ist.
+welches Pad Spieler 1 und Spieler 2 ist. **Akku**-Informationen werden für jeden drahtlosen Controller als Symbol mit der
+Spielernummer (P1, P2) angezeigt.
 
 ![Hardware-Informationen](../images/en/hardware-info.jpg)
 
