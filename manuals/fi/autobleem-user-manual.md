@@ -573,7 +573,7 @@ ja jokainen liitetty ohjain olivatko sillä painike karttoitus. Verkon ja Blueto
 kerneliin konsolilla (osio 6.2) tai järjestelmä välineisiin Pi:llä / PC-tikulla; ohjaimen ohjaussuutari
 toimii millä tahansa järjestelmällä.
 
-![PSC-Bios: Network & Controllers-keskityttin](../images/en/pscbios-main.jpg)
+![PSC-Bios: Network & Controllers-keskityttin](../images/fi/pscbios-main.jpg)
 
 - **Select - Wi-Fi Network** (kernel tai NetworkManager): verkon nimi (kirjoitettu tai poimittu skannauksesta)
   salasana ajaja tilaksi ja *Apply / Restart Network*. Aikavyöhyke asetetaan myös täällä. Konsolinin
@@ -595,7 +595,7 @@ painiketta 2 sekuntia tekee sen ("Hold any button 2 s: Exit"). Lyhyt paina kartt
 Näppäimistöllä Esc / Välilyönti / Enter seisovat POWER / RESET / OPEN:lle. Lopussa uusi karttoitus lisätään
 testiksi ja OPEN tallentaa sen nimen joka valitset; käynnistäjä lataa sen siitä.
 
-![PSC-Bios: ohjaimen karttoitus ohjaussuutari](../images/en/pscbios-wizard.jpg)
+![PSC-Bios: ohjaimen karttoitus ohjaussuutari](../images/fi/pscbios-wizard.jpg)
 
 ### 6.2 ABFlashKit - AutoBleem kernel
 
@@ -609,7 +609,7 @@ stock:iin Sony:n oman palautuksen kautta.
 > Pidä konsoli virta ja tikku sisällä kunnes se käynnistyy itse uudelleen. ABFlashKit avautuu tähän
 > varoitukseen; *I understand* menee eteenpäin *Quit* poistuu.
 
-![ABFlashkit:n valikko](../images/en/abflashkit-menu.jpg)
+![ABFlashkit:n valikko](../images/fi/abflashkit-menu.jpg)
 
 - **Flash Kernel**: tekee palautus varmuuskopian konsolinin osioista tikulle (`LBOOT.EPB`) jos sitä ei ole
   vielä tarkistaa sen ja kernel-kuvan kirjoittaa kerneliin ja AutoBleemin järjestelmä tiedostoihin ja

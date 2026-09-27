@@ -559,7 +559,7 @@ og hver tilsluttet controller med om det har knap-kortlægning. Netværk og Blue
 AutoBleem-kernelen på konsol (afsnit 6.2) eller systemværktøjer på Raspberry Pi / PC-stick; gamepad-guiden
 fungerer på ethvert system.
 
-![PSC-Bios: Network & Controllers-hub](../images/en/pscbios-main.jpg)
+![PSC-Bios: Network & Controllers-hub](../images/da/pscbios-main.jpg)
 
 - **Select - Wi-Fi Network** (kernel eller NetworkManager): netværks-navn (tastet eller plukket fra scan)
   adgangskode driver-mode og *Apply / Restart Network*. Tidszone indstilles her også. Konsolens IP-adresse
@@ -579,7 +579,7 @@ kortlægges som normalt. På tastatur står Esc / Mellemrum / Enter ind for POWE
 bliver nye kortlægning tilføjet til test og OPEN gemmer det under navn du vælger; launcher indlæser det
 derefter.
 
-![PSC-Bios: controller-kortlægnings-guiden](../images/en/pscbios-wizard.jpg)
+![PSC-Bios: controller-kortlægnings-guiden](../images/da/pscbios-wizard.jpg)
 
 ### 6.2 ABFlashKit - AutoBleem-kernelen
 
@@ -593,7 +593,7 @@ Sony's egen recovery.
 > dens garanti. Hold konsollen strøm og stick i indtil den genstarter af sig selv. ABFlashKit åbner på denne
 > advarsel; *I understand* går videre *Quit* forlader.
 
-![ABFlashKit's menu](../images/en/abflashkit-menu.jpg)
+![ABFlashKit's menu](../images/da/abflashkit-menu.jpg)
 
 - **Flash Kernel**: laver recovery backup af konsolens partitioner på stick (`LBOOT.EPB`) hvis der ikke er
   en endnu, tjekker den og kernel-image skriver kernel og AutoBleem's system-filer og genstarter. *All done
