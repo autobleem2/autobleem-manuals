@@ -172,6 +172,7 @@ De instellingen zijn in groepen; Omhoog / Omlaag beweegt tussen groepen, Links /
 | Widescreen | De beeldverhoudingsaanpassing van PS1-emulator voor elk spel. |
 | Play all PSX games with RA | Elk PS1-spel start in RetroArch's PS1-core. |
 | Update RA Config | AutoBleem schrijft zijn instellingen in RetroArch's config wanneer het daar een spel start. |
+| Speler 1 / Speler 2 wisselen (PS1-emulators) | Wanneer twee of meer controllers zijn aangesloten, kunt u wisselen welke Speler 1 en welke Speler 2 in beide PS1-emulators zijn. Met wisselen ingeschakeld gaat het toetsenbord ook naar poort 2. RetroArch wordt niet beïnvloed. |
 | **Library**: Show Internal Games | De ingebouwde games van de console in PlayStation-lijsten (alleen PlayStation Classic). |
 | Fetch box art online | De scan haalt ontbrekende hoezen van libretro's servers (Raspberry Pi, PC, Windows). |
 | **Updates** | (Raspberry Pi, PC, Windows) `stable`, `latest` (ook pre-releases) of `off`. |

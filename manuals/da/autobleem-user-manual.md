@@ -247,6 +247,7 @@ gemmer. Hver ændring påføres øjeblikkeligt.
 | Widescreen | PS1-emulatorens billedform til hvert spil. |
 | Play all PSX games with RA | Hvert PS1-spil starter i RetroArch's PS1-kerne. |
 | Update RA Config | AutoBleem skriver dets indstillinger ind i RetroArch's konfiguration når det starter et spil der. |
+| Byt spiller 1 / spiller 2 (PS1-emulatorer) | Når to eller flere controllere er tilsluttet, skal du bytte hvilken der er Spiller 1 og hvilken der er Spiller 2 i begge PS1-emulatorer. Med byt slået til flyttes tastaturet også til port 2. RetroArch er ikke påvirket. |
 | **Library**: Show Internal Games | Konsolens indbyggede spil i PlayStation-listerne (kun PlayStation Classic). |
 | Fetch box art online | Scanning henter manglende omslag fra libretro's servere (Raspberry Pi, PC, Windows). |
 | **Updates** | (Raspberry Pi, PC, Windows) `stable`, `latest` (pre-udgivelserne også) eller `off`. |

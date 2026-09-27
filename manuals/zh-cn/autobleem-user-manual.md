@@ -172,6 +172,7 @@ AutoBleem作为Windows程序：全屏、模拟器和RetroArch启动为程序。
 | 宽屏 | PS1模拟器为每款游戏的图像形状。 |
 | 使用RA播放所有PSX游戏 | 每款PS1游戏都在RetroArch的PS1内核中启动。 |
 | 更新RA配置 | AutoBleem在从那里启动游戏时将其设置写入RetroArch的配置。 |
+| 交换玩家1/玩家2（PS1模拟器） | 当连接两个或更多操纵杆时，在两个PS1模拟器中交换哪个是玩家1和哪个是玩家2。启用交换后，键盘也会移至端口2。RetroArch不受影响。 |
 | **库**：显示内置游戏 | PlayStation列表中控制台的内置游戏(仅PlayStation Classic)。 |
 | 在线获取盖艺术 | 扫描从libretro服务器获取缺失的封面(树莓派、PC、Windows)。 |
 | **更新** | (树莓派、PC、Windows)`stable`、`latest`(预发布版本也包含)或`off`。 |

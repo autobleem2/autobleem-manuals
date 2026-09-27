@@ -256,6 +256,7 @@ tallentaa. Jokainen muutos käytetään välittömästi.
 | Widescreen | PS1-emulaattorin kuvasuhde jokaiselle pelille. |
 | Play all PSX games with RA | Jokainen PS1-peli käynnistyy RetroArchin PS1-ytimessä. |
 | Update RA Config | AutoBleem kirjoittaa asetuksensa RetroArchin määritykseen kun se käynnistää pelin siellä. |
+| Vaihda pelaaja 1 / pelaaja 2 (PS1-emulaattorit) | Kun on kytkettynä kaksi tai useampia ohjaimia, vaihda kumpi on Pelaaja 1 ja kumpi on Pelaaja 2 molemmissa PS1-emulaattoreissa. Kun vaihto on käytössä, näppäimistö siirtyy myös portille 2. RetroArch ei ole vaikutuksissa. |
 | **Library**: Show Internal Games | Konsolinin sisäänrakennetut pelit PlayStation-luetteloissa (vain PlayStation Classic). |
 | Fetch box art online | Skannaus noutaa puuttuvat kannet libretron palvelimista (Raspberry Pi PC Windows). |
 | **Updates** | (Raspberry Pi PC Windows) `stable` `latest` (esijulkaisut myös) tai `off`. |

@@ -250,6 +250,7 @@ salva. Cada mudança é aplicada imediatamente.
 | Widescreen | A forma da imagem do emulador PS1 para cada jogo. |
 | Reproduzir todos os jogos PSX com RA | Cada jogo PS1 inicia no núcleo PS1 do RetroArch. |
 | Atualizar Config RA | AutoBleem escreve suas configurações na configuração do RetroArch quando inicia um jogo lá. |
+| Trocar Jogador 1 / Jogador 2 (emuladores PS1) | Quando dois ou mais controles estão conectados, troque qual é o Jogador 1 e qual é o Jogador 2 em ambos os emuladores PS1. Com a troca ativada, o teclado também se move para a porta 2. RetroArch não é afetado. |
 | **Biblioteca**: Mostrar Jogos Internos | Os jogos incorporados do console nas listas PlayStation (apenas PlayStation Classic). |
 | Buscar capas online | A verificação baixa capas faltantes dos servidores libretro (Raspberry Pi, PC, Windows). |
 | **Atualizações** | (Raspberry Pi, PC, Windows) `stable`, `latest` (também pré-lançamentos) ou `off`. |
