@@ -54,7 +54,7 @@ jobs:
        (github.ref == 'refs/heads/develop' &&
         (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.publish))))
     needs: build
-    runs-on: [self-hosted, linux, x64]
+    runs-on: [self-hosted, psc-build]
     # a site write is never cancelled mid-way by a newer push (unlike the build job's per-ref group above,
     # which may legitimately supersede an old build): one publish at a time, queued, not cancelled
     concurrency:
