@@ -12,15 +12,17 @@ dołączone narzędzia.
 
 ## 1. Co dostajesz
 
-- **Launcher** - karuzela okładek, zestawy (PlayStation, RetroArch, Aplikacje), opis gry, menu systemowe,
-  opcje, narzędzia do kart pamięci i stanów gry. Ten sam program na każdej platformie.
+- **Launcher** - karuzela okładek, zestawy (PlayStation, RetroArch, Aplikacje), opis gry, Szybkie menu i menu
+  systemowe, opcje, narzędzia do kart pamięci i stanów gry oraz Sklep do pobierania aplikacji i gier. Ten sam
+  program na każdej platformie.
 - **Dwa emulatory PS1** - `pcsx-abnxt`, aktualny (domyślny), oraz `pcsx-ab`, klasyczny, dostarczany z
   AutoBleem od zawsze. Wybierasz go w opcjach; oba używają tych samych ustawień i kart pamięci.
 - **RetroArch** (opcjonalny na każdej platformie) dla innych systemów: NES, SNES, Mega Drive, Game Boy,
   automaty i wiele innych. AutoBleem buduje listy RetroArch z ROM-ów, które wgrasz, i uruchamia każdą grę
   właściwym rdzeniem.
-- **Narzędzia konsolowe** (tylko PlayStation Classic): *PSC-Bios* do WiFi, zegara i mapowania padów oraz
-  *ABFlashKit* do instalacji kernela AutoBleem.
+- **Narzędzia konsolowe**: *PSC-Bios* (w menu widoczny jako *Sieć i kontrolery*) do WiFi, zegara, Bluetooth i
+  mapowania padów - na konsoli, a także na Raspberry Pi i pendrivie PC - oraz *ABFlashKit* do instalacji
+  kernela AutoBleem (tylko PlayStation Classic).
 - **UpdateRoms** dla Windows: odświeża listy RetroArch i okładki pendrive'a konsoli na PC, bo sama konsola
   nie ma sieci.
 
@@ -59,7 +61,7 @@ AutoBleem (ABFlashKit, rozdział 6) uruchamia się także z pendrive'a exFAT, co
 **Włączanie i wyłączanie.** Z włożonym pendrivem konsola startuje, przez kilka sekund miga diodą
 (AutoBleem jest wykrywany) i przechodzi w stan czuwania, zanim cokolwiek się pokaże - tak konsola
 sama przygotowuje aktualizację i dzięki temu AutoBleem w ogóle może się uruchomić. Naciśnij raz
-**Power** i pojawi się launcher. *Wyłącz* w menu systemowym albo przycisk Power konsoli przełącza
+**Power** i pojawi się launcher. *Wyłączanie* w menu systemowym albo przycisk Power konsoli przełącza
 konsolę w **czuwanie AutoBleem**: najpierw odłączany jest pendrive, potem dioda świeci **na czerwono** -
 to znak, że AutoBleem działa tak, jak powinien - a następne naciśnięcie Power przywraca launcher w kilka
 sekund. **Gdy dioda jest czerwona, pendrive można wyjąć** i włożyć do PC bez pytania Windows o
@@ -173,10 +175,30 @@ Launcher raz dziennie sprawdza też stronę i proponuje aktualizację, gdy jest 
 
 ### 3.1 Launcher
 
-Launcher otwiera się na półce: okładki bieżącego zestawu, wybrana pośrodku, obok jej opis - wydawca, rok,
-numer seryjny, region, liczba graczy, kiedy ostatnio grano - i przycisk odtwarzania. Pasek u dołu mówi, co
-robią przyciski. Przy każdym starcie w tle działa skanowanie folderu gier; póki trwa, dymek w prawym górnym
-rogu pokazuje postęp, a nowe gry pojawiają się na półce w miarę znajdowania.
+Launcher otwiera się na półce: okładki bieżącego zestawu, wybrana pośrodku, z miękkim odbiciem pod spodem, obok
+jej opis w zwartej siatce - wydawca, rok, numer seryjny, region, liczba graczy, kiedy ostatnio grano (informacji,
+której gra nie ma, po prostu nie ma) - i przycisk odtwarzania. Domyślny wygląd to motyw **ab2.0.0**; świeża
+instalacja i aktualizacja, która go przynosi, przełączają na niego jednorazowo. Pasek podpowiedzi u dołu ma dwie
+linie po cztery pola. Pierwsza pokazuje, co robią przyciski dla wybranej gry (graj, graj w RetroArch, otwórz rząd
+ikon, Szybkie menu); druga zawsze pokazuje Select (zestaw), Start (losowa gra), Trójkąt (przewodnik) i L2 + R2
+(menu systemowe), przyciemnione, gdy w danej chwili któryś nic nie robi. Przy każdym starcie w tle działa
+skanowanie folderu gier; póki trwa, dymek w prawym górnym rogu pokazuje postęp, a nowe gry pojawiają się na
+półce w miarę znajdowania.
+
+**Świeża instalacja** nie ma jeszcze gier: zamiast pustej półki launcher pokazuje kartę powitalną - *Cześć i
+witaj w AutoBleem!* - która każe wrzucić gry do folderu `Games` i wybrać *Ponownie skanuj gry*, a miejsce podaje
+dla twojej platformy: na pendrivie (PlayStation Classic, pendrive PC), na karcie SD (Raspberry Pi) albo w folderze
+AutoBleem (Windows). Karta znika, gdy skan znajdzie pierwszą grę.
+
+**Powiadomienia** pojawiają się jako dymki w prawym górnym rogu: postęp skanowania, nazwa zestawu, na który
+przełączono (*Wyświetla: ...*, tak długo, jak mówi Opcje → *Czas komunikatu*), niski poziom baterii pada,
+informacja po awarii, pracujący procesor skanowania oraz trwające pobieranie ze Sklepu. Dymek pobierania pokazuje
+jego prędkość i pozostały czas, np. `1.4 MB/s · 0:42`.
+
+**Znacznik kanału.** Wersja, która nie jest ostateczną wersją wydaniową, pokazuje mały znacznik pod płytką
+baterii pada w lewym górnym rogu: etykietę z kanałem - `ALPHA`, `BETA` lub `RC` dla wersji wstępnej, `TESTING`
+dla każdej innej wersji wstępnej, `NIGHTLY` dla wersji nocnej, `DEV` dla wersji zbudowanej ręcznie - i obok
+krótki numer wersji (dla `DEV` commit, z którego ją zbudowano). Wydanie nie pokazuje znacznika.
 
 Bezprzewodowy pad z dostępnym odczytem baterii - na konsoli, Pi lub pendrive'ie PC, nie w Windows - jest pokazywany jako mała ikona z procentami, ułożona od lewego górnego rogu na własnej płytce. Pad dopasowany do Gracza 1 lub Gracza 2 (zgodnie z opcją Zamień Gracza 1 / Gracza 2) ma etykietę P1/P2; pad niedopasowany albo trzeci nie ma etykiety. Gdy bateria pada się wyczerpuje, linia powiadomienia zgłasza to raz, podając nazwę i procent.
 
@@ -193,6 +215,7 @@ Bezprzewodowy pad z dostępnym odczytem baterii - na konsoli, Pi lub pendrive'ie
 | Trójkąt | Przewodnik po przyciskach. |
 | Start | Losowa gra z bieżącego zestawu. |
 | Select | Wybór zestawu: zakładki PlayStation / RetroArch / Aplikacje (L1 / R1), grupy zakładki (Góra / Dół, L2 / R2 strona), Krzyżyk wybiera. |
+| Góra | Szybkie menu (punkt 3.4). |
 | Dół | Otwiera rząd ikon pod grą (Ustawienia, Gra, Karta pamięci, Wznów). Góra go zamyka. |
 | L2 + R2 | Menu systemowe (punkt 3.4). |
 
@@ -206,64 +229,81 @@ wychodzisz Kółkiem.
 
 ### 3.3 Zestawy
 
-**Select** otwiera wybór zestawu. Zakładka PlayStation zawiera *Wszystkie gry*, *Gry wewnętrzne* (dwadzieścia
-wbudowanych gier konsoli, na PlayStation Classic), każdy folder, który założysz w `Games/` (gra w
-podfolderze należy do tej grupy), *Ulubione*, *Historię* oraz - gdy jakaś gra jest tak oznaczona - *Gry na
-pistolet świetlny*. Zakładka RetroArch ma po jednej grupie na system z grami, a także własne Ulubione i
-Historię RetroArch. Zakładka Aplikacje grupuje programy: *Wszystkie aplikacje*, a potem *Gry*, *Emulatory*, *Narzędzia*, *Multimedia* i *Inne* (kategorię ustawia plik `app.ini` każdej aplikacji). Każdy wiersz pokazuje liczbę elementów; grupa
-bez gier otwiera pustą półkę z rzędem ikon pokazującym same Ustawienia.
+**Select** otwiera wybór zestawu. Zakładka PlayStation zawiera na PlayStation Classic *Wszystkie gry* i
+*Wewnętrzne gry* (dwadzieścia wbudowanych gier konsoli), potem *Gry USB* (wszystko z `Games/`) i każdy folder,
+który w nim założysz (gra w podfolderze należy do tej grupy), a dalej *Ulubione gry*, *Historia gry* oraz - gdy
+jakaś gra jest tak oznaczona - *Gry Lightgun*. Na Raspberry Pi, pendrivie PC i w Windows nie ma gier
+wewnętrznych, więc lista zaczyna się od *Gry USB*, czyli całej biblioteki. Zakładka RetroArch (tylko tam, gdzie
+RetroArch jest zainstalowany) ma po jednej grupie na system z grami, a także własne Ulubione i Historię
+RetroArch. Zakładka Aplikacje grupuje programy: *Wszystkie aplikacje*, a potem *Gry*, *Emulatory*, *Narzędzia*,
+*Multimedia* i *Inne* (kategorię ustawia plik `app.ini` każdej aplikacji). Każdy wiersz pokazuje liczbę
+elementów; grupa bez gier otwiera pustą półkę z rzędem ikon pokazującym same Ustawienia. Stopka podaje
+klawisze: L1 / R1 - zakładki, L2 / R2 - strona, Krzyżyk - wybór, Kółko - *Wstecz*.
 
 ### 3.4 Szybkie menu
 
-**Góra** w launcherze, lub **ikona koła zębatego** w rzędzie ikon (gdzie Ustawienia / Gra / Karta pamięci / Wznowienie):
-szybkie menu na dostęp do akcji, które robisz z półki. Krótka lista: *Skanuj gry ponownie* (skanowanie teraz),
-*Sklep* (Sklep AutoBleem na rozszerzenia), *Sieć i kontrolery* (tam, gdzie zainstalowane rozszerzenie zapewnia wpis `network` - PSC-Bios na konsoli, Pi i pendrivie PC: Wi-Fi, parowanie
-Bluetooth, kreator mapowania pada - patrz rozdział 6; wyszarzone z notatką "włącz w Rozszerzeniach", gdy to rozszerzenie jest wyłączone - Krzyżyk otwiera Rozszerzenia), i *Menu systemowe...* (pełne menu poniżej). Góra / Dół
-przechodzą (z zawinięciem), Krzyżyk wybiera, Kółko wychodzi. Nic tu unikatowego - każda pozycja jest też w menu
-systemowym.
+**Góra** w launcherze lub **ikona koła zębatego** w rzędzie ikon (gdzie Ustawienia / Gra / Karta pamięci /
+Wznów): szybkie menu na akcje, po które sięgasz z karuzeli. Krótka lista: *Ponownie skanuj gry* (uruchamia skan
+teraz), *Sklep* (przeglądaj i instaluj gry, aplikacje i rozszerzenia), *Sieć i kontrolery* (tam, gdzie
+zainstalowane rozszerzenie zapewnia wpis `network` - PSC-Bios na konsoli, Pi i pendrivie PC: Wi-Fi, parowanie
+Bluetooth, kreator mapowania pada - patrz rozdział 6; wyszarzone z notatką "włącz w Rozszerzeniach", gdy to
+rozszerzenie jest wyłączone - Krzyżyk otwiera Rozszerzenia), *Uruchom ponownie launcher* (zamyka AutoBleem i
+uruchamia go jeszcze raz; tylko na konsoli, Pi i pendrivie PC) oraz *Menu systemowe...* (wszystko inne: Opcje,
+Menadżer gier, Wyłączanie i więcej - pełne menu poniżej). Góra / Dół przechodzą (z zawinięciem), Krzyżyk
+wybiera, Kółko wychodzi. Każda pozycja ma w wierszu jednoliniowy opis. Poza Sklepem i *Uruchom ponownie
+launcher* każda pozycja jest też w menu systemowym.
 
 ### 3.5 Menu systemowe
 
-**L2 + R2** (razem, w dowolnej kolejności) otwiera menu systemowe nad półką. Menu jest podzielone na sekcje:
+**L2 + R2** (razem, w dowolnej kolejności) otwiera menu systemowe nad półką. Każdy wiersz ma jednoliniowy opis,
+a menu jest podzielone na sekcje:
 
 | Sekcja | Pozycja | Co robi |
 |---|---|---|
-| (góra) | Skanuj gry ponownie | Szuka teraz nowych, zmienionych lub usuniętych gier (skan sam też obserwuje folder). |
+| (góra) | Ponownie skanuj gry | Szuka teraz nowych, zmienionych lub usuniętych gier (skan sam też obserwuje folder). |
 | | Rozszerzenia | Rozszerzenia na pendrivie - Sklep AutoBleem i inne (punkt 3.12). |
-| **Biblioteka** | Menedżer gier | Gry PS1 jako lista z folderami: usuwanie gry, czyszczenie okładek. Wyłączone podczas skanowania. |
+| **Biblioteka** | Menadżer gier | Gry PS1 jako lista z folderami: usuwanie gry, czyszczenie okładek. Wyłączone podczas skanowania. |
 | | Karty pamięci | Twoje zestawy kart pamięci (punkt 3.7). |
 | | Procesory skanowania | Programy, które każde skanowanie uruchamia najpierw - ich kolejność, włączenie (punkt 3.13). Wyłączone podczas skanowania. |
 | **System** | Opcje | Ustawienia AutoBleem (punkt 3.6). |
 | | Sieć i kontrolery | Tam, gdzie zainstalowane rozszerzenie zapewnia wpis `network` (`Provides=network` w jego `extension.ini` - PSC-Bios na konsoli, Pi i pendrivie PC) - Wi-Fi, parowanie padów Bluetooth, konfiguracja DualShock 3 i kreator mapowania - patrz rozdział 6. Gdy to rozszerzenie jest zainstalowane, ale wyłączone, ta pozycja zostaje wyszarzona z notatką "włącz w Rozszerzeniach" - Krzyżyk otwiera Rozszerzenia. |
-| | Informacje o sprzęcie | Fakty maszyny: system, CPU, dyski, interfejsy sieciowe, strefa czasowa, ekran, pady i ich mapowania. Na konsoli z kernelem AutoBleem otwiera PSC-Bios (rozdział 6); na pozostałych maszynach pokazuje tę stronę informacyjną. |
-| | Aktualizacja | (Raspberry Pi i PC) Sprawdź teraz, czy na stronie jest nowszy AutoBleem lub RetroArch. |
+| | Informacje o sprzęcie | Fakty maszyny: system, CPU, dyski, interfejsy sieciowe, strefa czasowa, ekran, pady i ich mapowania - ta sama strona na każdej platformie (punkt 4.2). |
+| | Aktualizacja oprogramowania | (Raspberry Pi i PC) Sprawdź teraz, czy na stronie jest nowszy AutoBleem lub RetroArch; wiersz mówi *Dostępna aktualizacja*, gdy launcher już o niej wie. |
 | | O programie | Autorzy i licencja. |
-| **Wyjście** | RetroArch | Wychodzi z launchera do własnego menu RetroArch. Zamknięcie RetroArch wraca. |
-| | Wyłącz | Po potwierdzeniu: na konsoli czuwanie AutoBleem - pendrive odłączony, dioda czerwona, Power przywraca launcher (punkt 2.1); na Pi lub PC maszyna się wyłącza. |
+| **Wyjście** | RetroArch | (Tylko tam, gdzie RetroArch jest zainstalowany.) Wychodzi z launchera do własnego menu RetroArch. Zamknięcie RetroArch wraca. |
+| | Wyłączanie | Po potwierdzeniu: na konsoli czuwanie AutoBleem - pendrive odłączony, dioda czerwona, Power przywraca launcher (punkt 2.1); na Pi lub PC maszyna się wyłącza. |
 
 ![Menu systemowe](../images/pl/system-menu.jpg)
 
 ### 3.6 Opcje
 
-Ustawienia są w grupach; Góra / Dół przechodzą między nimi, Lewo / Prawo zmieniają wartość, Kółko wychodzi
-i zapisuje. Każda zmiana działa od razu.
+Ustawienia są w grupach, każda pod nagłówkiem; Góra / Dół przechodzą między wierszami, Lewo / Prawo zmieniają
+wartość (dotknięcie to jeden krok, przytrzymanie przewija), L1 / R1 skaczą do pierwszego / ostatniego wiersza,
+L2 / R2 zmieniają stronę, Kółko wychodzi i zapisuje. Każda zmiana działa od razu. Wartości włącz/wyłącz czyta
+się **WŁ.** / **WYŁ.**
 
 | Grupa / ustawienie | Co robi |
 |---|---|
-| **Interfejs**: Motyw AutoBleem | Wygląd. Motywy leżą w `Themes/`; zip z motywem wrzucony tam jest rozpakowywany przy następnym wejściu. Motywy dostarczane z AutoBleem są odświeżane przy każdej aktualizacji - żeby zmienić któryś, najpierw skopiuj go pod nową nazwą. |
-| Styl okładki | Ramka pudełka rysowana wokół okładek PS1. |
+| **Interfejs**: Obraz | Rozdzielczość ekranu dla launchera i emulatora PS1: *Auto* (własny tryb ekranu, pokazany jako *Auto (1920x1080)*) albo dowolny tryb z listy ekranu; konsola oferuje 720p i 1080p. O nowy tryb pytamy: *Zostawić ten tryb obrazu?* - jeśli nie potwierdzisz, po odliczaniu wraca poprzedni. Nie w oknie deweloperskim. |
+| Skalowanie ekranu emulatora | Jak emulator PS1 dopasowuje obraz gry do ekranu: *1x1* (własne piksele PlayStation), *2x (całkowite)*, *4:3*, *4:3 (całkowite)* albo *Pełny ekran*. Skalowanie całkowite używa tylko pełnych wielokrotności (najostrzejsze). Zastępuje dawny przełącznik Szeroki ekran; klasyczny `pcsx-ab` i RetroArch znają tylko pełny ekran i 4:3. |
+| Skórka AutoBleem | Wygląd. Motywy leżą w `Themes/`; zip z motywem wrzucony tam jest rozpakowywany przy następnym wejściu. Motywy dostarczane z AutoBleem są odświeżane przy każdej aktualizacji - żeby zmienić któryś, najpierw skopiuj go pod nową nazwą. Domyślna to **ab2.0.0**. |
+| Styl okładek | Ramka pudełka rysowana wokół okładek PS1. |
+| Błysk okładki | Błysk, który przesuwa się po wybranej okładce, gdy półka się zatrzyma. |
 | Język | Język launchera, od razu (17 języków). |
-| Czcionka z motywu / Czcionka | Czcionka klasycznych ekranów: z motywu albo dowolny `.ttf`/`.otf` z `resources/fonts`, `RetroArch/fonts` lub folderu motywu. |
-| Czas wyświetlania | Jak długo zostaje powiadomienie "Wyświetla: ..." w sekundach (0 = zawsze). |
+| Czas komunikatu | Jak długo zostają dymki informacyjne ("Wyświetla: ...", podsumowanie skanowania), od 0 do 20 sekund; 0 pokazuje *Wyłączony*. Błędy mają własny, stały czas. |
+| Ekran startowy | Obraz AutoBleem przy starcie launchera; wyłączony przechodzi od razu do półki. |
+| Animacje | Ruch między ekranami; wyłączone sprawia, że każda zmiana ekranu jest natychmiastowa. |
+| **Czcionki**: Użyj domyślnej czcionki | Launcher używa swojej domyślnej czcionki (Red Hat Text) albo - po wyłączeniu - czcionki wybranej niżej. |
+| Czcionka | Dowolny `.ttf`/`.otf` z `resources/fonts`, `RetroArch/fonts` lub folderu motywu; wiersz podaje używaną czcionkę. |
 | **Dźwięk**: Muzyka, Muzyka w tle | Który utwór gra pod launcherem (z motywu albo plik z `resources/music`) i czy w ogóle gra. |
 | **Emulacja**: Emulator PS1 | `pcsx-abnxt` (domyślny: aktualny PCSX-ReARMed z dodatkami AutoBleem) albo `pcsx-ab` (klasyczny). Punkt wznowienia zapisany w jednym da się kontynuować w drugim, chyba że gra działała bez pliku BIOS. |
-| Szeroki ekran | Proporcje obrazu emulatora PS1 dla każdej gry. |
-| Graj we wszystkie gry PSX w RA | Każda gra PS1 startuje w rdzeniu PS1 RetroArch. |
-| Aktualizuj konfigurację RA | AutoBleem wpisuje swoje ustawienia do konfiguracji RetroArch, gdy uruchamia tam grę. |
-| Zamień Gracza 1 / Gracza 2 (emulatory PS1) | Zamienia, który z dwóch pierwszych padów jest Graczem 1, a który Graczem 2, w obu emulatorach PS1 (pcsx-abnxt i klasycznym pcsx-ab). Działa to tylko przy podłączonych dwóch lub więcej padach; z jednym padem zawsze grasz jako Gracz 1. RetroArch tego nie dotyczy. |
-| **Biblioteka**: Pokaż gry wewnętrzne | Wbudowane gry konsoli na listach PlayStation (tylko PlayStation Classic). |
+| Zamień gracza 1 / gracza 2 (emulatory PS1) | Zamienia, który z dwóch pierwszych padów jest Graczem 1, a który Graczem 2, w obu emulatorach PS1 (pcsx-abnxt i klasycznym pcsx-ab). Działa to tylko przy podłączonych dwóch lub więcej padach; z jednym padem zawsze grasz jako Gracz 1. RetroArch tego nie dotyczy. |
+| Graj we wszystkie gry PSX przez RA, Uaktualniaj plik konfiguracji RA, Zachowuj konfigurację RetroArch | (Tylko tam, gdzie RetroArch jest zainstalowany.) Każda gra PS1 startuje w rdzeniu PS1 RetroArch; AutoBleem wpisuje swoje ustawienia do konfiguracji RetroArch, gdy uruchamia tam grę; zmiana zrobiona we własnym menu RetroArch zostaje zachowana po jego zamknięciu. |
+| **Biblioteka**: Pokazuj wewnętrzne gry | Wbudowane gry konsoli na listach PlayStation (tylko PlayStation Classic). |
 | Pobieraj okładki z sieci | Skan pobiera brakujące okładki z serwerów libretro (Raspberry Pi, PC, Windows). |
-| **Aktualizacje** | Kanał aktualizacji: `release` (wersja przetestowana), `testing` (następna wersja, w trakcie testów), `nightly` (najnowsza wersja rozwojowa) albo `off`. Domyślny wynika z zainstalowanej wersji. |
+| **Aktualizacje** | Kanał aktualizacji: `release` (wersja przetestowana), `testing` (następna wersja, w trakcie testów), `nightly` (najnowsza wersja rozwojowa) albo `off`. Domyślny wynika z zainstalowanej wersji. Niewidoczny na maszynie deweloperskiej. |
+| **Diagnostyka**: Zachowuj logi na pendrivie | Wszystkie logi zostają na pendrivie od następnego uruchomienia, nie tylko po awarii (rozdział 7). |
+| Pokazuj wydajność | Nakładka w lewym dolnym rogu: liczba klatek, obciążenie CPU, wątki i pamięć; emulator pokazuje też FPS i CPU w grze. |
 
 ![Opcje, w grupach](../images/pl/options.jpg)
 
@@ -272,24 +312,32 @@ i zapisuje. Każda zmiana działa od razu.
 Przy wybranej grze **Dół** otwiera jej rząd ikon: **Ustawienia** (opcje powyżej), **Gra** (ustawienia samej
 gry), **Karta pamięci** (jej karta) i **Wznów** (jej stany gry). Krzyżyk otwiera tę pod kursorem.
 
-**Edytor gry** pokazuje po prawej opis gry, a po lewej jej ustawienia w trzech grupach:
+**Edytor gry** pokazuje po prawej opis gry (tytuł, wydawca, rok, liczba graczy, folder, karta pamięci), a po
+lewej jej ustawienia w czterech grupach:
 
-- **Gra**: *Ulubiona* (w grupie Ulubione), *Gra na pistolet świetlny* (trafia do grupy pistoletu i zawsze
-  chodzi w RetroArch, którego rdzeń PS1 ma GunCon), *Graj w RA* (ta gra chodzi w RetroArch), *Zablokuj dane*
-  (skaner zostawia tytuł, numer seryjny i listę płyt tak, jak je ustawisz).
-- **Obraz**: wysoka rozdzielczość, scanlines i ich poziom, pomijanie klatek, wtyczka GPU oraz *Filtr* -
-  jak obraz jest skalowany: Wyłączony (czyste piksele), Liniowy (wygładzony) albo Ostry (wyraźne piksele bez
-  migotania; tylko `pcsx-abnxt` - klasyczny `pcsx-ab` i RetroArch traktują go jak Wyłączony).
+- **Gra**: *Ulubiona* (w grupie Ulubione gry), *Gra Lightgun* i *Graj w RA* (tylko tam, gdzie RetroArch jest
+  zainstalowany: gra na pistolet świetlny trafia do grupy Lightgun i zawsze chodzi w RetroArch, którego rdzeń PS1
+  ma GunCon; *Graj w RA* uruchamia tę grę w RetroArch), *Zablokuj dane* (skaner zostawia tytuł, numer seryjny i
+  listę płyt tak, jak je ustawisz).
+- **Obraz**: *Rozdzielczość* (1x lub 2x, na wbudowanym GPU), *Usuwanie szczelin* (tylko przy 2x), *Dithering*
+  (Wyłączony, Włączony, Zawsze), *Wygładzanie*, *Filtr* - jak obraz jest skalowany: Najbliższy (czyste piksele),
+  Liniowy (wygładzony), Ostry albo Ostry (prosty) (wyraźne piksele bez migotania), Quilez, albo filtry CRT: CRT
+  (fast) i CRT-Pi (rysują własne scanlines, więc wiersze linii szarzeją) - oraz *Linie* z ich *Jasnością linii*.
+  Rozdzielczość, usuwanie szczelin, dithering, wygładzanie i filtry inne niż Liniowy i Najbliższy dotyczą
+  `pcsx-abnxt`; klasyczny `pcsx-ab` i RetroArch pokazują resztę jako Najbliższy.
+- **Renderowanie**: *Wtyczka* GPU i *Pomiń klatki* (Auto, Wyłączony, od 1 do 3).
 - **Emulator**: SpeedHack, zegar CPU, interpolacja SPU, logo startowe (wyłączone pomija powłokę BIOS - dla
-  płyty homebrew, której własne logo psuje start), a z `pcsx-abnxt` filtr *Wygładzanie* i przełącznik
-  *Hacki Sony*.
+  płyty homebrew, której własne logo psuje start), a z `pcsx-abnxt` przełącznik *Hacki Sony*.
+
+Kształt obrazu i rozdzielczość ekranu są globalne (Opcje → *Skalowanie ekranu emulatora* i *Obraz*). Gra bez
+tytułu w swoich danych jest pokazywana pod nazwą swojego folderu.
 
 Trójkąt zmienia nazwę gry, Kwadrat zmienia jej kartę pamięci, Start udostępnia nową kartę. Kółko zapisuje i
 wychodzi.
 
 **Ustawienia zapisane w emulatorze.** Własne menu emulatora ma pozycję *Save settings for this game*. Gdy
-gra ma tam zapisane ustawienia, to z nimi jest uruchamiana, a edytor gry pokazuje jej wiersze Obraz i
-Emulator wyszarzone, z tymi wartościami, pod nagłówkiem *Zapisane w emulatorze*. Aby wrócić do ustawień z
+gra ma tam zapisane ustawienia, to z nimi jest uruchamiana, a edytor gry pokazuje jej wiersze Obraz, Renderowanie
+i Emulator wyszarzone, z tymi wartościami, pod nagłówkiem *Zapisane w emulatorze*. Aby wrócić do ustawień z
 edytora gry, wybierz **Odblokuj ustawienia** i potwierdź: ustawienia zapisane przez emulator zostaną
 usunięte, a wiersze znów da się zmieniać. Oba emulatory, `pcsx-ab` i `pcsx-abnxt`, czytają i zapisują te
 same ustawienia.
@@ -311,16 +359,36 @@ tytułem każdego zapisu: kopiowanie zapisu między nimi (Kwadrat), usuwanie (Tr
 ![Edytor kart pamięci](../images/pl/memory-card-editor.jpg)
 
 **Punkty wznowienia**: gdy wychodzisz z gry PS1 przyciskiem Reset konsoli (albo menu emulatora na Pi lub
-PC), AutoBleem zachowuje stan gry z tego miejsca i proponuje go pod ikoną **Wznów** - cztery sloty, każdy z
-obrazkiem chwili. Krzyżyk kontynuuje ze slotu, Trójkąt go usuwa. Gra z punktem wznowienia pokazuje mały
-obrazek na ikonie Wznów.
+PC), AutoBleem zachowuje stan gry z tego miejsca i proponuje go pod ikoną **Wznów** - cztery sloty, pokazane jako
+ramkowane karty, każda z obrazkiem chwili, numerem slotu i datą; najnowszy jest oznaczony **NAJNOWSZY**, a
+nieużywany slot mówi *Brak punktu wznowienia*. Krzyżyk kontynuuje ze slotu, Trójkąt go usuwa. Gra z punktem
+wznowienia pokazuje mały obrazek na ikonie Wznów; gra bez żadnego ma ikonę Wznów wyszarzoną. Gdy punkt
+wznowienia jest zapisywany przy wyjściu z gry, emulator pokazuje *Proszę czekać...*.
 
 ### 3.9 Uruchamianie gier, RetroArch i aplikacje
 
-**Krzyżyk** uruchamia wybraną grę. Gra PS1 chodzi w wybranym emulatorze PS1 (punkt 3.5), na pełnym
+**Krzyżyk** uruchamia wybraną grę. Gra PS1 chodzi w wybranym emulatorze PS1 (punkt 3.6), na pełnym
 ekranie, aż z niej wyjdziesz - na konsoli przednim przyciskiem **Reset** (powrót do launchera z punktem
-wznowienia) albo **Power** (konsola się wyłącza); na Pi lub PC przez menu emulatora (Select + Start na
-padzie albo Esc na klawiaturze). **Kwadrat** uruchamia grę PS1 w RetroArch.
+wznowienia; działa też z wnętrza menu w grze) albo **Power** (konsola się wyłącza); na Pi lub PC przez menu
+emulatora w grze (poniżej). **Kwadrat** uruchamia grę PS1 w RetroArch.
+
+**Menu w grze** (`pcsx-abnxt`). Naciśnij przycisk menu - Home pada, **Select + Start** na padzie bez niego albo
+**Esc** na klawiaturze - a gra zatrzyma się za menu z ostatnim obrazem gry. **Przytrzymanie przycisku menu przez
+2 sekundy** działa jak Reset: wychodzi z gry. L1 / R1 przełączają trzy karty menu, a menu otwiera się na karcie i
+wierszu, na których je zostawiono:
+
+- **Gra**: *Wróć do gry*; w *Zapis*: *Szybki zapis*, *Szybkie wczytanie* i *Wczytaj autozapis* (gra sprzed
+  najwyżej 30 sekund - emulator zapisuje ją sam w pamięci, gdy grasz); w *Płyta CD*: *Zmień płytę* i *Zresetuj
+  grę* (zaczyna ją od początku); *Zapisz ustawienia dla tej gry* (patrz punkt 3.7), *Menu PCSX* (własne strony
+  PCSX-ReARMed: opcje, kody, O programie) i *Wyjdź* (powrót do AutoBleem).
+- **Obraz**: *Ekran* (rozdzielczość ekranu - na konsoli wybiera się ją w Opcjach i tu jest tylko pokazana),
+  *Rozdzielczość* (1x lub 2x), *Usuwanie szczelin*, *Dithering*, *Skalowanie*, *Wygładzanie*, *Filtr*,
+  *Scanlines* i *Jasność scanlines*. Każdy wiersz ma po prawej linię pomocy. CRT-Pi jest zbyt ciężki dla konsoli
+  w 1080p. Wiersz, który nie ma zastosowania, jest wyszarzony, a jego pomoc mówi dlaczego.
+- **Kontrolery**: *Kontroler 1* i *Kontroler 2*: standardowy (cyfrowy), analogowy (DualShock), pistolet albo
+  brak; działa po powrocie do gry.
+
+Menu jest narysowane w wyglądzie ab2.0.0 launchera, z bateriami padów i obrazem ostatniego szybkiego zapisu.
 
 Gra **RetroArch** startuje w RetroArch z rdzeniem, który launcher wybrał dla jej systemu; *Close Content*
 albo *Quit RetroArch* w jego menu wraca do launchera. Pozycja RetroArch w menu systemowym otwiera własne
@@ -403,13 +471,19 @@ launcher, zostaje wyłączone - lista o tym mówi.
 systemie, na którym działa AutoBleem (PlayStation Classic potrzebuje WiFi z kernela AutoBleem). Ma cztery
 karty, L1 / R1 przełączają:
 
-- **Aplikacje** i **Gry**: to, co oferują źródła, każda pozycja z obrazkiem, wersją, rozmiarem i ikoną źródła. Zainstalowane pozycje są wyszarzone. Krzyżyk instaluje (albo aktualizuje, albo próbuje ponownie po niepowodzeniu), Trójkąt usuwa to, co zainstalował Sklep.
-  L2 / R2 lub Lewo / Prawo zmieniają stronę, **Select** pokazuje jedno źródło naraz, **Start** szuka w
-  tytułach. Obrazki pozycji są buforowane i mogą być ponownie pobrane, jeśli ich wczytanie się nie powiedzie.
-- **Pobrania**: co się pobiera, czeka, nie udało się lub jest zainstalowane. Pasek postępu aktualizuje się płynnie. Pobieranie trwa w tle, także
-  po wyjściu ze Sklepu; uruchomienie gry lub wyłączenie tylko je wstrzymuje, a przerwane pobieranie wznawia
-  się od miejsca, w którym stanęło. Zainstalowana gra pojawia się na półce po najbliższym skanie, z
-  obrazkiem ze Sklepu jako okładką. Pobierania ponad 2 GB działają na wszystkich platformach, w tym na wydaniach 32-bitowych.
+- **Aplikacje** i **Gry**: to, co oferują źródła, każda pozycja z obrazkiem, wersją, rozmiarem i ikoną źródła.
+  Zainstalowane pozycje mają plakietkę *Zainstalowane*. Krzyżyk instaluje (albo aktualizuje, albo próbuje
+  ponownie po niepowodzeniu, albo anuluje pobieranie w kolejce lub trwające), Trójkąt usuwa to, co zainstalował
+  Sklep, Kwadrat odświeża listy. L2 / R2 skaczą po literach, **Select** pokazuje jedno źródło naraz, **Start**
+  szuka w tytułach. Stopka pokazuje klawisze wybranego wiersza. Obrazki pozycji są buforowane i mogą być
+  ponownie pobrane, jeśli ich wczytanie się nie powiedzie.
+- **Pobrania**: co się pobiera, czeka, nie udało się lub jest zainstalowane. Pasek postępu aktualizuje się
+  płynnie, a gdy jesteś gdzie indziej w launcherze, dymek pokazuje trwające pobieranie z jego prędkością i
+  pozostałym czasem (`1.4 MB/s · 0:42`). Pobieranie trwa w tle, także po wyjściu ze Sklepu; uruchomienie gry lub
+  wyłączenie tylko je wstrzymuje, a przerwane pobieranie wznawia się od miejsca, w którym stanęło. Gdy sieć
+  zniknie, pozycja mówi *Czekam na sieć* i po powrocie sieci rusza dalej od miejsca, w którym stanęła (poddaje
+  się po 30 minutach). Zainstalowana gra pojawia się na półce po najbliższym skanie, z obrazkiem ze Sklepu jako
+  okładką. Pobierania ponad 2 GB działają na wszystkich platformach, w tym na wydaniach 32-bitowych.
 - **Źródła**: skąd pochodzą listy - własny katalog AutoBleem, lista TSV wrzucona do
   `System/Extensions/store/sources/` i adresy dodane przez **Dodaj adres źródła**. Każde źródło pokazuje swoją ikonę na liście. Krzyżyk na dodanym przez
   ciebie źródle pozwala zmienić jego nazwę, zmienić adres, przełączyć między `http://` a `https://` albo je
@@ -466,7 +540,7 @@ procesor musi robić, a `tools/proc_check.py` w
 
 ### 4.1 Menedżer gier
 
-Gry PS1 jako lista z folderami oraz okładka i opis wybranej. Krzyżyk otwiera edytor gry, **Kwadrat usuwa
+Gry PS1 jako lista samych tytułów (folder wybranej gry jest w jej opisie) oraz okładka wybranej. Krzyżyk otwiera edytor gry, **Kwadrat usuwa
 grę** (jej folder, a po drugim pytaniu także stany gry), Trójkąt usuwa wszystkie PNG okładek obok gier (skan
 weźmie je znów z baz), L2 / R2 zmieniają stronę. Wolne miejsce na dysku jest w prawym górnym rogu. Menedżer
 gier czeka, gdy trwa skan.
@@ -476,8 +550,8 @@ gier czeka, gdy trwa skan.
 ### 4.2 Informacje o sprzęcie
 
 Fakty o maszynie - system, sprzęt, dyski z wolnym miejscem, adresy sieciowe, sterowniki ekranu i dźwięku,
-podłączone pady - odczytywane co sekundę. Na PlayStation Classic z kernelem AutoBleem ta pozycja otwiera
-zamiast tego **PSC-Bios** (rozdział 6).
+podłączone pady - odczytywane co sekundę. To ta sama strona na każdej platformie, także na konsoli; ekrany
+ustawień sieci i kontrolerów to **Sieć i kontrolery** (PSC-Bios, rozdział 6).
 
 Pierwsze dwa kontrolery są wyświetlane jako Gracz 1 i Gracz 2 – porty, które emulator PS1 im przydziela.
 Każdy dodatkowy kontroler jest wyświetlany jako nieużywany przez emulator PS1. RetroArch przydziela kontrolery
@@ -567,7 +641,7 @@ pyta o zaporę: zezwól tylko na sieci prywatne.
 
 Dwa narzędzia na pendrivie PlayStation Classic. Oba rysują w motywie i języku launchera i oba obsługuje
 się padem - a w kreatorze mapowania przednimi przyciskami konsoli. **PSC-Bios** to rozszerzenie dołączone do
-pakietu konsoli: otwiera je *Informacje o sprzęcie* w menu systemowym i jest na liście rozszerzeń.
+pakietu konsoli: otwiera je pozycja *Sieć i kontrolery* szybkiego menu i menu systemowego i jest na liście rozszerzeń.
 **ABFlashKit** to aplikacja w zestawie Aplikacje.
 
 ### 6.1 PSC-Bios
@@ -642,7 +716,7 @@ fabrycznego.
   `updateroms.log` (UpdateRoms).
 - **Gry nie ma na półce**: sprawdź układ folderów (jeden folder na grę, formaty obrazów z punktu 3.9).
   *Menadżer gier* pokazuje za grami foldery, które skan odrzucił, z dopiskiem *Nie dodano* i przyczyną;
-  Kwadrat usuwa taki folder. *Skanuj gry ponownie* w menu systemowym uruchamia skan jeszcze raz.
+  Kwadrat usuwa taki folder. *Ponownie skanuj gry* w menu systemowym uruchamia skan jeszcze raz.
 - **Brak okładek**: nie zainstalowano baz okładek (uruchom instalator ponownie z zaznaczonymi bazami)
   albo - dla gier RetroArch na konsoli - nie uruchomiono UpdateRoms na PC.
 - **Pad nie działa albo ma pomieszane przyciski**: kreator mapowania w PSC-Bios (konsola) go mapuje; na

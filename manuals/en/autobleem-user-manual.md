@@ -184,8 +184,9 @@ background on every start; while it runs, a bubble at the top right shows its pr
 appear on the shelf as they are found.
 
 **A fresh install** has no games yet: instead of an empty shelf the launcher shows a welcome card - *Hi, and
-welcome to AutoBleem!* - telling you to drop games into `Games` on your stick and press *Re-scan games*. The
-card goes as soon as a scan finds the first game.
+welcome to AutoBleem!* - telling you to drop games into `Games` and press *Re-scan games*, and naming the
+place for your platform: on your stick (PlayStation Classic, PC stick), on your SD card (Raspberry Pi) or in your
+AutoBleem folder (Windows). The card goes as soon as a scan finds the first game.
 
 **Notifications** appear as bubbles at the top right: the scan's progress, the name of the set you
 switched to (*Showing: ...*, for as long as Options → *Notification timeout* says), a low pad battery, a note after a crash, a scanner processor at work, and the Store's download in progress. The download's bubble shows its

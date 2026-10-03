@@ -14,16 +14,17 @@ přicházejí.
 ## 1. Co dostanete
 
 - **Spouštěč** - kolotoč s obálkami, sady (PlayStation, RetroArch, aplikace), detaily
-  her, systémová nabídka, možnosti, nástroje pro paměťové karty a body obnovení. Stejný
-  program na všech platformách.
+  her, Rychlá nabídka a systémová nabídka, možnosti, nástroje pro paměťové karty a body
+  obnovení a Obchod pro stahování aplikací a her. Stejný program na všech platformách.
 - **Dva emulátory PS1** - `pcsx-abnxt`, ten aktuální (výchozí), a `pcsx-ab`, klasický
   emulátorský balíček AutoBleem. Vybíráte si jeden v možnostech; oba používají stejné
   nastavení a paměťové karty.
 - **RetroArch** (nepovinný na každé platformě) pro ostatní systémy: NES, SNES, Mega Drive,
   Game Boy, arkádu a mnoho dalších. AutoBleem si vytváří seznamy RetroArch z ROM, které si
   kopírujete, a spouští každou hru se správným jádrem.
-- **Nástrojů konzole** (pouze PlayStation Classic): *PSC-Bios* pro WiFi, hodiny a mapování
-  gamepadu a *ABFlashKit* pro instalaci jádra AutoBleem.
+- **Nástroje konzole**: *PSC-Bios* (v nabídkách zobrazený jako *Síť a ovladače*) pro WiFi,
+  hodiny, Bluetooth a mapování gamepadu - na konzole, a také na Raspberry Pi a PC disku - a
+  *ABFlashKit* pro instalaci jádra AutoBleem (pouze PlayStation Classic).
 - **UpdateRoms** pro Windows: obnovuje seznamy RetroArch a obálky her na USB disku konzole na
   PC, protože konzola sama nemá síť.
 
@@ -63,7 +64,7 @@ což překonává limit FAT32 4 GB.
 **Zapnutí a vypnutí.** S diskem uvnitř se konzola spustí, několik sekund bliká
 (AutoBleem se vyzvedává) a pak jde do režimu standby dříve, než se cokoliv zobrazí -
 to je vlastní způsob konzoly, jak připravit aktualizaci, což je jak se AutoBleem spustí.
-Stiskněte **Power** jednou a spouštěč se objeví. *Power Off* v systémové nabídce nebo
+Stiskněte **Power** jednou a spouštěč se objeví. *Vypnout* v systémové nabídce nebo
 tlačítko Power na konzole vloží konzolu do **standby AutoBleem**: disk se nejdřív
 odpojí, pak se světlo změní na **červené** - znamení, že AutoBleem funguje správně - a
 další stisk Power vrátí spouštěč zpět, v několika sekundách. **Když je světlo červené,
@@ -179,11 +180,34 @@ denně kontroluje web a nabídne aktualizaci, když je (oddíl 3.11).
 
 ### 3.1 Spouštěč
 
-Spouštěč se otevře na polici: obálky aktuální sady, vybraná v prostředku, její detaily
-vedle - vydavatel, rok, seriál, oblast, hráči, kdy byla naposledy hraná - a tlačítko play.
-Lišta dole uvádí, co tlačítka dělají. Skenování složky her běží na pozadí při každém
-startu; během jeho běhu bublina vpravo nahoře ukazuje jeho průběh a nové hry se objevují
-na polici, jak jsou nalezeny.
+Spouštěč se otevře na polici: obálky aktuální sady, vybraná uprostřed s jemným odrazem
+pod sebou, její detaily vedle v kompaktní mřížce - vydavatel, rok, seriál, oblast, hráči,
+kdy byla naposledy hraná (údaj, který hra nemá, se vynechá) - a tlačítko play. Výchozí
+vzhled je motiv **ab2.0.0**; čerstvá instalace a aktualizace, která jej přináší, na něj
+jednorázově přepne. Lišta nápovědy dole má dva řádky po čtyřech polích. První říká, co
+tlačítka dělají pro vybranou hru (hrát, hrát v RetroArch, otevřít řadu ikon, Rychlá
+nabídka); druhý vždy ukazuje Select (sada), Start (náhodná hra), Triangle (průvodce) a
+L2 + R2 (systémová nabídka), ztlumené, když některé právě nic nedělá. Skenování složky
+her běží na pozadí při každém startu; během jeho běhu bublina vpravo nahoře ukazuje jeho
+průběh a nové hry se objevují na polici, jak jsou nalezeny.
+
+**Čerstvá instalace** ještě nemá žádné hry: místo prázdné police spouštěč ukáže uvítací
+kartu - *Ahoj a vítej v AutoBleem!* - která říká, ať hry nahrajete do složky `Games` a
+zvolíte *Znovu prohledat hry*, a místo uvádí podle platformy: na flashce (PlayStation
+Classic, USB disk PC), na SD kartě (Raspberry Pi) nebo ve složce AutoBleem (Windows).
+Karta zmizí, jakmile skenování najde první hru.
+
+**Oznámení** se objevují jako bubliny vpravo nahoře: průběh skenování, název sady, na
+kterou jste přepnuli (*Zobrazeno: ...*, po dobu, kterou udává Nastavení → *Doba zobrazení
+oznámení*), slabá baterie ovladače, poznámka po pádu, běžící procesor skenování a
+probíhající stahování z Obchodu. Bublina stahování ukazuje jeho rychlost a zbývající čas,
+např. `1.4 MB/s · 0:42`.
+
+**Značka kanálu.** Sestavení, které není finální vydání, ukazuje malou značku pod
+destičkou s baterií ovladače v levém horním rohu: štítek s kanálem - `ALPHA`, `BETA` nebo
+`RC` pro předvydání, `TESTING` pro jakékoli jiné předvydání, `NIGHTLY` pro noční sestavení,
+`DEV` pro sestavení vytvořené ručně - a vedle něj krátká verze (u `DEV` commit, ze kterého
+bylo sestaveno). Vydání žádnou značku neukazuje.
 
 Bezdrátový ovladač s dostupným stavem baterie - na konzoli, Pi nebo USB disku pro PC, ne na Windows - se zobrazuje jako malá ikona s procenty, umístěná v levém horním rohu na vlastní destičce. Ovladač přiřazený Hráči 1 nebo Hráči 2 (podle nastavení Prohodit hráče 1 / hráče 2) má značku P1/P2; nepřiřazený nebo třetí ovladač značku nemá. Když baterie ovladače klesne na nízkou úroveň, řádek s upozorněním to jednou oznámí i s procenty.
 
@@ -200,6 +224,7 @@ Bezdrátový ovladač s dostupným stavem baterie - na konzoli, Pi nebo USB disk
 | Triangle | Průvodce tlačítky. |
 | Start | Náhodná hra z aktuální sady. |
 | Select | Výběr sady: karty PlayStation / RetroArch / Apps (L1 / R1), skupiny karty (Nahoru / Dolů, L2 / R2 strana), Cross vybere. |
+| Nahoru | Rychlá nabídka (oddíl 3.4). |
 | Dolů | Otevřete řadu ikon pod hrou (Nastavení, Hra, Paměťová karta, Obnovit). Nahoru ji zavře. |
 | L2 + R2 | Systémová nabídka (oddíl 3.4). |
 
@@ -217,71 +242,84 @@ nastavením ji uloží, když ji opustíte pomocí Circle.
 
 ### 3.3 Sady
 
-**Select** otevře výběr sady. Karta PlayStation uvádí *All Games*, *Internal Games*
-(dvacet zabudovaných her konzoly na PlayStation Classic), každou složku, kterou jste
-vytvořili pod `Games/` (hra v podsložce patří do dané skupiny), *Favorite Games*, *Game
-History* a když je některá hra označena jako taková, *Lightgun Games*. Karta RetroArch
+**Select** otevře výběr sady. Karta PlayStation uvádí na PlayStation Classic *Všechny hry*
+a *Interní hry* (dvacet zabudovaných her konzole), pak *Hry na USB* (vše v `Games/`) a
+každou složku, kterou jste v ní vytvořili (hra v podsložce patří do dané skupiny), pak
+*Oblíbené hry*, *Historie her* a, když je některá hra takto označena, *Hry se světelnou
+pistolí*. Na Raspberry Pi, PC disku a ve Windows nejsou interní hry, takže seznam začíná
+*Hry na USB*, což je celá knihovna. Karta RetroArch (jen tam, kde je RetroArch nainstalován)
 uvádí jednu skupinu na systém, který má hry, plus vlastní Favorites a History RetroArch.
 Karta Apps skupinuje aplikace podle typu: *All apps*, pak *Games*, *Emulators*, *Tools*,
 *Media* a *Other* (kategorie je nastavena v souboru `app.ini` každé aplikace). Každý řádek
 ukazuje, kolik položek obsahuje; skupina bez jakýchkoli se otevře na prázdné polici s řadou
-ikon ukazující pouze Nastavení.
+ikon ukazující pouze Nastavení. Zápatí uvádí klávesy: L1 / R1 karty, L2 / R2 stránka,
+Cross vybere, Circle *Zpět*.
 
 ### 3.4 Rychlá nabídka
 
 **Nahoru** ve spouštěči, nebo **ikona ozubeného kola** v řadě ikon (kde jsou Nastavení /
 Hra / Paměťová karta / Obnovit): rychlá nabídka pro akce, které chcete z kolotoče. Krátký
-seznam: *Re-Scan Games* (spustí skenování nyní), *Store* (AutoBleem Store pro stažení
-rozšíření), *Network & Controllers* (pouze kde nainstalované rozšíření poskytuje položku
-`network` - PSC-Bios na konzole, Pi a PC disku: Wi-Fi, párování Bluetooth, průvodce
+seznam: *Znovu prohledat hry* (spustí skenování nyní), *Obchod* (procházet a instalovat
+hry, aplikace a rozšíření), *Síť a ovladače* (pouze kde nainstalované rozšíření poskytuje
+položku `network` - PSC-Bios na konzole, Pi a PC disku: Wi-Fi, párování Bluetooth, průvodce
 mapováním gamepadu - viz oddíl 6; zašedlé s "zapněte v Rozšířeních", když je rozšíření
-vypnuto - Cross otevře seznam Extensions) a *System menu...* (úplná nabídka níže). Nahoru
-/ Dolů se pohybují (zabaleno), Cross vybere, Circle zpět. Zde není nic jedinečného - každá
-položka je také v systémové nabídce.
+vypnuto - Cross otevře seznam Rozšíření), *Restartovat launcher* (zavře AutoBleem a spustí
+jej znovu; jen na konzole, Pi a PC disku) a *Systémová nabídka...* (vše ostatní: Nastavení,
+Správce her, Vypnout a další - úplná nabídka níže). Nahoru / Dolů se pohybují (zabaleno),
+Cross vybere, Circle zpět. Každá položka má na řádku jednořádkový popis. Kromě Obchodu a
+*Restartovat launcher* je každá položka také v systémové nabídce.
 
 ### 3.5 Systémová nabídka
 
-**L2 + R2** (společně, v libovolném pořadí) otevře systémovou nabídku přes policí. Nabídka
-je rozdělena do sekcí:
+**L2 + R2** (společně, v libovolném pořadí) otevře systémovou nabídku přes policí. Každý
+řádek má jednořádkový popis a nabídka je rozdělena do sekcí:
 
 | Sekce | Položka | Co dělá |
 |---|---|---|
-| (nahoře) | Re-Scan Games | Vyhledá nové, změněné nebo odebrané hry nyní (skenování také sleduje složku samo). |
-| | Extensions | Rozšíření na disku - AutoBleem Store a další (oddíl 3.12). |
-| **Library** | Game Manager | PS1 hry jako seznam s jejich složkami: smazat hru, vyčistit obálky. Zakázáno během skenování. |
-| | Memory Cards | Vaše sady paměťových karet (oddíl 3.7). |
-| | Scanner processors | Programy, které každé skenování spustí jako první - jejich pořadí, zapnuto nebo vypnuto (oddíl 3.13). Zakázáno během skenování. |
-| **System** | Options | Nastavení AutoBleem (oddíl 3.6). |
-| | Network & Controllers | Pouze kde nainstalované rozšíření poskytuje položku `network` (`Provides=network` v `extension.ini` - PSC-Bios na konzole, Pi a PC disku) - Wi-Fi, párování Bluetooth ovladače, nastavení DualShock 3 a průvodce mapováním gamepadu - viz kapitola 6. Když je rozšíření nainstalováno, ale vypnuto, tato položka zůstává zašedlá s poznámkou "zapněte v Rozšířeních" - Cross otevře seznam Extensions u něj. |
-| | Hardware Information | Fakta o počítači: systém, CPU, úložiště, síťová rozhraní, časové pásmo, displej, gamepady a jejich mapování. Na konzole s jádrem AutoBleem to otevře PSC-Bios (kapitola 6); na ostatních počítačích se zobrazí tato informační stránka. |
-| | Software Update | (Raspberry Pi a PC) Kontrola webu pro novější AutoBleem nebo RetroArch nyní. |
-| | About | Kredity a licence. |
-| **Leave** | RetroArch | Opustí spouštěč pro vlastní nabídku RetroArch. Zavření RetroArch se vrátí. |
-| | Power Off | Po potvrzení: na konzole standby AutoBleem - disk odpojen, světlo červené, Power vrátí spouštěč zpět (oddíl 2.1); na Pi nebo PC se počítač vypne. |
+| (nahoře) | Znovu prohledat hry | Vyhledá nové, změněné nebo odebrané hry nyní (skenování také sleduje složku samo). |
+| | Rozšíření | Rozšíření na disku - AutoBleem Store a další (oddíl 3.12). |
+| **Knihovna** | Správce her | PS1 hry jako seznam s jejich složkami: smazat hru, vyčistit obálky. Zakázáno během skenování. |
+| | Paměťové karty | Vaše sady paměťových karet (oddíl 3.7). |
+| | Procesory skenování | Programy, které každé skenování spustí jako první - jejich pořadí, zapnuto nebo vypnuto (oddíl 3.13). Zakázáno během skenování. |
+| **Systém** | Nastavení | Nastavení AutoBleem (oddíl 3.6). |
+| | Síť a ovladače | Pouze kde nainstalované rozšíření poskytuje položku `network` (`Provides=network` v `extension.ini` - PSC-Bios na konzole, Pi a PC disku) - Wi-Fi, párování Bluetooth ovladače, nastavení DualShock 3 a průvodce mapováním gamepadu - viz kapitola 6. Když je rozšíření nainstalováno, ale vypnuto, tato položka zůstává zašedlá s poznámkou "zapněte v Rozšířeních" - Cross otevře seznam Rozšíření u něj. |
+| | Informace o hardwaru | Fakta o počítači: systém, CPU, úložiště, síťová rozhraní, časové pásmo, displej, gamepady a jejich mapování - tatáž stránka na každé platformě (oddíl 4.2). |
+| | Aktualizace softwaru | (Raspberry Pi a PC) Kontrola webu pro novější AutoBleem nebo RetroArch nyní; řádek říká *Aktualizace k dispozici*, když už spouštěč o nějaké ví. |
+| | O programu | Kredity a licence. |
+| **Odchod** | RetroArch | (Jen tam, kde je RetroArch nainstalován.) Opustí spouštěč pro vlastní nabídku RetroArch. Zavření RetroArch se vrátí. |
+| | Vypnout | Po potvrzení: na konzole standby AutoBleem - disk odpojen, světlo červené, Power vrátí spouštěč zpět (oddíl 2.1); na Pi nebo PC se počítač vypne. |
 
 ![Systémová nabídka](../images/en/system-menu.jpg)
 
 ### 3.6 Možnosti
 
-Nastavení jsou v skupinách; Nahoru / Dolů se pohybují mezi nimi, Vlevo / Vpravo změní
-hodnotu, Circle opustí a uloží. Každá změna se použije okamžitě.
+Nastavení jsou ve skupinách, každá pod nadpisem; Nahoru / Dolů se pohybují mezi řádky,
+Vlevo / Vpravo změní hodnotu (klepnutí je jeden krok, podržení posouvá dál), L1 / R1
+skáčou na první / poslední řádek, L2 / R2 listují, Circle opustí a uloží. Každá změna se
+použije okamžitě. Hodnoty zapnuto/vypnuto se čtou **ZAP** / **VYP**.
 
 | Skupina / nastavení | Co dělá |
 |---|---|
-| **Interface**: AutoBleem Theme | Vzhled. Motivy jsou v `Themes/`; zip motivu tam vhozený se rozbalí při dalším návštěvě. Motivy, které AutoBleem zasílá, se obnovují s každou aktualizací - pro přizpůsobení si nejdřív jeden zkopírujte pod novým jménem. |
-| Cover Style | Rám v průhledu krytu nakresleného kolem obálek PS1. |
-| Language | Jazyk spouštěče, použitý okamžitě (17 jazyků). |
-| Use Font from Theme / Font | Písmo klasických obrazovek: z motivu, nebo libovolné `.ttf`/`.otf` z `resources/fonts`, `RetroArch/fonts` nebo složky motivu. |
-| Showing Timeout | Jak dlouho zůstane oznámení "Showing: ..." vidět, v sekundách (0 = navždy). |
-| **Sound**: Music, Background Music | Kterou skladbu hrají pod spouštěčem (od motivu nebo soubor z `resources/music`) a zda se nějaká hraje. |
-| **Emulation**: PS1 Emulator | `pcsx-abnxt` (výchozí: aktuální PCSX-ReARMed s doplňky AutoBleem) nebo `pcsx-ab` (klasický). Bod obnovení uložený jedním pokračuje v druhém, pokud hra neběžela bez BIOS souboru. |
-| Widescreen | Tvar obrázku emulátoru PS1 pro každou hru. |
-| Play all PSX games with RA | Každá PS1 hra se spustí v jádře PS1 RetroArch. |
-| Update RA Config | AutoBleem zapisuje nastavení do konfigurace RetroArch, když tam spustí hru. |
+| **Rozhraní**: Obraz | Rozlišení obrazovky pro spouštěč a emulátor PS1: *Auto* (vlastní režim obrazovky, zobrazený jako *Auto (1920x1080)*) nebo libovolný režim, který obrazovka uvádí; konzole nabízí 720p a 1080p. Nový režim se potvrzuje: *Ponechat tento režim obrazu?* - pokud nepotvrdíte, po odpočtu se vrátí předchozí. Ne v okně pro vývoj. |
+| Škálování obrazu emulátoru | Jak emulátor PS1 přizpůsobí obraz hry obrazovce: *1x1* (vlastní pixely PlayStation), *2x (celočíselně)*, *4:3*, *4:3 (celočíselně)* nebo *Celá obrazovka*. Celočíselné škálování používá jen celé násobky (nejostřejší). Nahrazuje starý přepínač Widescreen; klasický `pcsx-ab` a RetroArch znají jen celou obrazovku a 4:3. |
+| AutoBleem téma | Vzhled. Motivy jsou v `Themes/`; zip motivu tam vhozený se rozbalí při dalším návštěvě. Motivy, které AutoBleem zasílá, se obnovují s každou aktualizací - pro přizpůsobení si nejdřív jeden zkopírujte pod novým jménem. Výchozí je **ab2.0.0**. |
+| Styl obalu | Rám v průhledu krytu nakresleného kolem obálek PS1. |
+| Záblesk obalu | Záblesk, který přejede přes vybranou obálku, když se police zastaví. |
+| Jazyk | Jazyk spouštěče, použitý okamžitě (17 jazyků). |
+| Doba zobrazení oznámení | Jak dlouho zůstanou informační bubliny ("Zobrazeno: ...", shrnutí skenování), 0 až 20 sekund; 0 ukazuje *Vypnuto*. Chyby mají vlastní pevnou dobu. |
+| Úvodní obrazovka | Obrázek AutoBleem při startu spouštěče; vypnuto přejde rovnou na policí. |
+| Animace | Pohyb mezi obrazovkami; vypnuto způsobí, že každá změna obrazovky je okamžitá. |
+| **Písma**: Použít výchozí písmo | Spouštěč používá své výchozí písmo (Red Hat Text) nebo - po vypnutí - písmo zvolené níže. |
+| Písmo | Libovolné `.ttf`/`.otf` z `resources/fonts`, `RetroArch/fonts` nebo složky motivu; řádek uvádí používané písmo. |
+| **Zvuk**: Hudba, Hudba na pozadí | Kterou skladbu hrají pod spouštěčem (od motivu nebo soubor z `resources/music`) a zda se nějaká hraje. |
+| **Emulace**: Emulátor PS1 | `pcsx-abnxt` (výchozí: aktuální PCSX-ReARMed s doplňky AutoBleem) nebo `pcsx-ab` (klasický). Bod obnovení uložený jedním pokračuje v druhém, pokud hra neběžela bez BIOS souboru. |
 | Prohodit hráče 1 / hráče 2 (emulátory PS1) | Prohodí, který z prvních dvou ovladačů je Hráč 1 a který Hráč 2, v obou emulátorech PS1 (pcsx-abnxt i klasický pcsx-ab). Funguje to jen při připojení dvou nebo více ovladačů; s jedním ovladačem je vždy Hráč 1. RetroArch není ovlivněn. |
-| **Library**: Show Internal Games | Zabudované hry konzoly v seznamech PlayStation (pouze PlayStation Classic). |
-| Fetch box art online | Skenování stahuje chybějící obálky ze serverů libretro (Raspberry Pi, PC, Windows). |
-| **Updates** | (Raspberry Pi, PC, Windows) `stable`, `latest` (včetně předvydaní) nebo `off`. |
+| Hrát všechny PSX hry přes RA, Aktualizovat konfiguraci RA, Uchovat nastavení RetroArch | (Jen tam, kde je RetroArch nainstalován.) Každá PS1 hra se spustí v jádře PS1 RetroArch; AutoBleem zapisuje nastavení do konfigurace RetroArch, když tam spustí hru; změna provedená ve vlastní nabídce RetroArch se po jeho ukončení zachová. |
+| **Knihovna**: Zobrazit interní hry | Zabudované hry konzoly v seznamech PlayStation (pouze PlayStation Classic). |
+| Stahovat obaly online | Skenování stahuje chybějící obálky ze serverů libretro (Raspberry Pi, PC, Windows). |
+| **Aktualizace** | Kanál aktualizací: `release` (otestovaná verze), `testing` (příští verze, která se testuje), `nightly` (nejnovější vývojové sestavení) nebo `off`. Výchozí se řídí nainstalovanou verzí. Na vývojovém počítači se nezobrazuje. |
+| **Diagnostika**: Uchovávat logy na disku | Uchovává všechny logy na disku od příštího spuštění, nejen po pádu (kapitola 7). |
+| Zobrazit výkon | Překryv v levém dolním rohu: snímková frekvence, zátěž CPU, vlákna a paměť; emulátor ve hře ukazuje také FPS a CPU. |
 
 ![Možnosti v skupinách](../images/en/options.jpg)
 
@@ -291,27 +329,36 @@ S vybranou hrou, **Dolů** otevře její řadu ikon: **Settings** (výše uveden
 **Game** (vlastní nastavení hry), **Memory Card** (její paměťová karta) a **Resume**
 (její body obnovení). Cross otevře ten pod kurzorem.
 
-**Editor her** ukazuje detaily hry vpravo a její nastavení vlevo, ve třech skupinách:
+**Editor her** ukazuje detaily hry vpravo (název, vydavatel, rok, hráči, složka, paměťová karta) a její nastavení vlevo, ve čtyřech skupinách:
 
-- **Game**: *Favorite* (ve skupině Oblíbené hry), *Lightgun Game* (hra se světelnou
-  pistolí - vstoupí do skupiny Lightgun a vždy se spustí v RetroArch, jehož jádro PS1
-  má GunCon), *Play using RA* (tato hra běží v RetroArch), *Lock data* (skener ponechá
-  název, seriál a seznam disků hry tak, jak jste je nastavili).
-- **Video**: vysoké rozlišení, obrazové řádky a jejich úroveň, přeskočení snímků, plugin
-  GPU a *Filter* - jak se obrázek škáluje: Off (prosté pixely), Linear (vyhlazené) nebo
-  Sharp (ostré pixely bez blikání; jen `pcsx-abnxt` - klasický `pcsx-ab` a RetroArch jej
-  zobrazují jako Off).
-- **Emulator**: SpeedHack, frekvence CPU, interpolace SPU, logo při spuštění (vypnuto
+- **Hra**: *Oblíbené* (ve skupině Oblíbené hry), *Hra Lightgun* a *Hrát pomocí RA* (jen
+  tam, kde je RetroArch nainstalován: hra se světelnou pistolí vstoupí do skupiny Lightgun
+  a vždy se spustí v RetroArch, jehož jádro PS1 má GunCon; *Hrát pomocí RA* spustí tuto hru
+  v RetroArch), *Zamknout data* (skener ponechá název, seriál a seznam disků hry tak, jak
+  jste je nastavili).
+- **Obraz**: *Rozlišení* (1x nebo 2x, na vestavěném GPU), *Odstranit švy* (jen s 2x),
+  *Dithering* (Vypnuto, Zapnuto, Vždy), *Vyhlazování*, *Filtr* - jak se obrázek škáluje:
+  Nejbližší (prosté pixely), Lineární (vyhlazené), Ostrý nebo Ostrý (jednoduchý) (ostré
+  pixely bez blikání), Quilez, nebo filtry CRT: CRT (fast) a CRT-Pi (kreslí vlastní
+  obrazové řádky, takže řádky scanlines zešednou) - a *Obrazové řádky* s jejich *Jasem
+  obrazových řádků*. Rozlišení, odstranění švů, dithering, vyhlazování a filtry jiné než
+  Lineární a Nejbližší jsou pro `pcsx-abnxt`; klasický `pcsx-ab` a RetroArch ukazují zbytek
+  jako Nejbližší.
+- **Vykreslování**: *Plugin* GPU a *Preskočení snímků* (Auto, Vypnuto, 1 až 3).
+- **Emulátor**: SpeedHack, frekvence CPU, interpolace SPU, logo při spuštění (vypnuto
   přeskočí shell BIOS - pro homebrew disk, jehož vlastní logo rozbije boot), a s
-  `pcsx-abnxt` filtr *Smoothing* a přepínač *Sony hacks*.
+  `pcsx-abnxt` přepínač *Opravy Sony*.
+
+Tvar obrazu a rozlišení obrazovky jsou globální (Nastavení → *Škálování obrazu emulátoru*
+a *Obraz*). Hra bez názvu ve svých datech se ukazuje pod názvem své složky.
 
 Triangle přejmenuje hru, Square změní její paměťovou kartu, Start sdílí novou kartu. Circle
 uloží a opustí.
 
-**Nastavení uložená v emulátoru.** Vlastní nabídka emulátoru má *Save settings for this
-game*. Jakmile má hra tam uložená nastavení, jsou to ta, která hraje, a editor her ukazuje
-své řady Video a Emulator zašedlé s těmito hodnotami pod nadpisem *Saved in the emulator*.
-Chcete-li se vrátit k nastavení editoru her, vyberte **Unlock the settings** a potvrďte:
+**Nastavení uložená v emulátoru.** Vlastní nabídka emulátoru má *Uložit nastavení pro tuto
+hru*. Jakmile má hra tam uložená nastavení, jsou to ta, která hraje, a editor her ukazuje
+své řady Obraz, Vykreslování a Emulátor zašedlé s těmito hodnotami pod nadpisem *Uloženo v emulátoru*.
+Chcete-li se vrátit k nastavení editoru her, vyberte **Odemknout nastavení** a potvrďte:
 to smaže nastavení, která emulátor uložil, a řady se mohou opět měnit. Oba emulátory,
 `pcsx-ab` a `pcsx-abnxt`, čtou a zapisují stejné uložené nastavení.
 
@@ -335,16 +382,41 @@ vpravo za jinou sadu.
 
 **Body obnovení**: když opustíte PS1 hru tlačítkem Reset konzoly (nebo nabídkou
 emulátoru na Pi nebo PC), AutoBleem uchová bod obnovení, kde jste byli a nabídne jej pod
-ikonou **Resume** - čtyři pozice, každá s obrázkem okamžiku. Cross pokračuje z pozice,
-Triangle ji smaže. Hra s bodem obnovení ukazuje malý obrázek na ikoně Resume.
+ikonou **Resume** - čtyři pozice, zobrazené jako rámečkové karty, každá s obrázkem
+okamžiku, číslem pozice a datem; nejnovější je označena **NEJNOVĚJŠÍ** a nepoužitá pozice
+říká *Žádný bod obnovení*. Cross pokračuje z pozice, Triangle ji smaže. Hra s bodem
+obnovení ukazuje malý obrázek na ikoně Resume; hra bez něj má ikonu Resume zašedlou. Když
+se bod obnovení zapisuje při odchodu ze hry, emulátor ukazuje *Čekejte prosím...*.
 
 ### 3.8 Spouštění her, RetroArch a aplikací
 
-**Cross** spustí vybranou hru. PS1 hra běží ve zvoleném emulátoru PS1 (oddíl 3.5), na
+**Cross** spustí vybranou hru. PS1 hra běží ve zvoleném emulátoru PS1 (oddíl 3.6), na
 celou obrazovku, dokud ji neopustíte - na konzole předním tlačítkem **Reset** (zpět do
-spouštěče s bodem obnovení) nebo **Power** (konzola se vypne); na Pi nebo PC prostřednictvím
-nabídky emulátoru během hry (Select + Start na gamepadu, nebo Esc na klávesnici). **Square**
+spouštěče s bodem obnovení; funguje i zevnitř nabídky ve hře) nebo **Power** (konzola se
+vypne); na Pi nebo PC prostřednictvím nabídky emulátoru ve hře (níže). **Square**
 spustí PS1 hru v RetroArch místo toho.
+
+**Nabídka ve hře** (`pcsx-abnxt`). Stiskněte tlačítko nabídky - Home na gamepadu,
+**Select + Start** na gamepadu bez něj, nebo **Esc** na klávesnici - a hra se zastaví za
+nabídkou s posledním obrázkem hry. **Podržení tlačítka nabídky na 2 sekundy** je totéž co
+Reset: opustí hru. L1 / R1 přepínají mezi třemi kartami nabídky a nabídka se otevře na
+kartě a řádku, na kterých byla opuštěna:
+
+- **Hra**: *Pokračovat ve hře*; v *Uložené pozice*: *Rychlé uložení*, *Rychlé načtení* a
+  *Nahrát autozáznam* (hra, jak byla až před 30 sekundami - emulátor ji sám ukládá do
+  paměti, zatímco hrajete); v *Disk CD*: *Vyměnit disk* a *Resetovat hru* (začne ji
+  znovu); *Uložit nastavení pro tuto hru* (viz oddíl 3.7), *Menu PCSX* (vlastní stránky
+  PCSX-ReARMed: možnosti, cheaty, O programu) a *Ukončit* (zpět do AutoBleem).
+- **Obraz**: *Obrazovka* (rozlišení obrazovky - na konzole se volí v Nastavení a zde se jen
+  ukazuje), *Rozlišení* (1x nebo 2x), *Odstranit švy*, *Dithering*, *Škálování*,
+  *Vyhlazování*, *Filtr*, *Scanlines* a *Jas scanlines*. Každý řádek má vpravo řádek
+  nápovědy. CRT-Pi je pro konzoli při 1080p příliš náročný. Řádek, který se nepoužije, je
+  zašedlý a jeho nápověda říká proč.
+- **Ovladače**: *Ovladač 1* a *Ovladač 2*: standardní (digitální), analogový (DualShock),
+  pistole nebo žádný; projeví se, až hra pokračuje.
+
+Nabídka je nakreslena ve vzhledu ab2.0.0 spouštěče, s bateriemi ovladačů a obrázkem
+posledního rychlého uložení.
 
 Hra **RetroArch** se spustí v RetroArch s jádrem, které si spouštěč vybral pro svůj
 systém; *Close Content* nebo *Quit RetroArch* v jeho nabídce se vrátí do spouštěče.
@@ -427,15 +499,20 @@ všech systémech, na kterých AutoBleem běží (PlayStation Classic potřebuje
 AutoBleem). Jeho čtyři karty, L1 / R1 mezi nimi:
 
 - **Apps** a **Games**: co zdroje nabízejí, každá s obrázkem, verzí, velikostí a favikonu
-  zdroje. Nainstalované položky jsou zašedlé. Cross instaluje (nebo aktualizuje, nebo zkoušit
-  znovu po selhání), Triangle odstraní, co Store nainstaloval. L2 / R2 nebo Vlevo / Vpravo
-  se listují stránky, **Select** ukazuje jeden zdroj najednou, **Start** hledá nadpisy.
-  Obrázky položek jsou cachovány a lze je zkusit znovu, pokud se selhají načíst.
+  zdroje. Nainstalované položky nesou štítek *Nainstalováno*. Cross instaluje (nebo
+  aktualizuje, nebo zkouší znovu po selhání, nebo zruší stahování ve frontě či probíhající),
+  Triangle odstraní, co Store nainstaloval, Square obnoví seznamy. L2 / R2 skáčou po
+  písmenech, **Select** ukazuje jeden zdroj najednou, **Start** hledá nadpisy. Zápatí ukazuje
+  klávesy vybraného řádku. Obrázky položek jsou cachovány a lze je zkusit znovu, pokud se
+  selhají načíst.
 - **Downloads**: co se stahuje, čeká, selhalo nebo instaluje. Lišta průběhu se aktualizuje
-  neustále. Stažení běží na pozadí také poté, co opustíte Store; spuštění hry nebo vypnutí
-  jej pouze pozastaví a zastavené stažení pokračuje tam, kde se zastavilo. Nainstalovaná
-  hra se objeví na polici po příštím skenování s obrázkem Store jako její obálka. Stažení
-  přes 2 GB funguje na všech platformách, včetně 32bitových buildů.
+  neustále a když jste jinde ve spouštěči, bublina ukazuje probíhající stahování s jeho
+  rychlostí a zbývajícím časem (`1.4 MB/s · 0:42`). Stažení běží na pozadí také poté, co
+  opustíte Store; spuštění hry nebo vypnutí jej pouze pozastaví a zastavené stažení
+  pokračuje tam, kde se zastavilo. Když síť vypadne, položka říká *Čekám na síť* a po
+  návratu sítě pokračuje tam, kde přestala (po 30 minutách to vzdá). Nainstalovaná hra se
+  objeví na polici po příštím skenování s obrázkem Store jako její obálka. Stažení přes
+  2 GB funguje na všech platformách, včetně 32bitových buildů.
 - **Sources**: odkud seznamy pocházejí - vlastní katalog AutoBleem, TSV seznam vhozený do
   `System/Extensions/store/sources/`, a adresy, které si přidáte s **Add a source URL**.
   Každý zdroj ukazuje svou favikonu v seznamu. Cross na tom, který jste přidali, jej
@@ -494,7 +571,7 @@ než jej sdílíte.
 
 ### 4.1 Správce her
 
-PS1 hry jako seznam s jejich složkami a vybraná obálka a detaily. Cross otevře editor
+PS1 hry jako seznam samotných názvů (složka vybrané hry je v jejích detailech) a vybraná obálka. Cross otevře editor
 her, **Square smaže hru** (její složku a po druhé otázce její body obnovení), Triangle
 smaže každý PNG obalů vedle her (skenování je vezme z databází znovu), L2 / R2 listují.
 Volné místo jednotky je vpravo nahoře. Správce her čeká na dokončení skenování.
@@ -504,8 +581,8 @@ Volné místo jednotky je vpravo nahoře. Správce her čeká na dokončení ske
 ### 4.2 Informace o hardwaru
 
 Fakta o počítači - systém, hardware, úložiště s jeho volným místem, síťové adresy, displej
-a zvuková ovladače, připojené gamepady - znovu čten každou sekundu. Na PlayStation Classic
-s jádrem AutoBleem se tato položka otevře **PSC-Bios** místo toho (kapitola 6).
+a zvuková ovladače, připojené gamepady - znovu čten každou sekundu. Je to tatáž stránka na
+každé platformě, včetně konzole; obrazovky pro nastavení sítě a ovladačů jsou **Síť a ovladače** (PSC-Bios, kapitola 6).
 
 První dva řadiče jsou zobrazeny jako Hráč 1 a Hráč 2 – porty, které jim přiděluje emulátor PS1.
 Jakýkoli další řadič je zobrazen jako nepoužitý emulátorem PS1. RetroArch přiřazuje řadiče podle
@@ -602,7 +679,7 @@ přímo. První krát se Windows ptá na svůj firewall: povolte pouze privátn�
 
 Dva nástroje pro PlayStation Classic disk. Oba kreslí v motivu spouštěče a jazyce a oba
 jsou řízeny gamepádem - a v průvodci gamepádem tlačítky konzole. **PSC-Bios** je rozšíření,
-které přichází s balíčkem konzole: *Hardware Information* v systémové nabídce jej otevře a
+které přichází s balíčkem konzole: položka *Síť a ovladače* v Rychlé nabídce a systémové nabídce jej otevře a
 je v seznamu rozšíření. **ABFlashKit** je aplikace v sadě aplikací.
 
 ### 6.1 PSC-Bios
@@ -686,7 +763,7 @@ akcie.
   vždy na disku - `update.log` (online aktualizace) a `updateroms.log` (UpdateRoms).
 - **Hra není na polici**: zkontrolujte rozložení složky (jednu složku na hru, formáty obrázků
   z oddílu 3.9). *Game Manager* uvádí složky, které skenování odmítlo, po hrách, označené
-  *Not added*, s důvodem; Square takovou složku smaže. Re-Scan v systémové nabídce znovu
+  *Not added*, s důvodem; Square takovou složku smaže. *Znovu prohledat hry* v systémové nabídce znovu
   spustí skenování.
 - **Žádné obálky**: databáze obálek nebyly nainstalované (znovu spusťte instalátor s nimi
   zaškrtnuto), nebo pro hry RetroArch na konzole nebyl spuštěn UpdateRoms na PC.

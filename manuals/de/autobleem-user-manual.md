@@ -13,15 +13,17 @@ tägliche Verwendung und die mitgelieferten Tools.
 ## 1. Was Sie bekommen
 
 - **Der Launcher** - das Regal von Covern, die Sets (PlayStation, RetroArch, Apps), die Spieldetails, das
-  Systemmenü, die Optionen, die Memory-Card- und Save-State-Tools. Das gleiche Programm auf jeder Plattform.
+  Quick-Menü und das Systemmenü, die Optionen, die Memory-Card- und Save-State-Tools und der Store zum Herunterladen
+  von Apps und Spielen. Das gleiche Programm auf jeder Plattform.
 - **Zwei PS1-Emulatoren** - `pcsx-abnxt`, der aktuelle (Standard), und `pcsx-ab`, der klassische Emulator,
   den AutoBleem schon immer mitgeliefert hat. Sie wählen einen in den Optionen; beide verwenden die gleichen
   Einstellungen und Memory Cards.
 - **RetroArch** (optional auf jeder Plattform) für die anderen Systeme: NES, SNES, Mega Drive, Game Boy, Arcade
   und viele mehr. AutoBleem erstellt seine RetroArch-Listen aus den ROMs, die Sie kopieren, und startet
   jedes Spiel mit dem richtigen Core.
-- **Die Console Tools** (nur PlayStation Classic): *PSC-Bios* für WiFi, Uhr und Gamepad-Zuordnung, und
-  *ABFlashKit* zur Installation des AutoBleem-Kernels.
+- **Die Console Tools**: *PSC-Bios* (in den Menüs als *Netzwerk & Controller* angezeigt) für WiFi, Uhr, Bluetooth und
+  Gamepad-Zuordnung - auf der Console und auch auf einem Raspberry Pi und dem PC-Stick - und *ABFlashKit* zur
+  Installation des AutoBleem-Kernels (nur PlayStation Classic).
 - **UpdateRoms** für Windows: Aktualisiert die RetroArch-Listen und Schachtelmuster eines Console-Sticks
   auf einem PC, da die Console selbst kein Netzwerk hat.
 
@@ -60,7 +62,7 @@ von FAT32 hebt.
 **Einschalten und Ausschalten.** Mit dem Stick drin bootet die Console, blinkt ein paar Sekunden lang (AutoBleem
 wird aufgegriffen) und geht dann in den Standby-Modus, bevor etwas angezeigt wird - das ist die eigene Art der
 Console, ein Update zu inszenieren, auf diese Weise läuft AutoBleem. Drücken Sie **Power** einmal und der
-Launcher kommt herauf. *Power Off* im Systemmenü oder die Power-Taste der Console versetzt die Console in
+Launcher kommt herauf. *Ausschalten* im Systemmenü oder die Power-Taste der Console versetzt die Console in
 **AutoBleem's Standby**: Der Stick wird getrennt, dann leuchtet das Licht **rot** - das Zeichen, dass AutoBleem
 so funktioniert, wie beabsichtigt - und der nächste Power-Druck bringt den Launcher direkt zurück, in wenigen
 Sekunden. **Während das Licht rot ist, kann der Stick herausgezogen** und ohne Windows-Überprüfung auf einen PC
@@ -172,11 +174,33 @@ prüft auch die Website einmal täglich und bietet ein Update an, wenn es eines 
 
 ### 3.1 Der Launcher
 
-Der Launcher öffnet auf dem Regal: Die Cover des aktuellen Sets, das ausgewählte in der Mitte, seine Details
-daneben - Publisher, Jahr, Seriennummer, Region, Spieler, wann es zuletzt gespielt wurde - und ein Play-Button.
-Die Leiste unten listet auf, was die Buttons tun. Ein Scan des Spielordners läuft bei jedem Start im Hintergrund;
+Der Launcher öffnet auf dem Regal: Die Cover des aktuellen Sets, das ausgewählte in der Mitte mit einer weichen
+Spiegelung darunter, seine Details daneben als kompaktes Raster - Publisher, Jahr, Seriennummer, Region, Spieler,
+wann es zuletzt gespielt wurde (eine Angabe, die ein Spiel nicht hat, entfällt) - und ein Play-Button. Das
+Standard-Aussehen ist das Theme **ab2.0.0**; eine frische Installation und ein Update, das es mitbringt, schalten
+einmalig darauf um. Die Hinweisleiste unten hat zwei Zeilen mit vier Plätzen. Die erste zeigt, was die Buttons für
+das ausgewählte Spiel tun (spielen, in RetroArch spielen, die Icon-Zeile öffnen, das Quick-Menü); die zweite zeigt
+immer Select (das Set), Start (ein zufälliges Spiel), Triangle (den Leitfaden) und L2 + R2 (das Systemmenü),
+abgedunkelt, wenn einer gerade nichts tut. Ein Scan des Spielordners läuft bei jedem Start im Hintergrund;
 während er läuft, zeigt eine Blase oben rechts seinen Fortschritt, und neue Spiele erscheinen auf dem Regal, wenn
 sie gefunden werden.
+
+**Eine frische Installation** hat noch keine Spiele: statt eines leeren Regals zeigt der Launcher eine
+Willkommenskarte - *Hallo und willkommen bei AutoBleem!* -, die dich auffordert, Spiele in den Ordner `Games` zu
+legen und *Spiele erneut scannen* zu wählen, und die den Ort für deine Plattform nennt: auf deinem Stick
+(PlayStation Classic, PC-Stick), auf deiner SD-Karte (Raspberry Pi) oder in deinem AutoBleem-Ordner (Windows). Die
+Karte verschwindet, sobald ein Scan das erste Spiel findet.
+
+**Benachrichtigungen** erscheinen als Blasen oben rechts: der Fortschritt des Scans, der Name des Sets, zu dem Sie
+gewechselt haben (*Zeige: ...*, so lange, wie Optionen → *Anzeigedauer der Einblendung* sagt), ein schwacher
+Controller-Akku, ein Hinweis nach einem Absturz, ein arbeitender Scanner-Prozessor und der laufende Download des
+Stores. Die Blase des Downloads zeigt seine Geschwindigkeit und die verbleibende Zeit, z. B. `1.4 MB/s · 0:42`.
+
+**Das Kanal-Kennzeichen.** Ein Build, der kein endgültiges Release ist, zeigt ein kleines Kennzeichen unter der
+Akku-Platte des Controllers in der oberen linken Ecke: einen Chip mit dem Kanal - `ALPHA`, `BETA` oder `RC` für ein
+Pre-Release, `TESTING` für jedes andere Pre-Release, `NIGHTLY` für einen nächtlichen Build, `DEV` für einen von Hand
+gebauten - und daneben die kurze Version (bei `DEV` der Commit, aus dem er gebaut wurde). Ein Release zeigt kein
+Kennzeichen.
 
 Ein drahtloser Controller mit einem Batteriewert - auf der Konsole, einem Pi oder dem PC-Stick, nicht unter Windows - wird als kleines Symbol mit seinem Prozentsatz angezeigt, von der oberen linken Ecke aus gestapelt auf einer eigenen Platte. Ein Controller, der Spieler 1 oder Spieler 2 zugeordnet ist (entsprechend der Option Spieler 1 / Spieler 2 tauschen), erhält die Markierung P1/P2; ein nicht zugeordneter oder ein dritter Controller bleibt ohne Markierung. Wird der Akku eines Controllers schwach, meldet eine Benachrichtigungszeile das einmal, mit Namen und Prozentsatz.
 
@@ -193,6 +217,7 @@ Ein drahtloser Controller mit einem Batteriewert - auf der Konsole, einem Pi ode
 | Triangle | Der Button-Leitfaden. |
 | Start | Ein zufälliges Spiel aus dem aktuellen Set. |
 | Select | Der Set-Picker: PlayStation / RetroArch / Apps-Tabs (L1 / R1), die Gruppen des Tabs (Hoch / Runter, L2 / R2 eine Seite), Cross wählt. |
+| Hoch | Das Quick-Menü (Abschnitt 3.4). |
 | Runter | Öffnet die Icon-Zeile unter dem Spiel (Einstellungen, Spiel, Memory Card, Fortsetzen). Hoch schließt es. |
 | L2 + R2 | Das Systemmenü (Abschnitt 3.4). |
 
@@ -209,69 +234,81 @@ ihn mit Circle verlassen.
 
 ### 3.3 Die Sets
 
-**Select** öffnet den Set-Picker. Der PlayStation-Tab listet *Alle Spiele*, *Interne Spiele* (die eingebauten
-zwanzig der Console, auf einer PlayStation Classic), jeden Ordner, den Sie unter `Games/` gemacht haben (ein Spiel
-in einem Unterordner gehört zu dieser Gruppe), *Lieblingsspiele*, *Spielverlauf* und, wenn ein Spiel als eines
-gekennzeichnet ist, *Lightgun-Spiele*. Der RetroArch-Tab listet eine Gruppe pro System, das Spiele hat, plus
-RetroArch's eigene Favoriten und Verlauf. Der Apps-Tab gruppiert Anwendungen nach Typ: *Alle Apps*, dann
-*Spiele*, *Emulatoren*, *Tools*, *Medien* und *Andere* (die Kategorie wird in jeder App's `app.ini` gesetzt).
-Jede Zeile zeigt, wie viele Elemente sie hält; eine Gruppe ohne öffnet sich auf einem leeren Regal mit der
-Icon-Zeile nur Einstellungen zeigend.
+**Select** öffnet den Set-Picker. Der PlayStation-Tab listet auf einer PlayStation Classic *Alle Spiele* und *Interne
+Spiele* (die eingebauten zwanzig der Console), dann *USB-Spiele* (alles in `Games/`) und jeden Ordner, den Sie darunter
+gemacht haben (ein Spiel in einem Unterordner gehört zu dieser Gruppe), dann *Lieblingsspiele*, *Spielverlauf* und,
+wenn ein Spiel als eines gekennzeichnet ist, *Lightgun-Spiele*. Auf einem Raspberry Pi, einem PC-Stick und unter
+Windows gibt es keine internen Spiele, die Liste beginnt also mit *USB-Spiele*, der ganzen Bibliothek. Der
+RetroArch-Tab (nur wo RetroArch installiert ist) listet eine Gruppe pro System, das Spiele hat, plus RetroArch's eigene
+Favoriten und Verlauf. Der Apps-Tab gruppiert Anwendungen nach Typ: *Alle Apps*, dann *Spiele*, *Emulatoren*, *Tools*,
+*Medien* und *Andere* (die Kategorie wird in jeder App's `app.ini` gesetzt). Jede Zeile zeigt, wie viele Elemente sie
+hält; eine Gruppe ohne öffnet sich auf einem leeren Regal mit der Icon-Zeile nur Einstellungen zeigend. Die Fußzeile
+nennt die Tasten: L1 / R1 Tabs, L2 / R2 eine Seite, Cross wählt, Circle *Zurück*.
 
 ### 3.4 Das Quick-Menü
 
 **Hoch** im Launcher oder das **Zahnrad-Icon** in der Icon-Zeile (wo Einstellungen / Spiel / Memory Card /
-Fortsetzen sind): das Quick-Menü für Aktionen, die Sie vom Carousel erreichen. Eine kurze Liste: *Spiele
-neu scannen* (startet einen Scan jetzt), *Store* (der AutoBleem Store zum Herunterladen von Erweiterungen),
+Fortsetzen sind): das Quick-Menü für Aktionen, die Sie vom Carousel erreichen. Eine kurze Liste: *Spiele erneut
+scannen* (startet einen Scan jetzt), *Store* (Spiele, Apps und Erweiterungen durchsuchen und installieren),
 *Netzwerk & Controller* (nur wo eine installierte Erweiterung den `network`-Eintrag bereitstellt - PSC-Bios
 auf der Console, einem Pi und dem PC-Stick: WiFi, Bluetooth-Pairing, der Gamepad-Zuordnungs-Assistent - siehe
-Abschnitt 6; grau bei "im Extensions aktivieren", wenn diese Erweiterung deaktiviert ist - Cross öffnet die
-Extensions-Liste), und *Systemmenü...* (das volle Menü unten). Hoch / Runter bewegen (umhüllt), Cross wählt,
-Circle zurück. Nichts ist hier einzigartig - jedes Element ist auch im Systemmenü.
+Abschnitt 6; grau bei "unter Erweiterungen einschalten", wenn diese Erweiterung deaktiviert ist - Cross öffnet die
+Erweiterungs-Liste), *Launcher neu starten* (schließt AutoBleem und startet es neu; nur auf der Console, einem Pi und
+dem PC-Stick) und *Systemmenü...* (alles andere: Optionen, Spielemanager, Ausschalten und mehr - das volle Menü
+unten). Hoch / Runter bewegen (umhüllt), Cross wählt, Circle zurück. Jede Zeile hat eine einzeilige Beschreibung.
+Außer dem Store und *Launcher neu starten* ist jedes Element auch im Systemmenü.
 
 ### 3.5 Das Systemmenü
 
-**L2 + R2** (zusammen, in jeder Reihenfolge) öffnet das Systemmenü über dem Regal. Das Menü ist in Abschnitte
-gruppiert:
+**L2 + R2** (zusammen, in jeder Reihenfolge) öffnet das Systemmenü über dem Regal. Jede Zeile hat eine einzeilige
+Beschreibung, und das Menü ist in Abschnitte gruppiert:
 
 | Abschnitt | Element | Was es macht |
 |---|---|---|
-| (oben) | Spiele neu scannen | Schaut jetzt nach neuen, geänderten oder entfernten Spielen (der Scan beobachtet auch den Ordner selbst). |
+| (oben) | Spiele erneut scannen | Schaut jetzt nach neuen, geänderten oder entfernten Spielen (der Scan beobachtet auch den Ordner selbst). |
 | | Erweiterungen | Die Erweiterungen auf dem Stick - der AutoBleem Store und andere (Abschnitt 3.12). |
-| **Bibliothek** | Spiel-Manager | Die PS1-Spiele als Liste mit ihren Ordnern: Löschen Sie ein Spiel, leeren Sie die Cover. Deaktiviert während eines Scans. |
-| | Memory Cards | Ihre Memory-Card-Sets (Abschnitt 3.7). |
-| | Scanner-Prozessoren | Die Programme, die jeder Scan zuerst ausführt - ihre Reihenfolge, an oder aus (Abschnitt 3.13). Deaktiviert während eines Scans. |
+| **Bibliothek** | Spielemanager | Die PS1-Spiele als Liste mit ihren Ordnern: Löschen Sie ein Spiel, leeren Sie die Cover. Deaktiviert während eines Scans. |
+| | Speicherkarten | Ihre Memory-Card-Sets (Abschnitt 3.7). |
+| | Scan-Prozessoren | Die Programme, die jeder Scan zuerst ausführt - ihre Reihenfolge, an oder aus (Abschnitt 3.13). Deaktiviert während eines Scans. |
 | **System** | Optionen | AutoBleems Einstellungen (Abschnitt 3.6). |
-| | Netzwerk & Controller | Nur wo eine installierte Erweiterung den `network`-Eintrag bereitstellt (`Provides=network` in ihrem `extension.ini` - PSC-Bios auf der Console, einem Pi und dem PC-Stick) - WiFi, Bluetooth-Controller-Pairing, DualShock 3-Setup und der Gamepad-Zuordnungs-Assistent - siehe Kapitel 6. Wenn diese Erweiterung installiert aber deaktiviert ist, bleibt dieses Element grau mit einer Notiz "im Extensions aktivieren" - Cross öffnet die Extensions-Liste. |
-| | Hardware-Informationen | Die Fakten der Maschine: System, CPU, Speicher, Netzwerk-Schnittstellen, Zeitzone, Display, die Pads und ihre Zuordnungen. Auf einer Console mit AutoBleem-Kernel öffnet dies PSC-Bios (Kapitel 6); auf anderen Maschinen zeigt dies diese Informationsseite. |
-| | Software-Update | (Raspberry Pi und PC) Überprüfen Sie die Website jetzt auf ein neueres AutoBleem oder RetroArch. |
+| | Netzwerk & Controller | Nur wo eine installierte Erweiterung den `network`-Eintrag bereitstellt (`Provides=network` in ihrem `extension.ini` - PSC-Bios auf der Console, einem Pi und dem PC-Stick) - WiFi, Bluetooth-Controller-Pairing, DualShock 3-Setup und der Gamepad-Zuordnungs-Assistent - siehe Kapitel 6. Wenn diese Erweiterung installiert aber deaktiviert ist, bleibt dieses Element grau mit einer Notiz "unter Erweiterungen einschalten" - Cross öffnet die Erweiterungs-Liste. |
+| | Hardwareinformationen | Die Fakten der Maschine: System, CPU, Speicher, Netzwerk-Schnittstellen, Zeitzone, Display, die Pads und ihre Zuordnungen - auf jeder Plattform dieselbe Seite (Abschnitt 4.2). |
+| | Software-Update | (Raspberry Pi und PC) Überprüfen Sie die Website jetzt auf ein neueres AutoBleem oder RetroArch; die Zeile sagt *Update verfügbar*, wenn der Launcher schon von einem weiß. |
 | | Über | Credits und Lizenz. |
-| **Verlassen** | RetroArch | Verlässt den Launcher für RetroArch's eigenes Menü. Schließen von RetroArch kommt zurück. |
+| **Verlassen** | RetroArch | (Nur wo RetroArch installiert ist.) Verlässt den Launcher für RetroArch's eigenes Menü. Schließen von RetroArch kommt zurück. |
 | | Ausschalten | Nach einer Bestätigung: auf der Console AutoBleems Standby - der Stick getrennt, das Licht rot, Power bringt den Launcher zurück (Abschnitt 2.1); auf einem Pi oder PC fährt die Maschine herunter. |
 
 ![Das Systemmenü](../images/en/system-menu.jpg)
 
 ### 3.6 Optionen
 
-Die Einstellungen sind in Gruppen; Hoch / Runter bewegen zwischen ihnen, Links / Rechts ändern einen Wert,
-Circle verlässt und speichert. Jede Änderung wird sofort angewendet.
+Die Einstellungen sind in Gruppen, jede unter einer Überschrift; Hoch / Runter bewegen zwischen den Zeilen, Links /
+Rechts ändern einen Wert (ein Antippen ist ein Schritt, Halten scrollt weiter), L1 / R1 springen zur ersten / letzten
+Zeile, L2 / R2 blättern, Circle verlässt und speichert. Jede Änderung wird sofort angewendet. An/Aus-Werte lauten
+**AN** / **AUS**.
 
 | Gruppe / Einstellung | Was es macht |
 |---|---|
-| **Schnittstelle**: AutoBleem Theme | Das Aussehen. Designs leben in `Themes/`; ein Designs-Zip dort abgelegt wird beim nächsten Besuch entpackt. Die Designs, die AutoBleem mitliefert, werden mit jedem Update aufgefrischt - um eines anzupassen, kopieren Sie es zuerst unter einen neuen Namen. |
+| **Oberfläche**: Anzeige | Die Auflösung des Bildschirms, für den Launcher und den PS1-Emulator: *Auto* (der eigene Modus des Bildschirms, angezeigt als *Auto (1920x1080)*) oder jeder Modus, den der Bildschirm auflistet; die Console bietet 720p und 1080p. Bei einem neuen Modus wird nachgefragt: *Diesen Anzeigemodus behalten?* - bestätigen Sie nicht, geht er nach einem Countdown zurück. Nicht in einem Entwicklungsfenster. |
+| Bildskalierung des Emulators | Wie der PS1-Emulator das Bild eines Spiels an den Bildschirm anpasst: *1x1* (die eigenen Pixel der PlayStation), *2x (ganzzahlig)*, *4:3*, *4:3 (ganzzahlig)* oder *Vollbild*. Ganzzahlige Skalierung verwendet nur ganze Vielfache (am schärfsten). Sie ersetzt den alten Widescreen-Schalter; der klassische `pcsx-ab` und RetroArch kennen nur Vollbild und 4:3. |
+| AutoBleem Theme | Das Aussehen. Designs leben in `Themes/`; ein Designs-Zip dort abgelegt wird beim nächsten Besuch entpackt. Die Designs, die AutoBleem mitliefert, werden mit jedem Update aufgefrischt - um eines anzupassen, kopieren Sie es zuerst unter einen neuen Namen. Der Standard ist **ab2.0.0**. |
 | Cover-Stil | Der Jewel-Case-Rahmen, der um PS1-Cover gezeichnet wird. |
+| Cover-Glanz | Ein Glanz, der über das ausgewählte Cover wandert, wenn das Regal zur Ruhe kommt. |
 | Sprache | Die Launcher-Sprache, sofort angewendet (17 Sprachen). |
-| Font aus Theme verwenden / Font | Der klassische Bildschirm-Font: der des Designs oder jede `.ttf`/`.otf` aus `resources/fonts`, `RetroArch/fonts` oder dem Designs-Ordner. |
-| Anzeige-Timeout | Wie lange die "Zeige: ..." Benachrichtigung bleibt, in Sekunden (0 = immer). |
-| **Sound**: Musik, Hintergrundmusik | Welcher Track unter dem Launcher spielt (der des Designs oder eine Datei aus `resources/music`), und ob überhaupt einer spielt. |
+| Anzeigedauer der Einblendung | Wie lange die Infoblasen ("Zeige: ...", die Zusammenfassung des Scans) bleiben, 0 bis 20 Sekunden; 0 zeigt *Aus*. Fehler haben ihre eigene feste Zeit. |
+| Startbildschirm | Das AutoBleem-Bild beim Start des Launchers; aus geht gleich zum Regal. |
+| Animationen | Die Bewegung zwischen Bildschirmen; aus macht jeden Bildschirmwechsel sofort. |
+| **Schriftarten**: Standardschriftart verwenden | Der Launcher verwendet seine Standardschriftart (Red Hat Text) oder - ausgeschaltet - die darunter gewählte. |
+| Schriftart | Jede `.ttf`/`.otf` aus `resources/fonts`, `RetroArch/fonts` oder dem Designs-Ordner; die Zeile nennt die verwendete Schriftart. |
+| **Ton**: Musik, Hintergrundmusik | Welcher Track unter dem Launcher spielt (der des Designs oder eine Datei aus `resources/music`), und ob überhaupt einer spielt. |
 | **Emulation**: PS1-Emulator | `pcsx-abnxt` (Standard: aktueller PCSX-ReARMed mit AutoBleems Zusätzen) oder `pcsx-ab` (der klassische). Ein Fortsetzungspunkt, der von einem gespeichert wird, setzt sich im anderen fort, es sei denn, das Spiel lief ohne BIOS-Datei. |
-| Widescreen | Die PS1-Emulator-Bildform für jedes Spiel. |
-| Alle PSX-Spiele mit RA spielen | Jedes PS1-Spiel startet in RetroArch's PS1-Core. |
-| RA-Konfiguration aktualisieren | AutoBleem schreibt seine Einstellungen in RetroArch's Konfiguration, wenn es dort ein Spiel startet. |
 | Spieler 1 / Spieler 2 tauschen (PS1-Emulatoren) | Vertauscht, welcher der ersten beiden Controller Spieler 1 ist und welcher Spieler 2, in beiden PS1-Emulatoren (pcsx-abnxt und dem klassischen pcsx-ab). Es wirkt sich nur aus, wenn zwei oder mehr Controller angeschlossen sind; mit einem Controller ist es immer Spieler 1. RetroArch ist nicht betroffen. |
+| Alle PSX-Spiele mit RA spielen, RA-Konfiguration aktualisieren, RetroArch-Konfiguration behalten | (Nur wo RetroArch installiert ist.) Jedes PS1-Spiel startet in RetroArch's PS1-Core; AutoBleem schreibt seine Einstellungen in RetroArch's Konfiguration, wenn es dort ein Spiel startet; eine Änderung im eigenen Menü von RetroArch bleibt erhalten, wenn RetroArch beendet wird. |
 | **Bibliothek**: Interne Spiele anzeigen | Die eingebauten Spiele der Console in den PlayStation-Listen (nur PlayStation Classic). |
-| Box Art online abrufen | Der Scan ruft fehlende Cover von libretro's Servern ab (Raspberry Pi, PC, Windows). |
-| **Updates** | (Raspberry Pi, PC, Windows) `stable`, `latest` (auch die Pre-Releases) oder `off`. |
+| Cover online laden | Der Scan ruft fehlende Cover von libretro's Servern ab (Raspberry Pi, PC, Windows). |
+| **Updates** | Der Update-Kanal: `release` (die getestete Version), `testing` (die nächste Version, im Test), `nightly` (der neueste Entwicklungs-Build) oder `off`. Der Standard folgt der installierten Version. Auf einem Entwicklungsrechner nicht angezeigt. |
+| **Diagnose**: Protokolle auf dem Stick behalten | Behält alle Protokolle ab dem nächsten Start auf dem Stick, nicht nur nach einem Absturz (Kapitel 7). |
+| Leistung anzeigen | Ein Overlay in der unteren linken Ecke: Bildrate, CPU-Last, Threads und Speicher; der Emulator zeigt im Spiel auch seine FPS und CPU. |
 
 ![Die Optionen, in Gruppen](../images/en/options.jpg)
 
@@ -281,25 +318,32 @@ Mit einem ausgewählten Spiel öffnet **Runter** seine Icon-Zeile: **Einstellung
 (die eigenen Einstellungen des Spiels), **Memory Card** (seine Memory Card) und **Fortsetzen** (seine Save States).
 Cross öffnet die, die sich unter dem Cursor befindet.
 
-Der **Spiel-Editor** zeigt die Details des Spiels rechts und seine Einstellungen links, in drei Gruppen:
+Der **Spiel-Editor** zeigt die Details des Spiels rechts (Titel, Publisher, Jahr, Spieler, Ordner, Memory Card) und seine Einstellungen links, in vier Gruppen:
 
-- **Spiel**: *Favorit* (in der Lieblingsspiele-Gruppe), *Lightgun-Spiel* (ein Light-Gun-Spiel - es tritt der
-  Lightgun-Gruppe bei und läuft immer in RetroArch, dessen PS1-Core den GunCon hat), *Mit RA spielen* (dieses
-  Spiel läuft in RetroArch), *Daten sperren* (der Scanner lässt den Spieltitel, die Seriennummer und die Liste
-  der Discs so, wie Sie sie gesetzt haben).
-- **Video**: hohe Auflösung, Scanlines und ihre Stufe, Frame-Skip, das GPU-Plugin, und den *Filter* - wie das
-  Bild skaliert wird: Aus (einfache Pixel), Linear (geglättet) oder Sharp (scharfe Pixel ohne Flimmern;
-  nur `pcsx-abnxt` - die klassische `pcsx-ab` und RetroArch zeigen es als Aus).
+- **Spiel**: *Favorit* (in der Lieblingsspiele-Gruppe), *Lightgun-Spiel* und *Mit RA spielen* (nur wo RetroArch
+  installiert ist: ein Light-Gun-Spiel tritt der Lightgun-Gruppe bei und läuft immer in RetroArch, dessen PS1-Core
+  den GunCon hat; *Mit RA spielen* lässt dieses Spiel in RetroArch laufen), *Infos Sperren* (der Scanner lässt den
+  Spieltitel, die Seriennummer und die Liste der Discs so, wie Sie sie gesetzt haben).
+- **Anzeige**: *Auflösung* (1x oder 2x, auf der eingebauten GPU), *Nähte entfernen* (nur mit 2x), *Dithering* (Aus, An,
+  Immer), *Glättung*, der *Filter* - wie das Bild skaliert wird: Nächster Nachbar (einfache Pixel), Linear (geglättet),
+  Scharf oder Scharf (einfach) (scharfe Pixel ohne Flimmern), Quilez oder die CRT-Filter CRT (fast) und CRT-Pi (sie
+  zeichnen ihre eigenen Scanlines, daher werden die Scanline-Zeilen grau) - und *Scanlines* mit ihrer
+  *Scanline-Helligkeit*. Auflösung, Nähte entfernen, Dithering, Glättung und die Filter außer Linear und Nächster
+  Nachbar sind für `pcsx-abnxt`; die klassische `pcsx-ab` und RetroArch zeigen den Rest als Nächster Nachbar.
+- **Rendering**: das GPU-*Plugin* und der *Frameskip* (Auto, Aus, 1 bis 3).
 - **Emulator**: SpeedHack, die CPU-Taktung, SPU-Interpolation, das Boot-Logo (aus überspringt die BIOS-Shell -
   für eine Homebrew-Disc, deren benutzerdefinierten Logo das Boot unterbricht), und mit `pcsx-abnxt` den
-  *Smoothing*-Filter und den *Sony hacks*-Toggle.
+  *Sony-Hacks*-Toggle.
+
+Die Bildform und die Auflösung des Bildschirms sind global (Optionen → *Bildskalierung des Emulators* und *Anzeige*).
+Ein Spiel ohne Titel in seinen Daten wird unter dem Namen seines Ordners gezeigt.
 
 Triangle benennt das Spiel um, Square ändert seine Memory Card, Start teilt eine neue Card. Circle speichert
 und verlässt.
 
 **Einstellungen im Emulator gespeichert.** Das eigene Menü des Emulators hat *Einstellungen für dieses Spiel
 speichern*. Sobald ein Spiel dort gespeicherte Einstellungen hat, sind dies die, mit denen es spielt, und der
-Spiel-Editor zeigt seine Video- und Emulator-Zeilen grau, mit diesen Werten, unter der Überschrift *Im Emulator
+Spiel-Editor zeigt seine Zeilen Anzeige, Rendering und Emulator grau, mit diesen Werten, unter der Überschrift *Im Emulator
 gespeichert*. Um zu den Einstellungen des Spiel-Editors zurückzukehren, wählen Sie **Einstellungen entsperren**
 und bestätigen: dies löscht die Einstellungen, die der Emulator gespeichert hat, und die Zeilen können wieder
 geändert werden. Beide Emulatoren, `pcsx-ab` und `pcsx-abnxt`, lesen und schreiben die gleichen gespeicherten
@@ -323,16 +367,39 @@ defragmentieren Sie eine Card (Select). Start tauscht die Card auf der rechten S
 
 **Fortsetzungspunkte**: Wenn Sie ein PS1-Spiel mit der Reset-Taste der Console verlassen (oder das Menü des
 Emulators auf einem Pi oder PC), behält AutoBleem einen Save State, wo Sie waren, und bietet ihn unter dem
-**Fortsetzen**-Icon an - vier Slots, jede mit einem Bild des Moments. Cross setzt einen aus dem Slot fort,
-Triangle löscht ihn. Ein Spiel mit einem Fortsetzungspunkt zeigt ein kleines Bild auf seinem Resume-Icon.
+**Fortsetzen**-Icon an - vier Slots, als gerahmte Karten, jede mit einem Bild des Moments, der Slot-Nummer und dem
+Datum; der neueste ist mit **NEUESTE** markiert, und ein unbenutzter Slot sagt *Kein Fortsetzpunkt*. Cross setzt einen
+aus dem Slot fort, Triangle löscht ihn. Ein Spiel mit einem Fortsetzungspunkt zeigt ein kleines Bild auf seinem
+Fortsetzen-Icon; ein Spiel ohne hat das Fortsetzen-Icon grau. Während der Fortsetzungspunkt beim Verlassen eines
+Spiels geschrieben wird, zeigt der Emulator *Bitte warten...*.
 
 ### 3.8 Starten von Spielen, RetroArch und Apps
 
-**Cross** startet das ausgewählte Spiel. Ein PS1-Spiel läuft im gewählten PS1-Emulator (Abschnitt 3.5),
+**Cross** startet das ausgewählte Spiel. Ein PS1-Spiel läuft im gewählten PS1-Emulator (Abschnitt 3.6),
 Vollbildschirm, bis Sie ihn verlassen - auf der Console mit der vorderen **Reset**-Taste (zurück zum Launcher
-mit einem Fortsetzungspunkt) oder **Power** (die Console schaltet sich aus); auf einem Pi oder PC durch das
-Menü des Emulators (Select + Start auf dem Pad oder Esc auf einer Tastatur). **Square** startet ein PS1-Spiel
+mit einem Fortsetzungspunkt; geht auch aus dem Menü im Spiel heraus) oder **Power** (die Console schaltet sich aus);
+auf einem Pi oder PC durch das Menü des Emulators im Spiel (unten). **Square** startet ein PS1-Spiel
 stattdessen in RetroArch.
+
+**Das Menü im Spiel** (`pcsx-abnxt`). Drücken Sie die Menü-Taste - die Home-Taste des Pads, **Select + Start** auf
+einem Pad ohne eine, oder **Esc** auf einer Tastatur - und das Spiel hält hinter einem Menü mit dem letzten Bild des
+Spiels an. **Die Menü-Taste 2 Sekunden halten** ist dasselbe wie Reset: es verlässt das Spiel. L1 / R1 wechseln
+zwischen seinen drei Tabs, und das Menü öffnet auf dem Tab und der Zeile, auf denen es verlassen wurde:
+
+- **Spiel**: *Weiterspielen*; unter *Spielstände*: *Schnellspeichern*, *Schnellladen* und *Autospeicherstand laden*
+  (das Spiel, wie es bis zu 30 Sekunden zuvor war - der Emulator speichert es von selbst im Speicher, während Sie
+  spielen); unter *CD*: *Disc wechseln* und *Spiel zurücksetzen* (startet es von vorn); *Einstellungen für dieses
+  Spiel speichern* (siehe Abschnitt 3.7), *PCSX-Menü* (die eigenen Seiten von PCSX-ReARMed: Optionen, Cheats, Über)
+  und *Beenden* (zurück zu AutoBleem).
+- **Bild**: *Anzeige* (die Auflösung des Bildschirms - auf der Console wird sie in den Optionen gewählt und hier nur
+  angezeigt), *Auflösung* (1x oder 2x), *Nähte entfernen*, *Dithering*, *Skalierung*, *Glättung*, *Filter*,
+  *Scanlines* und *Scanline-Helligkeit*. Jede Zeile hat rechts eine Hilfezeile. CRT-Pi ist für die Console bei 1080p zu
+  schwer. Eine Zeile, die nicht zutrifft, ist grau, und ihre Hilfe sagt warum.
+- **Controller**: *Controller 1* und *Controller 2*: Standard (digital), Analog (DualShock), eine Pistole oder keiner;
+  wirkt, wenn das Spiel weitergeht.
+
+Das Menü ist im ab2.0.0-Aussehen des Launchers gezeichnet, mit den Controller-Akkus und dem Bild des letzten
+Schnellspeicherstands.
 
 Ein **RetroArch**-Spiel startet in RetroArch mit dem Core, den der Launcher für sein System gewählt hat; *Inhalt
 schließen* oder *RetroArch beenden* in seinem Menü kommt zum Launcher zurück. Das RetroArch-Element im Systemmenü
@@ -412,15 +479,19 @@ System, auf dem AutoBleem läuft (eine PlayStation Classic benötigt das WiFi de
 Tabs, L1 / R1 dazwischen:
 
 - **Apps** und **Spiele**: das, das die Quellen anbieten, jeder mit seinem Bild, Version, Größe und Quellen-Favicon.
-  Installierte Elemente sind grau. Cross installiert (oder aktualisiert oder versucht wieder nach einem Fehler),
-  Triangle entfernt, das der Store installiert hat. L2 / R2 oder Links / Rechts drehen Seiten, **Select** zeigt
-  eine Quelle auf einmal, **Start** durchsucht die Titel. Elementbilder sind gecacht und können erneut versucht
-  werden, wenn sie nicht geladen werden.
+  Installierte Elemente tragen ein *Installiert*-Abzeichen. Cross installiert (oder aktualisiert, oder versucht wieder
+  nach einem Fehler, oder bricht einen wartenden oder laufenden Download ab), Triangle entfernt, das der Store
+  installiert hat, Square aktualisiert die Listen. L2 / R2 springen nach Buchstaben, **Select** zeigt eine Quelle auf
+  einmal, **Start** durchsucht die Titel. Die Fußzeile zeigt die Tasten der ausgewählten Zeile. Elementbilder sind
+  gecacht und können erneut versucht werden, wenn sie nicht geladen werden.
 - **Downloads**: was heruntergeladen wird, wartet, fehlgeschlagen oder installiert ist. Die Fortschrittsleiste
-  aktualisiert sich stetig. Downloads gehen im Hintergrund auch nach dem Verlassen des Stores weiter; ein Spiel
-  oder Ausschalten pausiert nur sie, und ein gestoppter Download wird fortgesetzt, wo er gestoppt ist. Ein
-  installiertes Spiel erscheint auf dem Regal nach dem nächsten Scan mit dem Store-Bild als Cover. Downloads über
-  2 GB funktionieren auf allen Plattformen, einschließlich 32-Bit-Builds.
+  aktualisiert sich stetig, und während Sie woanders im Launcher sind, zeigt eine Blase den laufenden Download mit
+  seiner Geschwindigkeit und der verbleibenden Zeit (`1.4 MB/s · 0:42`). Downloads gehen im Hintergrund auch nach dem
+  Verlassen des Stores weiter; ein Spiel oder Ausschalten pausiert nur sie, und ein gestoppter Download wird
+  fortgesetzt, wo er gestoppt ist. Fällt das Netzwerk aus, sagt das Element *Warte auf das Netzwerk* und macht weiter,
+  wo es stand, sobald das Netzwerk zurück ist (nach 30 Minuten gibt es auf). Ein installiertes Spiel erscheint auf dem
+  Regal nach dem nächsten Scan mit dem Store-Bild als Cover. Downloads über 2 GB funktionieren auf allen Plattformen,
+  einschließlich 32-Bit-Builds.
 - **Quellen**: von wo die Listen kommen - AutoBleems eigener Katalog, eine TSV-Liste in `System/Extensions/store/sources/`
   abgelegt und die Adressen, die Sie mit **Quellen-URL hinzufügen** hinzufügen. Jede Quelle zeigt sein Favicon
   in der Liste. Cross auf einem, das Sie hinzugefügt haben, benennt es um, ändert seine Adresse, wechselt zwischen
@@ -477,7 +548,7 @@ Prozessor tun muss, und `tools/proc_check.py` in AutoBleem's Quelle überprüft 
 
 ### 4.1 Spiel-Manager
 
-Die PS1-Spiele als Liste mit ihren Ordnern und das ausgewählte mit Cover und Details. Cross öffnet den
+Die PS1-Spiele als Liste nur mit ihren Titeln (der Ordner des ausgewählten steht in seinen Details) und das ausgewählte mit Cover. Cross öffnet den
 Spiel-Editor, **Square löscht das Spiel** (seinen Ordner und, nach einer zweiten Frage, seine Save States),
 Triangle löscht jedes Cover-PNG neben den Spielen (der Scan nimmt sie wieder aus den Datenbanken), L2 / R2
 Seite. Der freie Platz des Laufwerks ist oben rechts. Der Spiel-Manager wartet, während ein Scan läuft.
@@ -487,8 +558,8 @@ Seite. Der freie Platz des Laufwerks ist oben rechts. Der Spiel-Manager wartet, 
 ### 4.2 Hardware-Informationen
 
 Die Fakten der Maschine - System, Hardware, Speicher mit seinem freien Platz, Netzwerk-Adressen, die Display-
-und Audio-Treiber, die verbundenen Pads - neu gelesen jede Sekunde. Auf einer PlayStation Classic mit dem
-AutoBleem-Kernel öffnet dieses Element stattdessen **PSC-Bios** (Kapitel 6).
+und Audio-Treiber, die verbundenen Pads - neu gelesen jede Sekunde. Es ist auf jeder Plattform dieselbe Seite, die
+Console eingeschlossen; die Bildschirme für Netzwerk und Controller sind **Netzwerk & Controller** (PSC-Bios, Kapitel 6).
 
 Die erste und zweite Steuerung werden als Spieler 1 und Spieler 2 angezeigt – die Anschlüsse, die der PS1-Emulator ihnen gibt.
 Jede weitere Steuerung wird als „wird vom PS1-Emulator nicht verwendet“ angezeigt. RetroArch weist Steuerungen nach seinen eigenen
@@ -584,7 +655,7 @@ Windows über seine Firewall: nur private Netzwerke erlauben.
 
 Zwei Tools für einen PlayStation Classic-Stick. Beide zeichnen im Design und der Sprache des Launchers und beide
 werden vom Pad getrieben - und im Gamepad-Wizard von den vorderen Tasten der Console. **PSC-Bios** ist eine
-Erweiterung, die mit dem Console-Paket kommt: *Hardware-Informationen* im Systemmenü öffnet es, und es ist
+Erweiterung, die mit dem Console-Paket kommt: das Element *Netzwerk & Controller* des Quick-Menüs und des Systemmenüs öffnet es, und es ist
 in der Erweiterungs-Liste. **ABFlashKit** ist eine App im Apps-Set.
 
 ### 6.1 PSC-Bios
