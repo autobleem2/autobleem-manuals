@@ -34,8 +34,10 @@ the tools that come with it.
 
 ### 2.1 PlayStation Classic
 
-You need a Windows PC, a USB stick (USB 2.0, 8 GB or more; the installer formats it if you ask) and the
-stock console. AutoBleem runs from the stick without any change to the console. The stick must be
+You need a Windows PC, a USB stick (USB 2.0, 8 GB or more) and the stock console. The stick does not have
+to be empty and is **not formatted** unless you ask for it: AutoBleem is installed next to what is on it, and
+a stick you already use with AutoBleem 1.0 is upgraded in place (below). AutoBleem runs from the stick
+without any change to the console. The stick must be
 **FAT32** for a stock console - its kernel cannot read exFAT. Only a console with the AutoBleem kernel
 installed (ABFlashKit, chapter 6) also boots from an exFAT stick, which lifts FAT32's 4 GB file limit.
 
@@ -45,9 +47,12 @@ installed (ABFlashKit, chapter 6) also boots from an exFAT stick, which lifts FA
 2. Plug the stick in and start `AutoBleemInstaller.exe`. Pick the **channel** - *Release* (the tested
    version), *Testing* (the next version, being tested) or *Nightly* (the newest development build, which
    may not work) - and the drive. The line under them says which AutoBleem version the channel would
-   install, and what is on the stick now. Tick what you want:
-   - **Format the stick** - only for a fresh stick (everything on it is erased). Pick FAT32 unless the console
-     has the AutoBleem kernel.
+   install, and what is on the stick now: *a fresh install* (the stick's other files are left alone) or
+   *AutoBleem <version> is on this stick: it will be updated* (games, saves, memory cards and settings stay).
+   **Formatting is optional**: the **Format** button next to the drive is only for a new stick with no file
+   system, one the console cannot read (NTFS, for example) or one you want to wipe - it asks first, then
+   erases everything on the stick. Pick FAT32 there unless the console has the AutoBleem kernel.
+   Tick what you want:
    - **Cover databases** - the box art and details of the PS1 library (ticked by default; about 300 MB).
    - **RetroArch** - RetroArch with its cores, the extra applications (Doom, Quake, Amiga, ...) and the
      libretro assets, for the other systems' games. Off by default; it can be added later by running the
@@ -71,8 +76,18 @@ standby again next time.
 
 To **update** a stick, run the installer over it again (the button says *Update*): it installs the chosen
 channel's newest version, and your games, saves, settings and RetroArch content stay; only AutoBleem's own
-files are replaced. A stick made with AutoBleem 1.0 or AutoBleem-NG is brought to the new layout
-automatically. A console with the AutoBleem kernel and WiFi can also update itself (section 3.11).
+files are replaced. A console with the AutoBleem kernel and WiFi can also update itself (section 3.11).
+
+**Upgrading from AutoBleem 1.0 (or AutoBleem-NG).** The same installer, on the same stick - no format:
+
+1. Copy the whole stick to the PC first, as a backup.
+2. Plug it in, start `AutoBleemInstaller.exe`, pick the channel and the drive. Do **not** press Format.
+3. Press **Install**. The installer brings the old layout up to date: RetroArch, the ROMs and the themes move
+   to where AutoBleem 2 looks for them, and the old ROM folders (`nes`, `snes`, ...) are renamed to RetroArch's
+   system names. Games, save states, memory cards, ROMs and RetroArch's saves stay; `config.ini` is kept, with
+   the PS1 emulator set to pcsx-abnxt.
+4. Put the stick back into the console. The first scan rebuilds the game list and the playlists (UpdateRoms
+   on the PC fetches box art for the RetroArch games, chapter 5).
 
 > The stock console has no clock and no network: dates are only shown after the AutoBleem kernel is
 > installed (chapter 6), and box art for RetroArch games comes from UpdateRoms on the PC (chapter 5).
@@ -243,6 +258,8 @@ now), *Store* (browse and install games, apps and extensions), *Network & Contro
 (closes AutoBleem and starts it again; on the console, a Pi and the PC stick only), and *System menu...*
 (everything else: Options, Game Manager, Power off and more - the full menu below). Up / Down move (wrapping), Cross picks, Circle back. Each item has a
 one-line description on its row. Apart from the Store and Restart launcher, every item is also in the system menu.
+
+![The Quick menu](../images/en/quick-menu.jpg)
 
 ### 3.5 The system menu
 

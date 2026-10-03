@@ -20,11 +20,10 @@ AutoBleem 2 is een gamelauncher voor de **PlayStation Classic** - en sinds versi
 
 ### 2.1 PlayStation Classic
 
-U hebt een Windows-PC, een USB-stick (USB 2.0, 8 GB of meer; de installer formateert deze op verzoek) en de originele console nodig. AutoBleem draait vanaf de stick zonder wijzigingen aan de console. De stick moet **FAT32** zijn voor een originele console - de kernel kan exFAT niet lezen. Alleen een console met de AutoBleem-kernel geïnstalleerd (ABFlashKit, hoofdstuk 6) kan ook van een exFAT-stick starten, waardoor de 4 GB-limiet van FAT32 wordt opgeheven.
+U hebt een Windows-PC, een USB-stick (USB 2.0, 8 GB of meer) en de originele console nodig. De stick hoeft niet leeg te zijn en wordt **niet geformatteerd**, tenzij u daarom vraagt: AutoBleem wordt naast wat er al op staat geïnstalleerd, en een stick die u al met AutoBleem 1.0 gebruikt, wordt ter plekke bijgewerkt (zie hieronder). AutoBleem draait vanaf de stick zonder wijzigingen aan de console. De stick moet **FAT32** zijn voor een originele console - de kernel kan exFAT niet lezen. Alleen een console met de AutoBleem-kernel geïnstalleerd (ABFlashKit, hoofdstuk 6) kan ook van een exFAT-stick starten, waardoor de 4 GB-limiet van FAT32 wordt opgeheven.
 
 1. Download **AutoBleemInstaller-<version>.zip** van het PlayStation Classic-paneel van de website en pak het ergens uit. Het bevat `AutoBleemInstaller.exe` en het AutoBleem-pakket dat het installeert.
-2. Steek de stick in en start `AutoBleemInstaller.exe`. Selecteer het station bovenaan. Vink aan wat u wilt:
-   - **Stick formatteren** - alleen voor een nieuwe stick (alles erop wordt gewist). Kies FAT32 tenzij de console de AutoBleem-kernel heeft.
+2. Steek de stick in en start `AutoBleemInstaller.exe`. Selecteer het station bovenaan. De regel eronder zegt wat er nu op de stick staat: *een nieuwe installatie* (de andere bestanden op de stick blijven onaangeroerd) of *AutoBleem <versie> staat op deze stick: hij wordt bijgewerkt* (games, saves, geheugenkaarten en instellingen blijven). **Formatteren is optioneel**: de knop **Format** naast het station is alleen voor een nieuwe stick zonder bestandssysteem, een stick die de console niet kan lezen (bijvoorbeeld NTFS) of een stick die u wilt leegmaken - hij vraagt eerst en wist dan alles op de stick. Kies daar FAT32 tenzij de console de AutoBleem-kernel heeft. Vink aan wat u wilt:
    - **Artwork-databases** - de hoezen en details van de PS1-bibliotheek (standaard aangevinkt; ongeveer 300 MB).
    - **RetroArch** - RetroArch met cores, extra toepassingen (Doom, Quake, Amiga, ...) en libretro-assets voor games van andere systemen. Standaard uit; kan later toegevoegd worden door de installer opnieuw uit te voeren.
    - **BIOS-bestanden** - de BIOS-bestanden die RetroArch-cores nodig hebben (vereist RetroArch).
@@ -34,7 +33,14 @@ U hebt een Windows-PC, een USB-stick (USB 2.0, 8 GB of meer; de installer format
 
 **In- en uitschakelen.** Met de stick erin start de console, knippert het licht enkele seconden (AutoBleem wordt opgehaald) en gaat dan in standby voordat iets wordt weergegeven - dit is de eigen updatemanier van de console, waarmee AutoBleem kan starten. Druk eenmaal op **Power** en de launcher verschijnt. *Uitschakelen* in het systeemmenu of de Power-knop van de console zet de console in **AutoBleem-standby**: de stick wordt eerst verwijderd, dan wordt het licht **rood** - het teken dat AutoBleem goed werkt - en de volgende Power-knop brengt de launcher in enkele seconden terug. **Terwijl het licht rood is, kunt u de stick verwijderen** en op een PC steken zonder dat Windows deze wil controleren; steek deze terug voordat u Power indrukt. Het stroomkabel uittrekken gaat de volgende keer opnieuw door de boot-standby.
 
-Om een stick **bij te werken**, voert u een nieuwere installer erover uit: uw games, saves, instellingen en RetroArch-inhoud blijven; alleen AutoBleem's eigen bestanden worden vervangen. Een stick gemaakt met AutoBleem 1.0 of AutoBleem-NG wordt automatisch naar de nieuwe layout geconverteerd.
+Om een stick **bij te werken**, voert u een nieuwere installer erover uit: uw games, saves, instellingen en RetroArch-inhoud blijven; alleen AutoBleem's eigen bestanden worden vervangen.
+
+**Upgraden vanaf AutoBleem 1.0 (of AutoBleem-NG).** Dezelfde installer, dezelfde stick - zonder formatteren:
+
+1. Kopieer eerst de hele stick naar de PC, als back-up.
+2. Steek hem in, start `AutoBleemInstaller.exe`, kies het kanaal en het station. Druk **niet** op Format.
+3. Klik **Install**. De installer brengt de oude layout bij: RetroArch, de ROM's en de thema's verhuizen naar waar AutoBleem 2 ze zoekt, en de oude ROM-mappen (`nes`, `snes`, ...) krijgen de systeemnamen van RetroArch. Games, save states, geheugenkaarten, ROM's en de saves van RetroArch blijven; `config.ini` blijft ook, met de PS1-emulator op pcsx-abnxt gezet.
+4. Steek de stick terug in de console. De eerste scan bouwt de gamelijst en de playlists opnieuw op (UpdateRoms op de PC haalt de hoezen van de RetroArch-games, hoofdstuk 5).
 
 > De originele console heeft geen klok en geen netwerk: datums worden alleen weergegeven nadat de AutoBleem-kernel is geïnstalleerd (hoofdstuk 6) en artwork voor RetroArch-games komt van UpdateRoms op de PC (hoofdstuk 5).
 
@@ -143,6 +149,8 @@ In elke lijst en menu: Omhoog / Omlaag verplaatsen, **L2 / R2 pagina's draaien**
 ### 3.4 Het snelmenu
 
 **Omhoog** in de launcher, of het **tandwielpictogram** in de iconrij (waar Instellingen / Spel / Geheugenkaart / Hervatten zijn): het snelmenu voor acties die u snel wilt bereiken. Een korte lijst: *Games opnieuw scannen* (start nu een scan), *Winkel* (games, apps en extensies bekijken en installeren), *Netwerk & controllers* (alleen waar een geïnstalleerde extensie de `network`-vermelding levert - PSC-Bios op console, Pi en PC-stick: WiFi, Bluetooth-koppeling, controller-mapping-wizard - zie hoofdstuk 6; grijs met "zet hem aan bij Extensies" wanneer die extensie is uitgeschakeld - Cross opent de Extensies-lijst), *Launcher herstarten* (sluit AutoBleem en start het opnieuw; alleen op console, Pi en PC-stick) en *Systeemmenu...* (al het andere: Opties, Game Manager, Uitschakelen en meer - het volledige menu hieronder). Omhoog / Omlaag verplaatsen (rond), Cross selecteert, Circle terug. Elk item heeft een beschrijving van één regel op zijn rij. Behalve de Winkel en *Launcher herstarten* staat elk item ook in het systeemmenu.
+
+![Het snelmenu](../images/en/quick-menu.jpg)
 
 ### 3.5 Het systeemmenu
 

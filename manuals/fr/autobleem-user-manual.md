@@ -35,18 +35,23 @@ outils fournis.
 
 ### 2.1 PlayStation Classic
 
-Vous avez besoin d'un PC Windows, une clé USB (USB 2.0, 8 Go ou plus ; l'installateur la formate si vous le
-demandez) et la console d'origine. AutoBleem s'exécute à partir de la clé sans aucune modification de la console.
+Vous avez besoin d'un PC Windows, une clé USB (USB 2.0, 8 Go ou plus) et la console d'origine. La clé n'a pas
+besoin d'être vide et **n'est pas formatée** sauf si vous le demandez : AutoBleem s'installe à côté de ce qu'elle
+contient déjà, et une clé que vous utilisez déjà avec AutoBleem 1.0 est mise à niveau sur place (voir plus bas).
+AutoBleem s'exécute à partir de la clé sans aucune modification de la console.
 La clé doit être **FAT32** pour une console d'origine - son noyau ne peut pas lire l'exFAT. Seule une console
 avec le noyau AutoBleem installé (ABFlashKit, chapitre 6) démarre également à partir d'une clé exFAT, ce qui
 lève la limite de 4 Go de FAT32.
 
 1. Téléchargez **AutoBleemInstaller-<version>.zip** du panneau PlayStation Classic du site et décompressez-le
    n'importe où. Il contient `AutoBleemInstaller.exe` et le paquet AutoBleem qu'il installe.
-2. Branchez la clé et démarrez `AutoBleemInstaller.exe`. Sélectionnez le lecteur en haut. Cochez ce que vous
-   voulez :
-   - **Formater la clé** - seulement pour une clé neuve (tout ce qui s'y trouve est effacé). Sélectionnez FAT32,
-     sauf si la console a le noyau AutoBleem.
+2. Branchez la clé et démarrez `AutoBleemInstaller.exe`. Sélectionnez le lecteur en haut. La ligne en dessous
+   indique ce qui se trouve sur la clé : *une nouvelle installation* (les autres fichiers de la clé ne sont pas
+   touchés) ou *AutoBleem <version> est sur cette clé : il sera mis à jour* (jeux, sauvegardes, cartes mémoire et
+   paramètres restent). **Le formatage est facultatif** : le bouton **Format** à côté du lecteur ne sert que pour
+   une clé neuve sans système de fichiers, une clé que la console ne sait pas lire (NTFS, par exemple) ou une clé
+   que vous voulez vider - il demande d'abord, puis efface tout le contenu de la clé. Choisissez-y FAT32, sauf si
+   la console a le noyau AutoBleem. Cochez ce que vous voulez :
    - **Bases de données de jaquettes** - les emboîtages et détails de la bibliothèque PS1 (cochée par défaut ;
      environ 300 Mo).
    - **RetroArch** - RetroArch avec ses cœurs, les applications supplémentaires (Doom, Quake, Amiga, ...) et les
@@ -70,8 +75,18 @@ ne demande de la vérifier ; remettez-la avant d'appuyer sur Power. Débrancher 
 veille de démarrage la prochaine fois.
 
 Pour **mettre à jour** une clé, exécutez un nouvel installateur sur elle : vos jeux, sauvegardes, paramètres et
-contenu RetroArch restent ; seuls les fichiers d'AutoBleem sont remplacés. Une clé créée avec AutoBleem 1.0 ou
-AutoBleem-NG est automatiquement mise en page.
+contenu RetroArch restent ; seuls les fichiers d'AutoBleem sont remplacés.
+
+**Mise à niveau depuis AutoBleem 1.0 (ou AutoBleem-NG).** Le même installateur, la même clé - sans formatage :
+
+1. Copiez d'abord toute la clé sur le PC, comme sauvegarde.
+2. Branchez-la, démarrez `AutoBleemInstaller.exe`, choisissez le canal et le lecteur. N'appuyez **pas** sur Format.
+3. Appuyez sur **Install**. L'installateur met l'ancienne organisation à jour : RetroArch, les ROM et les thèmes
+   vont là où AutoBleem 2 les cherche, et les anciens dossiers de ROM (`nes`, `snes`, ...) prennent les noms de
+   système de RetroArch. Jeux, sauvegardes d'état, cartes mémoire, ROM et sauvegardes de RetroArch restent ;
+   `config.ini` est conservé, avec l'émulateur PS1 réglé sur pcsx-abnxt.
+4. Remettez la clé dans la console. Le premier scan reconstruit la liste des jeux et les playlists (UpdateRoms
+   sur le PC récupère les jaquettes des jeux RetroArch, chapitre 5).
 
 > La console d'origine n'a pas d'horloge et pas de réseau : les dates ne s'affichent qu'après l'installation du
 > noyau AutoBleem (chapitre 6), et les jaquettes pour les jeux RetroArch proviennent d'UpdateRoms sur le PC
@@ -257,6 +272,8 @@ clé PC uniquement) et *Menu système...* (tout le reste : Options, Gestionnaire
 complet ci-dessous). Haut / Bas se déplacent (boucle), Cross sélectionne, Circle revient. Chaque élément a une
 description d'une ligne sur sa rangée. À part la Boutique et *Redémarrer le lanceur*, chaque élément est aussi dans
 le menu système.
+
+![Le menu rapide](../images/en/quick-menu.jpg)
 
 ### 3.5 Le menu système
 

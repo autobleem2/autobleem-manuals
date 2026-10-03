@@ -34,16 +34,21 @@ gli strumenti in dotazione.
 
 ### 2.1 PlayStation Classic
 
-Hai bisogno di un PC Windows, un'unità USB (USB 2.0, 8 GB o più; l'installatore la formatta se richiesto) e la
-console originale. AutoBleem gira dall'unità senza modifiche alla console. L'unità deve essere **FAT32** per una
+Hai bisogno di un PC Windows, un'unità USB (USB 2.0, 8 GB o più) e la console originale. L'unità non deve essere
+vuota e **non viene formattata** a meno che tu non lo chieda: AutoBleem si installa accanto a quello che contiene
+già, e un'unità che usi già con AutoBleem 1.0 viene aggiornata sul posto (vedi sotto). AutoBleem gira dall'unità
+senza modifiche alla console. L'unità deve essere **FAT32** per una
 console originale - il suo kernel non può leggere exFAT. Solo una console con il kernel AutoBleem installato
 (ABFlashKit, capitolo 6) avvia anche da un'unità exFAT, che solleva il limite di 4 GB di FAT32.
 
 1. Scarica **AutoBleemInstaller-<version>.zip** dal pannello PlayStation Classic del sito e estrailo ovunque.
    Contiene `AutoBleemInstaller.exe` e il pacchetto AutoBleem che installa.
-2. Collega l'unità e avvia `AutoBleemInstaller.exe`. Seleziona l'unità in alto. Spunta quello che vuoi:
-   - **Formatta l'unità** - solo per un'unità nuova (tutto su di essa viene cancellato). Seleziona FAT32 a meno che
-     la console non abbia il kernel AutoBleem.
+2. Collega l'unità e avvia `AutoBleemInstaller.exe`. Seleziona l'unità in alto. La riga sotto dice cosa c'è ora
+   sull'unità: *una nuova installazione* (gli altri file dell'unità non vengono toccati) oppure *AutoBleem <versione>
+   è su questa unità: verrà aggiornato* (giochi, salvataggi, memory card e impostazioni restano). **La formattazione
+   è facoltativa**: il pulsante **Format** accanto all'unità serve solo per un'unità nuova senza file system, una
+   che la console non sa leggere (NTFS, per esempio) o una che vuoi svuotare - prima chiede, poi cancella tutto
+   sull'unità. Scegli lì FAT32 a meno che la console non abbia il kernel AutoBleem. Spunta quello che vuoi:
    - **Database di copertine** - i box art e i dettagli della biblioteca PS1 (spuntato per impostazione predefinita;
      circa 300 MB).
    - **RetroArch** - RetroArch con i suoi nuclei, applicazioni aggiuntive (Doom, Quake, Amiga, ...) e risorse
@@ -66,8 +71,18 @@ può essere estratta** e messa su un PC senza che Windows chieda di controllarla
 Scollegare l'alimentazione della console passa di nuovo per lo standby di avvio la prossima volta.
 
 Per **aggiornare** un'unità, esegui un installatore più recente su di essa: i tuoi giochi, salvataggi, impostazioni
-e contenuto di RetroArch rimangono; vengono sostituiti solo i file propri di AutoBleem. Un'unità creata con
-AutoBleem 1.0 o AutoBleem-NG viene aggiornata automaticamente al nuovo layout.
+e contenuto di RetroArch rimangono; vengono sostituiti solo i file propri di AutoBleem.
+
+**Aggiornare da AutoBleem 1.0 (o AutoBleem-NG).** Lo stesso installatore, la stessa unità - senza formattare:
+
+1. Prima copia l'intera unità sul PC, come backup.
+2. Collegala, avvia `AutoBleemInstaller.exe`, scegli il canale e l'unità. **Non** premere Format.
+3. Premi **Install**. L'installatore aggiorna il vecchio layout: RetroArch, le ROM e i temi vanno dove AutoBleem 2
+   li cerca, e le vecchie cartelle delle ROM (`nes`, `snes`, ...) prendono i nomi di sistema di RetroArch.
+   Giochi, salvataggi di stato, memory card, ROM e salvataggi di RetroArch restano; anche `config.ini` resta,
+   con l'emulatore PS1 impostato su pcsx-abnxt.
+4. Rimetti l'unità nella console. La prima scansione ricostruisce l'elenco dei giochi e le playlist (UpdateRoms
+   sul PC scarica le copertine dei giochi RetroArch, capitolo 5).
 
 > La console originale non ha un orologio e nessuna rete: le date vengono visualizzate solo dopo l'installazione
 > del kernel AutoBleem (capitolo 6), e le copertine per i giochi di RetroArch provengono da UpdateRoms su PC
@@ -245,6 +260,8 @@ AutoBleem e lo avvia di nuovo; solo su console, Pi e chiavetta PC) e *Menu di si
 Gestore del gioco, Spegni e altro - il menu completo sotto). Su / Giù si muovono (avvolgente), Cross seleziona,
 Circle torna indietro. Ogni elemento ha una descrizione di una riga nella sua riga. A parte lo Store e *Riavvia il
 launcher*, ogni elemento è anche nel menu di sistema.
+
+![Il menu rapido](../images/en/quick-menu.jpg)
 
 ### 3.5 Il menu di sistema
 

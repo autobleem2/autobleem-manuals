@@ -35,8 +35,10 @@ tägliche Verwendung und die mitgelieferten Tools.
 
 ### 2.1 PlayStation Classic
 
-Sie benötigen einen Windows-PC, einen USB-Stick (USB 2.0, 8 GB oder mehr; der Installer formatiert ihn auf
-Anfrage) und die Standard-Console. AutoBleem läuft vom Stick ohne Änderungen an der Console. Der Stick
+Sie benötigen einen Windows-PC, einen USB-Stick (USB 2.0, 8 GB oder mehr) und die Standard-Console. Der Stick
+muss nicht leer sein und wird **nicht formatiert**, außer Sie wollen es: AutoBleem wird neben das installiert, was
+schon darauf ist, und ein Stick, den Sie bereits mit AutoBleem 1.0 benutzen, wird an Ort und Stelle aktualisiert
+(unten). AutoBleem läuft vom Stick ohne Änderungen an der Console. Der Stick
 muss **FAT32** sein für eine Standard-Console - ihr Kernel kann exFAT nicht lesen. Nur eine Console mit
 installiertem AutoBleem-Kernel (ABFlashKit, Kapitel 6) bootet auch von einem exFAT-Stick, was die 4-GB-Grenze
 von FAT32 hebt.
@@ -44,9 +46,13 @@ von FAT32 hebt.
 1. Laden Sie **AutoBleemInstaller-<version>.zip** vom PlayStation Classic-Bereich der Website herunter und
    entpacken Sie es überall. Es enthält `AutoBleemInstaller.exe` und das AutoBleem-Paket, das es installiert.
 2. Verbinden Sie den Stick und starten Sie `AutoBleemInstaller.exe`. Wählen Sie das Laufwerk oben aus.
-   Wählen Sie aus, was Sie möchten:
-   - **Stick formatieren** - nur für einen neuen Stick (alles darauf wird gelöscht). Wählen Sie FAT32, es sei
-     denn die Console hat den AutoBleem-Kernel.
+   Die Zeile darunter sagt, was jetzt auf dem Stick ist: *eine Neuinstallation* (die anderen Dateien auf dem
+   Stick bleiben unberührt) oder *AutoBleem <Version> ist auf diesem Stick: er wird aktualisiert* (Spiele,
+   Spielstände, Memory Cards und Einstellungen bleiben). **Formatieren ist optional**: Die Schaltfläche
+   **Format** neben dem Laufwerk ist nur für einen neuen Stick ohne Dateisystem, einen, den die Console nicht
+   lesen kann (z. B. NTFS), oder einen, den Sie leeren wollen - sie fragt zuerst und löscht dann alles auf dem
+   Stick. Wählen Sie dort FAT32, es sei denn, die Console hat den AutoBleem-Kernel. Wählen Sie aus, was Sie
+   möchten:
    - **Cover-Datenbanken** - die Schachtelmuster und Details der PS1-Bibliothek (standardmäßig angekreuzt;
      etwa 300 MB).
    - **RetroArch** - RetroArch mit seinen Cores, den zusätzlichen Anwendungen (Doom, Quake, Amiga, ...) und
@@ -70,8 +76,19 @@ eingegeben werden; schieben Sie ihn vor dem Drücken von Power zurück. Die Powe
 nächsten Mal durch den Boot-Standby.
 
 Um einen Stick zu **aktualisieren**, führen Sie einen neueren Installer darauf aus: Ihre Spiele, Speichern,
-Einstellungen und RetroArch-Inhalte bleiben; nur AutoBleems eigene Dateien werden ersetzt. Ein Stick, der mit
-AutoBleem 1.0 oder AutoBleem-NG gemacht wurde, wird automatisch auf das neue Layout gebracht.
+Einstellungen und RetroArch-Inhalte bleiben; nur AutoBleems eigene Dateien werden ersetzt.
+
+**Upgrade von AutoBleem 1.0 (oder AutoBleem-NG).** Derselbe Installer, derselbe Stick - ohne Formatieren:
+
+1. Kopieren Sie zuerst den ganzen Stick als Sicherung auf den PC.
+2. Stecken Sie ihn ein, starten Sie `AutoBleemInstaller.exe`, wählen Sie Kanal und Laufwerk. Drücken Sie
+   **nicht** Format.
+3. Drücken Sie **Install**. Der Installer bringt das alte Layout auf den neuen Stand: RetroArch, die ROMs und
+   die Themes ziehen dorthin um, wo AutoBleem 2 sie sucht, und die alten ROM-Ordner (`nes`, `snes`, ...)
+   bekommen die Systemnamen von RetroArch. Spiele, Save States, Memory Cards, ROMs und die Spielstände von
+   RetroArch bleiben; `config.ini` bleibt erhalten, mit dem PS1-Emulator auf pcsx-abnxt gestellt.
+4. Stecken Sie den Stick wieder in die Console. Der erste Scan baut die Spieleliste und die Playlists neu auf
+   (UpdateRoms auf dem PC holt die Cover der RetroArch-Spiele, Kapitel 5).
 
 > Die Standard-Console hat keine Uhr und kein Netzwerk: Daten werden nur angezeigt, nachdem der AutoBleem-Kernel
 > installiert ist (Kapitel 6), und Schachtelmuster für RetroArch-Spiele kommen von UpdateRoms auf dem PC
@@ -257,6 +274,8 @@ Erweiterungs-Liste), *Launcher neu starten* (schließt AutoBleem und startet es 
 dem PC-Stick) und *Systemmenü...* (alles andere: Optionen, Spielemanager, Ausschalten und mehr - das volle Menü
 unten). Hoch / Runter bewegen (umhüllt), Cross wählt, Circle zurück. Jede Zeile hat eine einzeilige Beschreibung.
 Außer dem Store und *Launcher neu starten* ist jedes Element auch im Systemmenü.
+
+![Das Quick-Menü](../images/en/quick-menu.jpg)
 
 ### 3.5 Das Systemmenü
 

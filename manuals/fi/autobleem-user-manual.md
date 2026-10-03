@@ -34,16 +34,21 @@ asennusta jokaiselle alustalle, päivittäistä käyttöä ja mukana tulevat ty�
 
 ### 2.1 PlayStation Classic
 
-Tarvitset Windows-PC:n USB-tikun (USB 2.0 8 GB tai enemmän; asentaja muotoilee sen jos pyydät) ja
-stock-konsoolin. AutoBleem käynnistyy tikusta ilman muutoksia konsoliin. Tikun on oltava **FAT32** stock-
+Tarvitset Windows-PC:n, USB-tikun (USB 2.0, 8 GB tai enemmän) ja stock-konsolin. Tikun ei tarvitse olla
+tyhjä, eikä sitä **alusteta**, ellet itse pyydä: AutoBleem asennetaan sen viereen, mitä tikulla jo on, ja tikku,
+jota käytät jo AutoBleem 1.0:n kanssa, päivitetään paikallaan (alla). AutoBleem käynnistyy tikusta ilman
+muutoksia konsoliin. Tikun on oltava **FAT32** stock-
 konsolille - sen kernel ei voi lukea exFAT:ia. Vain AutoBleem-kernelin asennetulla konsolilla (ABFlashKit
 luku 6) voi käynnistyä exFAT-tikusta mikä poistaa FAT32:n 4 Gt rajan.
 
 1. Lataa **AutoBleemInstaller-<version>.zip** sivun PlayStation Classic -paneelista ja pura se mihin tahansa.
    Se sisältää `AutoBleemInstaller.exe`:n ja AutoBleem-paketin jonka se asentaa.
-2. Liitä tikku ja käynnistä `AutoBleemInstaller.exe`. Valitse asema ylhäältä. Valitse mitä haluat:
-   - **Format the stick** - vain uudelle tikulle (kaikki sillä poistetaan). Valitse FAT32 elleivät konsolilla
-     ole AutoBleem-kernelia.
+2. Liitä tikku ja käynnistä `AutoBleemInstaller.exe`. Valitse asema ylhäältä. Sen alla oleva rivi kertoo,
+   mitä tikulla nyt on: *uusi asennus* (tikun muihin tiedostoihin ei kosketa) tai *AutoBleem <versio> on tällä
+   tikulla: se päivitetään* (pelit, tallennukset, muistikortit ja asetukset säilyvät). **Alustaminen on
+   valinnaista**: aseman vieressä oleva **Format**-painike on vain uudelle tikulle, jolla ei ole tiedostojärjestelmää,
+   tikulle, jota konsoli ei pysty lukemaan (esim. NTFS), tai tikulle, jonka haluat tyhjentää - se kysyy ensin ja
+   poistaa sitten kaiken tikulta. Valitse siinä FAT32, ellei konsolissa ole AutoBleem-kerneliä. Valitse mitä haluat:
    - **Cover databases** - PS1-kirjaston kansikauden ja tiedot (oletuksena valittu; noin 300 MB).
    - **RetroArch** - RetroArch ydinillä ekstra sovelluksilla (Doom Quake Amiga ...) ja libretro-omaisuuksilla
      muille järjestelmien peleille. Oletuksena pois; voidaan lisätä myöhemmin ajamalla asentaja uudelleen.
@@ -65,8 +70,18 @@ laita se takaisin ennen kuin painat Power. Konsolinin virran vetäminen käy boo
 seuraavalla kerralla.
 
 **Tikun päivittämiseksi** ajaa uudempi asentaja sen yli: pelisi tallennetut tiedot asetukset ja RetroArch-
-sisältö jäävät; vain AutoBleemin omat tiedostot korvataan. AutoBleem 1.0:lla tai AutoBleem-NG:lla tehty
-tikku tuodaan automaattisesti uuteen asetteluun.
+sisältö jäävät; vain AutoBleemin omat tiedostot korvataan.
+
+**Päivitys AutoBleem 1.0:sta (tai AutoBleem-NG:stä).** Sama asentaja, sama tikku - ei alustusta:
+
+1. Kopioi ensin koko tikku PC:lle varmuuskopioksi.
+2. Liitä se, käynnistä `AutoBleemInstaller.exe`, valitse kanava ja asema. **Älä** paina Format.
+3. Paina **Install**. Asentaja päivittää vanhan asettelun: RetroArch, ROMit ja teemat siirtyvät sinne, mistä
+   AutoBleem 2 ne etsii, ja vanhat ROM-kansiot (`nes`, `snes`, ...) nimetään RetroArchin järjestelmänimillä.
+   Pelit, tilatallennukset, muistikortit, ROMit ja RetroArchin tallennukset säilyvät; `config.ini` säilyy myös,
+   ja PS1-emulaattoriksi asetetaan pcsx-abnxt.
+4. Laita tikku takaisin konsoliin. Ensimmäinen skannaus rakentaa pelilistan ja soittolistat uudelleen
+   (UpdateRoms PC:llä hakee RetroArch-pelien kansikuvat, luku 5).
 
 > Stock-konsolilla ei ole kelloa eikä verkkoa: päivämäärät näytetään vasta AutoBleem-kernelin asennuksen
 > jälkeen (luku 6) ja RetroArch-pelien kansikauden haetaan UpdateRomsilla PC:llä (luku 5).
@@ -244,6 +259,8 @@ AutoBleemin ja käynnistää sen uudelleen; vain konsolilla, Pi:llä ja PC-tikul
 muu: Vaihtoehdot, Pelien hallinta, Sammuta ja muuta - täysi valikko alla). Ylös / Alas liikkuvat (kiertävät), Cross
 valitsee, Circle takaisin. Jokaisella kohteella on yksirivinen kuvaus rivillään. Kaupan ja *Käynnistä launcher
 uudelleen* -kohteen lisäksi jokainen kohde on myös järjestelmävalikossa.
+
+![Pika-valikko](../images/fi/quick-menu.jpg)
 
 ### 3.5 Järjestelmävalikko
 

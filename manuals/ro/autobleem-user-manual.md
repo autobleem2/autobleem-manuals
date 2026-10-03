@@ -35,8 +35,9 @@ platformă, utilizarea zilnică și instrumentele care vin cu aceasta.
 
 ### 2.1 PlayStation Classic
 
-Ai nevoie de un PC cu Windows, un stick USB (USB 2.0, 8 GB sau mai mult; instalatorul îl formatează
-dacă ceri) și consola standard. AutoBleem rulează din stick fără nici o schimbare în consolă. Stick-ul
+Ai nevoie de un PC cu Windows, un stick USB (USB 2.0, 8 GB sau mai mult) și consola standard. Stick-ul nu
+trebuie să fie gol și **nu este formatat** decât dacă ceri asta: AutoBleem se instalează lângă ce este deja
+pe el, iar un stick pe care îl folosești deja cu AutoBleem 1.0 este actualizat pe loc (mai jos). AutoBleem rulează din stick fără nici o schimbare în consolă. Stick-ul
 trebuie să fie **FAT32** pentru o consolă standard - kernel-ul acesteia nu poate citi exFAT. Doar o
 consolă cu kernel-ul AutoBleem instalat (ABFlashKit, capitolul 6) pornește și din stick exFAT, ceea ce
 ridică limita de 4 GB a FAT32.
@@ -45,9 +46,12 @@ ridică limita de 4 GB a FAT32.
    dezarhivează-l oriunde. Conține `AutoBleemInstaller.exe` și pachetul AutoBleem pe care îl
    instalează.
 2. Conectează stick-ul și pornește `AutoBleemInstaller.exe`. Alege unitația din partea de sus.
-   Bifează ce vrei:
-   - **Formatează stick-ul** - doar pentru un stick nou (totul pe acesta este șters). Alege FAT32
-     dacă nu are consola kernel-ul AutoBleem.
+   Rândul de dedesubt spune ce este acum pe stick: *o instalare nouă* (celelalte fișiere de pe stick
+   rămân neatinse) sau *AutoBleem <versiune> este pe acest stick: va fi actualizat* (jocurile, salvările,
+   cardurile de memorie și setările rămân). **Formatarea este opțională**: butonul **Format** de lângă
+   unitate este doar pentru un stick nou fără sistem de fișiere, unul pe care consola nu îl poate citi
+   (NTFS, de exemplu) sau unul pe care vrei să-l golești - întreabă întâi, apoi șterge tot de pe stick.
+   Alege acolo FAT32 dacă nu are consola kernel-ul AutoBleem. Bifează ce vrei:
    - **Baze de date de coperți** - cover art-ul și detaliile bibliotecii PS1 (bifat implicit; circa
      300 MB).
    - **RetroArch** - RetroArch cu nucleele sale, aplicațiile suplimentare (Doom, Quake, Amiga, ...)
@@ -72,8 +76,18 @@ de a apăsa Power. Deconectarea puterii consolei merge din nou prin standby-ul d
 pornire.
 
 Pentru a **actualiza** un stick, rulează un installer mai nou peste acesta: jocurile, salvările,
-setările și conținutul RetroArch rămân; doar fișierele proprii ale AutoBleem sunt înlocuite. Un stick
-făcut cu AutoBleem 1.0 sau AutoBleem-NG este adus la noul layout automat.
+setările și conținutul RetroArch rămân; doar fișierele proprii ale AutoBleem sunt înlocuite.
+
+**Actualizarea de la AutoBleem 1.0 (sau AutoBleem-NG).** Același instalator, același stick - fără formatare:
+
+1. Întâi copiază tot stick-ul pe PC, ca rezervă.
+2. Conectează-l, pornește `AutoBleemInstaller.exe`, alege canalul și unitatea. **Nu** apăsa Format.
+3. Apasă **Install**. Instalatorul aduce vechiul layout la zi: RetroArch, ROM-urile și temele se mută acolo
+   unde le caută AutoBleem 2, iar vechile foldere de ROM-uri (`nes`, `snes`, ...) primesc numele de sistem
+   din RetroArch. Jocurile, salvările de stare, cardurile de memorie, ROM-urile și salvările RetroArch rămân;
+   `config.ini` rămâne și el, cu emulatorul PS1 setat pe pcsx-abnxt.
+4. Pune stick-ul înapoi în consolă. Prima scanare reface lista de jocuri și playlist-urile (UpdateRoms pe PC
+   descarcă copertele jocurilor RetroArch, capitolul 5).
 
 > Consola standard nu are ceas și nici rețea: datele sunt afișate doar după instalarea kernel-ului
 > AutoBleem (capitolul 6), iar cover art-ul pentru jocurile RetroArch provine din UpdateRoms pe PC
@@ -255,6 +269,8 @@ Extensii), *Repornește launcherul* (închide AutoBleem și îl pornește din no
 *Meniu sistem...* (tot restul: Opțiuni, Manager jocuri, Oprire și altele - meniul complet de mai jos). Sus / Jos se
 mută (înfășurând), Cross alege, Circle înapoi. Fiecare articol are o descriere de un rând pe rândul său. În afară de
 Magazin și *Repornește launcherul*, fiecare articol este și în meniu sistem.
+
+![Meniul Rapid](../images/en/quick-menu.jpg)
 
 ### 3.5 Meniu sistem
 

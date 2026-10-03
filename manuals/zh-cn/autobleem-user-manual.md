@@ -20,11 +20,10 @@ AutoBleem 2 是**PlayStation Classic**的游戏启动器 - 从第2个版本开�
 
 ### 2.1 PlayStation Classic
 
-您需要一台Windows PC、一个USB闪存盘(USB 2.0，8GB或更大；安装程序可以在您要求时格式化)和原始控制台。AutoBleem从闪存盘运行，不需要对控制台进行任何更改。对于原始控制台，闪存盘必须是**FAT32** - 其内核无法读取exFAT。只有安装了AutoBleem内核(ABFlashKit，第6章)的控制台才能从exFAT闪存盘启动，这消除了FAT32的4GB文件限制。
+您需要一台Windows PC、一个USB闪存盘(USB 2.0，8GB或更大)和原始控制台。闪存盘不必是空的，除非您要求，否则**不会被格式化**：AutoBleem安装在盘上已有内容的旁边，您已经在AutoBleem 1.0中使用的闪存盘会被原地升级(见下文)。AutoBleem从闪存盘运行，不需要对控制台进行任何更改。对于原始控制台，闪存盘必须是**FAT32** - 其内核无法读取exFAT。只有安装了AutoBleem内核(ABFlashKit，第6章)的控制台才能从exFAT闪存盘启动，这消除了FAT32的4GB文件限制。
 
 1. 从网站的PlayStation Classic面板下载**AutoBleemInstaller-<version>.zip**并将其解压到任何位置。它包含`AutoBleemInstaller.exe`和它安装的AutoBleem包。
-2. 连接闪存盘并启动`AutoBleemInstaller.exe`。在顶部选择驱动器。勾选您想要的选项：
-   - **格式化闪存盘** - 仅用于全新闪存盘(上面的所有内容都会被删除)。除非控制台有AutoBleem内核，否则选择FAT32。
+2. 连接闪存盘并启动`AutoBleemInstaller.exe`。在顶部选择驱动器。下面一行说明闪存盘上现在有什么：*全新安装*(闪存盘上的其他文件不会被改动)或*此闪存盘上有AutoBleem <版本>：将被更新*(游戏、存档、记忆卡和设置保持不变)。**格式化是可选的**：驱动器旁边的**Format**按钮仅用于没有文件系统的新闪存盘、控制台无法读取的闪存盘(例如NTFS)或您想清空的闪存盘 - 它会先询问，然后删除闪存盘上的所有内容。除非控制台有AutoBleem内核，否则在那里选择FAT32。勾选您想要的选项：
    - **盖艺术数据库** - PS1库的盒艺术和详情(默认勾选；约300MB)。
    - **RetroArch** - RetroArch及其内核、额外应用程序(Doom、Quake、Amiga等)和libretro资源，用于其他系统的游戏。默认关闭；稍后可以再次运行安装程序来添加。
    - **BIOS文件** - RetroArch内核需要的BIOS文件(需要RetroArch)。
@@ -34,7 +33,14 @@ AutoBleem 2 是**PlayStation Classic**的游戏启动器 - 从第2个版本开�
 
 **打开和关闭。**使用闪存盘时，控制台启动，其灯闪烁几秒钟(正在检测AutoBleem)，然后进入待机状态，然后才会显示任何内容 - 这是控制台自己的更新方式，AutoBleem由此得以运行。按一次**Power**，启动器出现。系统菜单中的*关机*或控制台的Power按钮将控制台置于**AutoBleem的待机状态**：先断开闪存盘的连接，然后灯变为**红色** - AutoBleem正常工作的标志 - 下一次按Power会在几秒钟内直接将启动器带回。**当灯为红色时可以拔出闪存盘**并将其放入PC，Windows不会要求检查它；在按Power之前将其插回。断开控制台的电源在下次启动时会经历启动待机。
 
-要**更新**闪存盘，请在其上运行较新的安装程序：您的游戏、存档、设置和RetroArch内容保持不变；只有AutoBleem自己的文件被替换。使用AutoBleem 1.0或AutoBleem-NG制作的闪存盘会自动转换为新布局。
+要**更新**闪存盘，请在其上运行较新的安装程序：您的游戏、存档、设置和RetroArch内容保持不变；只有AutoBleem自己的文件被替换。
+
+**从AutoBleem 1.0(或AutoBleem-NG)升级。**同一个安装程序，同一个闪存盘 - 无需格式化：
+
+1. 先将整个闪存盘复制到PC上作为备份。
+2. 插入闪存盘，启动`AutoBleemInstaller.exe`，选择频道和驱动器。**不要**按Format。
+3. 按**Install**。安装程序会更新旧布局：RetroArch、ROM和主题移动到AutoBleem 2查找它们的位置，旧的ROM文件夹(`nes`、`snes`等)改为RetroArch的系统名称。游戏、即时存档、记忆卡、ROM和RetroArch的存档保持不变；`config.ini`也会保留，PS1模拟器设置为pcsx-abnxt。
+4. 将闪存盘插回控制台。第一次扫描会重建游戏列表和播放列表(PC上的UpdateRoms会下载RetroArch游戏的封面，第5章)。
 
 > 原始控制台没有时钟也没有网络：日期只在安装AutoBleem内核后显示(第6章)，RetroArch游戏的盒艺术来自PC上的UpdateRoms(第5章)。
 
@@ -143,6 +149,8 @@ AutoBleem作为Windows程序：全屏、模拟器和RetroArch启动为程序。
 ### 3.4 快速菜单
 
 在启动器中**上**，或图标行中的**齿轮图标**(设置 / 游戏 / 记忆卡 / 恢复所在的地方)：用于快速到达的操作的快速菜单。简短列表：*重新扫描游戏*(立即开始扫描)、*商店*(浏览并安装游戏、应用和扩展)、*网络与控制器*(仅在已安装扩展提供`network`条目的地方 - 控制台、Pi和PC闪存盘上的PSC-Bios：WiFi、蓝牙配对、手柄映射向导 - 见第6章；当该扩展被禁用时显示灰色并提示“请在扩展中启用” - Cross打开扩展列表)、*重启启动器*(关闭AutoBleem并再次启动；仅在控制台、Pi和PC闪存盘上)和*系统菜单...*(其他所有内容：选项、游戏管理器、关机等 - 下面的完整菜单)。上 / 下移动(循环)，Cross选择，Circle返回。每一项在其行上都有一行说明。除商店和*重启启动器*外，每一项也都在系统菜单中。
+
+![快速菜单](../images/en/quick-menu.jpg)
 
 ### 3.5 系统菜单
 

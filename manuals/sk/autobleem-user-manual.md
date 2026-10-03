@@ -35,8 +35,10 @@ platformu, každodenným používaním a nástrojmi, ktoré s AutoBleem prichád
 
 ### 2.1 PlayStation Classic
 
-Potrebujete PC s Windows, USB kľúč (USB 2.0, 8 GB alebo viac; inštalátor ho na požiadanie
-naformátuje) a konzolu. AutoBleem beží z kľúča bez zmien konzoly. Kľúč musí byť **FAT32**
+Potrebujete PC s Windows, USB kľúč (USB 2.0, 8 GB alebo viac) a konzolu. Kľúč nemusí byť
+prázdny a **neformátuje sa**, pokiaľ o to nepožiadate: AutoBleem sa nainštaluje vedľa toho, čo na
+ňom je, a kľúč, ktorý už používate s AutoBleem 1.0, sa aktualizuje na mieste (nižšie). AutoBleem
+beží z kľúča bez zmien konzoly. Kľúč musí byť **FAT32**
 pre konzolu bez jadra AutoBleem - jej jadro nevie čítať exFAT. Len konzola s nainštalovaným
 jadrom AutoBleem (ABFlashKit, kapitola 6) tiež bootuje z exFAT kľúča, čím sa prekonáva
 limit FAT32 4 GB.
@@ -44,10 +46,13 @@ limit FAT32 4 GB.
 1. Stiahnite si **AutoBleemInstaller-<verzia>.zip** z panela PlayStation Classic na webe a
    rozbaľte ho kdekoľvek. Obsahuje `AutoBleemInstaller.exe` a balík AutoBleem, ktorý
    inštaluje.
-2. Zapojte kľúč a spustite `AutoBleemInstaller.exe`. Vyberte kľúč hore. Zaškrtnite, čo
-   chcete:
-   - **Format the stick** - iba pre nový kľúč (všetko na ňom sa zmaže). Vyberte FAT32,
-     pokiaľ konzola nemá jadro AutoBleem.
+2. Zapojte kľúč a spustite `AutoBleemInstaller.exe`. Vyberte kľúč hore. Riadok pod ním hovorí,
+   čo je teraz na kľúči: *čistá inštalácia* (ostatné súbory na kľúči zostanú nedotknuté) alebo
+   *AutoBleem <verzia> je na tomto kľúči: bude aktualizovaný* (hry, uložené pozície, pamäťové karty a
+   nastavenia zostanú). **Formátovanie je voliteľné**: tlačidlo **Format** vedľa kľúča je len pre nový
+   kľúč bez súborového systému, kľúč, ktorý konzola neprečíta (napr. NTFS), alebo kľúč, ktorý chcete
+   vymazať - najprv sa opýta, potom zmaže všetko na kľúči. Vyberte tam FAT32, pokiaľ konzola nemá jadro
+   AutoBleem. Zaškrtnite, čo chcete:
    - **Cover databases** - obaly a detaily knižnice PS1 (zaškrtnuté predvolene; približne
      300 MB).
    - **RetroArch** - RetroArch s jadrami, ďalšími aplikáciami (Doom, Quake, Amiga, ...) a
@@ -72,8 +77,18 @@ späť pred stlačením Power. Odpojenie napájania konzoly prejde bootovacou po
 znova nabudúce.
 
 Ak chcete **aktualizovať** kľúč, spustite novší inštalátor cez neho: vaše hry, uložená hra,
-nastavenia a obsah RetroArch zostanú; iba súbory AutoBleem samého sa nahrádzajú. Kľúč
-vytvorený s AutoBleem 1.0 alebo AutoBleem-NG sa automaticky prenáša do nového usporiadania.
+nastavenia a obsah RetroArch zostanú; iba súbory AutoBleem samého sa nahrádzajú.
+
+**Prechod z AutoBleem 1.0 (alebo AutoBleem-NG).** Ten istý inštalátor, ten istý kľúč - bez formátovania:
+
+1. Najprv skopírujte celý kľúč do PC ako zálohu.
+2. Zapojte ho, spustite `AutoBleemInstaller.exe`, vyberte kanál a kľúč. **Nestláčajte** Format.
+3. Stlačte **Install**. Inštalátor prevedie staré usporiadanie: RetroArch, ROMky a motívy sa presunú tam,
+   kde ich hľadá AutoBleem 2, a staré priečinky ROM (`nes`, `snes`, ...) dostanú názvy systémov RetroArch.
+   Hry, uložené pozície, pamäťové karty, ROMky a uložené hry RetroArch zostanú; `config.ini` tiež, s
+   emulátorom PS1 nastaveným na pcsx-abnxt.
+4. Vráťte kľúč do konzoly. Prvé skenovanie znova zostaví zoznam hier a playlisty (UpdateRoms na PC
+   stiahne obaly hier RetroArch, kapitola 5).
 
 > Konzola bez jadra AutoBleem nemá hodiny ani sieť: dátumy sa zobrazujú iba po inštalácii
 > jadra AutoBleem (kapitola 6) a obaly hier RetroArch pochádzajú z UpdateRoms na PC
@@ -266,6 +281,8 @@ spustí ho znova; iba na konzole, Pi a PC kľúči) a *Systémová ponuka...* (v
 Nastavenia, Správca hier, Vypnúť a ďalšie - úplná ponuka nižšie). Hore / Dole sa pohybujú
 (zabalené), Cross vyberie, Circle späť. Každá položka má na svojom riadku jednoriadkový popis.
 Okrem Obchodu a *Reštartovať launcher* je každá položka tiež v systémovej ponuke.
+
+![Rýchla ponuka](../images/en/quick-menu.jpg)
 
 ### 3.5 Systémová ponuka
 

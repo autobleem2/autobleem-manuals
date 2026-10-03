@@ -35,8 +35,9 @@ cada plataforma, l'utilizacion quotidiana e los espleches que lo venon d'assembl
 
 ### 2.1 PlayStation Classic
 
-Avètz besoin d'una PC Windows, d'un bastó USB (USB 2.0, 8 GB o mai ; l'installador lo formata se lo
-demandatz) e de la consòla stock. AutoBleem se balha dempuèi lo bastó sens cap de cambiament a la consòla.
+Avètz besoin d'una PC Windows, d'un bastó USB (USB 2.0, 8 GB o mai) e de la consòla stock. Lo bastó a pas
+besonh d'èsser void e **es pas formatat** levat se o demandatz : AutoBleem s'installa al costat de çò que i a
+ja dessús, e un bastó qu'utilizatz ja amb AutoBleem 1.0 es mes a jorn sul pic (vejatz çai-jos). AutoBleem se balha dempuèi lo bastó sens cap de cambiament a la consòla.
 Lo bastó deu èsser **FAT32** per una consòla stock - son nucli pòt pas legir exFAT. Sols una consòla amb lo
 nucli AutoBleem installat (ABFlashKit, capítol 6) s'avie tanben dempuèi un bastó exFAT, çò que lève la
 limitacion de 4 GB de FAT32.
@@ -44,10 +45,13 @@ limitacion de 4 GB de FAT32.
 1. Telecargatz **AutoBleemInstaller-<version>.zip** dempuèi lo panèl PlayStation Classic del site e
    descompressatz-lo n'importe ont. Conten `AutoBleemInstaller.exe` e lo paquetatge AutoBleem que
    s'installa.
-2. Branchiaz lo bastó e avialz `AutoBleemInstaller.exe`. Causisètz lo lecteur al tope. Cocharolatz çò
-   que volètz :
-   - **Formatar lo bastó** - sols per un bastó nèu (tot lo que i es dins es suprimit). Causisètz FAT32 se la
-     consòla a pas lo nucli AutoBleem.
+2. Branchiaz lo bastó e avialz `AutoBleemInstaller.exe`. Causisètz lo lecteur al tope. La linha dejós
+   ditz çò qu'es ara sul bastó : *una installacion novèla* (los autres fichièrs del bastó son pas tocats) o
+   *AutoBleem <version> es sus aqueste bastó : serà mes a jorn* (jòcs, sauvegardas, cartas memòria e
+   paramètres demòran). **Lo formatatge es opcional** : lo boton **Format** al costat del lecteur es sonque
+   per un bastó nòu sens sistèma de fichièrs, un bastó que la consòla sap pas legir (NTFS, per exemple) o un
+   bastó que volètz voidar - demanda d'en primièr, puèi escafa tot sul bastó. Causissètz-i FAT32 se la consòla
+   a pas lo nucli AutoBleem. Cocharolatz çò que volètz :
    - **Basas de donadas de cobertas** - l'art en boita e los detalhs de la bibliotèca PS1 (cochat per
      defaut ; environ 300 MB).
    - **RetroArch** - RetroArch amb sos còrs, los aplicacions extras (Doom, Quake, Amiga, ...) e los
@@ -71,8 +75,19 @@ demande de verificar-lo ; metètz-lo aicí après de quichatz Power. Lo despluç
 repos d'aviada d'en tornamai al prossime encendut.
 
 Per **metre a jorn** un bastó, avialz un installador mai récent sus-aquó : vòstres jòcs, sauvegardes,
-paramètres e lo contengut RetroArch rèstan ; los propres fichièrs d'AutoBleem sí se rempláçon. Un bastó
-fait amb AutoBleem 1.0 o AutoBleem-NG se porte a la novèla disposicion automaticament.
+paramètres e lo contengut RetroArch rèstan ; los propres fichièrs d'AutoBleem sí se rempláçon.
+
+**Mesa a jorn dempuèi AutoBleem 1.0 (o AutoBleem-NG).** Lo meteis installador, lo meteis bastó - sens
+formatatge :
+
+1. Copiatz d'en primièr tot lo bastó sus la PC, coma salvagarda.
+2. Branchatz-lo, avialz `AutoBleemInstaller.exe`, causissètz lo canal e lo lecteur. Quichetz **pas** Format.
+3. Quichatz **Install**. L'installador met l'anciana disposicion a jorn : RetroArch, las ROM e los tèmas van
+   ont AutoBleem 2 los cèrca, e los ancians dorsièrs de ROM (`nes`, `snes`, ...) prenon los noms de sistèma de
+   RetroArch. Jòcs, estats salvats, cartas memòria, ROM e sauvegardas de RetroArch demòran ; `config.ini` tanben,
+   amb l'emulador PS1 mes sus pcsx-abnxt.
+4. Tornatz metre lo bastó dins la consòla. La primièra analisi rebastís la lista dels jòcs e las listas de
+   lectura (UpdateRoms sus la PC recupèra las cobertas dels jòcs RetroArch, capítol 5).
 
 > La consòla stock a pas cap d'ora e pas cap de ret : las datas se mostradon sols après que lo nucli
 > AutoBleem se sigue installat (capítol 6), e l'art en boita pels jòcs RetroArch vèn de UpdateRoms sus la
@@ -261,6 +276,8 @@ sus la consòla, una Pi e lo bastó PC sols) e *Menú sistèma...* (tot lo demai
 e mai - lo menú complèt avall). Amont / Avall se deplaçon (que se buclanton), Cross causís, Circle se'n va. Cada
 element a una descripcion d'una linha sus sa linia. Levat la Botiga e *Tornar aviar lo launcher*, cada element es
 tanben dins lo menú sistèma.
+
+![Lo menú rapid](../images/en/quick-menu.jpg)
 
 ### 3.5 Lo menú sistèma
 
