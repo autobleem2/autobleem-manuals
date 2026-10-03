@@ -329,7 +329,7 @@ den under markören.
 Bildens form och skärmens upplösning är globala (Alternativ → *Emulatorns skärmskalning* och *Bild*). Ett spel utan
 titel i sina data visas under namnet på sin mapp.
 
-Triangle byter namn på spelet, Square ändrar dess minneskort, Start delar ett nytt. Circle sparar och
+Triangle byter namn på spelet, Square byter dess minneskort, Start delar ett nytt. Circle sparar och
 lämnar.
 
 **Inställningar sparade i emulatorn.** Emulatorns egen meny har *Spara inställningar för det här spelet*.

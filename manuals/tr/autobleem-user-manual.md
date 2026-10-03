@@ -319,6 +319,8 @@ dört grupta gösterir:
 Görüntü biçimi ve ekran çözünürlüğü geneldir (Seçenekler → *Emülatör ekran ölçekleme* ve *Ekran*). Verisinde başlığı
 olmayan oyun klasörünün adıyla gösterilir.
 
+Triangle oyunu yeniden adlandırır, Square hafıza kartını değiştirir, Start yeni bir kart paylaşır. Circle kaydeder ve ayrılır.
+
 **Emülatörde kaydedilen ayarlar.** Emülatörün kendi menüsünde *Ayarları bu oyun için kaydet* bulunur. Bir oyunun
 orada kaydedilen ayarları olduktan sonra, oyun bunlarla oynanır ve oyun editörü Görüntü, İşleme ve Emülatör
 satırlarını bu değerlerle gri gösterir, *Emülatörde kaydedildi* başlığı altında. Oyun editörü ayarlarına geri

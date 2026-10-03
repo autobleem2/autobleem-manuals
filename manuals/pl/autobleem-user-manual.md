@@ -72,12 +72,12 @@ następnym razem znów przechodzi przez czuwanie przy starcie.
 najnowszą wersję wybranego kanału, a gry, zapisy, ustawienia i zawartość RetroArch zostają; wymieniane są
 tylko pliki samego AutoBleem. Pendrive zrobiony AutoBleem 1.0 albo AutoBleem-NG jest automatycznie
 przenoszony do nowego układu folderów. Konsola z kernelem AutoBleem i WiFi może też zaktualizować się sama
-(punkt 3.11).
+(punkt 3.12).
 
 > Fabryczna konsola nie ma zegara ani sieci: daty pokazują się dopiero po instalacji kernela AutoBleem
 > (rozdział 6), a okładki gier RetroArch robi UpdateRoms na PC (rozdział 5).
 
-Gry trafiają do folderu `Games` na pendrivie, po jednym folderze na grę - układ opisuje punkt 3.9.
+Gry trafiają do folderu `Games` na pendrivie, po jednym folderze na grę - układ opisuje punkt 3.10.
 
 ### 2.2 Raspberry Pi
 
@@ -132,7 +132,7 @@ konsoli.
 
 Po instalacji **partycja `AUTOBLEEM`** karty (exFAT) jest tym, co wypełniasz: wyjmij kartę i otwórz ją na
 dowolnym PC albo kopiuj przez sieć (SSH jest włączone). `Games/` na gry PS1, `RetroArch/roms/<system>/` na
-inne systemy, `System/Bios/` na BIOS PS1 (punkt 3.10), `Themes/` na motywy.
+inne systemy, `System/Bios/` na BIOS PS1 (punkt 3.11), `Themes/` na motywy.
 
 ### 2.3 Pendrive dla PC
 
@@ -167,7 +167,7 @@ AutoBleem jako program dla Windows: pełny ekran, emulatory i RetroArch uruchami
 3. Uruchom AutoBleem z menu Start albo z pulpitu. Na PC klawiatura zastępuje pad (punkt 3.2).
 
 Nowszy instalator uruchomiony na tym samym komputerze aktualizuje program, a folder danych zostaje.
-Launcher raz dziennie sprawdza też stronę i proponuje aktualizację, gdy jest nowsza (punkt 3.11).
+Launcher raz dziennie sprawdza też stronę i proponuje aktualizację, gdy jest nowsza (punkt 3.12).
 
 <!-- pagebreak -->
 
@@ -217,7 +217,7 @@ Bezprzewodowy pad z dostępnym odczytem baterii - na konsoli, Pi lub pendrive'ie
 | Select | Wybór zestawu: zakładki PlayStation / RetroArch / Aplikacje (L1 / R1), grupy zakładki (Góra / Dół, L2 / R2 strona), Krzyżyk wybiera. |
 | Góra | Szybkie menu (punkt 3.4). |
 | Dół | Otwiera rząd ikon pod grą (Ustawienia, Gra, Karta pamięci, Wznów). Góra go zamyka. |
-| L2 + R2 | Menu systemowe (punkt 3.4). |
+| L2 + R2 | Menu systemowe (punkt 3.5). |
 
 **Z klawiaturą** (PC bez pada, albo klawiatura USB na konsoli, Pi lub pendrivie PC) klawiatura zastępuje pad: **Strzałki** = d-pad, **Enter** = Krzyżyk, **Esc lub Backspace** = Kółko, **Tab** = Trójkąt, **Spacja** = Kwadrat, **F1 / F2** = Select / Start, **Page Up / Page Down** = L1 / R1, **Home / End** = L2 / R2, **F10** = menu systemowe. Na maszynie deweloperskiej Esc zamyka program, a Spacja to Start.
 
@@ -261,10 +261,10 @@ a menu jest podzielone na sekcje:
 | Sekcja | Pozycja | Co robi |
 |---|---|---|
 | (góra) | Ponownie skanuj gry | Szuka teraz nowych, zmienionych lub usuniętych gier (skan sam też obserwuje folder). |
-| | Rozszerzenia | Rozszerzenia na pendrivie - Sklep AutoBleem i inne (punkt 3.12). |
+| | Rozszerzenia | Rozszerzenia na pendrivie - Sklep AutoBleem i inne (punkt 3.13). |
 | **Biblioteka** | Menadżer gier | Gry PS1 jako lista z folderami: usuwanie gry, czyszczenie okładek. Wyłączone podczas skanowania. |
-| | Karty pamięci | Twoje zestawy kart pamięci (punkt 3.7). |
-| | Procesory skanowania | Programy, które każde skanowanie uruchamia najpierw - ich kolejność, włączenie (punkt 3.13). Wyłączone podczas skanowania. |
+| | Karty pamięci | Twoje zestawy kart pamięci (punkt 3.8). |
+| | Procesory skanowania | Programy, które każde skanowanie uruchamia najpierw - ich kolejność, włączenie (punkt 3.14). Wyłączone podczas skanowania. |
 | **System** | Opcje | Ustawienia AutoBleem (punkt 3.6). |
 | | Sieć i kontrolery | Tam, gdzie zainstalowane rozszerzenie zapewnia wpis `network` (`Provides=network` w jego `extension.ini` - PSC-Bios na konsoli, Pi i pendrivie PC) - Wi-Fi, parowanie padów Bluetooth, konfiguracja DualShock 3 i kreator mapowania - patrz rozdział 6. Gdy to rozszerzenie jest zainstalowane, ale wyłączone, ta pozycja zostaje wyszarzona z notatką "włącz w Rozszerzeniach" - Krzyżyk otwiera Rozszerzenia. |
 | | Informacje o sprzęcie | Fakty maszyny: system, CPU, dyski, interfejsy sieciowe, strefa czasowa, ekran, pady i ich mapowania - ta sama strona na każdej platformie (punkt 4.2). |
@@ -412,7 +412,7 @@ Games/
 ```
 
 - Formaty: `.cue` + `.bin` (albo `.img`), `.pbp`, `.chd` (także zstd), `.ecm` (dekodowany przez skan), `.iso`.
-  Działa też spakowana gra: procesor **Unzip** rozpakowuje ją przed skanowaniem (punkt 3.13).
+  Działa też spakowana gra: procesor **Unzip** rozpakowuje ją przed skanowaniem (punkt 3.14).
 - Gra wielopłytowa to jeden folder ze wszystkimi płytami; foldery `Gra (Disc 1)`, `Gra (Disc 2)` ... skan
   scala w jeden folder `Gra`.
 - Gry wrzucone luzem prosto do `Games/` skan porządkuje do folderów.
@@ -587,7 +587,7 @@ PlayStation Classic nie ma sieci, więc listy RetroArch i okładki jego pendrive
 **UpdateRoms** robi na PC to, co na Pi robi skan launchera - z siecią komputera i ze ścieżkami konsoli, tak
 że konsola po włączeniu zastaje wszystko gotowe.
 
-1. Skopiuj ROM-y na pendrive do `RetroArch/roms/<system>/` (punkt 3.9). Nazwy folderów muszą być nazwami
+1. Skopiuj ROM-y na pendrive do `RetroArch/roms/<system>/` (punkt 3.10). Nazwy folderów muszą być nazwami
    baz RetroArch; instalator zakłada najpopularniejsze.
 2. Uruchom **`UpdateRoms\UpdateRoms.exe` z pendrive'a** (instalator go tam położył). Program znajduje
    pendrive po tym, gdzie leży, pokazuje wiersz etapu, pasek postępu i log oraz:
@@ -714,7 +714,7 @@ fabrycznego.
   `System/Logs/saved-<n>/`. Pliki: `autobleem.log` (launcher), `launch.log` i `pcsx.log` (start gry PS1 i
   wyjście emulatora), `retroarch.log`, oraz - zawsze na pendrivie - `update.log` (aktualizacja z sieci) i
   `updateroms.log` (UpdateRoms).
-- **Gry nie ma na półce**: sprawdź układ folderów (jeden folder na grę, formaty obrazów z punktu 3.9).
+- **Gry nie ma na półce**: sprawdź układ folderów (jeden folder na grę, formaty obrazów z punktu 3.10).
   *Menadżer gier* pokazuje za grami foldery, które skan odrzucił, z dopiskiem *Nie dodano* i przyczyną;
   Kwadrat usuwa taki folder. *Ponownie skanuj gry* w menu systemowym uruchamia skan jeszcze raz.
 - **Brak okładek**: nie zainstalowano baz okładek (uruchom instalator ponownie z zaznaczonymi bazami)
