@@ -35,8 +35,9 @@ täcker installation på varje plattform, daglig användning och de verktyg som 
 
 ### 2.1 PlayStation Classic
 
-Du behöver en Windows-PC, en USB-sticka (USB 2.0, 8 GB eller mer; installationsprogrammet formaterar
-den om du ber) och originalkonsoolen. AutoBleem körs från stickan utan några ändringar av konsolen.
+Du behöver en Windows-PC, en USB-sticka (USB 2.0, 8 GB eller mer) och originalkonsolen. Stickan behöver
+inte vara tom och **formateras inte** om du inte ber om det: AutoBleem installeras bredvid det som redan finns
+på den, och en sticka du redan använder med AutoBleem 1.0 uppgraderas på plats (nedan). AutoBleem körs från stickan utan några ändringar av konsolen.
 Stickan måste vara **FAT32** för en originalkonsol - dess kernel kan inte läsa exFAT. Endast en konsol
 med AutoBleem-kerneln installerad (ABFlashKit, kapitel 6) kan också starta från en exFAT-sticka, vilket
 tar bort FAT32:s 4 GB-begränsning.
@@ -44,9 +45,12 @@ tar bort FAT32:s 4 GB-begränsning.
 1. Ladda ner **AutoBleemInstaller-<version>.zip** från PlayStation Classic-panelen på webbplatsen och
    packa upp den någonstans. Den innehåller `AutoBleemInstaller.exe` och AutoBleem-paketet som den
    installerar.
-2. Sätt in stickan och starta `AutoBleemInstaller.exe`. Välj enheten överst. Markera vad du vill ha:
-   - **Formatera stickan** - bara för en ny sticka (allt på den raderas). Välj FAT32 om inte konsolen
-     har AutoBleem-kerneln.
+2. Sätt in stickan och starta `AutoBleemInstaller.exe`. Välj enheten överst. Raden under säger vad som finns
+   på stickan nu: *en ny installation* (stickans övriga filer lämnas orörda) eller *AutoBleem <version> finns
+   på den här stickan: den uppdateras* (spel, sparningar, minneskort och inställningar stannar).
+   **Formatering är valfri**: knappen **Format** bredvid enheten är bara för en ny sticka utan filsystem, en
+   sticka konsolen inte kan läsa (till exempel NTFS) eller en du vill tömma - den frågar först och raderar
+   sedan allt på stickan. Välj FAT32 där om inte konsolen har AutoBleem-kerneln. Markera vad du vill ha:
    - **Skisskonst-databaser** - omslag och detaljer för PS1-biblioteket (markerat som standard; cirka
      300 MB).
    - **RetroArch** - RetroArch med kärnor, extra program (Doom, Quake, Amiga, ...) och libretro-resurser
@@ -69,8 +73,19 @@ sätta in den i en PC utan att Windows vill kontrollera den; sätt tillbaka den 
 Att dra ur konsolens ström går genom uppstartsberedskapen igen nästa gång.
 
 Om du vill **uppdatera** en sticka kör du ett nyare installationsprogram över den: dina spel, sparningar,
-inställningar och RetroArch-innehål stannar; bara AutoBleem:s egna filer ersätts. En sticka gjord med
-AutoBleem 1.0 eller AutoBleem-NG konverteras automatiskt till den nya layouten.
+inställningar och RetroArch-innehål stannar; bara AutoBleem:s egna filer ersätts.
+
+**Uppgradera från AutoBleem 1.0 (eller AutoBleem-NG).** Samma installationsprogram, samma sticka - ingen
+formatering:
+
+1. Kopiera först hela stickan till datorn, som säkerhetskopia.
+2. Sätt in den, starta `AutoBleemInstaller.exe`, välj kanal och enhet. Tryck **inte** på Format.
+3. Klicka på **Install**. Installationsprogrammet uppdaterar den gamla layouten: RetroArch, ROM-filerna och
+   temana flyttas dit AutoBleem 2 letar efter dem, och de gamla ROM-mapparna (`nes`, `snes`, ...) får
+   RetroArchs systemnamn. Spel, sparade lägen, minneskort, ROM-filer och RetroArchs sparningar stannar;
+   `config.ini` behålls också, med PS1-emulatorn satt till pcsx-abnxt.
+4. Sätt tillbaka stickan i konsolen. Den första skanningen bygger om spellistan och spellistorna i RetroArch
+   (UpdateRoms på datorn hämtar omslag till RetroArch-spelen, kapitel 5).
 
 > Originalkonsoolen har ingen klocka och inget nätverk: datum visas bara efter att AutoBleem-kerneln
 > är installerad (kapitel 6), och skisskonst för RetroArch-spel kommer från UpdateRoms på PC
@@ -250,6 +265,8 @@ inaktiverat - Cross öppnar listan över tillägg), *Starta om launchern* (stän
 endast på konsol, Pi och PC-sticka) och *Systemmeny...* (allt annat: Alternativ, Spelbibliotek, Stäng av och mer -
 hela menyn nedan). Upp / Ner flytta (radbrytning), Cross väljer, Circle går tillbaka. Varje objekt har en
 enradsbeskrivning på sin rad. Förutom Butiken och *Starta om launchern* finns varje objekt också i systemmenyn.
+
+![Snabbmenyn](../images/en/quick-menu.jpg)
 
 ### 3.5 Systemmenyn
 

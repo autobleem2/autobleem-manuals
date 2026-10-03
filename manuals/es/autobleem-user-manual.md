@@ -34,17 +34,22 @@ herramientas incluidas.
 
 ### 2.1 PlayStation Classic
 
-Necesita una PC Windows, una unidad USB (USB 2.0, 8 GB o más; el instalador la formatea si lo solicita) y la
-consola original. AutoBleem se ejecuta desde la unidad sin cambios en la consola. La unidad debe ser **FAT32**
+Necesita una PC Windows, una unidad USB (USB 2.0, 8 GB o más) y la consola original. La unidad no tiene que
+estar vacía y **no se formatea** a menos que usted lo pida: AutoBleem se instala junto a lo que ya contiene, y
+una unidad que ya usa con AutoBleem 1.0 se actualiza en su sitio (ver más abajo). AutoBleem se ejecuta desde la
+unidad sin cambios en la consola. La unidad debe ser **FAT32**
 para una consola original - su núcleo no puede leer exFAT. Solo una consola con el núcleo AutoBleem instalado
 (ABFlashKit, capítulo 6) también arranca desde una unidad exFAT, lo que levanta el límite de 4 GB de FAT32.
 
 1. Descargue **AutoBleemInstaller-<version>.zip** del panel PlayStation Classic del sitio y descomprímalo en
    cualquier lugar. Contiene `AutoBleemInstaller.exe` y el paquete de AutoBleem que instala.
-2. Conecte la unidad e inicie `AutoBleemInstaller.exe`. Seleccione la unidad en la parte superior. Marque lo
-   que desee:
-   - **Formatear la unidad** - solo para una unidad nueva (todo lo que hay en ella se borra). Seleccione FAT32
-     a menos que la consola tenga el núcleo de AutoBleem.
+2. Conecte la unidad e inicie `AutoBleemInstaller.exe`. Seleccione la unidad en la parte superior. La línea de
+   debajo dice qué hay ahora en la unidad: *una instalación nueva* (los demás archivos de la unidad no se tocan)
+   o *AutoBleem <versión> está en esta unidad: se actualizará* (juegos, partidas guardadas, tarjetas de memoria y
+   configuración se conservan). **Formatear es opcional**: el botón **Format** junto a la unidad es solo para
+   una unidad nueva sin sistema de archivos, una que la consola no puede leer (NTFS, por ejemplo) o una que
+   quiera vaciar - primero pregunta y luego borra todo lo que hay en la unidad. Elija allí FAT32 a menos que la
+   consola tenga el núcleo de AutoBleem. Marque lo que desee:
    - **Bases de datos de carátulas** - los empaques y detalles de la biblioteca PS1 (marcado de forma predeterminada;
      aproximadamente 300 MB).
    - **RetroArch** - RetroArch con sus núcleos, aplicaciones adicionales (Doom, Quake, Amiga, ...) y recursos
@@ -67,8 +72,18 @@ puede extraer** y poner en una PC sin que Windows pida verificarla; vuelva a pon
 Desconectar la consola pasa por la espera de arranque nuevamente la próxima vez.
 
 Para **actualizar** una unidad, ejecute un instalador más nuevo en ella: sus juegos, guardados, configuración y
-contenido de RetroArch permanecen; solo se reemplazan los archivos propios de AutoBleem. Una unidad hecha con
-AutoBleem 1.0 o AutoBleem-NG se actualiza automáticamente a la nueva disposición.
+contenido de RetroArch permanecen; solo se reemplazan los archivos propios de AutoBleem.
+
+**Actualizar desde AutoBleem 1.0 (o AutoBleem-NG).** El mismo instalador, la misma unidad - sin formatear:
+
+1. Primero copie toda la unidad a la PC como copia de seguridad.
+2. Conéctela, inicie `AutoBleemInstaller.exe`, elija el canal y la unidad. **No** pulse Format.
+3. Pulse **Install**. El instalador pone al día la disposición antigua: RetroArch, las ROM y los temas pasan a
+   donde AutoBleem 2 los busca, y las carpetas de ROM antiguas (`nes`, `snes`, ...) reciben los nombres de
+   sistema de RetroArch. Juegos, estados guardados, tarjetas de memoria, ROM y partidas de RetroArch se
+   conservan; `config.ini` también, con el emulador de PS1 puesto en pcsx-abnxt.
+4. Vuelva a poner la unidad en la consola. El primer escaneo reconstruye la lista de juegos y las listas de
+   reproducción (UpdateRoms en la PC descarga las carátulas de los juegos de RetroArch, capítulo 5).
 
 > La consola original no tiene reloj ni red: las fechas solo se muestran después de instalar el núcleo AutoBleem
 > (capítulo 6), y las carátulas para juegos de RetroArch vienen de UpdateRoms en la PC (capítulo 5).
@@ -248,6 +263,8 @@ el launcher* (cierra AutoBleem y lo inicia de nuevo; solo en la consola, un Pi y
 (todo lo demás: Opciones, Administrador de juegos, Apagar y más - el menú completo abajo). Arriba / Abajo se mueven
 (envolvente), Cross selecciona, Circle regresa. Cada elemento tiene una descripción de una línea en su fila. Aparte de
 la Tienda y *Reiniciar el launcher*, cada elemento también está en el menú del sistema.
+
+![El menú rápido](../images/en/quick-menu.jpg)
 
 ### 3.5 El menú del sistema
 

@@ -33,17 +33,21 @@ günlük kullanım ve gelen araçları kapsar.
 
 ### 2.1 PlayStation Classic
 
-Windows PC'si, USB sürücüsü (USB 2.0, 8 GB veya daha fazla; yükleyici isterseniz biçimlendirir) ve
-stok konsola ihtiyacın var. AutoBleem sürücüden hiçbir konsol değişikliği olmadan çalışır. Sürücü,
+Windows PC'si, USB sürücüsü (USB 2.0, 8 GB veya daha fazla) ve stok konsola ihtiyacın var. Sürücünün boş
+olması gerekmez ve sen istemedikçe **biçimlendirilmez**: AutoBleem sürücüde zaten olanların yanına kurulur ve
+AutoBleem 1.0 ile kullandığın bir sürücü yerinde yükseltilir (aşağıda). AutoBleem sürücüden hiçbir konsol değişikliği olmadan çalışır. Sürücü,
 stok bir konsol için **FAT32** olmalıdır - kernel'i exFAT okuyamaz. Yalnızca AutoBleem kernel'i
 yüklenmiş bir konsol (ABFlashKit, bölüm 6) exFAT sürücüden de başlatılır, bu FAT32'nin 4 GB sınırını
 kaldırır.
 
 1. **AutoBleemInstaller-<sürüm>.zip** dosyasını sitenin PlayStation Classic panelinden indir ve
    herhangi bir yere çıkart. `AutoBleemInstaller.exe` ve yüklediği AutoBleem paketini içerir.
-2. Sürücüyü tak ve `AutoBleemInstaller.exe` başlat. Üstten sürücüyü seç. İstediğini işaretle:
-   - **Sürücüyü Biçimlendir** - yalnızca yeni bir sürücü için (üzerindeki her şey silinir). Konsolda
-     AutoBleem kernel'i yoksa FAT32'yi seç.
+2. Sürücüyü tak ve `AutoBleemInstaller.exe` başlat. Üstten sürücüyü seç. Altındaki satır şu an sürücüde ne
+   olduğunu söyler: *yeni bir kurulum* (sürücüdeki diğer dosyalara dokunulmaz) ya da *AutoBleem <sürüm> bu
+   sürücüde: güncellenecek* (oyunlar, kayıtlar, hafıza kartları ve ayarlar kalır). **Biçimlendirme isteğe
+   bağlıdır**: sürücünün yanındaki **Format** düğmesi yalnızca dosya sistemi olmayan yeni bir sürücü, konsolun
+   okuyamadığı bir sürücü (örneğin NTFS) ya da boşaltmak istediğin bir sürücü içindir - önce sorar, sonra
+   sürücüdeki her şeyi siler. Konsolda AutoBleem kernel'i yoksa orada FAT32'yi seç. İstediğini işaretle:
    - **Kapak Veritabanları** - PS1 kütüphanesinin kapak resmi ve detayları (varsayılan olarak işaretli;
      yaklaşık 300 MB).
    - **RetroArch** - RetroArch ve çekirdekleri, ekstra uygulamalar (Doom, Quake, Amiga, ...) ve
@@ -66,8 +70,18 @@ sürücü çekilebilir** ve Windows onu kontrol etmesini istemeden PC'ye konabil
 geri koy. Konsolun gücünü kesme, bir sonraki sefer önyükleme beklemeye gider.
 
 Bir sürücüyü **güncellemek** için, üzerine daha yeni bir yükleyici çalıştır: oyunlarınız, kayıtlarınız,
-ayarlarınız ve RetroArch içeriği kalır; yalnızca AutoBleem'in kendi dosyaları değiştirilir. AutoBleem
-1.0 veya AutoBleem-NG ile yapılan sürücü otomatik olarak yeni düzene getirilir.
+ayarlarınız ve RetroArch içeriği kalır; yalnızca AutoBleem'in kendi dosyaları değiştirilir.
+
+**AutoBleem 1.0'dan (veya AutoBleem-NG'den) yükseltme.** Aynı yükleyici, aynı sürücü - biçimlendirme yok:
+
+1. Önce tüm sürücüyü yedek olarak PC'ye kopyala.
+2. Tak, `AutoBleemInstaller.exe` başlat, kanalı ve sürücüyü seç. Format'a **basma**.
+3. **Install**'a bas. Yükleyici eski düzeni günceller: RetroArch, ROM'lar ve temalar AutoBleem 2'nin onları
+   aradığı yere taşınır, eski ROM klasörleri (`nes`, `snes`, ...) RetroArch'ın sistem adlarını alır. Oyunlar,
+   durum kayıtları, hafıza kartları, ROM'lar ve RetroArch kayıtları kalır; `config.ini` de korunur ve PS1
+   emülatörü pcsx-abnxt olarak ayarlanır.
+4. Sürücüyü konsola geri tak. İlk tarama oyun listesini ve oynatma listelerini yeniden oluşturur (PC'deki
+   UpdateRoms RetroArch oyunlarının kapaklarını indirir, bölüm 5).
 
 > Stok konsol saat ve ağa sahip değildir: tarihler yalnızca AutoBleem kernel'i kurulduktan sonra
 > gösterilir (bölüm 6) ve RetroArch oyunlarının kapak resmi PC'deki UpdateRoms'tan gelir (bölüm 5).
@@ -240,6 +254,8 @@ konsolda, Pi'de ve PC sürücüsünde) ve *Sistem menüsü...* (diğer her şey:
 daha fazlası - aşağıdaki tam menü). Yukarı / Aşağı taşır (sarılır), Cross seçer, Circle geri gider. Her öğenin
 satırında tek satırlık bir açıklaması vardır. Mağaza ve *Başlatıcıyı yeniden başlat* dışında her öğe sistem
 menüsünde de var.
+
+![Hızlı Menü](../images/en/quick-menu.jpg)
 
 ### 3.5 Sistem Menüsü
 

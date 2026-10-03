@@ -34,8 +34,10 @@ dołączone narzędzia.
 
 ### 2.1 PlayStation Classic
 
-Potrzebujesz komputera z Windows, pendrive'a (USB 2.0, 8 GB lub więcej; instalator go sformatuje, jeśli
-poprosisz) i konsoli. AutoBleem działa z pendrive'a bez żadnej zmiany w konsoli. Pendrive musi być
+Potrzebujesz komputera z Windows, pendrive'a (USB 2.0, 8 GB lub więcej) i konsoli. Pendrive nie musi być
+pusty i **nie jest formatowany**, chyba że o to poprosisz: AutoBleem instaluje się obok tego, co na nim jest, a
+pendrive, którego już używasz z AutoBleem 1.0, jest aktualizowany na miejscu (niżej). AutoBleem działa z
+pendrive'a bez żadnej zmiany w konsoli. Pendrive musi być
 **FAT32** dla fabrycznej konsoli - jej kernel nie czyta exFAT. Tylko konsola z zainstalowanym kernelem
 AutoBleem (ABFlashKit, rozdział 6) uruchamia się także z pendrive'a exFAT, co znosi limit 4 GB na plik w FAT32.
 
@@ -45,9 +47,12 @@ AutoBleem (ABFlashKit, rozdział 6) uruchamia się także z pendrive'a exFAT, co
 2. Włóż pendrive i uruchom `AutoBleemInstaller.exe`. Wybierz **kanał** - *Release* (wersja przetestowana),
    *Testing* (następna wersja, w trakcie testów) albo *Nightly* (najnowsza wersja rozwojowa, może nie
    działać) - i dysk. Wiersz pod nimi mówi, którą wersję AutoBleem kanał by zainstalował i co jest teraz
-   na pendrivie. Zaznacz, co chcesz:
-   - **Formatowanie pendrive'a** - tylko dla nowego pendrive'a (wszystko na nim zostanie skasowane). Wybierz
-     FAT32, chyba że konsola ma kernel AutoBleem.
+   na pendrivie: *świeża instalacja* (pozostałe pliki na pendrivie zostają nietknięte) albo *AutoBleem <wersja>
+   jest na tym pendrivie: zostanie zaktualizowany* (gry, zapisy, karty pamięci i ustawienia zostają).
+   **Formatowanie jest opcjonalne**: przycisk **Format** obok dysku służy tylko do nowego pendrive'a bez systemu
+   plików, takiego, którego konsola nie odczyta (np. NTFS), albo takiego, który chcesz wyczyścić - najpierw
+   pyta, potem kasuje wszystko na pendrivie. Wybierz tam FAT32, chyba że konsola ma kernel AutoBleem.
+   Zaznacz, co chcesz:
    - **Bazy okładek** - grafika i opisy biblioteki PS1 (zaznaczone domyślnie; ok. 300 MB).
    - **RetroArch** - RetroArch z rdzeniami, dodatkowe aplikacje (Doom, Quake, Amiga, ...) i zasoby libretro,
      dla gier z innych systemów. Domyślnie wyłączone; można dodać później, uruchamiając instalator ponownie.
@@ -70,9 +75,19 @@ następnym razem znów przechodzi przez czuwanie przy starcie.
 
 Żeby **zaktualizować** pendrive, uruchom na nim instalator ponownie (przycisk mówi *Update*): instaluje
 najnowszą wersję wybranego kanału, a gry, zapisy, ustawienia i zawartość RetroArch zostają; wymieniane są
-tylko pliki samego AutoBleem. Pendrive zrobiony AutoBleem 1.0 albo AutoBleem-NG jest automatycznie
-przenoszony do nowego układu folderów. Konsola z kernelem AutoBleem i WiFi może też zaktualizować się sama
+tylko pliki samego AutoBleem. Konsola z kernelem AutoBleem i WiFi może też zaktualizować się sama
 (punkt 3.12).
+
+**Aktualizacja z AutoBleem 1.0 (albo AutoBleem-NG).** Ten sam instalator, ten sam pendrive - bez formatowania:
+
+1. Najpierw skopiuj cały pendrive na PC, jako kopię zapasową.
+2. Włóż go, uruchom `AutoBleemInstaller.exe`, wybierz kanał i dysk. **Nie** naciskaj Format.
+3. Naciśnij **Install**. Instalator przenosi stary układ folderów: RetroArch, ROM-y i motywy trafiają tam, gdzie
+   szuka ich AutoBleem 2, a stare foldery ROM-ów (`nes`, `snes`, ...) dostają nazwy systemów RetroArch. Gry,
+   zapisy stanu, karty pamięci, ROM-y i zapisy RetroArch zostają; `config.ini` też zostaje, z emulatorem PS1
+   ustawionym na pcsx-abnxt.
+4. Włóż pendrive z powrotem do konsoli. Pierwsze skanowanie odbudowuje listę gier i playlisty (UpdateRoms na PC
+   pobiera okładki gier RetroArch, rozdział 5).
 
 > Fabryczna konsola nie ma zegara ani sieci: daty pokazują się dopiero po instalacji kernela AutoBleem
 > (rozdział 6), a okładki gier RetroArch robi UpdateRoms na PC (rozdział 5).
@@ -252,6 +267,8 @@ uruchamia go jeszcze raz; tylko na konsoli, Pi i pendrivie PC) oraz *Menu system
 Menadżer gier, Wyłączanie i więcej - pełne menu poniżej). Góra / Dół przechodzą (z zawinięciem), Krzyżyk
 wybiera, Kółko wychodzi. Każda pozycja ma w wierszu jednoliniowy opis. Poza Sklepem i *Uruchom ponownie
 launcher* każda pozycja jest też w menu systemowym.
+
+![Szybkie menu](../images/pl/quick-menu.jpg)
 
 ### 3.5 Menu systemowe
 

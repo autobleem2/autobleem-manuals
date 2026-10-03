@@ -34,16 +34,21 @@ daglig brug og de værktøjer, der kommer med det.
 
 ### 2.1 PlayStation Classic
 
-Du har brug for en Windows-PC, en USB-stick (USB 2.0, 8 GB eller mere; installeren formaterer den hvis du
-spørger) og stock-konsollen. AutoBleem køres fra stickjen uden ændring til konsollen. Stickjen skal være
+Du har brug for en Windows-PC, en USB-stick (USB 2.0, 8 GB eller mere) og stock-konsollen. Stickjen behøver
+ikke være tom og **formateres ikke**, medmindre du beder om det: AutoBleem installeres ved siden af det, der
+ligger på den, og en stick, du allerede bruger med AutoBleem 1.0, opgraderes på stedet (nedenfor). AutoBleem
+køres fra stickjen uden ændring til konsollen. Stickjen skal være
 **FAT32** til en stock-konsol - dens kernel kan ikke læse exFAT. Kun en konsol med AutoBleem-kernelen
 installeret (ABFlashKit, kapitel 6) kan også starte fra exFAT-stick, hvilket fjerner FAT32's 4 GB-grænse.
 
 1. Download **AutoBleemInstaller-<version>.zip** fra PlayStation Classic-panelet på siden og pak det ud
    overalt. Det indeholder `AutoBleemInstaller.exe` og AutoBleem-pakken, som det installerer.
-2. Sæt stickjen i og start `AutoBleemInstaller.exe`. Vælg drevet øverst. Sæt flueben hvor du ønsker:
-   - **Format stickjen** - kun til en frisk stick (alt på den slettes). Vælg FAT32 medmindre konsollen
-     har AutoBleem-kernelen.
+2. Sæt stickjen i og start `AutoBleemInstaller.exe`. Vælg drevet øverst. Linjen under det siger, hvad der er
+   på stickjen nu: *en frisk installation* (stickjens andre filer bliver ikke rørt) eller *AutoBleem <version>
+   er på denne stick: den bliver opdateret* (spil, gemte data, hukommelseskort og indstillinger bliver).
+   **Formatering er valgfri**: knappen **Format** ved siden af drevet er kun til en ny stick uden filsystem,
+   en stick konsollen ikke kan læse (f.eks. NTFS) eller en, du vil tømme - den spørger først og sletter så
+   alt på stickjen. Vælg FAT32 der, medmindre konsollen har AutoBleem-kernelen. Sæt flueben hvor du ønsker:
    - **Databaser med omslag** - kasseart og detaljer fra PS1-biblioteket (afkrydset som standard; cirka
      300 MB).
    - **RetroArch** - RetroArch med dets kerner, ekstra programmer (Doom, Quake, Amiga, ...) og libretro-assets
@@ -65,8 +70,18 @@ trækkes ud** og sættes i en PC uden at Windows spørger efter at kontrollere d
 trykker Power. Hvis du tager konsolens strøm ud starter boot-standby'en igen næste gang.
 
 For at **opdatere** en stick skal du køre en nyere installer over den: dine spil, gemmede data, indstillinger
-og RetroArch-indhold bliver tilbage; kun AutoBleem's egne filer bliver erstattet. En stick lavet med AutoBleem
-1.0 eller AutoBleem-NG bliver automatisk bragt til det nye layout.
+og RetroArch-indhold bliver tilbage; kun AutoBleem's egne filer bliver erstattet.
+
+**Opgradering fra AutoBleem 1.0 (eller AutoBleem-NG).** Samme installer, samme stick - ingen formatering:
+
+1. Kopiér først hele stickjen til PC'en som backup.
+2. Sæt den i, start `AutoBleemInstaller.exe`, vælg kanal og drev. Tryk **ikke** på Format.
+3. Tryk **Install**. Installeren bringer det gamle layout up to date: RetroArch, ROM'erne og temaerne flyttes
+   derhen, hvor AutoBleem 2 leder efter dem, og de gamle ROM-mapper (`nes`, `snes`, ...) omdøbes til
+   RetroArch's systemnavne. Spil, save states, hukommelseskort, ROM'er og RetroArch's gemte data bliver;
+   `config.ini` beholdes, med PS1-emulatoren sat til pcsx-abnxt.
+4. Sæt stickjen tilbage i konsollen. Den første scanning genopbygger spillisten og playlisterne (UpdateRoms
+   på PC'en henter omslag til RetroArch-spillene, kapitel 5).
 
 > Stock-konsollen har ingen ur og ingen netværk: datoer vises kun efter AutoBleem-kernelen er installeret
 > (kapitel 6), og kasseart til RetroArch-spil kommer fra UpdateRoms på PC'en (kapitel 5).
@@ -239,6 +254,8 @@ deaktiveret - Cross åbner Udvidelser-listen), *Genstart launcher* (lukker AutoB
 konsol, Pi og PC-stick) og *Systemmenu...* (alt andet: Indstillinger, Spilbibliotek, Sluk og mere - den fulde
 menu nedenfor). Op / Ned bevæger (ombryder), Cross vælger, Circle tilbage. Hver række har en beskrivelse på én
 linje. Bortset fra Butikken og *Genstart launcher* er hvert element også i systemmenuen.
+
+![Quick-menuen](../images/da/quick-menu.jpg)
 
 ### 3.5 Systemmenuen
 

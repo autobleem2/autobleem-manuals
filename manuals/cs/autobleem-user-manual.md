@@ -36,8 +36,10 @@ přicházejí.
 
 ### 2.1 PlayStation Classic
 
-Potřebujete PC s Windows, USB disk (USB 2.0, 8 GB nebo více; instalátor ho na požádání
-naformátuje) a konzolu. AutoBleem běží z disku bez změn konzole. Disk musí být **FAT32**
+Potřebujete PC s Windows, USB disk (USB 2.0, 8 GB nebo více) a konzolu. Disk nemusí být
+prázdný a **neformátuje se**, pokud o to nepožádáte: AutoBleem se nainstaluje vedle toho, co na
+něm je, a disk, který už používáte s AutoBleem 1.0, se aktualizuje na místě (níže). AutoBleem
+běží z disku bez změn konzole. Disk musí být **FAT32**
 pro konzolu bez AutoBleem jádra - její jádro neumí čtít exFAT. Jen konzola s
 nainstalovaným jádrem AutoBleem (ABFlashKit, kapitola 6) také bootuje z exFAT disku,
 což překonává limit FAT32 4 GB.
@@ -45,10 +47,13 @@ což překonává limit FAT32 4 GB.
 1. Stáhněte **AutoBleemInstaller-<verze>.zip** z panelu PlayStation Classic na webu a
    rozbalte jej kdekoli. Obsahuje `AutoBleemInstaller.exe` a balíček AutoBleem, který
    instaluje.
-2. Zapojte disk a spusťte `AutoBleemInstaller.exe`. Vyberte disk nahoře. Zaškrtněte, co
-   chcete:
-   - **Format the stick** - pouze pro nový disk (vše na něm se smaže). Vyberte FAT32,
-     pokud konzola nemá jádro AutoBleem.
+2. Zapojte disk a spusťte `AutoBleemInstaller.exe`. Vyberte disk nahoře. Řádek pod ním říká,
+   co je teď na disku: *čistá instalace* (ostatní soubory na disku zůstanou netknuté) nebo
+   *AutoBleem <verze> je na tomto disku: bude aktualizován* (hry, uložené pozice, paměťové karty a
+   nastavení zůstanou). **Formátování je volitelné**: tlačítko **Format** vedle disku je jen pro
+   nový disk bez souborového systému, disk, který konzola nepřečte (např. NTFS), nebo disk, který
+   chcete vymazat - nejdřív se zeptá, pak smaže vše na disku. Vyberte tam FAT32, pokud konzola
+   nemá jádro AutoBleem. Zaškrtněte, co chcete:
    - **Cover databases** - obálky a detaily knihovny PS1 (zaškrtnuto standardně; přibližně
      300 MB).
    - **RetroArch** - RetroArch s jádry, dalšími aplikacemi (Doom, Quake, Amiga, ...) a
@@ -74,8 +79,18 @@ příště.
 
 Chcete-li **aktualizovat** disk, spusťte novější instalátor přes něj: vaše hry, uloženou
 hru, nastavení a obsah RetroArch zůstanou; pouze AutoBleem vlastní soubory se
-nahradí. Disk vytvořený s AutoBleem 1.0 nebo AutoBleem-NG se automaticky přenese do nového
-rozložení.
+nahradí.
+
+**Přechod z AutoBleem 1.0 (nebo AutoBleem-NG).** Stejný instalátor, stejný disk - bez formátování:
+
+1. Nejdřív zkopírujte celý disk do PC jako zálohu.
+2. Zapojte ho, spusťte `AutoBleemInstaller.exe`, vyberte kanál a disk. **Nemačkejte** Format.
+3. Stiskněte **Install**. Instalátor převede staré rozložení: RetroArch, ROMy a motivy se přesunou
+   tam, kde je AutoBleem 2 hledá, a staré složky ROM (`nes`, `snes`, ...) dostanou názvy systémů
+   RetroArch. Hry, uložené pozice, paměťové karty, ROMy a uložené hry RetroArch zůstanou;
+   `config.ini` také, s emulátorem PS1 nastaveným na pcsx-abnxt.
+4. Vraťte disk do konzole. První skenování znovu sestaví seznam her a playlisty (UpdateRoms na PC
+   stáhne obálky her RetroArch, kapitola 5).
 
 > Konzola bez AutoBleem jádra nemá hodiny ani síť: data se zobrazují pouze po instalaci jádra
 > AutoBleem (kapitola 6) a obálky her RetroArch pocházejí z UpdateRoms na PC (kapitola 5).
@@ -268,6 +283,8 @@ jej znovu; jen na konzole, Pi a PC disku) a *Systémová nabídka...* (vše osta
 Správce her, Vypnout a další - úplná nabídka níže). Nahoru / Dolů se pohybují (zabaleno),
 Cross vybere, Circle zpět. Každá položka má na řádku jednořádkový popis. Kromě Obchodu a
 *Restartovat launcher* je každá položka také v systémové nabídce.
+
+![Rychlá nabídka](../images/en/quick-menu.jpg)
 
 ### 3.5 Systémová nabídka
 

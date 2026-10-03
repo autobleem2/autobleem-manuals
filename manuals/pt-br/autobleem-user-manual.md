@@ -34,16 +34,21 @@ ferramentas incluídas.
 
 ### 2.1 PlayStation Classic
 
-Você precisa de um PC Windows, um pen drive USB (USB 2.0, 8 GB ou mais; o instalador o formata se solicitado) e o
-console original. AutoBleem roda a partir do pen drive sem nenhuma alteração no console. O pen drive deve ser **FAT32**
+Você precisa de um PC Windows, um pen drive USB (USB 2.0, 8 GB ou mais) e o console original. O pen drive não
+precisa estar vazio e **não é formatado**, a menos que você peça: o AutoBleem é instalado ao lado do que já está
+nele, e um pen drive que você já usa com o AutoBleem 1.0 é atualizado no lugar (veja abaixo). AutoBleem roda a partir do pen drive sem nenhuma alteração no console. O pen drive deve ser **FAT32**
 para um console original - seu kernel não pode ler exFAT. Apenas um console com o kernel AutoBleem instalado
 (ABFlashKit, capítulo 6) também inicializa a partir de um pen drive exFAT, o que levanta o limite de 4 GB do FAT32.
 
 1. Baixe **AutoBleemInstaller-<version>.zip** do painel PlayStation Classic do site e descompacte em qualquer lugar.
    Ele contém `AutoBleemInstaller.exe` e o pacote AutoBleem que instala.
-2. Conecte o pen drive e inicie `AutoBleemInstaller.exe`. Selecione o drive no topo. Marque o que deseja:
-   - **Formatar o pen drive** - apenas para um novo pen drive (tudo nele é apagado). Selecione FAT32 a menos que o
-     console tenha o kernel AutoBleem.
+2. Conecte o pen drive e inicie `AutoBleemInstaller.exe`. Selecione o drive no topo. A linha abaixo diz o que há
+   agora no pen drive: *uma instalação nova* (os outros arquivos do pen drive não são tocados) ou *AutoBleem
+   <versão> está neste pen drive: ele será atualizado* (jogos, salvamentos, cartões de memória e configurações
+   ficam). **Formatar é opcional**: o botão **Format** ao lado do drive é só para um pen drive novo sem sistema de
+   arquivos, um que o console não consegue ler (NTFS, por exemplo) ou um que você queira esvaziar - ele pergunta
+   antes e depois apaga tudo no pen drive. Escolha FAT32 ali a menos que o console tenha o kernel AutoBleem.
+   Marque o que deseja:
    - **Bancos de dados de capas** - as artes de capa e detalhes da biblioteca PS1 (marcado por padrão; cerca de 300 MB).
    - **RetroArch** - RetroArch com seus núcleos, aplicativos adicionais (Doom, Quake, Amiga, ...) e ativos libretro
      para jogos de outros sistemas. Desabilitado por padrão; pode ser adicionado mais tarde executando o instalador
@@ -65,8 +70,18 @@ o pen drive pode ser retirado** e colocado em um PC sem o Windows pedir para ver
 pressionar Power. Desconectar a alimentação do console passa pela espera de inicialização novamente da próxima vez.
 
 Para **atualizar** um pen drive, execute um instalador mais recente nele: seus jogos, salvamentos, configurações e
-conteúdo do RetroArch permanecem; apenas os arquivos do próprio AutoBleem são substituídos. Um pen drive criado com
-AutoBleem 1.0 ou AutoBleem-NG é atualizado automaticamente para o novo layout.
+conteúdo do RetroArch permanecem; apenas os arquivos do próprio AutoBleem são substituídos.
+
+**Atualizando do AutoBleem 1.0 (ou AutoBleem-NG).** O mesmo instalador, o mesmo pen drive - sem formatar:
+
+1. Primeiro copie o pen drive inteiro para o PC, como backup.
+2. Conecte-o, inicie `AutoBleemInstaller.exe`, escolha o canal e o drive. **Não** pressione Format.
+3. Pressione **Install**. O instalador atualiza o layout antigo: RetroArch, as ROMs e os temas vão para onde o
+   AutoBleem 2 os procura, e as pastas de ROM antigas (`nes`, `snes`, ...) recebem os nomes de sistema do
+   RetroArch. Jogos, save states, cartões de memória, ROMs e os salvamentos do RetroArch ficam; o `config.ini`
+   também fica, com o emulador de PS1 definido como pcsx-abnxt.
+4. Coloque o pen drive de volta no console. A primeira varredura reconstrói a lista de jogos e as playlists
+   (o UpdateRoms no PC baixa as capas dos jogos do RetroArch, capítulo 5).
 
 > O console original não tem relógio nem rede: as datas são exibidas apenas após a instalação do kernel AutoBleem
 > (capítulo 6), e as capas para jogos de RetroArch vêm do UpdateRoms no PC (capítulo 5).
@@ -241,6 +256,8 @@ novo; apenas no console, em um Pi e no pen drive PC) e *Menu do sistema...* (tod
 Jogos, Desligar e mais - o menu completo abaixo). Cima / Baixo se movem (envolvente), Cross seleciona, Circle volta.
 Cada item tem uma descrição de uma linha em sua linha. Além da Loja e de *Reiniciar o launcher*, cada item também está
 no menu do sistema.
+
+![O menu rápido](../images/en/quick-menu.jpg)
 
 ### 3.5 O menu do sistema
 
