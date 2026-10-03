@@ -13,14 +13,16 @@ the tools that come with it.
 ## 1. What you get
 
 - **The launcher** - the carousel of covers, the sets (PlayStation, RetroArch, Apps), the game details, the
-  system menu, the options, the memory-card and save-state tools. The same program on every platform.
+  Quick menu and the system menu, the options, the memory-card and save-state tools, and the Store for
+  downloading apps and games. The same program on every platform.
 - **Two PS1 emulators** - `pcsx-abnxt`, the current one (the default), and `pcsx-ab`, the classic one
   AutoBleem has always shipped. You pick one in the options; both use the same settings and memory cards.
 - **RetroArch** (optional on every platform) for the other systems: NES, SNES, Mega Drive, Game Boy, arcade
   and many more. AutoBleem builds its RetroArch lists from the ROMs you copy in and starts each game with
   the right core.
-- **The console tools** (PlayStation Classic only): *PSC-Bios* for WiFi, the clock and gamepad mapping, and
-  *ABFlashKit* for installing the AutoBleem kernel.
+- **The console tools**: *PSC-Bios* (shown in the menus as *Network & Controllers*) for WiFi, the clock,
+  Bluetooth and gamepad mapping - on the console, and also on a Raspberry Pi and the PC stick - and
+  *ABFlashKit* for installing the AutoBleem kernel (PlayStation Classic only).
 - **UpdateRoms** for Windows: refreshes the RetroArch lists and box art of a console stick on a PC, because
   the console itself has no network.
 
@@ -60,7 +62,7 @@ installed (ABFlashKit, chapter 6) also boots from an exFAT stick, which lifts FA
 **Switching on and off.** With the stick in, the console boots, blinks its light for a few seconds
 (AutoBleem is being picked up) and then goes to standby before anything is shown - that is the console's
 own way of staging an update, which is how AutoBleem gets to run. Press **Power** once and the launcher
-comes up. *Power Off* in the system menu, or the console's Power button, puts the console into
+comes up. *Power off* in the system menu, or the console's Power button, puts the console into
 **AutoBleem's standby**: the stick is disconnected first, then the light turns **red** - the sign that
 AutoBleem is working as intended - and the next press of Power brings the launcher straight back, in a
 few seconds. **While the light is red the stick can be pulled** and put into a PC without Windows asking
@@ -171,11 +173,28 @@ site once a day and offers an update when there is one (section 3.11).
 
 ### 3.1 The launcher
 
-The launcher opens on the shelf: the covers of the current set, the selected one in the middle, its
-details next to it - publisher, year, serial, region, players, when it was last played - and a play
-button. The bar at the bottom lists what the buttons do. A scan of the games folder runs in the background
-on every start; while it runs, a bubble at the top right shows its progress, and new games appear on the
-shelf as they are found.
+The launcher opens on the shelf: the covers of the current set, the selected one in the middle with a
+soft reflection under it, its details next to it as a compact grid - publisher, year, serial, region,
+players, when it was last played (a fact a game does not have is left out) - and a play button. The default
+look is the **ab2.0.0** theme; a fresh install and an update that brings it switch to it once. The hint bar at the bottom has
+two lines of four slots. The first line is what the buttons do for the selected game (play, play in
+RetroArch, open the icon row, the Quick menu); the second always shows Select (the set), Start (a random game), Triangle (the
+guide) and L2 + R2 (the system menu), dimmed in a state where one does nothing. A scan of the games folder runs in the
+background on every start; while it runs, a bubble at the top right shows its progress, and new games
+appear on the shelf as they are found.
+
+**A fresh install** has no games yet: instead of an empty shelf the launcher shows a welcome card - *Hi, and
+welcome to AutoBleem!* - telling you to drop games into `Games` on your stick and press *Re-scan games*. The
+card goes as soon as a scan finds the first game.
+
+**Notifications** appear as bubbles at the top right: the scan's progress, the name of the set you
+switched to (*Showing: ...*, for as long as Options → *Notification timeout* says), a low pad battery, a note after a crash, a scanner processor at work, and the Store's download in progress. The download's bubble shows its
+speed and the time left, e.g. `1.4 MB/s · 0:42`.
+
+**The channel tag.** A build that is not a final release shows a small tag under the pad battery plate in the
+top-left corner: a chip with the channel - `ALPHA`, `BETA` or `RC` for a pre-release, `TESTING` for any other pre-release,
+`NIGHTLY` for a nightly build, `DEV` for a build made by hand - and the short version beside it (for `DEV`, the commit it was
+built from). A release shows no tag.
 
 A wireless pad with a battery reading - the console, a Pi or the PC stick, not Windows - shows as a small icon with its percentage, stacked from the top-left corner on its own plate. A pad matched to Player 1 or Player 2 (following the Swap Player 1 / Player 2 option) is tagged P1/P2; an unmatched pad, or a third one, has no tag. When a pad's battery runs low, a notification line reports it once, by name and percentage.
 
@@ -192,6 +211,7 @@ A wireless pad with a battery reading - the console, a Pi or the PC stick, not W
 | Triangle | The button guide. |
 | Start | A random game from the current set. |
 | Select | The set picker: PlayStation / RetroArch / Apps tabs (L1 / R1), the groups of the tab (Up / Down, L2 / R2 a page), Cross picks. |
+| Up | The Quick menu (section 3.4). |
 | Down | Open the icon row under the game (Settings, Game, Memory Card, Resume). Up closes it. |
 | L2 + R2 | The system menu (section 3.4). |
 
@@ -204,64 +224,75 @@ In every list and menu: Up / Down move, **L2 / R2 turn pages**, L1 / R1 jump to 
 
 ### 3.3 The sets
 
-**Select** opens the set picker. The PlayStation tab lists *All Games*, *Internal Games* (the console's
-built-in twenty, on a PlayStation Classic), every folder you made under `Games/` (a game in a sub-folder
-belongs to that group), *Favorite Games*, *Game History* and, when any game is flagged as one, *Lightgun
-Games*. The RetroArch tab lists one group per system that has games, plus RetroArch's own Favorites and
-History. The Apps tab groups applications by type: *All apps*, then *Games*, *Emulators*, *Tools*, *Media*
-and *Other* (the category is set in each app's `app.ini` file). Each row shows how many items it holds; a group
-with none opens on an empty shelf with the icon row showing Settings only.
+**Select** opens the set picker. The PlayStation tab lists, on a PlayStation Classic, *All games* and
+*Internal games* (the console's built-in twenty), then *USB games* (everything in `Games/`) and every folder you made
+under it (a game in a sub-folder belongs to that group), then *Favorite games*, *Game history* and, when any game is flagged as one, *Lightgun
+games*. On a Raspberry Pi, a PC stick and Windows there are no internal games, so the list starts at *USB games*, which is
+the whole library. The RetroArch tab (only where RetroArch is installed) lists one group per system that has games, plus
+RetroArch's own Favorites and History. The Apps tab groups applications by type: *All apps*, then *Games*,
+*Emulators*, *Tools*, *Media* and *Other* (the category is set in each app's `app.ini` file). Each row shows how
+many items it holds; a group with none opens on an empty shelf with the icon row showing Settings only.
+The footer shows the keys: L1 / R1 for the tabs, L2 / R2 for a page, Cross to pick, Circle for *Back*.
 
 ### 3.4 The Quick menu
 
 **Up** in the launcher, or the **gear icon** in the icon row (where Settings / Game / Memory Card / Resume are):
-the Quick menu for actions you reach for from the carousel. A short list: *Re-Scan Games* (starts a scan
-now), *Store* (the AutoBleem Store to download extensions), *Network & Controllers* (only where an installed extension provides the `network` entry - PSC-Bios on the console, a Pi and the PC stick: Wi-Fi, Bluetooth pairing, the gamepad mapping wizard - see section 6; greyed out with "enable it in Extensions" when that extension is disabled - Cross opens the Extensions list), and *System menu...* 
-(the full menu below). Up / Down move (wrapping), Cross picks, Circle back. Nothing is unique here - every
-item is also in the system menu.
+the Quick menu for actions you reach for from the carousel. A short list: *Re-scan games* (starts a scan
+now), *Store* (browse and install games, apps and extensions), *Network & Controllers* (only where an installed extension provides the `network` entry - PSC-Bios on the console, a Pi and the PC stick: Wi-Fi, Bluetooth pairing, the gamepad mapping wizard - see section 6; greyed out with "enable it in Extensions" when that extension is disabled - Cross opens the Extensions list), *Restart launcher*
+(closes AutoBleem and starts it again; on the console, a Pi and the PC stick only), and *System menu...*
+(everything else: Options, Game Manager, Power off and more - the full menu below). Up / Down move (wrapping), Cross picks, Circle back. Each item has a
+one-line description on its row. Apart from the Store and Restart launcher, every item is also in the system menu.
 
 ### 3.5 The system menu
 
-**L2 + R2** (together, in either order) opens the system menu over the shelf. The menu is grouped into sections:
+**L2 + R2** (together, in either order) opens the system menu over the shelf. Each row has a one-line
+description, and the menu is grouped into sections:
 
 | Section | Item | What it does |
 |---|---|---|
-| (top) | Re-Scan Games | Looks for new, changed or removed games now (the scan also watches the folder by itself). |
+| (top) | Re-scan games | Looks for new, changed or removed games now (the scan also watches the folder by itself). |
 | | Extensions | The extensions on the stick - the AutoBleem Store and others (section 3.12). |
 | **Library** | Game Manager | The PS1 games as a list with their folders: delete a game, flush the covers. Disabled while a scan is running. |
 | | Memory Cards | Your memory card sets (section 3.7). |
 | | Scanner processors | The programs every scan runs first - their order, on or off (section 3.13). Disabled while a scan is running. |
 | **System** | Options | AutoBleem's settings (section 3.6). |
 | | Network & Controllers | Only where an installed extension provides the `network` entry (`Provides=network` in its `extension.ini` - PSC-Bios on the console, a Pi and the PC stick) - Wi-Fi, Bluetooth controller pairing, DualShock 3 setup, and the gamepad mapping wizard - see chapter 6. When that extension is installed but disabled, this item stays greyed with a note "enable it in Extensions" - Cross opens the Extensions list at it. |
-| | Hardware Information | The machine's facts: system, CPU, storage, network interfaces, time zone, display, the pads and their mappings. On a console with the AutoBleem kernel this opens PSC-Bios (chapter 6); on other machines it shows this information page. |
-| | Software Update | (Raspberry Pi and PC) Check the site for a newer AutoBleem or RetroArch now. |
+| | Hardware Information | The machine's facts: system, CPU, storage, network interfaces, time zone, display, the pads and their mappings - the same page on every platform (section 4.2). |
+| | Software Update | (Raspberry Pi and PC) Check the site for a newer AutoBleem or RetroArch now; the row says *Update available* when the launcher already knows of one. |
 | | About | Credits and licence. |
-| **Leave** | RetroArch | Leaves the launcher for RetroArch's own menu. Closing RetroArch comes back. |
-| | Power Off | After a confirmation: on the console AutoBleem's standby - the stick disconnected, the light red, Power brings the launcher back (section 2.1); on a Pi or PC the machine shuts down. |
+| **Leave** | RetroArch | (Only where RetroArch is installed.) Leaves the launcher for RetroArch's own menu. Closing RetroArch comes back. |
+| | Power off | After a confirmation: on the console AutoBleem's standby - the stick disconnected, the light red, Power brings the launcher back (section 2.1); on a Pi or PC the machine shuts down. |
 
 ![The system menu](../images/en/system-menu.jpg)
 
 ### 3.6 Options
 
-The settings are in groups; Up / Down move between them, Left / Right change a value, Circle leaves and
-saves. Every change is applied at once.
+The settings are in groups, each under a heading; Up / Down move between rows, Left / Right change a value
+(a tap is one step, a hold scrolls), L1 / R1 jump to the first / last row, L2 / R2 page, Circle leaves and
+saves. Every change is applied at once. On/off values read **ON** / **OFF**.
 
 | Group / setting | What it does |
 |---|---|
-| **Interface**: AutoBleem Theme | The look. Themes live in `Themes/`; a theme zip dropped there is unpacked on the next visit. The themes AutoBleem ships are refreshed with every update - to customise one, copy it under a new name first. |
-| Cover Style | The jewel-case frame drawn around PS1 covers. |
+| **Interface**: Display | The screen's resolution, for the launcher and the PS1 emulator: *Auto* (the screen's own mode, shown as *Auto (1920x1080)*) or any mode the screen lists; the console offers 720p and 1080p. A new mode is asked about: *Keep this display mode?* - if you do not confirm, it goes back after a countdown. Not on a development window. |
+| Emulator screen scaling | How the PS1 emulator fits a game's picture to the screen: *1x1* (the PlayStation's own pixels), *2x (integer)*, *4:3*, *4:3 (integer)* or *Full screen*. Integer scaling uses whole multiples only (the sharpest). It replaces the old Widescreen switch; the classic `pcsx-ab` and RetroArch know only full screen and 4:3. |
+| AutoBleem theme | The look. Themes live in `Themes/`; a theme zip dropped there is listed by name too. The themes AutoBleem ships are refreshed with every update - to customise one, copy it under a new name first. The default is **ab2.0.0**. |
+| Cover style | The jewel-case frame drawn around PS1 covers. |
+| Cover shine | A shine that crosses the selected cover when the shelf comes to rest. |
 | Language | The launcher's language, applied at once (17 languages). |
-| Use Font from Theme / Font | The classic screens' font: the theme's, or any `.ttf`/`.otf` from `resources/fonts`, `RetroArch/fonts` or the theme's folder. |
-| Showing Timeout | How long the "Showing: ..." notification stays, in seconds (0 = for ever). |
-| **Sound**: Music, Background Music | Which track plays under the launcher (the theme's, or a file from `resources/music`), and whether one plays at all. |
-| **Emulation**: PS1 Emulator | `pcsx-abnxt` (the default: current PCSX-ReARMed with AutoBleem's additions) or `pcsx-ab` (the classic). A resume point saved by one continues in the other, unless the game ran without a BIOS file. |
-| Widescreen | The PS1 emulator's picture shape for every game. |
-| Play all PSX games with RA | Every PS1 game starts in RetroArch's PS1 core. |
-| Update RA Config | AutoBleem writes its settings into RetroArch's config when it starts a game there. |
+| Notification timeout | How long the information bubbles ("Showing: ...", the scan's summary) stay, 0 to 20 seconds; 0 shows *Off*. Errors keep their own fixed time. |
+| Splash screen | The AutoBleem picture when the launcher starts; off goes straight to the shelf. |
+| Animations | The movement between screens; off makes every screen change instant. |
+| **Fonts**: Use default font | The launcher uses its default font (Red Hat Text), or - switched off - the font chosen below. |
+| Font | Any `.ttf`/`.otf` from `resources/fonts`, `RetroArch/fonts` or the theme's folder; the row names the font in use. |
+| **Sound**: Music, Background music | Which track plays under the launcher (the theme's, or a file from `resources/music`), and whether one plays at all. |
+| **Emulation**: PS1 emulator | `pcsx-abnxt` (the default: current PCSX-ReARMed with AutoBleem's additions) or `pcsx-ab` (the classic). A resume point saved by one continues in the other, unless the game ran without a BIOS file. |
 | Swap Player 1 / Player 2 (PS1 emulators) | Swaps which of the first two pads is Player 1 and which is Player 2, in both PS1 emulators (pcsx-abnxt and the classic pcsx-ab). It only takes effect with two or more pads connected; with one pad, play is always Player 1. RetroArch is not affected. |
-| **Library**: Show Internal Games | The console's built-in games in the PlayStation lists (PlayStation Classic only). |
+| Play all PSX games with RA, Update RA config, Persist RetroArch config | (Only where RetroArch is installed.) Every PS1 game starts in RetroArch's PS1 core; AutoBleem writes its settings into RetroArch's config when it starts a game there; a change made in RetroArch's own menu is kept when RetroArch quits. |
+| **Library**: Show internal games | The console's built-in games in the PlayStation lists (PlayStation Classic only). |
 | Fetch box art online | The scan fetches missing covers from libretro's servers (Raspberry Pi, PC, Windows). |
-| **Updates** | The update channel: `release` (the tested version), `testing` (the next version, being tested), `nightly` (the newest development build) or `off`. The default follows the version installed. |
+| **Updates** | The update channel: `release` (the tested version), `testing` (the next version, being tested), `nightly` (the newest development build) or `off`. The default follows the version installed. Not shown on a development host. |
+| **Diagnostics**: Keep logs on the stick | Keep every log on the stick from the next start, not only after a crash (chapter 7). |
+| Show performance | An overlay in the bottom-left corner: frame rate, CPU load, threads and memory; the emulator shows its FPS and CPU in the game too. |
 
 ![The options, in groups](../images/en/options.jpg)
 
@@ -271,23 +302,28 @@ With a game selected, **Down** opens its icon row: **Settings** (the options abo
 own settings), **Memory Card** (its memory card) and **Resume** (its save states). Cross opens the one under
 the cursor.
 
-The **game editor** shows the game's details on the right and its settings on the left, in three groups:
+The **game editor** shows the game's details on the right (title, publisher, year, players, folder, memory card) and its settings on the left, in four groups:
 
-- **Game**: *Favorite* (in the Favorite Games group), *Lightgun Game* (a light-gun game - it joins the
-  Lightgun group and always runs in RetroArch, whose PS1 core has the GunCon), *Play using RA* (this game
-  runs in RetroArch), *Lock data* (the scanner leaves the game's title, serial and disc list as you set them).
-- **Video**: high resolution, scanlines and their level, frame skip, the GPU plugin, and the *Filter* - how
-  the picture is scaled: Off (plain pixels), Linear (smoothed) or Sharp (crisp pixels without shimmer;
-  `pcsx-abnxt` only - the classic `pcsx-ab` and RetroArch show it as Off).
-- **Emulator**: SpeedHack, the CPU clock, SPU interpolation, the boot logo (off skips the BIOS shell - for a
-  homebrew disc whose custom logo breaks the boot), and with `pcsx-abnxt` the *Smoothing* filter and the
-  *Sony hacks* toggle.
+- **Game**: *Favorite* (in the Favorite games group), *Lightgun game* and *Play using RA* (only where RetroArch is
+  installed: a light-gun game joins the Lightgun group and always runs in RetroArch, whose PS1 core has the GunCon;
+  *Play using RA* runs this game in RetroArch), *Lock data* (the scanner leaves the game's title, serial and disc list as you set them).
+- **Display**: *Resolution* (1x or 2x, on the built-in GPU), *Remove seams* (only with 2x), *Dithering* (Off, On, Always),
+  *Smoothing*, the *Filter* - how the picture is scaled: Nearest (plain pixels), Linear (smoothed), Sharp or Sharp (simple)
+  (crisp pixels without shimmer), Quilez, or the CRT filters CRT (fast) and CRT-Pi (they draw their own scanlines,
+  so the scanline rows grey out) - and *Scanlines* with their *Scanline brightness*. Resolution, remove seams, dithering, smoothing and the
+  filters other than Linear and Nearest are for `pcsx-abnxt`; the classic `pcsx-ab` and RetroArch show the rest as Nearest.
+- **Rendering**: the GPU *Plugin* and the *Frameskip* (Auto, Off, 1 to 3).
+- **Emulator**: *Speedhack*, the CPU *Clock*, *Spu interpolation*, the *Boot logo* (off skips the BIOS shell - for a
+  homebrew disc whose custom logo breaks the boot), and with `pcsx-abnxt` the *Sony hacks* toggle.
+
+The picture shape and the screen's resolution are global (Options → *Emulator screen scaling* and *Display*).
+A game with no title in its data is shown under its folder's name.
 
 Triangle renames the game, Square changes its memory card, Start shares a new card. Circle saves and leaves.
 
 **Settings saved in the emulator.** The emulator's own menu has *Save settings for this game*. Once a game
-has settings saved there, they are the ones it plays with, and the game editor shows its Video and
-Emulator rows greyed out, with those values, under the heading *Saved in the emulator*. To go back to the
+has settings saved there, they are the ones it plays with, and the game editor shows its Display,
+Rendering and Emulator rows greyed out, with those values, under the heading *Saved in the emulator*. To go back to the
 game editor's settings, pick **Unlock the settings** and confirm: this deletes the settings the emulator
 saved, and the rows can be changed again. Both emulators, `pcsx-ab` and `pcsx-abnxt`, read and write the
 same saved settings.
@@ -309,15 +345,32 @@ card (Select). Start swaps the card on the right for another set.
 
 **Resume points**: when you leave a PS1 game with the console's Reset button (or the emulator's menu on a
 Pi or PC), AutoBleem keeps a save state of where you were and offers it under the **Resume** icon - four
-slots, each with a picture of the moment. Cross continues from the slot, Triangle deletes it. A game with
-a resume point shows a small picture on its Resume icon.
+slots, shown as framed cards, each with a picture of the moment, its slot number and date; the newest is
+marked **NEWEST** and an unused slot says *No resume point*. Cross continues from the slot, Triangle deletes
+it. A game with a resume point shows a small picture on its Resume icon; a game without any has the Resume icon
+greyed out. While the resume point is being written on the way out of a game, the emulator shows *Please wait...*.
 
 ### 3.8 Starting games, RetroArch and Apps
 
-**Cross** starts the selected game. A PS1 game runs in the chosen PS1 emulator (section 3.5), full screen,
+**Cross** starts the selected game. A PS1 game runs in the chosen PS1 emulator (section 3.6), full screen,
 until you leave it - on the console with the front **Reset** button (back to the launcher with a resume
-point) or **Power** (the console turns off); on a Pi or PC through the emulator's in-game menu (Select + Start on the pad, or
-Esc on a keyboard). **Square** starts a PS1 game in RetroArch instead.
+point; it works from inside the in-game menu too) or **Power** (the console turns off); on a Pi or PC through the emulator's in-game
+menu (below). **Square** starts a PS1 game in RetroArch instead.
+
+**The in-game menu** (`pcsx-abnxt`). Press the menu button - the pad's Home, **Select + Start** on a pad without
+one, or **Esc** on a keyboard - and the game stops behind a menu with the game's last picture. **Holding the menu button for 2 seconds** is the same as
+Reset: it leaves the game. L1 / R1 switch between its three tabs, and the menu opens on the tab and row it
+was left on:
+
+- **Game**: *Resume game*; under *Saves*: *Quick save*, *Quick load* and *Load autosave* (the game as it was up to 30 seconds ago -
+  the emulator saves it in memory while you play); under *CD disc*: *Change disc* and *Reset game* (starts it over);
+  *Save settings for this game* (see section 3.7), *PCSX menu* (PCSX-ReARMed's own pages: options, cheats, About) and *Exit* (back to AutoBleem).
+- **Picture**: *Display* (the screen's resolution - on the console it is chosen in Options and only shown here), *Resolution*
+  (1x or 2x), *Remove seams*, *Dithering*, *Scaling*, *Smoothing*, *Filter*, *Scanlines* and *Scanline brightness*. Each row has a help line on
+  the right. CRT-Pi is too heavy for the console at 1080p. A row that does not apply is greyed, and its help says why.
+- **Controllers**: *Controller 1* and *Controller 2*: standard (digital), analog (DualShock), a gun or none; takes effect when the game goes on.
+
+The menu is drawn in the launcher's ab2.0.0 look, with the pad batteries and the last quick save's picture.
 
 A **RetroArch** game starts in RetroArch with the core the launcher chose for its system; *Close Content*
 or *Quit RetroArch* in its menu comes back to the launcher. The RetroArch item in the system menu opens
@@ -401,8 +454,8 @@ says so.
 AutoBleem runs on (a PlayStation Classic needs the AutoBleem kernel's WiFi). Its four tabs, L1 / R1 between
 them:
 
-- **Apps** and **Games**: what the sources offer, each with its picture, version, size and source favicon. Installed items are greyed out. Cross installs (or updates, or tries again after a failure), Triangle removes what the Store installed. L2 / R2 or Left / Right turn pages, **Select** shows one source at a time, **Start** searches the titles. Item pictures are cached and can be retried if they fail to load.
-- **Downloads**: what is downloading, waiting, failed or installed. The progress bar updates steadily. Downloads go on in the background, also after you leave the Store; starting a game or powering off only pauses them, and a stopped download resumes where it stopped. An installed game appears on the shelf after the next scan, with the Store's picture as its cover. Downloads over 2 GB work on all platforms, including 32-bit builds.
+- **Apps** and **Games**: what the sources offer, each with its picture, version, size and source favicon. Installed items carry an *Installed* badge. Cross installs (or updates, or tries again after a failure, or cancels a download that is queued or running), Triangle removes what the Store installed, Square refreshes the lists. L2 / R2 jump by letter, **Select** shows one source at a time, **Start** searches the titles. The footer shows the keys that apply to the selected row. Item pictures are cached and can be retried if they fail to load.
+- **Downloads**: what is downloading, waiting, failed or installed. The progress bar updates steadily, and while you are elsewhere in the launcher a bubble shows the running download with its speed and the time left (`1.4 MB/s · 0:42`). Downloads go on in the background, also after you leave the Store; starting a game or powering off only pauses them, and a stopped download resumes where it stopped. If the network drops, the item says *Waiting for the network* and carries on from where it stopped when the network is back (it gives up after 30 minutes). An installed game appears on the shelf after the next scan, with the Store's picture as its cover. Downloads over 2 GB work on all platforms, including 32-bit builds.
 - **Sources**: where the lists come from - AutoBleem's own catalog, a TSV list dropped into
   `System/Extensions/store/sources/`, and the addresses you add with **Add a source URL**. Each source shows its favicon in the list. Cross on one you added renames it, changes its address, switches it between `http://` and `https://`, or removes it.
 
@@ -454,7 +507,7 @@ has to do, and
 
 ### 4.1 Game Manager
 
-The PS1 games as a list with their folders and the selected one's cover and details. Cross opens the game
+The PS1 games as a list of their titles (the selected game's folder is in its details) and the selected one's cover. Cross opens the game
 editor, **Square deletes the game** (its folder and, after a second question, its save states), Triangle
 deletes every cover PNG next to the games (the scan takes them from the databases again), L2 / R2 page.
 The free space of the drive is at the top right. The Game Manager waits while a scan runs.
@@ -464,8 +517,8 @@ The free space of the drive is at the top right. The Game Manager waits while a 
 ### 4.2 Hardware Information
 
 The machine's facts - system, hardware, storage with its free space, network addresses, the display and
-audio drivers, the connected pads - re-read every second. On a PlayStation Classic with the AutoBleem
-kernel this item opens **PSC-Bios** instead (chapter 6).
+audio drivers, the connected pads - re-read every second. It is the same page on every platform,
+the console included; the network and controller setup screens are **Network & Controllers** (PSC-Bios, chapter 6).
 
 The first two controllers are shown as Player 1 and Player 2 - the ports the PS1 emulator gives them.
 Any further controller is shown as not used by the PS1 emulator. RetroArch assigns controllers by its own
@@ -557,7 +610,7 @@ its firewall: allow private networks only.
 
 Two tools for a PlayStation Classic stick. Both draw in the launcher's theme and language, and both are
 driven by the pad - and, in the gamepad wizard, by the console's front buttons. **PSC-Bios** is an
-extension that comes with the console package: *Hardware Information* in the system menu opens it, and it
+extension that comes with the console package: the *Network & Controllers* item of the Quick menu and the system menu opens it, and it
 is in the Extensions list. **ABFlashKit** is an App in the Apps set.
 
 ### 6.1 PSC-Bios
@@ -627,7 +680,7 @@ runs another custom firmware (BleemSync, Project Eris): restore it to stock firs
   `updateroms.log` (UpdateRoms).
 - **A game is not on the shelf**: check the folder layout (one folder per game, the image formats of
   section 3.9). The *Game Manager* lists the folders the scan refused after the games, marked *Not added*,
-  with the reason; Square deletes such a folder. Re-Scan in the system menu runs the scan again.
+  with the reason; Square deletes such a folder. *Re-scan games* in the system menu runs the scan again.
 - **No covers**: the cover databases were not installed (run the installer again with them ticked), or,
   for RetroArch games on a console, UpdateRoms has not been run on the PC.
 - **A pad does nothing or has its buttons mixed up**: PSC-Bios's gamepad wizard (a console) maps it; on a
