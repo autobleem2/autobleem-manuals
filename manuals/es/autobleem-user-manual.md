@@ -209,7 +209,7 @@ Un mando inalámbrico con lectura de batería disponible - en la consola, una Pi
 | Select | El selector de conjuntos: pestañas PlayStation / RetroArch / Aplicaciones (L1 / R1), los grupos de la pestaña (Arriba / Abajo, L2 / R2 una página), Cross selecciona. |
 | Arriba | El menú rápido (sección 3.4). |
 | Abajo | Abre la fila de iconos bajo el juego (Configuración, Juego, Tarjeta de memoria, Reanudar). Arriba la cierra. |
-| L2 + R2 | El menú del sistema (sección 3.4). |
+| L2 + R2 | El menú del sistema (sección 3.5). |
 
 **Con un teclado** (una PC sin control o un teclado USB en la consola, un Pi o la unidad PC) las teclas
 reemplazan: **Flechas** = d-pad, **Intro** = Cross, **Esc o Retroceso** = Circle, **Tabulación** = Triangle,

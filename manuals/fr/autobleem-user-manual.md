@@ -216,7 +216,7 @@ Une manette sans fil dont le niveau de batterie est connu - sur la console, un P
 | Select | Le sélecteur de liste : onglets PlayStation / RetroArch / Applications (L1 / R1), les groupes de l'onglet (Haut / Bas, L2 / R2 une page), Cross sélectionne. |
 | Haut | Le menu rapide (section 3.4). |
 | Bas | Ouvre la rangée d'icônes sous le jeu (Paramètres, Jeu, Carte mémoire, Reprendre). Haut la ferme. |
-| L2 + R2 | Le menu système (section 3.4). |
+| L2 + R2 | Le menu système (section 3.5). |
 
 **Avec un clavier** (un PC sans manette ou un clavier USB sur la console, un Pi ou la clé PC) les touches
 remplacent : **Flèches** = d-pad, **Entrée** = Cross, **Échap ou Retour arrière** = Circle, **Tabulation** =

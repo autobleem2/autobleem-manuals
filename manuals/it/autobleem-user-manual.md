@@ -208,7 +208,7 @@ Un controller wireless con una lettura della batteria disponibile - sulla consol
 | Select | Il selettore di set: schede PlayStation / RetroArch / App (L1 / R1), i gruppi della scheda (Su / Giù, L2 / R2 una pagina), Cross seleziona. |
 | Su | Il menu rapido (sezione 3.4). |
 | Giù | Apre la riga di icone sotto il gioco (Impostazioni, Gioco, Memory Card, Riprendi). Su la chiude. |
-| L2 + R2 | Il menu di sistema (sezione 3.4). |
+| L2 + R2 | Il menu di sistema (sezione 3.5). |
 
 **Con una tastiera** (un PC senza controller o una tastiera USB sulla console, un Pi o l'unità PC) i tasti
 rimpiazzano: **Frecce** = d-pad, **Invio** = Cross, **Esc o Backspace** = Circle, **Tab** = Triangle,

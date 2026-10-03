@@ -217,7 +217,7 @@ Un gamepad wireless cu un nivel de baterie cunoscut - pe consolă, pe un Pi sau 
 | Select | Selectorul de seturi: file PlayStation / RetroArch / Apps (L1 / R1), grupele filei (Sus / Jos, L2 / R2 o pagină), Cross alege. |
 | Sus | Meniul rapid (secțiunea 3.4). |
 | Jos | Deschide rândul de pictograme sub joc (Setări, Joc, Card Memorie, Reluare). Sus o închide. |
-| L2 + R2 | Meniu sistem (secțiunea 3.4). |
+| L2 + R2 | Meniu sistem (secțiunea 3.5). |
 
 **Cu o tastatură** (un PC fără gamepad, sau o tastatură USB pe consolă, Pi sau stick PC) tastele
 stau în: **Săgeți** = d-pad, **Enter** = Cross, **Esc sau Backspace** = Circle, **Tab** = Triangle,

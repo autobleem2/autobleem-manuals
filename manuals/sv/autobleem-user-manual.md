@@ -215,7 +215,7 @@ En trådlös kontroll med känt batteriläge - på konsolen, en Pi eller PC-stic
 L2 / R2 sida), Cross väljer. |
 | Upp | Snabbmenyn (avsnitt 3.4). |
 | Ner | Öppna ikonstaden under spelet (Inställningar, Spel, Minneskort, Återuppta). Upp stänger den. |
-| L2 + R2 | Systemmenyn (avsnitt 3.4). |
+| L2 + R2 | Systemmenyn (avsnitt 3.5). |
 
 **Med tangentbord** (PC utan styrenhet, eller USB-tangentbord på konsol, Pi eller PC-sticka): tangenterna
 står in: **Piltangenter** = d-pad, **Enter** = Cross, **Esc eller Backspace** = Circle, **Tab** = Triangle,

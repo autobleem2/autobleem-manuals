@@ -204,7 +204,7 @@ Um controle sem fio com leitura de bateria disponível - no console, em um Pi ou
 | Select | O seletor de conjuntos: abas PlayStation / RetroArch / Aplicativos (L1 / R1), os grupos da aba (Cima / Baixo, L2 / R2 uma página), Cross seleciona. |
 | Cima | O menu rápido (seção 3.4). |
 | Baixo | Abre a linha de ícones sob o jogo (Configurações, Jogo, Cartão de Memória, Retomar). Cima a fecha. |
-| L2 + R2 | O menu do sistema (seção 3.4). |
+| L2 + R2 | O menu do sistema (seção 3.5). |
 
 **Com um teclado** (um PC sem controle ou um teclado USB no console, um Pi ou o pen drive PC) as teclas
 substituem: **Setas** = d-pad, **Enter** = Cross, **Esc ou Backspace** = Circle, **Tab** = Triangle,

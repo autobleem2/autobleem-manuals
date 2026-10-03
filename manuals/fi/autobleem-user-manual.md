@@ -206,7 +206,7 @@ Langaton ohjain, jonka akun varaustaso on tiedossa - konsolilla, Pi:llä tai PC-
 | Select | Sarja-valitsin: PlayStation / RetroArch / Apps välilehdet (L1 / R1) sarjan ryhmät (Ylös / Alas L2 / R2 sivu) Cross valitsee. |
 | Ylös | Pikavalikko (osio 3.4). |
 | Alas | Avaa pelin alla olevan kuvakepalkki (Asetukset Peli Muistikortti Jatka). Ylös sulkee sen. |
-| L2 + R2 | Järjestelmävalikko (osio 3.4). |
+| L2 + R2 | Järjestelmävalikko (osio 3.5). |
 
 **Näppäimistöllä** (PC ilman ohjainta tai USB-näppäimistö konsolissa Pi:ssä tai PC-tikulla) näppäimet
 menevät sisään: **Nuolinäppäimet** = d-pad **Enter** = Cross **Esc tai Backspace** = Circle **Tab** = Triangle

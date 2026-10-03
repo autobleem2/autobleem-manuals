@@ -214,7 +214,7 @@ A wireless pad with a battery reading - the console, a Pi or the PC stick, not W
 | Select | The set picker: PlayStation / RetroArch / Apps tabs (L1 / R1), the groups of the tab (Up / Down, L2 / R2 a page), Cross picks. |
 | Up | The Quick menu (section 3.4). |
 | Down | Open the icon row under the game (Settings, Game, Memory Card, Resume). Up closes it. |
-| L2 + R2 | The system menu (section 3.4). |
+| L2 + R2 | The system menu (section 3.5). |
 
 **With a keyboard** (a PC without a pad, or a USB keyboard on the console, a Pi or the PC stick) the keys stand in: **Arrow keys** = d-pad, **Enter** = Cross, **Esc or Backspace** = Circle, **Tab** = Triangle, **Space** = Square, **F1 / F2** = Select / Start, **Page Up / Page Down** = L1 / R1, **Home / End** = L2 / R2, **F10** = the system menu. On a development machine Esc closes the program and Space is Start.
 

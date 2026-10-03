@@ -203,7 +203,7 @@ En trådløs controller med et batteriniveau - på konsollen, en Pi eller PC-pin
 | Select | Sæt-vælger: PlayStation / RetroArch / Apps faner (L1 / R1), grupperne fra fanen (Op / Ned, L2 / R2 en side), Cross vælger. |
 | Op | Hurtigmenuen (afsnit 3.4). |
 | Ned | Åbn ikorrækken under spillet (Indstillinger, Spil, Memory Card, Genoptag). Op lukker den. |
-| L2 + R2 | Systemmenuen (afsnit 3.4). |
+| L2 + R2 | Systemmenuen (afsnit 3.5). |
 
 **Med tastatur** (en PC uden pad eller USB-tastatur på konsol, Pi eller PC-stick) indsætter tasterne sig selv:
 **Piletaster** = d-pad, **Enter** = Cross, **Esc eller Backspace** = Circle, **Tab** = Triangle, **Mellemrum**

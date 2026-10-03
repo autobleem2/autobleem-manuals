@@ -128,7 +128,7 @@ Een draadloze controller met een bekende batterijstatus - op de console, een Pi 
 | Select | Set-selector: PlayStation / RetroArch / Apps tabbladen (L1 / R1), groepen van het tabblad (Omhoog / Omlaag, L2 / R2 pagina's), Cross selecteert. |
 | Omhoog | Het snelmenu (sectie 3.4). |
 | Omlaag | Open de iconrij onder het spel (Instellingen, Spel, Geheugenkaart, Hervatten). Omhoog sluit. |
-| L2 + R2 | Systeemmenu (sectie 3.4). |
+| L2 + R2 | Systeemmenu (sectie 3.5). |
 
 **Met toetsenbord** (PC zonder controller, of USB-toetsenbord op console, Pi of PC-stick): toetsen vervangen: **Pijltjestoetsen** = d-pad, **Enter** = Cross, **Esc of Backspace** = Circle, **Tab** = Triangle, **Spatiebalk** = Square, **F1 / F2** = Select / Start, **Page Up / Page Down** = L1 / R1, **Home / End** = L2 / R2, **F10** = systeemmenu. Op een ontwikkelingsmachine sluit Esc het programma en Space is Start.
 

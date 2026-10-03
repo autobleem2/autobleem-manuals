@@ -202,7 +202,7 @@ Pil düzeyi bilinen kablosuz bir kumanda - konsolda, bir Pi'de veya PC bellek ç
 | Select | Set Seçici: PlayStation / RetroArch / Uygulamalar sekmeleri (L1 / R1), sekmenin grupları (Yukarı / Aşağı, L2 / R2 sayfa), Cross seçer. |
 | Aşağı | Oyunun altındaki simge satırını aç (Ayarlar, Oyun, Hafıza Kartı, Devam). Yukarı kapatır. |
 | Yukarı | Hızlı menü (bölüm 3.4). |
-| L2 + R2 | Sistem menüsü (bölüm 3.4). |
+| L2 + R2 | Sistem menüsü (bölüm 3.5). |
 
 **Klavye ile** (kontrolcüsü olmayan PC veya konsolda USB klavye, Pi veya PC sürücüsü) tuşlar yerini
 alırlar: **Ok tuşları** = d-pad, **Enter** = Cross, **Esc veya Backspace** = Circle, **Tab** = Triangle,

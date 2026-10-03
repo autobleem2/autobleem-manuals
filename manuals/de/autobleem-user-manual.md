@@ -219,7 +219,7 @@ Ein drahtloser Controller mit einem Batteriewert - auf der Konsole, einem Pi ode
 | Select | Der Set-Picker: PlayStation / RetroArch / Apps-Tabs (L1 / R1), die Gruppen des Tabs (Hoch / Runter, L2 / R2 eine Seite), Cross wählt. |
 | Hoch | Das Quick-Menü (Abschnitt 3.4). |
 | Runter | Öffnet die Icon-Zeile unter dem Spiel (Einstellungen, Spiel, Memory Card, Fortsetzen). Hoch schließt es. |
-| L2 + R2 | Das Systemmenü (Abschnitt 3.4). |
+| L2 + R2 | Das Systemmenü (Abschnitt 3.5). |
 
 **Mit einer Tastatur** (ein PC ohne Pad oder eine USB-Tastatur auf der Console, einem Pi oder dem PC-Stick)
 stehen die Tasten ein: **Pfeiltasten** = D-Pad, **Enter** = Cross, **Esc oder Backspace** = Circle, **Tab** =

@@ -220,7 +220,7 @@ Una maneta sens fial amb un nivèl de batariá conegut - sus la consòla, un Pi 
 | Select | Lo causidor de grupós : ongletas PlayStation / RetroArch / Aplicacions (L1 / R1), los grupós de l'ongalet (Amont / Avall, L2 / R2 una pagina), Cross causís. |
 | Amont | Lo menú rapid (seccion 3.4). |
 | Avall | Dobrir la linia d'icons jos lo jòc (Paramètres, Jòc, Carta memòria, Reprendre). Amont la tanca. |
-| L2 + R2 | Lo menú sistèma (seccion 3.4). |
+| L2 + R2 | Lo menú sistèma (seccion 3.5). |
 
 **Amb un clavièr** (una PC sens maneta, o un clavièr USB sus la consòla, una Pi o lo bastó PC) las tèclas
 se mèton a la plaça : **Sagetas** = cros, **Enter** = Cross, **Esc o Retorn arrièr** = Circle, **Tab** =

@@ -224,7 +224,7 @@ Bezdrôtový ovládač s dostupným stavom batérie - na konzole, Pi alebo USB k
 | Select | Výber sady: karty PlayStation / RetroArch / Aplikácie (L1 / R1), skupiny karty (Hore / Dole, L2 / R2 strana), Cross vyberie. |
 | Hore | Rýchla ponuka (oddiel 3.4). |
 | Dole | Otvorte rad ikon pod hrou (Nastavenia, Hra, Pamäťová karta, Obnovenie). Hore ju zavrie. |
-| L2 + R2 | Systémová ponuka (oddiel 3.4). |
+| L2 + R2 | Systémová ponuka (oddiel 3.5). |
 
 **S klávesnicou** (PC bez herného ovládača alebo USB klávesnica na konzole, Pi alebo PC
 kľúči) klávesy stojí: **Šípky** = d-pad, **Enter** = Cross, **Esc alebo Backspace** =

@@ -128,7 +128,7 @@ AutoBleem作为Windows程序：全屏、模拟器和RetroArch启动为程序。
 | Select | 游戏集选择器：PlayStation / RetroArch / 应用选项卡(L1 / R1)、选项卡的分组(上 / 下、L2 / R2分页)、Cross选择。 |
 | 下 | 打开游戏下的图标行(设置、游戏、记忆卡、恢复)。上关闭。 |
 | 上 | 快速菜单(第3.4节)。 |
-| L2 + R2 | 系统菜单(第3.4节)。 |
+| L2 + R2 | 系统菜单(第3.5节)。 |
 
 **使用键盘**(没有手柄的PC，或控制台、Pi或PC闪存盘上的USB键盘)，按键代替：**箭头键** = d-pad、**Enter** = Cross、**Esc或Backspace** = Circle、**Tab** = Triangle、**Space** = Square、**F1 / F2** = Select / Start、**Page Up / Page Down** = L1 / R1、**Home / End** = L2 / R2、**F10** = 系统菜单。在开发机器上Esc关闭程序，Space是Start。
 
