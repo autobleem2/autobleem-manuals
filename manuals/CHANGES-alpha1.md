@@ -118,6 +118,5 @@ New shots the text now needs (and a reference line to add in the manual after th
 - `ingame-menu.jpg`, `ingame-menu-picture.jpg` - the emulator's menu, Game and Picture tabs (section 3.8).
 - `download-bubble.jpg` - the Store bubble with speed and time left (optional).
 
-Note for whoever runs `tools/manual_shots.py`: its screen list is from before the redesign (it opens the system menu by
-index, e.g. `menu 5` for Options, and uses Up for the icon row); it needs checking against the new menu order and the
-Quick menu before it is run.
+The screenshots come from the launcher repository's `tools/manual_shots.py` (a VM sandbox laid from the release
+package, every manual language in one run); the copy that sat in this repository is gone.
