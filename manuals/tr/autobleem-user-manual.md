@@ -12,16 +12,16 @@ günlük kullanım ve gelen araçları kapsar.
 
 ## 1. Ne Alıyorsun
 
-- **Başlatıcı** - kapak rafı, setler (PlayStation, RetroArch, Uygulamalar), oyun detayları, sistem
-  menüsü, seçenekler, hafıza kartı ve devam noktası araçları. Her platformda aynı program.
+- **Başlatıcı** - kapak rafı, setler (PlayStation, RetroArch, Uygulamalar), oyun detayları, Hızlı menü ve
+  sistem menüsü, seçenekler, hafıza kartı ve devam noktası araçları, ayrıca uygulama ve oyun indirmek için Mağaza. Her platformda aynı program.
 - **İki PS1 Emülatörü** - `pcsx-abnxt`, mevcut olan (varsayılan) ve `pcsx-ab`, AutoBleem'in her zaman
   gönderdiği klasik. Seçeneklerden birini seçersin; ikisi de aynı ayarları ve hafıza kartlarını
   kullanırlar.
 - **RetroArch** (her platformda isteğe bağlı) diğer sistemler için: NES, SNES, Mega Drive, Game Boy,
   arcade ve çok daha fazlası. AutoBleem, kopyaladığın ROM'lardan RetroArch listelerini oluşturur ve
   her oyunu doğru çekirdeğiyle başlatır.
-- **Konsol Araçları** (yalnızca PlayStation Classic): WiFi, saat ve oyun kontrolcüsü eşleştirmesi için
-  *PSC-Bios* ve AutoBleem kernel'ini yüklemek için *ABFlashKit*.
+- **Konsol Araçları**: WiFi, saat ve oyun kumandası eşleştirmesi için *PSC-Bios* (menülerde *Ağ ve Kontrolcüler*
+  adıyla görünür) - konsolda, ayrıca Raspberry Pi ve PC sürücüsünde - ve AutoBleem kernel'ini yüklemek için *ABFlashKit* (yalnızca PlayStation Classic).
 - **UpdateRoms** Windows için: bir konsol sürücüsünün RetroArch listelerini ve kapak resimlerini PC'de
   yeniler, çünkü konsol ağa bağlı değildir.
 
@@ -59,7 +59,7 @@ kaldırır.
 **Açma ve Kapatma.** Sürücü takılıyken konsol açılır, ışıkları birkaç saniye yanıp söner (AutoBleem
 alınıyor) ve sonra ekranda hiçbir şey gösterilmeden beklemeye geçer - bu konsolun bir güncelleme
 hazırlamasıdır, AutoBleem'in çalışması bu şekildedir. **Power** bir kez basın ve başlatıcı açılır.
-Sistem menüsündeki *Power Off* veya konsolun Power düğmesi, konsolu **AutoBleem beklemeye** sokar:
+Sistem menüsündeki *Kapat* veya konsolun Power düğmesi, konsolu **AutoBleem beklemeye** sokar:
 sürücü önce kesilir, sonra ışık **kırmızı** olur - AutoBleem'in amaçlandığı gibi çalıştığının işareti -
 ve sonraki Power basışı başlatıcıyı birkaç saniye içinde doğrudan geri getirir. **Işık kırmızıyken
 sürücü çekilebilir** ve Windows onu kontrol etmesini istemeden PC'ye konabilir; Power basılmadan önce
@@ -162,10 +162,28 @@ günde bir kez siteyi kontrol eder ve yenisi varsa güncelleme sunar (bölüm 3.
 
 ### 3.1 Başlatıcı
 
-Başlatıcı rafa açılır: mevcut setin kapakları, orta sırada seçilen kapak, yanında detayları - yayıncı,
-yıl, seri, bölge, oyuncular, son ne zaman oynanması - ve oynat düğmesi. Alttaki çubuk düğmelerin ne
-yaptığını listeler. Oyun klasöründün taraması her başlangıçta arka planda çalışır; çalışırken sağ üst
-köşedeki bir balon ilerlemeyi gösterir ve yeni oyunlar raf üzerinde bulundukça görünür.
+Başlatıcı rafa açılır: mevcut setin kapakları, orta sırada seçilen kapak (altında yumuşak bir yansımayla), yanında
+kompakt bir ızgarada detayları - yayıncı, yıl, seri numarası, bölge, oyuncular, en son ne zaman oynandığı (oyunda
+olmayan bilgi atlanır) - ve oynat düğmesi. Varsayılan görünüm **ab2.0.0** temasıdır; yeni kurulum ve onu getiren bir
+güncelleme bir kez ona geçer. Alttaki ipucu çubuğu iki satırdır, her biri dört yer içerir. İlk satır düğmelerin seçilen
+oyun için ne yaptığını söyler (oyna, RetroArch'ta oyna, simge satırını aç, Hızlı menü); ikincisi her zaman Select
+(set), Start (rastgele oyun), Triangle (kılavuz) ve L2 + R2 (sistem menüsü) gösterir, biri bir şey yapmıyorsa soluk.
+Oyun klasörünün taraması her başlangıçta arka planda çalışır; çalışırken sağ üst köşedeki bir balon ilerlemeyi
+gösterir ve yeni oyunlar raf üzerinde bulundukça görünür.
+
+**Yeni bir kurulumda** henüz oyun yoktur: boş raf yerine başlatıcı bir karşılama kartı gösterir - *Merhaba,
+AutoBleem'e hoş geldin!* - oyunlarını `Games` klasörüne atmanı ve *Oyunları yeniden tara*'yı seçmeni ister ve
+platformuna göre yeri söyler: bellekte (PlayStation Classic, PC sürücüsü), SD kartında (Raspberry Pi) veya AutoBleem
+klasöründe (Windows). Bir tarama ilk oyunu bulur bulmaz kart kaybolur.
+
+**Bildirimler** sağ üst köşede balon olarak görünür: tarama ilerlemesi, geçtiğin setin adı (*Gösteriliyor: ...*,
+Seçenekler → *Bildirim süresi* kadar), kumandada düşük pil, çökmeden sonra bir bildirim, çalışan bir tarama
+işlemcisi ve Mağaza'nın süren indirmesi. İndirme balonu hızını ve kalan süreyi gösterir, örneğin `1.4 MB/s · 0:42`.
+
+**Kanal rozeti.** Nihai sürüm olmayan bir yapı, sol üst köşede kumanda pil levhasının altında küçük bir işaret
+gösterir: kanalı taşıyan bir etiket - ön sürüm için `ALPHA`, `BETA` veya `RC`, başka herhangi bir ön sürüm için
+`TESTING`, gecelik yapı için `NIGHTLY`, elle yapılmış yapı için `DEV` - ve yanında kısa sürüm (`DEV` için yapıldığı
+commit). Nihai sürüm rozet göstermez.
 
 Pil düzeyi bilinen kablosuz bir kumanda - konsolda, bir Pi'de veya PC bellek çubuğunda, Windows'ta değil - yüzdesiyle birlikte küçük bir simge olarak, sol üst köşeden kendi levhası üzerinde istiflenerek gösterilir. Oyuncu 1 veya Oyuncu 2 ile eşleşen bir kumanda (Oyuncu 1 / Oyuncu 2'yi Değiştir seçeneğine göre) P1/P2 etiketi alır; eşleşmeyen veya üçüncü bir kumanda etiket almaz. Bir kumandanın pili azaldığında, bir bildirim satırı bunu bir kez, adı ve yüzdesiyle bildirir.
 
@@ -183,6 +201,7 @@ Pil düzeyi bilinen kablosuz bir kumanda - konsolda, bir Pi'de veya PC bellek ç
 | Start | Mevcut setten rastgele oyun. |
 | Select | Set Seçici: PlayStation / RetroArch / Uygulamalar sekmeleri (L1 / R1), sekmenin grupları (Yukarı / Aşağı, L2 / R2 sayfa), Cross seçer. |
 | Aşağı | Oyunun altındaki simge satırını aç (Ayarlar, Oyun, Hafıza Kartı, Devam). Yukarı kapatır. |
+| Yukarı | Hızlı menü (bölüm 3.4). |
 | L2 + R2 | Sistem menüsü (bölüm 3.4). |
 
 **Klavye ile** (kontrolcüsü olmayan PC veya konsolda USB klavye, Pi veya PC sürücüsü) tuşlar yerini
@@ -198,68 +217,80 @@ kaydeder.
 
 ### 3.3 Setler
 
-**Select** set seçiciyi açar. PlayStation sekmesi *Tüm Oyunlar*, *Dahili Oyunlar*'ı listeler (PlayStation
-Classic'te konsolun yerleşik yirmi tane), `Games/` altında yaptığın her klasör (alt klasördeki oyun o
-gruba aittir), *Favori Oyunlar*, *Oyun Geçmişi* ve, herhangi bir oyun biri olarak işaretlendiğinde,
-*Işıklı Silah Oyunları*. RetroArch sekmesi oyun içeren sistem başına bir grup artı RetroArch'ın Favorileri
-ve Geçmişini listeler. Uygulamalar sekmesi uygulamaları türe göre gruplandırır: *Tüm uygulamalar*, sonra
-*Oyunlar*, *Emülatörler*, *Araçlar*, *Medya* ve *Diğer* (kategori her uygulamanın `app.ini` dosyasında
-ayarlanır). Her satır kaç öğe tuttuğunu gösterir; biri olmayan grup, Ayarları yalnızca gösteren boş rafa
-açılır.
+**Select** set seçiciyi açar. PlayStation sekmesi PlayStation Classic'te *Tüm oyunlar* ve *Dahili oyunlar*'ı
+(konsolun yerleşik yirmi oyunu) listeler, sonra *USB oyunları* (`Games/` altındaki her şey) ve altında yaptığın her
+klasör (alt klasördeki oyun bu gruba aittir), sonra *Favori oyunlar*, *Oyun geçmişi* ve, herhangi bir oyun biri olarak
+işaretlendiğinde, *Işıklı silah oyunları*. Raspberry Pi, PC sürücüsü ve Windows'ta dahili oyun yoktur, bu yüzden liste
+tüm kütüphane olan *USB oyunları* ile başlar. RetroArch sekmesi (yalnızca RetroArch yüklü olan yerde) oyun içeren
+sistem başına bir grup artı RetroArch'ın kendi Favorileri ve Geçmişini listeler. Uygulamalar sekmesi uygulamaları
+türe göre gruplandırır: *Tüm uygulamalar*, sonra *Oyunlar*, *Emülatörler*, *Araçlar*, *Medya* ve *Diğer* (kategori
+her uygulamanın `app.ini` dosyasında ayarlanır). Her satır kaç öğe tuttuğunu gösterir; öğesi olmayan grup, simge
+satırında yalnızca Ayarların olduğu boş rafa açılır. Altbilgi tuşları söyler: L1 / R1 sekmeler, L2 / R2 sayfa,
+Cross seçer, Circle *Geri*.
 
 ### 3.4 Hızlı Menü
 
 Başlatıcıda **Yukarı** veya simge satırında **dişli simgesi** (Ayarlar / Oyun / Hafıza Kartı / Devam
-nerede): karruseldan ulaştığın eylemler için hızlı menü. Kısa liste: *Oyunları Yeniden Tara* (şimdi
-tarama başlat), *Store* (eklenti indirmek için AutoBleem Store), *Ağ ve Kontrolcüler* (yalnızca
-yüklü eklenti `network` girişini sağladığında - konsolda PSC-Bios, Pi ve PC sürücüsü: WiFi, Bluetooth
-eşleştirme, gamepad eşleme sihirbazı - bölüm 6'ya bakın; o eklenti devre dışı bırakıldığında "Eklentiler'den
-etkinleştir" ile gri renkte - Cross Eklentiler listesini açar), ve *Sistem menüsü...*
-(aşağıdaki tam menü). Yukarı / Aşağı taşır (sarılır), Cross seçer, Circle geri gider. Burada benzersiz
-hiçbir şey yok - her öğe sistem menüsünde de var.
+nerede): hızlı ulaşmak istediğin eylemler için Hızlı menü. Kısa liste: *Oyunları yeniden tara* (şimdi tarama
+başlat), *Mağaza* (oyun, uygulama ve eklenti göz at ve yükle), *Ağ ve Kontrolcüler* (yalnızca yüklü eklenti
+`network` girişini sağladığında - konsolda, Pi'de ve PC sürücüsünde PSC-Bios: WiFi, Bluetooth eşleştirme, gamepad
+eşleme sihirbazı - bölüm 6'ya bakın; o eklenti devre dışı bırakıldığında "Eklentiler'den açın" ile gri renkte -
+Cross Eklentiler listesini açar), *Başlatıcıyı yeniden başlat* (AutoBleem'i kapatıp yeniden başlatır; yalnızca
+konsolda, Pi'de ve PC sürücüsünde) ve *Sistem menüsü...* (diğer her şey: Seçenekler, Oyun Yöneticisi, Kapat ve
+daha fazlası - aşağıdaki tam menü). Yukarı / Aşağı taşır (sarılır), Cross seçer, Circle geri gider. Her öğenin
+satırında tek satırlık bir açıklaması vardır. Mağaza ve *Başlatıcıyı yeniden başlat* dışında her öğe sistem
+menüsünde de var.
 
 ### 3.5 Sistem Menüsü
 
-**L2 + R2** (birlikte, herhangi bir sırada) raf üzerinde sistem menüsünü açar. Menü bölümlere ayrılmıştır:
+**L2 + R2** (birlikte, herhangi bir sırada) raf üzerinde sistem menüsünü açar. Her satırın tek satırlık bir
+açıklaması vardır ve menü bölümlere ayrılmıştır:
 
 | Bölüm | Öğe | Ne Yapar |
 |---|---|---|
-| (üst) | Oyunları Yeniden Tara | Yeni, değişmiş veya kaldırılan oyunları şimdi ara (tarama klasörü de kendi başına izler). |
+| (üst) | Oyunları yeniden tara | Yeni, değişmiş veya kaldırılan oyunları şimdi ara (tarama klasörü de kendi başına izler). |
 | | Eklentiler | Sürücüdeki eklentiler - AutoBleem Store ve diğerleri (bölüm 3.12). |
 | **Kütüphane** | Oyun Yöneticisi | Oyun klasörleriyle PS1 oyunları bir liste olarak: oyun sil, kapakları temizle. Tarama çalışırken devre dışı. |
-| | Hafıza Kartları | Hafıza kartı setlerin (bölüm 3.7). |
-| | Tarama İşlemcileri | Her taramanın ilk çalıştırdığı programlar - sırası, açık veya kapalı (bölüm 3.13). Tarama çalışırken devre dışı. |
+| | Hafıza kartları | Hafıza kartı setlerin (bölüm 3.7). |
+| | Tarama işlemcileri | Her taramanın ilk çalıştırdığı programlar - sırası, açık veya kapalı (bölüm 3.13). Tarama çalışırken devre dışı. |
 | **Sistem** | Seçenekler | AutoBleem ayarları (bölüm 3.6). |
-| | Ağ ve Kontrolcüler | Yalnızca yüklü eklenti `network` girişini sağladığında (`extension.ini`'de `Provides=network` - konsolda PSC-Bios, Pi ve PC sürücüsü) - WiFi, Bluetooth kontrolcüsü eşleştirme, DualShock 3 kurulumu ve gamepad eşleme sihirbazı - bölüm 6'ya bakın. O eklenti yüklü ama devre dışı bırakılmışsa, öğe "Eklentiler'den etkinleştir" notu ile gri kalır - Cross Eklentiler listesini açar. |
-| | Donanım Bilgisi | Makine gerçekleri: sistem, CPU, depolama, ağ arayüzleri, saat dilimi, ekran, kontrolcüler ve eşlemeleri. AutoBleem kernel'i olan konsolda bu **PSC-Bios** açar (bölüm 6); diğer makinelerde bu bilgi sayfasını gösterir. |
-| | Yazılım Güncellemesi | (Raspberry Pi ve PC) Daha yeni AutoBleem veya RetroArch için siteyi şimdi kontrol et. |
+| | Ağ ve Kontrolcüler | Yalnızca yüklü eklenti `network` girişini sağladığında (`extension.ini`'de `Provides=network` - konsolda, Pi'de ve PC sürücüsünde PSC-Bios) - WiFi, Bluetooth kontrolcüsü eşleştirme, DualShock 3 kurulumu ve gamepad eşleme sihirbazı - bölüm 6'ya bakın. O eklenti yüklü ama devre dışı bırakılmışsa, öğe "Eklentiler'den açın" notu ile gri kalır - Cross Eklentiler listesini açar. |
+| | Donanım bilgisi | Makine gerçekleri: sistem, CPU, depolama, ağ arayüzleri, saat dilimi, ekran, kontrolcüler ve eşlemeleri - her platformda aynı sayfa (bölüm 4.2). |
+| | Yazılım güncellemesi | (Raspberry Pi ve PC) Daha yeni AutoBleem veya RetroArch için siteyi şimdi kontrol et; başlatıcı zaten birini biliyorsa satır *Güncelleme mevcut* der. |
 | | Hakkında | Krediler ve lisans. |
-| **Ayrıl** | RetroArch | Başlatıcıyı RetroArch'ın kendi menüsü için bırak. RetroArch'ı kapatma geri gelir. |
+| **Çıkış** | RetroArch | (Yalnızca RetroArch yüklü olan yerde.) Başlatıcıyı RetroArch'ın kendi menüsü için bırak. RetroArch'ı kapatma geri gelir. |
 | | Kapat | Onaydan sonra: konsolda AutoBleem bekleme - sürücü kesildi, ışık kırmızı, Power başlatıcıyı geri getirir (bölüm 2.1); Pi veya PC'de makine kapatılır. |
 
 ![Sistem Menüsü](../images/en/system-menu.jpg)
 
 ### 3.6 Seçenekler
 
-Ayarlar gruplara ayrılmıştır; Yukarı / Aşağı gruplar arasında taşınır, Sol / Sağ değeri değiştirir,
-Circle ayrılır ve kaydeder. Her değişiklik hemen uygulanır.
+Ayarlar gruplara ayrılmıştır; Yukarı / Aşağı satırlar arasında taşınır, Sol / Sağ değeri değiştirir (bir basış bir
+adım, basılı tutmak kaydırır), L1 / R1 ilk / son satıra atlar, L2 / R2 sayfa çevirir, Circle ayrılır ve kaydeder.
+Her değişiklik hemen uygulanır. Açık / kapalı değerler **AÇIK** / **KAPALI** okunur.
 
 | Grup / Ayar | Ne Yapar |
 |---|---|
-| **Arayüz**: AutoBleem Teması | Görünüm. Temalar `Themes/`'te yaşar; oraya atılan tema zip, sonraki ziyarette açılır. AutoBleem'in gönderdiği temalar her güncellemede yenilenir - birini özelleştirmek için önce yeni ad altında kopyala. |
-| Kapak Stili | PS1 kapakları etrafında çizilen mücevher kutusu çerçevesi. |
+| **Arayüz**: Ekran | Başlatıcı ve PS1 emülatörü için ekran çözünürlüğü: *Otomatik* (ekranın kendi modu, *Otomatik (1920x1080)* olarak gösterilir) veya ekranın listelediği herhangi bir mod; konsol 720p ve 1080p sunar. Yeni mod onaylanır: *Bu ekran modu korunsun mu?* - onaylamazsan geri sayımdan sonra geri döner. Geliştirme penceresinde yok. |
+| Emülatör ekran ölçekleme | PS1 emülatörünün oyun görüntüsünü ekrana nasıl uydurduğu: *1x1* (PlayStation'ın kendi pikselleri), *2x (tam sayı)*, *4:3*, *4:3 (tam sayı)* veya *Tam ekran*. Tam sayı ölçekleme yalnızca tam katları kullanır (en keskini). Eski Geniş Ekran anahtarının yerine geçer; klasik `pcsx-ab` ve RetroArch yalnızca tam ekranı ve 4:3'ü bilir. |
+| AutoBleem teması | Görünüm. Temalar `Themes/`'te yaşar; oraya atılan tema zip, sonraki ziyarette açılır. AutoBleem'in gönderdiği temalar her güncellemede yenilenir - birini özelleştirmek için önce yeni ad altında kopyala. Varsayılan **ab2.0.0**. |
+| Kapak stili | PS1 kapakları etrafında çizilen süs çerçevesi. |
+| Kapak parıltısı | Raf durulunca seçilen kapağın üzerinden geçen bir parıltı. |
 | Dil | Başlatıcı dili, hemen uygulanır (17 dil). |
-| Temadan Font Kullan / Font | Klasik ekranlar yazı tipi: temainki veya `resources/fonts`, `RetroArch/fonts` veya temadan herhangi bir `.ttf`/`.otf`. |
-| Zaman Aşımını Göster (zaman aşımı yok için 0): | "Gösteriliyor: ..." bildirimi ne kadar süre kalır, saniye cinsinden (0 = sonsuza kadar). |
-| **Ses**: Müzik, Arka Plan Müziği | Hangi şarkının başlatıcının altında çaldığı (temainki veya `resources/music`'ten dosya) ve çalınıp çalınmadığı. |
-| **Emülasyon**: PS1 Emülatörü | `pcsx-abnxt` (varsayılan: AutoBleem eklemeleriyle mevcut PCSX-ReARMed) veya `pcsx-ab` (klasik). Biri tarafından kaydedilen devam noktası diğerinde devam eder, oyun BIOS dosyası olmadan çalışmadığı sürece. |
-| Geniş Ekran | Her oyun için PS1 emülatörü resim şekli. |
-| Tüm PSX Oyunlarını RA ile Oyna | Her PS1 oyunu RetroArch'ın PS1 çekirdeğinde başlar. |
-| RA Yapılandırmasını Güncelle | AutoBleem, orada oyun başlattığında ayarlarını RetroArch'ın yapılandırmasına yazar. |
-| Oyuncu 1 / Oyuncu 2'yi Değiştir (PS1 emülatörleri) | İlk iki kumandadan hangisinin Oyuncu 1, hangisinin Oyuncu 2 olduğunu her iki PS1 emülatöründe de (pcsx-abnxt ve klasik pcsx-ab) değiştirir. Yalnızca iki veya daha fazla kumanda bağlıyken etkili olur; tek kumandayla her zaman Oyuncu 1'dir. RetroArch etkilenmez. |
-| **Kütüphane**: Dahili Oyunları Göster | Konsol oyunlarını PlayStation listelerinde (yalnızca PlayStation Classic). |
-| Kapak Resmini Çevrimiçi Getir | Tarama, libretro sunucularından eksik kapakları getirir (Raspberry Pi, PC, Windows). |
-| **Güncellemeler** | (Raspberry Pi, PC, Windows) `kararlı`, `en son` (ön sürümler de) veya `kapalı`. |
+| Bildirim süresi | Bilgi balonlarının ("Gösteriliyor: ...", tarama özeti) ne kadar kaldığı, 0 ile 20 saniye; 0 *Kapalı* gösterir. Hataların kendi sabit süresi vardır. |
+| Açılış ekranı | Başlatıcı başlarken AutoBleem resmi; kapalıysa doğrudan rafa gider. |
+| Animasyonlar | Ekranlar arası hareket; kapalıysa her ekran değişimi anlıktır. |
+| **Yazı tipleri**: Varsayılan yazı tipini kullan | Başlatıcı varsayılan yazı tipini (Red Hat Text) kullanır veya - kapalıyken - aşağıda seçileni. |
+| Yazı tipi | `resources/fonts`, `RetroArch/fonts` veya tema klasöründen herhangi bir `.ttf`/`.otf`; satır kullanılan yazı tipini gösterir. |
+| **Ses**: Müzik, Arkaplan müziği | Hangi parçanın başlatıcının altında çaldığı (temainki veya `resources/music`'ten dosya) ve çalınıp çalınmadığı. |
+| **Emülasyon**: PS1 emülatörü | `pcsx-abnxt` (varsayılan: AutoBleem eklemeleriyle mevcut PCSX-ReARMed) veya `pcsx-ab` (klasik). Biri tarafından kaydedilen devam noktası diğerinde devam eder, oyun BIOS dosyası olmadan çalışmadığı sürece. |
+| Oyuncu 1 / oyuncu 2'yi değiştir (PS1 emülatörleri) | İlk iki kumandadan hangisinin Oyuncu 1, hangisinin Oyuncu 2 olduğunu her iki PS1 emülatöründe de (pcsx-abnxt ve klasik pcsx-ab) değiştirir. Yalnızca iki veya daha fazla kumanda bağlıyken etkili olur; tek kumandayla her zaman Oyuncu 1'dir. RetroArch etkilenmez. |
+| Tüm PSX oyunlarını RA ile oyna, RA yapılandırmasını güncelle, RetroArch ayarlarını koru | (Yalnızca RetroArch yüklü olan yerde.) Her PS1 oyunu RetroArch'ın PS1 çekirdeğinde başlar; AutoBleem orada oyun başlattığında ayarlarını RetroArch'ın yapılandırmasına yazar; RetroArch'ın kendi menüsünde yapılan değişiklik RetroArch kapanınca korunur. |
+| **Kütüphane**: Dahili oyunları göster | Konsol oyunlarını PlayStation listelerinde (yalnızca PlayStation Classic). |
+| Kapak resimlerini çevrimiçi al | Tarama, libretro sunucularından eksik kapakları getirir (Raspberry Pi, PC, Windows). |
+| **Güncellemeler** | Güncelleme kanalı: `release` (denenmiş sürüm), `testing` (sıradaki sürüm, testte), `nightly` (en son geliştirme yapısı) veya `off`. Varsayılan kurulu sürümü izler. Geliştirme makinesinde gösterilmez. |
+| **Tanılama**: Günlükleri USB bellekte tut | Günlüklerin hepsini sonraki başlangıçtan itibaren sürücüde tutar, yalnızca çökmeden sonra değil (bölüm 7). |
+| Performansı göster | Sol alt köşede bir katman: kare hızı, CPU yükü, iş parçacıkları ve bellek; emülatör oyunda kendi FPS ve CPU'sunu da gösterir. |
 
 ![Seçenekler, gruplarda](../images/en/options.jpg)
 
@@ -268,28 +299,31 @@ Circle ayrılır ve kaydeder. Her değişiklik hemen uygulanır.
 Oyun seçiliyken, **Aşağı** satırını açar: **Ayarlar** (yukarıdaki seçenekler), **Oyun** (oyunun kendi
 ayarları), **Hafıza Kartı** (kartı) ve **Devam** (kaydedilen noktaları). Cross imlecin altındakini açar.
 
-**Oyun editörü** oyun detaylarını sağda ve ayarlarını solda, üç grupta gösterir:
+**Oyun editörü** oyun detaylarını sağda (başlık, yayıncı, yıl, oyuncular, klasör, hafıza kartı) ve ayarlarını solda,
+dört grupta gösterir:
 
-- **Oyun**: *Favori* (Favori Oyunlar grubunda), *Işıklı Silah Oyunu* (bir ışıklı silah oyunu - Işıklı
-  Silah grubuna katılır ve her zaman RetroArch'ta çalışır, PS1 çekirdeği GunCon'a sahiptir), *RA ile
-  Oyna* (bu oyun RetroArch'ta çalışır), *Veriyi Kilitle* (tarayıcı oyunun başlığını, serisini ve disk
-  listesini belirlediğin gibi bırakır).
-- **Video**: yüksek çözünürlük, tarama çizgileri ve seviyesi, kare atlama, GPU eklentisi ve *Filtre* -
-  resim nasıl ölçeklendirilir: Kapalı (düz pikseller), Doğrusal (yumuşatılmış) veya Sharp (parlak pikseller
-  titremezsiz; yalnızca `pcsx-abnxt` - klasik `pcsx-ab` ve RetroArch bunu Kapalı olarak gösterir).
-- **Emülatör**: SpeedHack, CPU saati, SPU enterpolasyonu, önyükleme logosu (kapalı BIOS kabuğunu atlar -
-  özel logosu önyüklemeyi kıran homebrew disk için) ve `pcsx-abnxt` ile *Yumuşatma* filtresi ve *Sony
-  düzeltmeleri* açma/kapatma.
+- **Oyun**: *Favori* (Favori oyunlar grubunda), *Işıklı silah oyunu* ve *RA ile oyna* (yalnızca RetroArch yüklü olan
+  yerde: ışıklı silah oyunu Işıklı silah grubuna katılır ve her zaman RetroArch'ta çalışır, PS1 çekirdeği GunCon'a
+  sahiptir; *RA ile oyna* bu oyunu RetroArch'ta çalıştırır), *Veriyi kilitle* (tarayıcı oyunun başlığını, seri
+  numarasını ve disk listesini belirlediğin gibi bırakır).
+- **Görüntü**: *Çözünürlük* (1x veya 2x, yerleşik GPU'da), *Dikişleri kaldır* (yalnızca 2x ile), *Dithering* (Kapalı,
+  Açık, Her zaman), *Yumuşatma*, *Filtre* - resim nasıl ölçeklenir: En yakın (düz pikseller), Doğrusal (yumuşak),
+  Keskin veya Keskin (basit) (titremesiz keskin pikseller), Quilez veya CRT filtreleri CRT (sabit) ve CRT-Pi (kendi
+  tarama satırlarını çizerler, bu yüzden tarama satırı satırları gri olur) - ve *Scanlines* ile *Scanline
+  parlaklığı*. Çözünürlük, dikişleri kaldır, dithering, yumuşatma ve Doğrusal ile En yakın dışındaki filtreler
+  `pcsx-abnxt` içindir; klasik `pcsx-ab` ve RetroArch gerisini En yakın olarak gösterir.
+- **İşleme**: GPU *Eklenti* ve *Kare atlama* (Otomatik, Kapalı, 1 ile 3).
+- **Emülatör**: SpeedHack, CPU saati, SPU enterpolasyonu, önyükleme logosu (kapalı BIOS kabuğunu atlar - özel logosu
+  önyüklemeyi kıran homebrew disk için) ve `pcsx-abnxt` ile *Sony düzeltmeleri* açma/kapatma.
 
-Triangle oyunu yeniden adlandırır, Square hafıza kartını değiştirir, Start yeni kart paylaşır. Circle
-kaydeder ve ayrılır.
+Görüntü biçimi ve ekran çözünürlüğü geneldir (Seçenekler → *Emülatör ekran ölçekleme* ve *Ekran*). Verisinde başlığı
+olmayan oyun klasörünün adıyla gösterilir.
 
-**Emülatörde Kaydedilen Ayarlar.** Emülatörün kendi menüsü *Bu oyun için ayarları kaydet* bulunur. Bir
-oyunun orada kaydedilen ayarları olduktan sonra, oyun bunlarla oynanır ve oyun editörü Video ve Emülatör
-satırlarını gri gösterir, *Emülatörde Kaydedilen* başlığı altında bu değerlerle. Oyun editörü ayarlarına
-geri dönmek için **Ayarların Kilidini Aç**'ı seç ve onayla: bu emülatörün kaydettiği ayarları siler ve
-satırlar yeniden değiştirilebilir. Her iki emülatör, `pcsx-ab` ve `pcsx-abnxt`, aynı kaydedilen ayarları
-okur ve yazar.
+**Emülatörde kaydedilen ayarlar.** Emülatörün kendi menüsünde *Ayarları bu oyun için kaydet* bulunur. Bir oyunun
+orada kaydedilen ayarları olduktan sonra, oyun bunlarla oynanır ve oyun editörü Görüntü, İşleme ve Emülatör
+satırlarını bu değerlerle gri gösterir, *Emülatörde kaydedildi* başlığı altında. Oyun editörü ayarlarına geri
+dönmek için **Ayarların kilidini aç**'ı seç ve onayla: bu emülatörün kaydettiği ayarları siler ve satırlar yeniden
+değiştirilebilir. Her iki emülatör, `pcsx-ab` ve `pcsx-abnxt`, aynı kaydedilen ayarları okur ve yazar.
 
 ![Oyun Editörü](../images/en/game-editor.jpg)
 
@@ -307,17 +341,36 @@ kaydedilmiş ikon ve başlıkla gösterir: kaydedilmiş olan ikisi arasında kop
 
 ![Hafıza Kartı Editörü](../images/en/memory-card-editor.jpg)
 
-**Devam Noktaları**: PS1 oyununu konsolun Reset düğmesi (veya Pi veya PC'de emülatörün menüsü) ile
-çıktığında, AutoBleem nerede olduğunun kaydedilmiş bir durumunu tutar ve **Devam** simgesinin altında
-sunar - dört slot, her biri anın resmiyle. Cross slottan devam eder, Triangle siler. Devam noktası olan
-oyun Devam simgesinde küçük resim gösterir.
+**Devam noktaları**: PS1 oyunundan konsolun ön **Reset** düğmesiyle (veya Pi ya da PC'de emülatörün menüsüyle)
+çıktığında, AutoBleem olduğun yerden bir kayıt tutar ve **Devam** simgesinin altında sunar - dört slot, çerçeveli
+kartlar olarak, her biri anın resmi, slot numarası ve tarihle; en yeni **EN YENİ** diye işaretlenir ve kullanılmamış slot
+*Sürdürme noktası yok* der. Cross slottan devam eder, Triangle siler. Devam noktası olan oyun Devam simgesinde küçük
+resim gösterir; olmayanın Devam simgesi soluktur. Devam noktası oyundan çıkarken yazılırken emülatör *Lütfen bekleyin...*
+gösterir.
 
 ### 3.8 Oyunları, RetroArch'ı ve Uygulamaları Başlatma
 
-**Cross** seçilen oyunu başlatır. PS1 oyunu seçilen PS1 emülatöründe (bölüm 3.5) tam ekranda çalışır,
-çıkana kadar - konsolda ön **Reset** düğmesi (başlatıcıya devam noktasıyla) veya **Power** (konsol
-kapanır) ile; Pi veya PC'de emülatörün menüsü (pad'ta Select + Start veya klavyede Esc) ile.
-**Square** PS1 oyununu RetroArch'ta başlatır.
+**Cross** seçilen oyunu başlatır. PS1 oyunu seçilen PS1 emülatöründe (bölüm 3.6) tam ekranda çalışır, çıkana kadar -
+konsolda ön **Reset** düğmesi (başlatıcıya devam noktasıyla; oyun içi menüden de çalışır) veya **Power** (konsol
+kapanır) ile; Pi veya PC'de emülatörün oyun içi menüsüyle (aşağıda). **Square** PS1 oyununu RetroArch'ta başlatır.
+
+**Oyun içi menü** (`pcsx-abnxt`). Menü düğmesine - kumandanın Home'u, Home'u olmayan kumandada **Select + Start**
+veya klavyede **Esc** - bas; oyun, son karesinin görüntüsüyle bir menünün arkasında durur. Menü düğmesini **2 saniye
+basılı tutmak** Reset ile aynıdır: oyundan çıkar. L1 / R1 üç sekmesi arasında geçer ve menü en son bırakıldığı sekmede ve
+satırda açılır:
+
+- **Oyun**: *Oyuna devam et*; *Kayıtlar* altında: *Hızlı kayıt*, *Hızlı yükleme* ve *Otomatik kaydı yükle* (30
+  saniyeye kadar önceki oyun - emülatör sen oynarken onu kendi kendine bellekte tutar); *CD disk* altında: *Disk
+  değiştir* ve *Oyunu sıfırla* (baştan başlatır); *Ayarları bu oyun için kaydet* (bölüm 3.7'ye bakın), *PCSX menüsü*
+  (PCSX-ReARMed'in kendi sayfaları: seçenekler, hileler, hakkında) ve *Çık* (AutoBleem'e geri).
+- **Görüntü**: *Görüntü* (ekran çözünürlüğü - konsolda Seçenekler'den seçilir ve burada yalnızca gösterilir),
+  *Çözünürlük* (1x veya 2x), *Dikişleri kaldır*, *Dithering*, *Ölçekleme*, *Yumuşatma*, *Filtre*, *Scanlines* ve
+  *Scanline parlaklığı*. Her satırın sağda bir yardım satırı vardır. CRT-Pi 1080p'de konsol için fazla ağırdır.
+  Geçerli olmayan satır soluktur ve yardımı nedenini söyler.
+- **Kontrolcüler**: *Kontrolcü 1* ve *Kontrolcü 2*: standart (dijital), analog (DualShock), bir tabanca veya yok;
+  oyun devam edince etkili olur.
+
+Menü başlatıcının ab2.0.0 görünümüyle çizilir, kumandaların pilleri ve son hızlı kayıttan resimle.
 
 **RetroArch** oyunu RetroArch'ta başlatıcının sistemine seçtiği çekirdeğiyle başlar; menüsünden
 *Kapanışı Kapat* veya *RetroArch'ı Kapat* başlatıcıya geri gelir. Sistem menüsündeki RetroArch öğesi
@@ -393,14 +446,17 @@ durdurmuş olan kapatılır - liste bunu söyler.
 **AutoBleem Store** ilk eklentidir: bir basışla AutoBleem'in çalıştığı her sistemde kurmak için Uygulamalar
 ve Oyunlar (PlayStation Classic AutoBleem kernel'i WiFi gerekir). Dört sekme, L1 / R1 arası:
 
-- **Uygulamalar** ve **Oyunlar**: kaynakların ne sunduğu, her resim, sürüm, boyut ve kaynak favicon ile.
-  Yüklü öğeler gri. Cross kurar (veya günceller veya başarısızlıktan sonra yeniden dener), Triangle Store'un
-  kurduğunu kaldırır. L2 / R2 veya Sol / Sağ sayfaları çevir, **Select** bir kez bir kaynağı göster, **Start**
-  başlıkları ara. Öğe resimleri önbellek ve yükleme başarısız olursa yeniden denenir.
-- **İndirmeler**: indirilen, bekleyen, başarısız veya yüklü olan. İlerleme çubuğu sabit günceller. İndirmeler
-  Store'dan çıkıktan sonra arka planda devam eder; oyun başlatma veya kapama yalnızca duraklat ve durdurulmuş
-  indirme neresi bıraktıysa devam eder. Yüklü oyun sonraki taramadan sonra rafa görünür, Store'un resmi
-  kapakta. 2 GB üzerinde indirmeler tüm platformlarda çalışır, 32-bit yapılar da.
+- **Uygulamalar** ve **Oyunlar**: kaynakların ne sunduğu, her biri resim, sürüm, boyut ve kaynak simgesiyle. Yüklü
+  öğeler *Yüklendi* rozeti taşır. Cross kurar (veya günceller, başarısızlıktan sonra yeniden dener ya da sıradaki veya
+  süren indirmeyi iptal eder), Triangle Store'un kurduğunu kaldırır, Square listeleri yeniler. L2 / R2 harfe göre
+  atlar, **Select** bir kerede bir kaynağı gösterir, **Start** başlıkları arar. Altbilgi seçili satır için tuşları
+  gösterir. Öğe resimleri önbelleğe alınır ve yüklenmezse yeniden denenir.
+- **İndirmeler**: indirilen, bekleyen, başarısız veya yüklü olan. İlerleme çubukları düzenli güncellenir ve başlatıcının
+  başka yerindeyken bir balon süren indirmeyi hızı ve kalan süresiyle gösterir (`1.4 MB/s · 0:42`). İndirmeler Store'dan
+  çıktıktan sonra da arka planda devam eder; oyun başlatma veya kapatma yalnızca duraklatır ve durdurulmuş indirme
+  neresi bıraktıysa oradan devam eder. Ağ giderse öğe *Ağ bekleniyor* der ve ağ dönünce kaldığı yerden devam eder
+  (30 dakika sonra vazgeçer). Yüklü oyun sonraki taramadan sonra rafta görünür, Store'un resmi kapakta. 2 GB üzerinde
+  indirmeler tüm platformlarda çalışır, 32-bit yapılar da.
 - **Kaynaklar**: listeler nereden gelir - AutoBleem'in kendi kataloğu, `System/Extensions/store/sources/`'a
   atılan TSV listesi ve **Kaynak URL'si Ekle** ile eklediğin adresler. Her kaynak liste simge gösterir. Cross
   eklediğin yeniden adlandırır, adresi değiştirir, `http://` ve `https://` arasında geçişler veya kaldırır.
@@ -451,7 +507,7 @@ anlatır ve `tools/proc_check.py` AutoBleem kaynakta paylaşmadan önce birini k
 
 ### 4.1 Oyun Yöneticisi
 
-Klasörleriyle PS1 oyunları bir liste ve seçilen kapağı ve detayları. Cross oyun editörünü açar, **Square
+Yalnızca başlıklarla PS1 oyunları bir liste (oyunun klasörü detaylarında) ve seçilen oyunun kapağı. Cross oyun editörünü açar, **Square
 oyunu siler** (klasör ve ikinci sorudan sonra kaydedilen noktalar), Triangle her kapak PNG'yi oyunların
 yanında siler (tarama veritabanlarından almaya devam eder), L2 / R2 sayfalar. Sürücünün boş alanı sağ üst
 köşede. Oyun Yöneticisi tarama çalışana kadar bekler.
@@ -460,8 +516,8 @@ köşede. Oyun Yöneticisi tarama çalışana kadar bekler.
 
 ### 4.2 Donanım Bilgisi
 
-Makine gerçekleri - sistem, donanım, depolama boş alanla, ağ adresleri, ekran ve ses sürücüleri, bağlı
-kontrolcüler - her saniye yeniden okunan. AutoBleem kernel'i olan konsolda bu **PSC-Bios** açar (bölüm 6).
+Makine gerçekleri - sistem, donanım, depolama boş alanla, ağ adresleri, ekran ve ses sürücüleri, bağlı kontrolcüler
+- her saniye yeniden okunan. Konsol dahil her platformda aynı sayfadır; ağ ve kontrolcü ayarı ekranları **Ağ ve Kontrolcüler**'dir (PSC-Bios, bölüm 6).
 
 İlk iki kontrolcü, Oyuncu 1 ve Oyuncu 2 olarak gösterilir – PS1 emülatörünün onlara atadığı portlar.
 Diğer tüm kontrolcüler PS1 emülatörü tarafından kullanılmayan olarak gösterilir. RetroArch, kendi
@@ -552,7 +608,7 @@ sadece özel ağları izin ver.
 
 PlayStation Classic sürücüsü için iki araç. İkisi de başlatıcının teması ve diliyle çizer ve iki de pad tarafından
 yönetilir - ve gamepad sihirbazında konsolun ön düğmeleri tarafından. **PSC-Bios** konsolun paketiyle gelen bir
-eklentidir: Sistem menüsünün *Donanım Bilgisi* bunu açar ve Eklentiler listesindedir. **ABFlashKit** Apps
+eklentidir: Hızlı menüdeki ve Sistem menüsündeki *Ağ ve Kontrolcüler* öğesi bunu açar ve Eklentiler listesindedir. **ABFlashKit** Apps
 setindeki bir Uygulamadır.
 
 ### 6.1 PSC-Bios
@@ -624,7 +680,7 @@ Project Eris) konsolu kurulumunu reddeder: önce stok'a geri getir.
   - her zaman sürücüde - `update.log` (çevrimiçi güncelleme) ve `updateroms.log` (UpdateRoms).
 - **Oyun Raf'ta Değil**: klasör yerleşimini kontrol et (oyun başına klasör, bölüm 3.9 görüntü biçimleri). *Oyun Yöneticisi*
   tarama reddettikleri oyunları *Eklenmedi* işaretleri ile listeler, nedeni ile; böyle klasör Square siler. Sistem menüsündeki
-  Yeniden Tara çalıştırma çalıştırır.
+  *Oyunları yeniden tara* taramayı yeniden çalıştırır.
 - **Kapak Yok**: kapak veritabanları yüklenmedi (yükleyiciyi tekrar çalıştır işaretli olarak) veya RetroArch oyunları konsolda
   UpdateRoms PC'de çalıştırılmadı.
 - **Kontrolcü Hiçbir Şey Yapmıyor veya Düğmeleri Karışık**: PSC-Bios gamepad sihirbazı (bir konsol) eşler; Pi veya PC'de
