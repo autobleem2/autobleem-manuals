@@ -6,10 +6,10 @@ AutoBleem 2 is een gamelauncher voor de **PlayStation Classic** - en sinds versi
 
 ## 1. Wat u krijgt
 
-- **De launcher** - de boekenplank met hoezen, de sets (PlayStation, RetroArch, Apps), gamedetails, systeemmenu, instellingen, geheugenkaarten en savestate-tools. Hetzelfde programma op elk platform.
+- **De launcher** - de boekenplank met hoezen, de sets (PlayStation, RetroArch, Apps), gamedetails, het snelmenu en het systeemmenu, instellingen, geheugenkaarten en savestate-tools, en de Winkel voor het downloaden van apps en games. Hetzelfde programma op elk platform.
 - **Twee PS1-emulatoren** - `pcsx-abnxt`, de huidige (standaard) en `pcsx-ab`, de klassieke emulator die AutoBleem altijd heeft meegeleverd. U kiest er een in de instellingen; beide gebruiken dezelfde instellingen en geheugenkaarten.
 - **RetroArch** (optioneel op elk platform) voor andere systemen: NES, SNES, Mega Drive, Game Boy, arcade en veel meer. AutoBleem bouwt zijn RetroArch-lijsten uit de ROM's die u kopieert en start elk spel met de juiste core.
-- **Console tools** (alleen PlayStation Classic): *PSC-Bios* voor WiFi, klok en controller-mapping, en *ABFlashKit* voor het installeren van de AutoBleem-kernel.
+- **Console tools**: *PSC-Bios* (in de menu's getoond als *Netwerk & controllers*) voor WiFi, klok, Bluetooth en controller-mapping - op de console, en ook op een Raspberry Pi en de PC-stick - en *ABFlashKit* voor het installeren van de AutoBleem-kernel (alleen PlayStation Classic).
 - **UpdateRoms** voor Windows: vernieuwt de RetroArch-lijsten en artwork van een console-stick op een PC, omdat de console zelf geen netwerk heeft.
 
 ![De launcher: de boekenplank met hoezen, de details van het geselecteerde spel, de buttonhints](../images/en/launcher.jpg)
@@ -32,7 +32,7 @@ U hebt een Windows-PC, een USB-stick (USB 2.0, 8 GB of meer; de installer format
 3. Klik **Install** en wacht. De voortgangstaven en log tonen elke stap; de stick wordt aan het einde `SONY` genoemd en `UpdateRoms` wordt erop geplaatst (zie hoofdstuk 5).
 4. Verwijder de stick veilig, steek deze in de **tweede USB-poort** van de console (rechts, speler 2) en zet de console aan. AutoBleem start in plaats van het originele menu.
 
-**In- en uitschakelen.** Met de stick erin start de console, knippert het licht enkele seconden (AutoBleem wordt opgehaald) en gaat dan in standby voordat iets wordt weergegeven - dit is de eigen updatemanier van de console, waarmee AutoBleem kan starten. Druk eenmaal op **Power** en de launcher verschijnt. *Power Off* in het systeemmenu of de Power-knop van de console zet de console in **AutoBleem-standby**: de stick wordt eerst verwijderd, dan wordt het licht **rood** - het teken dat AutoBleem goed werkt - en de volgende Power-knop brengt de launcher in enkele seconden terug. **Terwijl het licht rood is, kunt u de stick verwijderen** en op een PC steken zonder dat Windows deze wil controleren; steek deze terug voordat u Power indrukt. Het stroomkabel uittrekken gaat de volgende keer opnieuw door de boot-standby.
+**In- en uitschakelen.** Met de stick erin start de console, knippert het licht enkele seconden (AutoBleem wordt opgehaald) en gaat dan in standby voordat iets wordt weergegeven - dit is de eigen updatemanier van de console, waarmee AutoBleem kan starten. Druk eenmaal op **Power** en de launcher verschijnt. *Uitschakelen* in het systeemmenu of de Power-knop van de console zet de console in **AutoBleem-standby**: de stick wordt eerst verwijderd, dan wordt het licht **rood** - het teken dat AutoBleem goed werkt - en de volgende Power-knop brengt de launcher in enkele seconden terug. **Terwijl het licht rood is, kunt u de stick verwijderen** en op een PC steken zonder dat Windows deze wil controleren; steek deze terug voordat u Power indrukt. Het stroomkabel uittrekken gaat de volgende keer opnieuw door de boot-standby.
 
 Om een stick **bij te werken**, voert u een nieuwere installer erover uit: uw games, saves, instellingen en RetroArch-inhoud blijven; alleen AutoBleem's eigen bestanden worden vervangen. Een stick gemaakt met AutoBleem 1.0 of AutoBleem-NG wordt automatisch naar de nieuwe layout geconverteerd.
 
@@ -103,7 +103,13 @@ Het uitvoeren van een nieuwere setup erover werkt het programma bij en behoudt d
 
 ### 3.1 De launcher
 
-De launcher opent op de boekenplank: de hoezen van de huidige set, degene die in het midden is geselecteerd, de details ervan - uitgever, jaar, serienummer, regio, spelers, wanneer het voor het laatst is gespeeld - en een playknop. De balk onderaan toont wat de knoppen doen. Een scan van de gamemap wordt op elke start op de achtergrond uitgevoerd; terwijl deze wordt uitgevoerd, toont een bubble rechtsboven de voortgang, en verschijnen nieuwe games op de boekenplank naarmate ze worden gevonden.
+De launcher opent op de boekenplank: de hoezen van de huidige set, degene die in het midden is geselecteerd met een zachte weerspiegeling eronder, de details ervan in een compact raster - uitgever, jaar, serienummer, regio, spelers, wanneer het voor het laatst is gespeeld (een gegeven dat een spel niet heeft, wordt weggelaten) - en een playknop. Het standaarduiterlijk is het thema **ab2.0.0**; een verse installatie en een update die het meebrengt schakelen er eenmalig naar over. De hintbalk onderaan heeft twee regels van vier plaatsen. De eerste zegt wat de knoppen doen voor het geselecteerde spel (spelen, spelen in RetroArch, de iconrij openen, het snelmenu); de tweede toont altijd Select (de set), Start (een willekeurig spel), Triangle (de gids) en L2 + R2 (het systeemmenu), gedimd wanneer een ervan niets doet. Een scan van de gamemap wordt op elke start op de achtergrond uitgevoerd; terwijl deze wordt uitgevoerd, toont een bubble rechtsboven de voortgang, en verschijnen nieuwe games op de boekenplank naarmate ze worden gevonden.
+
+**Een verse installatie** heeft nog geen games: in plaats van een lege boekenplank toont de launcher een welkomstkaart - *Hoi, en welkom bij AutoBleem!* - die zegt dat u games in de map `Games` moet zetten en *Games opnieuw scannen* moet kiezen, en die de plek voor uw platform noemt: op je stick (PlayStation Classic, PC-stick), op je SD-kaart (Raspberry Pi) of in je AutoBleem-map (Windows). De kaart verdwijnt zodra een scan het eerste spel vindt.
+
+**Meldingen** verschijnen als bubbles rechtsboven: de voortgang van de scan, de naam van de set waarnaar u overschakelde (*Toont: ...*, zolang Opties → *Weergavetijd melding* aangeeft), een lage controllerbatterij, een melding na een crash, een scanner-processor die bezig is en de lopende download van de Winkel. De bubble van de download toont de snelheid en de resterende tijd, bijvoorbeeld `1.4 MB/s · 0:42`.
+
+**De kanaalmarkering.** Een build die geen definitieve release is, toont een klein label onder het batterijplaatje van de controller linksboven: een chip met het kanaal - `ALPHA`, `BETA` of `RC` voor een pre-release, `TESTING` voor elke andere pre-release, `NIGHTLY` voor een nightly build, `DEV` voor een met de hand gemaakte build - en ernaast de korte versie (bij `DEV` de commit waaruit hij is gebouwd). Een release toont geen label.
 
 Een draadloze controller met een bekende batterijstatus - op de console, een Pi of de pc-stick, niet onder Windows - wordt getoond als een klein pictogram met het percentage, gestapeld vanaf de linkerbovenhoek op een eigen plaatje. Een controller die is gekoppeld aan Speler 1 of Speler 2 (volgens de optie Speler 1 / Speler 2 wisselen) krijgt het label P1/P2; een niet-gekoppelde of een derde controller krijgt geen label. Wanneer de batterij van een controller laag wordt, meldt een notificatieregel dit eenmalig, met naam en percentage.
 
@@ -120,6 +126,7 @@ Een draadloze controller met een bekende batterijstatus - op de console, een Pi 
 | Triangle | Buttonhulpgids. |
 | Start | Willekeurig spel uit de huidige set. |
 | Select | Set-selector: PlayStation / RetroArch / Apps tabbladen (L1 / R1), groepen van het tabblad (Omhoog / Omlaag, L2 / R2 pagina's), Cross selecteert. |
+| Omhoog | Het snelmenu (sectie 3.4). |
 | Omlaag | Open de iconrij onder het spel (Instellingen, Spel, Geheugenkaart, Hervatten). Omhoog sluit. |
 | L2 + R2 | Systeemmenu (sectie 3.4). |
 
@@ -131,53 +138,59 @@ In elke lijst en menu: Omhoog / Omlaag verplaatsen, **L2 / R2 pagina's draaien**
 
 ### 3.3 De sets
 
-**Select** opent de set-selector. Het PlayStation-tabblad vermeldt *Alle Games*, *Interne Games* (de ingebouwde twintig op PlayStation Classic), elke map die u maakte onder `Games/` (een spel in een submap behoort tot die groep), *Favoriete Games*, *Spelgeschiedenis* en, wanneer een spel zo is gemarkeerd, *Lightgun Games*. Het RetroArch-tabblad vermeldt één groep per systeem met games, plus RetroArch's eigen Favorieten en Geschiedenis. Het Apps-tabblad groepeert applicaties op type: *Alle apps*, vervolgens *Games*, *Emulatoren*, *Tools*, *Media* en *Overig* (de categorie wordt ingesteld in het `app.ini`-bestand van elke app). Elke rij toont hoeveel items zij bevat; een groep zonder items opent op een lege boekenplank met alleen Instellingen in de iconrij.
+**Select** opent de set-selector. Het PlayStation-tabblad vermeldt op een PlayStation Classic *Alle games* en *Interne games* (de ingebouwde twintig), daarna *USB-spellen* (alles in `Games/`) en elke map die u daaronder maakte (een spel in een submap behoort tot die groep), daarna *Favoriete games*, *Game geschiedenis* en, wanneer een spel zo is gemarkeerd, *Lightgun-spellen*. Op een Raspberry Pi, een PC-stick en Windows zijn er geen interne games, dus de lijst begint bij *USB-spellen*, de hele bibliotheek. Het RetroArch-tabblad (alleen waar RetroArch is geïnstalleerd) vermeldt één groep per systeem met games, plus RetroArch's eigen Favorieten en Geschiedenis. Het Apps-tabblad groepeert applicaties op type: *Alle apps*, vervolgens *Games*, *Emulatoren*, *Tools*, *Media* en *Overig* (de categorie wordt ingesteld in het `app.ini`-bestand van elke app). Elke rij toont hoeveel items zij bevat; een groep zonder items opent op een lege boekenplank met alleen Instellingen in de iconrij. De voetregel noemt de toetsen: L1 / R1 tabbladen, L2 / R2 een pagina, Cross kiest, Circle *Terug*.
 
 ### 3.4 Het snelmenu
 
-**Omhoog** in de launcher, of het **tandwielpictogram** in de iconrij (waar Instellingen / Spel / Geheugenkaart / Hervatten zijn): het snelmenu voor acties die u snel wilt bereiken. Een korte lijst: *Spellen opnieuw scannen* (start nu een scan), *Store* (AutoBleem Store voor extensies), *Netwerk en Controllers* (alleen waar een geïnstalleerde extensie de `network`-vermelding levert - PSC-Bios op console, Pi en PC-stick: WiFi, Bluetooth-koppeling, controller-mapping-wizard - zie hoofdstuk 6; grijs met "enable it in Extensions" wanneer die extensie is uitgeschakeld - Cross opent de Extensies-lijst) en *Systeemmenu...* (het volledige menu hieronder). Omhoog / Omlaag verplaatsen (rond), Cross selecteert, Circle terug. Hier is niets uniek - elk item staat ook in het systeemmenu.
+**Omhoog** in de launcher, of het **tandwielpictogram** in de iconrij (waar Instellingen / Spel / Geheugenkaart / Hervatten zijn): het snelmenu voor acties die u snel wilt bereiken. Een korte lijst: *Games opnieuw scannen* (start nu een scan), *Winkel* (games, apps en extensies bekijken en installeren), *Netwerk & controllers* (alleen waar een geïnstalleerde extensie de `network`-vermelding levert - PSC-Bios op console, Pi en PC-stick: WiFi, Bluetooth-koppeling, controller-mapping-wizard - zie hoofdstuk 6; grijs met "zet hem aan bij Extensies" wanneer die extensie is uitgeschakeld - Cross opent de Extensies-lijst), *Launcher herstarten* (sluit AutoBleem en start het opnieuw; alleen op console, Pi en PC-stick) en *Systeemmenu...* (al het andere: Opties, Game Manager, Uitschakelen en meer - het volledige menu hieronder). Omhoog / Omlaag verplaatsen (rond), Cross selecteert, Circle terug. Elk item heeft een beschrijving van één regel op zijn rij. Behalve de Winkel en *Launcher herstarten* staat elk item ook in het systeemmenu.
 
 ### 3.5 Het systeemmenu
 
-**L2 + R2** (samen, in willekeurige volgorde) opent het systeemmenu over de boekenplank. Het menu is ingedeeld in secties:
+**L2 + R2** (samen, in willekeurige volgorde) opent het systeemmenu over de boekenplank. Elke rij heeft een beschrijving van één regel, en het menu is ingedeeld in secties:
 
 | Sectie | Item | Wat het doet |
 |---|---|---|
-| (bovenkant) | Spellen opnieuw scannen | Zoekt nu naar nieuwe, gewijzigde of verwijderde spellen (de scan controleert de map ook zelf). |
+| (bovenkant) | Games opnieuw scannen | Zoekt nu naar nieuwe, gewijzigde of verwijderde spellen (de scan controleert de map ook zelf). |
 | | Extensies | De extensies op de stick - AutoBleem Store en anderen (sectie 3.12). |
-| **Bibliotheek** | Gamebeheerder | PS1-spellen als lijst met hun mappen: verwijder een spel, wis artwork. Uitgeschakeld terwijl scan wordt uitgevoerd. |
-| | Geheugenkaarten | Uw geheugenkaartsets (sectie 3.7). |
-| | Scanner-processors | Programma's die elke scan eerst uitvoert - hun volgorde, aan of uit (sectie 3.13). Uitgeschakeld terwijl scan wordt uitgevoerd. |
-| **Systeem** | Instellingen | AutoBleem's instellingen (sectie 3.6). |
-| | Netwerk en Controllers | Alleen waar een geïnstalleerde extensie de `network`-vermelding levert (`Provides=network` in zijn `extension.ini` - PSC-Bios op console, Pi en PC-stick) - WiFi, Bluetooth-controller-koppeling, DualShock 3-setup en controller-mapping-wizard - zie hoofdstuk 6. Wanneer die extensie is geïnstalleerd maar uitgeschakeld, blijft dit item grijs met "enable it in Extensions" - Cross opent de Extensies-lijst ernaartoe. |
-| | Hardwaregegevens | Machinefeiten: systeem, CPU, opslag, netwerkinterfaces, tijdzone, beeldscherm, controllers en hun toewijzingen. Op een PlayStation Classic met de AutoBleem-kernel opent **PSC-Bios** (hoofdstuk 6); op andere machines toont deze informatiepagina. |
-| | Software-update | (Raspberry Pi en PC) Controleer de website nu op nieuwere AutoBleem of RetroArch. |
+| **Bibliotheek** | Game Manager | PS1-spellen als lijst met hun mappen: verwijder een spel, wis artwork. Uitgeschakeld terwijl scan wordt uitgevoerd. |
+| | Memory kaarten | Uw geheugenkaartsets (sectie 3.7). |
+| | Scanprocessors | Programma's die elke scan eerst uitvoert - hun volgorde, aan of uit (sectie 3.13). Uitgeschakeld terwijl scan wordt uitgevoerd. |
+| **Systeem** | Opties | AutoBleem's instellingen (sectie 3.6). |
+| | Netwerk & controllers | Alleen waar een geïnstalleerde extensie de `network`-vermelding levert (`Provides=network` in zijn `extension.ini` - PSC-Bios op console, Pi en PC-stick) - WiFi, Bluetooth-controller-koppeling, DualShock 3-setup en controller-mapping-wizard - zie hoofdstuk 6. Wanneer die extensie is geïnstalleerd maar uitgeschakeld, blijft dit item grijs met "zet hem aan bij Extensies" - Cross opent de Extensies-lijst ernaartoe. |
+| | Hardware informatie | Machinefeiten: systeem, CPU, opslag, netwerkinterfaces, tijdzone, beeldscherm, controllers en hun toewijzingen - op elk platform dezelfde pagina (sectie 4.2). |
+| | Software-update | (Raspberry Pi en PC) Controleer de website nu op nieuwere AutoBleem of RetroArch; de rij zegt *Update beschikbaar* wanneer de launcher er al een kent. |
 | | Over | Credits en licentie. |
-| **Verlaten** | RetroArch | Verlaat de launcher voor RetroArch's eigen menu. RetroArch sluiten komt terug. |
+| **Verlaten** | RetroArch | (Alleen waar RetroArch is geïnstalleerd.) Verlaat de launcher voor RetroArch's eigen menu. RetroArch sluiten komt terug. |
 | | Uitschakelen | Na bevestiging: op console AutoBleem-standby - stick verwijderd, licht rood, Power brengt launcher terug (sectie 2.1); op Pi of PC schakelt machine uit. |
 
 ![Het systeemmenu](../images/en/system-menu.jpg)
 
 ### 3.6 Instellingen
 
-De instellingen zijn in groepen; Omhoog / Omlaag beweegt tussen groepen, Links / Rechts verandert een waarde, Circle verlaat en slaat op. Elke wijziging wordt onmiddellijk toegepast.
+De instellingen zijn in groepen, elk onder een kop; Omhoog / Omlaag beweegt tussen rijen, Links / Rechts verandert een waarde (een tik is één stap, ingedrukt houden scrolt door), L1 / R1 springen naar de eerste / laatste rij, L2 / R2 bladeren, Circle verlaat en slaat op. Elke wijziging wordt onmiddellijk toegepast. Aan/uit-waarden lezen **AAN** / **UIT**.
 
 | Groep / Instelling | Wat het doet |
 |---|---|
-| **Interface**: AutoBleem Theme | Het uiterlijk. Thema's staan in `Themes/`; een theme-zip die daar wordt neergezet, wordt bij het volgende bezoek uitgepakt. AutoBleem's thema's worden bij elke update vernieuwd - om er een aan te passen, kopieert u deze eerst onder een nieuwe naam. |
-| Cover Style | Het sieraad-frame rond PS1-hoezen. |
-| Language | Launchers taal, direct toegepast (17 talen). |
-| Use Font from Theme / Font | Lettertype van klassieke schermen: die van het thema, of een `.ttf`/`.otf` van `resources/fonts`, `RetroArch/fonts` of themamapje. |
-| Showing Timeout | Hoe lang de "Showing: ..."-melding blijft, in seconden (0 = altijd). |
-| **Sound**: Music, Background Music | Welk nummer onder de launcher speelt (die van het thema, of een bestand uit `resources/music`), en of er überhaupt een speelt. |
-| **Emulation**: PS1 Emulator | `pcsx-abnxt` (standaard: huidge PCSX-ReARMed met AutoBleem-toevoegingen) of `pcsx-ab` (klassiek). Een opgeslagen hervattingspunt gaat verder in de ander, behalve als het spel zonder BIOS-bestand liep. |
-| Widescreen | De beeldverhoudingsaanpassing van PS1-emulator voor elk spel. |
-| Play all PSX games with RA | Elk PS1-spel start in RetroArch's PS1-core. |
-| Update RA Config | AutoBleem schrijft zijn instellingen in RetroArch's config wanneer het daar een spel start. |
-| Speler 1 / Speler 2 wisselen (PS1-emulators) | Wisselt welke van de eerste twee controllers Speler 1 is en welke Speler 2, in beide PS1-emulators (pcsx-abnxt en de klassieke pcsx-ab). Het heeft alleen effect met twee of meer controllers aangesloten; met één controller is het altijd Speler 1. RetroArch wordt niet beïnvloed. |
-| **Library**: Show Internal Games | De ingebouwde games van de console in PlayStation-lijsten (alleen PlayStation Classic). |
-| Fetch box art online | De scan haalt ontbrekende hoezen van libretro's servers (Raspberry Pi, PC, Windows). |
-| **Updates** | (Raspberry Pi, PC, Windows) `stable`, `latest` (ook pre-releases) of `off`. |
+| **Interface**: Beeld | De resolutie van het scherm, voor de launcher en de PS1-emulator: *Auto* (de eigen modus van het scherm, getoond als *Auto (1920x1080)*) of elke modus die het scherm vermeldt; de console biedt 720p en 1080p. Over een nieuwe modus wordt gevraagd: *Deze beeldmodus behouden?* - bevestigt u niet, dan gaat hij na een aftelling terug. Niet in een ontwikkelvenster. |
+| Schermschaling van de emulator | Hoe de PS1-emulator het beeld van een spel aan het scherm aanpast: *1x1* (de eigen pixels van de PlayStation), *2x (geheel)*, *4:3*, *4:3 (geheel)* of *Volledig scherm*. Gehele schaling gebruikt alleen hele veelvouden (het scherpst). Het vervangt de oude Widescreen-schakelaar; de klassieke `pcsx-ab` en RetroArch kennen alleen volledig scherm en 4:3. |
+| AutoBleem thema | Het uiterlijk. Thema's staan in `Themes/`; een theme-zip die daar wordt neergezet, wordt bij het volgende bezoek uitgepakt. AutoBleem's thema's worden bij elke update vernieuwd - om er een aan te passen, kopieert u deze eerst onder een nieuwe naam. De standaard is **ab2.0.0**. |
+| Cover stijl | Het sieraad-frame rond PS1-hoezen. |
+| Glans op de hoes | Een glans die over de geselecteerde hoes gaat wanneer de boekenplank tot rust komt. |
+| Taal | Launchers taal, direct toegepast (17 talen). |
+| Weergavetijd melding | Hoe lang de infobubbles ("Toont: ...", de samenvatting van de scan) blijven, 0 tot 20 seconden; 0 toont *Uit*. Fouten hebben hun eigen vaste tijd. |
+| Startscherm | Het AutoBleem-beeld wanneer de launcher start; uit gaat meteen naar de boekenplank. |
+| Animaties | De beweging tussen schermen; uit maakt elke schermwisseling onmiddellijk. |
+| **Lettertypen**: Standaardlettertype gebruiken | De launcher gebruikt zijn standaardlettertype (Red Hat Text) of - uitgeschakeld - het hieronder gekozen lettertype. |
+| Lettertype | Een `.ttf`/`.otf` van `resources/fonts`, `RetroArch/fonts` of themamapje; de rij noemt het lettertype in gebruik. |
+| **Geluid**: Muziek, Achtergrond muziek | Welk nummer onder de launcher speelt (die van het thema, of een bestand uit `resources/music`), en of er überhaupt een speelt. |
+| **Emulatie**: PS1-emulator | `pcsx-abnxt` (standaard: huidge PCSX-ReARMed met AutoBleem-toevoegingen) of `pcsx-ab` (klassiek). Een opgeslagen hervattingspunt gaat verder in de ander, behalve als het spel zonder BIOS-bestand liep. |
+| Speler 1 / speler 2 wisselen (PS1-emulators) | Wisselt welke van de eerste twee controllers Speler 1 is en welke Speler 2, in beide PS1-emulators (pcsx-abnxt en de klassieke pcsx-ab). Het heeft alleen effect met twee of meer controllers aangesloten; met één controller is het altijd Speler 1. RetroArch wordt niet beïnvloed. |
+| Speel alle PSX games met RA, Update RA configuratie, RetroArch-configuratie bewaren | (Alleen waar RetroArch is geïnstalleerd.) Elk PS1-spel start in RetroArch's PS1-core; AutoBleem schrijft zijn instellingen in RetroArch's config wanneer het daar een spel start; een wijziging in RetroArch's eigen menu blijft behouden wanneer RetroArch afsluit. |
+| **Bibliotheek**: Toon interne games | De ingebouwde games van de console in PlayStation-lijsten (alleen PlayStation Classic). |
+| Hoesjes online ophalen | De scan haalt ontbrekende hoezen van libretro's servers (Raspberry Pi, PC, Windows). |
+| **Updates** | Het updatekanaal: `release` (de geteste versie), `testing` (de volgende versie, in test), `nightly` (de nieuwste ontwikkelbuild) of `off`. De standaard volgt de geïnstalleerde versie. Niet getoond op een ontwikkelhost. |
+| **Diagnose**: Logbestanden op de stick bewaren | Bewaar elk log op de stick vanaf de volgende start, niet alleen na een crash (hoofdstuk 7). |
+| Prestaties tonen | Een overlay linksonder: framerate, CPU-belasting, threads en geheugen; de emulator toont in het spel ook zijn FPS en CPU. |
 
 ![Instellingen in groepen](../images/en/options.jpg)
 
@@ -185,15 +198,18 @@ De instellingen zijn in groepen; Omhoog / Omlaag beweegt tussen groepen, Links /
 
 Met een spel geselecteerd, **Omlaag** opent de iconrij ervan: **Instellingen** (hierboven), **Spel** (de eigen instellingen), **Geheugenkaart** (de geheugenkaart ervan) en **Hervatten** (de savestates). Cross opent degene onder de cursor.
 
-De **gameeditor** toont rechts de details van het spel en links de instellingen in drie groepen:
+De **gameeditor** toont rechts de details van het spel (titel, uitgever, jaar, spelers, map, geheugenkaart) en links de instellingen in vier groepen:
 
-- **Spel**: *Favoriet* (in Favoriete Games-groep), *Lightgun-spel* (een lightgun-spel - het voegt zich bij Lightgun-groep en loopt altijd in RetroArch, waarvan de PS1-core GunCon heeft), *Met RA afspelen* (dit spel loopt in RetroArch), *Gegevens vergrendelen* (scanner handhaaft gametitel, serienummer en schijflijst zoals u ze ingesteld hebt).
-- **Video**: hoge resolutie, scanlines en hun niveau, frame skip, GPU-plugin en *Filter* - hoe het beeld wordt geschaald: Uit (zuivere pixels), Lineair (glad) of Scherp (scherpe pixels zonder shimmer; alleen `pcsx-abnxt` - klassiek `pcsx-ab` en RetroArch tonen als Uit).
-- **Emulator**: SpeedHack, CPU-klok, SPU-interpolatie, startlogo (uit slaat BIOS-shell over - voor homebrewschijf waarvan aangepast logo boot breekt) en met `pcsx-abnxt` *Smoothing*-filter en *Sony hacks*-toggle.
+- **Game**: *Favoriet* (in Favoriete games-groep), *Lightgun-spel* en *Speel met RA* (alleen waar RetroArch is geïnstalleerd: een lightgun-spel voegt zich bij de Lightgun-groep en loopt altijd in RetroArch, waarvan de PS1-core GunCon heeft; *Speel met RA* laat dit spel in RetroArch lopen), *Gegevens vergrendelen* (scanner handhaaft gametitel, serienummer en schijflijst zoals u ze ingesteld hebt).
+- **Beeld**: *Resolutie* (1x of 2x, op de ingebouwde GPU), *Naden verwijderen* (alleen met 2x), *Dithering* (Uit, Aan, Altijd), *Vloeiend maken*, het *Filter* - hoe het beeld wordt geschaald: Dichtstbijzijnd (zuivere pixels), Lineair (glad), Scherp of Scherp (eenvoudig) (scherpe pixels zonder shimmer), Quilez, of de CRT-filters CRT (fast) en CRT-Pi (ze tekenen hun eigen scanlines, dus de scanline-rijen worden grijs) - en *Scanlines* met hun *Helderheid scanlines*. Resolutie, naden verwijderen, dithering, vloeiend maken en de filters anders dan Lineair en Dichtstbijzijnd zijn voor `pcsx-abnxt`; klassiek `pcsx-ab` en RetroArch tonen de rest als Dichtstbijzijnd.
+- **Rendering**: de GPU-*Plugin* en de *Frameskip* (Auto, Uit, 1 tot 3).
+- **Emulator**: SpeedHack, CPU-klok, SPU-interpolatie, startlogo (uit slaat BIOS-shell over - voor homebrewschijf waarvan aangepast logo boot breekt) en met `pcsx-abnxt` de *Sony-hacks*-toggle.
+
+De beeldvorm en de resolutie van het scherm zijn globaal (Opties → *Schermschaling van de emulator* en *Beeld*). Een spel zonder titel in zijn gegevens wordt getoond onder de naam van zijn map.
 
 Triangle hernoemt het spel, Square wijzigt de geheugenkaart, Start deelt een nieuwe. Circle slaat op en verlaat.
 
-**Instellingen opgeslagen in de emulator.** Het eigen menu van de emulator heeft *Instellingen voor dit spel opslaan*. Als een spel instellingen daar heeft opgeslagen, zijn die wat het speelt, en de gameeditor toont rijen Video en Emulator grijs met die waarden onder titel *Opgeslagen in emulator*. Om terug te gaan naar gameeditor's instellingen, kiest u **Instellingen ontgrendelen** en bevestigt: dit verwijdert de door emulator opgeslagen instellingen, en kunnen die rijen opnieuw worden gewijzigd. Beide emulatoren, `pcsx-ab` en `pcsx-abnxt`, lezen en schrijven dezelfde opgeslagen instellingen.
+**Instellingen opgeslagen in de emulator.** Het eigen menu van de emulator heeft *Instellingen voor dit spel opslaan*. Als een spel instellingen daar heeft opgeslagen, zijn die wat het speelt, en de gameeditor toont de rijen Beeld, Rendering en Emulator grijs met die waarden onder titel *Opgeslagen in de emulator*. Om terug te gaan naar gameeditor's instellingen, kiest u **Instellingen ontgrendelen** en bevestigt: dit verwijdert de door emulator opgeslagen instellingen, en kunnen die rijen opnieuw worden gewijzigd. Beide emulatoren, `pcsx-ab` en `pcsx-abnxt`, lezen en schrijven dezelfde opgeslagen instellingen.
 
 ![Gameeditor](../images/en/game-editor.jpg)
 
@@ -205,11 +221,19 @@ De **geheugenkaarteditor** (het Geheugenkaart-pictogram) toont de kaart van het 
 
 ![Geheugenkaarteditor](../images/en/memory-card-editor.jpg)
 
-**Hervattingspunten**: wanneer u een PS1-spel verlaat met de Reset-knop van de console (of het menu van de emulator op Pi of PC), bewaart AutoBleem een savestate van waar u was en biedt het onder het **Hervatten**-pictogram aan - vier slots, elk met een afbeelding van het moment. Cross gaat verder met de slot, Triangle verwijdert het. Een spel met een hervattingspunt toont een klein afbeelding op zijn Hervatten-pictogram.
+**Hervattingspunten**: wanneer u een PS1-spel verlaat met de Reset-knop van de console (of het menu van de emulator op Pi of PC), bewaart AutoBleem een savestate van waar u was en biedt het onder het **Hervatten**-pictogram aan - vier slots, getoond als omkaderde kaarten, elk met een afbeelding van het moment, het slotnummer en de datum; de nieuwste is gemarkeerd met **NIEUWSTE** en een ongebruikt slot zegt *Geen hervatpunt*. Cross gaat verder met de slot, Triangle verwijdert het. Een spel met een hervattingspunt toont een klein afbeelding op zijn Hervatten-pictogram; een spel zonder heeft het Hervatten-pictogram grijs. Terwijl het hervattingspunt wordt weggeschreven bij het verlaten van een spel, toont de emulator *Even geduld...*.
 
 ### 3.8 Spellen, RetroArch en Apps starten
 
-**Cross** start het geselecteerde spel. Een PS1-spel loopt in de gekozen PS1-emulator (sectie 3.5), volledig scherm, totdat u het verlaat - op de console met de voorkant **Reset**-knop (terug naar launcher met hervattingspunt) of **Power** (console schakelt uit); op Pi of PC via het in-game menu van de emulator (Select + Start op de controller, of Esc op toetsenbord). **Square** start een PS1-spel in RetroArch.
+**Cross** start het geselecteerde spel. Een PS1-spel loopt in de gekozen PS1-emulator (sectie 3.6), volledig scherm, totdat u het verlaat - op de console met de voorkant **Reset**-knop (terug naar launcher met hervattingspunt; werkt ook vanuit het in-game menu) of **Power** (console schakelt uit); op Pi of PC via het in-game menu van de emulator (hieronder). **Square** start een PS1-spel in RetroArch.
+
+**Het in-game menu** (`pcsx-abnxt`). Druk op de menuknop - de Home-knop van de controller, **Select + Start** op een controller zonder, of **Esc** op een toetsenbord - en het spel stopt achter een menu met het laatste beeld van het spel. **De menuknop 2 seconden ingedrukt houden** is hetzelfde als Reset: het verlaat het spel. L1 / R1 wisselen tussen de drie tabbladen, en het menu opent op het tabblad en de rij waar het verlaten werd:
+
+- **Spel**: *Verder spelen*; onder *Opgeslagen spel*: *Snel opslaan*, *Snel laden* en *Automatische opslag laden* (het spel zoals het tot 30 seconden geleden was - de emulator bewaart het vanzelf in het geheugen terwijl u speelt); onder *Cd*: *Disc wisselen* en *Spel resetten* (begint het opnieuw); *Instellingen voor dit spel opslaan* (zie sectie 3.7), *PCSX-menu* (de eigen pagina's van PCSX-ReARMed: opties, cheats, Over) en *Afsluiten* (terug naar AutoBleem).
+- **Beeld**: *Beeld* (de resolutie van het scherm - op de console wordt die in Opties gekozen en hier alleen getoond), *Resolutie* (1x of 2x), *Naden verwijderen*, *Dithering*, *Schalen*, *Verzachten*, *Filter*, *Scanlines* en *Helderheid scanlines*. Elke rij heeft rechts een hulpregel. CRT-Pi is te zwaar voor de console op 1080p. Een rij die niet van toepassing is, is grijs en de hulp zegt waarom.
+- **Controllers**: *Controller 1* en *Controller 2*: standaard (digitaal), analoog (DualShock), een geweer of geen; werkt zodra het spel verdergaat.
+
+Het menu is getekend in het ab2.0.0-uiterlijk van de launcher, met de controllerbatterijen en het beeld van de laatste snelle opslag.
 
 Een **RetroArch**-spel start in RetroArch met de core die de launcher voor zijn systeem koos; *Close Content* of *Quit RetroArch* in het menu komt terug naar launcher. Het RetroArch-item in het systeemmenu opent RetroArch's eigen menu (XMB) met niets geladen, voor zijn instellingen en eigen content-lijsten.
 
@@ -258,8 +282,8 @@ Op een **PlayStation Classic** gebruikt de emulator de BIOS van de console zelf.
 
 **De AutoBleem Store** is de eerste extensie: Apps en spellen te installeren met één druk, op elk systeem waarop AutoBleem loopt (een PlayStation Classic heeft de AutoBleem-kernel's WiFi nodig). Zijn vier tabbladen, L1 / R1 ertussen:
 
-- **Apps** en **Games**: wat de bronnen aanbieden, elk met afbeelding, versie, grootte en bron favicon. Geïnstalleerde items zijn grijs. Cross installeert (of werkt bij, of probeert opnieuw na mislukking), Triangle verwijdert wat de Store installeerde. L2 / R2 of Links / Rechts draaien pagina's, **Select** toont één bron tegelijk, **Start** doorzoekt de titels. Item-afbeeldingen worden gecacht en kunnen opnieuw proberen als ze niet laden.
-- **Downloads**: wat downloadt, wacht, mislukt of is geïnstalleerd. De voortgangsbalk werkt constant. Downloads gaan door op de achtergrond, ook als u de Store verlaat; een spel starten of uitschakelen pauzeert ze alleen, en een gestopt downloaden gaat verder waar het stopte. Een geïnstalleerd spel verschijnt op de boekenplank na volgende scan, met de afbeelding van de Store als cover. Downloads groter dan 2 GB werken op alle platforms, inclusief 32-bits builds.
+- **Apps** en **Games**: wat de bronnen aanbieden, elk met afbeelding, versie, grootte en bron favicon. Geïnstalleerde items dragen een *Geïnstalleerd*-badge. Cross installeert (of werkt bij, of probeert opnieuw na mislukking, of annuleert een wachtende of lopende download), Triangle verwijdert wat de Store installeerde, Square vernieuwt de lijsten. L2 / R2 springen per letter, **Select** toont één bron tegelijk, **Start** doorzoekt de titels. De voetregel toont de toetsen van de geselecteerde rij. Item-afbeeldingen worden gecacht en kunnen opnieuw proberen als ze niet laden.
+- **Downloads**: wat downloadt, wacht, mislukt of is geïnstalleerd. De voortgangsbalk werkt constant, en terwijl u elders in de launcher bent, toont een bubble de lopende download met zijn snelheid en de resterende tijd (`1.4 MB/s · 0:42`). Downloads gaan door op de achtergrond, ook als u de Store verlaat; een spel starten of uitschakelen pauzeert ze alleen, en een gestopt downloaden gaat verder waar het stopte. Valt het netwerk weg, dan zegt het item *Wachten op het netwerk* en gaat het verder waar het stopte zodra het netwerk terug is (na 30 minuten geeft het op). Een geïnstalleerd spel verschijnt op de boekenplank na volgende scan, met de afbeelding van de Store als cover. Downloads groter dan 2 GB werken op alle platforms, inclusief 32-bits builds.
 - **Bronnen**: waar de lijsten vandaan komen - AutoBleem's eigen catalogus, een TSV-lijst in `System/Extensions/store/sources/` geplaatst, en adressen die u met **Add a source URL** toevoegt. Elke bron toont zijn favicon in de lijst. Cross op een die u toevoegde hernoemt het, wijzigt het adres, schakelt het tussen `http://` en `https://`, of verwijdert het.
 
 ![De Store-Apps-tabblad](../images/en/store-apps.jpg)
@@ -291,13 +315,13 @@ Uw eigen schrijven: Unzip's pagina, `https://github.com/autobleem2/proc_unzip`, 
 
 ### 4.1 Gamebeheerder
 
-De PS1-spellen als lijst met hun mappen en de cover en details van degene die is geselecteerd. Cross opent de gameeditor, **Square verwijdert het spel** (zijn map en, na een tweede vraag, zijn savestates), Triangle verwijdert elke cover-PNG naast de spellen (de scan haalt ze opnieuw uit de databases), L2 / R2 pagina. De vrije ruimte van het station staat rechtsboven. Gamebeheerder wacht terwijl een scan loopt.
+De PS1-spellen als lijst met alleen hun titels (de map van het geselecteerde spel staat in zijn details) en de cover van degene die is geselecteerd. Cross opent de gameeditor, **Square verwijdert het spel** (zijn map en, na een tweede vraag, zijn savestates), Triangle verwijdert elke cover-PNG naast de spellen (de scan haalt ze opnieuw uit de databases), L2 / R2 pagina. De vrije ruimte van het station staat rechtsboven. Gamebeheerder wacht terwijl een scan loopt.
 
 ![Gamebeheerder](../images/en/game-manager.jpg)
 
 ### 4.2 Hardwaregegevens
 
-De machinefeiten - systeem, hardware, opslag met vrije ruimte, netwerkadres, de beeldscherm- en audiostuurprogramma's, de aangesloten controllers - opnieuw gelezen elke seconde. Op een PlayStation Classic met de AutoBleem-kernel opent dit item **PSC-Bios** (hoofdstuk 6).
+De machinefeiten - systeem, hardware, opslag met vrije ruimte, netwerkadres, de beeldscherm- en audiostuurprogramma's, de aangesloten controllers - opnieuw gelezen elke seconde. Het is op elk platform dezelfde pagina, ook op de console; de schermen voor netwerk- en controllerinstellingen zijn **Netwerk & controllers** (PSC-Bios, hoofdstuk 6).
 
 De eerste twee controllers worden weergegeven als Speler 1 en Speler 2 – de poorten die de PS1-emulator aan hen toekent.
 Elke verdere controller wordt weergegeven als niet gebruikt door de PS1-emulator. RetroArch wijst controllers toe
@@ -354,7 +378,7 @@ De **Databases** - AutoBleem's covers-map (`coversU/P/J.db`) en RetroArch's `Son
 
 ## 6. De console tools (PlayStation Classic)
 
-Twee tools voor een PlayStation Classic-stick. Beide tekenen in het thema en de taal van de launcher, en beide worden door de controller aangestuurd - en in de controller-wizard door de voorkant-knoppen van de console. **PSC-Bios** is een extensie die met het console-pakket komt: *Hardwaregegevens* in het systeemmenu opent het, en het staat in de Extensies-lijst. **ABFlashKit** is een App in de Apps-set.
+Twee tools voor een PlayStation Classic-stick. Beide tekenen in het thema en de taal van de launcher, en beide worden door de controller aangestuurd - en in de controller-wizard door de voorkant-knoppen van de console. **PSC-Bios** is een extensie die met het console-pakket komt: het item *Netwerk & controllers* van het snelmenu en het systeemmenu opent het, en het staat in de Extensies-lijst. **ABFlashKit** is een App in de Apps-set.
 
 ### 6.1 PSC-Bios
 
@@ -393,7 +417,7 @@ Een voortgangsbalk onder elke stap toont hoe ver de actie is. Het hulpprogramma 
 ## 7. Als iets fout gaat
 
 - **Logs**: AutoBleem bewaart logs in geheugen, zodat de stick niet constant wordt weggeschreven - ze bereiken `System/Logs/` op de stick, kaart of data-map alleen wanneer iets fout gaat: een crash van de launcher, PS1-spel of RetroArch slaat deze op in `System/Logs/crash-<n>/` (de laatste drie worden behouden), en de launcher zegt dit eenmaal wanneer het terugkomt. Om elk log te houden, schakelt u *Options -> Diagnostics -> Keep logs on the stick* in (van de volgende start af), of maakt u een leeg bestand `System/Logs/keep` op een PC. Op Pi of PC toont *Hardwaregegevens* waar logs zijn en Square slaat deze op in `System/Logs/saved-<n>/`. De bestanden: `autobleem.log` (launcher), `launch.log` en `pcsx.log` (PS1-spel starten en emulator-output), `retroarch.log`, en - altijd op stick - `update.log` (online update) en `updateroms.log` (UpdateRoms).
-- **Spel staat niet op boekenplank**: controleer de mapindeling (één map per spel, de afbeeldingsformaten van sectie 3.9). De *Gamebeheerder* toont de mappen die de scan weigerde na de spellen, gemarkeerd als *Not added*, met de reden; Square verwijdert zo'n map. Rescan in het systeemmenu voert de scan opnieuw uit.
+- **Spel staat niet op boekenplank**: controleer de mapindeling (één map per spel, de afbeeldingsformaten van sectie 3.9). De *Gamebeheerder* toont de mappen die de scan weigerde na de spellen, gemarkeerd als *Not added*, met de reden; Square verwijdert zo'n map. *Games opnieuw scannen* in het systeemmenu voert de scan opnieuw uit.
 - **Geen artwork**: de artwork-databases zijn niet geïnstalleerd (voer de installer opnieuw uit met deze aangevinkt), of, voor RetroArch-spellen op een console, UpdateRoms is niet op de PC uitgevoerd.
 - **Controller doet niets of heeft knoppen verwisseld**: PSC-Bios's controller-wizard (console) kaart het in; op Pi of PC toont de Hardware Information-pagina wat SDL ziet.
 - **Console toont zwart scherm na spel**: AutoBleem herbouwt zijn venster zelf (tot drie keer); als het zwart blijft, houd de Power-knop ingedrukt en zet de console opnieuw aan.

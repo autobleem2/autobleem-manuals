@@ -12,15 +12,17 @@ asennusta jokaiselle alustalle, päivittäistä käyttöä ja mukana tulevat ty�
 
 ## 1. Mitä saat
 
-- **Käynnistäjä** - kansikarusellli, sarjat (PlayStation, RetroArch, Apps), pelin tiedot, järjestelmävalikko,
-  asetukset, muistikortti- ja tallennuspisteiden työkalut. Sama ohjelma kaikilla alustoilla.
+- **Käynnistäjä** - kansikarusellli, sarjat (PlayStation, RetroArch, Apps), pelin tiedot, pikavalikko ja
+  järjestelmävalikko, asetukset, muistikortti- ja tallennuspisteiden työkalut sekä Kauppa sovellusten ja pelien
+  lataamiseen. Sama ohjelma kaikilla alustoilla.
 - **Kaksi PS1-emulaattoria** - `pcsx-abnxt` nykyinen (oletusarvo) ja `pcsx-ab` klassinen jonka AutoBleem
   on aina toimittanut. Valitset sen asetuksista; molemmat käyttävät samoja asetuksia ja muistikortteja.
 - **RetroArch** (valinnainen kaikilla alustoilla) muille järjestelmille: NES, SNES, Mega Drive, Game Boy,
   arcade ja paljon muuta. AutoBleem rakentaa RetroArch-luettelonsa kopioimistasi ROM-levyistä ja käynnistää
   jokaisen pelin oikealla ytimellä.
-- **Konsolityökalut** (vain PlayStation Classic): *PSC-Bios* WiFi:lle, kellonajalle ja ohjaimen kartoitukselle
-  ja *ABFlashKit* AutoBleem-kernelin asennukselle.
+- **Konsolityökalut**: *PSC-Bios* (valikoissa nimellä *Verkko ja ohjaimet*) WiFi:lle, kellonajalle, Bluetoothille ja
+  ohjaimen kartoitukselle - konsolilla sekä myös Raspberry Pi:llä ja PC-tikulla - ja *ABFlashKit* AutoBleem-kernelin
+  asennukselle (vain PlayStation Classic).
 - **UpdateRoms** Windowsille: päivittää RetroArch-luettelot ja kansikauden konsoluntikulla PC:lle koska
   konsolilla ei ole verkkoa.
 
@@ -55,7 +57,7 @@ luku 6) voi käynnistyä exFAT-tikusta mikä poistaa FAT32:n 4 Gt rajan.
 **Kytkeistä päälle ja pois päältä.** Tikun ollessa sisällä konsoli käynnistyy vilkkuu valollaan muutamia
 sekunteja (AutoBleem haetaan) ja menee sitten valmiustilaan ennen kuin mitään näytetään - tämä on konsolinin
 oma tapa valmistella päivitys jonka ansiosta AutoBleem pääsee käynnistymään. Paina **Power** kerran ja
-käynnistäjä tulee esille. *Power Off* järjestelmävalikossa tai konsolinin power-nappi asettaa konsolinin
+käynnistäjä tulee esille. *Sammuta* järjestelmävalikossa tai konsolinin power-nappi asettaa konsolinin
 **AutoBleemin valmiustilaan**: tikku irrotetaan ensin sen jälkeen valo kääntyy **punaiseksi** - merkki
 että AutoBleem toimii oikein - ja seuraava power-painallus tuo käynnistäjän takaisin muutamassa sekunnissa.
 **Kun valo on punainen voidaan tikku vetää ulos** ja laittaa PC:hen ilman että Windows kysyy sen tarkastamista;
@@ -162,11 +164,30 @@ päivässä ja tarjoaa päivitystä kun on (osio 3.11).
 
 ### 3.1 Käynnistäjä
 
-Käynnistäjä avautuu hyllylle: nykyisten joukosta kannet valittu keskellä oikealla sen tiedot - julkaisija
-vuosi sarjanumero alue pelaajat milloin se viimeksi pelattiin - ja toista-painike. Alaosassa oleva palkki
-luettelee mitä painikkeet tekevät. Pelikansion skannaus käynnistyy taustalla jokaisen käynnistyksen yhteydessä;
-sen käydessä kupla oikealla ylhäällä näyttää sen edistyksen uudet pelit ilmestyvät hyllylle sitä mukaa
-kuin ne löydetään.
+Käynnistäjä avautuu hyllylle: nykyisen sarjan kannet, valittu keskellä pehmeän heijastuksen kanssa sen alla, sen
+tiedot vieressä tiiviinä ruudukkona - julkaisija, vuosi, sarjanumero, alue, pelaajat, milloin se viimeksi pelattiin
+(tieto, jota pelillä ei ole, jätetään pois) - ja toista-painike. Oletusulkoasu on **ab2.0.0**-teema; uusi asennus ja
+sen mukanaan tuova päivitys vaihtavat siihen kerran. Alaosan vihjepalkissa on kaksi riviä, joissa kummassakin neljä
+paikkaa. Ensimmäinen kertoo, mitä painikkeet tekevät valitulle pelille (pelaa, pelaa RetroArchissa, avaa kuvakepalkki,
+pikavalikko); toinen näyttää aina Selectin (sarja), Startin (satunnainen peli), Trianglen (opas) ja L2 + R2:n
+(järjestelmävalikko), himmennettyinä, kun jokin niistä ei juuri nyt tee mitään. Pelikansion skannaus käynnistyy
+taustalla jokaisen käynnistyksen yhteydessä; sen käydessä kupla oikealla ylhäällä näyttää sen edistyksen, ja uudet
+pelit ilmestyvät hyllylle sitä mukaa kuin ne löydetään.
+
+**Uudessa asennuksessa** ei ole vielä pelejä: tyhjän hyllyn sijaan käynnistäjä näyttää tervetulokortin - *Hei ja
+tervetuloa AutoBleemiin!* - joka kehottaa kopioimaan pelit `Games`-kansioon ja valitsemaan *Skannaa pelit uudelleen*
+sekä nimeää paikan alustasi mukaan: tikulla (PlayStation Classic, PC-tikku), SD-kortilla (Raspberry Pi) tai
+AutoBleem-kansiossa (Windows). Kortti poistuu heti, kun skannaus löytää ensimmäisen pelin.
+
+**Ilmoitukset** näkyvät kuplina oikealla ylhäällä: skannauksen edistyminen, sen sarjan nimi, jolle vaihdoit
+(*Näytetään: ...*, niin kauan kuin Vaihtoehdot → *Ilmoituksen näyttöaika* sanoo), ohjaimen akun vähyys, huomautus
+kaatumisen jälkeen, työskentelevä skannauksen prosessori ja Kaupan käynnissä oleva lataus. Latauksen kupla näyttää sen
+nopeuden ja jäljellä olevan ajan, esim. `1.4 MB/s · 0:42`.
+
+**Kanavatunniste.** Versio, joka ei ole lopullinen julkaisu, näyttää pienen tunnisteen ohjaimen akkulevyn alla
+vasemmassa yläkulmassa: merkin kanavasta - `ALPHA`, `BETA` tai `RC` esijulkaisulle, `TESTING` mille tahansa muulle
+esijulkaisulle, `NIGHTLY` yöversiolle, `DEV` käsin tehdylle versiolle - ja sen vieressä lyhyen version (`DEV`:llä
+commit, josta se on tehty). Julkaisu ei näytä tunnistetta.
 
 Langaton ohjain, jonka akun varaustaso on tiedossa - konsolilla, Pi:llä tai PC-tikulla, ei Windowsissa - näkyy pienenä kuvakkeena prosenttilukemineen, pinottuna vasemmasta yläkulmasta omalle levylleen. Pelaajaan 1 tai Pelaajaan 2 kohdistettu ohjain (Vaihda pelaaja 1 / pelaaja 2 -asetuksen mukaan) merkitään tunnisteella P1/P2; kohdistamaton tai kolmas ohjain jää ilman tunnistetta. Kun ohjaimen akku on vähissä, ilmoitusrivi kertoo siitä kerran nimellä ja prosenttiluvulla.
 
@@ -183,6 +204,7 @@ Langaton ohjain, jonka akun varaustaso on tiedossa - konsolilla, Pi:llä tai PC-
 | Triangle | Painikeohjeet. |
 | Start | Satunnainen peli nykyisestä joukosta. |
 | Select | Sarja-valitsin: PlayStation / RetroArch / Apps välilehdet (L1 / R1) sarjan ryhmät (Ylös / Alas L2 / R2 sivu) Cross valitsee. |
+| Ylös | Pikavalikko (osio 3.4). |
 | Alas | Avaa pelin alla olevan kuvakepalkki (Asetukset Peli Muistikortti Jatka). Ylös sulkee sen. |
 | L2 + R2 | Järjestelmävalikko (osio 3.4). |
 
@@ -199,69 +221,81 @@ poistut sen Circle:llä.
 
 ### 3.3 Sarjat
 
-**Select** avaa sarja-valitsimen. PlayStation-välilehti luettelee *All Games* *Internal Games* (konsolinin
-sisäänrakennettu kaksikymmentä PlayStation Classicsissa) jokaisen kansion jonka teit `Games/`:n alle (peli
-alikansiossa kuuluu kyseiseen ryhmään) *Favorite Games* *Game History* ja kun mikä tahansa peli on
-merkitty sellaiseksi *Lightgun Games*. RetroArch-välilehti luettelee yhden ryhmän per järjestelmä jonka
-peleillä on RetroArchin omat Suosikit ja Historia. Apps-välilehti ryhmittelee sovelluksia tyypin mukaan:
-*All apps* sitten *Games* *Emulators* *Tools* *Media* ja *Other* (kategoria asetetaan kussakin sovelluksessa
-`app.ini`-tiedostossa). Jokainen rivi näyttää kuinka monta kohdetta se pitää sisällään; ryhmä ilman mitään
-avautuu tyhjälle hyllylle kuvakepalkissa näkyviin Asetuksilla vain.
+**Select** avaa sarja-valitsimen. PlayStation-välilehti luettelee PlayStation Classicilla *Kaikki pelit* ja *Sisäiset
+pelit* (konsolin sisäänrakennettu kaksikymmentä), sitten *USB pelit* (kaikki `Games/`-kansiossa) ja jokaisen kansion,
+jonka teit sen alle (peli alikansiossa kuuluu kyseiseen ryhmään), sitten *Suosikkipelit*, *Pelihistoria* ja, kun
+jokin peli on merkitty sellaiseksi, *Valopistoolipelit*. Raspberry Pi:llä, PC-tikulla ja Windowsissa ei ole sisäisiä
+pelejä, joten luettelo alkaa kohdasta *USB pelit*, joka on koko kirjasto. RetroArch-välilehti (vain jos RetroArch on
+asennettu) luettelee yhden ryhmän per järjestelmä, jolla on pelejä, sekä RetroArchin omat Suosikit ja Historian.
+Apps-välilehti ryhmittelee sovelluksia tyypin mukaan: *All apps*, sitten *Games*, *Emulators*, *Tools*, *Media* ja
+*Other* (kategoria asetetaan kussakin sovelluksessa `app.ini`-tiedostossa). Jokainen rivi näyttää, kuinka monta
+kohdetta se pitää sisällään; ryhmä ilman mitään avautuu tyhjälle hyllylle, jossa kuvakepalkki näyttää vain
+Asetukset. Alatunniste nimeää näppäimet: L1 / R1 välilehdet, L2 / R2 sivu, Cross valitsee, Circle *Takaisin*.
 
 ### 3.4 Pika-valikko
 
 **Ylös** käynnistäjässä tai **hammasrattaikoni** kuvakepalkissa (jossa Asetukset / Peli / Muistikortti /
-Jatka ovat): pika-valikko karrusellissa tavoitelemillesi toiminnoille. Lyhyt luettelo: *Re-Scan Games*
-(aloittaa skannauksen nyt) *Store* (AutoBleem Store laajennuksien lataamiseksi) *Network & Controllers*
-(vain jos asennettu laajennus tarjoaa `network`-merkinnän - PSC-Bios konsolissa Pi:ssä ja PC-tikulla: WiFi
-Bluetooth-paritus ohjaimen kartoitussuutari - katso osio 6; harmaalla "enable it in Extensions" kun laajennus
-on poistettu käytöstä - Cross avaa Extensions-luettelon) ja *System menu...* (täysi valikko alla). Ylös / Alas
-liikkuvat (kiertävät) Cross valitsee Circle takaisin. Mikään ei ole ainutlaatuista täällä - jokainen kohde
-on myös järjestelmävalikossa.
+Jatka ovat): pikavalikko karusellista tavoitettaville toiminnoille. Lyhyt luettelo: *Skannaa pelit uudelleen*
+(aloittaa skannauksen nyt), *Kauppa* (selaa ja asenna pelejä, sovelluksia ja laajennuksia), *Verkko ja ohjaimet*
+(vain jos asennettu laajennus tarjoaa `network`-merkinnän - PSC-Bios konsolilla, Pi:llä ja PC-tikulla: WiFi,
+Bluetooth-paritus, ohjaimen kartoitusopas - katso osio 6; harmaana tekstillä "ota se käyttöön Laajennuksissa", kun
+laajennus on poistettu käytöstä - Cross avaa Laajennukset-luettelon), *Käynnistä launcher uudelleen* (sulkee
+AutoBleemin ja käynnistää sen uudelleen; vain konsolilla, Pi:llä ja PC-tikulla) ja *Järjestelmävalikko...* (kaikki
+muu: Vaihtoehdot, Pelien hallinta, Sammuta ja muuta - täysi valikko alla). Ylös / Alas liikkuvat (kiertävät), Cross
+valitsee, Circle takaisin. Jokaisella kohteella on yksirivinen kuvaus rivillään. Kaupan ja *Käynnistä launcher
+uudelleen* -kohteen lisäksi jokainen kohde on myös järjestelmävalikossa.
 
 ### 3.5 Järjestelmävalikko
 
-**L2 + R2** (yhdessä missä järjestyksessä tahansa) avaa järjestelmävalikon hyllyn yli. Valikko on jaettu
-osiin:
+**L2 + R2** (yhdessä, missä järjestyksessä tahansa) avaa järjestelmävalikon hyllyn yli. Jokaisella rivillä on
+yksirivinen kuvaus, ja valikko on jaettu osiin:
 
 | Osio | Kohde | Mitä se tekee |
 |---|---|---|
-| (ylä) | Re-Scan Games | Etsii uusia muutettuja tai poistettuja pelejä nyt (skannaus valvoo myös kansiota itse). |
-| | Extensions | Laajenukset tikulla - AutoBleem Store ja muut (osio 3.12). |
-| **Library** | Game Manager | PS1-pelit luettelona kansioineen: poista peli tyhjennä kannet. Poistettu käytöstä kun skannaus käynnissä. |
-| | Memory Cards | Muistikorttisarja (osio 3.7). |
-| | Scanner processors | Ohjelmat jokainen skannaus ajaa ensin - niiden järjestys pois päältä (osio 3.13). Poistettu käytöstä kun skannaus käynnissä. |
-| **System** | Options | AutoBleemin asetukset (osio 3.6). |
-| | Network & Controllers | Vain jos asennettu laajennus tarjoaa `network`-merkinnän (`Provides=network` sen `extension.ini`:ssä - PSC-Bios konsolissa Pi:ssä ja PC-tikulla) - WiFi Bluetooth-ohjaimen paritus DualShock 3 asennus ja ohjaimen kartoitussuutari - katso luku 6. Kun laajennus on asennettu mutta poistettu käytöstä tämä kohde harmaa muistiinpanolla "enable it in Extensions" - Cross avaa Extensions-luettelon siinä. |
-| | Hardware Information | Koneen faktat: järjestelmä CPU tallennustila verkkokäyttöliittymät aikavyöhyke näyttö ohjaimet ja niiden kartoitukset. Konsolissa AutoBleem-kernelin kanssa avaa tämä PSC-Bios:in (luku 6); muissa koneissa näyttää tämän tietosivun. |
-| | Software Update | (Raspberry Pi ja PC) Tarkista sivulla uudempi AutoBleem tai RetroArch nyt. |
-| | About | Tunnustukset ja lisenssi. |
-| **Leave** | RetroArch | Poistuu käynnistäjästä RetroArchin omaan valikkoon. RetroArchin sulkeminen palaa. |
-| | Power Off | Vahvistuksen jälkeen: konsolissa AutoBleemin valmiustila - tikku irrotettu valo punainen Power tuo käynnistäjän takaisin (osio 2.1); Pi:ssä tai PC:ssä kone sammuu. |
+| (ylä) | Skannaa pelit uudelleen | Etsii uusia, muutettuja tai poistettuja pelejä nyt (skannaus valvoo myös kansiota itse). |
+| | Laajennukset | Laajennukset tikulla - AutoBleem Store ja muut (osio 3.12). |
+| **Kirjasto** | Pelien hallinta | PS1-pelit luettelona kansioineen: poista peli, tyhjennä kannet. Poistettu käytöstä, kun skannaus on käynnissä. |
+| | Muistikortti | Muistikorttisarjasi (osio 3.7). |
+| | Skannauksen prosessorit | Ohjelmat, jotka jokainen skannaus ajaa ensin - niiden järjestys, päällä tai pois (osio 3.13). Poistettu käytöstä, kun skannaus on käynnissä. |
+| **Järjestelmä** | Vaihtoehdot | AutoBleemin asetukset (osio 3.6). |
+| | Verkko ja ohjaimet | Vain jos asennettu laajennus tarjoaa `network`-merkinnän (`Provides=network` sen `extension.ini`:ssä - PSC-Bios konsolilla, Pi:llä ja PC-tikulla) - WiFi, Bluetooth-ohjaimen paritus, DualShock 3:n asennus ja ohjaimen kartoitusopas - katso luku 6. Kun laajennus on asennettu mutta poistettu käytöstä, tämä kohde on harmaana muistiinpanolla "ota se käyttöön Laajennuksissa" - Cross avaa Laajennukset-luettelon siinä. |
+| | Laitteistotiedot | Koneen faktat: järjestelmä, CPU, tallennustila, verkkokäyttöliittymät, aikavyöhyke, näyttö, ohjaimet ja niiden kartoitukset - sama sivu jokaisella alustalla (osio 4.2). |
+| | Ohjelmistopäivitys | (Raspberry Pi ja PC) Tarkista sivulta uudempi AutoBleem tai RetroArch nyt; rivillä lukee *Päivitys saatavilla*, kun käynnistäjä jo tietää sellaisesta. |
+| | Tietoja | Tunnustukset ja lisenssi. |
+| **Poistu** | RetroArch | (Vain jos RetroArch on asennettu.) Poistuu käynnistäjästä RetroArchin omaan valikkoon. RetroArchin sulkeminen palaa. |
+| | Sammuta | Vahvistuksen jälkeen: konsolilla AutoBleemin valmiustila - tikku irrotettu, valo punainen, Power tuo käynnistäjän takaisin (osio 2.1); Pi:llä tai PC:llä kone sammuu. |
 
 ![Järjestelmävalikko](../images/fi/system-menu.jpg)
 
 ### 3.6 Asetukset
 
-Asetukset ovat ryhmissä; Ylös / Alas liikkuvat niiden välillä Vasen / Oikea muuttaa arvoa Circle poistuu ja
-tallentaa. Jokainen muutos käytetään välittömästi.
+Asetukset ovat ryhmissä, joista jokaisella on otsikko; Ylös / Alas liikkuvat rivien välillä, Vasen / Oikea muuttaa
+arvoa (napautus on yksi askel, pitäminen vierittää), L1 / R1 hyppäävät ensimmäiselle / viimeiselle riville, L2 / R2
+vaihtavat sivua, Circle poistuu ja tallentaa. Jokainen muutos käytetään välittömästi. Päälle/pois-arvot luetaan
+**PÄÄLLÄ** / **POIS**.
 
 | Ryhmä / asetus | Mitä se tekee |
 |---|---|
-| **Interface**: AutoBleem Theme | Ulkonäkö. Teemat asuvat `Themes/`-kansiossa; teeman zip joka sinne pudotetaan puretaan seuraavalla käynnillä. AutoBleemin mukana tulevat teemat päivitetään jokaisen päivityksen yhteydessä - mukauttaaksesi sitä kopioi se ensin uuden nimen alla. |
-| Cover Style | Juveleriraami PS1-kannet ympärille. |
-| Language | Käynnistäjän kieli käytössä heti (17 kieltä). |
-| Use Font from Theme / Font | Klassinen näyttöjen kirjasin: teeman tai mikä tahansa `.ttf`/`.otf` osoitteesta `resources/fonts` `RetroArch/fonts` tai teeman kansiosta. |
-| Showing Timeout | Kuinka kauan "Showing: ..."-ilmoitus näytetään sekunnissa (0 = ikuisesti). |
-| **Sound**: Music Background Music | Mitä kappaletta soitetaan käynnistäjän alla (teeman tai tiedosto `resources/music`-kansiosta) ja soitetaanko sitä lainkaan. |
-| **Emulation**: PS1 Emulator | `pcsx-abnxt` (oletus: nykyinen PCSX-ReARMed AutoBleemin lisäyksillä) tai `pcsx-ab` (klassinen). Yhdellä tallennettu jatkopiste jatkuu toisessa ellei peli ollut käynnissä ilman BIOS-tiedostoa. |
-| Widescreen | PS1-emulaattorin kuvasuhde jokaiselle pelille. |
-| Play all PSX games with RA | Jokainen PS1-peli käynnistyy RetroArchin PS1-ytimessä. |
-| Update RA Config | AutoBleem kirjoittaa asetuksensa RetroArchin määritykseen kun se käynnistää pelin siellä. |
+| **Käyttöliittymä**: Näyttö | Näytön tarkkuus käynnistäjälle ja PS1-emulaattorille: *Auto* (näytön oma tila, näkyy muodossa *Auto (1920x1080)*) tai mikä tahansa tila, jonka näyttö luettelee; konsoli tarjoaa 720p:n ja 1080p:n. Uudesta tilasta kysytään: *Pidetäänkö tämä näyttötila?* - ellet vahvista, edellinen palaa lähtölaskennan jälkeen. Ei kehitysikkunassa. |
+| Emulaattorin näytön skaalaus | Miten PS1-emulaattori sovittaa pelin kuvan näyttöön: *1x1* (PlayStationin omat pikselit), *2x (kokonaisluku)*, *4:3*, *4:3 (kokonaisluku)* tai *Koko näyttö*. Kokonaislukuskaalaus käyttää vain kokonaisia monikertoja (terävin). Se korvaa vanhan Widescreen-kytkimen; klassinen `pcsx-ab` ja RetroArch tuntevat vain koko näytön ja 4:3:n. |
+| AutoBleem teema | Ulkonäkö. Teemat asuvat `Themes/`-kansiossa; teeman zip joka sinne pudotetaan puretaan seuraavalla käynnillä. AutoBleemin mukana tulevat teemat päivitetään jokaisen päivityksen yhteydessä - mukauttaaksesi sitä kopioi se ensin uuden nimen alla. Oletus on **ab2.0.0**. |
+| Kannen tyyli | Juveleriraami PS1-kannet ympärille. |
+| Kannen välähdys | Välähdys, joka kulkee valitun kannen yli, kun hylly pysähtyy. |
+| Kieli | Käynnistäjän kieli käytössä heti (17 kieltä). |
+| Ilmoituksen näyttöaika | Kuinka kauan tietokuplat ("Näytetään: ...", skannauksen yhteenveto) pysyvät esillä, 0-20 sekuntia; 0 näyttää *Pois*. Virheillä on oma kiinteä aikansa. |
+| Aloitusnäyttö | AutoBleem-kuva käynnistäjän käynnistyessä; pois päältä siirrytään suoraan hyllylle. |
+| Animaatiot | Liike näyttöjen välillä; pois päältä jokainen näytönvaihto on välitön. |
+| **Fontit**: Käytä oletusfonttia | Käynnistäjä käyttää oletusfonttiaan (Red Hat Text) tai - pois päältä - alla valittua fonttia. |
+| Fontti | Mikä tahansa `.ttf`/`.otf` osoitteesta `resources/fonts`, `RetroArch/fonts` tai teeman kansiosta; rivi nimeää käytössä olevan fontin. |
+| **Ääni**: Musiikki, Taustamusiikki | Mitä kappaletta soitetaan käynnistäjän alla (teeman tai tiedosto `resources/music`-kansiosta) ja soitetaanko sitä lainkaan. |
+| **Emulointi**: PS1-emulaattori | `pcsx-abnxt` (oletus: nykyinen PCSX-ReARMed AutoBleemin lisäyksillä) tai `pcsx-ab` (klassinen). Yhdellä tallennettu jatkopiste jatkuu toisessa ellei peli ollut käynnissä ilman BIOS-tiedostoa. |
 | Vaihda pelaaja 1 / pelaaja 2 (PS1-emulaattorit) | Vaihtaa, kumpi kahdesta ensimmäisestä ohjaimesta on Pelaaja 1 ja kumpi Pelaaja 2, molemmissa PS1-emulaattoreissa (pcsx-abnxt ja klassinen pcsx-ab). Se vaikuttaa vain, kun ohjaimia on kytkettynä kaksi tai enemmän; yhdellä ohjaimella pelaaja on aina Pelaaja 1. RetroArch ei vaikutu. |
-| **Library**: Show Internal Games | Konsolinin sisäänrakennetut pelit PlayStation-luetteloissa (vain PlayStation Classic). |
-| Fetch box art online | Skannaus noutaa puuttuvat kannet libretron palvelimista (Raspberry Pi PC Windows). |
-| **Updates** | (Raspberry Pi PC Windows) `stable` `latest` (esijulkaisut myös) tai `off`. |
+| Pelaa kaikki PSX-pelit RA:lla, Päivitä RA konfiguraatio, Säilytä RetroArchin asetukset | (Vain jos RetroArch on asennettu.) Jokainen PS1-peli käynnistyy RetroArchin PS1-ytimessä; AutoBleem kirjoittaa asetuksensa RetroArchin määritykseen, kun se käynnistää pelin siellä; RetroArchin omassa valikossa tehty muutos säilyy, kun RetroArch suljetaan. |
+| **Kirjasto**: Näytä sisäiset pelit | Konsolinin sisäänrakennetut pelit PlayStation-luetteloissa (vain PlayStation Classic). |
+| Hae kansikuvat verkosta | Skannaus noutaa puuttuvat kannet libretron palvelimista (Raspberry Pi PC Windows). |
+| **Päivitykset** | Päivityskanava: `release` (testattu versio), `testing` (seuraava versio, testattavana), `nightly` (uusin kehitysversio) tai `off`. Oletus seuraa asennettua versiota. Ei näy kehityskoneella. |
+| **Vianmääritys**: Säilytä lokit tikulla | Säilyttää kaikki lokit tikulla seuraavasta käynnistyksestä alkaen, ei vain kaatumisen jälkeen (luku 7). |
+| Näytä suorituskyky | Peittokuva vasemmassa alakulmassa: kuvataajuus, suorittimen kuormitus, säikeet ja muisti; emulaattori näyttää pelissä myös FPS:n ja CPU:n. |
 
 ![Asetukset ryhmissä](../images/fi/options.jpg)
 
@@ -271,24 +305,32 @@ Kun peli on valittu avaa **Alas** sen kuvakepalkki: **Settings** (asetukset yll�
 asetukset) **Memory Card** (sen muistikortti) ja **Resume** (sen tallennuspisteet). Cross avaa sen kursorin
 alla.
 
-**Pelin muokkain** näyttää pelin tiedot oikealla ja asetukset vasemmalla kolmessa ryhmässä:
+**Pelin muokkain** näyttää pelin tiedot oikealla (nimi, julkaisija, vuosi, pelaajat, kansio, muistikortti) ja asetukset vasemmalla neljässä ryhmässä:
 
-- **Game**: *Favorite* (Suosikki Games -ryhmässä) *Lightgun Game* (valoaseen peli - se liittyy Lightgun-ryhmään
-  ja käynnistyy aina RetroArchissa jonka PS1-ytimella on GunCon) *Play using RA* (tämä peli käynnistyy
-  RetroArchissa) *Lock data* (skannaus jättää pelin otsikon sarjanumeron ja levyluettelon asetuksiksi).
-- **Video**: korkea resoluutio skanliniat ja niiden taso kehys ohitus GPU-plugin ja *Filter* - kuinka kuva
-  skaalataan: Off (perus pikselit) Linear (pehmeä) tai Sharp (terävät pikselit ilman värinää; vain
-  `pcsx-abnxt` - klassinen `pcsx-ab` ja RetroArch näyttävät sen Off:ina).
-- **Emulator**: SpeedHack CPU-kello SPU-interpolointi boot-logo (off ohittaa BIOS-kuoren - kotitekoisen levyn
-  mukauttua logo rikkoo käynnistyksen) ja `pcsx-abnxt`:lla *Smoothing*-suodin ja *Sony hacks*-kytkin.
+- **Peli**: *Suosikki* (Suosikkipelit-ryhmässä), *Lightgun-peli* ja *Pelaa RA:lla* (vain jos RetroArch on asennettu:
+  valopistoolipeli liittyy Lightgun-ryhmään ja käynnistyy aina RetroArchissa, jonka PS1-ytimellä on GunCon; *Pelaa
+  RA:lla* käynnistää tämän pelin RetroArchissa), *Lukitse data* (skannaus jättää pelin otsikon, sarjanumeron ja
+  levyluettelon sellaisiksi kuin asetit ne).
+- **Näyttö**: *Tarkkuus* (1x tai 2x, sisäisellä GPU:lla), *Poista saumat* (vain 2x:llä), *Rasterointi* (Pois, Päällä,
+  Aina), *Pehmennys*, *Suodatin* - miten kuva skaalataan: Lähin (perus pikselit), Lineaarinen (pehmeä), Terävä tai
+  Terävä (yksinkertainen) (terävät pikselit ilman värinää), Quilez tai CRT-suodattimet CRT (fast) ja CRT-Pi (ne
+  piirtävät omat skannauslinjansa, joten skannauslinjarivit harmaantuvat) - sekä *Skannauslinjat* ja niiden
+  *Skannauslinjojen kirkkaus*. Tarkkuus, saumojen poisto, rasterointi, pehmennys ja muut suodattimet kuin Lineaarinen
+  ja Lähin ovat `pcsx-abnxt`:lle; klassinen `pcsx-ab` ja RetroArch näyttävät loput muodossa Lähin.
+- **Renderöinti**: GPU-*Liitännäinen* ja *Frameskip* (Auto, Pois, 1-3).
+- **Emulaattori**: SpeedHack, CPU-kello, SPU-interpolointi, boot-logo (off ohittaa BIOS-kuoren - kotitekoisen levyn
+  mukauttua logo rikkoo käynnistyksen) ja `pcsx-abnxt`:lla *Sonyn korjaukset* -kytkin.
+
+Kuvan muoto ja näytön tarkkuus ovat yleisiä (Vaihtoehdot → *Emulaattorin näytön skaalaus* ja *Näyttö*). Peli, jolla ei
+ole nimeä tiedoissaan, näytetään kansionsa nimellä.
 
 Triangle nimeää uudelleen pelin Square muuttaa sen muistikorttia Start jakaa uuden kortin. Circle tallentaa
 ja poistuu.
 
-**Asetukset tallennettu emulaattoriin.** Emulaattorin omassa valikossa on *Save settings for this game*.
-Kun peli on asetukset tallennettuna siellä ne ovat mitä se pelaa ja pelin muokkain näyttää sen Video ja
-Emulator-rivit harmaalla noilla arvoilla *Saved in the emulator* -otsikon alla. Palaksesi pelin muokkain
-asetuksiin valitse **Unlock the settings** ja vahvista: tämä poistaa asetukset emulaattori tallensi
+**Asetukset tallennettu emulaattoriin.** Emulaattorin omassa valikossa on *Tallenna asetukset tälle pelille*.
+Kun peli on asetukset tallennettuna siellä ne ovat mitä se pelaa ja pelin muokkain näyttää sen Näyttö-, Renderöinti- ja
+Emulaattori-rivit harmaalla noilla arvoilla *Tallennettu emulaattoriin* -otsikon alla. Palaksesi pelin muokkain
+asetuksiin valitse **Avaa asetusten lukitus** ja vahvista: tämä poistaa asetukset emulaattori tallensi
 rivit voidaan muuttaa jälleen. Molemmat emulaattorit `pcsx-ab` ja `pcsx-abnxt` lukevat ja kirjoittavat
 samat tallennetut asetukset.
 
@@ -309,15 +351,35 @@ poista vaaditusta kortista (Select). Start vaihtaa kortin oikealla toiseen sarja
 
 **Jatkopisteet**: kun poistut PS1-pelistä konsolinin Reset-painikkeella (tai emulaattorin valikosta Pi:ssä tai
 PC:ssä) AutoBleem pitää tallennus pisteen siitä missä olit ja tarjoaa sen **Resume**-kuvakkeen alla -
-neljä paikkaa kussakin kuvan hetkenä. Cross jatkaa paikasta Triangle poistaa sen. Peli jonka jatkopiste
-näyttää pienen kuvan sen Resume-kuvakkeella.
+neljä paikkaa kehystettyinä kortteina, kussakin hetken kuva, paikan numero ja päivämäärä; uusin on merkitty
+**UUSIN** ja käyttämätön paikka sanoo *Ei jatkamiskohtaa*. Cross jatkaa paikasta, Triangle poistaa sen. Peli, jolla on
+jatkopiste, näyttää pienen kuvan Resume-kuvakkeellaan; pelillä, jolla ei ole, Resume-kuvake on harmaana. Kun jatkopistettä
+kirjoitetaan pelistä poistuttaessa, emulaattori näyttää *Odota...*.
 
 ### 3.8 Pelien RetroArchin ja Appsin käynnistäminen
 
-**Cross** käynnistää valitun pelin. PS1-peli käynnistyy valitussa PS1-emulaattorissa (osio 3.5) kokoruudulla
-kunnes poistut siitä - konsolissa etu-**Reset**-painikkeella (takaisin käynnistäjään jatkopisteellä) tai
-**Power** (konsoli sammuu); Pi:ssä tai PC:ssä emulaattorin in-game-valikosta (Select + Start ohjaimella tai
-Esc näppäimistöllä). **Square** käynnistää PS1-pelin RetroArchissa sijaan.
+**Cross** käynnistää valitun pelin. PS1-peli käynnistyy valitussa PS1-emulaattorissa (osio 3.6) kokoruudulla
+kunnes poistut siitä - konsolilla etu-**Reset**-painikkeella (takaisin käynnistäjään jatkopisteellä; toimii myös
+pelin sisäisestä valikosta) tai **Power** (konsoli sammuu); Pi:llä tai PC:llä emulaattorin pelin sisäisestä valikosta
+(alla). **Square** käynnistää PS1-pelin RetroArchissa sijaan.
+
+**Pelin sisäinen valikko** (`pcsx-abnxt`). Paina valikkopainiketta - ohjaimen Home, **Select + Start** ohjaimella,
+jolla sitä ei ole, tai **Esc** näppäimistöllä - ja peli pysähtyy valikon taakse pelin viimeisen kuvan kanssa.
+**Valikkopainikkeen pitäminen 2 sekuntia** on sama kuin Reset: se poistuu pelistä. L1 / R1 vaihtavat sen kolmen
+välilehden välillä, ja valikko avautuu välilehdelle ja riville, jolle se jäi:
+
+- **Peli**: *Jatka peliä*; kohdassa *Tallennukset*: *Pikatallennus*, *Pikalataus* ja *Lataa automaattitallennus* (peli
+  sellaisena kuin se oli enintään 30 sekuntia sitten - emulaattori tallentaa sen itse muistiin pelatessasi); kohdassa
+  *CD-levy*: *Vaihda levy* ja *Nollaa peli* (aloittaa sen alusta); *Tallenna asetukset tälle pelille* (katso osio 3.7),
+  *PCSX-valikko* (PCSX-ReARMedin omat sivut: asetukset, huijaukset, Tietoja) ja *Lopeta* (takaisin AutoBleemiin).
+- **Kuva**: *Näyttö* (näytön tarkkuus - konsolilla se valitaan Vaihtoehdoissa ja täällä vain näytetään), *Tarkkuus* (1x
+  tai 2x), *Poista saumat*, *Rasterointi*, *Skaalaus*, *Pehmennys*, *Suodatin*, *Scanlines* ja *Scanlines-kirkkaus*.
+  Jokaisella rivillä on ohjerivi oikealla. CRT-Pi on konsolille liian raskas 1080p:llä. Rivi, joka ei päde, on harmaana,
+  ja sen ohje kertoo miksi.
+- **Ohjaimet**: *Ohjain 1* ja *Ohjain 2*: vakio (digitaalinen), analoginen (DualShock), pistooli tai ei mitään;
+  tulee voimaan, kun peli jatkuu.
+
+Valikko on piirretty käynnistäjän ab2.0.0-ulkoasulla, ohjaimien akkujen ja viimeisen pikatallennuksen kuvan kanssa.
 
 **RetroArch**-peli käynnistyy RetroArchissa ytimellä jonka käynnistäjä valitsi sen järjestelmälle;
 *Close Content* tai *Quit RetroArch* sen valikosta palaa käynnistäjään. RetroArchin kohde järjestelmävalikossa
@@ -392,15 +454,18 @@ ei käynnisty ilman sitä ja se joka pysäytti käynnistäjän poistetaan käyt�
 järjestelmällä AutoBleem käynnistyy (PlayStation Classic tarvitsee AutoBleem-kernelin WiFi:n). Sen neljä
 välilehteä L1 / R1 niiden välillä:
 
-- **Apps** ja **Games**: mitä lähteet tarjoavat jokaisen kuvan version koon ja lähteen favicon. Asennetut
-  kohteet harmaat. Cross asentaa (tai päivittää tai yrittää uudelleen virheen jälkeen) Triangle poistaa mitä
-  Store asensi. L2 / R2 tai Vasen / Oikea kääntyvät sivuja **Select** näyttää yhden lähteen kerralla **Start**
-  hakee otsikoita. Kohteen kuvat välimuistiin ja voidaan yrittää uudelleen ellei ne lataudu.
-- **Downloads**: mitä ladataan odottaa epäonnistuneita tai asennettuja. Edistymispalkki päivittyy tasaisesti.
-  Lataukset jatkuvat taustalla myös kun poistut Storesta; pelin käynnistäminen tai virran sammuttaminen
-  keskeyttää ne vain ja pysäytetty lataus jatkuu missä se pysähtyi. Asennettu peli ilmestyy hyllylle
-  seuraavalla skannauksella Storen kuva kantenaan. Yli 2 Gt:n lataukset toimivat kaikilla alustoilla
-  mukaan lukien 32-bittiset rakenteet.
+- **Apps** ja **Games**: mitä lähteet tarjoavat, jokaisen kuvan, version, koon ja lähteen favicon. Asennetuilla
+  kohteilla on *Asennettu*-merkki. Cross asentaa (tai päivittää, tai yrittää uudelleen virheen jälkeen, tai peruu
+  jonossa olevan tai käynnissä olevan latauksen), Triangle poistaa mitä Store asensi, Square päivittää luettelot.
+  L2 / R2 hyppäävät kirjaimen mukaan, **Select** näyttää yhden lähteen kerralla, **Start** hakee otsikoita.
+  Alatunniste näyttää valitun rivin näppäimet. Kohteen kuvat välimuistiin ja voidaan yrittää uudelleen ellei ne lataudu.
+- **Downloads**: mitä ladataan, odottaa, epäonnistui tai on asennettu. Edistymispalkki päivittyy tasaisesti, ja kun olet
+  muualla käynnistäjässä, kupla näyttää käynnissä olevan latauksen nopeuden ja jäljellä olevan ajan
+  (`1.4 MB/s · 0:42`). Lataukset jatkuvat taustalla myös kun poistut Storesta; pelin käynnistäminen tai virran
+  sammuttaminen keskeyttää ne vain ja pysäytetty lataus jatkuu missä se pysähtyi. Jos verkko katoaa, kohde sanoo
+  *Odotetaan verkkoa* ja jatkaa siitä mihin jäi, kun verkko palaa (luovuttaa 30 minuutin jälkeen). Asennettu peli
+  ilmestyy hyllylle seuraavalla skannauksella Storen kuva kantenaan. Yli 2 Gt:n lataukset toimivat kaikilla
+  alustoilla mukaan lukien 32-bittiset rakenteet.
 - **Sources**: mistä luettelot tulevat - AutoBleemin oma luettelo TSV-luettelo pudotettu `System/Extensions/
   store/sources/`-kansioon ja osoitteet jotka lisäät **Add a source URL**:lla. Jokainen lähde näyttää
   favicon:nsa luettelossa. Cross yhdessä jonka lisäsit nimeää uudelleen muuttaa sen osoitetta tai poistaa sen.
@@ -453,7 +518,7 @@ täytyy tehdä ja `tools/proc_check.py` AutoBleemin lähteessä tarkistaa yhden 
 
 ### 4.1 Peli Manager
 
-PS1-pelit luettelona kansioineen ja valitut omansa ja tiedot. Cross avaa pelin muokkain **Square poistaa
+PS1-pelit pelkkien nimien luettelona (valitun pelin kansio on sen tiedoissa) ja valitun kansi. Cross avaa pelin muokkain **Square poistaa
 pelin** (sen kansio ja toisen kysymyksen jälkeen sen tallennuspisteet) Triangle poistaa jokaisen kannen PNG
 pelajen vierestä (skannaus ottaa ne tietokannoista uudelleen) L2 / R2 sivu. Aseman vapaa tila on oikealla
 ylhäällä. Peli Manager odottaa kun skannaus käynnissä.
@@ -462,9 +527,9 @@ ylhäällä. Peli Manager odottaa kun skannaus käynnissä.
 
 ### 4.2 Laitteiston tieto
 
-Koneen faktat - järjestelmä laitteisto tallennustila vapaa tila verkkoosoitteet näyttö ja ääni ajurit
-liitetyt ohjaimet - uudelleen luettu jokainen sekunti. PlayStation Classicsissa AutoBleem-kernelin kanssa
-tämä avaa **PSC-Bios**:in sijaan (luku 6).
+Koneen faktat - järjestelmä, laitteisto, tallennustila vapaa tila, verkkoosoitteet, näyttö ja ääni ajurit, liitetyt
+ohjaimet - uudelleen luettu jokainen sekunti. Se on sama sivu jokaisella alustalla, konsoli mukaan lukien;
+verkon ja ohjaimien asetusnäytöt ovat **Verkko ja ohjaimet** (PSC-Bios, luku 6).
 
 Kaksi ensimmäistä ohjaiminta näytetään nimellä Pelaaja 1 ja Pelaaja 2 – portit, jotka PS1-emulaattori antaa heille.
 Mikä tahansa lisäohjain näytetään PS1-emulaattorin käyttämättömänä. RetroArch määrittää ohjaimet omien
@@ -558,7 +623,7 @@ palomuuria: salli vain yksityiset verkot.
 
 Kaksi välinettä PlayStation Classic-tikulle. Molemmat piirtävät käynnistäjän teemalla ja kielellä ja molemmat
 ajetaan ohjaimella - ja ohjaimen ohjaussuutarissa konsolinin etupainikkeilla. **PSC-Bios** on laajennus joka
-tulee konsolepaketin kanssa: järjestelmävalikon *Network & Controllers* avaa sen ja se on laajennuksien
+tulee konsolepaketin kanssa: pika- ja järjestelmävalikon *Verkko ja ohjaimet* avaa sen ja se on laajennuksien
 luettelossa. **ABFlashKit** on App Apps-sarjassa.
 
 ### 6.1 PSC-Bios
@@ -638,7 +703,7 @@ joka käyttää muuta mukautettua firmware:a (BleemSync Project Eris): palauta s
   (online-päivitys) ja `updateroms.log` (UpdateRoms).
 - **Peli ei ole hyllyllä**: tarkista kansion asettelu (yksi kansio per peli kuvat muodot osion 3.9).
   *Game Manager* listaa kansiota skannaus kielsi pelien jälkeen merkitty *Not added* syyn kanssa; Square poistaa
-  tällaisen kansion. Re-Scan järjestelmävalikossa ajaa skannauksen uudelleen.
+  tällaisen kansion. *Skannaa pelit uudelleen* järjestelmävalikossa ajaa skannauksen uudelleen.
 - **Ei kansia**: kansikausi tietokannat eivät asennettu (aja asentaja uudelleen ne raksitettuna) tai
   RetroArch-peleille konsolissa UpdateRomsia ei ole ajettu PC:llä.
 - **Ohjain ei tee mitään tai se on painikkeet sekoitettu**: PSC-Bios:in ohjaimen ohjaussuutari (konsoli)
