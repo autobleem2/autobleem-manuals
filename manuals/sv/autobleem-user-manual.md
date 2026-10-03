@@ -13,16 +13,17 @@ täcker installation på varje plattform, daglig användning och de verktyg som 
 ## 1. Vad du får
 
 - **Startaren** - hyllan med omslag, uppsättningarna (PlayStation, RetroArch, Apps), speldetaljer,
-  systemmenyn, inställningarna, minneskortverktyget och sparpunktverktygen. Samma program på varje
-  plattform.
+  snabbmenyn och systemmenyn, inställningarna, minneskortverktyget och sparpunktverktygen samt Butiken för
+  nedladdning av appar och spel. Samma program på varje plattform.
 - **Två PS1-emulatorer** - `pcsx-abnxt`, den nuvarande (standard) och `pcsx-ab`, den klassiska
   emulatorn som AutoBleem alltid har medfört. Du väljer en i inställningarna; båda använder samma
   inställningar och minneskort.
 - **RetroArch** (valfritt på varje plattform) för andra system: NES, SNES, Mega Drive, Game Boy,
   arkad och mycket mer. AutoBleem bygger sina RetroArch-listor från ROM-filer som du kopierar in och
   startar varje spel med rätt kärna.
-- **Konsolverktygen** (endast PlayStation Classic): *PSC-Bios* för WiFi, klockan och styrpadutsättning,
-  och *ABFlashKit* för installation av AutoBleem-kerneln.
+- **Konsolverktygen**: *PSC-Bios* (visas i menyerna som *Nätverk och handkontroller*) för WiFi, klockan, Bluetooth
+  och styrpadutsättning - på konsolen, och även på en Raspberry Pi och PC-stickan - och *ABFlashKit* för installation
+  av AutoBleem-kerneln (endast PlayStation Classic).
 - **UpdateRoms** för Windows: uppdaterar RetroArch-listorna och skisskonst för en konsolsticka på en PC,
   eftersom själva konsolen inte har ett nätverk.
 
@@ -61,7 +62,7 @@ tar bort FAT32:s 4 GB-begränsning.
 **Starta och stänga av.** Med stickan i startar konsolen, blinkar sin ljus några sekunder (AutoBleem
 hämtas) och går sedan i beredskap innan något visas - det är konsolens eget sätt att organisera en
 uppdatering, som är hur AutoBleem får att köras. Tryck på **Power** en gång och startaren dyker upp.
-*Power Off* i systemmenyn, eller konsolens Power-knapp, sätter konsolen i **AutoBleem-beredskap**: stickan
+*Stäng av* i systemmenyn, eller konsolens Power-knapp, sätter konsolen i **AutoBleem-beredskap**: stickan
 tas bort först, sedan blir ljuset **rött** - tecknet på att AutoBleem fungerar som det ska - och nästa
 Power-tryck tar startaren tillbaka på några sekunder. **Medan ljuset är rött kan du dra ut stickan** och
 sätta in den i en PC utan att Windows vill kontrollera den; sätt tillbaka den innan du trycker på Power.
@@ -171,10 +172,30 @@ en (avsnitt 3.11).
 
 ### 3.1 Startaren
 
-Startaren öppnas på hyllan: omslaget från aktuell uppsättning, det som är valt i mitten, dess detaljer
-- förlag, år, serienummer, region, spelare, när det senast spelades - och en uppspelningsknapp. Strecket
-längst ner listar vad knapparna gör. En skanning av spelmappen körs i bakgrunden vid varje start; medan
-den körs visar en bubbla längst upp till höger framstegen, och nya spel dyker upp på hyllan när de hittas.
+Startaren öppnas på hyllan: omslaget från aktuell uppsättning, det som är valt i mitten med en mjuk reflektion
+under sig, dess detaljer bredvid i ett kompakt rutnät - förlag, år, serienummer, region, spelare, när det senast
+spelades (en uppgift som ett spel inte har utelämnas) - och en uppspelningsknapp. Standardutseendet är temat
+**ab2.0.0**; en ny installation och en uppdatering som tar med det byter till det en gång. Tipsfältet längst ner har
+två rader med fyra platser. Den första säger vad knapparna gör för det valda spelet (spela, spela i RetroArch, öppna
+ikonraden, snabbmenyn); den andra visar alltid Select (uppsättningen), Start (ett slumpmässigt spel), Triangle
+(guiden) och L2 + R2 (systemmenyn), nedtonade när någon av dem inte gör något. En skanning av spelmappen körs i
+bakgrunden vid varje start; medan den körs visar en bubbla längst upp till höger framstegen, och nya spel dyker upp
+på hyllan när de hittas.
+
+**En ny installation** har inga spel än: i stället för en tom hylla visar startaren ett välkomstkort - *Hej och
+välkommen till AutoBleem!* - som ber dig lägga spel i mappen `Games` och välja *Skanna om spel*, och som anger
+platsen för din plattform: på ditt minne (PlayStation Classic, PC-stickan), på ditt SD-kort (Raspberry Pi) eller i din
+AutoBleem-mapp (Windows). Kortet försvinner så fort en skanning hittar det första spelet.
+
+**Notiser** visas som bubblor längst upp till höger: skanningens framsteg, namnet på uppsättningen du bytte till
+(*Visar: ...*, så länge Alternativ → *Visningstid för meddelande* anger), lågt batteri i en handkontroll, en notis
+efter en krasch, en skanningsprocessor som arbetar och Butikens pågående nedladdning. Nedladdningens bubbla visar
+dess hastighet och återstående tid, t.ex. `1.4 MB/s · 0:42`.
+
+**Kanalmärket.** Ett bygge som inte är en slutlig utgåva visar ett litet märke under handkontrollens batteriplatta i
+övre vänstra hörnet: en bricka med kanalen - `ALPHA`, `BETA` eller `RC` för en förhandsversion, `TESTING` för vilken
+annan förhandsversion som helst, `NIGHTLY` för ett nattligt bygge, `DEV` för ett handgjort bygge - och den korta
+versionen bredvid (för `DEV` den commit det byggdes från). En utgåva visar inget märke.
 
 En trådlös kontroll med känt batteriläge - på konsolen, en Pi eller PC-stickan, inte i Windows - visas som en liten ikon med sin procentandel, staplad från övre vänstra hörnet på sin egen platta. En kontroll matchad till Spelare 1 eller Spelare 2 (enligt inställningen Byt spelare 1 / spelare 2) märks P1/P2; en omatchad kontroll, eller en tredje, får ingen märkning. När en kontrolls batteri blir lågt rapporterar en notisrad det en gång, med namn och procent.
 
@@ -192,8 +213,9 @@ En trådlös kontroll med känt batteriläge - på konsolen, en Pi eller PC-stic
 | Start | Ett slumpmässigt spel från aktuell uppsättning. |
 | Select | Set-väljaren: PlayStation / RetroArch / Apps-flikar (L1 / R1), grupper av fliken (Upp / Ner,
 L2 / R2 sida), Cross väljer. |
+| Upp | Snabbmenyn (avsnitt 3.4). |
 | Ner | Öppna ikonstaden under spelet (Inställningar, Spel, Minneskort, Återuppta). Upp stänger den. |
-| L2 + R2 | Systemmenyn (avsnitt 3.4). |
+| L2 + R2 | Systemmenyn (avsnitt 3.5). |
 
 **Med tangentbord** (PC utan styrenhet, eller USB-tangentbord på konsol, Pi eller PC-sticka): tangenterna
 står in: **Piltangenter** = d-pad, **Enter** = Cross, **Esc eller Backspace** = Circle, **Tab** = Triangle,
@@ -207,67 +229,78 @@ I varje lista och meny: Upp / Ner flytta, **L2 / R2 vänd sidor**, L1 / R1 hoppa
 
 ### 3.3 Uppsättningarna
 
-**Select** öppnar set-väljaren. PlayStation-fliken listar *Alla spel*, *Interna spel* (de tjugo inbyggda
-på PlayStation Classic), varje mapp du skapade under `Games/` (ett spel i en undermapp hör till denna
-grupp), *Favoritspel*, *Spelhistorik* och, när något spel är flaggat som sådant, *Lightgun-spel*. RetroArch-fliken
-listar en grupp per system som har spel, plus RetroArch:s egna favoriter och historik. Apps-fliken grupperar
-applikationer efter typ: *Alla appar*, sedan *Spel*, *Emulatorer*, *Verktyg*, *Media* och *Övrigt*
-(kategorin ställs in i varje apps `app.ini`-fil). Varje rad visar hur många objekt den innehåller; en grupp
-utan objekt öppnas på en tom hylla med endast inställningar i ikonstaden.
+**Select** öppnar set-väljaren. PlayStation-fliken listar på PlayStation Classic *Alla spel* och *Interna spel* (de
+tjugo inbyggda), sedan *USB-spel* (allt i `Games/`) och varje mapp du skapade under den (ett spel i en undermapp hör
+till denna grupp), sedan *Favoritspel*, *Spelhistorik* och, när något spel är flaggat som sådant, *Lightgun-spel*. På
+en Raspberry Pi, en PC-sticka och Windows finns inga interna spel, så listan börjar med *USB-spel*, som är hela
+biblioteket. RetroArch-fliken (endast där RetroArch är installerat) listar en grupp per system som har spel, plus
+RetroArch:s egna favoriter och historik. Apps-fliken grupperar applikationer efter typ: *Alla appar*, sedan *Spel*,
+*Emulatorer*, *Verktyg*, *Media* och *Övrigt* (kategorin ställs in i varje apps `app.ini`-fil). Varje rad visar hur
+många objekt den innehåller; en grupp utan objekt öppnas på en tom hylla med endast inställningar i ikonstaden.
+Sidfoten anger tangenterna: L1 / R1 flikar, L2 / R2 en sida, Cross väljer, Circle *Tillbaka*.
 
 ### 3.4 Snabbmenyn
 
 **Upp** i startaren, eller **kugghjulsikonen** i ikonstaden (där inställningar / spel / minneskort /
-Återuppta är): snabbmenyn för åtgärder du vill nå snabbt. En kort lista: *Omskanna spel* (startar en
-skanning nu), *Butiken* (AutoBleem Store för tillägg), *Nätverk och styrenheter* (bara där ett installerat
-tillägg ger `network`-posten - PSC-Bios på konsol, Pi och PC-sticka: WiFi, Bluetooth-parning,
-styrenhetskarteringsguide - se kapitel 6; grå med "enable it in Extensions" när det tillägget är
-inaktiverat - Cross öppnar listan över tillägg) och *Systemmenyn...* (menyn nedan). Upp / Ner flytta
-(radbrytning), Cross väljer, Circle går tillbaka. Ingenting är unikt här - varje objekt finns också i
-systemmenyn.
+Återuppta är): snabbmenyn för åtgärder du vill nå snabbt. En kort lista: *Skanna om spel* (startar en
+skanning nu), *Butik* (bläddra bland och installera spel, appar och tillägg), *Nätverk och handkontroller* (bara där
+ett installerat tillägg ger `network`-posten - PSC-Bios på konsol, Pi och PC-sticka: WiFi, Bluetooth-parning,
+styrenhetskarteringsguide - se kapitel 6; grå med "slå på det under Tillägg" när det tillägget är
+inaktiverat - Cross öppnar listan över tillägg), *Starta om launchern* (stänger AutoBleem och startar det igen;
+endast på konsol, Pi och PC-sticka) och *Systemmeny...* (allt annat: Alternativ, Spelbibliotek, Stäng av och mer -
+hela menyn nedan). Upp / Ner flytta (radbrytning), Cross väljer, Circle går tillbaka. Varje objekt har en
+enradsbeskrivning på sin rad. Förutom Butiken och *Starta om launchern* finns varje objekt också i systemmenyn.
 
 ### 3.5 Systemmenyn
 
-**L2 + R2** (tillsammans, i valfri ordning) öppnar systemmenyn över hyllan. Menyn är organiserad i avsnitt:
+**L2 + R2** (tillsammans, i valfri ordning) öppnar systemmenyn över hyllan. Varje rad har en enradsbeskrivning, och
+menyn är organiserad i avsnitt:
 
 | Avsnitt | Objekt | Vad det gör |
 |---|---|---|
-| (överst) | Omskanna spel | Söker nu efter nya, ändrade eller borttagna spel (skanningen övervakar även mappen själv). |
+| (överst) | Skanna om spel | Söker nu efter nya, ändrade eller borttagna spel (skanningen övervakar även mappen själv). |
 | | Tillägg | Tilläggen på stickan - AutoBleem Store och andra (avsnitt 3.12). |
-| **Bibliotek** | Spelhanterare | PS1-spel som en lista med sina mappar: ta bort ett spel, töm skisskonsten. Inaktiverad medan skanning körs. |
+| **Bibliotek** | Spelbibliotek | PS1-spel som en lista med sina mappar: ta bort ett spel, töm skisskonsten. Inaktiverad medan skanning körs. |
 | | Minneskort | Dina minneskortuppsättningar (avsnitt 3.7). |
-| | Skannrar processorer | Program som varje skanning kör först - deras ordning, på eller av (avsnitt 3.13). Inaktiverad medan skanning körs. |
-| **System** | Inställningar | AutoBleem:s inställningar (avsnitt 3.6). |
-| | Nätverk och styrenheter | Bara där ett installerat tillägg ger `network`-posten (`Provides=network` i dess `extension.ini` - PSC-Bios på konsol, Pi och PC-sticka) - WiFi, Bluetooth-styrenhetsparning, DualShock 3-installation och styrenhetskarteringsguide - se kapitel 6. När tillägget är installerat men inaktiverat, förblir detta objekt grått med "enable it in Extensions" - Cross öppnar listan över tillägg till det. |
-| | Hårdvaruinformation | Maskinens fakta: system, CPU, lagring, nätverksgränssnitt, tidszon, display, styrenheter och deras mappningar. På en PlayStation Classic med AutoBleem-kerneln öppnas **PSC-Bios** (kapitel 6); på andra maskiner visas denna informationssida. |
-| | Programuppdatering | (Raspberry Pi och PC) Kontrollera webbplatsen nu för nyare AutoBleem eller RetroArch. |
+| | Skanningsprocessorer | Program som varje skanning kör först - deras ordning, på eller av (avsnitt 3.13). Inaktiverad medan skanning körs. |
+| **System** | Alternativ | AutoBleem:s inställningar (avsnitt 3.6). |
+| | Nätverk och handkontroller | Bara där ett installerat tillägg ger `network`-posten (`Provides=network` i dess `extension.ini` - PSC-Bios på konsol, Pi och PC-sticka) - WiFi, Bluetooth-styrenhetsparning, DualShock 3-installation och styrenhetskarteringsguide - se kapitel 6. När tillägget är installerat men inaktiverat, förblir detta objekt grått med "slå på det under Tillägg" - Cross öppnar listan över tillägg till det. |
+| | Hårdvaruinformation | Maskinens fakta: system, CPU, lagring, nätverksgränssnitt, tidszon, display, styrenheter och deras mappningar - samma sida på varje plattform (avsnitt 4.2). |
+| | Programuppdatering | (Raspberry Pi och PC) Kontrollera webbplatsen nu för nyare AutoBleem eller RetroArch; raden säger *Uppdatering tillgänglig* när startaren redan känner till en. |
 | | Om | Krediter och licens. |
-| **Lämna** | RetroArch | Lämnar startaren för RetroArch:s egen meny. Att stänga RetroArch kommer tillbaka. |
+| **Lämna** | RetroArch | (Endast där RetroArch är installerat.) Lämnar startaren för RetroArch:s egen meny. Att stänga RetroArch kommer tillbaka. |
 | | Stäng av | Efter bekräftelse: på konsol AutoBleem-beredskap - stickan borttagen, ljuset rött, Power tar startaren tillbaka (avsnitt 2.1); på Pi eller PC stängs maskinen av. |
 
 ![Systemmenyn](../images/en/system-menu.jpg)
 
 ### 3.6 Inställningar
 
-Inställningarna är i grupper; Upp / Ner flyttas mellan dem, Vänster / Höger ändrar ett värde, Circle
-lämnar och sparar. Varje förändring tillämpas omedelbar.
+Inställningarna är i grupper, var och en under en rubrik; Upp / Ner flyttas mellan raderna, Vänster / Höger ändrar ett
+värde (ett tryck är ett steg, att hålla inne rullar vidare), L1 / R1 hoppar till första / sista raden, L2 / R2 bläddrar,
+Circle lämnar och sparar. Varje förändring tillämpas omedelbart. På/av-värden läses **PÅ** / **AV**.
 
 | Grupp / Inställning | Vad det gör |
 |---|---|
-| **Gränssnitt**: AutoBleem-tema | Utseendet. Teman finns i `Themes/`; en tema-zip som släpps där packas upp vid nästa besök. AutoBleem:s teman uppdateras vid varje uppdatering - för att anpassa en, kopiera den först under ett nytt namn. |
-| Cover Style | Den prydnadsstil som ritats omkring PS1-omslag. |
+| **Gränssnitt**: Bild | Skärmens upplösning, för startaren och PS1-emulatorn: *Auto* (skärmens eget läge, visat som *Auto (1920x1080)*) eller vilket läge skärmen listar; konsolen erbjuder 720p och 1080p. Ett nytt läge bekräftas: *Behålla det här bildläget?* - bekräftar du inte går det tillbaka efter en nedräkning. Inte i ett utvecklingsfönster. |
+| Emulatorns skärmskalning | Hur PS1-emulatorn anpassar ett spels bild till skärmen: *1x1* (PlayStations egna pixlar), *2x (heltal)*, *4:3*, *4:3 (heltal)* eller *Helskärm*. Heltalsskalning använder bara hela multipler (skarpast). Den ersätter den gamla Widescreen-växeln; klassiska `pcsx-ab` och RetroArch känner bara helskärm och 4:3. |
+| AutoBleem-tema | Utseendet. Teman finns i `Themes/`; en tema-zip som släpps där packas upp vid nästa besök. AutoBleem:s teman uppdateras vid varje uppdatering - för att anpassa en, kopiera den först under ett nytt namn. Standard är **ab2.0.0**. |
+| Omslagsstil | Den prydnadsstil som ritats omkring PS1-omslag. |
+| Glans på omslaget | En glans som går över det valda omslaget när hyllan kommit till ro. |
 | Språk | Starlarens språk, tillämpad omedelbar (17 språk). |
-| Använd teckensnitt från tema / Teckensnitt | Klassiska skärmars teckensnitt: temats, eller någon `.ttf`/`.otf` från `resources/fonts`, `RetroArch/fonts` eller temamappen. |
-| Showing Timeout | Hur länge meddelandet "Showing: ..." blir kvar, i sekunder (0 = för alltid). |
+| Visningstid för meddelande | Hur länge infobubblorna ("Visar: ...", skanningens sammanfattning) blir kvar, 0 till 20 sekunder; 0 visar *Av*. Fel har sin egen fasta tid. |
+| Startskärm | AutoBleem-bilden när startaren startar; av går direkt till hyllan. |
+| Animationer | Rörelsen mellan skärmar; av gör varje skärmbyte omedelbart. |
+| **Typsnitt**: Använd standardteckensnitt | Startaren använder sitt standardteckensnitt (Red Hat Text) eller - avstängt - teckensnittet som valts nedan. |
+| Teckensnitt | Någon `.ttf`/`.otf` från `resources/fonts`, `RetroArch/fonts` eller temamappen; raden anger teckensnittet som används. |
 | **Ljud**: Musik, Bakgrundsmusik | Vilken spår som spelar under startaren (temats, eller en fil från `resources/music`), och om en spelar alls. |
 | **Emulering**: PS1-emulator | `pcsx-abnxt` (standard: nuvarande PCSX-ReARMed med AutoBleem:s tillägg) eller `pcsx-ab` (klassisk). En sparad återställningspunkt fortsätter i den andra, om inte spelet kördes utan BIOS-fil. |
-| Bredbildsskärm | PS1-emulatorns bildförhållande för varje spel. |
-| Spela alla PSX-spel med RA | Varje PS1-spel startar i RetroArch:s PS1-kärna. |
-| Uppdatera RA Config | AutoBleem skriver sina inställningar in i RetroArch:s config när det startar ett spel där. |
 | Byt spelare 1 / spelare 2 (PS1-emulatorer) | Byter vilken av de två första kontrollerna som är Spelare 1 och vilken som är Spelare 2, i båda PS1-emulatorerna (pcsx-abnxt och klassiska pcsx-ab). Det får bara effekt med två eller fler kontroller anslutna; med en kontroller är det alltid Spelare 1. RetroArch påverkas inte. |
+| Spela alla PSX-spel med RA, Uppdatera RA-konfiguration, Behåll RetroArch-inställningar | (Endast där RetroArch är installerat.) Varje PS1-spel startar i RetroArch:s PS1-kärna; AutoBleem skriver sina inställningar in i RetroArch:s config när det startar ett spel där; en ändring gjord i RetroArch:s egen meny behålls när RetroArch avslutas. |
 | **Bibliotek**: Visa interna spel | Konsolens inbyggda spel i PlayStation-listerna (endast PlayStation Classic). |
-| Hämta box art online | Skanningen hämtar saknade omslag från libretro:s servrar (Raspberry Pi, PC, Windows). |
-| **Uppdateringar** | (Raspberry Pi, PC, Windows) `stable`, `latest` (även förhandsversioner) eller `off`. |
+| Hämta omslag online | Skanningen hämtar saknade omslag från libretro:s servrar (Raspberry Pi, PC, Windows). |
+| **Uppdateringar** | Uppdateringskanalen: `release` (den testade versionen), `testing` (nästa version, under test), `nightly` (det senaste utvecklingsbygget) eller `off`. Standard följer den installerade versionen. Visas inte på en utvecklingsvärd. |
+| **Diagnostik**: Behåll loggar på minnet | Behåller alla loggar på stickan från nästa start, inte bara efter en krasch (kapitel 7). |
+| Visa prestanda | Ett överlägg i nedre vänstra hörnet: bildfrekvens, CPU-belastning, trådar och minne; emulatorn visar också sin FPS och CPU i spelet. |
 
 ![Inställningar i grupper](../images/en/options.jpg)
 
@@ -277,27 +310,32 @@ Med ett spel valt, **Ner** öppnar dess ikonstäder: **Inställningar** (ovan), 
 inställningar), **Minneskort** (dess minneskort) och **Återuppta** (dess sparpunkter). Cross öppnar
 den under markören.
 
-**Spelets redigerare** visar spelets detaljer på höger sida och dess inställningar på vänster sida, i
-tre grupper:
+**Spelets redigerare** visar spelets detaljer på höger sida (titel, förlag, år, spelare, mapp, minneskort) och dess inställningar på vänster sida, i fyra grupper:
 
-- **Spel**: *Favorit* (i Favoritspel-gruppen), *Lightgun-spel* (ett lightgun-spel - det ansluter sig
-  till Lightgun-gruppen och körs alltid i RetroArch, vars PS1-kärna har GunCon), *Spela med RA* (detta
-  spel körs i RetroArch), *Lås data* (skannern behåller spelets titel, serienummer och skivlista som du
-  ställt in).
-- **Video**: högupplöstning, skanningslinjer och deras nivå, frame skip, GPU-plugin och *Filter* - hur
-  bilden skalas: Av (rena pixlar), Linjär (mjuk) eller Skarp (skarpa pixlar utan skimmer; endast
-  `pcsx-abnxt` - klassisk `pcsx-ab` och RetroArch visar som Av).
+- **Spel**: *Favorit* (i Favoritspel-gruppen), *Lightgun-spel* och *Spela med RA* (endast där RetroArch är
+  installerat: ett lightgun-spel ansluter sig till Lightgun-gruppen och körs alltid i RetroArch, vars PS1-kärna har
+  GunCon; *Spela med RA* kör detta spel i RetroArch), *Lås data* (skannern behåller spelets titel, serienummer och
+  skivlista som du ställt in).
+- **Bild**: *Upplösning* (1x eller 2x, på den inbyggda GPU:n), *Ta bort sömmar* (endast med 2x), *Dithering* (Av, På,
+  Alltid), *Utjämning*, *Filter* - hur bilden skalas: Närmaste (rena pixlar), Linjär (mjuk), Skarp eller Skarp (enkel)
+  (skarpa pixlar utan skimmer), Quilez, eller CRT-filtren CRT (fast) och CRT-Pi (de ritar egna scanlines, så
+  scanlinjeraderna blir gråa) - och *Scanlines* med deras *Scanlines ljusstyrka*. Upplösning, ta bort sömmar,
+  dithering, utjämning och andra filter än Linjär och Närmaste är för `pcsx-abnxt`; klassiska `pcsx-ab` och RetroArch
+  visar resten som Närmaste.
+- **Rendering**: GPU-*Plugin* och *Frameskip* (Auto, Av, 1 till 3).
 - **Emulator**: SpeedHack, CPU-klocka, SPU-interpolation, startlogga (av hoppar över BIOS-skal - för en
-  homebrew-skiva vars anpassad logga bryter starten) och med `pcsx-abnxt` *Smoothing*-filtret och
-  *Sony hacks*-växeln.
+  homebrew-skiva vars anpassad logga bryter starten) och med `pcsx-abnxt` *Sony-hack*-växeln.
 
-Triangle byter namn på spelet, Square ändrar dess minneskort, Start delar ett nytt. Circle sparar och
+Bildens form och skärmens upplösning är globala (Alternativ → *Emulatorns skärmskalning* och *Bild*). Ett spel utan
+titel i sina data visas under namnet på sin mapp.
+
+Triangle byter namn på spelet, Square byter dess minneskort, Start delar ett nytt. Circle sparar och
 lämnar.
 
-**Inställningar sparade i emulatorn.** Emulatorns egen meny har *Spara inställningar för detta spel*.
+**Inställningar sparade i emulatorn.** Emulatorns egen meny har *Spara inställningar för det här spelet*.
 När ett spel har sparade inställningar där, är de de som det spelar med, och spelets redigerare visar
-Video- och Emulator-rader gråa med dessa värden, under rubriken *Sparat i emulatorn*. För att gå tillbaka
-till speleditor-inställningarna väljer du **Låsa upp inställningarna** och bekräftar: detta raderar de av
+raderna Bild, Rendering och Emulator gråa med dessa värden, under rubriken *Sparat i emulatorn*. För att gå tillbaka
+till speleditor-inställningarna väljer du **Lås upp inställningarna** och bekräftar: detta raderar de av
 emulatorn sparade inställningarna, och dessa rader kan ändras igen. Båda emulatorerna, `pcsx-ab` och
 `pcsx-abnxt`, läser och skriver samma sparade inställningar.
 
@@ -319,16 +357,37 @@ defragmentera ett kort (Select). Start byter ut kortet på höger sida mot en an
 
 **Återställningspunkter**: när du lämnar ett PS1-spel med konsolens framkantknapp **Reset** (eller emulatorns
 meny på Pi eller PC), sparar AutoBleem ett sparpunkt från där du var och erbjuder det under **Återuppta**-ikonen
-- fyra platser, varje med en bild från stunden. Cross fortsätter från platsen, Triangle raderar den. Ett spel
-med en återställningspunkt visar en liten bild på dess Återuppta-ikon.
+- fyra platser, visade som inramade kort, varje med en bild från stunden, platsens nummer och datum; det nyaste
+är märkt **NYAST** och en oanvänd plats säger *Ingen återupptagspunkt*. Cross fortsätter från platsen, Triangle
+raderar den. Ett spel med en återställningspunkt visar en liten bild på dess Återuppta-ikon; ett spel utan har
+Återuppta-ikonen nedtonad. Medan återställningspunkten skrivs på väg ut ur ett spel visar emulatorn *Vänta...*.
 
 ### 3.8 Starta spel, RetroArch och appar
 
-**Cross** startar det valda spelet. Ett PS1-spel körs i den valda PS1-emulatorn (avsnitt 3.5), fullskärm,
+**Cross** startar det valda spelet. Ett PS1-spel körs i den valda PS1-emulatorn (avsnitt 3.6), fullskärm,
 tills du lämnar det - på konsolen med framkanten **Reset**-knapp (tillbaka till startaren med en
-återställningspunkt) eller **Power** (konsolen stängs av); på Pi eller PC via emulatorns in-game-meny
-(Select + Start på styrenheten, eller Esc på tangentbord). **Square** startar ett PS1-spel i RetroArch
-istället.
+återställningspunkt; fungerar även inifrån in-game-menyn) eller **Power** (konsolen stängs av); på Pi eller PC via
+emulatorns in-game-meny (nedan). **Square** startar ett PS1-spel i RetroArch istället.
+
+**In-game-menyn** (`pcsx-abnxt`). Tryck på menyknappen - handkontrollens Home, **Select + Start** på en handkontroll
+utan, eller **Esc** på ett tangentbord - och spelet stannar bakom en meny med spelets senaste bild. **Att hålla
+menyknappen i 2 sekunder** är detsamma som Reset: det lämnar spelet. L1 / R1 växlar mellan dess tre flikar, och
+menyn öppnas på den flik och rad där den lämnades:
+
+- **Spel**: *Fortsätt spelet*; under *Sparningar*: *Snabbspara*, *Snabbladda* och *Läs in autosparning* (spelet som
+  det var för upp till 30 sekunder sedan - emulatorn sparar det i minnet av sig själv medan du spelar); under
+  *Cd-skiva*: *Byt skiva* och *Återställ spelet* (startar det om från början); *Spara inställningar för det här
+  spelet* (se avsnitt 3.7), *PCSX-meny* (PCSX-ReARMeds egna sidor: alternativ, fusk, Om) och *Avsluta* (tillbaka till
+  AutoBleem).
+- **Bild**: *Bild* (skärmens upplösning - på konsolen väljs den i Alternativ och visas här bara), *Upplösning* (1x
+  eller 2x), *Ta bort sömmar*, *Dithering*, *Skalning*, *Utjämning*, *Filter*, *Scanlines* och *Scanlines
+  ljusstyrka*. Varje rad har en hjälprad till höger. CRT-Pi är för tungt för konsolen vid 1080p. En rad som inte
+  gäller är nedtonad, och dess hjälp säger varför.
+- **Handkontroller**: *Handkontroll 1* och *Handkontroll 2*: standard (digital), analog (DualShock), en pistol eller
+  ingen; träder i kraft när spelet fortsätter.
+
+Menyn är ritad i startarens ab2.0.0-utseende, med handkontrollernas batterier och bilden från den senaste
+snabbsparningen.
 
 Ett **RetroArch**-spel startar i RetroArch med kärnan som startaren valde för sitt system; *Close Content*
 eller *Quit RetroArch* i dess meny kommer tillbaka till startaren. RetroArch-objektet i systemmenyn öppnar
@@ -406,14 +465,18 @@ som AutoBleem körs på (en PlayStation Classic behöver AutoBleem-kernels WiFi)
 mellan dem:
 
 - **Appar** och **Spel**: vad källorna erbjuder, varje med bild, version, storlek och källikon. Installerade
-  objekt är gråa. Cross installerar (eller uppdaterar, eller provar igen efter fel), Triangle tar bort vad
-  Store installerade. L2 / R2 eller Vänster / Höger vänder sidor, **Select** visar en källa åt gången,
-  **Start** söker titlar. Objektbilder cachas och kan försökas igen om de inte laddar.
+  objekt bär ett *Installerad*-märke. Cross installerar (eller uppdaterar, eller provar igen efter fel, eller
+  avbryter en köad eller pågående nedladdning), Triangle tar bort vad Store installerade, Square uppdaterar
+  listorna. L2 / R2 hoppar efter bokstav, **Select** visar en källa åt gången, **Start** söker titlar. Sidfoten
+  visar tangenterna för den valda raden. Objektbilder cachas och kan försökas igen om de inte laddar.
 - **Nedladdningar**: vad som laddar ner, väntar, misslyckas eller är installerat. Framstegsstrecken
-  uppdateras stadigt. Nedladdningar går vidare i bakgrunden, även efter att du lämnar Store; att starta
-  ett spel eller stänga av pausar dem bara, och en stoppad nedladdning går vidare där den stannade. Ett
-  installerat spel dyker upp på hyllan efter nästa skanning, med Store:s bild som omslag. Nedladdningar
-  över 2 GB fungerar på alla plattformar, inklusive 32-bitars versioner.
+  uppdateras stadigt, och medan du är någon annanstans i startaren visar en bubbla den pågående nedladdningen med
+  dess hastighet och återstående tid (`1.4 MB/s · 0:42`). Nedladdningar går vidare i bakgrunden, även efter att du
+  lämnar Store; att starta ett spel eller stänga av pausar dem bara, och en stoppad nedladdning går vidare där den
+  stannade. Om nätverket försvinner säger objektet *Väntar på nätverket* och går vidare där det stannade när
+  nätverket är tillbaka (det ger upp efter 30 minuter). Ett installerat spel dyker upp på hyllan efter nästa
+  skanning, med Store:s bild som omslag. Nedladdningar över 2 GB fungerar på alla plattformar, inklusive 32-bitars
+  versioner.
 - **Källor**: varifrån listorna kommer - AutoBleem:s egen katalog, en TSV-lista som släpps in i
   `System/Extensions/store/sources/`, och adresser du lägger till med **Add a source URL**. Varje källa visar
   sin ikon i listan. Cross på en du lade till byter namn på den, ändrar dess adress, växlar mellan `http://`
@@ -467,7 +530,7 @@ måste göra, och `tools/proc_check.py` i AutoBleem:s källa kontrollerar en inn
 
 ### 4.1 Spelhanterare
 
-PS1-spelen som en lista med sina mappar och valda spelts omslag och detaljer. Cross öppnar speleditor:n,
+PS1-spelen som en lista med bara titlar (spelets mapp finns i dess detaljer) och valda spelets omslag. Cross öppnar speleditor:n,
 **Square raderar spelet** (dess mapp och, efter en andra fråga, dess sparpunkter), Triangle raderar varje
 omslag-PNG bredvid spelen (skanningen tar dem från databaserna igen), L2 / R2 sida. Det lediga utrymmet på
 enheten finns längst upp till höger. Spelhanterare väntar medan en skanning körs.
@@ -477,8 +540,8 @@ enheten finns längst upp till höger. Spelhanterare väntar medan en skanning k
 ### 4.2 Hårdvaruinformation
 
 Maskinens fakta - system, hårdvara, lagring med fritt utrymme, nätverksadresser, skärm- och
-ljudstyrprogrammen, anslutna styrenheter - omläst varje sekund. På en PlayStation Classic med
-AutoBleem-kerneln öppnas **PSC-Bios** istället (kapitel 6).
+ljudstyrprogrammen, anslutna styrenheter - omläst varje sekund. Det är samma sida på varje plattform, konsolen
+inräknad; skärmarna för nätverks- och handkontrollsinställningar är **Nätverk och handkontroller** (PSC-Bios, kapitel 6).
 
 De två första enheterna visas som Spelare 1 och Spelare 2 – de portar som PS1-emulatorn tilldelar dem.
 Alla ytterligare enheter visas som oanvända av PS1-emulatorn. RetroArch tilldelar enheter enligt egna
@@ -571,7 +634,7 @@ dess brandvägg: tillåt bara privata nätverk.
 
 Två verktyg för en PlayStation Classic-sticka. Båda ritar sig själva i starlarens tema och språk, och båda
 drivs av styrenheten - och, i styrenhetsguiden, av konsolens framknapparna. **PSC-Bios** är ett tillägg som
-medföljer consolpaketet: *Hårdvaruinformation* i systemmenyn öppnar det, och det är i listan över tillägg.
+medföljer consolpaketet: posten *Nätverk och handkontroller* i snabbmenyn och systemmenyn öppnar det, och det är i listan över tillägg.
 **ABFlashKit** är en app i Apps-uppsättningen.
 
 ### 6.1 PSC-Bios
@@ -650,7 +713,7 @@ som kör annan anpassad firmware (BleemSync, Project Eris): återställ den till
   på stickan - `update.log` (online-uppdatering) och `updateroms.log` (UpdateRoms).
 - **Spel inte på hyllan**: kontrollera mappstrukturen (en mapp per spel, bildformaten i avsnitt 3.9).
   *Spelhanterare* listar de mappar som skanningen vägrade efter spelen, märkta *Not added*, med anledningen;
-  Square tar bort sådan mapp. Omskanna i systemmenyn kör skanningen igen.
+  Square tar bort sådan mapp. *Skanna om spel* i systemmenyn kör skanningen igen.
 - **Ingen skisskonst**: skisskonst-databaserna installerades inte (kör installationsprogrammet igen med dem
   markerade), eller, för RetroArch-spel på en konsol, UpdateRoms har inte körts på PC:n.
 - **Styrenhet gör ingenting eller har blandade knappar**: PSC-Bios:s styrenhetsguide (konsol) kartlägger
