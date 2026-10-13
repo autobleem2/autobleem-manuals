@@ -720,5 +720,19 @@ kører anden brugerdefineret firmware (BleemSync Project Eris): restore den til 
 - **Windows**: `Esc` forlader launcher; data-mappen er den valgte i setup (`Documents\AutoBleem` som
   standard) logs er i dens `System\Logs`.
 
+**Konsollen genstarter igen og igen efter en onlineopdatering (stik formateret som ext4).** Nogle brugere formaterer stikket som ext4 (Linux) i stedet for FAT32 eller exFAT. Indtil den næste AutoBleem-udgivelse pakkede onlineopdateringen på et sådant stik alle filer ud uden eksekveringsret, så AutoBleem starter ikke, og konsollen genstarter hele tiden. Stik med FAT32 og exFAT er ikke berørt.
+
+**Løsning A** (kræver en Linux-pc): sæt stikket i, og gør AutoBleems programmer eksekverbare igen. Brug din egen monteringssti i stedet for `/media/USER/STICK` (den sidste linje skal kun bruges, hvis RetroArch er installeret):
+
+```
+chmod +x /media/USER/STICK/Autobleem/*.sh /media/USER/STICK/Autobleem/rc/*.sh
+chmod +x /media/USER/STICK/Autobleem/bin/autobleem/* /media/USER/STICK/Autobleem/bin/emu*/pcsx-ab /media/USER/STICK/Autobleem/bin/abpad/abpadd
+chmod +x /media/USER/STICK/RetroArch/bin/retroarch
+```
+
+**Løsning B**: installer den nyeste AutoBleem-udgivelse på stikket igen som i afsnit 2.1 (installationsprogrammet kræver en pc, der kan læse stikket; et stik, den ikke kan læse, skal først formateres, hvilket sletter det - kopiér dine spil væk først).
+
+> Brug **FAT32** (en original konsol læser kun FAT32; exFAT kræver AutoBleem-kernen, kapitel 6) - den næste udgivelse bevarer rettighederne, og AutoBleem reparerer dem ved hver start.
+
 AutoBleem er frit software (GNU GPL v3 eller senere) uden garanti. Support og nyheder: Discord-serveren
 linket på About-skærmen og https://autobleem.retromenele.pl/.

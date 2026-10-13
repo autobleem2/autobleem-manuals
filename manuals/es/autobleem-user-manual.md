@@ -759,5 +759,19 @@ consola que ejecuta otro firmware personalizado (BleemSync, Project Eris): resta
 - **Windows**: `Esc` sale del lanzador; la carpeta de datos es la elegida en la instalación
   (`Documents\AutoBleem` de forma predeterminada), los registros están en su `System\Logs`.
 
+**La consola se reinicia una y otra vez tras una actualización en línea (memoria formateada como ext4).** Algunos usuarios formatean la memoria como ext4 (Linux) en lugar de FAT32 o exFAT. Hasta la próxima versión de AutoBleem, la actualización en línea en una memoria así descomprimía todos los archivos sin permiso de ejecución, por lo que AutoBleem no arranca y la consola se reinicia sin parar. Las memorias FAT32 y exFAT no se ven afectadas.
+
+**Solución A** (necesita un PC con Linux): conecte la memoria y vuelva a hacer ejecutables los programas de AutoBleem. Use su propia ruta de montaje en lugar de `/media/USER/STICK` (la última línea solo si RetroArch está instalado):
+
+```
+chmod +x /media/USER/STICK/Autobleem/*.sh /media/USER/STICK/Autobleem/rc/*.sh
+chmod +x /media/USER/STICK/Autobleem/bin/autobleem/* /media/USER/STICK/Autobleem/bin/emu*/pcsx-ab /media/USER/STICK/Autobleem/bin/abpad/abpadd
+chmod +x /media/USER/STICK/RetroArch/bin/retroarch
+```
+
+**Solución B**: instale de nuevo la última versión de AutoBleem en la memoria, como en la sección 2.1 (el instalador necesita un PC que pueda leer la memoria; una que no pueda leer hay que formatearla antes, lo que la borra - copie antes sus juegos).
+
+> Use **FAT32** (una consola original solo lee FAT32; exFAT necesita el kernel de AutoBleem, capítulo 6) - la próxima versión conserva los permisos y AutoBleem los repara en cada arranque.
+
 AutoBleem es software libre (GNU GPL v3 o posterior), sin garantía. Soporte y noticias: el servidor Discord vinculado
 en la pantalla Acerca de, y https://autobleem.retromenele.pl/.

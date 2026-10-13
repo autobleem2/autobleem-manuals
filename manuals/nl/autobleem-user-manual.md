@@ -432,4 +432,18 @@ Een voortgangsbalk onder elke stap toont hoe ver de actie is. Het hulpprogramma 
 - **Raspberry Pi**: `Alt+F2` geeft een login-prompt op de tweede console; SSH is ingeschakeld vanaf eerste boot. `sudo journalctl -u autobleem` toont de launcher's service; `sudo systemctl restart autobleem` herstart het. Een eerste boot die niet kon worden afgerond (geen netwerk) probeert het opnieuw bij volgende boot.
 - **Windows**: `Esc` verlaat de launcher; de data-map is die gekozen in de setup (`Documents\AutoBleem` standaard), logs zijn in zijn `System\Logs`.
 
+**De console herstart steeds opnieuw na een online-update (stick geformatteerd als ext4).** Sommige gebruikers formatteren de stick als ext4 (Linux) in plaats van FAT32 of exFAT. Tot de volgende AutoBleem-release pakte de online-update op zo'n stick alle bestanden uit zonder uitvoerrechten, waardoor AutoBleem niet start en de console blijft herstarten. FAT32- en exFAT-sticks hebben hier geen last van.
+
+**Oplossing A** (Linux-pc nodig): steek de stick in en maak de AutoBleem-programma's weer uitvoerbaar. Gebruik uw eigen koppelpad in plaats van `/media/USER/STICK` (de laatste regel alleen als RetroArch is geïnstalleerd):
+
+```
+chmod +x /media/USER/STICK/Autobleem/*.sh /media/USER/STICK/Autobleem/rc/*.sh
+chmod +x /media/USER/STICK/Autobleem/bin/autobleem/* /media/USER/STICK/Autobleem/bin/emu*/pcsx-ab /media/USER/STICK/Autobleem/bin/abpad/abpadd
+chmod +x /media/USER/STICK/RetroArch/bin/retroarch
+```
+
+**Oplossing B**: installeer de nieuwste AutoBleem-release opnieuw op de stick, zoals in sectie 2.1 (het installatieprogramma heeft een pc nodig die de stick kan lezen; een onleesbare stick moet eerst geformatteerd worden, wat hem wist - kopieer eerst uw games).
+
+> Gebruik **FAT32** (een standaardconsole leest alleen FAT32; exFAT vereist de AutoBleem-kernel, hoofdstuk 6) - de volgende release behoudt de rechten en AutoBleem herstelt ze bij elke start.
+
 AutoBleem is vrije software (GNU GPL v3 of hoger), zonder garantie. Ondersteuning en nieuws: de Discord-server gelinkt op het About-scherm, en https://autobleem.retromenele.pl/.

@@ -768,5 +768,19 @@ mai întâi.
 - **Windows**: `Esc` lasă lansatorul; folderul de date este pe cel ales în instalare (`Documents\AutoBleem`
   implicit), jurnalele sunt în `System\Logs`.
 
+**Consola repornește întruna după o actualizare online (stick formatat ca ext4).** Unii utilizatori formatează stickul ca ext4 (Linux) în loc de FAT32 sau exFAT. Până la următoarea versiune AutoBleem, actualizarea online pe un astfel de stick dezarhiva toate fișierele fără permisiunea de execuție, deci AutoBleem nu pornește, iar consola repornește mereu. Stickurile FAT32 și exFAT nu sunt afectate.
+
+**Remedierea A** (necesită un PC Linux): conectați stickul și faceți din nou executabile programele AutoBleem. Folosiți propria cale de montare în loc de `/media/USER/STICK` (ultima linie doar dacă RetroArch este instalat):
+
+```
+chmod +x /media/USER/STICK/Autobleem/*.sh /media/USER/STICK/Autobleem/rc/*.sh
+chmod +x /media/USER/STICK/Autobleem/bin/autobleem/* /media/USER/STICK/Autobleem/bin/emu*/pcsx-ab /media/USER/STICK/Autobleem/bin/abpad/abpadd
+chmod +x /media/USER/STICK/RetroArch/bin/retroarch
+```
+
+**Remedierea B**: instalați din nou cea mai nouă versiune AutoBleem pe stick, ca în secțiunea 2.1 (programul de instalare are nevoie de un PC care citește stickul; un stick necitibil trebuie formatat întâi, ceea ce îl șterge - copiați mai întâi jocurile).
+
+> Folosiți **FAT32** (o consolă originală citește doar FAT32; exFAT cere nucleul AutoBleem, capitolul 6) - versiunea următoare păstrează permisiunile, iar AutoBleem le repară la fiecare pornire.
+
 AutoBleem este software liber (GNU GPL v3 sau mai nou), fără garanție. Suport și știri: serverul Discord
 legat pe ecranul Despre, și https://autobleem.retromenele.pl/.

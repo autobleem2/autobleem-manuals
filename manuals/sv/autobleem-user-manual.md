@@ -743,5 +743,19 @@ som kör annan anpassad firmware (BleemSync, Project Eris): återställ den till
 - **Windows**: `Esc` lämnar startaren; datamappen är den som valdes i inställningen (`Documents\AutoBleem`
   som standard), loggar är i dess `System\Logs`.
 
+**Konsolen startar om om och om efter en onlineuppdatering (minne formaterat som ext4).** Vissa användare formaterar minnet som ext4 (Linux) i stället för FAT32 eller exFAT. Fram till nästa AutoBleem-version packade onlineuppdateringen på ett sådant minne upp alla filer utan körbehörighet, så AutoBleem startar inte och konsolen startar om hela tiden. Minnen med FAT32 och exFAT påverkas inte.
+
+**Åtgärd A** (kräver en Linux-dator): sätt i minnet och gör AutoBleems program körbara igen. Använd din egen monteringssökväg i stället för `/media/USER/STICK` (sista raden bara om RetroArch är installerat):
+
+```
+chmod +x /media/USER/STICK/Autobleem/*.sh /media/USER/STICK/Autobleem/rc/*.sh
+chmod +x /media/USER/STICK/Autobleem/bin/autobleem/* /media/USER/STICK/Autobleem/bin/emu*/pcsx-ab /media/USER/STICK/Autobleem/bin/abpad/abpadd
+chmod +x /media/USER/STICK/RetroArch/bin/retroarch
+```
+
+**Åtgärd B**: installera den senaste AutoBleem-versionen på minnet igen, som i avsnitt 2.1 (installationsprogrammet kräver en dator som kan läsa minnet; ett minne som den inte kan läsa måste formateras först, vilket raderar det - kopiera bort dina spel först).
+
+> Använd **FAT32** (en vanlig konsol läser bara FAT32; exFAT kräver AutoBleem-kärnan, kapitel 6) - nästa version behåller behörigheterna och AutoBleem reparerar dem vid varje start.
+
 AutoBleem är fri programvara (GNU GPL v3 eller senare), utan garanti. Support och nyheter: Discord-servern
 länkad på About-skärmen, och https://autobleem.retromenele.pl/.

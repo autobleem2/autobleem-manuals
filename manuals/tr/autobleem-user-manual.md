@@ -711,5 +711,19 @@ Project Eris) konsolu kurulumunu reddeder: önce stok'a geri getir.
 - **Windows**: `Esc` başlatıcıyı bırakır; veri klasörü kuruluşta seçilen (varsayılan `Documents\AutoBleem`), günlükler
   `System\Logs`'ta.
 
+**Konsol çevrimiçi güncellemeden sonra sürekli yeniden başlıyor (ext4 biçimli bellek).** Bazı kullanıcılar belleği FAT32 veya exFAT yerine ext4 (Linux) olarak biçimlendirir. Bir sonraki AutoBleem sürümüne kadar, böyle bir bellekte çevrimiçi güncelleme tüm dosyaları çalıştırma izni olmadan açıyordu; bu yüzden AutoBleem başlamaz ve konsol durmadan yeniden başlar. FAT32 ve exFAT belleklerde bu sorun olmaz.
+
+**Çözüm A** (Linux'lu bir PC gerekir): belleği takın ve AutoBleem programlarını yeniden çalıştırılabilir yapın. `/media/USER/STICK` yerine kendi bağlama yolunuzu kullanın (son satır yalnızca RetroArch kuruluysa gerekir):
+
+```
+chmod +x /media/USER/STICK/Autobleem/*.sh /media/USER/STICK/Autobleem/rc/*.sh
+chmod +x /media/USER/STICK/Autobleem/bin/autobleem/* /media/USER/STICK/Autobleem/bin/emu*/pcsx-ab /media/USER/STICK/Autobleem/bin/abpad/abpadd
+chmod +x /media/USER/STICK/RetroArch/bin/retroarch
+```
+
+**Çözüm B**: en yeni AutoBleem sürümünü bölüm 2.1'deki gibi belleğe yeniden kurun (kurulum programı belleği okuyabilen bir PC ister; okunamayan bellek önce biçimlendirilmelidir, bu da içindekileri siler - önce oyunlarınızı kopyalayın).
+
+> **FAT32** kullanın (orijinal konsol yalnızca FAT32 okur; exFAT için AutoBleem çekirdeği gerekir, bölüm 6) - sonraki sürüm izinleri korur ve AutoBleem onları her başlangıçta onarır.
+
 AutoBleem özgür yazılım (GNU GPL v3 veya daha yeni), garanti yok. Destek ve haberler: About ekranında bağlı Discord
 sunucusu ve https://autobleem.retromenele.pl/.

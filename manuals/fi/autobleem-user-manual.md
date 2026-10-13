@@ -734,5 +734,19 @@ joka käyttää muuta mukautettua firmware:a (BleemSync Project Eris): palauta s
 - **Windows**: `Esc` poistuu käynnistäjästä; datakansio on asennuksessa valitsemasi (`Documents\AutoBleem`
   oletuksena) lokit ovat sen `System\Logs`-kansiossa.
 
+**Konsoli käynnistyy yhä uudelleen verkkopäivityksen jälkeen (tikku alustettu ext4:ksi).** Jotkut alustavat tikun ext4:ksi (Linux) FAT32:n tai exFAT:n sijaan. Seuraavaan AutoBleem-julkaisuun asti verkkopäivitys purki tällaisella tikulla kaikki tiedostot ilman suoritusoikeutta, joten AutoBleem ei käynnisty ja konsoli käynnistyy loputtomasti uudelleen. FAT32- ja exFAT-tikkuihin tämä ei vaikuta.
+
+**Korjaus A** (vaatii Linux-tietokoneen): liitä tikku ja tee AutoBleemin ohjelmista taas suoritettavia. Käytä omaa liitospolkuasi polun `/media/USER/STICK` tilalla (viimeinen rivi vain, jos RetroArch on asennettu):
+
+```
+chmod +x /media/USER/STICK/Autobleem/*.sh /media/USER/STICK/Autobleem/rc/*.sh
+chmod +x /media/USER/STICK/Autobleem/bin/autobleem/* /media/USER/STICK/Autobleem/bin/emu*/pcsx-ab /media/USER/STICK/Autobleem/bin/abpad/abpadd
+chmod +x /media/USER/STICK/RetroArch/bin/retroarch
+```
+
+**Korjaus B**: asenna uusin AutoBleem-julkaisu tikulle uudelleen kuten kohdassa 2.1 (asennusohjelma tarvitsee tietokoneen, joka lukee tikun; lukukelvoton tikku on ensin alustettava, mikä tyhjentää sen - kopioi pelit pois ensin).
+
+> Käytä **FAT32:ta** (tavallinen konsoli lukee vain FAT32:n; exFAT vaatii AutoBleem-ytimen, luku 6) - seuraava julkaisu säilyttää oikeudet ja AutoBleem korjaa ne joka käynnistyksessä.
+
 AutoBleem on vapaaa ohjelmistoa (GNU GPL v3 tai myöhempi) ilman takuuta. Tuki ja uutiset: Discord-palvelin
 linkitetty About-näytöllä ja https://autobleem.retromenele.pl/.

@@ -429,4 +429,18 @@ AutoBleem内核是控制台Linux内核的可选替代品：它带一个工作时
 - **树莓派**：`Alt+F2`在第二个控制台给出登录提示；SSH从首次启动启用。`sudo journalctl -u autobleem`显示启动器的服务；`sudo systemctl restart autobleem`重启它。无法完成的首次启动(无网络)在下次启动时重试。
 - **Windows**：`Esc`离开启动器；数据文件夹是设置中选择的(默认`Documents\AutoBleem`)，日志在其`System\Logs`中。
 
+**在线更新后控制台不断重启(U盘格式化为ext4)。**有些用户把U盘格式化为ext4(Linux)，而不是FAT32或exFAT。在下一个AutoBleem版本之前，在这样的U盘上进行在线更新会把所有文件解压成没有可执行权限，于是AutoBleem无法启动，控制台反复重启。FAT32和exFAT的U盘不受影响。
+
+**修复A**(需要一台Linux电脑)：插入U盘，让AutoBleem的程序重新可执行。请用您自己的挂载路径代替`/media/USER/STICK`(最后一行只在安装了RetroArch时需要)：
+
+```
+chmod +x /media/USER/STICK/Autobleem/*.sh /media/USER/STICK/Autobleem/rc/*.sh
+chmod +x /media/USER/STICK/Autobleem/bin/autobleem/* /media/USER/STICK/Autobleem/bin/emu*/pcsx-ab /media/USER/STICK/Autobleem/bin/abpad/abpadd
+chmod +x /media/USER/STICK/RetroArch/bin/retroarch
+```
+
+**修复B**：按2.1节的方法把最新的AutoBleem版本重新安装到U盘上(安装程序需要能读取该U盘的电脑；读不了的U盘要先格式化，这会清除其中的内容——请先复制走您的游戏)。
+
+> 请使用**FAT32**(原装控制台只能读取FAT32；exFAT需要AutoBleem内核，第6章)——下一个版本会保留权限，AutoBleem也会在每次启动时修复权限。
+
 AutoBleem是自由软件(GNU GPL v3或更高版本)，没有保修。支持和新闻：About屏幕上链接的Discord服务器以及https://autobleem.retromenele.pl/。
