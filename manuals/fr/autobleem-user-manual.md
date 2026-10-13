@@ -765,5 +765,19 @@ console qui exécute un autre micrologiciel personnalisé (BleemSync, Project Er
 - **Windows** : `Échap` quitte le lanceur ; le dossier de données est celui choisi dans l'installation
   (`Documents\AutoBleem` par défaut), les journaux sont dans son `System\Logs`.
 
+**La console redémarre en boucle après une mise à jour en ligne (clé formatée en ext4).** Certains utilisateurs formatent la clé en ext4 (Linux) au lieu de FAT32 ou exFAT. Jusqu'à la prochaine version d'AutoBleem, la mise à jour en ligne sur une telle clé décompressait tous les fichiers sans droit d'exécution : AutoBleem ne démarre plus et la console redémarre sans cesse. Les clés FAT32 et exFAT ne sont pas concernées.
+
+**Solution A** (il faut un PC Linux) : branchez la clé et rendez de nouveau exécutables les programmes d'AutoBleem. Utilisez votre propre point de montage à la place de `/media/USER/STICK` (la dernière ligne seulement si RetroArch est installé) :
+
+```
+chmod +x /media/USER/STICK/Autobleem/*.sh /media/USER/STICK/Autobleem/rc/*.sh
+chmod +x /media/USER/STICK/Autobleem/bin/autobleem/* /media/USER/STICK/Autobleem/bin/emu*/pcsx-ab /media/USER/STICK/Autobleem/bin/abpad/abpadd
+chmod +x /media/USER/STICK/RetroArch/bin/retroarch
+```
+
+**Solution B** : réinstallez la dernière version d'AutoBleem sur la clé, comme à la section 2.1 (l'installateur demande un PC qui lit la clé ; une clé illisible doit d'abord être formatée, ce qui l'efface - copiez d'abord vos jeux).
+
+> Utilisez **FAT32** (une console d'origine ne lit que FAT32 ; exFAT demande le noyau AutoBleem, chapitre 6) - la prochaine version conserve les droits et AutoBleem les répare à chaque démarrage.
+
 AutoBleem est un logiciel libre (GNU GPL v3 ou plus récent), sans garantie. Support et actualités : le serveur
 Discord lié sur l'écran À propos, et https://autobleem.retromenele.pl/.

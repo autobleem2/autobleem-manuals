@@ -747,5 +747,19 @@ fabrycznego.
 - **Windows**: `Esc` kończy launcher; folder danych to ten wybrany w instalatorze (domyślnie
   `Dokumenty\AutoBleem`), logi są w jego `System\Logs`.
 
+**Konsola restartuje się w kółko po aktualizacji online (pendrive sformatowany jako ext4).** Niektórzy formatują pendrive jako ext4 (Linux) zamiast FAT32 lub exFAT. Do następnego wydania AutoBleem aktualizacja online na takim pendrivie rozpakowywała wszystkie pliki bez prawa wykonywania, więc AutoBleem się nie uruchamia, a konsola restartuje się bez końca. Pendrive'y FAT32 i exFAT nie są dotknięte.
+
+**Naprawa A** (potrzebny komputer z Linuksem): podłącz pendrive i ponownie nadaj programom AutoBleem prawo wykonywania. Zamiast `/media/USER/STICK` użyj własnej ścieżki montowania (ostatni wiersz tylko, gdy zainstalowano RetroArch):
+
+```
+chmod +x /media/USER/STICK/Autobleem/*.sh /media/USER/STICK/Autobleem/rc/*.sh
+chmod +x /media/USER/STICK/Autobleem/bin/autobleem/* /media/USER/STICK/Autobleem/bin/emu*/pcsx-ab /media/USER/STICK/Autobleem/bin/abpad/abpadd
+chmod +x /media/USER/STICK/RetroArch/bin/retroarch
+```
+
+**Naprawa B**: zainstaluj na pendrivie ponownie najnowsze wydanie AutoBleem, jak w sekcji 2.1 (instalator wymaga komputera, który odczyta pendrive; nieczytelny pendrive trzeba najpierw sformatować, co go kasuje - najpierw skopiuj gry).
+
+> Używaj **FAT32** (zwykła konsola czyta tylko FAT32; exFAT wymaga jądra AutoBleem, rozdział 6) - następne wydanie zachowuje uprawnienia, a AutoBleem naprawia je przy każdym starcie.
+
 AutoBleem to wolne oprogramowanie (GNU GPL v3 lub nowsza), bez gwarancji. Wsparcie i nowości: serwer
 Discord podlinkowany na ekranie O programie oraz https://autobleem.retromenele.pl/.

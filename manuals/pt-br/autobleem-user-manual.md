@@ -717,5 +717,19 @@ outro firmware personalizado (BleemSync, Project Eris): recupere-o para o stock 
 - **Windows**: `Esc` sai do lançador; a pasta de dados é a escolhida na instalação
   (`Documents\AutoBleem` por padrão), os logs estão em seu `System\Logs`.
 
+**O console reinicia sem parar após uma atualização online (pendrive formatado como ext4).** Alguns usuários formatam o pendrive como ext4 (Linux) em vez de FAT32 ou exFAT. Até a próxima versão do AutoBleem, a atualização online nesse pendrive descompactava todos os arquivos sem permissão de execução, então o AutoBleem não inicia e o console reinicia em loop. Pendrives FAT32 e exFAT não são afetados.
+
+**Correção A** (precisa de um PC com Linux): conecte o pendrive e torne os programas do AutoBleem executáveis de novo. Use o seu próprio caminho de montagem no lugar de `/media/USER/STICK` (a última linha só se o RetroArch estiver instalado):
+
+```
+chmod +x /media/USER/STICK/Autobleem/*.sh /media/USER/STICK/Autobleem/rc/*.sh
+chmod +x /media/USER/STICK/Autobleem/bin/autobleem/* /media/USER/STICK/Autobleem/bin/emu*/pcsx-ab /media/USER/STICK/Autobleem/bin/abpad/abpadd
+chmod +x /media/USER/STICK/RetroArch/bin/retroarch
+```
+
+**Correção B**: instale de novo a versão mais recente do AutoBleem no pendrive, como na seção 2.1 (o instalador precisa de um PC que leia o pendrive; um pendrive ilegível precisa ser formatado antes, o que o apaga - copie antes os seus jogos).
+
+> Use **FAT32** (um console original lê só FAT32; o exFAT precisa do kernel do AutoBleem, capítulo 6) - a próxima versão mantém as permissões e o AutoBleem as repara a cada início.
+
 AutoBleem é software livre (GNU GPL v3 ou posterior), sem garantia. Suporte e notícias: o servidor Discord ligado na tela Sobre, e
 https://autobleem.retromenele.pl/.

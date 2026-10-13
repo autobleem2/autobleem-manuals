@@ -711,5 +711,19 @@ runs another custom firmware (BleemSync, Project Eris): restore it to stock firs
 - **Windows**: `Esc` leaves the launcher; the data folder is the one chosen in the setup
   (`Documents\AutoBleem` by default), the logs are in its `System\Logs`.
 
+**The console restarts again and again after an online update (stick formatted as ext4).** Some users format the stick as ext4 (Linux) instead of FAT32 or exFAT. Until the next AutoBleem release, the online update on such a stick unpacked every file without its executable permission, so AutoBleem does not start and the console restarts over and over. FAT32 and exFAT sticks are not affected.
+
+**Fix A** (needs a Linux PC): plug the stick in and make the AutoBleem programs executable again. Use your own mount path instead of `/media/USER/STICK` (the last line is only needed if RetroArch is installed):
+
+```
+chmod +x /media/USER/STICK/Autobleem/*.sh /media/USER/STICK/Autobleem/rc/*.sh
+chmod +x /media/USER/STICK/Autobleem/bin/autobleem/* /media/USER/STICK/Autobleem/bin/emu*/pcsx-ab /media/USER/STICK/Autobleem/bin/abpad/abpadd
+chmod +x /media/USER/STICK/RetroArch/bin/retroarch
+```
+
+**Fix B**: install the newest AutoBleem release onto the stick again, as in section 2.1 (the installer needs a PC that can read the stick; a stick it cannot read has to be formatted first, which erases it - copy your games off first).
+
+> Use **FAT32** (a stock console reads FAT32 only; exFAT needs the AutoBleem kernel, chapter 6) - the next release keeps the permissions and AutoBleem repairs them at every start.
+
 AutoBleem is free software (GNU GPL v3 or later), with no warranty. Support and news: the Discord server
 linked on the About screen, and https://autobleem.retromenele.pl/.

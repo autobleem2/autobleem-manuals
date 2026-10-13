@@ -773,5 +773,19 @@ auf Stock wieder her.
 - **Windows**: `Esc` verlässt den Launcher; der Datenordner ist der in der Einrichtung gewählte
   (`Documents\AutoBleem` standardmäßig), die Protokolle sind in seinem `System\Logs`.
 
+**Die Konsole startet nach einem Online-Update immer wieder neu (Stick als ext4 formatiert).** Manche Nutzer formatieren den Stick als ext4 (Linux) statt als FAT32 oder exFAT. Bis zur nächsten AutoBleem-Version entpackte das Online-Update auf einem solchen Stick alle Dateien ohne Ausführungsrecht, deshalb startet AutoBleem nicht und die Konsole startet endlos neu. FAT32- und exFAT-Sticks sind nicht betroffen.
+
+**Lösung A** (braucht einen Linux-PC): Stick einstecken und die AutoBleem-Programme wieder ausführbar machen. Nehmen Sie Ihren eigenen Einhängepfad statt `/media/USER/STICK` (die letzte Zeile nur, wenn RetroArch installiert ist):
+
+```
+chmod +x /media/USER/STICK/Autobleem/*.sh /media/USER/STICK/Autobleem/rc/*.sh
+chmod +x /media/USER/STICK/Autobleem/bin/autobleem/* /media/USER/STICK/Autobleem/bin/emu*/pcsx-ab /media/USER/STICK/Autobleem/bin/abpad/abpadd
+chmod +x /media/USER/STICK/RetroArch/bin/retroarch
+```
+
+**Lösung B**: die neueste AutoBleem-Version wie in Abschnitt 2.1 erneut auf den Stick installieren (das Installationsprogramm braucht einen PC, der den Stick lesen kann; ein unlesbarer Stick muss zuerst formatiert werden, was ihn löscht - Spiele vorher sichern).
+
+> Nehmen Sie **FAT32** (eine unveränderte Konsole liest nur FAT32; exFAT braucht den AutoBleem-Kernel, Kapitel 6) - die nächste Version behält die Rechte bei und AutoBleem repariert sie bei jedem Start.
+
 AutoBleem ist freie Software (GNU GPL v3 oder später), ohne Gewährleistung. Support und News: der Discord-Server,
 der auf dem Über-Bildschirm verlinkt ist, und https://autobleem.retromenele.pl/.

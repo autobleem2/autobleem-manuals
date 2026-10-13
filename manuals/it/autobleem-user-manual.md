@@ -743,5 +743,19 @@ una console che esegue un altro firmware personalizzato (BleemSync, Project Eris
 - **Windows**: `Esc` esce dal launcher; la cartella di dati è quella scelta nell'installazione
   (`Documents\AutoBleem` per impostazione predefinita), i registri sono nel suo `System\Logs`.
 
+**La console si riavvia continuamente dopo un aggiornamento online (chiavetta formattata ext4).** Alcuni utenti formattano la chiavetta in ext4 (Linux) invece di FAT32 o exFAT. Fino alla prossima versione di AutoBleem, l'aggiornamento online su una chiavetta così estraeva tutti i file senza il permesso di esecuzione: AutoBleem non parte e la console si riavvia di continuo. Le chiavette FAT32 ed exFAT non sono interessate.
+
+**Soluzione A** (serve un PC Linux): collega la chiavetta e rendi di nuovo eseguibili i programmi di AutoBleem. Usa il tuo percorso di montaggio al posto di `/media/USER/STICK` (l'ultima riga solo se RetroArch è installato):
+
+```
+chmod +x /media/USER/STICK/Autobleem/*.sh /media/USER/STICK/Autobleem/rc/*.sh
+chmod +x /media/USER/STICK/Autobleem/bin/autobleem/* /media/USER/STICK/Autobleem/bin/emu*/pcsx-ab /media/USER/STICK/Autobleem/bin/abpad/abpadd
+chmod +x /media/USER/STICK/RetroArch/bin/retroarch
+```
+
+**Soluzione B**: installa di nuovo sulla chiavetta l'ultima versione di AutoBleem, come nella sezione 2.1 (il programma di installazione richiede un PC che legga la chiavetta; una chiavetta illeggibile va prima formattata, il che la cancella - copia prima i giochi).
+
+> Usa **FAT32** (una console originale legge solo FAT32; exFAT richiede il kernel AutoBleem, capitolo 6) - la prossima versione mantiene i permessi e AutoBleem li ripara a ogni avvio.
+
 AutoBleem è software libero (GNU GPL v3 o versioni successive), senza garanzia. Supporto e notizie: il server Discord
 collegato nella schermata Informazioni, e https://autobleem.retromenele.pl/.

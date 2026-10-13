@@ -795,5 +795,19 @@ akcie.
 - **Windows**: `Esc` opustí spouštěč; složka dat je ta vybraná v instalaci
   (`Documents\AutoBleem` standardně), logy jsou v `System\Logs`.
 
+**Konzole se po online aktualizaci stále restartuje (flash disk formátovaný jako ext4).** Někteří uživatelé formátují disk jako ext4 (Linux) místo FAT32 nebo exFAT. Do příštího vydání AutoBleem online aktualizace na takovém disku rozbalila všechny soubory bez práva spuštění, takže AutoBleem nenastartuje a konzole se pořád dokola restartuje. Disky FAT32 a exFAT se to netýká.
+
+**Oprava A** (potřebujete PC s Linuxem): zapojte disk a programy AutoBleem znovu udělejte spustitelnými. Místo `/media/USER/STICK` použijte vlastní přípojný bod (poslední řádek je potřeba, jen pokud je nainstalován RetroArch):
+
+```
+chmod +x /media/USER/STICK/Autobleem/*.sh /media/USER/STICK/Autobleem/rc/*.sh
+chmod +x /media/USER/STICK/Autobleem/bin/autobleem/* /media/USER/STICK/Autobleem/bin/emu*/pcsx-ab /media/USER/STICK/Autobleem/bin/abpad/abpadd
+chmod +x /media/USER/STICK/RetroArch/bin/retroarch
+```
+
+**Oprava B**: nainstalujte na disk ručně nejnovější vydání AutoBleem znovu, jak je v oddílu 2.1 (instalátor potřebuje PC, které disk přečte; nečitelný disk je nutné nejdřív naformátovat, což ho smaže - hry si předem zkopírujte).
+
+> Používejte **FAT32** (neupravená konzole čte jen FAT32; exFAT potřebuje jádro AutoBleem, kapitola 6) - příští vydání zachovává práva a AutoBleem je při každém startu opraví.
+
 AutoBleem je svobodný software (GNU GPL v3 nebo novější), bez záruky. Podpora a noviny:
 server Discord propojený na obrazovce About a https://autobleem.retromenele.pl/.

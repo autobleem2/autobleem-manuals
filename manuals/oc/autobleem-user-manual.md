@@ -778,5 +778,19 @@ d'en primièr.
 - **Windows** : `Esc` quita lo lançador ; lo dorsièr de donadas es lo qu'o causìs en lo setup (`Documents\AutoBleem`
   per defaut), los jornals son en `System\Logs`.
 
+**La consòla se reaviva sens fin aprèp una mesa a jorn en linha (clau formatada en ext4).** D'utilizaires formatan la clau en ext4 (Linux) al luòc de FAT32 o exFAT. Fins a la version venenta d'AutoBleem, la mesa a jorn en linha sus aquela clau descomprimissiá totes los fichièrs sens dreit d'execucion : AutoBleem se lança pas e la consòla se reaviva en bocla. Las claus FAT32 e exFAT son pas tocadas.
+
+**Solucion A** (cal un PC Linux) : brancatz la clau e tornatz far executables los programas d'AutoBleem. Utilizatz vòstre camin de montatge al luòc de `/media/USER/STICK` (la darrièra linha solament se RetroArch es installat) :
+
+```
+chmod +x /media/USER/STICK/Autobleem/*.sh /media/USER/STICK/Autobleem/rc/*.sh
+chmod +x /media/USER/STICK/Autobleem/bin/autobleem/* /media/USER/STICK/Autobleem/bin/emu*/pcsx-ab /media/USER/STICK/Autobleem/bin/abpad/abpadd
+chmod +x /media/USER/STICK/RetroArch/bin/retroarch
+```
+
+**Solucion B** : tornatz installar la darrièra version d'AutoBleem sus la clau, coma a la seccion 2.1 (l'installador demanda un PC que pòt legir la clau ; una clau illegibla deu èstre formatada d'abòrd, çò que l'escafa - copiatz d'abòrd vòstres jòcs).
+
+> Utilizatz **FAT32** (una consòla d'origina legís sonque FAT32 ; exFAT demanda lo nuclèu AutoBleem, capítol 6) - la version venenta servarà los dreits e AutoBleem los repararà a cada aviada.
+
 AutoBleem es un logicial liure (GNU GPL v3 o ulteriora), ses garantida. Sosten e novellas : lo servidor Discord
 ligat en la pantala A prepaus, e https://autobleem.retromenele.pl/.
