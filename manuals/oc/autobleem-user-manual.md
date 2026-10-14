@@ -20,7 +20,8 @@ cada plataforma, l'utilizacion quotidiana e los espleches que lo venon d'assembl
   cartas memòria.
 - **RetroArch** (optional sus cada plataforma) pels autres sistèmas : NES, SNES, Mega Drive, Game Boy,
   arcada e beaucoup mai. AutoBleem baste sas listas de RetroArch a partir dels ROMs que copialitz e
-  commence cada jòc amb lo còr apropiat.
+  commence cada jòc amb lo còr apropiat. La lista dels còrs comença per *PlayStation 1* (seccion 3.8). Los jòcs de
+  tipe Doom foncionan a partir de vòstras pròprias donadas de jòc dins un dorsièr *Paquets* (seccion 3.9).
 - **Los espleches de consòla** : *PSC-Bios* (mostrat dins los menús coma *Ret e manetas*) per la WiFi, l'ora,
   lo Bluetooth e l'associacion de las manetas - sus la consòla, e tanben sus una Raspberry Pi e lo bastó PC - e
   *ABFlashKit* per installar lo nucli AutoBleem (PlayStation Classic sols).
@@ -61,18 +62,35 @@ limitacion de 4 GB de FAT32.
    - **Jòcs exemples** - qualques jòcs dempuèi hobbybuilt liures per que la tablada sigue pas voida.
 3. Quichatz **Install** e esperatz. Las barras de progression e lo jornal afichon cada etapa ; lo bastó
    s'apelha `SONY` a la fin, e `UpdateRoms` s'i mèt (vejatz capítol 5).
-4. Tiraz lo bastó en seguretat, branchiatz-lo al **second pòrt USB** de la consòla (lo dret, jogaire 2) e
-   mesiatz la consòla. AutoBleem s'avie en plaça del menú stock.
+4. Tiraz lo bastó en seguretat, branchiatz-lo al **second pòrt USB de davant** de la consòla (lo dret, jogaire 2) -
+   lo primièr es per la maneta - e mesiatz la consòla. AutoBleem s'avie en plaça del menú stock. Una segonda maneta
+   a besonh d'un concentrador USB sul pòrt de davant o d'una maneta Bluetooth. Daissatz pas lo bastó dins lo pòrt
+   micro-USB de darrièr (vejatz çai-jos).
 
 **Mesiar e atudar.** Amb lo bastó adinc, la consòla s'avie, cliget sa lum quelques segondas
 (AutoBleem se pren) e se bucha en repos davant que res se mostrégue - aiquó es la propria manera de la
 consòla de preparar una mesa a jorn, çò que laíssa AutoBleem de s'aviar. Quichatz **Power** un còp e lo
 lançador puja. *Atudar* dins lo menú sistèma, o lo boton Power de la consòla, met la consòla en **repos
-AutoBleem** : lo bastó se desconecta d'en primièr, puèi la lum se fa **roja** - lo signe que AutoBleem
+AutoBleem** : lo bastó se desconecta d'en primièr, puèi la lum se fa **irange** - lo signe que AutoBleem
 fonciona coma se deuriá - e lo prossime quichament de Power ramèna lo lançador drech, en qualques
-segondas. **Mentre la lum es roja lo bastó se pòt tirar** e se metre dins una PC sens que Windows
+segondas. **Mentre la lum es irange lo bastó se pòt tirar** e se metre dins una PC sens que Windows
 demande de verificar-lo ; metètz-lo aicí après de quichatz Power. Lo despluç de la consòla passa per lo
-repos d'aviada d'en tornamai al prossime encendut.
+repos d'aviada d'en tornamai al prossime encendut. Una lum **roja** significa que la consòla s'es verai atudada.
+
+**Utilizatz un pòrt USB de davant pel bastó.** Lo pòrt micro-USB de darrièr (un ostal i fonciona sonque amb lo nucli
+AutoBleem) manten la consòla desrevelhada : amb un bastó o un concentrador dessús, la consòla s'atuda en plaça de
+se metre en repos, e Power fa una aviada a fre.
+
+**Pas de bastó.** Quand i a pas cap de bastó dins la consòla, una imatge ditz d'inserir un - dins qualsevol pòrt
+USB. Aprèp 5 minutas, o tre que quichatz Power, la consòla s'endormís. La meteissa imatge apareis se lo bastó es
+tirat pendent que AutoBleem fonciona.
+
+![L'imatge que demanda lo bastó](../images/en/insert-stick.jpg)
+
+**Verificacion del bastó.** Un bastó que foguèt pas tirat proprament es verificat a l'aviada, al desrevelh e aprèp
+un tirament, amb una barra de progression. Sus un bastó grand pòt trigar ; l'interrompatz pas.
+
+![La verificacion del bastó](../images/en/stick-check.jpg)
 
 Per **metre a jorn** un bastó, avialz un installador mai récent sus-aquó : vòstres jòcs, sauvegardes,
 paramètres e lo contengut RetroArch rèstan ; los propres fichièrs d'AutoBleem sí se rempláçon.
@@ -197,7 +215,7 @@ que se jugèt (un detalh que lo jòc a pas es daissat de caire) - e un boton de 
 **ab2.0.0** ; una installacion novèla e una mesa a jorn que l'aduson i passan un còp. La barra d'ajuda al fons a
 doas linhas de quatre plaças. La primièra ditz çò que fan los botons pel jòc causit (jogar, jogar dins RetroArch,
 dobrir la linia d'icons, lo menú rapid) ; la segonda aficha sempre Select (lo grup), Start (un jòc aleatòri),
-Triangle (la guida) e L2 + R2 (lo menú sistèma), atenuats quand un fa pas res. Un escandalhatge del dorsièr de
+Triangle (la guida) e L2 + R2 (lo menú sistèma), atenuats quand un fa pas res. Un jòc sens cobèrta aficha un disc pausat dins la bandeta negra de la boita. Un escandalhatge del dorsièr de
 jòcs se fai en fonç a cada aviada ; mentre se fai, una bombola al tope drech aficha sa progression, e los jòcs
 novèls aparisson sus la tablada coma se trobon.
 
@@ -227,9 +245,10 @@ Una maneta sens fial amb un nivèl de batariá conegut - sus la consòla, un Pi 
 | Boton | Sus la tablada |
 |---|---|
 | Gaut / Dreit | Jòc precedent / segent. En lo mantenir se fai devalada. |
-| L1 / R1 | Saltar fins a la letra precedenta / segenta de los títols. |
+| L1 / R1 | Saltar fins a la letra precedenta / segenta de los títols. Sus una tablada voida amb un lector, R1 dobrís *Disc* (seccion 3.8a). |
 | Cross | Comenzar lo jòc causit (un jòc PS1 dins l'emulator PS1 ; un jòc RetroArch dins son còr ; una Aplicacion après sa lectura). |
-| Square | Comenzar lo jòc PS1 causit dins RetroArch en plaça. |
+| Square | Comenzar lo jòc PS1 causit dins RetroArch en plaça. Sus un disc dins un lector USB : *Copiar lo disc* (seccion 3.8a). |
+| Circle | Tornar a la vista del disc, quand i a un disc dins lo lector (seccion 3.8a). |
 | Triangle | La guida dels botons. |
 | Start | Un jòc aleatòri dempuèi lo grup actual. |
 | Select | Lo causidor de grupós : ongletas PlayStation / RetroArch / Aplicacions (L1 / R1), los grupós de l'ongalet (Amont / Avall, L2 / R2 una pagina), Cross causís. |
@@ -247,6 +266,10 @@ En cada lista e menú : Amont / Avall se deplaçon, **L2 / R2 vireton las pagina
 prossima / darrera linia, **Cross causís, Circle se'n va**. Una pantala amb reglatges los salva quand la
 quichatz amb Circle.
 
+**Dins un jòc o una Aplicacion** : mantenètz **Start + Select, o Home, 2 segondas** per tornar a AutoBleem.
+Fonciona sus cada maneta - la de la consòla, una maneta USB, una maneta Bluetooth. Una quichada corta dobrís lo menú
+de l'emulator ; una Aplicacion a pas aquel menú, sola la quichada longa val.
+
 ![La linia d'icons jos lo jòc causit](../images/en/launcher-icons.jpg)
 
 ### 3.3 Los grupós
@@ -258,7 +281,9 @@ jòcs* e, quand qualqu'un es marchat coma un, *Jòcs Lightgun*. Sus una Raspberr
 cap de jòc intèrne, doncas la lista comença per *Jòcs USB*, que es tota la bibliotèca. L'ongalet RetroArch (sols ont
 RetroArch es installat) alista un grup per sistèma qu'a de jòcs, mai los Favorits e l'Istoric propris de RetroArch.
 L'ongalet Aplicacions agrupa los aplicacions per tipe : *Totas las aplicacions*, puèi *Jòcs*, *Emulators*,
-*Espleches*, *Mèdia* e *Autre* (la categoria es establida en lo fichièr `app.ini` de cada aplicacion). Cada linia
+*Espleches*, *Mèdia* e *Autre* (la categoria es establida en lo fichièr `app.ini` de cada aplicacion). L'ongalet Aplicacions aficha tanben las **aplicacions PE** - programas Windows executats pel
+lançador PE ; una que la consòla pòt pas aviar es marcada *pòt pas foncionar sus aquesta consòla*. Ont lo lançador
+l'aficha, una linia *Paquets* es tanben dins la lista (seccion 3.9). Cada linia
 aficha lo nombre d'elements qu'acasela ; un grup que n'a pas cap se dobrís sus una tablada voida amb la linia
 d'icons afichant sols Paramètres. Lo pè de pagina nomena las tèclas : L1 / R1 las ongletas, L2 / R2 una pagina,
 Cross causís, Circle *Tornar*.
@@ -293,11 +318,12 @@ d'una linha, e lo menú es agrupit en seccios :
 | | Processors d'escaneig | Los programas que cada escandalhatge fai d'en primièr - lor òrdre, activats o desactivats (seccion 3.13). Desactivats mentre un escandalhatge se fai. |
 | **Sistèma** | Opcions | Los paramètres d'AutoBleem (seccion 3.6). |
 | | Ret e manetas | Sols ont una extension installada provesís l'entrada `network` (`Provides=network` en son `extension.ini` - PSC-Bios sus la consòla, una Pi e lo bastó PC) - WiFi, aparatge Bluetooth del DualShock 3, e l'assistant de mapeig de manetas - vejatz lo capítol 6. Quand aquela extension s'installa mas es desactivada, aqueste element rèsta estampat amb una nòta "activatz-la dins Extensions" - Cross dobrís la lista d'Extensions a aquó. |
-| | Entresenhas de material | Los faches de la maquina : sistèma, CPU, emmagazinatge, interfàcias de ret, fusonari, afichatge, las manetas e lors mapeigs - la meteissa pagina sus cada plataforma (seccion 4.2). |
+| | Entresenhas de material | Los faches de la maquina : sistèma, CPU, emmagazinatge, interfàcias de ret, fusonari, afichatge, las manetas e lors mapeigs - la meteissa pagina sus cada plataforma (seccion 4.2). Circle torna al menú sistèma. |
+| | Virtual gamepad | Las manetas que recebon las Aplicacions e las manetas que lo dèmon ve (seccion 4.5). Circle torna al menú sistèma. |
 | | Mesa a jorn logiciala | (Raspberry Pi e PC) Verificar lo site per una AutoBleem o RetroArch mai récenta ara ; la linha ditz *Mesa a jorn disponibla* quand lo lançador ne coneis ja una. |
 | | A prepaus | Credits e licéncia. |
 | **Quitar** | RetroArch | (Sols ont RetroArch es installat.) Quita lo lançador pel menú propri de RetroArch. Tancar RetroArch tornarà. |
-| | Atudar | Après una confirmacion : sus la consòla lo repos AutoBleem - lo bastó se desconecta, la lum roja, Power ramèna lo lançador (seccion 2.1) ; sus una Pi o PC la maquina s'atuada. |
+| | Atudar | Après una confirmacion : sus la consòla lo repos AutoBleem - lo bastó se desconecta, la lum irange, Power ramèna lo lançador (seccion 2.1) ; sus una Pi o PC la maquina s'atuada. |
 
 ![Lo menú sistèma](../images/en/system-menu.jpg)
 
@@ -310,9 +336,12 @@ legisson **ACTIVAT** / **DESACTIVAT**.
 
 | Grup / reglatge | Çò qu'ella fa |
 |---|---|
-| **Interfàcia** : Afichatge | La definicion de l'ecran, pel lançador e l'emulator PS1 : *Auto* (lo mòde pròpri de l'ecran, mostrat coma *Auto (1920x1080)*) o qualque mòde que l'ecran alista ; la consòla ofrís 720p e 1080p. Un mòde novèl es demandat : *Gardar aqueste mòde d'afichatge ?* - s'o confirmatz pas, torna al precedent aprèp un compte a rebors. Pas dins una fenèstra de desvolopament. |
+| **Interfàcia** : Afichatge | La definicion de l'ecran, pel lançador e l'emulator PS1 : *Auto* (lo mòde pròpri de l'ecran, mostrat coma *Auto (1920x1080)*) o qualque mòde que l'ecran alista ; la consòla ofrís 720p, 1080p e *CRT 4:3* (720x480, per una television a tuba o un aparelh de captura 4:3). Un mòde novèl es demandat : *Gardar aqueste mòde d'afichatge ?* - s'o confirmatz pas, torna al precedent aprèp un compte a rebors. Pas dins una fenèstra de desvolopament. |
+| Marge CRT : | La zòna de seguretat sus una sortida 4:3, de 0 a 10 % per pas de 1 %. Aplicada al moment, e legida abans l'ecran d'aviada. |
+| Nautor de l'imatge : | La nautor de l'imatge sus qualsevol sortida 4:3 (*CRT 4:3*, o una fenèstra 4:3 sus una sortida VGA / PC), de -40 a +40 per pas de 2, aplicada al moment. L'imatge del jòc de RetroArch la seguís. |
 | Escalatge de l'ecran de l'emulador | Cossí l'emulator PS1 ajusta l'imatge d'un jòc a l'ecran : *1x1* (los pixels pròpris de la PlayStation), *2x (entièr)*, *4:3*, *4:3 (entièr)* o *Ecran complet*. L'escalatge entièr utiliza sonque de multiples entièrs (lo mai net). Remplaça l'ancian commutator Grand ecran ; lo `pcsx-ab` classic e RetroArch coneisson sonque l'ecran complet e lo 4:3. |
-| Tèma AutoBleem | L'aspèct. Los tèmas duelhan en `Themes/` ; un tèma zippat drapat aicí se descompresa a la prossima visita. Los tèmas qu'AutoBleem livra se rafraichisson amb cada mesa a jorn - per personalizar un, lo copialitz jos un nòu nom d'en primièr. Lo defaut es **ab2.0.0**. |
+| Halo d'ecran : | ACTIVAT emplís las bandas a costat de l'imatge d'un jòc (ont emplís pas tot l'ecran) amb la lusor pròpria de l'imatge (`pcsx-abnxt`). |
+| Tèma AutoBleem | L'aspèct. Los tèmas duelhan en `Themes/` ; un tèma zippat drapat aicí se descompresa a la prossima visita. Los tèmas qu'AutoBleem livra se rafraichisson amb cada mesa a jorn - per personalizar un, lo copialitz jos un nòu nom d'en primièr. Lo defaut es **ab2.0.0**. Sus *CRT 4:3* la lista aficha sonque los tèmas qu'an una disposicion 4:3 ; se lo tèma en cors n'a pas, lo tèma per defaut lo remplaça aprèp la confirmacion (tanben a l'aviada) e un avís ditz *Tèma remplaçat pel tèma per defaut (CRT 4:3)*. |
 | Estil cobèrtura | Lo marc de boita en vidre drapat entorn de las cobertas PS1. |
 | Lusor de la jaqueta | Una lusor que traversa la jaqueta causida quand la tablada s'arrèsta. |
 | Lenga | La lenga del lançador, aplicada al moment (17 lengas). |
@@ -323,15 +352,20 @@ legisson **ACTIVAT** / **DESACTIVAT**.
 | Polissa | Qualqu'una `.ttf`/`.otf` dempuèi `resources/fonts`, `RetroArch/fonts` o lo dorsièr del tèma ; la linia nomena la poliça utilizada. |
 | **Son** : Musica, Musica de fons | Qual pista sona jos lo lançador (la del tèma, o un fichièr dempuèi `resources/music`), e se una sona o non. |
 | **Emulacion** : Emulator PS1 | `pcsx-abnxt` (lo defaut : PCSX-ReARMed actualizada amb los apondiments AutoBleem) o `pcsx-ab` (lo classic). Un punt de represa salvat per un se contunha en l'autre, tóla que lo jòc aja escut fonccionar sens fichièr BIOS. |
-| Escambiar jogaire 1 / jogaire 2 (emuladors PS1) | Escambia quala de las doas primièras manetas es Jogaire 1 e quala es Jogaire 2, dins los dos emuladors PS1 (pcsx-abnxt e lo pcsx-ab classic). A d'efièch sonque amb doas manetas o mai connectadas; amb una sola maneta, es totjorn Jogaire 1. RetroArch es pas afectat. |
-| Jogar a totes los jòcs PSX amb RA, Metre a jorn la configuracion RA, Gardar la config RetroArch | (Sols ont RetroArch es installat.) Cada jòc PS1 s'avie dins lo còr PS1 de RetroArch ; AutoBleem escríu sos paramètres dins la configuracion de RetroArch quand l'avie un jòc aicí ; un cambiament fach dins lo menú pròpri de RetroArch es gardat quand RetroArch se tanca. |
+| Escambiar jogaire 1 / jogaire 2 (emuladors PS1) | Escambia quala de las doas primièras manetas es Jogaire 1 e quala es Jogaire 2, dins los dos emuladors PS1 (pcsx-abnxt e lo pcsx-ab classic). A d'efièch sonque amb doas manetas o mai connectadas; amb una sola maneta, es totjorn Jogaire 1. RetroArch es pas afectat. Un emulator PS1 que pòt pas encara escambiar aficha *Aqueste emulador PS1 pren pas encara en carga l'escambi de las manetas*. |
+| Jogar a totes los jòcs PSX amb RA, Metre a jorn la configuracion RA, Gardar la config RetroArch | (Sols ont RetroArch es installat.) Cada jòc PS1 s'avie dins lo còr PS1 de RetroArch (*PlayStation 1* ; sus una PC es SwanStation) ; AutoBleem escríu sos paramètres dins la configuracion de RetroArch quand l'avie un jòc aicí ; un cambiament fach dins lo menú pròpri de RetroArch es gardat quand RetroArch se tanca. |
 | **Bibliotèca** : Afichar los jòcs intèrnes | Los jòcs fornits de la consòla en las listas PlayStation (PlayStation Classic sols). |
+| Noms de jòcs netejats: | ACTIVAT (lo defaut) : las listas de jòcs de RetroArch mostran de noms sens las etiquetas entre parentèsis coma (USA), (Rev 1) o [!]. DESACTIVAT aficha los noms dels fichièrs. Lo nom del fichièr demòra dins los detalhs del jòc. Los jòcs PS1 son pas tocats - lors títols venon de la basa de donadas. |
 | Recuperar las cobertas en linha | L'escandalhatge telecarga las cobertas manquantas dempuèi los servidors de libretro (Raspberry Pi, PC, Windows). |
 | **Mesas a jorn** | Lo canal de mesa a jorn : `release` (la version ensajada), `testing` (la version venenta, en assag), `nightly` (la compilacion de desvolopament mai recenta) o `off`. Lo defaut seguís la version installada. Pas afichat sus una maquina de desvolopament. |
 | **Diagnostic** : Gardar los jornals sus la clau | Garda totes los jornals sus la clau dempuèi la prossima aviada, pas sonque aprèp un plantatge (capítol 7). |
 | Afichar las performàncias | Una superposicion en bas a esquèrra : frequéncia d'imatges, cargament CPU, threads e memòria ; l'emulator aficha tanben sos FPS e sa CPU dins lo jòc. |
 
 ![Las opcions, en grupós](../images/en/options.jpg)
+
+![Lo grup Afichatge : Marge CRT e Nautor de l'imatge](../images/en/options-display.jpg)
+
+![L'avís aprèp aver passat a CRT 4:3 amb un tèma sens disposicion 4:3](../images/en/crt43-theme-notice.jpg)
 
 ### 3.7 Los paramètres d'un jòc
 
@@ -344,11 +378,14 @@ Lo **modificador de jòc** aficha los detalhs del jòc a la drecha (títol, edit
 - **Jòc** : *Favorits* (en lo grup Jòcs favorits), *Jòc Lightgun* e *Jogar amb RA* (sols ont RetroArch es
   installat : un jòc de pistolet se jónh al grup Lightgun e sempre fonciona dins RetroArch, que lo còr PS1
   d'aquó a lo GunCon ; *Jogar amb RA* fa foncionar aqueste jòc dins RetroArch), *Verrolhar las donadas*
-  (l'escandalhatge guarda lo títol, la seria e la lista de disques coma vos los establissètz).
+  (l'escandalhatge guarda lo títol, la seria e la lista de disques coma vos los establissètz),
+  e *Represa :* - çò que se passa quand un jòc amb de ponts de represa s'avie : *Demandar* aficha lo causidor de lòcs
+  de represa, *Darrièr emplaçament* contunha al moment dempuèi lo lòc mai recent, *Jamai* comença lo jòc dempuèi lo
+  començament.
 - **Afichatge** : *Definicion* (1x o 2x, sul GPU integrat), *Levar las juntas* (sols amb 2x), *Dithering*
   (Desactivat, Activat, Totjorn), *Lissatge*, lo *Filtre* - coma s'aumenta l'imatge : Lo mai pròche (pixels
   plans), Linear (lissats), Net o Net (simple) (pixels nets sens broglotas), Quilez, o los filtres CRT : CRT
-  (fast) e CRT-Pi (dessenhan lors pròprias linhas d'escansion, doncas las linias d'escansion s'estampan) - e
+  (fast), CRT (raster) e CRT-Pi (dessenhan lors pròprias linhas d'escansion, doncas las linias d'escansion s'estampan) - e
   *Linhas d'escansion* amb lor *Luminositat de las linhas d'escansion*. La definicion, levar las juntas, lo
   dithering, lo lissatge e los filtres autres que Linear e Lo mai pròche son per `pcsx-abnxt` ; lo classic
   `pcsx-ab` e RetroArch aficho lo rèsta coma Lo mai pròche.
@@ -361,7 +398,14 @@ La forma de l'imatge e la definicion de l'ecran son globalas (Opcions → *Escal
 *Afichatge*). Un jòc sens títol dins sas donadas es mostrat jos lo nom de son dorsièr.
 
 Triangle renomèna lo jòc, Square cambia sa carta memòria, Start partejan una carta novèla. Circle salva e
-se'n va.
+se'n va. Mantenir Gaut / Dreit o Amont / Avall repeteis lo movement, dins lo modificador e tanben dins las pantalas
+d'opcions de jòc e de còrs de RetroArch. Un jòc del lector que a pas de `pcsx.cfg` pòt pas salvar : lo modificador
+ditz *Pas enregistrat : aqueste jòc a pas de pcsx.cfg*.
+
+Per un **disc dins lo lector** (seccion 3.8a) lo modificador estampa las linias que lo disc pòt pas utilizar e ditz
+*Pas disponible per un disc dins lo lector*.
+
+![Lo modificador de jòc per un disc dins lo lector](../images/en/game-editor-disc.jpg)
 
 **Paramètres salvats dins l'emulator.** Lo menú propri de l'emulator a *Enregistrar los paramètres per aqueste jòc*.
 Una còp qu'un jòc a de paramètres salvats aicí, es los qu'utiliza quand se lòc, e lo modificador de jòc
@@ -378,7 +422,8 @@ Cada jòc PS1 a sa propria carta memòria per defaut (gardada amb sos ponts de r
 del jòc>/`). **Cartas memòria** dins lo menú sistèma gerís los **jorns compartits** - una carta qu'usason mai
 jòcs, gardada en `Games/!MemCards/` : ne crear una (Square, amb lo clavièr a l'ecran), renomenar (Cross),
 suprimir (Triangle). Un jòc se met sus un jorn amb *Cambiar la carta memòria* en son modificador, o dempuèi
-son icòn de Carta memòria.
+son icòn de Carta memòria. Un jorn
+sens carta ditz *pas encara de carta*, e salvar demanda *Volètz enregistrar las donadas de las cartas memòria ?*
 
 Lo **modificador de carta memòria** (l'icòn de Carta memòria) aficha la carta del jòc e una deuxième carta
 costat a costat, amb l'icòn e lo títol de cada sauvegardat : copiar un sauvegardat entre los dos (Square),
@@ -394,6 +439,10 @@ lòc e sa data ; lo mai recent es marcat **MAI RECENT** e un lòc pas utilizat d
 contunha dempuèi lo lòc, Triangle lo supresís. Un jòc amb un pont de represa aficha una petita pictura sus son
 icòn de Reprendre ; un jòc sens cap a l'icòn de Reprendre atenuada. Pendent que lo pont de represa es escrich en
 sortissent d'un jòc, l'emulator aficha *Esperatz...*.
+Los jòcs PS1 jogats dins RetroArch an tanben de lòcs de represa. Un lòc pòrta un badge - lo lògo d'AutoBleem 2 o de
+RetroArch - per que veguetz quin emulator l'a escrich.
+
+![Lo causidor de lòcs de represa](../images/en/resume-picker.jpg)
 
 ### 3.8 Comenzar los jòcs, RetroArch e las Aplicacions
 
@@ -401,6 +450,12 @@ sortissent d'un jòc, l'emulator aficha *Esperatz...*.
 complèt, fins que lo quichatz - sus la consòla amb lo boton **Reinicializar** de davant (tornar al lançador
 amb un pont de represa ; fonciona tanben dempuèi l'interior del menú en jòc) o **Power** (la consòla s'atuada) ;
 sus una Pi o PC pel menú en jòc de l'emulator (çai-jos). **Square** comença un jòc PS1 dins RetroArch en plaça.
+
+**La sortida d'un jòc** es la meteissa sus cada maneta - la de la consòla, una maneta USB, una maneta Bluetooth :
+**mantenètz Start + Select, o Home, 2 segondas** (*Hold Select+Start or Home for 2 seconds: back to AutoBleem*). Una
+quichada corta de Select + Start o Home dobrís lo menú de l'emulator (*Quicha cuerta de Select+Start o Home : lo menú
+de l'emulador*) ; una Aplicacion a pas aquel menú, sola la quichada longa val. Sus la consòla, **Reset** arrèsta
+tanben totjorn una Aplicacion.
 
 **Lo menú en jòc** (`pcsx-abnxt`). Quichatz lo boton de menú - lo Home de la maneta, **Select + Start** sus una
 maneta que n'a pas, o **Esc** sus un clavièr - e lo jòc s'arrèsta darrièr un menú amb la darrièra imatge del jòc.
@@ -425,13 +480,69 @@ salvament rapid.
 Un jòc **RetroArch** s'avie dins RetroArch amb lo còr qu'o lançador a causit per son sistèma ; *Tancar lo
 contengut* o *Quitar RetroArch* en son menú tornarà al lançador. L'element RetroArch dins lo menú sistèma
 dobrís lo menú propri de RetroArch (XMB) amb res cargat, pels sos paramètres e sas proprias listas de
-contengut.
+contengut. La fenèstra dels còrs se dobrís amb *PlayStation 1* en primièr.
+
+![La fenèstra dels còrs de RetroArch](../images/en/retroarch-cores.jpg)
 
 Una **Aplicacion** (lo grup Aplicacions : los espleches de consòla, e sus una consòla los aplicacions extras
 que lo paquetatge de RetroArch livra - Doom, Quake, Amiga, ...) aficha sa lectura d'en primièr ; Cross
 l'avie, Circle se'n va.
 
 ![La lectura d'una Aplicacion avant d'aviar-la](../images/en/app-start.jpg)
+
+**Los paramètres d'una Aplicacion.** *Paramètres del jòc* ("Cambiar la manièra de lançar aquel programa") a *Mòde
+manèta :* (*Automatic*, *Manèta PSC*, *Manèta Xbox 360*, *Manèta PSC (sistèma)*, *Manèta Xbox 360 (sistèma)*), *Crotz
+coma stick :* e *Stick coma crotz :*. D'unas Aplicacions demandan un còp, a la primièra aviada, *Quines comandas a
+vòstra manèta ?* (*Una crotz direccionala* o *Sticks analogics*) ; una Aplicacion de tipe Windows demanda *Qué volètz
+far ?* (*Aviar Windows*, *Installar Windows*, *Aviar DOS*, *Desinstallar Windows*). Per associar una tecla l'ecran ditz
+*Quichatz un dels botons.*
+
+![Los paramètres de jòc d'una Aplicacion](../images/en/app-game-settings.jpg)
+
+Los tèxtes e las questions qu'un programa Windows (una aplicacion PE) pausa aparisson coma d'ecrans d'AutoBleem
+(*Messatge*, *Causir una opcion*), amb lo nom de l'Aplicacion coma títol.
+
+![Una question d'una aplicacion PE](../images/en/pe-dialog.jpg)
+
+### 3.8a Un disc dins un lector USB
+
+Un lector USB de CD/DVD amb un disc PlayStation o àudio dedins met aquel disc sus la tablada coma un jòc. Pas sus
+Windows, que a pas de supòrt dels lectors.
+
+- **La vista del disc** se dobrís tota sola quand un disc es detectat ; R1 *Disc* la dobrís dempuèi la tablada. Aficha
+  la cobèrta del disc (de las basas de donadas de cobertas, o telecargada en linha), son numèro de seria e son títol.
+  Cross lança lo disc. Un jòc PS1 jogat dempuèi lo disc se represa e se salva dins lo dorsièr del disc. Aprèp un jòc, las
+  opcions o los paramètres d'una extension, tornatz a la vista del disc ; Circle sus la tablada la torna, e aquí R1
+  es tornarmai lo salt a la primièra letra.
+- **La pastilha del lector** mostra l'estat del lector : amagada sens lector, atenuada amb un lector e sens disc,
+  clinhotant *Lectura del disc...* pendent la lectura, puèi lo títol del disc. Los autres messatges son *Aquò es pas un
+  disc PlayStation* e *Lo disc pòt pas èsser legit ara*.
+
+![La vista del disc](../images/en/disc-view.jpg)
+
+![La pastilha del lector](../images/en/disc-chip.jpg)
+
+- **Un CD àudio** dobrís lo **lector de CD** (*LECTOR CD*, *CD àudio*, amb *PISTAS* e *DURADA TOTALA*). Sas tèclas son
+  *Legir la pista*, *Arrèst*, *Precedent/seguent*, *Cercar*, *Pausa*, *Repetir:* (desactivat o activat) e *Aleatòri:*, e
+  *Seleccionada:* nomena la pista. Un disc que se legís pas ditz *Aqueste disc se pòt pas legir*.
+
+![Lo lector de CD](../images/en/cd-player.jpg)
+
+- **Copiar lo disc** (Square) còpia un disc PlayStation dins `Games` coma un **CHD**, amb un fichièr `.m3u` per un
+  jòc de mai d'un disc (disc 1 en primièr). Demanda d'en primièr : *Copiar "%1" cap a %2 ? Pren %3 sus %4 liures.* Una
+  fenèstra de progression, *Còpia del disc*, mostra la *Velocitat* e lo *Temps que demòra* e bloca lo lançador ;
+  *Interrompre* l'anulla (*Anullacion...*, puèi *Anullat*). A la fin ditz *Lo disc es copiat dins Games.* Refusa amb
+  *Ja dins Games : %1*, *Pas pro de plaça dins Games : la còpia ten besonh de %1, %2 son liures.* o *La còpia a
+  fracassat : %1*. Los sectors que se pòdon pas legir son escriches coma zèros, e lo messatge *%1 sectors an pas pogut
+  èsser legits e son estats escrits coma zèros.* ditz quant (*Sectors illegibles*). Un disc que las basas de donadas
+  coneisson pas es nomenat per son numèro de seria.
+
+![Còpia d'un disc](../images/en/disc-copy.jpg)
+
+- **Discs LibCrypt** : lo fichièr `.sbi` d'un jòc LibCrypt es telecargat del site abans que lo disc se lèga e quand
+  es copiat. Aquò a besonh d'una ret : sus una Raspberry Pi o una PC la qu'a ja, sus la consòla la WiFi establida dins
+  PSC-Bios.
+- Lo modificador de jòc d'un disc estampa las linias que pòt pas utilizar (seccion 3.7).
 
 ### 3.9 Apondre de jòcs
 
@@ -451,7 +562,7 @@ Games/
 - Un jòc de mai d'un disc es un dorsièr amb cada disc adinc ; los dorsièrs nomenats `Game (Disc 1)`,
   `Game (Disc 2)` ... se fusionon en un dorsièr `Game` per l'escandalhatge.
 - Los jòcs drappats dreit adinc `Games/` (fichièrs soluts) se classan en dorsièrs per l'escandalhatge.
-- Una **cobèrta** es un PNG costat de l'imatge del jòc, nomenat coma aquó. Sen una, l'art en boita vèn
+- Una **cobèrta** es un PNG o JPEG costat de l'imatge del jòc, nomenat coma aquó. Sen una, l'art en boita vèn
   de las basas de donadas de cobertas, o - amb RetroArch installat - de la seria de miniaturas de libretro ;
   sus una Pi, una PC o Windows una manquanta se telecarga en linha (Opcions → *Recuperar las cobertas en
   linha*).
@@ -467,6 +578,24 @@ l'escandalhatge los leís per elei-matime e escríu las listas de lectura de Ret
 consòla, avialtz **UpdateRoms** sus la PC (capítol 5).
 
 **Las Aplicacions** van jos `Apps/<nòm>/` amb un `app.ini` (lo nòm, l'icòn, çò qu'aviador) e una `run.sh`.
+
+**Paquets.** Las donadas de jòc pels motors - Doom, Quake, OpenArena, Heretic, Hexen, Strife, Duke Nukem 3D, Shadow
+Warrior, Theme Hospital, jòcs DOS e mai - van dins un dorsièr `Packages` sul bastó, per exemple
+`Packages/Doom/DOOM2.WAD`. AutoBleem reconeis las donadas amb una taula que ven amb el (`rc/packages.ini`) ; los
+fichièrs de jòc soluts d'un dorsièr reconegut son de paquets per elei-meteisses. Vòstres fichièrs son sonque legits,
+jamai modificats. Un paquet pòt tanben venir de la Botiga. Lo **causidor de paquets** alista çò qu'es estat trobat.
+L'**info del paquet** mostra *Contengut*, *Descripcion*, *Emplaçament*, *Font*, *Foncionna amb*, *Mod*, *Shareware*,
+*Dins aquesta aplicacion* e *Vòstres fichièrs*, e *Causir las donadas de jòc* causís las donadas amb quicòm se comença.
+Los messatges son *Cap de donada de jòc pas trobada*, *Donadas desconegudas*, *Cap d'aplicacion installada l'executa*,
+*%1 a besonh de donadas de jòc que pòt executar : %2.* e *Pas reconegut. S'es un jòc, vejatz lo manual : Vòstres
+pròpris jòcs.*
+
+![Lo causidor de paquets](../images/en/packages-picker.jpg)
+
+![L'info del paquet](../images/en/package-info.jpg)
+
+**Escandalhar una sola part.** *Tornar escandalhar los jòcs* pòt escandalhar sonque una part - un grup o un dorsièr -
+e levar sa bombola a la fin.
 
 **Los tèmas** van jos `Themes/<nòm>/` (`theme.json` e las imatges) - o drappatz lo zip del tèma en
 `Themes/`.
@@ -485,7 +614,8 @@ BIOS integrat HLE, que beaucoup de jòcs toleran e qualques non.
   → *Mesas a jorn* es lo canal ; *Mesa a jorn logiciala* dins lo menú sistèma verificá ara). Quand n'i a una
   AutoBleem o RetroArch mai récenta demanda: *Metre a jorn ara* telecarga tot e ra-avie l'installador amb la
   pantala de progression d'aviada prossima ; *Me lo rapelar deman* e *Ignorar aquesta version* son los autres
-  respuestas. Vòstres jòcs e paramètres rèstan ; lo lançador ra-escandalhatge una còp après una mesa a jorn.
+  respuestas. Vòstres jòcs e paramètres rèstan ; lo lançador ra-escandalhatge una còp après una mesa a jorn. L'eticòta del canal a l'angle superior esquèrre
+  (seccion 3.1) mostra çò qu'es installat.
 - **PlayStation Classic** : avialtz un `AutoBleemInstaller.exe` mai récent sus lo bastó (seccion 2.1).
 
 ### 3.12 Extensions e lo Store AutoBleem
@@ -502,7 +632,8 @@ lançador se desactiva - la lista o ditz.
 cada sistèma ont AutoBleem fonciona (una PlayStation Classic a besoin del WiFi del nucli AutoBleem). Sas
 quatre ongletas, L1 / R1 entre eis :
 
-- **Aplicacions** e **Jòcs** : çò que los fonts ofreisson, cada un amb sa pictura, version, talha e favicon
+- **Aplicacions** e **Jòcs** : çò que los fonts ofreisson (l'ongalet Aplicacions alista tanben las aplicacions PE, amb lor licéncia e lor font, e
+  los paquets de donadas de jòc, seccion 3.9), cada un amb sa pictura, version, talha e favicon
   de font. Los elements installats pòrtan una insignia *Installat*. Cross installa (o metre a jorn, o tornar
   assaiar apres un fracàs, o anullar un telecargament en fila o en cors), Triangle supresís çò qu'o Store a
   installat, Square rafrescha las listas. L2 / R2 sautan per letra, **Select** aficha una font a la còp, **Start**
@@ -569,9 +700,9 @@ qu'un processor deu far, e `tools/proc_check.py` en las fonts d'AutoBleem verifi
 
 ### 4.1 Gestionari de jòcs
 
-Los jòcs PS1 coma una lista dels sols títols (lo dorsièr del jòc causit es dins sos detalhs) e la cobèrta del causit. Cross dobrís lo
+La pantala a per títol *Gestionari de jòcs - causir un jòc*. Los jòcs PS1 coma una lista dels sols títols (lo dorsièr del jòc causit es dins sos detalhs) e la cobèrta del causit. Cross dobrís lo
 modificador de jòc, **Square supresís lo jòc** (son dorsièr e, apres una deuxième demanda, sos ponts de
-represa), Triangle supresís cada PNG de cobèrta costat de los jòcs (l'escandalhatge los prèn de las basas de
+represa), Triangle supresís cada imatge de cobèrta (PNG o JPEG) costat de los jòcs (l'escandalhatge los prèn de las basas de
 donadas tornamai), L2 / R2 pagina. L'espaci liure del lecteur es al tope dreit. Lo Gestionari de jòcs
 spèra mentre un escandalhatge se fai.
 
@@ -586,14 +717,15 @@ la consòla compresa ; las pantalas de parametratge de la ret e de las manetas s
 Los dos primièrs controllers se presentan coma Jogaire 1 e Jogaire 2 – los pòrts que l'emulatòr PS1 lor assigna.
 Tota maneta suplimentària se presenta coma non utilizat per l'emulatòr PS1. RetroArch assigna los controllers
 segont sas paramètres e pòt los ordenar diferentes. Quand un controller se branca o se debranca, lo llançador
-mostra breu quau pad es Jogaire 1 e Jogaire 2.
+mostra breu quau pad es Jogaire 1 e Jogaire 2. Circle torna al menú sistèma.
 
 ![Entresenhas de material](../images/en/hardware-info.jpg)
 
 ### 4.3 La guida de los botons
 
 Triangle sus la tablada : cada boton de cada pantala sus una pagina. Quand un clavièr USB es connectat o
-s'utilizá, una colòmna Clavièr aficha las tèclas costat de los botons de la maneta.
+s'utilizá, una colòmna Clavièr aficha las tèclas costat de los botons de la maneta. Doas linhas explican la sortida d'un jòc : *Hold Select+Start or Home
+for 2 seconds: back to AutoBleem* e *Quicha cuerta de Select+Start o Home : lo menú de l'emulador*.
 
 ![La guida de los botons](../images/en/button-guide.jpg)
 
@@ -608,6 +740,15 @@ deplaçon lo cursor, Start confirma, Circle anulla. Un clavièr USB pica a qualc
 Esc anulla.
 
 ![Lo clavièr a l'ecran](../images/en/keyboard.jpg)
+
+### 4.5 Virtual gamepad
+
+*Virtual gamepad* dins lo menú sistèma mostra las manetas coma las ve lo programa que las sèrv. A tres partidas :
+*The pads Apps are given*, *Pads the daemon sees* e *Daemon*. Una maneta pòt portar las marcas *connected*,
+*not readable*, *from the controller database*, *guessed by the daemon* o *unknown driver*, e *Look again* torna
+legir las manetas. Una partida que la compilacion a pas ditz *Not in this build*. Circle torna al menú sistèma.
+
+![Virtual gamepad](../images/en/virtual-gamepad.jpg)
 
 <!-- pagebreak -->
 
@@ -748,6 +889,21 @@ Una barra de progression jos cada etapa aficha quant lonc l'accion es. L'esplech
 consòla qu'o fonciona amb autre micrològi personalizada (BleemSync, Project Eris) : restauratz-la al stock
 d'en primièr.
 
+**Se connectar dempuèi una PC.** Amb lo nucli AutoBleem installat (pas sus una consòla stock) podètz vos connectar a
+la consòla per un cable USB :
+
+1. Connectatz lo pòrt micro-USB de la consòla a la PC amb un cable USB. La PC mostra la consòla coma un novèl
+   adaptador de ret ; l'adreça de la consòla es dins los paramètres d'aquel adaptador sus la PC.
+2. Connectatz-vos amb `ssh root@<l'adreça de la consòla>`. Lo senhal per defaut es `autobleem`.
+
+Al lòc del senhal podètz utilizar una clau : metètz vòstra clau publica dins lo fichièr `System/ssh/authorized_keys`
+del bastó e tornatz aviar la consòla. A la prossima aviada es aponduda al compte root. Metre a jorn o tornar
+installar lo lançador la levarà pas.
+
+> **Lo senhal per defaut es lo meteis sus cada consòla** : tot lo monde que pòt brancar un cable a la consòla
+> se pòt connectar en root. Utilizatz una clau quand podètz, e daissatz pas una consòla amb lo senhal per defaut
+> ont d'autres i accedisson.
+
 <!-- pagebreak -->
 
 ## 7. Se qualqu'un cau de trauc
@@ -761,6 +917,14 @@ d'en primièr.
   Square los salva a `System/Logs/saved-<n>/`. Los fichièrs : `autobleem.log` (lo lançador), `launch.log` e
   `pcsx.log` (l'aviada d'un jòc PS1 e la sortida de l'emulator), `retroarch.log`, e - togjorn sus lo bastó -
   `update.log` (una mesa a jorn en linha) e `updateroms.log` (UpdateRoms).
+- **L'imatge demanda un bastó, o la consòla s'es endormida** : i a pas cap de bastó dins la consòla, o es estat tirat.
+  Metètz-lo (dins qualsevol pòrt USB ; un de davant val melhor, seccion 2.1) abans la fin de las 5 minutas, o quichatz
+  Power. Un bastó que foguèt pas tirat proprament es verificat d'en primièr - esperatz que la barra de progression
+  s'acabe.
+- **RetroArch ditz qu'a besonh d'una bibliotèca sistèma mai novèla que la de la consòla** : la bibliotèca pròpria de
+  la consòla es tròp vièlha per aqueste RetroArch. Utilizatz lo RetroArch que ven amb AutoBleem.
+- **Un jòc PSN ditz qu'es protegit per sa licéncia PSN e que pòt pas èsser aviat** : aqueste jòc pòt pas foncionar
+  sus AutoBleem.
 - **Un jòc es pas sus la tablada** : verificatz la disposicion de dorsièrs (un dorsièr per jòc, los formatas
   de imatge de la seccion 3.9). Lo *Gestionari de jòcs* alista los dorsièrs qu'o escandalhatge a refusat apres
   los jòcs, marcats *Pas apondut*, ab la razon ; Square en supresís un. *Tornar escandalhar los jòcs* en lo menú sistèma
