@@ -628,7 +628,7 @@ polici.
 ![Popis aplikace, který se ukáže před jejím spuštěním](../images/en/app-start.jpg)
 
 **Nastavení aplikace.** Spousta aplikací vznikla pro jeden konkrétní ovladač, a tak můžete změnit, jak vidí ten
-váš. Vyberte aplikaci, otevřete řadu ikon a zvolte *Hra*: otevře se *Nastavení hry* aplikace. *Režim ovladače:*
+váš. Vyberte aplikaci, otevřete řadu ikon a zvolte *Hra*: otevře se *Nastavení hry* aplikace (*Změnit způsob spuštění tohoto programu*). *Režim ovladače:*
 určuje, jaký ovladač aplikace podle svého dojmu má. *Automaticky* použije to, co si aplikace sama vyžádá;
 *Ovladač PSC* a *Ovladač Xbox 360* vydávají váš ovladač za ovladač konzole nebo za ovladač Xbox 360 a *Ovladač
 PSC (systémový)* a *Ovladač Xbox 360 (systémový)* dělají totéž přes samotný systém. Když aplikace na váš ovladač
