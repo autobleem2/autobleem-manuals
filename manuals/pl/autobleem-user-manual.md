@@ -19,8 +19,8 @@ dołączone narzędzia.
   AutoBleem od zawsze. Wybierasz go w opcjach; oba używają tych samych ustawień i kart pamięci.
 - **RetroArch** (opcjonalny na każdej platformie) dla innych systemów: NES, SNES, Mega Drive, Game Boy,
   automaty i wiele innych. AutoBleem buduje listy RetroArch z ROM-ów, które wgrasz, i uruchamia każdą grę
-  właściwym rdzeniem. Lista rdzeni zaczyna się od *PlayStation 1* (punkt 3.9). Gry w stylu Dooma działają z
-  twoich własnych danych gry w folderze *Pakiety* (punkt 3.10).
+  właściwym rdzeniem. Na liście rdzeni pierwsza jest *PlayStation 1* (punkt 3.9). Gry takie jak Doom
+  uruchamiasz z własnych plików gry, wrzuconych do folderu `Packages` (punkt 3.10).
 - **Narzędzia konsolowe**: *PSC-Bios* (w menu widoczny jako *Sieć i kontrolery*) do WiFi, zegara, Bluetooth i
   mapowania padów - na konsoli, a także na Raspberry Pi i pendrivie PC - oraz *ABFlashKit* do instalacji
   kernela AutoBleem (tylko PlayStation Classic).
@@ -61,10 +61,10 @@ AutoBleem (ABFlashKit, rozdział 6) uruchamia się także z pendrive'a exFAT, co
    - **Gry przykładowe** - kilka darmowych gier homebrew, żeby półka nie była pusta.
 3. Naciśnij **Install** i poczekaj. Paski postępu i log pokazują każdy krok; na koniec pendrive dostaje
    nazwę `SONY`, a trafia na niego `UpdateRoms` (patrz rozdział 5).
-4. Bezpiecznie odłącz pendrive, włóż go do **drugiego przedniego portu USB** konsoli (prawego, gracz 2) -
-   pierwszy jest dla pada - i włącz konsolę. Zamiast fabrycznego menu uruchamia się AutoBleem. Drugi pad
-   wymaga huba USB na przednim porcie albo pada Bluetooth. Nie wkładaj pendrive'a do portu micro-USB z tyłu
-   (patrz niżej).
+4. Bezpiecznie odłącz pendrive i włóż go do **drugiego przedniego portu USB** konsoli (prawego, gracza 2) -
+   pierwszy zostaje dla pada - po czym włącz konsolę. Zamiast fabrycznego menu uruchomi się AutoBleem. Drugi
+   pad podłączysz przez hub USB w przednim porcie albo przez Bluetooth. Nie wkładaj pendrive'a do portu
+   micro-USB z tyłu (patrz niżej).
 
 **Włączanie i wyłączanie.** Z włożonym pendrivem konsola startuje, przez kilka sekund miga diodą
 (AutoBleem jest wykrywany) i przechodzi w stan czuwania, zanim cokolwiek się pokaże - tak konsola
@@ -74,21 +74,22 @@ konsolę w **czuwanie AutoBleem**: najpierw odłączany jest pendrive, potem dio
 to znak, że AutoBleem działa tak, jak powinien - a następne naciśnięcie Power przywraca launcher w kilka
 sekund. **Gdy dioda jest pomarańczowa, pendrive można wyjąć** i włożyć do PC bez pytania Windows o
 sprawdzenie dysku; włóż go z powrotem przed naciśnięciem Power. Po odłączeniu zasilania konsola
-następnym razem znów przechodzi przez czuwanie przy starcie. Dioda **czerwona** oznacza, że konsola
-naprawdę się wyłączyła.
+następnym razem znów przechodzi przez czuwanie przy starcie. **Czerwona** dioda oznacza, że konsola jest
+naprawdę wyłączona.
 
-**Pendrive wkładaj do przedniego portu USB.** Port micro-USB z tyłu (host działa tam tylko z kernelem
-AutoBleem) nie pozwala konsoli zasnąć: z pendrivem albo hubem w tym porcie konsola się wyłącza zamiast
-przejść w czuwanie, a Power uruchamia zimny start.
+**Pendrive wkładaj do przedniego portu USB.** Port micro-USB z tyłu konsoli (jako port hosta działa tylko
+z kernelem AutoBleem) nie pozwala jej zasnąć: gdy jest w nim pendrive albo hub, konsola zamiast przejść w
+czuwanie wyłącza się całkowicie, a Power uruchamia ją od zera.
 
-**Brak pendrive'a.** Gdy w konsoli nie ma pendrive'a, obraz prosi o jego włożenie - do dowolnego portu USB.
-Po 5 minutach albo od razu po naciśnięciu Power konsola usypia. Ten sam obraz pojawia się, gdy pendrive
-zostanie wyjęty w trakcie pracy AutoBleem.
+**Brak pendrive'a.** Jeśli w konsoli nie ma pendrive'a, na ekranie pojawia się prośba o jego włożenie - do
+dowolnego portu USB. Po 5 minutach albo od razu po naciśnięciu Power konsola przechodzi w czuwanie. Ten sam
+ekran pokazuje się, gdy wyjmiesz pendrive w trakcie działania AutoBleem.
 
-![Obraz z prośbą o pendrive](../images/pl/insert-stick.jpg)
+![Ekran z prośbą o włożenie pendrive'a](../images/pl/insert-stick.jpg)
 
-**Sprawdzanie pendrive'a.** Pendrive, który nie został wyjęty prawidłowo, jest sprawdzany przy starcie, po
-wybudzeniu i po wyjęciu, z paskiem postępu. Na dużym pendrivie może to chwilę potrwać; nie przerywaj.
+**Sprawdzanie pendrive'a.** Pendrive, który nie został prawidłowo odłączony, jest sprawdzany przy starcie,
+po wybudzeniu i po ponownym włożeniu, a postęp pokazuje pasek. Na dużym pendrivie może to chwilę potrwać -
+nie przerywaj.
 
 ![Sprawdzanie pendrive'a](../images/pl/stick-check.jpg)
 
@@ -215,8 +216,8 @@ której gra nie ma, po prostu nie ma) - i przycisk odtwarzania. Domyślny wyglą
 instalacja i aktualizacja, która go przynosi, przełączają na niego jednorazowo. Pasek podpowiedzi u dołu ma dwie
 linie po cztery pola. Pierwsza pokazuje, co robią przyciski dla wybranej gry (graj, graj w RetroArch, otwórz rząd
 ikon, Szybkie menu); druga zawsze pokazuje Select (zestaw), Start (losowa gra), Trójkąt (przewodnik) i L2 + R2
-(menu systemowe), przyciemnione, gdy w danej chwili któryś nic nie robi. Gra bez okładki pokazuje płytę leżącą
-w czarnej tacce pudełka. Przy każdym starcie w tle działa
+(menu systemowe), przyciemnione, gdy w danej chwili któryś nic nie robi. Gra bez okładki ma zamiast niej
+obrazek płyty w otwartym, czarnym pudełku. Przy każdym starcie w tle działa
 skanowanie folderu gier; póki trwa, dymek w prawym górnym rogu pokazuje postęp, a nowe gry pojawiają się na
 półce w miarę znajdowania.
 
@@ -244,9 +245,9 @@ Bezprzewodowy pad z dostępnym odczytem baterii - na konsoli, Pi lub pendrive'ie
 | Przycisk | Na półce |
 |---|---|
 | Lewo / Prawo | Poprzednia / następna gra. Przytrzymanie przewija dalej. |
-| L1 / R1 | Skok do poprzedniej / następnej pierwszej litery tytułów. Na pustej półce z napędem R1 otwiera *Płyta* (punkt 3.9a). |
+| L1 / R1 | Skok do poprzedniej / następnej pierwszej litery tytułów. Gdy półka jest pusta, a napęd podłączony, R1 otwiera *Płyta* (punkt 3.9a). |
 | Krzyżyk | Uruchom wybraną grę (grę PS1 w emulatorze PS1; grę RetroArch jej rdzeniem; aplikację po jej opisie). |
-| Kwadrat | Uruchom wybraną grę PS1 w RetroArch. Na płycie w napędzie USB: *Kopiuj płytę* (punkt 3.9a). |
+| Kwadrat | Uruchom wybraną grę PS1 w RetroArch. Przy płycie w napędzie USB: *Kopiuj płytę* (punkt 3.9a). |
 | Kółko | Powrót do widoku płyty, gdy w napędzie jest płyta (punkt 3.9a). |
 | Trójkąt | Przewodnik po przyciskach. |
 | Start | Losowa gra z bieżącego zestawu. |
@@ -261,9 +262,9 @@ Na każdej liście i w każdym menu: Góra / Dół przesuwają, **L2 / R2 zmieni
 pierwszego / ostatniego wiersza, **Krzyżyk wybiera, Kółko wraca**. Ekran z ustawieniami zapisuje je, gdy
 wychodzisz Kółkiem.
 
-**W grze lub aplikacji**: przytrzymaj **Start + Select albo Home przez 2 sekundy**, żeby wrócić do AutoBleem.
-Działa na każdym padzie - konsoli, USB i Bluetooth. Krótkie naciśnięcie otwiera menu emulatora; aplikacja
-takiego menu nie ma, działa tylko przytrzymanie.
+**W grze i w aplikacji**: żeby wrócić do AutoBleem, przytrzymaj **Start + Select albo Home przez 2 sekundy**.
+Działa to na każdym padzie - od konsoli, na USB i na Bluetooth. Krótkie naciśnięcie otwiera menu emulatora;
+aplikacje takiego menu nie mają, więc w nich działa tylko przytrzymanie.
 
 ![Rząd ikon pod wybraną grą](../images/pl/launcher-icons.jpg)
 
@@ -276,9 +277,9 @@ jakaś gra jest tak oznaczona - *Gry Lightgun*. Na Raspberry Pi, pendrivie PC i 
 wewnętrznych, więc lista zaczyna się od *Gry USB*, czyli całej biblioteki. Zakładka RetroArch (tylko tam, gdzie
 RetroArch jest zainstalowany) ma po jednej grupie na system z grami, a także własne Ulubione i Historię
 RetroArch. Zakładka Aplikacje grupuje programy: *Wszystkie aplikacje*, a potem *Gry*, *Emulatory*, *Narzędzia*,
-*Multimedia* i *Inne* (kategorię ustawia plik `app.ini` każdej aplikacji). Zakładka Aplikacje pokazuje też **aplikacje PE** - programy
-Windows uruchamiane przez moduł PE; taką, której konsola nie potrafi uruchomić, oznacza napis *nie może działać na tej konsoli*.
-Tam, gdzie launcher ją pokazuje, na liście jest też wiersz *Pakiety* (punkt 3.10). Każdy wiersz pokazuje liczbę
+*Multimedia* i *Inne* (kategorię ustawia plik `app.ini` każdej aplikacji). Są tu też **aplikacje PE**, czyli
+programy dla Windows uruchamiane przez moduł PE; te, których konsola nie uruchomi, mają dopisek *nie może działać
+na tej konsoli*. Jeśli launcher go pokazuje, na liście jest też wiersz *Pakiety* (punkt 3.10). Każdy wiersz pokazuje liczbę
 elementów; grupa bez gier otwiera pustą półkę z rzędem ikon pokazującym same Ustawienia. Stopka podaje
 klawisze: L1 / R1 - zakładki, L2 / R2 - strona, Krzyżyk - wybór, Kółko - *Wstecz*.
 
@@ -489,42 +490,50 @@ opcję*) z nazwą aplikacji w tytule.
 
 ### 3.9a Płyta w napędzie USB
 
-Napęd CD/DVD USB z płytą PlayStation albo płytą audio stawia tę płytę na półce jak grę. Nie w Windows, który
-nie obsługuje napędów.
+Do konsoli, Raspberry Pi albo komputera uruchomionego z pendrive'a AutoBleem możesz podłączyć zwykły napęd
+CD/DVD na USB i grać prosto z oryginalnej płyty PlayStation - bez kopiowania czegokolwiek. Włożona płyta
+pojawia się w launcherze jak jeszcze jedna gra. W Windows ta funkcja nie działa.
 
-- **Widok płyty** otwiera się sam, gdy wykryta zostanie płyta; R1 *Płyta* otwiera go z półki. Pokazuje okładkę
-  płyty (z baz okładek albo pobraną z sieci), jej numer seryjny i tytuł. Krzyżyk odtwarza płytę. Gra PS1 uruchomiona
-  z płyty wznawia i zapisuje do folderu płyty. Po grze, opcjach albo ustawieniach rozszerzenia wracasz do widoku
-  płyty; Kółko na półce go przywraca, a R1 jest tam znów skokiem do pierwszej litery.
-- **Chip napędu** pokazuje stan napędu: ukryty, gdy nie ma napędu, przyciemniony, gdy jest napęd bez płyty,
-  mruga *Odczyt płyty...* w czasie odczytu, a potem pokazuje tytuł płyty. Inne komunikaty to *To nie jest płyta
-  PlayStation* i *Nie można teraz odczytać płyty*.
+**Widok płyty.** Gdy włożysz płytę, AutoBleem sam przełącza się na jej widok: zobaczysz okładkę, tytuł i
+numer seryjny gry (okładka pochodzi z bazy okładek albo jest pobierana z internetu). Krzyżyk uruchamia grę.
+Zapisy i punkty wznowienia gry z płyty trafiają do jej własnego folderu, więc po ponownym włożeniu tej samej
+płyty grasz dalej. Po wyjściu z gry, z opcji czy z ustawień rozszerzenia wracasz do widoku płyty. Jeśli
+przejdziesz na półkę z innymi grami, Kółko zabierze cię z powrotem do płyty; gdy półka jest pusta, widok płyty
+otworzysz przyciskiem R1.
 
 ![Widok płyty](../images/pl/disc-view.jpg)
 
-![Chip napędu](../images/pl/disc-chip.jpg)
+**Znacznik napędu** w rogu ekranu mówi, co dzieje się z napędem. Nie widać go, gdy napędu nie ma; jest
+przygaszony, gdy napęd jest pusty; miga z napisem *Odczyt płyty...*, kiedy płyta się wczytuje, a potem
+pokazuje jej tytuł. Jeśli włożysz płytę, która nie jest grą na PlayStation, zobaczysz *To nie jest płyta
+PlayStation*, a gdy płyty chwilowo nie da się odczytać - *Nie można teraz odczytać płyty*.
 
-- **Płyta audio CD** otwiera **odtwarzacz CD** (*ODTWARZACZ CD*, *Płyta audio CD*, z *UTWORY* i *CAŁKOWITY CZAS*).
-  Jego klawisze to *Odtwórz*, *Stop*, *Poprzedni/następny*, *Przewiń*, *Pauza*, *Powtarzanie:* (wył. albo wł.) i
-  *Losowo:*, a *Wybrano:* podaje utwór. Płyta, która się nie odtwarza, daje komunikat *Tej płyty nie można odtworzyć*.
+![Znacznik napędu](../images/pl/disc-chip.jpg)
+
+**Płyty z muzyką.** Zwykłą płytę audio AutoBleem otwiera w odtwarzaczu CD. Widzisz listę utworów i łączny
+czas, a przyciskami odtwarzasz, zatrzymujesz, przewijasz i przechodzisz między utworami; możesz też włączyć
+powtarzanie albo odtwarzanie losowe.
 
 ![Odtwarzacz CD](../images/pl/cd-player.jpg)
 
-- **Kopiuj płytę** (Kwadrat) kopiuje płytę PlayStation do `Games` jako **CHD**, z plikiem `.m3u` dla gry na
-  kilku płytach (płyta 1 pierwsza). Najpierw pyta: *Skopiować "%1" do %2? Zajmie %3 z wolnych %4.* Okno postępu,
-  *Kopiowanie płyty*, pokazuje *Prędkość* i *Pozostały czas* i blokuje launcher; *Przerwij* anuluje kopiowanie
-  (*Anulowanie...*, potem *Anulowano*). Na końcu mówi *Płyta została skopiowana do Games.* Odmawia z komunikatami
-  *Już w Games: %1*, *Za mało miejsca w Games: kopia potrzebuje %1, wolne jest %2.* albo *Kopiowanie nie powiodło
-  się: %1*. Sektory, których nie da się odczytać, są zapisywane jako zera, a komunikat *Nie udało się odczytać %1
-  sektorów - zapisano je jako zera.* mówi, ile ich było (*Nieczytelne sektory*). Płyta nieznana bazom dostaje
-  nazwę z numeru seryjnego.
+**Kopiowanie płyty na pendrive.** Jeśli chcesz mieć grę zawsze pod ręką, bez wkładania płyty, naciśnij
+Kwadrat (*Kopiuj płytę*). AutoBleem najpierw zapyta, czy skopiować grę i ile miejsca zajmie, a potem zapisze
+ją w folderze `Games` jako jeden plik CHD (gra na kilku płytach dostaje też plik `.m3u`, dzięki któremu w
+grze działa zmiana płyty). W trakcie widać prędkość i pozostały czas, a przyciskiem *Przerwij* możesz
+kopiowanie zatrzymać. Gdy się skończy, gra stoi na półce jak każda inna. AutoBleem nie skopiuje gry, która
+już jest w `Games`, ani takiej, na którą brakuje miejsca - wtedy powie, ile go potrzeba. Porysowaną płytę też
+da się skopiować: miejsca, których nie udało się odczytać, zostaną wypełnione zerami, a AutoBleem powie, ile
+ich było. Taka kopia może działać, ale nie musi. Płyta, której nie ma w bazach, dostanie nazwę od swojego
+numeru seryjnego.
 
 ![Kopiowanie płyty](../images/pl/disc-copy.jpg)
 
-- **Płyty LibCrypt**: plik `.sbi` gry LibCrypt jest pobierany ze strony przed odtworzeniem płyty i przy jej
-  kopiowaniu. Potrzebna jest do tego sieć: na Raspberry Pi albo PC ta, którą już ma, na konsoli WiFi ustawione w
-  PSC-Bios.
-- Edytor gry dla płyty wyszarza wiersze, których nie może użyć (punkt 3.7).
+**Gry z zabezpieczeniem LibCrypt.** Część europejskich wydań ma zabezpieczenie LibCrypt. Żeby takie gry
+działały, AutoBleem pobiera dla nich z naszej strony mały plik `.sbi` - przy uruchamianiu i przy kopiowaniu.
+Potrzebne jest do tego połączenie z internetem; na konsoli zapewnia je WiFi ustawione w PSC-Bios.
+
+W edytorze gry z płyty część ustawień jest wyszarzona, bo dotyczą plików, których na płycie nie da się
+zmienić (punkt 3.7).
 
 ### 3.10 Dodawanie gier
 
