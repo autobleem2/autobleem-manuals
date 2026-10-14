@@ -667,6 +667,16 @@ toimii millä tahansa järjestelmällä.
 - **R1 - Controller Mapping**: karttoitus ohjaussuutari (alla).
 - **Triangle - About** **Circle - takaisin** käynnistäjään.
 
+> **Bluetooth-ohjaimet hidastavat WiFiä (PlayStation Classic).** Konsolin WiFi ja Bluetooth ovat yksi
+> Realtek-piiri, jolla on yksi yhteinen antenni 2,4 GHz:n taajuudella. Kun Bluetooth-ohjain on yhdistetty ja
+> käytössä, ohjain ja WiFi käyttävät antennia vuorotellen, joten WiFi saa vain osan ajasta: lataukset Storesta
+> ja päivitykset hidastuvat (testissä noin 1,5 MB/s 5 MB/s:n sijaan). AutoBleem kertoo WiFille, kun
+> Bluetooth-ohjain on yhdistetty, jotta WiFi saa suurimman osan ajasta, mutta vaikutusta ei voi poistaa
+> kokonaan; itse ohjain reagoi yhtä nopeasti kuin aina. Ennen suurta latausta sammuta Bluetooth-ohjain (pidä
+> sen PS-painiketta pohjassa noin 10 sekuntia) tai käytä USB-johdollista ohjainta, ja käynnistä ohjain
+> sen jälkeen uudelleen - se yhdistyy itsestään. Raspberry Pissä ja PC:ssä on yleensä erilliset radiot tai
+> 5 GHz:n WiFi, eikä asia koske niitä.
+
 **Ohjaimen ohjaussuutari** näyttää liitetyn ohjaimen raakana - jokainen akseli painike ja hattu numeroina
 ja DualShock-kuva joka syttyy kun painat. Koska testi ohjainta ei voi luottaa ohjaussuutari ajetaan
 konsolinin **etupainikkeilla**: **RESET** vaihtaa seuraavaan ohjaimen **OPEN** aloittaa karttoitusta (sitten

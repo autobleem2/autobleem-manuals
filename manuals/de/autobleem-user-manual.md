@@ -701,6 +701,16 @@ Raspberry Pi / PC-Stick; der Gamepad-Wizard funktioniert auf jedem System.
 - **R1 - Controller-Zuordnung**: der Zuordnungs-Wizard (unten).
 - **Triangle - Über**, **Circle - zurück** zum Launcher.
 
+> **Bluetooth-Pads bremsen das WiFi (PlayStation Classic).** WiFi und Bluetooth der Console sind ein einziger
+> Realtek-Chip mit einer gemeinsamen Antenne im 2,4-GHz-Band. Solange ein Bluetooth-Pad verbunden ist und benutzt
+> wird, wechseln sich Pad und WiFi an dieser Antenne ab, und das WiFi bekommt nur einen Teil der Zeit: Downloads
+> aus dem Store und Updates werden langsamer (im Test etwa 1,5 MB/s statt 5 MB/s). AutoBleem teilt dem WiFi mit,
+> wenn ein Bluetooth-Pad verbunden ist, damit es den größten Teil der Zeit bekommt - ganz beseitigen lässt sich
+> der Effekt aber nicht; das Pad selbst reagiert so schnell wie immer. Schalten Sie für einen großen Download das
+> Bluetooth-Pad aus (PS-Taste etwa 10 Sekunden gedrückt halten) oder nehmen Sie ein Pad mit USB-Kabel, und
+> schalten Sie das Pad danach wieder ein - es verbindet sich von selbst. Ein Raspberry Pi oder PC hat meist
+> getrennte Funkmodule oder 5-GHz-WiFi und ist davon nicht betroffen.
+
 **Der Gamepad-Wizard** zeigt das verbundene Pad roh - jede Achse, Button und Hat als Nummern, und ein DualShock-Bild,
 das aufleuchtet, wenn Sie drücken. Da der getestete Pad nicht vertraut werden kann, wird der Wizard von den
 **vorderen Tasten der Console** getrieben: **RESET** wechselt zum nächsten Pad, **OPEN** startet die Zuordnung

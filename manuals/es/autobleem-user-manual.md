@@ -690,6 +690,16 @@ asistente de control funciona en cualquier sistema.
 - **R1 - Mapeo de control**: el asistente de mapeo (abajo).
 - **Triangle - Acerca de**, **Circle - regresará** al lanzador.
 
+> **Los mandos Bluetooth ralentizan el WiFi (PlayStation Classic).** En la consola, el WiFi y el Bluetooth son
+> un único chip Realtek con una sola antena compartida en 2,4 GHz. Mientras un mando Bluetooth está conectado y
+> en uso, el mando y el WiFi se turnan en esa antena, así que el WiFi solo dispone de parte del tiempo: las
+> descargas de la Tienda y las actualizaciones van más lentas (en una prueba, unos 1,5 MB/s en lugar de 5 MB/s).
+> AutoBleem avisa al WiFi cuando hay un mando Bluetooth conectado, para que el WiFi tenga la mayor parte del
+> tiempo, pero el efecto no se puede eliminar del todo; el mando en sí responde tan rápido como siempre. Para una
+> descarga grande, apague el mando Bluetooth (mantenga pulsado su botón PS unos 10 segundos) o use un mando con
+> cable USB, y después vuelva a encender el mando: se reconecta solo. Una Raspberry Pi o un PC suelen tener
+> radios separadas o WiFi de 5 GHz y no se ven afectados.
+
 **El asistente de control** muestra el control conectado sin procesar - cada eje, botón y sombrero como números, y
 una imagen de DualShock que se ilumina cuando presiona. Debido a que el control probado no se puede confiar, el
 asistente es manejado por los **botones anteriores de la consola**: **RESET** cambia al siguiente control,

@@ -697,6 +697,16 @@ Raspberry Pi / stick PC; ghidul gamepad funcționează pe orice sistem.
 - **R1 - Mapare Controlere**: ghidul mapării (de mai jos).
 - **Triangle - Despre**, **Circle - înapoi** la lansator.
 
+> **Pad-urile Bluetooth încetinesc WiFi-ul (PlayStation Classic).** Pe consolă, WiFi-ul și Bluetooth-ul sunt un
+> singur cip Realtek cu o singură antenă comună, pe 2,4 GHz. Cât timp un pad Bluetooth este conectat și folosit,
+> pad-ul și WiFi-ul folosesc antena pe rând, așa că WiFi-ul primește doar o parte din timp: descărcările din
+> Store și actualizările merg mai încet (la un test, cam 1,5 MB/s în loc de 5 MB/s). AutoBleem anunță WiFi-ul
+> când e conectat un pad Bluetooth, ca WiFi-ul să primească cea mai mare parte din timp, dar efectul nu poate fi
+> eliminat de tot; pad-ul în sine răspunde la fel de repede ca întotdeauna. Pentru o descărcare mare, oprește
+> pad-ul Bluetooth (ține apăsat butonul PS cam 10 secunde) sau folosește un pad cu cablu USB, iar după aceea
+> pornește pad-ul din nou - se reconectează singur. Un Raspberry Pi sau un PC are de obicei radiouri separate
+> sau WiFi pe 5 GHz și nu este afectat.
+
 **Ghidul gamepad** arată pad-ul conectat brut - fiecare axă, buton și pălărie ca numere, și o imagine
 DualShock care se luminează pe măsură ce apasă. Deoarece pad-ul sub test nu poate fi de încredere,
 ghidul este condus de **butoanele din față ale consolei**: **RESET** comută la pad-ul următor, **OPEN**

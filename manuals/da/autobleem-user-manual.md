@@ -656,6 +656,15 @@ fungerer på ethvert system.
 - **R1 - Controller Mapping**: kortlægnings-guiden (nedenfor).
 - **Triangle - About**, **Circle - tilbage** til launcher.
 
+> **Bluetooth-pads gør WiFi langsommere (PlayStation Classic).** Konsollens WiFi og Bluetooth er én
+> Realtek-chip med én fælles antenne på 2,4 GHz. Mens en Bluetooth-pad er forbundet og i brug, skiftes pad'en
+> og WiFi til at bruge antennen, så WiFi kun får en del af tiden: downloads fra Store og opdateringer bliver
+> langsommere (i en test ca. 1,5 MB/s i stedet for 5 MB/s). AutoBleem fortæller WiFi, når en Bluetooth-pad er
+> forbundet, så WiFi får det meste af tiden, men effekten kan ikke fjernes helt; selve pad'en reagerer lige så
+> hurtigt som altid. Før en stor download kan du slukke Bluetooth-pad'en (hold dens PS-knap inde i ca. 10
+> sekunder) eller bruge en pad med USB-kabel, og bagefter tænde pad'en igen - den forbinder sig selv. En
+> Raspberry Pi eller en PC har som regel separate radioer eller 5 GHz-WiFi og bliver ikke berørt.
+
 **Gamepad-guiden** viser tilsluttede pad rå - hver akse knap og hat som tal og DualShock-billede som
 lyser op når du trykker. Fordi pad'et under test ikke kan stoles på bliver guiden kørt af konsolens **front-
 knapper**: **RESET** skifter til næste pad **OPEN** starter kortlægning (derefter svar hver spørgsmål - tryk

@@ -650,6 +650,15 @@ the gamepad wizard works on any system.
 - **R1 - Controller Mapping**: the mapping wizard (below).
 - **Triangle - About**, **Circle - back** to the launcher.
 
+> **Bluetooth pads slow the Wi-Fi down (PlayStation Classic).** On the console, Wi-Fi and Bluetooth are one
+> Realtek chip with a single shared antenna on 2.4 GHz. While a Bluetooth pad is connected and in use, the pad
+> and the Wi-Fi take turns on that antenna, so the Wi-Fi gets only part of the time: Store downloads and updates
+> become slower (in a test, about 1.5 MB/s instead of 5 MB/s). AutoBleem tells the Wi-Fi when a Bluetooth pad
+> is connected, so that the Wi-Fi gets most of the time, but it cannot remove the effect completely; the pad
+> itself reacts as quickly as ever. For a large download, switch the Bluetooth pad off (hold its PS button for
+> about 10 seconds) or use a wired USB pad, and turn the pad back on afterwards - it reconnects by itself. A
+> Raspberry Pi or a PC usually has separate radios or 5 GHz Wi-Fi and is not affected.
+
 **The gamepad wizard** shows the connected pad raw - every axis, button and hat as numbers, and a
 DualShock picture that lights up as you press. Because the pad under test cannot be trusted, the wizard
 is driven by the console's **front buttons**: **RESET** switches to the next pad, **OPEN** starts the mapping
