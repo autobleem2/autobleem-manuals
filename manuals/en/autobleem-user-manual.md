@@ -62,9 +62,10 @@ installed (ABFlashKit, chapter 6) also boots from an exFAT stick, which lifts FA
    - **Sample games** - a few free homebrew games so the shelf is not empty.
 3. Press **Install** and wait. The progress bars and the log show every step; the stick is named `SONY`
    at the end, and `UpdateRoms` is put on it (see chapter 5).
-4. Take the stick out safely, plug it into one of the console's **front USB ports** and switch the console
-   on. AutoBleem starts instead of the stock menu. Player 2's pad needs the other front port. Keep the stick
-   out of the micro-USB port at the back (see below).
+4. Take the stick out safely, plug it into the console's **second front USB port** (right, player 2) - the
+   first one is for the pad - and switch the console on. AutoBleem starts instead of the stock menu. A second
+   pad needs a USB hub on the front port or a Bluetooth pad. Keep the stick out of the micro-USB port at the
+   back (see below).
 
 **Switching on and off.** With the stick in, the console boots, blinks its light for a few seconds
 (AutoBleem is being picked up) and then goes to standby before anything is shown - that is the console's
@@ -239,7 +240,6 @@ A wireless pad with a battery reading - the console, a Pi or the PC stick, not W
 |---|---|
 | Left / Right | Previous / next game. Holding scrolls on. |
 | L1 / R1 | Jump to the previous / next first letter of the titles. On an empty shelf with a drive, R1 opens *Disc* (section 3.8a). |
-| Hold Start + Select, or Home, for 2 seconds | Back to AutoBleem from a game or an App. Works on every pad: the console's, a USB pad, a Bluetooth pad. A short press opens the emulator's menu (in an App there is no short-press menu). |
 | Cross | Start the selected game (a PS1 game in the PS1 emulator; a RetroArch game in its core; an App after its read-me). |
 | Square | Start the selected PS1 game in RetroArch instead. On a disc in a USB drive: *Copy disc* (section 3.8a). |
 | Circle | Back to the disc view, when a disc is in the drive (section 3.8a). |
@@ -254,6 +254,10 @@ A wireless pad with a battery reading - the console, a Pi or the PC stick, not W
 
 In every list and menu: Up / Down move, **L2 / R2 turn pages**, L1 / R1 jump to the first / last row,
 **Cross selects, Circle goes back**. A screen with settings saves them when you leave it with Circle.
+
+**In a game or an App**: hold **Start + Select, or Home, for 2 seconds** to go back to AutoBleem. It works on
+every pad - the console's, a USB pad, a Bluetooth pad. A short press opens the emulator's menu; an App has no
+such menu, only the hold works.
 
 ![The icon row under the selected game](../images/en/launcher-icons.jpg)
 
@@ -819,16 +823,14 @@ runs another custom firmware (BleemSync, Project Eris): restore it to stock firs
 console over a USB cable:
 
 1. Connect the console's micro-USB port to the PC with a USB cable. The PC shows the console as a new network
-   adapter. The documents of the launcher do not state the console's address on it; look at the new adapter's
-   settings on the PC.
+   adapter; the console's address is in that adapter's settings on the PC.
 2. Log in with `ssh root@<the console's address>`. The default password is `autobleem`.
 
 Instead of the password you can use a key: put your public key into the file `System/ssh/authorized_keys` on the
 stick and restart the console. At the next boot it is added to the root account. Updating or reinstalling the launcher does not remove it.
 
-> **Change the password.** The default is the same on every console, and anyone who can plug a cable into the
-> console can log in as root with it. Change it after your first login (the AutoBleem kernel's own documentation says how), and do not
-> leave a console with the default password where others can reach it.
+> **The default password is the same on every console**: anyone who can plug a cable into it can log in as
+> root. Use a key where you can, and do not leave a console with the default password where others can reach it.
 
 <!-- pagebreak -->
 
