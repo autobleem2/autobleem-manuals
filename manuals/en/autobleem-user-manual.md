@@ -313,9 +313,12 @@ saves. Every change is applied at once. On/off values read **ON** / **OFF**.
 
 | Group / setting | What it does |
 |---|---|
-| **Interface**: Display | The screen's resolution, for the launcher and the PS1 emulator: *Auto* (the screen's own mode, shown as *Auto (1920x1080)*) or any mode the screen lists; the console offers 720p and 1080p. A new mode is asked about: *Keep this display mode?* - if you do not confirm, it goes back after a countdown. Not on a development window. |
+| **Interface**: Display | The screen's resolution, for the launcher and the PS1 emulator: *Auto* (the screen's own mode, shown as *Auto (1920x1080)*) or any mode the screen lists; the console offers 720p, 1080p and *CRT 4:3* (720x480, for a CRT or a 4:3 capture device). A new mode is asked about: *Keep this display mode?* - if you do not confirm, it goes back after a countdown. Not on a development window. |
+| CRT margin: | The safe area on a 4:3 output, 0 to 10 % in steps of 1 %. Applied at once, and read before the start-up splash. |
+| Picture height: | The height of the picture on any 4:3 output (*CRT 4:3*, or a 4:3 window on a VGA / PC output), -40 to +40 in steps of 2, applied at once. RetroArch's game picture follows it. |
 | Emulator screen scaling | How the PS1 emulator fits a game's picture to the screen: *1x1* (the PlayStation's own pixels), *2x (integer)*, *4:3*, *4:3 (integer)* or *Full screen*. Integer scaling uses whole multiples only (the sharpest). It replaces the old Widescreen switch; the classic `pcsx-ab` and RetroArch know only full screen and 4:3. |
-| AutoBleem theme | The look. Themes live in `Themes/`; a theme zip dropped there is listed by name too. The themes AutoBleem ships are refreshed with every update - to customise one, copy it under a new name first. The default is **ab2.0.0**. |
+| Screen halo: | ON fills the bands beside a game's picture (where it does not fill the screen) with the picture's own glow (`pcsx-abnxt`). |
+| AutoBleem theme | The look. Themes live in `Themes/`; a theme zip dropped there is listed by name too. The themes AutoBleem ships are refreshed with every update - to customise one, copy it under a new name first. The default is **ab2.0.0**. On *CRT 4:3* the list shows only themes that have a 4:3 layout; if the theme in use has none, the default theme replaces it after the confirmation (also at start) and a notice says *Theme switched to the default (CRT 4:3)*. |
 | Cover style | The jewel-case frame drawn around PS1 covers. |
 | Cover shine | A shine that crosses the selected cover when the shelf comes to rest. |
 | Language | The launcher's language, applied at once (17 languages). |
@@ -326,15 +329,20 @@ saves. Every change is applied at once. On/off values read **ON** / **OFF**.
 | Font | Any `.ttf`/`.otf` from `resources/fonts`, `RetroArch/fonts` or the theme's folder; the row names the font in use. |
 | **Sound**: Music, Background music | Which track plays under the launcher (the theme's, or a file from `resources/music`), and whether one plays at all. |
 | **Emulation**: PS1 emulator | `pcsx-abnxt` (the default: current PCSX-ReARMed with AutoBleem's additions) or `pcsx-ab` (the classic). A resume point saved by one continues in the other, unless the game ran without a BIOS file. |
-| Swap Player 1 / Player 2 (PS1 emulators) | Swaps which of the first two pads is Player 1 and which is Player 2, in both PS1 emulators (pcsx-abnxt and the classic pcsx-ab). It only takes effect with two or more pads connected; with one pad, play is always Player 1. RetroArch is not affected. |
-| Play all PSX games with RA, Update RA config, Persist RetroArch config | (Only where RetroArch is installed.) Every PS1 game starts in RetroArch's PS1 core; AutoBleem writes its settings into RetroArch's config when it starts a game there; a change made in RetroArch's own menu is kept when RetroArch quits. |
+| Swap Player 1 / Player 2 (PS1 emulators) | Swaps which of the first two pads is Player 1 and which is Player 2, in both PS1 emulators (pcsx-abnxt and the classic pcsx-ab). It only takes effect with two or more pads connected; with one pad, play is always Player 1. RetroArch is not affected. A PS1 emulator that cannot swap yet shows *This PS1 emulator does not support swapping pads yet*. |
+| Play all PSX games with RA, Update RA config, Persist RetroArch config | (Only where RetroArch is installed.) Every PS1 game starts in RetroArch's PS1 core (*PlayStation 1*; on a PC it is SwanStation); AutoBleem writes its settings into RetroArch's config when it starts a game there; a change made in RetroArch's own menu is kept when RetroArch quits. |
 | **Library**: Show internal games | The console's built-in games in the PlayStation lists (PlayStation Classic only). |
+| Clean game names: | ON (the default): RetroArch game lists show names without bracketed tags such as (USA), (Rev 1) or [!]. OFF shows the file names. The file name stays in the game's details. PS1 games are not affected - their titles come from the database. |
 | Fetch box art online | The scan fetches missing covers from libretro's servers (Raspberry Pi, PC, Windows). |
 | **Updates** | The update channel: `release` (the tested version), `testing` (the next version, being tested), `nightly` (the newest development build) or `off`. The default follows the version installed. Not shown on a development host. |
 | **Diagnostics**: Keep logs on the stick | Keep every log on the stick from the next start, not only after a crash (chapter 7). |
 | Show performance | An overlay in the bottom-left corner: frame rate, CPU load, threads and memory; the emulator shows its FPS and CPU in the game too. |
 
 ![The options, in groups](../images/en/options.jpg)
+
+![The Display group: CRT margin and Picture height](../images/en/options-display.jpg)
+
+![The notice after switching to CRT 4:3 with a theme that has no 4:3 layout](../images/en/crt43-theme-notice.jpg)
 
 ### 3.7 A game's settings
 
@@ -346,10 +354,12 @@ The **game editor** shows the game's details on the right (title, publisher, yea
 
 - **Game**: *Favorite* (in the Favorite games group), *Lightgun game* and *Play using RA* (only where RetroArch is
   installed: a light-gun game joins the Lightgun group and always runs in RetroArch, whose PS1 core has the GunCon;
-  *Play using RA* runs this game in RetroArch), *Lock data* (the scanner leaves the game's title, serial and disc list as you set them).
+  *Play using RA* runs this game in RetroArch), *Lock data* (the scanner leaves the game's title, serial and disc list as you set them),
+  and *Resume:* - what happens when a game with resume points starts: *Ask* shows the resume-slot picker, *Last
+  slot* continues from the newest slot at once, *Never* starts the game from the beginning.
 - **Display**: *Resolution* (1x or 2x, on the built-in GPU), *Remove seams* (only with 2x), *Dithering* (Off, On, Always),
   *Smoothing*, the *Filter* - how the picture is scaled: Nearest (plain pixels), Linear (smoothed), Sharp or Sharp (simple)
-  (crisp pixels without shimmer), Quilez, or the CRT filters CRT (fast) and CRT-Pi (they draw their own scanlines,
+  (crisp pixels without shimmer), Quilez, or the CRT filters CRT (fast), CRT (raster) and CRT-Pi (they draw their own scanlines,
   so the scanline rows grey out) - and *Scanlines* with their *Scanline brightness*. Resolution, remove seams, dithering, smoothing and the
   filters other than Linear and Nearest are for `pcsx-abnxt`; the classic `pcsx-ab` and RetroArch show the rest as Nearest.
 - **Rendering**: the GPU *Plugin* and the *Frameskip* (Auto, Off, 1 to 3).
@@ -360,6 +370,13 @@ The picture shape and the screen's resolution are global (Options → *Emulator 
 A game with no title in its data is shown under its folder's name.
 
 Triangle renames the game, Square changes its memory card, Start shares a new card. Circle saves and leaves.
+Holding Left / Right or Up / Down repeats the move, in the editor and also in RetroArch's game options and
+cores screens. A drive game that has no `pcsx.cfg` cannot save: the editor says *Not saved: this game has no pcsx.cfg*.
+
+For a **disc in the drive** (section 3.8a) the editor greys the rows the disc cannot use and says *Not
+available for a disc in the drive*.
+
+![The game editor for a disc in the drive](../images/en/game-editor-disc.jpg)
 
 **Settings saved in the emulator.** The emulator's own menu has *Save settings for this game*. Once a game
 has settings saved there, they are the ones it plays with, and the game editor shows its Display,
@@ -375,7 +392,8 @@ same saved settings.
 Every PS1 game has its own memory card by default (kept with its save states in `Games/!SaveStates/<game
 folder>/`). **Memory Cards** in the system menu manages **shared sets** - a card several games use, kept in
 `Games/!MemCards/`: create one (Square, with the on-screen keyboard), rename (Cross), delete (Triangle).
-A game is put on a set with *Change memory card* in its editor, or from its Memory Card icon.
+A game is put on a set with *Change memory card* in its editor, or from its Memory Card icon. A set
+with no card yet says *no card yet*, and saving asks *Do you want to save memory card data?*
 
 The **memory card editor** (the Memory Card icon) shows the game's card and a second card side by side, with
 every save's icon and title: copy a save between the two (Square), delete one (Triangle), defragment a
@@ -389,6 +407,10 @@ slots, shown as framed cards, each with a picture of the moment, its slot number
 marked **NEWEST** and an unused slot says *No resume point*. Cross continues from the slot, Triangle deletes
 it. A game with a resume point shows a small picture on its Resume icon; a game without any has the Resume icon
 greyed out. While the resume point is being written on the way out of a game, the emulator shows *Please wait...*.
+PS1 games played in RetroArch have resume slots too. A slot carries a badge - the AutoBleem 2 or the RetroArch
+logo - so you see which emulator wrote it.
+
+![The resume-slot picker](../images/en/resume-picker.jpg)
 
 ### 3.8 Starting games, RetroArch and Apps
 
