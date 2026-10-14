@@ -75,8 +75,7 @@ which gets rid of FAT32's limit of 4 GB per file.
    `SONY` and gets a copy of `UpdateRoms` (see chapter 5).
 4. Remove the stick safely, plug it into the console's **second front USB port** (the right one, player 2) -
    the first one stays free for your pad - and switch the console on. Instead of the stock menu, AutoBleem
-   starts. For a second pad, use a USB hub on the front port or a Bluetooth pad. Do not put the stick in the
-   micro-USB port at the back (see below).
+   starts. For a second pad, use a USB hub on the front port or a Bluetooth pad.
 
 **Switching on and off.** With the stick in, the console starts, blinks its light for a few seconds while it
 notices AutoBleem, and then goes to standby before anything appears on the screen. That is normal: AutoBleem
@@ -91,10 +90,8 @@ check it, because it was disconnected properly. Put it back before you press Pow
 console's power cable, it goes through the start-up standby again next time. A **red** light means the
 console is really switched off.
 
-**Use a front USB port for the stick.** The micro-USB port at the back is the power port. With the AutoBleem
-kernel it can also take a USB device, but anything plugged in there keeps the console from sleeping: with a
-stick or a hub on it, the console switches off completely instead of going to standby, and Power then has to
-start it from scratch, which takes longer.
+**The port at the back.** The micro-USB port at the back is the console's power port. With the AutoBleem kernel
+it can also take a USB device, but the stick belongs in a front port.
 
 **If the stick is missing.** When the console starts without a stick, or you pull the stick out while
 AutoBleem is running, a picture asks you to put it in - any USB port will do. AutoBleem waits for 5 minutes
