@@ -20,7 +20,8 @@ täcker installation på varje plattform, daglig användning och de verktyg som 
   inställningar och minneskort.
 - **RetroArch** (valfritt på varje plattform) för andra system: NES, SNES, Mega Drive, Game Boy,
   arkad och mycket mer. AutoBleem bygger sina RetroArch-listor från ROM-filer som du kopierar in och
-  startar varje spel med rätt kärna.
+  startar varje spel med rätt kärna. Kärnlistan börjar med *PlayStation 1* (avsnitt 3.8). Doom-liknande spel körs
+  från dina egna speldata i en mapp som heter *Paket* (avsnitt 3.9).
 - **Konsolverktygen**: *PSC-Bios* (visas i menyerna som *Nätverk och handkontroller*) för WiFi, klockan, Bluetooth
   och styrpadutsättning - på konsolen, och även på en Raspberry Pi och PC-stickan - och *ABFlashKit* för installation
   av AutoBleem-kerneln (endast PlayStation Classic).
@@ -60,17 +61,35 @@ tar bort FAT32:s 4 GB-begränsning.
    - **Exempelspel** - några gratis homebrew-spel så att hyllan inte är tom.
 3. Klicka på **Install** och vänta. Framstegsstaplarna och loggen visar varje steg; stickan heter
    `SONY` i slutet, och `UpdateRoms` placeras på den (se kapitel 5).
-4. Ta bort stickan på ett säkert sätt, sätt in den i konsolens **andra USB-port** (höger, spelare 2)
-   och slå på konsolen. AutoBleem startar istället för originalmenyn.
+4. Ta bort stickan på ett säkert sätt, sätt in den i konsolens **andra främre USB-port** (höger, spelare 2) - den
+   första är till handkontrollen - och slå på konsolen. AutoBleem startar istället för originalmenyn. En andra
+   handkontroll behöver en USB-hubb på den främre porten eller en Bluetooth-handkontroll. Håll stickan borta från
+   micro-USB-porten på baksidan (se nedan).
 
 **Starta och stänga av.** Med stickan i startar konsolen, blinkar sin ljus några sekunder (AutoBleem
 hämtas) och går sedan i beredskap innan något visas - det är konsolens eget sätt att organisera en
 uppdatering, som är hur AutoBleem får att köras. Tryck på **Power** en gång och startaren dyker upp.
 *Stäng av* i systemmenyn, eller konsolens Power-knapp, sätter konsolen i **AutoBleem-beredskap**: stickan
-tas bort först, sedan blir ljuset **rött** - tecknet på att AutoBleem fungerar som det ska - och nästa
-Power-tryck tar startaren tillbaka på några sekunder. **Medan ljuset är rött kan du dra ut stickan** och
+tas bort först, sedan blir ljuset **orange** - tecknet på att AutoBleem fungerar som det ska - och nästa
+Power-tryck tar startaren tillbaka på några sekunder. **Medan ljuset är orange kan du dra ut stickan** och
 sätta in den i en PC utan att Windows vill kontrollera den; sätt tillbaka den innan du trycker på Power.
-Att dra ur konsolens ström går genom uppstartsberedskapen igen nästa gång.
+Att dra ur konsolens ström går genom uppstartsberedskapen igen nästa gång. Ett ljus som är **rött** betyder att
+konsolen verkligen har stängts av.
+
+**Använd en främre USB-port för stickan.** Micro-USB-porten på baksidan (en värd där fungerar bara med
+AutoBleem-kerneln) håller konsolen vaken: med en sticka eller en hubb på den stängs konsolen av i stället för att
+gå i beredskap, och Power startar en kallstart.
+
+**Ingen sticka.** Utan sticka i konsolen visar en bild att du ska sätta in en - i vilken USB-port som helst. Efter
+5 minuter, eller direkt vid Power, går konsolen i viloläge. Samma bild visas om stickan dras ur medan AutoBleem
+körs.
+
+![Bilden som ber om stickan](../images/en/insert-stick.jpg)
+
+**Stickkontroll.** En sticka som inte togs bort på rätt sätt kontrolleras vid start, vid uppvaknande och efter en
+urdragning, med en förloppsstapel. På en stor sticka kan det ta en stund; avbryt inte.
+
+![Stickkontrollen](../images/en/stick-check.jpg)
 
 Om du vill **uppdatera** en sticka kör du ett nyare installationsprogram över den: dina spel, sparningar,
 inställningar och RetroArch-innehål stannar; bara AutoBleem:s egna filer ersätts.
@@ -193,7 +212,7 @@ spelades (en uppgift som ett spel inte har utelämnas) - och en uppspelningsknap
 **ab2.0.0**; en ny installation och en uppdatering som tar med det byter till det en gång. Tipsfältet längst ner har
 två rader med fyra platser. Den första säger vad knapparna gör för det valda spelet (spela, spela i RetroArch, öppna
 ikonraden, snabbmenyn); den andra visar alltid Select (uppsättningen), Start (ett slumpmässigt spel), Triangle
-(guiden) och L2 + R2 (systemmenyn), nedtonade när någon av dem inte gör något. En skanning av spelmappen körs i
+(guiden) och L2 + R2 (systemmenyn), nedtonade när någon av dem inte gör något. Ett spel utan omslag visar en skiva som ligger i fodralets svarta fack. En skanning av spelmappen körs i
 bakgrunden vid varje start; medan den körs visar en bubbla längst upp till höger framstegen, och nya spel dyker upp
 på hyllan när de hittas.
 
@@ -221,9 +240,10 @@ En trådlös kontroll med känt batteriläge - på konsolen, en Pi eller PC-stic
 | Knapp | På hyllan |
 |---|---|
 | Vänster / Höger | Föregående / nästa spel. Hålla inned scrollar. |
-| L1 / R1 | Hoppa till föregående / nästa första bokstav i titlar. |
+| L1 / R1 | Hoppa till föregående / nästa första bokstav i titlar. På en tom hylla med en skivenhet öppnar R1 *Skiva* (avsnitt 3.8a). |
 | Cross | Starta det valda spelet (PS1-spel i PS1-emulator; RetroArch-spel i dess kärna; App efter readme). |
-| Square | Starta det valda PS1-spelet i RetroArch istället. |
+| Square | Starta det valda PS1-spelet i RetroArch istället. På en skiva i en USB-enhet: *Kopiera skiva* (avsnitt 3.8a). |
+| Circle | Tillbaka till skivvyn, när en skiva finns i enheten (avsnitt 3.8a). |
 | Triangle | Knappguiden. |
 | Start | Ett slumpmässigt spel från aktuell uppsättning. |
 | Select | Set-väljaren: PlayStation / RetroArch / Apps-flikar (L1 / R1), grupper av fliken (Upp / Ner,
@@ -240,6 +260,10 @@ L2 / R2, **F10** = systemmenyn. På en utvecklingsmaskin stänger Esc programmet
 I varje lista och meny: Upp / Ner flytta, **L2 / R2 vänd sidor**, L1 / R1 hoppa till första / sista rad,
 **Cross väljer, Circle går tillbaka**. En skärm med inställningar sparar dem när du lämnar den med Circle.
 
+**I ett spel eller en app**: håll **Start + Select, eller Home, i 2 sekunder** för att gå tillbaka till AutoBleem.
+Det fungerar på varje handkontroll - konsolens, en USB-handkontroll, en Bluetooth-handkontroll. Ett kort tryck
+öppnar emulatorns meny; en app har ingen sådan meny, bara det långa trycket fungerar.
+
 ![Ikonstaden under det valda spelet](../images/en/launcher-icons.jpg)
 
 ### 3.3 Uppsättningarna
@@ -250,7 +274,9 @@ till denna grupp), sedan *Favoritspel*, *Spelhistorik* och, när något spel är
 en Raspberry Pi, en PC-sticka och Windows finns inga interna spel, så listan börjar med *USB-spel*, som är hela
 biblioteket. RetroArch-fliken (endast där RetroArch är installerat) listar en grupp per system som har spel, plus
 RetroArch:s egna favoriter och historik. Apps-fliken grupperar applikationer efter typ: *Alla appar*, sedan *Spel*,
-*Emulatorer*, *Verktyg*, *Media* och *Övrigt* (kategorin ställs in i varje apps `app.ini`-fil). Varje rad visar hur
+*Emulatorer*, *Verktyg*, *Media* och *Övrigt* (kategorin ställs in i varje apps `app.ini`-fil). Apps-fliken visar också **PE-appar** - Windows-program som körs
+av PE-runnern; en som konsolen inte kan starta märks *kan inte köras på den här konsolen*. Där startaren visar den
+finns även en *Paket*-rad i listan (avsnitt 3.9). Varje rad visar hur
 många objekt den innehåller; en grupp utan objekt öppnas på en tom hylla med endast inställningar i ikonstaden.
 Sidfoten anger tangenterna: L1 / R1 flikar, L2 / R2 en sida, Cross väljer, Circle *Tillbaka*.
 
@@ -282,11 +308,12 @@ menyn är organiserad i avsnitt:
 | | Skanningsprocessorer | Program som varje skanning kör först - deras ordning, på eller av (avsnitt 3.13). Inaktiverad medan skanning körs. |
 | **System** | Alternativ | AutoBleem:s inställningar (avsnitt 3.6). |
 | | Nätverk och handkontroller | Bara där ett installerat tillägg ger `network`-posten (`Provides=network` i dess `extension.ini` - PSC-Bios på konsol, Pi och PC-sticka) - WiFi, Bluetooth-styrenhetsparning, DualShock 3-installation och styrenhetskarteringsguide - se kapitel 6. När tillägget är installerat men inaktiverat, förblir detta objekt grått med "slå på det under Tillägg" - Cross öppnar listan över tillägg till det. |
-| | Hårdvaruinformation | Maskinens fakta: system, CPU, lagring, nätverksgränssnitt, tidszon, display, styrenheter och deras mappningar - samma sida på varje plattform (avsnitt 4.2). |
+| | Hårdvaruinformation | Maskinens fakta: system, CPU, lagring, nätverksgränssnitt, tidszon, display, styrenheter och deras mappningar - samma sida på varje plattform (avsnitt 4.2). Circle går tillbaka till systemmenyn. |
+| | Virtuell handkontroll | Handkontrollerna som appar får och de som daemonen ser (avsnitt 4.5). Circle går tillbaka till systemmenyn. |
 | | Programuppdatering | (Raspberry Pi och PC) Kontrollera webbplatsen nu för nyare AutoBleem eller RetroArch; raden säger *Uppdatering tillgänglig* när startaren redan känner till en. |
 | | Om | Krediter och licens. |
 | **Lämna** | RetroArch | (Endast där RetroArch är installerat.) Lämnar startaren för RetroArch:s egen meny. Att stänga RetroArch kommer tillbaka. |
-| | Stäng av | Efter bekräftelse: på konsol AutoBleem-beredskap - stickan borttagen, ljuset rött, Power tar startaren tillbaka (avsnitt 2.1); på Pi eller PC stängs maskinen av. |
+| | Stäng av | Efter bekräftelse: på konsol AutoBleem-beredskap - stickan borttagen, ljuset orange, Power tar startaren tillbaka (avsnitt 2.1); på Pi eller PC stängs maskinen av. |
 
 ![Systemmenyn](../images/en/system-menu.jpg)
 
@@ -298,9 +325,12 @@ Circle lämnar och sparar. Varje förändring tillämpas omedelbart. På/av-vär
 
 | Grupp / Inställning | Vad det gör |
 |---|---|
-| **Gränssnitt**: Bild | Skärmens upplösning, för startaren och PS1-emulatorn: *Auto* (skärmens eget läge, visat som *Auto (1920x1080)*) eller vilket läge skärmen listar; konsolen erbjuder 720p och 1080p. Ett nytt läge bekräftas: *Behålla det här bildläget?* - bekräftar du inte går det tillbaka efter en nedräkning. Inte i ett utvecklingsfönster. |
+| **Gränssnitt**: Bild | Skärmens upplösning, för startaren och PS1-emulatorn: *Auto* (skärmens eget läge, visat som *Auto (1920x1080)*) eller vilket läge skärmen listar; konsolen erbjuder 720p, 1080p och *CRT 4:3* (720x480, för en CRT-TV eller en 4:3-inspelningsenhet). Ett nytt läge bekräftas: *Behålla det här bildläget?* - bekräftar du inte går det tillbaka efter en nedräkning. Inte i ett utvecklingsfönster. |
+| CRT-marginal: | Säkerhetsmarginalen på en 4:3-utgång, 0 till 10 % i steg om 1 %. Tillämpas direkt och läses före startbilden. |
+| Bildhöjd: | Bildens höjd på vilken 4:3-utgång som helst (*CRT 4:3*, eller ett 4:3-fönster på en VGA- / PC-utgång), -40 till +40 i steg om 2, tillämpas direkt. RetroArch:s spelbild följer med. |
 | Emulatorns skärmskalning | Hur PS1-emulatorn anpassar ett spels bild till skärmen: *1x1* (PlayStations egna pixlar), *2x (heltal)*, *4:3*, *4:3 (heltal)* eller *Helskärm*. Heltalsskalning använder bara hela multipler (skarpast). Den ersätter den gamla Widescreen-växeln; klassiska `pcsx-ab` och RetroArch känner bara helskärm och 4:3. |
-| AutoBleem-tema | Utseendet. Teman finns i `Themes/`; en tema-zip som släpps där packas upp vid nästa besök. AutoBleem:s teman uppdateras vid varje uppdatering - för att anpassa en, kopiera den först under ett nytt namn. Standard är **ab2.0.0**. |
+| Skärmgloria: | PÅ fyller banden vid sidan av ett spels bild (där den inte fyller skärmen) med bildens egen glöd (`pcsx-abnxt`). |
+| AutoBleem-tema | Utseendet. Teman finns i `Themes/`; en tema-zip som släpps där packas upp vid nästa besök. AutoBleem:s teman uppdateras vid varje uppdatering - för att anpassa en, kopiera den först under ett nytt namn. Standard är **ab2.0.0**. På *CRT 4:3* visar listan bara teman som har en 4:3-layout; har temat som används ingen, ersätter standardtemat det efter bekräftelsen (även vid start) och en notis säger *Tema ändrat till standardtemat (CRT 4:3)*. |
 | Omslagsstil | Den prydnadsstil som ritats omkring PS1-omslag. |
 | Glans på omslaget | En glans som går över det valda omslaget när hyllan kommit till ro. |
 | Språk | Starlarens språk, tillämpad omedelbar (17 språk). |
@@ -311,15 +341,20 @@ Circle lämnar och sparar. Varje förändring tillämpas omedelbart. På/av-vär
 | Teckensnitt | Någon `.ttf`/`.otf` från `resources/fonts`, `RetroArch/fonts` eller temamappen; raden anger teckensnittet som används. |
 | **Ljud**: Musik, Bakgrundsmusik | Vilken spår som spelar under startaren (temats, eller en fil från `resources/music`), och om en spelar alls. |
 | **Emulering**: PS1-emulator | `pcsx-abnxt` (standard: nuvarande PCSX-ReARMed med AutoBleem:s tillägg) eller `pcsx-ab` (klassisk). En sparad återställningspunkt fortsätter i den andra, om inte spelet kördes utan BIOS-fil. |
-| Byt spelare 1 / spelare 2 (PS1-emulatorer) | Byter vilken av de två första kontrollerna som är Spelare 1 och vilken som är Spelare 2, i båda PS1-emulatorerna (pcsx-abnxt och klassiska pcsx-ab). Det får bara effekt med två eller fler kontroller anslutna; med en kontroller är det alltid Spelare 1. RetroArch påverkas inte. |
-| Spela alla PSX-spel med RA, Uppdatera RA-konfiguration, Behåll RetroArch-inställningar | (Endast där RetroArch är installerat.) Varje PS1-spel startar i RetroArch:s PS1-kärna; AutoBleem skriver sina inställningar in i RetroArch:s config när det startar ett spel där; en ändring gjord i RetroArch:s egen meny behålls när RetroArch avslutas. |
+| Byt spelare 1 / spelare 2 (PS1-emulatorer) | Byter vilken av de två första kontrollerna som är Spelare 1 och vilken som är Spelare 2, i båda PS1-emulatorerna (pcsx-abnxt och klassiska pcsx-ab). Det får bara effekt med två eller fler kontroller anslutna; med en kontroller är det alltid Spelare 1. RetroArch påverkas inte. En PS1-emulator som ännu inte kan byta visar *Den här PS1-emulatorn stöder ännu inte att byta handkontroller*. |
+| Spela alla PSX-spel med RA, Uppdatera RA-konfiguration, Behåll RetroArch-inställningar | (Endast där RetroArch är installerat.) Varje PS1-spel startar i RetroArch:s PS1-kärna (*PlayStation 1*; på en PC är det SwanStation); AutoBleem skriver sina inställningar in i RetroArch:s config när det startar ett spel där; en ändring gjord i RetroArch:s egen meny behålls när RetroArch avslutas. |
 | **Bibliotek**: Visa interna spel | Konsolens inbyggda spel i PlayStation-listerna (endast PlayStation Classic). |
+| Rena spelnamn: | PÅ (standard): RetroArch-spellistor visar namn utan taggar inom parentes som (USA), (Rev 1) eller [!]. AV visar filnamnen. Filnamnet finns kvar i spelets detaljer. PS1-spel påverkas inte - deras titlar kommer från databasen. |
 | Hämta omslag online | Skanningen hämtar saknade omslag från libretro:s servrar (Raspberry Pi, PC, Windows). |
 | **Uppdateringar** | Uppdateringskanalen: `release` (den testade versionen), `testing` (nästa version, under test), `nightly` (det senaste utvecklingsbygget) eller `off`. Standard följer den installerade versionen. Visas inte på en utvecklingsvärd. |
 | **Diagnostik**: Behåll loggar på minnet | Behåller alla loggar på stickan från nästa start, inte bara efter en krasch (kapitel 7). |
 | Visa prestanda | Ett överlägg i nedre vänstra hörnet: bildfrekvens, CPU-belastning, trådar och minne; emulatorn visar också sin FPS och CPU i spelet. |
 
 ![Inställningar i grupper](../images/en/options.jpg)
+
+![Bildgruppen: CRT-marginal och Bildhöjd](../images/en/options-display.jpg)
+
+![Notisen efter byte till CRT 4:3 med ett tema utan 4:3-layout](../images/en/crt43-theme-notice.jpg)
 
 ### 3.7 Ett spelets inställningar
 
@@ -332,10 +367,11 @@ den under markören.
 - **Spel**: *Favorit* (i Favoritspel-gruppen), *Lightgun-spel* och *Spela med RA* (endast där RetroArch är
   installerat: ett lightgun-spel ansluter sig till Lightgun-gruppen och körs alltid i RetroArch, vars PS1-kärna har
   GunCon; *Spela med RA* kör detta spel i RetroArch), *Lås data* (skannern behåller spelets titel, serienummer och
-  skivlista som du ställt in).
+  skivlista som du ställt in) och *Återuppta:* - vad som händer när ett spel med sparpunkter startar: *Fråga* visar
+  platsväljaren, *Senaste platsen* fortsätter direkt från den nyaste platsen, *Aldrig* startar spelet från början.
 - **Bild**: *Upplösning* (1x eller 2x, på den inbyggda GPU:n), *Ta bort sömmar* (endast med 2x), *Dithering* (Av, På,
   Alltid), *Utjämning*, *Filter* - hur bilden skalas: Närmaste (rena pixlar), Linjär (mjuk), Skarp eller Skarp (enkel)
-  (skarpa pixlar utan skimmer), Quilez, eller CRT-filtren CRT (fast) och CRT-Pi (de ritar egna scanlines, så
+  (skarpa pixlar utan skimmer), Quilez, eller CRT-filtren CRT (fast), CRT (raster) och CRT-Pi (de ritar egna scanlines, så
   scanlinjeraderna blir gråa) - och *Scanlines* med deras *Scanlines ljusstyrka*. Upplösning, ta bort sömmar,
   dithering, utjämning och andra filter än Linjär och Närmaste är för `pcsx-abnxt`; klassiska `pcsx-ab` och RetroArch
   visar resten som Närmaste.
@@ -347,7 +383,14 @@ Bildens form och skärmens upplösning är globala (Alternativ → *Emulatorns s
 titel i sina data visas under namnet på sin mapp.
 
 Triangle byter namn på spelet, Square byter dess minneskort, Start delar ett nytt. Circle sparar och
-lämnar.
+lämnar. Att hålla Vänster / Höger eller Upp / Ner upprepar förflyttningen, i redigeraren och även i RetroArch:s
+spelalternativ och kärnskärmar. Ett spel på enheten som saknar `pcsx.cfg` kan inte spara: redigeraren säger
+*Inte sparat: spelet saknar pcsx.cfg*.
+
+För en **skiva i skivenheten** (avsnitt 3.8a) tonar redigeraren ner raderna som skivan inte kan använda och säger
+*Inte tillgängligt för en skiva i enheten*.
+
+![Spelets redigerare för en skiva i enheten](../images/en/game-editor-disc.jpg)
 
 **Inställningar sparade i emulatorn.** Emulatorns egen meny har *Spara inställningar för det här spelet*.
 När ett spel har sparade inställningar där, är de de som det spelar med, och spelets redigerare visar
@@ -364,7 +407,8 @@ Varje PS1-spel har sitt eget minneskort som standard (hållet med sparpunkter i 
 folder>/`). **Minneskort** i systemmenyn hanterar **delade uppsättningar** - ett kort som flera spel
 använder, hållet i `Games/!MemCards/`: skapa ett (Square, med på-skärm-tangentbord), byt namn (Cross),
 ta bort (Triangle). Ett spel placeras på en uppsättning med *Ändra minneskort* i dess redigerare, eller
-från dess Minneskort-ikon.
+från dess Minneskort-ikon. En uppsättning
+utan kort än säger *inget kort än*, och vid sparande frågar den *Vill du spara minneskortsdata?*
 
 **Minneskortredigeraren** (Minneskort-ikonen) visar spelets kort och ett andra kort sida vid sida, med
 varje sparnings ikon och titel: kopiera en sparning mellan de två (Square), ta bort en (Triangle),
@@ -378,6 +422,10 @@ meny på Pi eller PC), sparar AutoBleem ett sparpunkt från där du var och erbj
 är märkt **NYAST** och en oanvänd plats säger *Ingen återupptagspunkt*. Cross fortsätter från platsen, Triangle
 raderar den. Ett spel med en återställningspunkt visar en liten bild på dess Återuppta-ikon; ett spel utan har
 Återuppta-ikonen nedtonad. Medan återställningspunkten skrivs på väg ut ur ett spel visar emulatorn *Vänta...*.
+PS1-spel som spelas i RetroArch har också återupptagsplatser. En plats har ett märke - AutoBleem 2- eller
+RetroArch-loggan - så att du ser vilken emulator som skrev den.
+
+![Platsväljaren för återupptagning](../images/en/resume-picker.jpg)
 
 ### 3.8 Starta spel, RetroArch och appar
 
@@ -385,6 +433,12 @@ raderar den. Ett spel med en återställningspunkt visar en liten bild på dess 
 tills du lämnar det - på konsolen med framkanten **Reset**-knapp (tillbaka till startaren med en
 återställningspunkt; fungerar även inifrån in-game-menyn) eller **Power** (konsolen stängs av); på Pi eller PC via
 emulatorns in-game-meny (nedan). **Square** startar ett PS1-spel i RetroArch istället.
+
+**Vägen ut ur ett spel** är densamma på varje handkontroll - konsolens, en USB-handkontroll, en
+Bluetooth-handkontroll: **håll Start + Select, eller Home, i 2 sekunder** (*Håll Select+Start eller Home i 2
+sekunder: tillbaka till AutoBleem*). Ett kort tryck på Select + Start eller Home öppnar emulatorns meny (*Kort
+tryck på Select+Start eller Home: emulatorns meny*); en app har ingen sådan meny, bara det långa trycket fungerar.
+På konsolen stoppar **Reset** alltid även en app.
 
 **In-game-menyn** (`pcsx-abnxt`). Tryck på menyknappen - handkontrollens Home, **Select + Start** på en handkontroll
 utan, eller **Esc** på ett tangentbord - och spelet stannar bakom en meny med spelets senaste bild. **Att hålla
@@ -408,12 +462,68 @@ snabbsparningen.
 
 Ett **RetroArch**-spel startar i RetroArch med kärnan som startaren valde för sitt system; *Close Content*
 eller *Quit RetroArch* i dess meny kommer tillbaka till startaren. RetroArch-objektet i systemmenyn öppnar
-RetroArch:s egen meny (XMB) utan något inladdat, för dess inställningar och dess egna innehållslistor.
+RetroArch:s egen meny (XMB) utan något inladdat, för dess inställningar och dess egna innehållslistor. Kärnfönstret öppnas med *PlayStation 1* först.
+
+![RetroArch-kärnfönstret](../images/en/retroarch-cores.jpg)
 
 En **app** (Apps-uppsättningen: konsolverktygen, och på en konsol de extra program som RetroArch:s paket
 medbringer - Doom, Quake, Amiga, ...) visar sitt readme först; Cross startar det, Circle går tillbaka.
 
 ![En apps readme innan den startar](../images/en/app-start.jpg)
+
+**En apps inställningar.** *Spelinställningar* ("Ändra hur det här programmet startas") har *Handkontrollsläge:*
+(*Automatiskt*, *PSC-handkontroll*, *Xbox 360-handkontroll*, *PSC-handkontroll (system)*, *Xbox
+360-handkontroll (system)*), *Styrkors som spak:* och *Spak som styrkors:*. Vissa appar frågar en gång, vid första
+starten, *Vilka kontroller har din handkontroll?* (*Ett styrkors* eller *Analoga spakar*); en app av Windows-typ
+frågar *Vad vill du göra?* (*Kör Windows*, *Installera Windows*, *Kör DOS*, *Avinstallera Windows*). För att
+koppla en tangent säger skärmen *Tryck på en av knapparna.*
+
+![En apps spelinställningar](../images/en/app-game-settings.jpg)
+
+Texterna och frågorna som ett Windows-program (en PE-app) ställer visas som AutoBleem-skärmar (*Meddelande*,
+*Välj ett alternativ*), med appens namn som rubrik.
+
+![En fråga från en PE-app](../images/en/pe-dialog.jpg)
+
+### 3.8a En skiva i en USB-enhet
+
+En USB-cd/dvd-enhet med en PlayStation- eller ljudskiva i lägger skivan på hyllan som ett spel. Inte i Windows,
+som saknar stöd för enheter.
+
+- **Skivvyn** öppnas av sig själv när en skiva upptäcks; R1 *Skiva* öppnar den från hyllan. Den visar skivans
+  omslag (från omslagsdatabaserna, eller hämtat online), dess serienummer och dess titel. Cross spelar skivan. Ett
+  PS1-spel som spelas från skivan återupptar och sparar i skivans mapp. Efter ett spel, alternativen eller ett
+  tilläggs inställningar är du tillbaka i skivvyn; Circle på hyllan tar fram den igen, och där är R1 åter
+  första-bokstav-hoppet.
+- **Enhetsbrickan** visar enhetens tillstånd: dold utan enhet, dämpad med enhet och utan skiva, blinkande *Läser
+  skivan...* medan den läser, sedan skivans titel. Andra meddelanden är *Det här är inte en PlayStation-skiva* och
+  *Skivan kan inte läsas just nu*.
+
+![Skivvyn](../images/en/disc-view.jpg)
+
+![Enhetsbrickan](../images/en/disc-chip.jpg)
+
+- **En ljud-cd** öppnar **cd-spelaren** (*CD-SPELARE*, *Ljud-cd*, med *SPÅR* och *TOTALTID*). Dess tangenter är
+  *Spela spår*, *Stopp*, *Föregående/nästa*, *Sök*, *Paus*, *Upprepa:* (av eller på) och *Blanda:*, och *Vald:*
+  anger spåret. En skiva som inte spelas säger *Den här skivan kan inte spelas*.
+
+![Cd-spelaren](../images/en/cd-player.jpg)
+
+- **Kopiera skiva** (Square) kopierar en PlayStation-skiva till `Games` som en **CHD**, med en `.m3u`-fil för ett
+  spel på flera skivor (skiva 1 först). Den frågar först: *Kopiera "%1" till %2? Det tar upp %3 av %4 ledigt
+  utrymme.* Ett förloppsfönster, *Kopierar skivan*, visar *Hastighet* och *Återstående tid* och blockerar
+  startaren; *Avbryt* avbryter (*Avbryter...*, sedan *Avbrutet*). Till slut står det *Skivan har kopierats till
+  Games.* Den vägrar med *Finns redan i Games: %1*, *Inte tillräckligt med utrymme i Games: kopian behöver %1, %2
+  är ledigt.* eller *Kopieringen misslyckades: %1*. Sektorer som inte kan läsas skrivs som nollor, och meddelandet
+  *%1 sektorer kunde inte läsas och skrevs som nollor.* talar om hur många (*Oläsbara sektorer*). En skiva som
+  databaserna inte känner till får sitt serienummer som namn.
+
+![Kopiering av en skiva](../images/en/disc-copy.jpg)
+
+- **LibCrypt-skivor**: `.sbi`-filen för ett LibCrypt-spel hämtas från webbplatsen innan skivan spelas och när den
+  kopieras. Det kräver ett nätverk: på en Raspberry Pi eller PC det den redan har, på konsolen det WiFi som ställts
+  in i PSC-Bios.
+- Spelets redigerare för en skiva tonar ner raderna den inte kan använda (avsnitt 3.7).
 
 ### 3.9 Lägga till spel
 
@@ -433,7 +543,7 @@ Games/
 - Ett flerskiv-spel är en mapp med varje skiva i den; mappar uppkallade `Game (Disc 1)`, `Game (Disc 2)`
   ... slås samman till en `Game`-mapp av skanningen.
 - Spel släppt direkt i `Games/` (lösa filer) sorteras in i mappar av skanningen.
-- En **omslag** är en PNG bredvid spelets bild, uppkallad efter den. Utan en tas skisskonsten från
+- En **omslag** är en PNG eller JPEG bredvid spelets bild, uppkallad efter den. Utan en tas skisskonsten från
   omslags-databaserna, eller - när RetroArch är installerat - från libretro:s miniatyrsamling; på Pi,
   PC eller Windows hämtas en saknad online (Inställningar → *Hämta box art online*).
 - Skanningen läser varje skivs serienummer och tar titel, förlag, år, spelare och region från
@@ -447,6 +557,23 @@ System`, `Sega - Mega Drive - Genesis`, `Nintendo - Game Boy Advance`, `FBNeo - 
 RetroArch:s spellista; på en konsol-sticka, kör **UpdateRoms** på PC:n (kapitel 5).
 
 **Appar** går under `Apps/<name>/` med en `app.ini` (namn, ikon, vad som ska köras) och en `run.sh`.
+
+**Paket.** Speldata för motorer - Doom, Quake, OpenArena, Heretic, Hexen, Strife, Duke Nukem 3D, Shadow Warrior,
+Theme Hospital, DOS-spel och mer - läggs i en `Packages`-mapp på stickan, till exempel `Packages/Doom/DOOM2.WAD`.
+AutoBleem känner igen datan med hjälp av en tabell som följer med (`rc/packages.ini`); de lösa spelfilerna i en
+igenkänd mapp är var för sig ett paket. Dina egna filer bara läses, de ändras aldrig. Ett paket kan också komma
+från Butiken. **Paketväljaren** listar det som hittades. **Paketinfo** visar ett pakets *Innehåll*,
+*Beskrivning*, *Plats*, *Källa*, *Körs med*, *Mod*, *Shareware*, *I den här appen* och *Dina filer*, och *Välj
+speldata* väljer datan att starta med. Meddelandena är *Ingen speldata hittades*, *Okända data*, *Ingen
+installerad app kan köra detta*, *%1 behöver speldata som den kan köra: %2.* och *Inte igenkänt. Om det är ett
+spel, se manualen: Dina egna spel.*
+
+![Paketväljaren](../images/en/packages-picker.jpg)
+
+![Paketinfo](../images/en/package-info.jpg)
+
+**Skanna en enda del.** *Skanna om spel* kan skanna bara en del - en uppsättning eller en mapp - och tar ner sin
+bubbla när den är klar.
 
 **Teman** går under `Themes/<name>/` (`theme.json` och bilderna) - eller släpp tema-zipen i `Themes/`.
 
@@ -465,7 +592,7 @@ och några inte.
   det finns en nyare AutoBleem eller RetroArch frågat det: *Uppdatera nu* laddar ner allt och kör
   installationsprogrammet igen med förstartningsframstegsskärmen; *Påminn mig imorgon* och *Hoppa över
   denna version* är de andra svaren. Dina spel och inställningar stannar; startaren skannar om en gång
-  efter en uppdatering.
+  efter en uppdatering. Kanalmärket i övre vänstra hörnet (avsnitt 3.1) visar vad som är installerat.
 - **PlayStation Classic**: kör ett nyare `AutoBleemInstaller.exe` över stickan (avsnitt 2.1).
 
 ### 3.12 Tillägg och AutoBleem Store
@@ -481,7 +608,7 @@ nätverket startas inte utan ett, och ett som stannade startaren stängs av - li
 som AutoBleem körs på (en PlayStation Classic behöver AutoBleem-kernels WiFi). Dess fyra flikar, L1 / R1
 mellan dem:
 
-- **Appar** och **Spel**: vad källorna erbjuder, varje med bild, version, storlek och källikon. Installerade
+- **Appar** och **Spel**: vad källorna erbjuder (Apps-fliken listar också PE-appar, med deras licens och källa, och speldatapaket, avsnitt 3.9), varje med bild, version, storlek och källikon. Installerade
   objekt bär ett *Installerad*-märke. Cross installerar (eller uppdaterar, eller provar igen efter fel, eller
   avbryter en köad eller pågående nedladdning), Triangle tar bort vad Store installerade, Square uppdaterar
   listorna. L2 / R2 hoppar efter bokstav, **Select** visar en källa åt gången, **Start** söker titlar. Sidfoten
@@ -547,9 +674,9 @@ måste göra, och `tools/proc_check.py` i AutoBleem:s källa kontrollerar en inn
 
 ### 4.1 Spelhanterare
 
-PS1-spelen som en lista med bara titlar (spelets mapp finns i dess detaljer) och valda spelets omslag. Cross öppnar speleditor:n,
+Skärmen heter *Spelbibliotek - välj spel*. PS1-spelen som en lista med bara titlar (spelets mapp finns i dess detaljer) och valda spelets omslag. Cross öppnar speleditor:n,
 **Square raderar spelet** (dess mapp och, efter en andra fråga, dess sparpunkter), Triangle raderar varje
-omslag-PNG bredvid spelen (skanningen tar dem från databaserna igen), L2 / R2 sida. Det lediga utrymmet på
+omslagsbild (PNG eller JPEG) bredvid spelen (skanningen tar dem från databaserna igen), L2 / R2 sida. Det lediga utrymmet på
 enheten finns längst upp till höger. Spelhanterare väntar medan en skanning körs.
 
 ![Spelhanterare](../images/en/game-manager.jpg)
@@ -563,14 +690,16 @@ inräknad; skärmarna för nätverks- och handkontrollsinställningar är **Nät
 De två första enheterna visas som Spelare 1 och Spelare 2 – de portar som PS1-emulatorn tilldelar dem.
 Alla ytterligare enheter visas som oanvända av PS1-emulatorn. RetroArch tilldelar enheter enligt egna
 inställningar och kan ordna dem annorlunda. När en enhet ansluts eller kopplas från visar startaren kort
-vilken pad som är Spelare 1 och Spelare 2.
+vilken pad som är Spelare 1 och Spelare 2. Circle går tillbaka till systemmenyn.
 
 ![Hårdvaruinformation](../images/en/hardware-info.jpg)
 
 ### 4.3 Knappguiden
 
 Triangle på hyllan: varje knapp från varje skärm på en sida. När ett USB-tangentbord är ansluten eller
-har använts visar en Tangentbords-kolumn tangenterna bredvid styrenhetsknapparna.
+har använts visar en Tangentbords-kolumn tangenterna bredvid styrenhetsknapparna. Två rader förklarar vägen ut ur
+ett spel: *Håll Select+Start eller Home i 2 sekunder: tillbaka till AutoBleem* och *Kort tryck på Select+Start
+eller Home: emulatorns meny*.
 
 ![Knappguiden](../images/en/button-guide.jpg)
 
@@ -584,6 +713,16 @@ mellanslag, **L1** är Shift (två gånger för caps lock), **R1** nästa sida, 
 bekräftar, Circle avbryter. Ett USB-tangentbord skriver när som helst: Enter bekräftar, Esc avbryter.
 
 ![Tangentbordet på skärmen](../images/en/keyboard.jpg)
+
+### 4.5 Virtuell handkontroll
+
+*Virtuell handkontroll* i systemmenyn visar handkontrollerna så som programmet som betjänar dem ser dem. Den har
+tre delar: *Handkontrollerna som appar får*, *Handkontroller som daemonen ser* och *Daemon*. En handkontroll kan ha
+märkena *ansluten*, *inte läsbar*, *från handkontrolldatabasen*, *gissad av daemonen* eller *okänd drivrutin*, och
+*Sök igen* läser av handkontrollerna en gång till. En del som bygget saknar säger *Inte i det här bygget*. Circle
+går tillbaka till systemmenyn.
+
+![Virtuell handkontroll](../images/en/virtual-gamepad.jpg)
 
 <!-- pagebreak -->
 
@@ -716,6 +855,20 @@ sätta konsolen tillbaka till stock genom Sony:s egen recovery.
 En framstegsstrecke under varje steg visar hur långt åtgärden är. Verktyget vägrar att flasha en konsol
 som kör annan anpassad firmware (BleemSync, Project Eris): återställ den till stock först.
 
+**Logga in från en PC.** Med AutoBleem-kerneln installerad (inte på en originalkonsol) kan du logga in på konsolen
+över en USB-kabel:
+
+1. Anslut konsolens micro-USB-port till PC:n med en USB-kabel. PC:n visar konsolen som en ny nätverksadapter;
+   konsolens adress står i den adapterns inställningar på PC:n.
+2. Logga in med `ssh root@<konsolens adress>`. Standardlösenordet är `autobleem`.
+
+I stället för lösenordet kan du använda en nyckel: lägg din publika nyckel i filen `System/ssh/authorized_keys` på
+stickan och starta om konsolen. Vid nästa uppstart läggs den till i root-kontot. Att uppdatera eller installera om
+startaren tar inte bort den.
+
+> **Standardlösenordet är detsamma på varje konsol**: den som kan sätta in en kabel i den kan logga in som root.
+> Använd en nyckel där du kan, och lämna inte en konsol med standardlösenordet där andra kan komma åt den.
+
 <!-- pagebreak -->
 
 ## 7. Om något går fel
@@ -728,6 +881,14 @@ som kör annan anpassad firmware (BleemSync, Project Eris): återställ den till
   *Hårdvaruinformation* var loggar är och Square sparar dem till `System/Logs/saved-<n>/`. Filerna: `autobleem.log`
   (startaren), `launch.log` och `pcsx.log` (PS1-start och emulator-utmatning), `retroarch.log`, och - alltid
   på stickan - `update.log` (online-uppdatering) och `updateroms.log` (UpdateRoms).
+- **Bilden ber om en sticka, eller konsolen gick i viloläge**: det finns ingen sticka i konsolen, eller den drogs
+  ur. Sätt in den (i vilken USB-port som helst; en framtill är bäst, avsnitt 2.1) innan de 5 minuterna har gått,
+  eller tryck på Power. En sticka som inte togs bort på rätt sätt kontrolleras först - vänta tills
+  förloppsstapeln är klar.
+- **RetroArch säger att det behöver ett nyare systembibliotek än konsolen har**: konsolens eget bibliotek är för
+  gammalt för den RetroArch. Använd den RetroArch som följer med AutoBleem.
+- **Ett PSN-spel säger att det skyddas av sin PSN-licens och inte kan startas**: det spelet kan inte köras på
+  AutoBleem.
 - **Spel inte på hyllan**: kontrollera mappstrukturen (en mapp per spel, bildformaten i avsnitt 3.9).
   *Spelhanterare* listar de mappar som skanningen vägrade efter spelen, märkta *Not added*, med anledningen;
   Square tar bort sådan mapp. *Skanna om spel* i systemmenyn kör skanningen igen.

@@ -19,7 +19,8 @@ daglig brug og de værktøjer, der kommer med det.
   altid har sendt. Du vælger den i muligheder; begge bruger de samme indstillinger og memory cards.
 - **RetroArch** (valgfrit på hver platform) til andre systemer: NES, SNES, Mega Drive, Game Boy, arkade
   og meget mere. AutoBleem bygger dets RetroArch-lister fra ROM'erne, du kopierer ind, og starter hvert spil
-  med den rigtige kerne.
+  med den rigtige kerne. Kerneoversigten begynder med *PlayStation 1* (afsnit 3.8). Doom-lignende spil kører fra
+  dine egne spildata i en mappe *Pakker* (afsnit 3.9).
 - **Konsolværktøjerne**: *PSC-Bios* (vist i menuerne som *Netværk og controllere*) til WiFi, ur, Bluetooth og
   gamepad-kortlægning - på konsollen og også på en Raspberry Pi og PC-sticken - og *ABFlashKit* til
   installation af AutoBleem-kernelen (kun PlayStation Classic).
@@ -57,17 +58,35 @@ installeret (ABFlashKit, kapitel 6) kan også starte fra exFAT-stick, hvilket fj
    - **Eksempelspil** - nogle få frie homebrew-spil så hylden ikke er tom.
 3. Tryk **Install** og vent. Fremskridtslinjer og loggen viser hvert trin; stickjen hedder `SONY` til
    sidst, og `UpdateRoms` sættes på den (se kapitel 5).
-4. Tag stickjen ud sikkert, sæt den i konsolens **anden USB-port** (den højre, spiller 2) og tænd for
-   konsollen. AutoBleem starter i stedet for standard-menuen.
+4. Tag stickjen ud sikkert, sæt den i konsolens **anden USB-port foran** (den højre, spiller 2) - den første er
+   til controlleren - og tænd for konsollen. AutoBleem starter i stedet for standard-menuen. En anden controller
+   kræver en USB-hub på forporten eller en Bluetooth-controller. Hold stickjen væk fra micro-USB-porten bagpå
+   (se nedenfor).
 
 **Tænd og sluk.** Med stickjen i booter konsollen, blinker sit lys i nogle få sekunder (AutoBleem bliver
 opfanget) og går så i standby før noget vises - det er konsolens egen måde at forberede en opdatering på,
 som er hvordan AutoBleem får mulighed for at køre. Tryk **Power** en gang og launcher kommer op. *Power
 Off* i systemmenuen eller konsolens power-knap sætter konsollen i **AutoBleem's standby**: stickjen
-afkoblets først, derefter bliver lyset **rødt** - tegnet på at AutoBleem fungerer som det skal - og
-næste tryk på Power bringer launcher direkte tilbage på få sekunder. **Mens lyset er rødt kan stickjen
+afkoblets først, derefter bliver lyset **orange** - tegnet på at AutoBleem fungerer som det skal - og
+næste tryk på Power bringer launcher direkte tilbage på få sekunder. **Mens lyset er orange kan stickjen
 trækkes ud** og sættes i en PC uden at Windows spørger efter at kontrollere den; sæt den tilbage før du
-trykker Power. Hvis du tager konsolens strøm ud starter boot-standby'en igen næste gang.
+trykker Power. Hvis du tager konsolens strøm ud starter boot-standby'en igen næste gang. Et **rødt** lys betyder,
+at konsollen virkelig er slukket.
+
+**Brug en USB-port foran til stickjen.** Micro-USB-porten bagpå (en vært der virker kun med AutoBleem-kernelen)
+holder konsollen vågen: med en stick eller en hub på den slukker konsollen i stedet for at gå i standby, og Power
+starter en kold boot.
+
+**Ingen stick.** Er der ingen stick i konsollen, siger et billede, at du skal sætte en i - i en vilkårlig
+USB-port. Efter 5 minutter, eller med det samme ved Power, går konsollen i dvale. Det samme billede vises, hvis
+stickjen trækkes ud, mens AutoBleem kører.
+
+![Billedet der beder om stickjen](../images/da/insert-stick.jpg)
+
+**Stick-kontrol.** En stick, der ikke blev fjernet rent, kontrolleres ved opstart, ved opvågning og efter et
+udtræk, med en statuslinje. På en stor stick kan det tage et stykke tid; afbryd det ikke.
+
+![Stick-kontrollen](../images/da/stick-check.jpg)
 
 For at **opdatere** en stick skal du køre en nyere installer over den: dine spil, gemmede data, indstillinger
 og RetroArch-indhold bliver tilbage; kun AutoBleem's egne filer bliver erstattet.
@@ -181,7 +200,7 @@ blev spillet (en oplysning, et spil ikke har, udelades) - og en afspilningsknap.
 **ab2.0.0**; en ny installation og en opdatering, der bringer det, skifter til det én gang. Hintlinjen nederst
 har to rækker med fire pladser. Den første viser, hvad knapperne gør for det valgte spil (spil, spil i
 RetroArch, åbn ikorrækken, Hurtigmenuen); den anden viser altid Select (sættet), Start (et tilfældigt spil),
-Triangle (vejledningen) og L2 + R2 (systemmenuen), nedtonet når en af dem ikke gør noget. En scanning af
+Triangle (vejledningen) og L2 + R2 (systemmenuen), nedtonet når en af dem ikke gør noget. Et spil uden omslag viser en disk, der ligger i æskens sorte bakke. En scanning af
 spillemappen kører i baggrunden ved hver start; mens den kører viser en boble øverst til højre dens
 fremskridt, og nye spil vises på hylden efterhånden som de findes.
 
@@ -210,9 +229,10 @@ En trådløs controller med et batteriniveau - på konsollen, en Pi eller PC-pin
 | Knap | På hylden |
 |---|---|
 | Venstre / Højre | Forrige / næste spil. Holdt scrolles videre. |
-| L1 / R1 | Spring til forrige / næste første bogstav i titler. |
+| L1 / R1 | Spring til forrige / næste første bogstav i titler. På en tom hylde med et drev åbner R1 *Disk* (afsnit 3.8a). |
 | Cross | Start det valgte spil (PS1-spil i PS1-emulator; RetroArch-spil i dets kerne; App efter læst mig). |
-| Square | Start det valgte PS1-spil i RetroArch i stedet. |
+| Square | Start det valgte PS1-spil i RetroArch i stedet. Ved en disk i et USB-drev: *Kopiér disk* (afsnit 3.8a). |
+| Circle | Tilbage til diskvisningen, når der er en disk i drevet (afsnit 3.8a). |
 | Triangle | Knap-vejledningen. |
 | Start | Et tilfældigt spil fra det aktuelle sæt. |
 | Select | Sæt-vælger: PlayStation / RetroArch / Apps faner (L1 / R1), grupperne fra fanen (Op / Ned, L2 / R2 en side), Cross vælger. |
@@ -228,6 +248,10 @@ En trådløs controller med et batteriniveau - på konsollen, en Pi eller PC-pin
 I hver liste og menu: Op / Ned bevæger, **L2 / R2 vendersider**, L1 / R1 hop til første / sidste række,
 **Cross vælger, Circle går tilbage**. En skærm med indstillinger gemmer dem når du forlader den med Circle.
 
+**I et spil eller en App**: hold **Start + Select, eller Home, i 2 sekunder** for at gå tilbage til AutoBleem. Det
+virker på hver controller - konsollens, en USB-controller, en Bluetooth-controller. Et kort tryk åbner emulatorens
+menu; en App har ingen sådan menu, kun et langt tryk virker.
+
 ![Ikorrækken under det valgte spil](../images/da/launcher-icons.jpg)
 
 ### 3.3 Sæt
@@ -239,7 +263,9 @@ undermappe hører til den gruppe), derefter *Favoritspil*, *Spilhistorik* og nå
 *USB-spil*, som er hele biblioteket. RetroArch-fanen (kun hvor RetroArch er installeret) viser en gruppe pr.
 system der har spil plus RetroArch's egne Favoritter og Historie. Apps-fanen grupperer programmer efter type:
 *All apps*, derefter *Games*, *Emulators*, *Tools*, *Media* og *Other* (kategorien indstilles i hver apps
-`app.ini`-fil). Hver række viser hvor mange elementer den indeholder; en gruppe uden nogen åbner på en tom hylde
+`app.ini`-fil). Apps-fanen viser også **PE-apps** - Windows-programmer, som PE-runneren kører; en,
+som konsollen ikke kan starte, er markeret *kan ikke køre på denne konsol*. Hvor launcheren viser den, står der
+også en række *Pakker* i listen (afsnit 3.9). Hver række viser hvor mange elementer den indeholder; en gruppe uden nogen åbner på en tom hylde
 med ikorrækken der kun viser Indstillinger. Sidelinjen viser tasterne: L1 / R1 faner, L2 / R2 en side, Cross
 vælger, Circle *Tilbage*.
 
@@ -271,11 +297,12 @@ linje, og menuen er grupperet i afsnit:
 | | Scanningsprocessorer | Programmer hver scanning kører først - deres rækkefølge, til eller fra (afsnit 3.13). Deaktiveret mens en scanning kører. |
 | **System** | Indstillinger | AutoBleem's indstillinger (afsnit 3.6). |
 | | Netværk og controllere | Kun hvor en installeret udvidelse giver `network`-posten (`Provides=network` i dens `extension.ini` - PSC-Bios på konsol, Pi og PC-stick) - WiFi, Bluetooth-controller-parring, DualShock 3-opsætning og gamepad-kortlægningsguide - se kapitel 6. Når den udvidelse er installeret men deaktiveret bliver dette element nedtonet med en note "slå den til under Udvidelser" - Cross åbner Udvidelser-listen på det. |
-| | Hardwareinformation | Maskinens fakta: system, CPU, lagerplads, netværksgrænseflader, tidszone, display, pads og deres kortlægninger - samme side på hver platform (afsnit 4.2). |
+| | Hardwareinformation | Maskinens fakta: system, CPU, lagerplads, netværksgrænseflader, tidszone, display, pads og deres kortlægninger - samme side på hver platform (afsnit 4.2). Circle fører tilbage til systemmenuen. |
+| | Virtuelt gamepad | De gamepads, apps får, og de gamepads, daemonen ser (afsnit 4.5). Circle fører tilbage til systemmenuen. |
 | | Softwareopdatering | (Raspberry Pi og PC) Tjek siden for nyere AutoBleem eller RetroArch nu; rækken siger *Opdatering tilgængelig*, når launcher allerede kender en. |
 | | Om | Kreditter og licens. |
 | **Forlad** | RetroArch | (Kun hvor RetroArch er installeret.) Forlader launcher til RetroArch's egen menu. Lukning af RetroArch kommer tilbage. |
-| | Sluk | Efter bekræftelse: på konsol AutoBleem's standby - stickjen afkoblet, lyset rødt, Power bringer launcher tilbage (afsnit 2.1); på Pi eller PC lukker maskinen ned. |
+| | Sluk | Efter bekræftelse: på konsol AutoBleem's standby - stickjen afkoblet, lyset orange, Power bringer launcher tilbage (afsnit 2.1); på Pi eller PC lukker maskinen ned. |
 
 ![Systemmenuen](../images/da/system-menu.jpg)
 
@@ -287,9 +314,12 @@ Circle forlader og gemmer. Hver ændring påføres øjeblikkeligt. Til/fra-værd
 
 | Gruppe / indstilling | Hvad det gør |
 |---|---|
-| **Grænseflade**: Skærm | Skærmens opløsning til launcher og PS1-emulatoren: *Auto* (skærmens egen tilstand, vist som *Auto (1920x1080)*) eller enhver tilstand skærmen oplister; konsollen tilbyder 720p og 1080p. En ny tilstand bliver der spurgt om: *Behold denne skærmtilstand?* - bekræfter du ikke, går den tilbage efter en nedtælling. Ikke i et udviklingsvindue. |
+| **Grænseflade**: Skærm | Skærmens opløsning til launcher og PS1-emulatoren: *Auto* (skærmens egen tilstand, vist som *Auto (1920x1080)*) eller enhver tilstand skærmen oplister; konsollen tilbyder 720p, 1080p og *CRT 4:3* (720x480, til et CRT-fjernsyn eller en 4:3-optager). En ny tilstand bliver der spurgt om: *Behold denne skærmtilstand?* - bekræfter du ikke, går den tilbage efter en nedtælling. Ikke i et udviklingsvindue. |
+| CRT-margen: | Det sikre område på et 4:3-udgang, 0 til 10 % i trin på 1 %. Påføres øjeblikkeligt og læses før startskærmen. |
+| Billedhøjde: | Billedets højde på enhver 4:3-udgang (*CRT 4:3* eller et 4:3-vindue på en VGA- / PC-udgang), -40 til +40 i trin på 2, påføres øjeblikkeligt. RetroArchs spilbillede følger med. |
 | Emulatorens skærmskalering | Hvordan PS1-emulatoren tilpasser et spils billede til skærmen: *1x1* (PlayStations egne pixels), *2x (heltal)*, *4:3*, *4:3 (heltal)* eller *Fuld skærm*. Heltalsskalering bruger kun hele multipla (det skarpeste). Den erstatter den gamle Widescreen-kontakt; den klassiske `pcsx-ab` og RetroArch kender kun fuld skærm og 4:3. |
-| AutoBleem tema | Udseendet. Temaer bor i `Themes/`; et tema zip som sættes der bliver pakket ud ved næste besøg. AutoBleem's temaer som shipper opdateres med hver opdatering - for at tilpasse et skal du kopiere det under et nyt navn først. Standarden er **ab2.0.0**. |
+| Skærmglorie: | TIL fylder båndene ved siden af et spils billede (hvor det ikke fylder skærmen) med billedets egen glød (`pcsx-abnxt`). |
+| AutoBleem tema | Udseendet. Temaer bor i `Themes/`; et tema zip som sættes der bliver pakket ud ved næste besøg. AutoBleem's temaer som shipper opdateres med hver opdatering - for at tilpasse et skal du kopiere det under et nyt navn først. Standarden er **ab2.0.0**. På *CRT 4:3* viser listen kun temaer med et 4:3-layout; har det tema, du bruger, ikke et, erstatter standardtemaet det efter bekræftelsen (også ved start), og en besked siger *Tema skiftet til standardtemaet (CRT 4:3)*. |
 | Cover-stil | Juvelerramdelen tegnet omkring PS1-omslag. |
 | Glimt på coveret | Et glimt der krydser det valgte omslag, når hylden er kommet til ro. |
 | Sprog | Launcher's sprog påført straks (17 sprog). |
@@ -300,15 +330,20 @@ Circle forlader og gemmer. Hver ændring påføres øjeblikkeligt. Til/fra-værd
 | Skrifttype | Enhver `.ttf`/`.otf` fra `resources/fonts`, `RetroArch/fonts` eller temats mappe; rækken navngiver den skrifttype der bruges. |
 | **Lyd**: Musik, Baggrundsmusik | Hvilken nummer der spilles under launcher (temats eller en fil fra `resources/music`) og om en spilles overhovedet. |
 | **Emulering**: PS1-emulator | `pcsx-abnxt` (standard: nuværende PCSX-ReARMed med AutoBleem's tilføjelser) eller `pcsx-ab` (klassisk). Et genoptag-punkt gemt af en fortsætter i den anden medmindre spillet kørte uden BIOS-fil. |
-| Byt spiller 1 / spiller 2 (PS1-emulatorer) | Bytter om på hvilken af de to første controllere der er Spiller 1, og hvilken der er Spiller 2, i begge PS1-emulatorer (pcsx-abnxt og den klassiske pcsx-ab). Det virker kun med to eller flere controllere tilsluttet; med én controller er det altid Spiller 1. RetroArch påvirkes ikke. |
-| Spil alle PSX-spil med RA, Opdater RA-konfiguration, Gem RetroArch-konfiguration | (Kun hvor RetroArch er installeret.) Hvert PS1-spil starter i RetroArch's PS1-kerne; AutoBleem skriver dets indstillinger ind i RetroArch's konfiguration når det starter et spil der; en ændring lavet i RetroArch's egen menu bevares, når RetroArch afsluttes. |
+| Byt spiller 1 / spiller 2 (PS1-emulatorer) | Bytter om på hvilken af de to første controllere der er Spiller 1, og hvilken der er Spiller 2, i begge PS1-emulatorer (pcsx-abnxt og den klassiske pcsx-ab). Det virker kun med to eller flere controllere tilsluttet; med én controller er det altid Spiller 1. RetroArch påvirkes ikke. En PS1-emulator, der endnu ikke kan bytte, viser *Denne PS1-emulator understøtter endnu ikke ombytning af controllere*. |
+| Spil alle PSX-spil med RA, Opdater RA-konfiguration, Gem RetroArch-konfiguration | (Kun hvor RetroArch er installeret.) Hvert PS1-spil starter i RetroArch's PS1-kerne (*PlayStation 1*; på en PC er det SwanStation); AutoBleem skriver dets indstillinger ind i RetroArch's konfiguration når det starter et spil der; en ændring lavet i RetroArch's egen menu bevares, når RetroArch afsluttes. |
 | **Bibliotek**: Vis interne spil | Konsolens indbyggede spil i PlayStation-listerne (kun PlayStation Classic). |
+| Rene spilnavne: | TIL (standard): RetroArch-spillister viser navne uden tags i parentes som (USA), (Rev 1) eller [!]. FRA viser filnavnene. Filnavnet bliver i spillets detaljer. PS1-spil påvirkes ikke - deres titler kommer fra databasen. |
 | Hent covers online | Scanning henter manglende omslag fra libretro's servere (Raspberry Pi, PC, Windows). |
 | **Opdateringer** | Opdateringskanalen: `release` (den testede version), `testing` (den næste version, under test), `nightly` (det nyeste udviklingsbuild) eller `off`. Standarden følger den installerede version. Vises ikke på en udviklingsvært. |
 | **Diagnostik**: Behold logfiler på USB-nøglen | Behold alle logfiler på sticken fra næste start, ikke kun efter et nedbrud (kapitel 7). |
 | Vis ydeevne | Et overlay i nederste venstre hjørne: billedfrekvens, CPU-belastning, tråde og hukommelse; emulatoren viser også sin FPS og CPU i spillet. |
 
 ![Muligheder i grupper](../images/da/options.jpg)
+
+![Skærm-gruppen: CRT-margen og Billedhøjde](../images/da/options-display.jpg)
+
+![Beskeden efter skift til CRT 4:3 med et tema uden 4:3-layout](../images/da/crt43-theme-notice.jpg)
 
 ### 3.7 Et spils indstillinger
 
@@ -321,10 +356,12 @@ under markøren.
 - **Spil**: *Favorit* (i Favoritspil-gruppen), *Lightgun-spil* og *Spil med RA* (kun hvor RetroArch er
   installeret: et light-gun-spil deltager i Lightgun-gruppen og kører altid i RetroArch hvis PS1-kerne har
   GunCon; *Spil med RA* kører dette spil i RetroArch), *Lås data* (scanner lader spillets titel, serienummer og
-  disc-liste være som du sætter dem).
+  disc-liste være som du sætter dem) og *Genoptag:* - hvad der sker, når et spil med genoptag-punkter starter:
+  *Spørg* viser slot-vælgeren, *Seneste slot* fortsætter straks fra den nyeste slot, *Aldrig* starter spillet
+  forfra.
 - **Skærm**: *Opløsning* (1x eller 2x, på den indbyggede GPU), *Fjern sømme* (kun med 2x), *Dithering* (Fra,
   Til, Altid), *Udjævning*, *Filter* - hvordan billedet skaleres: Nærmeste (rene pixels), Lineær (udjævnet), Skarp
-  eller Skarp (enkel) (skarpe pixels uden flimmer), Quilez eller CRT-filtrene CRT (fast) og CRT-Pi (de tegner
+  eller Skarp (enkel) (skarpe pixels uden flimmer), Quilez eller CRT-filtrene CRT (fast), CRT (raster) og CRT-Pi (de tegner
   deres egne scanlines, så scanline-rækkerne nedtones) - og *Scanlines* med deres *Scanline-lysstyrke*.
   Opløsning, fjern sømme, dithering, udjævning og andre filtre end Lineær og Nærmeste er til `pcsx-abnxt`; den
   klassiske `pcsx-ab` og RetroArch viser resten som Nærmeste.
@@ -336,6 +373,13 @@ Billedets form og skærmens opløsning er globale (Indstillinger → *Emulatoren
 spil uden titel i sine data vises under sin mappes navn.
 
 Triangle omdøber spillet, Square ændrer dets memory card, Start deler en nyt kort. Circle gemmer og forlader.
+Hold Venstre / Højre eller Op / Ned for at gentage bevægelsen, i editoren og også i RetroArchs spilindstillinger
+og kerneskærme. Et drevspil uden `pcsx.cfg` kan ikke gemme: editoren siger *Ikke gemt: spillet har ingen pcsx.cfg*.
+
+For en **disk i drevet** (afsnit 3.8a) nedtoner editoren de rækker, disken ikke kan bruge, og siger *Ikke
+tilgængelig for en disk i drevet*.
+
+![Spil-editoren for en disk i drevet](../images/da/game-editor-disc.jpg)
 
 **Indstillinger gemt i emulatoren.** Emulatorens egen menu har *Gem indstillinger for dette spil*. Når et spil
 har indstillinger gemt der bliver de som det spiller med og spil-editoren viser dets rækker Skærm, Gengivelse
@@ -351,7 +395,8 @@ gemte indstillinger.
 Hvert PS1-spil har dets eget memory card som standard (holdt med sine gemte tilstande i `Games/!SaveStates/
 <spil-mappe>/`). **Memory Cards** i systemmenuen styrer **delte sæt** - et kort flere spil bruger holdt i
 `Games/!MemCards/`: opret et (Square med på-skærm tastatur), omdøb (Cross), slet (Triangle). Et spil sættes
-på et sæt med *Change memory card* i dets editor eller fra dets Memory Card-ikon.
+på et sæt med *Change memory card* i dets editor eller fra dets Memory Card-ikon. Et sæt
+uden kort endnu siger *intet kort endnu*, og ved gemning spørges der *Vil du gemme memory card-data?*
 
 **Memory card-editoren** (Memory Card-ikonet) viser spillets kort og et andet kort side ved siden med hvert
 gems ikon og titel: kopier et gem mellem de to (Square), slet et (Triangle), defragmenter et kort (Select).
@@ -365,6 +410,10 @@ slots vist som indrammede kort, hver med billede af øjeblikket, slot-nummer og 
 **NYESTE**, og en ubrugt slot siger *Intet genoptagelsespunkt*. Cross fortsætter fra slot'en, Triangle sletter
 det. Et spil med et genoptag-punkt viser et lille billede på dets Resume-ikon; et spil uden et har Resume-ikonet
 nedtonet. Mens genoptag-punktet skrives på vej ud af et spil, viser emulatoren *Vent venligst...*.
+PS1-spil spillet i RetroArch har også genoptag-slots. En slot har et mærke - AutoBleem 2- eller RetroArch-logoet -
+så du kan se, hvilken emulator der skrev den.
+
+![Genoptag-slot-vælgeren](../images/da/resume-picker.jpg)
 
 ### 3.8 Start af spil, RetroArch og Apps
 
@@ -372,6 +421,11 @@ nedtonet. Mens genoptag-punktet skrives på vej ud af et spil, viser emulatoren 
 forlader det - på konsol med front-**Reset**-knappen (tilbage til launcher med genoptag-punkt; det virker også
 indefra in-game menuen) eller **Power** (konsol slukker); på Pi eller PC gennem emulatorens in-game menu
 (nedenfor). **Square** starter PS1-spil i RetroArch i stedet.
+
+**Vejen ud af et spil** er den samme på enhver pad - konsollens, en USB-pad, en Bluetooth-pad: **hold Start +
+Select, eller Home, i 2 sekunder** (*Hold Select+Start eller Home i 2 sekunder: tilbage til AutoBleem*). Et kort
+tryk på Select + Start eller Home åbner emulatorens menu (*Kort tryk på Select+Start eller Home: emulatorens
+menu*); en App har ingen sådan menu, kun det lange tryk virker. På konsollen stopper **Reset** altid også en App.
 
 **In-game menuen** (`pcsx-abnxt`). Tryk på menuknappen - padens Home, **Select + Start** på en pad uden, eller
 **Esc** på et tastatur - og spillet stopper bag en menu med spillets sidste billede. **At holde menuknappen i 2
@@ -395,12 +449,69 @@ gemning.
 
 Et **RetroArch**-spil starter i RetroArch med kernen launcher valgte for dets system; *Close Content* eller
 *Quit RetroArch* i dens menu kommer tilbage til launcher. RetroArch-posten i systemmenuen åbner RetroArch's
-egen menu (XMB) med intet lastet til for dets indstillinger og dens egne indholds-lister.
+egen menu (XMB) med intet lastet til for dets indstillinger og dens egne indholds-lister. Kerne-vinduet
+åbner med *PlayStation 1* først.
+
+![RetroArch-kernevinduet](../images/da/retroarch-cores.jpg)
 
 En **App** (Apps-sættet: konsolværktøjerne og på konsol de ekstra programmer RetroArch's pakke bringer -
 Doom, Quake, Amiga, ...) viser dets læs-mig først; Cross starter det, Circle går tilbage.
 
 ![Apps læs-mig før den starter](../images/da/app-start.jpg)
+
+**En Apps indstillinger.** *Spilindstillinger* ("Ændr hvordan dette program startes") har *Controllertilstand:*
+(*Automatisk*, *PSC-controller*, *Xbox 360-controller*, *PSC-controller (system)*, *Xbox 360-controller
+(system)*), *D-pad som stick:* og *Stick som D-pad:*. Nogle Apps spørger én gang, ved første start, *Hvilke
+styringer har din controller?* (*Ét D-pad* eller *Analoge sticks*); en Windows-App spørger *Hvad vil du gøre?*
+(*Kør Windows*, *Installer Windows*, *Kør DOS*, *Afinstaller Windows*). Når en tast skal tildeles, siger skærmen
+*Tryk på en af knapperne.*
+
+![En Apps spilindstillinger](../images/da/app-game-settings.jpg)
+
+Tekster og spørgsmål fra et Windows-program (en PE-app) vises som AutoBleem-skærme (*Besked*, *Vælg en
+mulighed*) med Appens navn som titel.
+
+![Et spørgsmål fra en PE-app](../images/da/pe-dialog.jpg)
+
+### 3.8a En disk i et USB-drev
+
+Et USB cd/dvd-drev med en PlayStation- eller lyd-disk i lægger disken på hylden som et spil. Ikke på Windows,
+som ikke har drevstøtte.
+
+- **Diskvisningen** åbner af sig selv, når en disk opdages; R1 *Disk* åbner den fra hylden. Den viser diskens
+  cover (fra cover-databaserne eller hentet online), dens serienummer og dens titel. Cross spiller disken. Et
+  PS1-spil spillet fra disken genoptager og gemmer i diskens mappe. Efter et spil, indstillingerne eller en
+  udvidelses indstillinger er du tilbage i diskvisningen; Circle på hylden henter den frem igen, og der er R1
+  igen første-bogstav-hoppet.
+- **Drev-chippen** viser drevets tilstand: skjult uden drev, svag med drev og uden disk, blinkende *Læser
+  disken...* mens den læser, derefter diskens titel. Andre beskeder er *Dette er ikke en PlayStation-disk* og
+  *Disken kan ikke læses lige nu*.
+
+![Diskvisningen](../images/da/disc-view.jpg)
+
+![Drev-chippen](../images/da/disc-chip.jpg)
+
+- **En lyd-cd** åbner **cd-afspilleren** (*CD-AFSPILLER*, *Lyd-cd*, med *NUMRE* og *SAMLET TID*). Dens taster er
+  *Spil nummer*, *Stop*, *Forrige/næste*, *Søg*, *Pause*, *Gentag:* (fra eller til) og *Bland:*, og *Valgt:*
+  nævner nummeret. En disk, der ikke kan afspilles, siger *Denne disk kan ikke afspilles*.
+
+![Cd-afspilleren](../images/da/cd-player.jpg)
+
+- **Kopiér disk** (Square) kopierer en PlayStation-disk til `Games` som en **CHD**, med en `.m3u`-fil til et spil
+  på flere diske (disk 1 først). Der spørges først: *Kopiér "%1" til %2? Det fylder %3 af de %4 ledige.* Et
+  fremdriftsvindue, *Kopierer disken*, viser *Hastighed* og *Tid tilbage* og blokerer launcher; *Afbryd*
+  annullerer (*Annullerer...*, derefter *Annulleret*). Til sidst står der *Disken er kopieret til Games.* Den
+  afviser med *Findes allerede i Games: %1*, *Ikke plads nok i Games: kopien skal bruge %1, %2 er ledig.* eller
+  *Kopieringen mislykkedes: %1*. Sektorer, der ikke kan læses, skrives som nuller, og beskeden *%1 sektorer kunne
+  ikke læses og blev skrevet som nuller.* fortæller hvor mange (*Ulæselige sektorer*). En disk, databaserne
+  ikke kender, navngives efter sit serienummer.
+
+![Kopiering af en disk](../images/da/disc-copy.jpg)
+
+- **LibCrypt-diske**: `.sbi`-filen til et LibCrypt-spil hentes fra siden, før disken spilles og når den
+  kopieres. Det kræver et netværk: på en Raspberry Pi eller PC det, den allerede har, på konsollen det Wi-Fi,
+  der er sat op i PSC-Bios.
+- Spil-editoren for en disk nedtoner de rækker, den ikke kan bruge (afsnit 3.7).
 
 ### 3.9 Tilføjelse af spil
 
@@ -419,7 +530,7 @@ Games/
 - Multi-disc-spil er en mappe med hver disc i det; mapper navngivet `Game (Disc 1)`, `Game (Disc 2)` ... bliver
   flettet til en `Game`-mappe ved scanning.
 - Spil som sættes direkte i `Games/` (løse filer) bliver sorteret i mapper ved scanning.
-- En **omslag** er PNG ved siden af spillets billede navngivet som det. Uden en kommer kasseart fra
+- En **omslag** er PNG eller JPEG ved siden af spillets billede navngivet som det. Uden en kommer kasseart fra
   omslag-databaseerne eller - med RetroArch installeret - fra libretro's thumbnail-sæt; på Pi, PC eller
   Windows bliver en manglende hentet online (Muligheder → *Fetch box art online*).
 - Scanning læser hver discs serienummer og tager titel, udgiver, år, spillere og region fra RetroArch's
@@ -433,6 +544,23 @@ Entertainment System`, `Sega - Mega Drive - Genesis`, `Nintendo - Game Boy Advan
 skriver RetroArch's afspilliste; på konsol-stick skal du køre **UpdateRoms** på PC'en (kapitel 5).
 
 **Apps** går under `Apps/<name>/` med en `app.ini` (navn, ikon, hvad der skal køres) og en `run.sh`.
+
+**Pakker.** Spildata til engines - Doom, Quake, OpenArena, Heretic, Hexen, Strife, Duke Nukem 3D, Shadow
+Warrior, Theme Hospital, DOS-spil og mere - lægges i en `Packages`-mappe på sticken, for eksempel
+`Packages/Doom/DOOM2.WAD`. AutoBleem genkender data ud fra en tabel, der følger med (`rc/packages.ini`); de løse
+spilfiler i en genkendt mappe er hver især en pakke. Dine egne filer bliver kun læst, aldrig ændret. En pakke
+kan også komme fra Store. **Pakke-vælgeren** viser, hvad der blev fundet. **Pakkeinfo** viser en pakkes
+*Indhold*, *Beskrivelse*, *Placering*, *Kilde*, *Kører med*, *Mod*, *Shareware*, *I denne app* og *Dine filer*,
+og *Vælg spildata* vælger de data, der skal startes med. Beskederne er *Ingen spildata fundet*, *Ukendte data*,
+*Ingen installeret app kan køre dette*, *%1 har brug for spildata, den kan køre: %2.* og *Ikke genkendt. Hvis det
+er et spil, se manualen: Dine egne spil.*
+
+![Pakke-vælgeren](../images/da/packages-picker.jpg)
+
+![Pakkeinfo](../images/da/package-info.jpg)
+
+**Scanning af én del.** *Genscan spil* kan scanne kun én del - et sæt eller en mappe - og tager sin boble ned til
+sidst.
 
 **Temaer** går under `Themes/<name>/` (`theme.json` og billeder) - eller drop temats zip i `Themes/`.
 
@@ -449,7 +577,8 @@ Uden dem kører emulatoren på sin byggede HLE BIOS som mange spil tolererer og 
   *Updates* er kanalen; *Software Update* i systemmenuen tjekker nu). Når der er nyere AutoBleem eller
   RetroArch spørger det: *Update now* downloader alt og kører installer igen med første-start fremskridts-
   skærm; *Remind me tomorrow* og *Skip this version* er de andre svar. Dine spil og indstillinger bliver
-  tilbage; launcher genscannes en gang efter en opdatering.
+  tilbage; launcher genscannes en gang efter en opdatering. Kanal-mærket i øverste venstre hjørne (afsnit 3.1) viser,
+hvad der er installeret.
 - **PlayStation Classic**: kør nyere `AutoBleemInstaller.exe` over stickjen (afsnit 2.1).
 
 ### 3.12 Udvidelser og AutoBleem Store
@@ -464,7 +593,7 @@ der har brug for netværk starter ikke uden et og en der stoppede launcher blive
 **AutoBleem Store** er første udvidelse: Apps og spil at installere med ét tryk på hvert system AutoBleem
 kører på (en PlayStation Classic har brug for AutoBleem-kernels WiFi). Dets fire faner L1 / R1 mellem dem:
 
-- **Apps** og **Games**: hvad kilder tilbyder hvert med billede, version, størrelse og kilde-favicon.
+- **Apps** og **Games**: hvad kilder tilbyder (Apps-fanen viser også PE-apps, med deres licens og kilde, og spildata-pakker, afsnit 3.9), hvert med billede, version, størrelse og kilde-favicon.
   Installerede elementer har et *Installeret*-mærke. Cross installerer (eller opdaterer, eller prøver igen efter
   fejl, eller annullerer en download i kø eller i gang), Triangle fjerner hvad Store installerede, Square
   opdaterer listerne. L2 / R2 hopper efter bogstav, **Select** viser en kilde ad gangen, **Start** søger
@@ -528,9 +657,9 @@ og `tools/proc_check.py` i AutoBleem's kilde tjekker en før du deler det.
 
 ### 4.1 Game Manager
 
-PS1-spillene som liste med kun titler (spillets mappe er i detaljerne) og det valgte omslag. Cross åbner spil-editoren **Square
+Skærmen hedder *Spilbibliotek - vælg spil*. PS1-spillene som liste med kun titler (spillets mappe er i detaljerne) og det valgte omslag. Cross åbner spil-editoren **Square
 sletter spillet** (dets mappe og efter et andet spørgsmål dets gemte tilstande) Triangle sletter hvert
-omslag PNG ved siden af spillene (scanning tager dem fra databaseren igen) L2 / R2 side. Fri plads på
+omslagsbillede (PNG eller JPEG) ved siden af spillene (scanning tager dem fra databaseren igen) L2 / R2 side. Fri plads på
 drevet er øverst til højre. Game Manager venter mens en scanning kører.
 
 ![Game Manager](../images/da/game-manager.jpg)
@@ -544,14 +673,16 @@ skærmene til opsætning af netværk og controllere er **Netværk og controllere
 De to første controllers vises som Spiller 1 og Spiller 2 – portene som PS1-emulatoren giver dem. Enhver
 yderligere controller vises som ikke brugt af PS1-emulatoren. RetroArch tildeler controllers efter egne
 indstillinger og kan ordne dem anderledes. Når en controller tilsluttes eller fjernes, viser launcher'en
-kort, hvilken pad der er Spiller 1 og Spiller 2.
+kort, hvilken pad der er Spiller 1 og Spiller 2. Circle går tilbage til systemmenuen.
 
 ![Hardware Information](../images/da/hardware-info.jpg)
 
 ### 4.3 Knap-vejledningen
 
 Triangle på hylden: hver knap på hver skærm på en side. Når USB-tastatur er tilsluttet eller er blevet brugt
-viser en Keyboard-kolonne tasterne ved siden af pad-knapperne.
+viser en Keyboard-kolonne tasterne ved siden af pad-knapperne. To linjer forklarer vejen ud af et spil: *Hold
+Select+Start eller Home i 2 sekunder: tilbage til AutoBleem* og *Kort tryk på Select+Start eller Home:
+emulatorens menu*.
 
 ![Knap-vejledningen](../images/da/button-guide.jpg)
 
@@ -565,6 +696,15 @@ mellemrum **L1** er Shift (to gange for caps lock) **R1** næste side **L2 / R2*
 bekræfter Circle annullerer. USB-tastatur taster til enhver tid: Enter bekræfter Esc annullerer.
 
 ![Tastaturet på skærmen](../images/da/keyboard.jpg)
+
+### 4.5 Virtuelt gamepad
+
+*Virtuelt gamepad* i systemmenuen viser gamepads, som programmet, der betjener dem, ser dem. Den har tre dele:
+*De gamepads, som apps får*, *Gamepads, som daemonen ser* og *Daemon*. En pad kan have mærkerne *tilsluttet*,
+*ikke læsbar*, *fra controllerdatabasen*, *gættet af daemonen* eller *ukendt driver*, og *Søg igen* læser padsene
+en gang til. En del, som buildet ikke har, siger *Ikke i denne build*. Circle går tilbage til systemmenuen.
+
+![Virtuelt gamepad](../images/da/virtual-gamepad.jpg)
 
 <!-- pagebreak -->
 
@@ -693,6 +833,20 @@ Sony's egen recovery.
 En fremskridts-linje under hvert trin viser hvor langt handlingen er. Værktøjet nægtede at flashe konsol der
 kører anden brugerdefineret firmware (BleemSync Project Eris): restore den til stock først.
 
+**Login fra en PC.** Med AutoBleem-kernelen installeret (ikke på en stock konsol) kan du logge ind på konsollen
+over et USB-kabel:
+
+1. Forbind konsollens micro-USB-port til PC'en med et USB-kabel. PC'en viser konsollen som en ny netværksadapter;
+   konsollens adresse står i den adapters indstillinger på PC'en.
+2. Log ind med `ssh root@<konsollens adresse>`. Standardadgangskoden er `autobleem`.
+
+I stedet for adgangskoden kan du bruge en nøgle: læg din offentlige nøgle i filen `System/ssh/authorized_keys` på
+sticken, og genstart konsollen. Ved næste opstart bliver den tilføjet til root-kontoen. En opdatering eller ny
+installation af launcher fjerner den ikke.
+
+> **Standardadgangskoden er den samme på alle konsoller**: enhver, der kan sætte et kabel i den, kan logge ind
+> som root. Brug en nøgle, hvor du kan, og lad ikke en konsol med standardadgangskoden stå, hvor andre kan nå den.
+
 <!-- pagebreak -->
 
 ## 7. Hvis noget går galt
@@ -705,6 +859,13 @@ kører anden brugerdefineret firmware (BleemSync Project Eris): restore den til 
   *Hardware Information* hvor logs er og Square gemmer dem til `System/Logs/saved-<n>/`. Filerne:
   `autobleem.log` (launcher) `launch.log` og `pcsx.log` (PS1-spils start og emulators output)
   `retroarch.log` og - altid på stick - `update.log` (online opdatering) og `updateroms.log` (UpdateRoms).
+- **Billedet beder om en stick, eller konsollen gik i dvale**: der er ingen stick i konsollen, eller den blev
+  trukket ud. Sæt den i (en vilkårlig USB-port; en foran er bedst, afsnit 2.1), før de 5 minutter er gået, eller
+  tryk på Power. En stick, der ikke blev fjernet rent, tjekkes først - vent til fremdriftslinjen er færdig.
+- **RetroArch siger, at det har brug for et nyere systembibliotek, end konsollen har**: konsollens eget
+  bibliotek er for gammelt til den RetroArch. Brug den RetroArch, der følger med AutoBleem.
+- **Et PSN-spil siger, at det er beskyttet af sin PSN-licens og ikke kan startes**: det spil kan ikke køre på
+  AutoBleem.
 - **Et spil er ikke på hylden**: tjek mappen layout (en mappe pr. spil billede-formater fra afsnit 3.9).
   *Game Manager* lister mapper scanning nægtede efter spillene markeret *Not added* med grund; Square sletter
   sådan mappe. *Genscan spil* i systemmenuen kører scanning igen.
