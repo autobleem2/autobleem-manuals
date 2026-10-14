@@ -81,6 +81,10 @@ In the group **Display** (and next to it):
   Linear, Sharp, Sharp (simple), Quilez, CRT (fast), CRT (raster), CRT-Pi.
 - The RetroArch cores window opens with *PlayStation 1* first (7409086); *PlayStation 1 Games* names the PS1
   RetroArch games; SwanStation is the PC's PS1 core (cad6fda).
+- Row *Clean game names:* in the group **Library** (ON by default; merged after the inventory was made):
+  RetroArch game lists show names without bracketed tags such as (USA), (Rev 1), [!]; OFF shows the file
+  names; the file name stays in the game's details; PS1 games are not affected (their titles come from the
+  database).
 - Retake `options.jpg` - **VM**. NEW `options-display.jpg` (Display group with CRT margin, Picture height) -
   **VM**. NEW `crt43-theme-notice.jpg` - CONSOLE (needs the 720x480 mode; the VM shows 4:3 windows only, not
   verified).
