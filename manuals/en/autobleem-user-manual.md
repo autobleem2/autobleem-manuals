@@ -419,6 +419,11 @@ until you leave it - on the console with the front **Reset** button (back to the
 point; it works from inside the in-game menu too) or **Power** (the console turns off); on a Pi or PC through the emulator's in-game
 menu (below). **Square** starts a PS1 game in RetroArch instead.
 
+**The way out of a game** is the same on every pad - the console's, a USB pad, a Bluetooth pad: **hold
+Start + Select, or Home, for 2 seconds** (*Hold Select+Start or Home for 2 seconds: back to AutoBleem*). A short press
+of Select + Start or Home opens the emulator's menu (*Short press of Select+Start or Home: the emulator's menu*); an
+App has no such menu, only the hold works. On the console, **Reset** always stops an App as well.
+
 **The in-game menu** (`pcsx-abnxt`). Press the menu button - the pad's Home, **Select + Start** on a pad without
 one, or **Esc** on a keyboard - and the game stops behind a menu with the game's last picture. **Holding the menu button for 2 seconds** is the same as
 Reset: it leaves the game. L1 / R1 switch between its three tabs, and the menu opens on the tab and row it
@@ -436,12 +441,67 @@ The menu is drawn in the launcher's ab2.0.0 look, with the pad batteries and the
 
 A **RetroArch** game starts in RetroArch with the core the launcher chose for its system; *Close Content*
 or *Quit RetroArch* in its menu comes back to the launcher. The RetroArch item in the system menu opens
-RetroArch's own menu (XMB) with nothing loaded, for its settings and its own content lists.
+RetroArch's own menu (XMB) with nothing loaded, for its settings and its own content lists. The cores window
+opens with *PlayStation 1* first.
+
+![The RetroArch cores window](../images/en/retroarch-cores.jpg)
 
 An **App** (the Apps set: the console tools, and on a console the extra applications RetroArch's package
 brings - Doom, Quake, Amiga, ...) shows its read-me first; Cross starts it, Circle goes back.
 
 ![An App's read-me before it starts](../images/en/app-start.jpg)
+
+**An App's settings.** *Game settings* ("Change how this program is started") has *Pad mode:* (*Automatic*,
+*PSC pad*, *Xbox 360 pad*, *PSC pad (system)*, *Xbox 360 pad (system)*), *D-pad as stick:* and *Stick as D-pad:*.
+Some Apps ask once, on the first start, *Which controls does your pad have?* (*One D-pad* or *Analog sticks*);
+a Windows-type App asks *What do you want to do?* (*Run Windows*, *Install Windows*, *Run DOS*, *Uninstall
+Windows*). To map a key the screen says *Press one of the buttons.*
+
+![An App's game settings](../images/en/app-game-settings.jpg)
+
+The texts and questions a Windows program (a PE app) asks appear as AutoBleem screens (*Message*, *Choose an
+option*), titled with the App's name.
+
+![A question from a PE app](../images/en/pe-dialog.jpg)
+
+### 3.8a A disc in a USB drive
+
+A USB CD/DVD drive with a PlayStation or audio disc in it puts that disc on the shelf as a game. Not on
+Windows, which has no drive support.
+
+- **The disc view** opens by itself when a disc is detected; R1 *Disc* opens it from the shelf. It shows
+  the disc's cover (from the cover databases, or fetched online), its serial and its title. Cross plays the
+  disc. A PS1 game played from the disc resumes and saves into the disc's folder. After a game, the options or
+  an extension's settings, you are back in the disc view; Circle on the shelf brings it back, and there R1 is the
+  first-letter jump again.
+- **The drive chip** shows the drive's state: hidden with no drive, dim with a drive and no disc,
+  blinking *Reading the disc...* while it reads, then the disc's title. Other messages are *This is not a
+  PlayStation disc* and *The disc cannot be read now*.
+
+![The disc view](../images/en/disc-view.jpg)
+
+![The drive chip](../images/en/disc-chip.jpg)
+
+- **An audio CD** opens the **CD player** (*CD PLAYER*, *Audio CD*, with *TRACKS* and *TOTAL TIME*). Its keys
+  are *Play track*, *Stop*, *Previous/next*, *Seek*, *Pause*, *Repeat:* (off or on) and *Shuffle:*, and *Selected:*
+  names the track. A disc that does not play says *This disc cannot be played*.
+
+![The CD player](../images/en/cd-player.jpg)
+
+- **Copy disc** (Square) copies a PlayStation disc to `Games` as a **CHD**, with a `.m3u` file for a game on
+  several discs (disc 1 first). It asks first: *Copy "%1" to %2? It takes %3 of the %4 free.* A progress
+  window, *Copying the disc*, shows the *Speed* and the *Time left* and blocks the launcher; *Abort* cancels
+  it (*Cancelling...*, then *Cancelled*). At the end it says *The disc is copied to Games.* It refuses with
+  *Already in Games: %1*, *Not enough room in Games: the copy needs %1, %2 is free.* or *The copy failed: %1*. Sectors
+  that cannot be read are written as zeros, and the message *%1 sectors could not be read and were written as zeros.* tells
+  you how many (*Unreadable sectors*). A disc the databases do not know is named by its serial.
+
+![Copying a disc](../images/en/disc-copy.jpg)
+
+- **LibCrypt discs**: the `.sbi` file of a LibCrypt game is fetched from the site before the disc plays and
+  when it is copied. That needs a network: on a Raspberry Pi or PC the one it already has, on the console the
+  Wi-Fi set up in PSC-Bios.
+- The game editor of a disc greys the rows it cannot use (section 3.7).
 
 ### 3.9 Adding games
 
@@ -460,7 +520,7 @@ Games/
 - A multi-disc game is one folder with every disc in it; folders named `Game (Disc 1)`, `Game (Disc 2)`
   ... are merged into one `Game` folder by the scan.
 - Games dropped straight into `Games/` (loose files) are sorted into folders by the scan.
-- A **cover** is a PNG next to the game's image, named like it. Without one, the box art comes from the
+- A **cover** is a PNG or JPEG next to the game's image, named like it. Without one, the box art comes from the
   cover databases, or - with RetroArch installed - from libretro's thumbnail set; on a Pi, a PC or Windows
   a missing one is fetched online (Options → *Fetch box art online*).
 - The scan reads each disc's serial number and takes the title, publisher, year, players and region from
@@ -474,6 +534,23 @@ Entertainment System`, `Sega - Mega Drive - Genesis`, `Nintendo - Game Boy Advan
 RetroArch's play lists; on a console stick, run **UpdateRoms** on the PC (chapter 5).
 
 **Apps** go under `Apps/<name>/` with an `app.ini` (the name, the icon, what to run) and a `run.sh`.
+
+**Packages.** Game data for engines - Doom, Quake, OpenArena, Heretic, Hexen, Strife, Duke Nukem 3D, Shadow
+Warrior, Theme Hospital, DOS games and more - goes into a `Packages` folder on the stick, for example
+`Packages/Doom/DOOM2.WAD`. AutoBleem recognises the data by a table that ships with it (`rc/packages.ini`); the loose
+game files of a recognised folder are packages of their own. Your own files are only read, never changed. A package
+can also come from the Store. The **Packages picker** lists what was found. **Package info** shows a package's
+*Contents*, *Description*, *Location*, *Source*, *Runs with*, *Mod*, *Shareware*, *In this App* and *Your files*,
+and *Choose game data* picks the data to start with. The messages are *No game data found*, *Unknown data*, *Nothing
+installed runs this*, *%1 needs game data it can run: %2.* and *Not recognized. If this is a game, see the manual:
+Your own games.*
+
+![The Packages picker](../images/en/packages-picker.jpg)
+
+![Package info](../images/en/package-info.jpg)
+
+**Scanning one part.** *Re-scan games* can scan just one part - a set or a folder - and takes its bubble down at
+the end.
 
 **Themes** go under `Themes/<name>/` (`theme.json` and the images) - or drop the theme's zip into `Themes/`.
 
@@ -490,7 +567,8 @@ tolerate and some do not.
 The launcher checks the site at start and once a day for a new version on its **channel** (Options →
 *Updates*: `release`, `testing`, `nightly` or `off`); *Software Update* in the system menu checks now. When
 there is one it asks: *Update now* downloads it, *Remind me tomorrow* and *Skip this version* are the other
-answers. Your games, saves and settings always stay; the launcher rescans once after an update.
+answers. Your games, saves and settings always stay; the launcher rescans once after an update. The channel
+tag in the top-left corner (section 3.1) shows what is installed.
 
 - **Raspberry Pi, PC stick**: after the download the installer runs again with its first-boot progress
   screen (a newer RetroArch is offered too), then the launcher is back.
@@ -516,7 +594,7 @@ says so.
 AutoBleem runs on (a PlayStation Classic needs the AutoBleem kernel's WiFi). Its four tabs, L1 / R1 between
 them:
 
-- **Apps** and **Games**: what the sources offer, each with its picture, version, size and source favicon. Installed items carry an *Installed* badge. Cross installs (or updates, or tries again after a failure, or cancels a download that is queued or running), Triangle removes what the Store installed, Square refreshes the lists. L2 / R2 jump by letter, **Select** shows one source at a time, **Start** searches the titles. The footer shows the keys that apply to the selected row. Item pictures are cached and can be retried if they fail to load.
+- **Apps** and **Games**: what the sources offer (the Apps tab also lists PE apps, with their license and source, and game-data packages, section 3.9), each with its picture, version, size and source favicon. Installed items carry an *Installed* badge. Cross installs (or updates, or tries again after a failure, or cancels a download that is queued or running), Triangle removes what the Store installed, Square refreshes the lists. L2 / R2 jump by letter, **Select** shows one source at a time, **Start** searches the titles. The footer shows the keys that apply to the selected row. Item pictures are cached and can be retried if they fail to load.
 - **Downloads**: what is downloading, waiting, failed or installed. The progress bar updates steadily, and while you are elsewhere in the launcher a bubble shows the running download with its speed and the time left (`1.4 MB/s · 0:42`). Downloads go on in the background, also after you leave the Store; starting a game or powering off only pauses them, and a stopped download resumes where it stopped. If the network drops, the item says *Waiting for the network* and carries on from where it stopped when the network is back (it gives up after 30 minutes). An installed game appears on the shelf after the next scan, with the Store's picture as its cover. Downloads over 2 GB work on all platforms, including 32-bit builds.
 - **Sources**: where the lists come from - AutoBleem's own catalog, a TSV list dropped into
   `System/Extensions/store/sources/`, and the addresses you add with **Add a source URL**. Each source shows its favicon in the list. Cross on one you added renames it, changes its address, switches it between `http://` and `https://`, or removes it.
@@ -569,9 +647,9 @@ has to do, and
 
 ### 4.1 Game Manager
 
-The PS1 games as a list of their titles (the selected game's folder is in its details) and the selected one's cover. Cross opens the game
+The screen is titled *Game Manager - Select game*. The PS1 games as a list of their titles (the selected game's folder is in its details) and the selected one's cover. Cross opens the game
 editor, **Square deletes the game** (its folder and, after a second question, its save states), Triangle
-deletes every cover PNG next to the games (the scan takes them from the databases again), L2 / R2 page.
+deletes every cover picture (PNG or JPEG) next to the games (the scan takes them from the databases again), L2 / R2 page.
 The free space of the drive is at the top right. The Game Manager waits while a scan runs.
 
 ![The Game Manager](../images/en/game-manager.jpg)
@@ -585,13 +663,14 @@ the console included; the network and controller setup screens are **Network & C
 The first two controllers are shown as Player 1 and Player 2 - the ports the PS1 emulator gives them.
 Any further controller is shown as not used by the PS1 emulator. RetroArch assigns controllers by its own
 settings and may order them differently. When a controller is plugged in or pulled out, the launcher
-briefly shows which pad is Player 1 and Player 2.
+briefly shows which pad is Player 1 and Player 2. Circle returns to the system menu.
 
 ![Hardware Information](../images/en/hardware-info.jpg)
 
 ### 4.3 The button guide
 
-Triangle on the shelf: every button of every screen on one page. When a USB keyboard is connected or has been used, a Keyboard column shows the keys alongside the pad buttons.
+Triangle on the shelf: every button of every screen on one page. When a USB keyboard is connected or has been used, a Keyboard column shows the keys alongside the pad buttons. Two lines explain the way out of a game: *Hold
+Select+Start or Home for 2 seconds: back to AutoBleem* and *Short press of Select+Start or Home: the emulator's menu*.
 
 ![The button guide](../images/en/button-guide.jpg)
 
@@ -605,6 +684,15 @@ Shift (twice for caps lock), **R1** the next page, **L2 / R2** move the cursor, 
 cancels. A USB keyboard types at any time: Enter confirms, Esc cancels.
 
 ![The on-screen keyboard](../images/en/keyboard.jpg)
+
+### 4.5 Virtual gamepad
+
+*Virtual gamepad* in the system menu shows the pads as the program that serves them sees them. It has three
+parts: *The pads Apps are given*, *Pads the daemon sees* and *Daemon*. A pad can carry the marks *connected*,
+*not readable*, *from the controller database*, *guessed by the daemon* or *unknown driver*, and *Look again*
+reads the pads once more. A part the build does not have says *Not in this build*. Circle returns to the system menu.
+
+![Virtual gamepad](../images/en/virtual-gamepad.jpg)
 
 <!-- pagebreak -->
 
@@ -727,6 +815,21 @@ to stock through Sony's own recovery.
 A progress bar under every step shows how far the action is. The tool refuses to flash a console that
 runs another custom firmware (BleemSync, Project Eris): restore it to stock first.
 
+**Logging in from a PC.** With the AutoBleem kernel installed (not on a stock console) you can log in to the
+console over a USB cable:
+
+1. Connect the console's micro-USB port to the PC with a USB cable. The PC shows the console as a new network
+   adapter. The documents of the launcher do not state the console's address on it; look at the new adapter's
+   settings on the PC.
+2. Log in with `ssh root@<the console's address>`. The default password is `autobleem`.
+
+Instead of the password you can use a key: put your public key into the file `System/ssh/authorized_keys` on the
+stick and restart the console. At the next boot it is added to the root account. Updating or reinstalling the launcher does not remove it.
+
+> **Change the password.** The default is the same on every console, and anyone who can plug a cable into the
+> console can log in as root with it. Change it after your first login (the AutoBleem kernel's own documentation says how), and do not
+> leave a console with the default password where others can reach it.
+
 <!-- pagebreak -->
 
 ## 7. If something goes wrong
@@ -740,6 +843,13 @@ runs another custom firmware (BleemSync, Project Eris): restore it to stock firs
   The files: `autobleem.log` (the launcher), `launch.log` and `pcsx.log` (a PS1 game's start and the
   emulator's output), `retroarch.log`, and - always on the stick - `update.log` (an online update) and
   `updateroms.log` (UpdateRoms).
+- **The picture asks for a stick, or the console went to sleep**: there is no stick in the console, or it was
+  pulled. Put it in (any USB port; a front one is best, section 2.1) before the 5 minutes are over, or press Power.
+  A stick that was not removed cleanly is checked first - wait for the progress bar to finish.
+- **RetroArch says it needs a newer system library than this console has**: the console's own library is too
+  old for that RetroArch. Use the RetroArch that comes with AutoBleem.
+- **A PSN game says it is protected by its PSN license and cannot be started**: that game cannot run on
+  AutoBleem.
 - **A game is not on the shelf**: check the folder layout (one folder per game, the image formats of
   section 3.9). The *Game Manager* lists the folders the scan refused after the games, marked *Not added*,
   with the reason; Square deletes such a folder. *Re-scan games* in the system menu runs the scan again.
