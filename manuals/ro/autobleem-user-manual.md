@@ -20,7 +20,8 @@ platformă, utilizarea zilnică și instrumentele care vin cu aceasta.
   carduri de memorie.
 - **RetroArch** (opțional pe fiecare platformă) pentru alte sisteme: NES, SNES, Mega Drive, Game
   Boy, arcade și multe altele. AutoBleem construiește listele RetroArch din ROM-urile pe care le
-  copiezi și pornește fiecare joc cu nucleul corect.
+  copiezi și pornește fiecare joc cu nucleul corect. Lista de nuclee începe cu *PlayStation 1* (secțiunea 3.8).
+  Jocurile de tip Doom rulează din datele tale de joc, într-un dosar *Packages* (secțiunea 3.9).
 - **Instrumentele pentru consolă**: *PSC-Bios* (afișat în meniuri ca *Rețea și controlere*) pentru WiFi, ceas,
   Bluetooth și maparea gamepad-ului - pe consolă, și de asemenea pe un Raspberry Pi și pe stick-ul PC - și
   *ABFlashKit* pentru instalarea kernel-ului AutoBleem (numai PlayStation Classic).
@@ -61,19 +62,36 @@ ridică limita de 4 GB a FAT32.
    - **Jocuri de exemplu** - câteva jocuri homebrew gratuite pentru ca raftul să nu fie gol.
 3. Apasă **Install** și așteaptă. Barele de progres și jurnalul arată fiecare pas; stick-ul se
    numește `SONY` la sfârșit, iar `UpdateRoms` este pus pe acesta (vezi capitolul 5).
-4. Scoate stick-ul în siguranță, conectează-l la **al doilea port USB al consolei** (cel din dreapta,
-   jucătorul 2) și pornește consola. AutoBleem pornește în loc de meniul standard.
+4. Scoate stick-ul în siguranță, conectează-l la **al doilea port USB din față al consolei** (cel din dreapta,
+   jucătorul 2) - primul este pentru controler - și pornește consola. AutoBleem pornește în loc de meniul
+   standard. Un al doilea controler are nevoie de un hub USB pe portul din față sau de un controler Bluetooth.
+   Nu lăsa stick-ul în portul micro-USB din spate (vezi mai jos).
 
 **Pornirea și oprirea.** Cu stick-ul conectat, consola pornește, luminile se aprind pentru câteva
 secunde (AutoBleem este preluat) și apoi merge în standby înainte de a fi afișat ceva - aceasta este
 modul propriu al consolei de a pregăti o actualizare, prin care AutoBleem ajunge să ruleze. Apasă
 **Power** o dată și lansatorul apare. *Oprire* în meniu sistem, sau butonul Power al consolei,
 pune consola în **standby-ul AutoBleem**: stick-ul este deconectat mai întâi, apoi lumina devine
-**roșie** - semnul că AutoBleem funcționează așa cum este intenționat - și următoarea apăsare a
-Power aduce lansatorul direct înapoi, în câteva secunde. **În timp ce lumina este roșie, stick-ul
+**portocalie** - semnul că AutoBleem funcționează așa cum este intenționat - și următoarea apăsare a
+Power aduce lansatorul direct înapoi, în câteva secunde. **În timp ce lumina este portocalie, stick-ul
 poate fi tras** și pus într-un PC fără ca Windows să îi ceară să-l verifice; pune-l înapoi înainte
 de a apăsa Power. Deconectarea puterii consolei merge din nou prin standby-ul de boot la următoarea
-pornire.
+pornire. O lumină **roșie** înseamnă că consola s-a oprit cu adevărat.
+
+**Folosește un port USB din față pentru stick.** Portul micro-USB din spate (un host acolo funcționează doar
+cu kernel-ul AutoBleem) ține consola trează: cu un stick sau un hub pe el, consola se oprește în loc să
+meargă în standby, iar Power pornește un boot la rece.
+
+**Fără stick.** Când în consolă nu este niciun stick, o imagine spune să introduci unul - în orice port USB.
+După 5 minute, sau imediat la Power, consola adoarme. Aceeași imagine apare dacă stick-ul este scos cât
+timp rulează AutoBleem.
+
+![Imaginea care cere stick-ul](../images/en/insert-stick.jpg)
+
+**Verificarea stick-ului.** Un stick care nu a fost scos corect este verificat la pornire, la trezire și după
+scoatere, cu o bară de progres. Pe un stick mare poate dura o vreme; nu o întrerupe.
+
+![Verificarea stick-ului](../images/en/stick-check.jpg)
 
 Pentru a **actualiza** un stick, rulează un installer mai nou peste acesta: jocurile, salvările,
 setările și conținutul RetroArch rămân; doar fișierele proprii ale AutoBleem sunt înlocuite.
@@ -195,7 +213,7 @@ oară (un fapt pe care jocul nu îl are este omis) - și un buton de joc. Aspect
 instalare nouă și o actualizare care o aduce trec la ea o singură dată. Bara de indicii din jos are două rânduri
 cu câte patru locuri. Primul spune ce fac butoanele pentru jocul selectat (joacă, joacă în RetroArch, deschide
 rândul de pictograme, meniul rapid); al doilea arată mereu Select (setul), Start (un joc aleatoriu), Triangle
-(ghidul) și L2 + R2 (meniu sistem), estompate când unul nu face nimic. O scanare a folderului de jocuri rulează în
+(ghidul) și L2 + R2 (meniu sistem), estompate când unul nu face nimic. Un joc fără copertă arată un disc așezat în tava neagră a cutiei. O scanare a folderului de jocuri rulează în
 fundal la fiecare pornire; în timp ce rulează, o bulă în colțul din dreapta sus arată progresul, iar jocuri noi
 apar pe raft pe măsură ce sunt găsite.
 
@@ -223,9 +241,10 @@ Un gamepad wireless cu un nivel de baterie cunoscut - pe consolă, pe un Pi sau 
 | Buton | Pe raft |
 |---|---|
 | Stânga / Dreapta | Jocul anterior / următor. Ținerea derulează pe. |
-| L1 / R1 | Sari la prima literă anterioară / următoare a titlurilor. |
+| L1 / R1 | Sari la prima literă anterioară / următoare a titlurilor. Pe un raft gol, cu o unitate conectată, R1 deschide *Disc* (secțiunea 3.8a). |
 | Cross | Pornește jocul selectat (un joc PS1 în emulatorul PS1; un joc RetroArch în nucleul său; o aplicație după citirea sa). |
-| Square | Pornește jocul PS1 selectat în RetroArch în loc. |
+| Square | Pornește jocul PS1 selectat în RetroArch în loc. Pe un disc dintr-o unitate USB: *Copiază discul* (secțiunea 3.8a). |
+| Circle | Înapoi la vizualizarea discului, când este un disc în unitate (secțiunea 3.8a). |
 | Triangle | Ghidul butoanelor. |
 | Start | Un joc aleatoriu din setul curent. |
 | Select | Selectorul de seturi: file PlayStation / RetroArch / Apps (L1 / R1), grupele filei (Sus / Jos, L2 / R2 o pagină), Cross alege. |
@@ -242,6 +261,10 @@ L2 / R2, **F10** = meniu sistem. Pe o mașină de dezvoltare Esc închide progra
 primul / ultim, **Cross selectează, Circle merge înapoi**. Un ecran cu setări le salvează când îl
 lași cu Circle.
 
+**Într-un joc sau într-o aplicație**: ține apăsat **Start + Select, sau Home, 2 secunde** ca să te întorci la
+AutoBleem. Merge pe orice gamepad - al consolei, USB, Bluetooth. O apăsare scurtă deschide meniul emulatorului;
+o aplicație nu are un asemenea meniu, doar ținerea apăsată funcționează.
+
 ![Rândul de pictograme sub jocul selectat](../images/en/launcher-icons.jpg)
 
 ### 3.3 Seturile
@@ -253,7 +276,9 @@ jocuri* și, când vreun joc este marcat ca atare, *Jocuri cu pistol*. Pe un Ras
 nu există jocuri interne, deci lista începe cu *Jocuri USB*, care este întreaga bibliotecă. Fila RetroArch (numai
 unde este instalat RetroArch) listează un grup pe sistem care are jocuri, plus Favorite și Istoric al RetroArch.
 Fila Apps grupează aplicații după tip: *Toate aplicațiile*, apoi *Jocuri*, *Emulatoare*, *Instrumente*, *Media* și
-*Altele* (categoria se stabilește în fișierul `app.ini` al fiecărei aplicații). Fiecare rând arată câte articole
+*Altele* (categoria se stabilește în fișierul `app.ini` al fiecărei aplicații). Fila Apps arată și **aplicațiile PE** -
+programe Windows rulate de executorul PE; una pe care consola nu o poate porni este marcată *nu poate rula pe această consolă*.
+Unde lansatorul o arată, în listă este și un rând *Pachete* (secțiunea 3.9). Fiecare rând arată câte articole
 are; un grup fără nici una se deschide pe un raft gol cu rândul de pictograme arătând doar Setări. Subsolul
 numește tastele: L1 / R1 filele, L2 / R2 o pagină, Cross alege, Circle *Înapoi*.
 
@@ -286,11 +311,12 @@ iar meniul este grupat în secțiuni:
 | | Procesoare de scanare | Programele pe care fiecare scanare le rulează mai întâi - ordinea lor, pornite sau oprite (secțiunea 3.13). Dezactivate în timp ce o scanare rulează. |
 | **Sistem** | Optiuni | Setările AutoBleem (secțiunea 3.6). |
 | | Rețea și controlere | Doar unde o extensie instalată oferă intrarea `network` (`Provides=network` în `extension.ini` - PSC-Bios pe consolă, Pi și stick PC) - WiFi, asociere kontroler Bluetooth, setare DualShock 3, și ghidul mapării gamepad - vezi capitolul 6. Când acea extensie este instalată dar dezactivată, articolul rămâne gri cu o notă "pornește-o din Extensii" - Cross deschide lista Extensii la aceasta. |
-| | Informatii hardware | Faptele mașinii: sistem, CPU, stocare, interfețe de rețea, fus orar, ecran, gamepad-urile și mapările lor - aceeași pagină pe fiecare platformă (secțiunea 4.2). |
+| | Informatii hardware | Faptele mașinii: sistem, CPU, stocare, interfețe de rețea, fus orar, ecran, gamepad-urile și mapările lor - aceeași pagină pe fiecare platformă (secțiunea 4.2). Circle revine la meniu sistem. |
+| | Gamepad virtual | Gamepad-urile date aplicațiilor și cele pe care le vede daemon-ul (secțiunea 4.5). Circle revine la meniu sistem. |
 | | Actualizare software | (Raspberry Pi și PC) Verifică site-ul pentru un AutoBleem sau RetroArch mai nou acum; rândul spune *Actualizare disponibilă* când lansatorul știe deja de una. |
 | | Despre | Credite și licență. |
 | **Ieșire** | RetroArch | (Numai unde este instalat RetroArch.) Lasă lansatorul pentru meniu propriu RetroArch. Închiderea RetroArch vine înapoi. |
-| | Oprire | După confirmă: pe consolă standby-ul AutoBleem - stick-ul deconectat, lumina roșie, Power aduce lansatorul înapoi (secțiunea 2.1); pe Pi sau PC mașina se oprește. |
+| | Oprire | După confirmă: pe consolă standby-ul AutoBleem - stick-ul deconectat, lumina portocalie, Power aduce lansatorul înapoi (secțiunea 2.1); pe Pi sau PC mașina se oprește. |
 
 ![Meniu sistem](../images/en/system-menu.jpg)
 
@@ -302,9 +328,12 @@ pleacă și salvează. Fiecare schimbare este aplicată imediat. Valorile pornit
 
 | Grup / setare | Ce face |
 |---|---|
-| **Interfață**: Afișaj | Rezoluția ecranului, pentru lansator și emulatorul PS1: *Auto* (modul propriu al ecranului, arătat ca *Auto (1920x1080)*) sau orice mod pe care ecranul îl listează; consola oferă 720p și 1080p. Pentru un mod nou se cere confirmare: *Păstrați acest mod de afișare?* - dacă nu confirmi, revine la cel anterior după o numărătoare inversă. Nu într-o fereastră de dezvoltare. |
+| **Interfață**: Afișaj | Rezoluția ecranului, pentru lansator și emulatorul PS1: *Auto* (modul propriu al ecranului, arătat ca *Auto (1920x1080)*) sau orice mod pe care ecranul îl listează; consola oferă 720p, 1080p și *CRT 4:3* (720x480, pentru un CRT sau un dispozitiv de captură 4:3). Pentru un mod nou se cere confirmare: *Păstrați acest mod de afișare?* - dacă nu confirmi, revine la cel anterior după o numărătoare inversă. Nu într-o fereastră de dezvoltare. |
+| Margine CRT: | Zona sigură pe o ieșire 4:3, de la 0 la 10 %, din 1 % în 1 %. Se aplică imediat și se citește înainte de ecranul de pornire. |
+| Înălțimea imaginii: | Înălțimea imaginii pe orice ieșire 4:3 (*CRT 4:3* sau o fereastră 4:3 pe o ieșire VGA / PC), de la -40 la +40, din 2 în 2, aplicată imediat. Imaginea jocului din RetroArch o urmează. |
+| Halou ecran: | PORNIT umple benzile de lângă imaginea unui joc (unde aceasta nu umple ecranul) cu strălucirea proprie a imaginii (`pcsx-abnxt`). |
 | Scalarea ecranului emulatorului | Cum potrivește emulatorul PS1 imaginea unui joc pe ecran: *1x1* (pixelii proprii ai PlayStation), *2x (întreg)*, *4:3*, *4:3 (întreg)* sau *Ecran complet*. Scalarea întreagă folosește doar multipli întregi (cea mai clară). Înlocuiește vechiul comutator Ecran Lat; `pcsx-ab` clasic și RetroArch cunosc doar ecranul complet și 4:3. |
-| Schema de culori pentru AutoBleem | Aspectul. Temele trăiesc în `Themes/`; o temă zip aruncată acolo este dezarhivată la următoarea vizită. Temele pe care AutoBleem le livrez sunt reîmprospătate la fiecare actualizare - pentru a personaliza una, copiază-o sub un nume nou mai întâi. Cea implicită este **ab2.0.0**. |
+| Schema de culori pentru AutoBleem | Aspectul. Temele trăiesc în `Themes/`; o temă zip aruncată acolo este dezarhivată la următoarea vizită. Temele pe care AutoBleem le livrez sunt reîmprospătate la fiecare actualizare - pentru a personaliza una, copiază-o sub un nume nou mai întâi. Cea implicită este **ab2.0.0**. Pe *CRT 4:3* lista arată doar temele care au un aspect 4:3; dacă tema folosită nu are, tema implicită o înlocuiește după confirmare (și la pornire), iar o notificare spune *Tema a fost schimbată cu cea implicită (CRT 4:3)*. |
 | Stil pentru cover | Cadrul cutiei de bijuterii desenat în jurul coperților PS1. |
 | Strălucirea copertei | O strălucire care traversează coperta selectată când raftul se oprește. |
 | Limba | Limba lansatorului, aplicată imediat (17 limbi). |
@@ -315,15 +344,20 @@ pleacă și salvează. Fiecare schimbare este aplicată imediat. Valorile pornit
 | Font | Orice `.ttf`/`.otf` din `resources/fonts`, `RetroArch/fonts` sau folderul temei; rândul numește fontul folosit. |
 | **Sunet**: Muzică, Muzică de Fundal | Ce cântec cântă sub lansator (al temei, sau un fișier din `resources/music`), și dacă cântă sau nu. |
 | **Emulare**: Emulator PS1 | `pcsx-abnxt` (implicit: PCSX-ReARMed curent cu adăugirile AutoBleem) sau `pcsx-ab` (clasic). Un punct de reluare salvat de altul continuă în altul, dacă jocul nu a rulat fără un fișier BIOS. |
-| Schimbă jucătorul 1 / jucătorul 2 (emulatoare PS1) | Schimbă care dintre primele două gamepad-uri este Jucătorul 1 și care este Jucătorul 2, în ambele emulatoare PS1 (pcsx-abnxt și pcsx-ab clasic). Are efect doar cu două sau mai multe gamepad-uri conectate; cu un singur gamepad, este mereu Jucătorul 1. RetroArch nu este afectat. |
-| Joaca toate jocurile PSX cu RA, Actualizeaza configuratia RA, Păstrează config. RetroArch | (Numai unde este instalat RetroArch.) Fiecare joc PS1 pornește în nucleul PS1 al RetroArch; AutoBleem scrie setările sale în configurația RetroArch când pornește un joc acolo; o schimbare făcută în meniul propriu al RetroArch este păstrată când RetroArch se închide. |
+| Schimbă jucătorul 1 / jucătorul 2 (emulatoare PS1) | Schimbă care dintre primele două gamepad-uri este Jucătorul 1 și care este Jucătorul 2, în ambele emulatoare PS1 (pcsx-abnxt și pcsx-ab clasic). Are efect doar cu două sau mai multe gamepad-uri conectate; cu un singur gamepad, este mereu Jucătorul 1. RetroArch nu este afectat. Un emulator PS1 care încă nu poate face schimbul arată *Acest emulator PS1 nu acceptă încă schimbarea controlerelor*. |
+| Joaca toate jocurile PSX cu RA, Actualizeaza configuratia RA, Păstrează config. RetroArch | (Numai unde este instalat RetroArch.) Fiecare joc PS1 pornește în nucleul PS1 al RetroArch (*PlayStation 1*; pe un PC este SwanStation); AutoBleem scrie setările sale în configurația RetroArch când pornește un joc acolo; o schimbare făcută în meniul propriu al RetroArch este păstrată când RetroArch se închide. |
 | **Bibliotecă**: Arata jocurile interne | Jocurile încorporate ale consolei în listele PlayStation (numai PlayStation Classic). |
+| Nume de jocuri curate: | PORNIT (implicit): listele de jocuri RetroArch arată nume fără etichete între paranteze, precum (USA), (Rev 1) sau [!]. OPRIT arată numele fișierelor. Numele fișierului rămâne în detaliile jocului. Jocurile PS1 nu sunt afectate - titlurile lor vin din baza de date. |
 | Preia coperțile online | Scanarea prelucrează coperțile lipsă de pe serverele libretro (Raspberry Pi, PC, Windows). |
 | **Actualizări** | Canalul de actualizare: `release` (versiunea testată), `testing` (versiunea următoare, în testare), `nightly` (cea mai nouă versiune de dezvoltare) sau `off`. Cel implicit urmează versiunea instalată. Nu apare pe o mașină de dezvoltare. |
 | **Diagnosticare**: Păstrează jurnalele pe stick | Păstrează toate jurnalele pe stick de la următoarea pornire, nu doar după o cădere (capitolul 7). |
 | Afișează performanța | O suprapunere în colțul din stânga jos: rata de cadre, încărcarea CPU, firele și memoria; emulatorul arată și el FPS și CPU în joc. |
 
 ![Opțiunile, în grupuri](../images/en/options.jpg)
+
+![Grupul Afișaj: Margine CRT și Înălțimea imaginii](../images/en/options-display.jpg)
+
+![Notificarea după trecerea la CRT 4:3 cu o temă fără aspect 4:3](../images/en/crt43-theme-notice.jpg)
 
 ### 3.7 Setări ale unui joc
 
@@ -336,10 +370,12 @@ deschide pe cel sub cursor.
 - **Joc**: *Favorit* (în grupa Jocuri favorite), *Joc Lightgun* și *Joaca folosind RA* (numai unde este instalat
   RetroArch: un joc cu pistol ușor se alătură grupei Lightgun și rulează întotdeauna în RetroArch, al cărui nucleu
   PS1 are GunCon; *Joaca folosind RA* rulează acest joc în RetroArch), *Restricționează date* (scanerul lasă
-  titlul, seria și lista de discuri ale jocului așa cum le-ai stabilit).
+  titlul, seria și lista de discuri ale jocului așa cum le-ai stabilit),
+  și *Reluare:* - ce se întâmplă când pornește un joc cu puncte de reluare: *Întreabă* arată selectorul de sloturi de
+  reluare, *Ultimul slot* continuă imediat din cel mai nou slot, *Niciodată* pornește jocul de la început.
 - **Afișaj**: *Rezoluție* (1x sau 2x, pe GPU-ul integrat), *Elimină cusăturile* (numai cu 2x), *Dithering* (Oprit,
   Pornit, Mereu), *Netezire*, *Filtru* - cum se scalează imaginea: Cel mai apropiat (pixeli simpli), Liniar
-  (netezit), Clar sau Clar (simplu) (pixeli crisp fără tremurare), Quilez, sau filtrele CRT: CRT (fast) și CRT-Pi
+  (netezit), Clar sau Clar (simplu) (pixeli crisp fără tremurare), Quilez, sau filtrele CRT: CRT (rapid), CRT (raster) și CRT-Pi
   (desenează propriile linii de scanare, așa că rândurile scanlines devin gri) - și *Scanlines* cu *Luminozitate
   scanlines*. Rezoluția, eliminarea cusăturilor, dithering-ul, netezirea și filtrele altele decât Liniar și Cel mai
   apropiat sunt pentru `pcsx-abnxt`; clasicul `pcsx-ab` și RetroArch arată restul ca Cel mai apropiat.
@@ -351,7 +387,14 @@ Forma imaginii și rezoluția ecranului sunt globale (Opțiuni → *Scalarea ecr
 joc fără titlu în datele sale este arătat sub numele folderului său.
 
 Triangle redenumește jocul, Square schimbă cardul de memorie, Start partajează un card nou. Circle
-salvează și pleacă.
+salvează și pleacă. Ținerea apăsată Stânga / Dreapta sau Sus / Jos repetă mișcarea, în editor și în ecranele de
+opțiuni ale jocului și de nuclee din RetroArch. Un joc de pe unitate care nu are `pcsx.cfg` nu poate salva: editorul
+spune *Nesalvat: acest joc nu are pcsx.cfg*.
+
+Pentru un **disc din unitate** (secțiunea 3.8a) editorul estompează rândurile pe care discul nu le poate folosi și
+spune *Indisponibil pentru un disc din unitate*.
+
+![Editorul de joc pentru un disc din unitate](../images/en/game-editor-disc.jpg)
 
 **Setări salvate în emulator.** Meniu propriu emulatorului are *Salvează setările pentru acest joc*.
 Odată ce un joc are setări salvate acolo, acelea sunt cu care se joacă, și editorul de joc arată
@@ -368,7 +411,8 @@ Fiecare joc PS1 are propriul card de memorie implicit (păstrat cu punctele sale
 `Games/!SaveStates/<folder joc>/`). **Carduri Memorie** din meniu sistem gestionează **seturi
 partajate** - un card folosit de mai multe jocuri, păstrat în `Games/!MemCards/`: creează uno
 (Square, cu tastatura pe ecran), redenumește (Cross), șterge (Triangle). Un joc se pune pe un set
-cu *Schimbă cardul de memorie* din editorul său, sau din pictograma Card Memorie.
+cu *Schimbă cardul de memorie* din editorul său, sau din pictograma Card Memorie. Un set
+fără card încă spune *niciun card încă*, iar la salvare se întreabă *Vrei să salvezi datele cardurilor de memorie?*
 
 **Editorul de card de memorie** (pictograma Card Memorie) arată cardul jocului și un al doilea card
 lângă, cu fiecare pictogramă și titlu de salvare: copiază o salvare între cele două (Square), șterge
@@ -383,6 +427,10 @@ cel mai nou este marcat **CEL MAI NOU**, iar un slot nefolosit spune *Niciun pun
 slot, Triangle îl șterge. Un joc cu un punct de reluare arată o imagine mică pe pictograma Reluare; un joc fără
 niciunul are pictograma Reluare gri. În timp ce punctul de reluare este scris la ieșirea din joc, emulatorul arată
 *Vă rugăm așteptați...*.
+Jocurile PS1 jucate în RetroArch au și ele sloturi de reluare. Un slot poartă o insignă - logo-ul AutoBleem 2 sau al
+RetroArch - ca să vezi care emulator l-a scris.
+
+![Selectorul de sloturi de reluare](../images/en/resume-picker.jpg)
 
 ### 3.8 Pornirea jocurilor, RetroArch și Apps
 
@@ -390,6 +438,11 @@ niciunul are pictograma Reluare gri. În timp ce punctul de reluare este scris l
 ecran plin, până când îl lași - pe consolă cu butonul **Reset** din față (înapoi în lansator cu un
 punct de reluare; funcționează și din interiorul meniului din joc) sau **Power** (consola se oprește); pe Pi sau PC
 prin meniul din joc al emulatorului (mai jos). **Square** pornește un joc PS1 în RetroArch în loc.
+
+**Ieșirea dintr-un joc** este la fel pe orice gamepad - al consolei, USB, Bluetooth: **ține apăsat Start + Select,
+sau Home, 2 secunde** (*Ține apăsat Select+Start sau Home 2 secunde: înapoi la AutoBleem*). O apăsare scurtă pe
+Select + Start sau Home deschide meniul emulatorului (*Apăsare scurtă Select+Start sau Home: meniul emulatorului*);
+o aplicație nu are un asemenea meniu, doar ținerea apăsată funcționează. Pe consolă, **Reset** oprește mereu și o aplicație.
 
 **Meniul din joc** (`pcsx-abnxt`). Apasă butonul de meniu - Home de pe pad, **Select + Start** pe un pad fără el,
 sau **Esc** pe o tastatură - și jocul se oprește în spatele unui meniu cu ultima imagine a jocului. **Ținerea
@@ -414,13 +467,69 @@ rapide.
 Un joc **RetroArch** pornește în RetroArch cu nucleul pe care lansatorul l-a ales pentru sistemul
 său; *Închide conținut* sau *Oprește RetroArch* din meniu vine înapoi în lansator. Articolul
 RetroArch din meniu sistem deschide meniu propriu RetroArch (XMB) fără nimic încărcat, pentru
-setările sale și listele de conținut proprii.
+setările sale și listele de conținut proprii. Fereastra de nuclee
+se deschide cu *PlayStation 1* primul.
+
+![Fereastra de nuclee RetroArch](../images/en/retroarch-cores.jpg)
 
 O **Aplicație** (setul Apps: instrumentele consolei, și pe o consolă aplicațiile suplimentare pe care
 le aduce pachetul RetroArch - Doom, Quake, Amiga, ...) arată mai întâi informațiile sale; Cross o
 pornește, Circle merge înapoi.
 
 ![Informațiile unei aplicații înainte de a porni](../images/en/app-start.jpg)
+
+**Setările unei aplicații.** *Setări joc* ("Schimbă modul de pornire al acestui program") are *Mod controler:*
+(*Automat*, *Controler PSC*, *Controler Xbox 360*, *Controler PSC (sistem)*, *Controler Xbox 360 (sistem)*),
+*D-pad ca stick:* și *Stick ca D-pad:*. Unele aplicații întreabă o dată, la prima pornire, *Ce comenzi are controlerul
+tău?* (*Un D-pad* sau *Stick-uri analogice*); o aplicație de tip Windows întreabă *Ce vrei să faci?* (*Pornește Windows*,
+*Instalează Windows*, *Pornește DOS*, *Dezinstalează Windows*). Pentru a mapa o tastă, ecranul spune *Apasă unul dintre
+butoane.*
+
+![Setările de joc ale unei aplicații](../images/en/app-game-settings.jpg)
+
+Textele și întrebările pe care le pune un program Windows (o aplicație PE) apar ca ecrane AutoBleem (*Mesaj*,
+*Alege o opțiune*), cu numele aplicației ca titlu.
+
+![O întrebare de la o aplicație PE](../images/en/pe-dialog.jpg)
+
+### 3.8a Un disc într-o unitate USB
+
+O unitate USB CD/DVD cu un disc PlayStation sau audio în ea pune acel disc pe raft ca pe un joc. Nu pe Windows,
+care nu are suport pentru unități.
+
+- **Vizualizarea discului** se deschide singură când este detectat un disc; R1 *Disc* o deschide de pe raft. Arată
+  coperta discului (din bazele de date de coperți sau preluată online), seria și titlul. Cross redă discul. Un joc PS1
+  jucat de pe disc reia și salvează în folderul discului. După un joc, opțiuni sau setările unei extensii, ești
+  înapoi în vizualizarea discului; Circle pe raft o readuce, iar acolo R1 este din nou saltul la prima literă.
+- **Cipul unității** arată starea unității: ascuns fără unitate, estompat cu unitate dar fără disc, clipind
+  *Se citește discul...* cât citește, apoi titlul discului. Alte mesaje sunt *Acesta nu este un disc PlayStation* și
+  *Discul nu poate fi citit acum*.
+
+![Vizualizarea discului](../images/en/disc-view.jpg)
+
+![Cipul unității](../images/en/disc-chip.jpg)
+
+- **Un CD audio** deschide **playerul CD** (*PLAYER CD*, *CD audio*, cu *PIESE* și *TIMP TOTAL*). Tastele sale sunt
+  *Redă piesa*, *Stop*, *Anterior/următor*, *Caută*, *Pauză*, *Repetare:* (oprit sau pornit) și *Amestecare:*, iar
+  *Selectat:* numește piesa. Un disc care nu se redă spune *Acest disc nu poate fi redat*.
+
+![Playerul CD](../images/en/cd-player.jpg)
+
+- **Copiază discul** (Square) copiază un disc PlayStation în `Games` ca **CHD**, cu un fișier `.m3u` pentru un joc pe
+  mai multe discuri (discul 1 primul). Întreabă întâi: *Copiezi "%1" în %2? Ocupă %3 din %4 liberi.* O fereastră de
+  progres, *Se copiază discul*, arată *Viteză* și *Timp rămas* și blochează lansatorul; *Întrerupe* o anulează
+  (*Se anulează...*, apoi *Anulat*). La sfârșit spune *Discul a fost copiat în Games.* Refuză cu *Există deja în
+  Games: %1*, *Nu este destul loc în Games: copia are nevoie de %1, sunt liberi %2.* sau *Copierea a eșuat: %1*.
+  Sectoarele care nu pot fi citite sunt scrise ca zerouri, iar mesajul *%1 sectoare nu au putut fi citite și au fost
+  scrise ca zerouri.* îți spune câte (*Sectoare ilizibile*). Un disc pe care bazele de date nu îl cunosc este numit
+  după serie.
+
+![Copierea unui disc](../images/en/disc-copy.jpg)
+
+- **Discuri LibCrypt**: fișierul `.sbi` al unui joc LibCrypt este preluat de pe site înainte ca discul să fie redat
+  și când este copiat. Asta cere o rețea: pe un Raspberry Pi sau PC, cea pe care o are deja, pe consolă WiFi-ul
+  configurat în PSC-Bios.
+- Editorul de joc al unui disc estompează rândurile pe care nu le poate folosi (secțiunea 3.7).
 
 ### 3.9 Adăugarea jocurilor
 
@@ -440,7 +549,7 @@ Games/
 - Un joc multi-disc este un folder cu fiecare disc în el; folderele numite `Game (Disc 1)`, `Game
   (Disc 2)` ... sunt unite într-un folder `Game` de scanare.
 - Jocurile aruncate direct în `Games/` (fișiere libere) sunt sortate în folderele de scanare.
-- O **coperta** este un PNG lângă imaginea jocului, numit ca aceea. Fără una, cover art-ul vine din
+- O **coperta** este un PNG sau JPEG lângă imaginea jocului, numit ca aceea. Fără una, cover art-ul vine din
   bazele de date de coperți, sau - cu RetroArch instalat - din setul de miniaturi libretro; pe Pi,
   PC sau Windows una lipsă este preluată online (Opțiuni → *Preia cover art online*).
 - Scanarea citește seria fiecărui disc și ia titlul, editorul, anul, jucători și regiunea din baza
@@ -456,6 +565,23 @@ Windows scanarea le citește singură și scrie listele RetroArch; pe stick cons
 
 **Aplicațiile** merg sub `Apps/<nume>/` cu un `app.ini` (numele, pictograma, ce să ruleze) și o
 `run.sh`.
+
+**Pachete.** Datele de joc pentru motoare - Doom, Quake, OpenArena, Heretic, Hexen, Strife, Duke Nukem 3D, Shadow
+Warrior, Theme Hospital, jocuri DOS și altele - merg într-un folder `Packages` de pe stick, de exemplu
+`Packages/Doom/DOOM2.WAD`. AutoBleem recunoaște datele după un tabel livrat cu el (`rc/packages.ini`); fișierele
+libere de joc dintr-un folder recunoscut sunt pachete de sine stătătoare. Fișierele tale sunt doar citite, niciodată
+modificate. Un pachet poate veni și din Store. **Selectorul de pachete** listează ce s-a găsit. **Informațiile
+pachetului** arată *Conținut*, *Descriere*, *Locație*, *Sursă*, *Rulează cu*, *Mod*, *Shareware*, *În această
+aplicație* și *Fișierele tale*, iar *Alege datele jocului* alege datele cu care să pornești. Mesajele sunt *Nu s-au găsit
+date de joc*, *Date necunoscute*, *Nicio aplicație instalată nu rulează asta*, *%1 are nevoie de date de joc pe care le
+poate rula: %2.* și *Nerecunoscut. Dacă este un joc, vezi manualul: Jocurile tale.*
+
+![Selectorul de pachete](../images/en/packages-picker.jpg)
+
+![Informațiile pachetului](../images/en/package-info.jpg)
+
+**Scanarea unei singure părți.** *Rescaneaza jocurile* poate scana doar o parte - un set sau un folder - și își
+ia bula jos la sfârșit.
 
 **Temele** merg sub `Themes/<nume>/` (`theme.json` și imaginile) - sau aruncă zip-ul temei în
 `Themes/`.
@@ -474,7 +600,8 @@ jocuri le place și unele nu.
   *Actualizări* este canalul; *Actualizare software* din meniu sistem verifică acum). Când este un
   AutoBleem sau RetroArch mai nou cere: *Actualizează acum* descarcă totul și re-rulează instalatorul
   cu ecranul de progres de prima pornire; *Amintește-mi mâine* și *Sari peste această versiune* sunt
-  alte răspunsuri. Jocurile și setările tale rămân; lansatorul rescănează o dată după o actualizare.
+  alte răspunsuri. Jocurile și setările tale rămân; lansatorul rescănează o dată după o actualizare. Eticheta
+  canalului din colțul din stânga sus (secțiunea 3.1) arată ce este instalat.
 - **PlayStation Classic**: rulează un `AutoBleemInstaller.exe` mai nou peste stick (secțiunea 2.1).
 
 ### 3.12 Extensii și AutoBleem Store
@@ -491,7 +618,7 @@ oprită - lista spune asta.
 sistem pe care AutoBleem rulează (o PlayStation Classic necesită kernel-ul AutoBleem's WiFi). Patru
 file, L1 / R1 între ele:
 
-- **Aplicații** și **Jocuri**: ce oferă sursele, fiecare cu imaginea, versiunea, dimensiunea și
+- **Aplicații** și **Jocuri**: ce oferă sursele (fila Apps listează și aplicațiile PE, cu licența și sursa lor, și pachetele de date de joc, secțiunea 3.9), fiecare cu imaginea, versiunea, dimensiunea și
   faviconul sursă. Articolele instalate poartă o insignă *Instalat*. Cross instalează (sau actualizează, sau
   reîncearcă după o eșec, sau anulează o descărcare în coadă ori în curs), Triangle elimină ceea ce Store a
   instalat, Square reîmprospătează listele. L2 / R2 sar după literă, **Select** arată o sursă la un moment, **Start**
@@ -561,9 +688,9 @@ partajezi.
 
 ### 4.1 Manager Jocuri
 
-Jocurile PS1 ca o listă doar cu titlurile (folderul jocului selectat este în detaliile sale) și coperta celui selectat. Cross deschide
+Ecranul se numește *Manager jocuri - selectează jocul*. Jocurile PS1 ca o listă doar cu titlurile (folderul jocului selectat este în detaliile sale) și coperta celui selectat. Cross deschide
 editorul de joc, **Square șterge jocul** (folderul și, după o a doua întrebare, punctele salvate),
-Triangle șterge fiecare PNG coperta lângă jocuri (scanarea le ia din bazele de date din nou), L2 /
+Triangle șterge fiecare imagine de copertă (PNG sau JPEG) lângă jocuri (scanarea le ia din bazele de date din nou), L2 /
 R2 pagini. Spațiul liber al unității este în colțul din dreapta sus. Manager Jocuri așteaptă o
 scanare să ruleze.
 
@@ -578,14 +705,15 @@ inclusiv pe consolă; ecranele pentru rețea și controlere sunt **Rețea și co
 Primele două controllere sunt afișate ca Jucător 1 și Jucător 2 – porturile pe care emilatorul PS1 le atribuie.
 Orice controller suplimentar este afișat ca neutilizat de emilatorul PS1. RetroArch atribuie controllere
 conform setărilor proprii și le poate ordona diferit. Când un controller este conectat sau deconectat,
-launcher-ul arată pe scurt care pad este Jucător 1 și Jucător 2.
+launcher-ul arată pe scurt care pad este Jucător 1 și Jucător 2. Circle revine la meniu sistem.
 
 ![Informatii Hardware](../images/en/hardware-info.jpg)
 
 ### 4.3 Ghidul butoanelor
 
 Triangle pe raft: fiecare buton din fiecare ecran pe o pagină. Când o tastatură USB este conectată
-sau a fost folosită, o coloană Tastatură arată tastele lângă butoanele pad.
+sau a fost folosită, o coloană Tastatură arată tastele lângă butoanele pad. Două rânduri explică ieșirea dintr-un joc: *Ține apăsat
+Select+Start sau Home 2 secunde: înapoi la AutoBleem* și *Apăsare scurtă Select+Start sau Home: meniul emulatorului*.
 
 ![Ghidul butoanelor](../images/en/button-guide.jpg)
 
@@ -600,6 +728,16 @@ următoarea pagină, **L2 / R2** mută cursorul, Start confirmă, Circle anuleaz
 tastează oricând: Enter confirmă, Esc anulează.
 
 ![Tastatura pe ecran](../images/en/keyboard.jpg)
+
+### 4.5 Gamepad virtual
+
+*Gamepad virtual* din meniu sistem arată gamepad-urile așa cum le vede programul care le deservește. Are trei
+părți: *Controlerele date aplicațiilor*, *Controlerele văzute de daemon* și *Daemon*. Un gamepad poate purta marcajele
+*conectat*, *nu poate fi citit*, *din baza de date a controlerelor*, *ghicit de daemon* sau *driver necunoscut*, iar
+*Caută din nou* citește gamepad-urile încă o dată. O parte pe care versiunea nu o are spune *Nu există în această
+versiune*. Circle revine la meniu sistem.
+
+![Gamepad virtual](../images/en/virtual-gamepad.jpg)
 
 <!-- pagebreak -->
 
@@ -739,6 +877,20 @@ O bară de progres sub fiecare pas arată cât de departe este acțiunea. Instru
 o consolă care rulează alt firmware personalizat (BleemSync, Project Eris): restaurează-o la standard
 mai întâi.
 
+**Autentificarea de pe un PC.** Cu kernel-ul AutoBleem instalat (nu pe o consolă standard) te poți autentifica pe
+consolă printr-un cablu USB:
+
+1. Conectează portul micro-USB al consolei la PC cu un cablu USB. PC-ul arată consola ca un adaptor de rețea nou;
+   adresa consolei este în setările acelui adaptor de pe PC.
+2. Autentifică-te cu `ssh root@<adresa consolei>`. Parola implicită este `autobleem`.
+
+În loc de parolă poți folosi o cheie: pune cheia ta publică în fișierul `System/ssh/authorized_keys` de pe stick și
+repornește consola. La următoarea pornire este adăugată la contul root. Actualizarea sau reinstalarea lansatorului nu o
+elimină.
+
+> **Parola implicită este aceeași pe fiecare consolă**: oricine poate conecta un cablu la ea se poate autentifica ca
+> root. Folosește o cheie unde poți și nu lăsa o consolă cu parola implicită unde alții o pot ajunge.
+
 <!-- pagebreak -->
 
 ## 7. Dacă ceva se duce rău
@@ -752,6 +904,13 @@ mai întâi.
   sunt jurnalele și Square le salvează la `System/Logs/saved-<n>/`. Fișierele: `autobleem.log`
   (lansatorul), `launch.log` și `pcsx.log` (pornirea unui joc PS1 și ieșirea emulatorului), `retroarch.log`,
   și - întotdeauna pe stick - `update.log` (o actualizare online) și `updateroms.log` (UpdateRoms).
+- **Imaginea cere un stick, sau consola a adormit**: nu este niciun stick în consolă, sau a fost scos. Pune-l (în
+  orice port USB; unul din față este cel mai bun, secțiunea 2.1) înainte să treacă cele 5 minute, sau apasă Power.
+  Un stick care nu a fost scos corect este verificat întâi - așteaptă să se termine bara de progres.
+- **RetroArch spune că are nevoie de o bibliotecă de sistem mai nouă decât are consola**: biblioteca proprie a
+  consolei este prea veche pentru acel RetroArch. Folosește RetroArch-ul care vine cu AutoBleem.
+- **Un joc PSN spune că este protejat de licența sa PSN și nu poate fi pornit**: acel joc nu poate rula pe
+  AutoBleem.
 - **Un joc nu este pe raft**: verifică layout-ul folderului (un folder pe joc, formaturile imagine din
   secțiunea 3.9). *Manager Jocuri* listează folderele pe care scanarea le-a refuzat după jocuri, marcate
   *Neadăugat*, cu motiv; Square șterge un folder ca acesta. *Rescaneaza jocurile* din meniu sistem rulează
