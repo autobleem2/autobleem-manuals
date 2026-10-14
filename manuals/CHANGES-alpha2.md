@@ -6,6 +6,10 @@ launcher's `src/resources/lang/English.txt` (translators: use each language's ow
 Section numbers are unchanged; the new section is added after 3.8 as **3.8a** (a number the writer may change as
 long as the old ones keep theirs). Launcher commits are given as short shas.
 
+> **Numbering changed after this list was written.** The manual had two sections numbered 3.7. Now *A game's
+> settings* is 3.7, *Memory cards and save states* is 3.8, and every later section of chapter 3 moved up by one
+> (3.8 -> 3.9, 3.8a -> 3.9a, 3.9 -> 3.10 ... 3.13 -> 3.14). The numbers below are the old ones.
+
 Screenshot marks: **VM** = the PC-stick VM sandbox (`tools/manual_shots.py`) can show it; **CONSOLE** = only a
 PlayStation Classic (or a Pi) can. `manual_shots.py` keeps these as not-here: PSC-Bios, ABFlashKit, LanShare,
 the RetroArch tab (needs RetroArch), `rescan`, `store-sources`.

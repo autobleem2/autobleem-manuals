@@ -25,8 +25,8 @@ game console with a proper menu for your own games. This is what you get:
 - **RetroArch**, if you want games from other systems too - NES, SNES, Mega Drive, Game Boy, arcade machines and
   many more. It is optional on every platform. Copy in your ROMs, and AutoBleem sorts them into lists and starts
   each game with the right core. PlayStation games can run in RetroArch as well; its *PlayStation 1* core is at
-  the top of the core list (section 3.8). Games such as Doom run from your own game files in a `Packages` folder
-  (section 3.9).
+  the top of the core list (section 3.9). Games such as Doom run from your own game files in a `Packages` folder
+  (section 3.10).
 - **The console tools.** *PSC-Bios* - in the menus it is called *Network & Controllers* - sets up WiFi, the
   clock, Bluetooth pads and pad mapping, on the console as well as on a Raspberry Pi and the PC stick.
   *ABFlashKit* installs the AutoBleem kernel on a PlayStation Classic (chapter 6).
@@ -112,7 +112,7 @@ this can take a while; let it finish and do not switch the console off in the me
 **Updating.** To update a stick, run the installer on it again - the button now says *Update*. It installs the
 newest version of the channel you choose; your games, saves, settings and RetroArch content stay, and only
 AutoBleem's own files are replaced. A console with the AutoBleem kernel and WiFi can also update itself
-(section 3.11).
+(section 3.12).
 
 **Upgrading from AutoBleem 1.0 (or AutoBleem-NG).** You use the same installer on the same stick, without
 formatting it:
@@ -129,7 +129,7 @@ formatting it:
 > The stock console has no clock and no network. Dates appear only after the AutoBleem kernel is installed
 > (chapter 6), and box art for RetroArch games comes from UpdateRoms on the PC (chapter 5).
 
-Your PS1 games go into the stick's `Games` folder, one folder per game - section 3.9 explains the layout.
+Your PS1 games go into the stick's `Games` folder, one folder per game - section 3.10 explains the layout.
 
 ### 2.2 Raspberry Pi
 
@@ -187,7 +187,7 @@ the first console.
 
 After the installation you fill the card's **`AUTOBLEEM` partition** (exFAT) with your games: take the card out
 and open it on any PC, or copy over the network (SSH is on). PS1 games go into `Games/`, other systems' ROMs
-into `RetroArch/roms/<system>/`, the PS1 BIOS into `System/Bios/` (section 3.10) and themes into `Themes/`.
+into `RetroArch/roms/<system>/`, the PS1 BIOS into `System/Bios/` (section 3.11) and themes into `Themes/`.
 
 ### 2.3 PC USB stick
 
@@ -212,7 +212,7 @@ first partition, with the same keys as on the Pi (except `hdmi_mode` - a PC alwa
 
 ### 2.4 Windows
 
-If you simply want AutoBleem on your Windows computer, it also runs as an ordinary program: full screen, with
+If you want AutoBleem on your Windows computer, it also runs as an ordinary program: full screen, with
 the emulators and RetroArch started as programs of their own.
 
 1. Download **AutoBleemSetup-<version>.exe** and run it. It installs per user, without administrator
@@ -223,7 +223,7 @@ the emulators and RetroArch started as programs of their own.
 3. Start AutoBleem from the Start Menu or the Desktop. On a PC the keyboard works as a pad (section 3.2).
 
 To update, run a newer setup over it: the program is replaced and your data folder stays as it is. The
-launcher also checks the site once a day and offers an update when there is one (section 3.11).
+launcher also checks the site once a day and offers an update when there is one (section 3.12).
 
 <!-- pagebreak -->
 
@@ -291,10 +291,10 @@ screen tells you, and Triangle on the shelf opens the button guide with every bu
 | Button | On the shelf |
 |---|---|
 | Left / Right | Moves to the previous or next game; hold the button to keep scrolling. |
-| L1 / R1 | Jumps to the previous or next first letter of the titles, so you get through a long shelf quickly. On an empty shelf with a USB drive connected, R1 opens *Disc* (section 3.8a). |
+| L1 / R1 | Jumps to the previous or next first letter of the titles, so you get through a long shelf quickly. On an empty shelf with a USB drive connected, R1 opens *Disc* (section 3.9a). |
 | Cross | Starts the selected game: a PS1 game in the PS1 emulator, a RetroArch game in its core, and an App after its read-me. |
-| Square | Starts the selected PS1 game in RetroArch instead. When a disc in a USB drive is selected, it copies the disc instead (*Copy disc*, section 3.8a). |
-| Circle | Takes you back to the disc view when a disc is in the drive (section 3.8a). |
+| Square | Starts the selected PS1 game in RetroArch instead. When a disc in a USB drive is selected, it copies the disc instead (*Copy disc*, section 3.9a). |
+| Circle | Takes you back to the disc view when a disc is in the drive (section 3.9a). |
 | Triangle | Opens the button guide. |
 | Start | Picks a random game from the current set, for when you cannot decide. |
 | Select | Opens the set picker, where you choose which games the shelf shows (section 3.3). |
@@ -342,7 +342,7 @@ for, plus RetroArch's own Favorites and History.
 **The Apps tab** sorts the applications by type: *All apps*, then *Games*, *Emulators*, *Tools*, *Media* and
 *Other*. Which group an app belongs to is set in its `app.ini` file. This tab also lists the **PE apps**, which
 are Windows programs run by the PE runner; one the console cannot start is marked *cannot run on this console*.
-Where the launcher shows it, a *Packages* row is in the list as well (section 3.9).
+Where the launcher shows it, a *Packages* row is in the list as well (section 3.10).
 
 ### 3.4 The Quick menu
 
@@ -355,7 +355,7 @@ Circle closes the menu. A line under the menu describes the selected item. These
 
 - *Re-scan games* looks for new, changed or removed games straight away - useful when you have just copied
   games in and do not want to wait.
-- *Store* opens the AutoBleem Store, where you browse and install games, apps and extensions (section 3.12).
+- *Store* opens the AutoBleem Store, where you browse and install games, apps and extensions (section 3.13).
 - *RetroArch cores*, where RetroArch is installed, lets you choose the core that plays each system.
 - *Network & Controllers* opens the Wi-Fi, Bluetooth pairing and gamepad mapping screens (chapter 6). It is
   only there when an installed extension provides them - PSC-Bios does, on the console, a Raspberry Pi and the
@@ -380,15 +380,15 @@ look around before you pick one.
 | Section | Item | What it does |
 |---|---|---|
 | (top) | *Re-scan games* | Looks for new, changed or removed games now. The scan also watches the folder by itself, so you need this only when you do not want to wait. |
-| | *Extensions* | Lists the extensions on the stick, such as the AutoBleem Store, so you can run them or switch them off (section 3.12). |
+| | *Extensions* | Lists the extensions on the stick, such as the AutoBleem Store, so you can run them or switch them off (section 3.13). |
 | *Library* | *Game Manager* | Shows the PS1 games as a list with their folders, where you can delete a game or flush the covers (section 4.1). It cannot be opened while a scan is running. |
-| | *Memory Cards* | Manages your shared memory card sets (section 3.7). |
-| | *Scanner processors* | Sets the order of the programs every scan runs first, and switches them on or off (section 3.13). It cannot be opened while a scan is running. |
+| | *Memory Cards* | Manages your shared memory card sets (section 3.8). |
+| | *Scanner processors* | Sets the order of the programs every scan runs first, and switches them on or off (section 3.14). It cannot be opened while a scan is running. |
 | *System* | *Options* | Opens AutoBleem's settings (section 3.6). |
 | | *Network & Controllers* | Opens the Wi-Fi, Bluetooth pad pairing, DualShock 3 setup and gamepad mapping screens (chapter 6). It is there only when an extension provides them - see below. |
 | | *Hardware Information* | Shows the machine's facts - system, CPU, storage, network interfaces, time zone, display, and the pads with their mappings - on the same page on every platform (section 4.2). Circle brings you back to the system menu. |
 | | *Virtual gamepad* | Shows the pads Apps are given and the pads the daemon sees, which helps when a pad does not work in an App (section 4.5). Circle brings you back to the system menu. |
-| | *Software Update* | Checks the site for a newer AutoBleem or RetroArch now, instead of waiting for the daily check (section 3.11). When the launcher already knows of one, the row says *Update available*. On a PlayStation Classic this needs the AutoBleem kernel and a Wi-Fi network. |
+| | *Software Update* | Checks the site for a newer AutoBleem or RetroArch now, instead of waiting for the daily check (section 3.12). When the launcher already knows of one, the row says *Update available*. On a PlayStation Classic this needs the AutoBleem kernel and a Wi-Fi network. |
 | | *About* | Shows the credits and the license. |
 | *Leave* | *RetroArch* | Leaves the launcher for RetroArch's own menu, for its settings and content lists; when you close RetroArch you are back in the launcher. It is there only where RetroArch is installed. |
 | | *Power off* | Switches the machine off after asking you to confirm (see below). |
@@ -445,7 +445,7 @@ RetroArch is installed, the internal games only on a PlayStation Classic.
 | *Library*: *Show internal games:* | Shows the console's built-in games in the PlayStation lists (PlayStation Classic only). |
 | *Clean game names:* | When it is ON (the default), the RetroArch game lists show tidy names, without bracketed tags such as (USA), (Rev 1) or [!]; OFF shows the file names. The file name is still in the game's details. PS1 games are not affected, since their titles come from the database. |
 | *Fetch box art online:* | Lets the scan download missing covers from libretro's servers (Raspberry Pi, PC, Windows). |
-| *Updates*: *Updates:* | Chooses which updates the launcher looks for (section 3.11): `release` (the tested version), `testing` (the next version, being tested), `nightly` (the newest development build) or `off`. The default follows the version you installed. It is not shown on a development host. |
+| *Updates*: *Updates:* | Chooses which updates the launcher looks for (section 3.12): `release` (the tested version), `testing` (the next version, being tested), `nightly` (the newest development build) or `off`. The default follows the version you installed. It is not shown on a development host. |
 | *Diagnostics*: *Keep logs on the stick:* | Keeps every log on the stick from the next start, not only after a crash - switch it on when you are chasing a problem (chapter 7). |
 | *Show performance:* | Shows an overlay in the bottom-left corner with the frame rate, the CPU load, the threads and the memory; in a game the emulator shows its FPS and CPU too. |
 
@@ -466,7 +466,7 @@ in that mode), and a notice tells you: *Theme switched to the default (CRT 4:3)*
 ### 3.7 A game's settings
 
 Every game can have settings of its own. Most games play fine as they are, but now and then one needs a little
-help - a sharper or softer picture, a frame skipped to keep it smooth, a different memory card - or you simply
+help - a sharper or softer picture, a frame skipped to keep it smooth, a different memory card - or you
 want to mark it as a favourite. The game editor is where you change these things for that one game, without
 touching any other.
 
@@ -511,20 +511,20 @@ The picture's shape and the screen's resolution are not set per game but for all
 
 **Other buttons in the editor.** Triangle renames the game, with the on-screen keyboard. Square gives the game
 another memory card (*Change memory card*). While the game still uses its own card, Start turns that card into
-a new shared set, so other games can use it too (*Share memory card*, section 3.7). These two are not offered
+a new shared set, so other games can use it too (*Share memory card*, section 3.8). These two are not offered
 for the console's internal games. Holding Left / Right or
 Up / Down repeats the move here, and also in RetroArch's game options and cores screens.
 
 A drive game that has no `pcsx.cfg` file cannot keep its settings; when you change one, the editor tells you
 *Not saved: this game has no pcsx.cfg*.
 
-For a **disc in the drive** (section 3.8a) some settings make no sense, so the editor greys those rows out, and
+For a **disc in the drive** (section 3.9a) some settings make no sense, so the editor greys those rows out, and
 the line at the bottom says *Not available for a disc in the drive* when you move onto one.
 
 ![The game editor for a disc in the drive](../images/en/game-editor-disc.jpg)
 
 **Settings saved in the emulator.** You can also tune a game while you play it: the emulator's own menu has
-*Save settings for this game* (section 3.8). Once a game has settings saved there, those are the ones it plays
+*Save settings for this game* (section 3.9). Once a game has settings saved there, those are the ones it plays
 with. The game editor then shows its Display, Rendering and Emulator rows greyed out, with the saved values, under
 the heading *Saved in the emulator*, so you can read them but not change them. If you would rather use the game
 editor's settings again, pick *Unlock the settings* and confirm: this deletes the settings the emulator saved,
@@ -533,7 +533,7 @@ settings, so it does not matter which one saved them.
 
 ![The game editor](../images/en/game-editor.jpg)
 
-### 3.7 Memory cards and save states
+### 3.8 Memory cards and save states
 
 On a real PlayStation you would share one or two memory cards between all your games, and run out of room
 sooner or later. In AutoBleem every PS1 game has a memory card of its own by default, so you never need to think
@@ -575,7 +575,7 @@ RetroArch logo - so you can see which emulator wrote it.
 
 ![The resume-slot picker](../images/en/resume-picker.jpg)
 
-### 3.8 Starting games, RetroArch and Apps
+### 3.9 Starting games, RetroArch and Apps
 
 Starting a game is what you will do most, so it takes one button: select the game on the shelf and press
 **Cross**. A PS1 game opens full screen in the PS1 emulator you chose in Options (section 3.6) and plays until you
@@ -584,7 +584,7 @@ RetroArch's options - press **Square** instead.
 
 **Leaving a game.** On the PlayStation Classic the console's own buttons do what you would expect. **Reset** on
 the front takes you back to the launcher and keeps a resume point of where you were, so you can carry on later
-(section 3.7); it works even while the in-game menu is open. **Power** switches the console off. A Raspberry Pi or
+(section 3.8); it works even while the in-game menu is open. **Power** switches the console off. A Raspberry Pi or
 a PC has no such buttons, so there you leave through the emulator's in-game menu, described below.
 
 There is also a way out that works the same on every pad - the console's own, a USB pad or a Bluetooth pad:
@@ -657,7 +657,7 @@ App's name as its title.
 
 ![A question from a PE app, shown as an AutoBleem screen](../images/en/pe-dialog.jpg)
 
-### 3.8a A disc in a USB drive
+### 3.9a A disc in a USB drive
 
 You can connect an ordinary USB CD/DVD drive to the console, a Raspberry Pi or a PC started from the
 AutoBleem stick and play straight from an original PlayStation disc - without copying anything. A disc you
@@ -726,7 +726,7 @@ network: on a Raspberry Pi or a PC the one it already has, on the console the Wi
 For a disc in the drive some of a game's settings make no sense, so its game editor greys those rows out (section
 3.7).
 
-### 3.9 Adding games
+### 3.10 Adding games
 
 AutoBleem finds your games by itself, as long as they are in the right place. This section tells you where each
 kind goes, so that every scan puts them on the shelf with their names and covers.
@@ -744,7 +744,7 @@ Games/
 
 AutoBleem reads the usual disc image formats: `.cue` with its `.bin` (or `.img`), `.pbp`, `.chd` (including
 zstd-compressed ones), `.iso`, and `.ecm`, which the scan decodes for you. A zipped game works too: the **Unzip**
-processor unpacks it before the scan reads it (section 3.13).
+processor unpacks it before the scan reads it (section 3.14).
 
 You do not have to be tidy. A game on several discs belongs in one folder with all its discs, but if you copy in
 folders named `Game (Disc 1)`, `Game (Disc 2)` and so on, the scan merges them into one `Game` folder. Games
@@ -771,7 +771,7 @@ Quake, OpenArena, Heretic, Hexen, Strife, Duke Nukem 3D, Shadow Warrior, Theme H
 this way. Put the game's files into a `Packages` folder on the stick, one folder per game - for example
 `Packages/Doom/DOOM2.WAD` - and AutoBleem recognises them by a table that comes with it (`rc/packages.ini`). In a
 folder it recognises, loose game files are packages of their own. AutoBleem only reads your files and never
-changes them. A package can also come from the Store (section 3.12).
+changes them. A package can also come from the Store (section 3.13).
 
 Where the launcher shows it, the *Packages* row of the Apps tab (section 3.3) lists the game data that was found.
 Cross on an entry opens its **Package info**: what the data contains, a description, where the files are and
@@ -796,7 +796,7 @@ which is quicker than scanning everything, and its bubble goes away when it has 
 **Themes** go under `Themes/<name>/`, with their `theme.json` and their pictures - or drop the theme's zip into
 `Themes/` as it is.
 
-### 3.10 The PS1 BIOS
+### 3.11 The PS1 BIOS
 
 The BIOS is the PlayStation's own start-up program, and the emulator plays games most faithfully with the real
 one. On a **PlayStation Classic** you do not need to do anything: the emulator uses the console's own BIOS. On a
@@ -806,7 +806,7 @@ the RetroArch BIOS packs, unless your own files are already there - they never r
 emulator runs on its built-in HLE BIOS, a stand-in that many games accept and some do not, so if a game will not
 start, a missing BIOS is the first thing to check.
 
-### 3.11 Updates
+### 3.12 Updates
 
 AutoBleem keeps itself up to date, so you get new features and fixes without reinstalling anything. When the
 launcher starts, and once a day after that, it checks the site for a new version on its **channel**. You choose the
@@ -830,7 +830,7 @@ How the update is installed depends on the machine:
   *Software Update* tells you *Not connected*. Any console stick can also be updated from a PC with
   `AutoBleemInstaller.exe` (section 2.1).
 
-### 3.12 Extensions and the AutoBleem Store
+### 3.13 Extensions and the AutoBleem Store
 
 **Extensions** add new things to the launcher - their own screens and features - without changing AutoBleem
 itself. The AutoBleem Store and PSC-Bios are extensions. An extension lives in `Extensions/<name>/` on the stick
@@ -853,7 +853,7 @@ between them.
 
 The **Apps** and **Games** tabs list what the sources offer, each item with its picture, its version, its size and
 the small icon of the source it comes from. The Apps tab also lists PE apps, with their license and source, and
-game-data packages (section 3.9). What you have already installed carries an *Installed* badge. The hint bar shows
+game-data packages (section 3.10). What you have already installed carries an *Installed* badge. The hint bar shows
 the buttons that apply to the selected row:
 
 | Button | In the Apps and Games tabs |
@@ -899,7 +899,7 @@ Linux and Windows are on the Store's page, in its **LAN server** tab, and `INSTA
 in the source) explains how to set it up as a service. **LAN Share** (section 5.2) puts games and discs from a PC
 on such a server.
 
-### 3.13 Scanner processors
+### 3.14 Scanner processors
 
 Scanner processors prepare your games before AutoBleem reads them. A processor is a small program that every scan
 runs first. It can turn a format AutoBleem does not read into one it does - unpacking a zipped game, for example -
@@ -1049,7 +1049,7 @@ does that work on your Windows PC instead: it uses the PC's network but writes e
 console expects, so when you put the stick back, the console starts and finds everything in place. Run it
 whenever you have added or removed RetroArch games on a console stick.
 
-1. Copy your ROMs onto the stick under `RetroArch/roms/<system>/` (section 3.9). The folder names must be
+1. Copy your ROMs onto the stick under `RetroArch/roms/<system>/` (section 3.10). The folder names must be
    RetroArch's database names; the installer has already made the common ones.
 2. Start **`UpdateRoms\UpdateRoms.exe` from the stick** - the installer put it there. It works out by itself
    which stick it is on. While it works you see a line saying what it is doing, a progress bar and a log.
@@ -1069,7 +1069,7 @@ itself when it has a network.
 
 ### 5.2 LAN Share - your games and discs on the server on your network
 
-The Store can install games from a server on your own home network (section 3.12). **LAN Share** is the
+The Store can install games from a server on your own home network (section 3.13). **LAN Share** is the
 Windows program that fills that server from your PC: it puts the PS1 games you have on the PC onto the server,
 and it can read a PS1 disc in the PC's CD/DVD drive and put it there too. The server is an `abstored` running
 on a Raspberry Pi, a NAS or another PC. Once a game is on it, the Store on the console, the Pi or the PC can
@@ -1217,7 +1217,7 @@ to do. If you need to ask for help, the logs are the first thing anyone will ask
 the time. They reach `System/Logs/` on the stick, the card or the data folder only when something went wrong:
 when the launcher, a PS1 game or RetroArch crashes, the logs are saved to `System/Logs/crash-<n>/` (the last
 three crashes are kept), and the launcher tells you once when it comes back. If you are chasing a problem that
-is not a crash, keep every log: switch on *Options -> Diagnostics -> Keep logs on the stick* (it works from the
+is not a crash, keep every log: switch on Options → *Diagnostics* → *Keep logs on the stick* (it works from the
 next start), or create an empty file `System/Logs/keep` from a PC. *Hardware Information* (section 4.2) also
 shows where the logs are, and Square there saves the current ones to `System/Logs/saved-<n>/`.
 
@@ -1243,7 +1243,7 @@ newer system than the console's, so it cannot run there. Use the RetroArch that 
 Network are locked to their license, and AutoBleem cannot run them. There is nothing to fix.
 
 **A game is not on the shelf.** Usually its folder is not laid out the way the scan expects. Check that every
-game has a folder of its own and is in one of the formats of section 3.9. The *Game Manager* (section 4.1) lists
+game has a folder of its own and is in one of the formats of section 3.10. The *Game Manager* (section 4.1) lists
 the folders the scan refused after the games, marked *Not added*, and tells you why each was refused; Square
 deletes such a folder. After fixing a folder, *Re-scan games* in the system menu runs the scan again.
 
@@ -1252,11 +1252,11 @@ ticked - or, for RetroArch games on a console, UpdateRoms has not been run on th
 
 **A pad does nothing, or its buttons are mixed up.** AutoBleem does not know that pad's layout. On a console,
 map it with PSC-Bios's gamepad wizard (section 6.1). On a Pi or a PC, the Hardware Information page (section
-4.2) shows what SDL sees of the pad, which helps you tell whether it is detected at all.
+4.2) shows what the system sees of the pad, which helps you tell whether it is detected at all.
 
 **The screen stays black after a game on the console.** The launcher's picture did not come back when the game
-ended. AutoBleem rebuilds its window by itself, up to three times. If the screen still stays black, hold the Power button and
-switch the console on again.
+ended. AutoBleem rebuilds its window by itself, up to three times. If the screen still stays black, hold the
+Power button and switch the console on again.
 
 **On a Raspberry Pi** you can get behind the launcher when you need to: `Alt+F2` gives you a login prompt on
 the second console, and SSH is on from the first start. `sudo journalctl -u autobleem` shows what the

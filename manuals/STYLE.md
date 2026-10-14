@@ -35,7 +35,7 @@ sentence. Read your paragraph aloud: if it sounds translated, rewrite it.
 
 ## A model paragraph
 
-> ### 3.8a A disc in a USB drive
+> ### 3.9a A disc in a USB drive
 >
 > You can connect an ordinary USB CD/DVD drive to the console, a Raspberry Pi or a PC started from the
 > AutoBleem stick and play straight from an original PlayStation disc - without copying anything. A disc you
