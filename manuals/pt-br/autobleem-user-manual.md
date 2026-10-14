@@ -81,7 +81,7 @@ iniciar também por um pendrive em exFAT, e você se livra do limite de 4 GB por
 4. Remova o pendrive com segurança, conecte-o à **segunda porta USB da frente** do console (a da direita, do
    jogador 2), deixando a primeira livre para o seu controle, e ligue o console. No lugar do menu original, o
    AutoBleem é que vai aparecer. Para um segundo controle, use um hub USB na porta da frente ou um controle
-   Bluetooth. Não coloque o pendrive na porta micro-USB de trás (o motivo está mais abaixo).
+   Bluetooth.
 
 **Ligar e desligar.** Com o pendrive conectado, o console liga, pisca a luz por alguns segundos enquanto detecta o
 AutoBleem e entra em espera antes de aparecer qualquer coisa na tela. Isso é normal: o AutoBleem inicia pelo
@@ -96,10 +96,8 @@ verificá-lo, porque ele foi desconectado do jeito certo. Coloque-o de volta ant
 o cabo de energia do console da tomada, na próxima vez ele passa de novo pela espera da inicialização. Luz
 **vermelha** quer dizer que o console está realmente desligado.
 
-**Use uma porta USB da frente para o pendrive.** A porta micro-USB de trás é a da alimentação. Com o kernel do
-AutoBleem ela também aceita um dispositivo USB, mas qualquer coisa ligada ali impede o console de entrar em
-espera: com um pendrive ou um hub nela, o console desliga por completo em vez de ficar em espera, e aí o Power
-precisa iniciá-lo do zero, o que demora mais.
+**A porta de trás.** A porta micro-USB de trás é a entrada de alimentação do console. Com o kernel do AutoBleem
+ela também aceita um dispositivo USB, mas o lugar do pendrive é numa porta da frente.
 
 **Se o pendrive não estiver lá.** Se o console ligar sem o pendrive, ou se você tirar o pendrive com o AutoBleem
 rodando, aparece uma imagem pedindo para você colocá-lo, em qualquer porta USB. O AutoBleem espera 5 minutos e

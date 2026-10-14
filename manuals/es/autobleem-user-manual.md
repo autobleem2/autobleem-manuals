@@ -83,7 +83,7 @@ una memoria en exFAT, y así te libras del límite de FAT32 de 4 GB por archivo.
 4. Extrae la memoria de forma segura y conéctala al **segundo puerto USB frontal** de la consola (el de la
    derecha, el del jugador 2); el primero queda libre para tu mando. Enciende la consola y, en lugar del menú
    original, arrancará AutoBleem. Para un segundo mando, usa un hub USB en el puerto frontal o un mando
-   Bluetooth. No conectes la memoria al puerto micro-USB de atrás (más abajo te explicamos por qué).
+   Bluetooth.
 
 **Encender y apagar.** Con la memoria puesta, la consola se enciende, hace parpadear su luz durante unos segundos
 mientras detecta AutoBleem y pasa a reposo antes de que salga nada en pantalla. Es normal: AutoBleem arranca
@@ -98,10 +98,8 @@ desconectó como es debido. Vuelve a ponerla antes de pulsar Power. Si desenchuf
 consola, la próxima vez pasará otra vez por el reposo del arranque. Si la luz está **roja**, la consola está
 apagada del todo.
 
-**Usa un puerto USB frontal para la memoria.** El puerto micro-USB de atrás es el de la alimentación. Con el
-kernel de AutoBleem también admite un dispositivo USB, pero cualquier cosa que conectes ahí impide que la consola
-entre en reposo: con una memoria o un hub en ese puerto, la consola se apaga del todo en lugar de quedarse en
-reposo, y al pulsar Power tiene que arrancar desde cero, lo que tarda más.
+**El puerto de atrás.** El puerto micro-USB de atrás es la toma de alimentación de la consola. Con el kernel de
+AutoBleem también admite un dispositivo USB, pero el sitio de la memoria es un puerto frontal.
 
 **Si falta la memoria.** Si la consola arranca sin memoria, o la sacas mientras AutoBleem está en marcha, aparece
 una imagen que te pide que la conectes; vale cualquier puerto USB. AutoBleem espera 5 minutos y después pone la

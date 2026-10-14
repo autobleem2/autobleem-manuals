@@ -82,7 +82,7 @@ exFAT, ce qui supprime la limite de 4 Go par fichier propre au FAT32.
 4. Éjectez proprement la clé, branchez-la sur le **deuxième port USB en façade** de la console (celui de droite,
    le joueur 2) - le premier reste libre pour votre manette - et allumez la console. C'est AutoBleem qui démarre à la
    place du menu d'origine. Pour une deuxième manette, passez par un hub USB sur le port en façade ou utilisez une
-   manette Bluetooth. Ne branchez pas la clé sur le port micro-USB à l'arrière (voir plus bas).
+   manette Bluetooth.
 
 **Allumer et éteindre.** Clé branchée, la console démarre, fait clignoter son voyant quelques secondes le temps de
 repérer AutoBleem, puis se met en veille avant que quoi que ce soit n'apparaisse à l'écran. C'est normal : AutoBleem
@@ -97,10 +97,8 @@ de la vérifier, puisqu'elle a été déconnectée correctement. Remettez-la en 
 débranchez le câble d'alimentation de la console, elle repassera par la veille du démarrage la fois suivante. Un
 voyant **rouge** signifie que la console est vraiment éteinte.
 
-**Branchez la clé sur un port USB en façade.** Le port micro-USB à l'arrière est celui de l'alimentation. Avec le
-noyau AutoBleem, il accepte aussi un périphérique USB, mais tout ce qui y est branché empêche la console de se
-mettre en veille : avec une clé ou un hub sur ce port, la console s'éteint complètement au lieu de passer en veille,
-et Power doit alors la redémarrer de zéro, ce qui prend plus de temps.
+**Le port à l'arrière.** Le port micro-USB à l'arrière est la prise d'alimentation de la console. Avec le noyau
+AutoBleem, il accepte aussi un périphérique USB, mais la place de la clé est sur un port en façade.
 
 **Si la clé est absente.** Quand la console démarre sans clé, ou si vous retirez la clé pendant qu'AutoBleem tourne,
 une image vous demande de la brancher - n'importe quel port USB fera l'affaire. AutoBleem attend 5 minutes, puis

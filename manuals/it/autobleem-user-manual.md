@@ -77,7 +77,7 @@ una chiavetta exFAT, e sparisce così il limite di 4 GB per file del FAT32.
 4. Rimuovi la chiavetta in modo sicuro, inseriscila nella **seconda porta USB frontale** della console (quella a
    destra, del giocatore 2) - la prima resta libera per il controller - e accendi la console. Al posto del menu
    originale parte AutoBleem. Per un secondo controller usa un hub USB sulla porta frontale oppure un controller
-   Bluetooth. Non inserire la chiavetta nella porta micro-USB sul retro (vedi più avanti).
+   Bluetooth.
 
 **Accensione e spegnimento.** Con la chiavetta inserita la console si accende, fa lampeggiare la spia per qualche
 secondo mentre riconosce AutoBleem e poi va in standby prima che sullo schermo compaia qualcosa. È normale: AutoBleem
@@ -92,10 +92,8 @@ scollegata correttamente. Rimettila al suo posto prima di premere Power. Se stac
 console, la volta successiva ripasserà dallo standby dell'avvio. Una spia **rossa** vuol dire che la console è spenta
 davvero.
 
-**Usa una porta USB frontale per la chiavetta.** La porta micro-USB sul retro è quella dell'alimentazione. Con il
-kernel di AutoBleem accetta anche un dispositivo USB, ma qualsiasi cosa vi colleghi impedisce alla console di andare
-in standby: con una chiavetta o un hub su quella porta, la console si spegne del tutto invece di andare in standby, e
-Power deve poi riavviarla da zero, il che richiede più tempo.
+**La porta sul retro.** La porta micro-USB sul retro è la presa di alimentazione della console. Con il kernel di
+AutoBleem accetta anche un dispositivo USB, ma il posto della chiavetta è in una porta frontale.
 
 **Se manca la chiavetta.** Quando la console si avvia senza chiavetta, o quando la estrai mentre AutoBleem è in
 funzione, un'immagine ti chiede di inserirla - va bene qualsiasi porta USB. AutoBleem aspetta 5 minuti e poi manda la
