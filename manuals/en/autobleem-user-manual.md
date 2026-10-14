@@ -577,98 +577,162 @@ RetroArch logo - so you can see which emulator wrote it.
 
 ### 3.8 Starting games, RetroArch and Apps
 
-**Cross** starts the selected game. A PS1 game runs in the chosen PS1 emulator (section 3.6), full screen,
-until you leave it - on the console with the front **Reset** button (back to the launcher with a resume
-point; it works from inside the in-game menu too) or **Power** (the console turns off); on a Pi or PC through the emulator's in-game
-menu (below). **Square** starts a PS1 game in RetroArch instead.
+Starting a game is what you will do most, so it takes one button: select the game on the shelf and press
+**Cross**. A PS1 game opens full screen in the PS1 emulator you chose in Options (section 3.6) and plays until you
+leave it. If you would rather play a PS1 game in RetroArch - because it runs better there, or because you like
+RetroArch's options - press **Square** instead.
 
-**The way out of a game** is the same on every pad - the console's, a USB pad, a Bluetooth pad: **hold
-Start + Select, or Home, for 2 seconds** (*Hold Select+Start or Home for 2 seconds: back to AutoBleem*). A short press
-of Select + Start or Home opens the emulator's menu (*Short press of Select+Start or Home: the emulator's menu*); an
-App has no such menu, only the hold works. On the console, **Reset** always stops an App as well.
+**Leaving a game.** On the PlayStation Classic the console's own buttons do what you would expect. **Reset** on
+the front takes you back to the launcher and keeps a resume point of where you were, so you can carry on later
+(section 3.7); it works even while the in-game menu is open. **Power** switches the console off. A Raspberry Pi or
+a PC has no such buttons, so there you leave through the emulator's in-game menu, described below.
 
-**The in-game menu** (`pcsx-abnxt`). Press the menu button - the pad's Home, **Select + Start** on a pad without
-one, or **Esc** on a keyboard - and the game stops behind a menu with the game's last picture. **Holding the menu button for 2 seconds** is the same as
-Reset: it leaves the game. L1 / R1 switch between its three tabs, and the menu opens on the tab and row it
-was left on:
+There is also a way out that works the same on every pad - the console's own, a USB pad or a Bluetooth pad:
+**hold Start + Select, or Home, for 2 seconds**, and you are back in AutoBleem. A short press of the same buttons
+opens the emulator's menu instead. The launcher reminds you of both in its hints (*Hold Select+Start or Home for
+2 seconds: back to AutoBleem* and *Short press of Select+Start or Home: the emulator's menu*). An App has no
+emulator menu, so there only the long hold does anything. On the console, Reset always stops an App as well.
 
-- **Game**: *Resume game*; under *Saves*: *Quick save*, *Quick load* and *Load autosave* (the game as it was up to 30 seconds ago -
-  the emulator saves it in memory while you play); under *CD disc*: *Change disc* and *Reset game* (starts it over);
-  *Save settings for this game* (see section 3.7), *PCSX menu* (PCSX-ReARMed's own pages: options, cheats, About) and *Exit* (back to AutoBleem).
-- **Picture**: *Display* (the screen's resolution - on the console it is chosen in Options and only shown here), *Resolution*
-  (1x or 2x), *Remove seams*, *Dithering*, *Scaling*, *Smoothing*, *Filter*, *Scanlines* and *Scanline brightness*. Each row has a help line on
-  the right. CRT-Pi is too heavy for the console at 1080p. A row that does not apply is greyed, and its help says why.
-- **Controllers**: *Controller 1* and *Controller 2*: standard (digital), analog (DualShock), a gun or none; takes effect when the game goes on.
+**The in-game menu.** With `pcsx-abnxt` the emulator has a menu of its own for the things you want while you play:
+saving, changing discs, adjusting the picture, choosing the controllers. Press the menu button - Home on a pad
+that has one, **Select + Start** on a pad without it, or **Esc** on a keyboard - and the game pauses behind the
+menu, with its last picture in the background. Holding the menu button for 2 seconds does the same as Reset: it
+leaves the game. The menu has three tabs, and L1 and R1 move between them. It remembers where you were, so the
+next time it opens on the same tab and row.
 
-The menu is drawn in the launcher's ab2.0.0 look, with the pad batteries and the last quick save's picture.
+- The **Game** tab is about the game itself. *Resume game* closes the menu and lets you play on. Under *Saves*,
+  *Quick save* keeps the moment you are in and *Quick load* brings it back. *Load autosave* takes you back to how
+  the game was up to 30 seconds ago - the emulator keeps that copy in memory while you play, which rescues you
+  from a mistake you cannot undo. Under *CD disc*, *Change disc* is for a game on several discs when it asks for
+  the next one, and *Reset game* starts the game over. *Save settings for this game* keeps the settings you have
+  chosen for this one game (section 3.7). *PCSX menu* opens PCSX-ReARMed's own pages, with its options, cheats
+  and About, and *Exit* takes you back to AutoBleem.
+- The **Picture** tab lets you change how the game looks while you watch it: *Display*, *Resolution* (1x or 2x),
+  *Remove seams*, *Dithering*, *Scaling*, *Smoothing*, *Filter*, *Scanlines* and *Scanline brightness*. They are
+  the same settings as in the game editor (section 3.7), and every row has a help line on the right that says
+  what it does. *Display* is the screen's resolution; on the console you choose it in Options, and here it is only
+  shown. The CRT-Pi filter is too heavy for the console at 1080p. A row that does not apply is greyed out, and its
+  help line tells you why.
+- The **Controllers** tab decides what is plugged into the PlayStation's two ports, *Controller 1* and
+  *Controller 2*: a standard (digital) pad, an analog pad (DualShock), a gun, or nothing. Some games only work
+  with one kind of pad. The change takes effect when you go back to the game.
 
-A **RetroArch** game starts in RetroArch with the core the launcher chose for its system; *Close Content*
-or *Quit RetroArch* in its menu comes back to the launcher. The RetroArch item in the system menu opens
-RetroArch's own menu (XMB) with nothing loaded, for its settings and its own content lists. The cores window
-opens with *PlayStation 1* first.
+The menu is drawn in the launcher's own ab2.0.0 look, so it does not feel like a different program, and it
+shows your pad batteries and the picture of your last quick save.
 
-![The RetroArch cores window](../images/en/retroarch-cores.jpg)
+**RetroArch games.** A game from another system starts in RetroArch, with the core the launcher chose for its
+system. When you have finished, *Close Content* or *Quit RetroArch* in RetroArch's menu brings you back to the
+launcher. If you want to change which core plays a system, open *RetroArch cores* in the Quick menu (section
+3.4); the list opens with the *PlayStation 1* core at the top. And if you want RetroArch's own menu (the XMB) for
+its settings and its own content lists, choose *RetroArch* in the system menu: RetroArch then opens with nothing
+loaded.
 
-An **App** (the Apps set: the console tools, and on a console the extra applications RetroArch's package
-brings - Doom, Quake, Amiga, ...) shows its read-me first; Cross starts it, Circle goes back.
+![The RetroArch cores window, with the PlayStation 1 core at the top](../images/en/retroarch-cores.jpg)
 
-![An App's read-me before it starts](../images/en/app-start.jpg)
+**Apps.** Apps are programs rather than games: the console tools and, on the console, the extra applications
+that come with RetroArch's package - Doom, Quake, Amiga and more. You find them in the Apps set. Before an App
+starts, AutoBleem shows its read-me, so you know what it is and how it is controlled. Cross starts it, and
+Circle takes you back to the shelf.
 
-**An App's settings.** *Game settings* ("Change how this program is started") has *Pad mode:* (*Automatic*,
-*PSC pad*, *Xbox 360 pad*, *PSC pad (system)*, *Xbox 360 pad (system)*), *D-pad as stick:* and *Stick as D-pad:*.
-Some Apps ask once, on the first start, *Which controls does your pad have?* (*One D-pad* or *Analog sticks*);
-a Windows-type App asks *What do you want to do?* (*Run Windows*, *Install Windows*, *Run DOS*, *Uninstall
-Windows*). To map a key the screen says *Press one of the buttons.*
+![An App's read-me, shown before the App starts](../images/en/app-start.jpg)
+
+**An App's settings.** Many Apps were written for one particular pad, so you can change how they see yours.
+Select the App, open the icon row and choose *Game*: the App's *Game settings* open (*Change how this program is
+started*). *Pad mode:* decides which pad the App is told it has. *Automatic* uses what the App itself asks for;
+*PSC pad* and *Xbox 360 pad* present your pad as the console's pad or as an Xbox 360 pad, and *PSC pad (system)*
+and *Xbox 360 pad (system)* do the same through the system itself. Try another mode when an App does not react
+to your pad as it should. *D-pad as stick:* lets the d-pad move the analog stick, for an App that only listens to
+the stick, and *Stick as D-pad:* does the opposite.
+
+Some Apps ask you a question the first time you start them. One wants to know *Which controls does your pad
+have?*, so it can set up its controls: answer *One D-pad* for a pad with only the d-pad, or *Analog sticks*. An
+App that runs Windows asks *What do you want to do?* and offers to run Windows, install it, run DOS or uninstall
+Windows. When an App lets you set a key, it asks you to *Press one of the buttons.*
 
 ![An App's game settings](../images/en/app-game-settings.jpg)
 
-The texts and questions a Windows program (a PE app) asks appear as AutoBleem screens (*Message*, *Choose an
-option*), titled with the App's name.
+A Windows program run by the PE runner (a PE app, section 3.3) talks to you through AutoBleem's own screens: a
+message it wants to show appears as *Message*, and a question with choices as *Choose an option*, each with the
+App's name as its title.
 
-![A question from a PE app](../images/en/pe-dialog.jpg)
+![A question from a PE app, shown as an AutoBleem screen](../images/en/pe-dialog.jpg)
 
 ### 3.8a A disc in a USB drive
 
-A USB CD/DVD drive with a PlayStation or audio disc in it puts that disc on the shelf as a game. Not on
-Windows, which has no drive support.
+You can connect an ordinary USB CD/DVD drive to the console, a Raspberry Pi or a PC started from the
+AutoBleem stick and play straight from an original PlayStation disc - without copying anything. A disc you
+put in appears in the launcher like one more game. This does not work on Windows.
 
-- **The disc view** opens by itself when a disc is detected; R1 *Disc* opens it from the shelf. It shows
-  the disc's cover (from the cover databases, or fetched online), its serial and its title. Cross plays the
-  disc. A PS1 game played from the disc resumes and saves into the disc's folder. After a game, the options or
-  an extension's settings, you are back in the disc view; Circle on the shelf brings it back, and there R1 is the
-  first-letter jump again.
-- **The drive chip** shows the drive's state: hidden with no drive, dim with a drive and no disc,
-  blinking *Reading the disc...* while it reads, then the disc's title. Other messages are *This is not a
-  PlayStation disc* and *The disc cannot be read now*.
+**Copying a disc to the stick.** If you want the game always at hand, without the disc, press Square
+(*Copy disc*). AutoBleem first asks whether to copy the game and how much room it will take, then saves it in
+the `Games` folder as a single CHD file (a game on several discs also gets an `.m3u` file, so changing discs
+works in the game). While it copies you see the speed and the time left, and *Abort* stops it. When it is
+done, the game is on the shelf like any other. AutoBleem will not copy a game that is already in `Games`, or
+one there is no room for - it then tells you how much room it needs. A scratched disc can be copied too: the
+parts that could not be read are filled with zeros, and AutoBleem tells you how many there were. Such a copy
+may or may not work.
 
-![The disc view](../images/en/disc-view.jpg)
-
-![The drive chip](../images/en/disc-chip.jpg)
-
-- **An audio CD** opens the **CD player** (*CD PLAYER*, *Audio CD*, with *TRACKS* and *TOTAL TIME*). Its keys
-  are *Play track*, *Stop*, *Previous/next*, *Seek*, *Pause*, *Repeat:* (off or on) and *Shuffle:*, and *Selected:*
-  names the track. A disc that does not play says *This disc cannot be played*.
-
-![The CD player](../images/en/cd-player.jpg)
-
-- **Copy disc** (Square) copies a PlayStation disc to `Games` as a **CHD**, with a `.m3u` file for a game on
-  several discs (disc 1 first). It asks first: *Copy "%1" to %2? It takes %3 of the %4 free.* A progress
-  window, *Copying the disc*, shows the *Speed* and the *Time left* and blocks the launcher; *Abort* cancels
-  it (*Cancelling...*, then *Cancelled*). At the end it says *The disc is copied to Games.* It refuses with
-  *Already in Games: %1*, *Not enough room in Games: the copy needs %1, %2 is free.* or *The copy failed: %1*. Sectors
-  that cannot be read are written as zeros, and the message *%1 sectors could not be read and were written as zeros.* tells
-  you how many (*Unreadable sectors*). A disc the databases do not know is named by its serial.
+Square offers the copy for every PlayStation game disc in the disc view, also for one the cover databases do not
+know. A game the databases know is copied under its title; for a game on several discs, copy the discs one after
+another, and the `.m3u` lists them in order, disc 1 first. A disc the databases do not know is named by its
+serial instead, is copied as a single disc, and has no cover on the shelf. The copy window, *Copying the disc*,
+stays on the screen until the copy is finished or stopped - the launcher waits meanwhile - and shows the speed
+as a multiple of an ordinary CD drive. If the copy fails, AutoBleem tells you why.
 
 ![Copying a disc](../images/en/disc-copy.jpg)
 
-- **LibCrypt discs**: the `.sbi` file of a LibCrypt game is fetched from the site before the disc plays and
-  when it is copied. That needs a network: on a Raspberry Pi or PC the one it already has, on the console the
-  Wi-Fi set up in PSC-Bios.
-- The game editor of a disc greys the rows it cannot use (section 3.7).
+**Playing from the disc.** When you put a disc in, the **disc view** opens by itself as soon as the disc has
+been read. It shows the disc's cover - from the cover databases, or fetched online - with its serial and its
+title, and Cross starts the game. A PS1 game played from the disc keeps its resume points and saves in a folder of
+its own, so you can stop and carry on later just as with a game on the stick. After the game, or after you have
+been in the options or an extension's settings, you come back to the disc view. If you leave it with Circle to
+browse your other games, the disc stays in the drive and Circle on the shelf brings the view back; on an empty
+shelf, R1 (*Disc*) opens it too. On a shelf with games R1 keeps its usual job of jumping between first letters.
+When you take the disc out, the disc view closes.
+
+![The disc view](../images/en/disc-view.jpg)
+
+**The drive chip** at the top of the screen tells you what the drive is doing, so you know whether to wait. With
+no drive connected you see nothing. A drive with no disc in it shows a dim disc icon. While a disc is being read,
+the icon blinks and says *Reading the disc...*, and once it is ready the icon lights up with the disc's title. If
+you put in a disc that is not a PlayStation game or an audio CD, the chip says *This is not a PlayStation disc*,
+and if the drive cannot read the disc at the moment, it says *The disc cannot be read now*.
+
+![The drive chip](../images/en/disc-chip.jpg)
+
+**Audio CDs.** The drive plays music CDs too. An audio CD opens the **CD player** instead of the disc view. It
+shows the disc as an *Audio CD* with its list of tracks and its total time, and the line under it names the
+selected track and says whether repeat and shuffle are on. A disc the player cannot play is marked *This disc
+cannot be played*. These are its buttons:
+
+| Button | In the CD player |
+|---|---|
+| Cross | Plays the selected track. |
+| Start | Pauses the music, and starts it again. |
+| Square | Stops the music. |
+| L1 / R1 | Go to the previous or the next track. |
+| L2 / R2 | Wind back or forward through the track, five seconds at a time. |
+| Triangle | Changes what repeats: nothing, the whole disc, or the current track. |
+| Select | Switches shuffle on or off, so the tracks play in a random order. |
+| Circle | Leaves the CD player. |
+
+![The CD player](../images/en/cd-player.jpg)
+
+**LibCrypt discs.** Some PlayStation games, most of them European, carry a copy protection called LibCrypt. To
+run them, the emulator needs a small `.sbi` file with the protection's data. AutoBleem fetches that file from the
+site by itself before such a disc plays and when you copy it, and it is copied with the game. For this it needs a
+network: on a Raspberry Pi or a PC the one it already has, on the console the Wi-Fi you set up in PSC-Bios.
+
+For a disc in the drive some of a game's settings make no sense, so its game editor greys those rows out (section
+3.7).
 
 ### 3.9 Adding games
 
-**PS1 games** go into the `Games` folder, **one folder per game**, named after the game:
+AutoBleem finds your games by itself, as long as they are in the right place. This section tells you where each
+kind goes, so that every scan puts them on the shelf with their names and covers.
+
+**PS1 games** go into the `Games` folder, **one folder per game**, named after the game. You can also group games
+into folders of your own, and each such folder becomes a group in the set picker (section 3.3):
 
 ```
 Games/
@@ -678,131 +742,199 @@ Games/
     Klonoa/                   Klonoa.pbp
 ```
 
-- Formats: `.cue` + `.bin` (or `.img`), `.pbp`, `.chd` (zstd too), `.ecm` (decoded by the scan), `.iso`.
-  A zipped game works too: the **Unzip** processor unpacks it before the scan (section 3.13).
-- A multi-disc game is one folder with every disc in it; folders named `Game (Disc 1)`, `Game (Disc 2)`
-  ... are merged into one `Game` folder by the scan.
-- Games dropped straight into `Games/` (loose files) are sorted into folders by the scan.
-- A **cover** is a PNG or JPEG next to the game's image, named like it. Without one, the box art comes from the
-  cover databases, or - with RetroArch installed - from libretro's thumbnail set; on a Pi, a PC or Windows
-  a missing one is fetched online (Options → *Fetch box art online*).
-- The scan reads each disc's serial number and takes the title, publisher, year, players and region from
-  RetroArch's PlayStation database or the cover databases. Change anything in the game editor and tick
-  *Lock data* to keep it.
+AutoBleem reads the usual disc image formats: `.cue` with its `.bin` (or `.img`), `.pbp`, `.chd` (including
+zstd-compressed ones), `.iso`, and `.ecm`, which the scan decodes for you. A zipped game works too: the **Unzip**
+processor unpacks it before the scan reads it (section 3.13).
 
-**Other systems** go under `RetroArch/roms/`, **one folder per system, named as RetroArch's databases
-are** (the folder is made for you): `Nintendo - Nintendo Entertainment System`, `Nintendo - Super Nintendo
-Entertainment System`, `Sega - Mega Drive - Genesis`, `Nintendo - Game Boy Advance`, `FBNeo - Arcade Games`
-(or `Arcade`), ... ROMs may stay zipped. On a Pi, a PC or Windows the scan reads them by itself and writes
-RetroArch's play lists; on a console stick, run **UpdateRoms** on the PC (chapter 5).
+You do not have to be tidy. A game on several discs belongs in one folder with all its discs, but if you copy in
+folders named `Game (Disc 1)`, `Game (Disc 2)` and so on, the scan merges them into one `Game` folder. Games
+dropped straight into `Games/` as loose files are sorted into folders of their own by the scan as well.
 
-**Apps** go under `Apps/<name>/` with an `app.ini` (the name, the icon, what to run) and a `run.sh`.
+**Names and covers** come by themselves. The scan reads each disc's serial number and takes the title, the
+publisher, the year, the number of players and the region from RetroArch's PlayStation database or from the cover
+databases. If you want your own cover, put a PNG or JPEG next to the game's image, with the same name. Without one,
+the box art comes from the cover databases or, with RetroArch installed, from libretro's thumbnail set; on a
+Raspberry Pi, a PC or Windows a missing cover is fetched online (Options → *Fetch box art online*). If the scan
+gets something wrong, correct it in the game editor and switch on *Lock data*, so the next scan keeps your change.
 
-**Packages.** Game data for engines - Doom, Quake, OpenArena, Heretic, Hexen, Strife, Duke Nukem 3D, Shadow
-Warrior, Theme Hospital, DOS games and more - goes into a `Packages` folder on the stick, for example
-`Packages/Doom/DOOM2.WAD`. AutoBleem recognises the data by a table that ships with it (`rc/packages.ini`); the loose
-game files of a recognised folder are packages of their own. Your own files are only read, never changed. A package
-can also come from the Store. The **Packages picker** lists what was found. **Package info** shows a package's
-*Contents*, *Description*, *Location*, *Source*, *Runs with*, *Mod*, *Shareware*, *In this App* and *Your files*,
-and *Choose game data* picks the data to start with. The messages are *No game data found*, *Unknown data*, *Nothing
-installed runs this*, *%1 needs game data it can run: %2.* and *Not recognized. If this is a game, see the manual:
-Your own games.*
+**Other systems' games** go under `RetroArch/roms/`, **one folder per system, named the way RetroArch's databases
+name it** - for example `Nintendo - Nintendo Entertainment System`, `Nintendo - Super Nintendo Entertainment
+System`, `Sega - Mega Drive - Genesis`, `Nintendo - Game Boy Advance` or `FBNeo - Arcade Games` (or `Arcade`). The
+folders are made for you, and the ROMs may stay zipped. On a Raspberry Pi, a PC or Windows the scan reads them
+by itself and writes RetroArch's playlists. A console stick cannot do this alone, so there you run **UpdateRoms**
+on the PC (chapter 5).
 
-![The Packages picker](../images/en/packages-picker.jpg)
+**Apps** go under `Apps/<name>/`, each with an `app.ini` - its name, its icon and what to run - and a `run.sh`.
+
+**Packages.** Some Apps are game engines: they need the data of a game you own before they can play it. Doom,
+Quake, OpenArena, Heretic, Hexen, Strife, Duke Nukem 3D, Shadow Warrior, Theme Hospital, DOS games and more work
+this way. Put the game's files into a `Packages` folder on the stick, one folder per game - for example
+`Packages/Doom/DOOM2.WAD` - and AutoBleem recognises them by a table that comes with it (`rc/packages.ini`). In a
+folder it recognises, loose game files are packages of their own. AutoBleem only reads your files and never
+changes them. A package can also come from the Store (section 3.12).
+
+Where the launcher shows it, the *Packages* row of the Apps tab (section 3.3) lists the game data that was found.
+Cross on an entry opens its **Package info**: what the data contains, a description, where the files are and
+where they came from (your own files, the Store, a mod, or files that come inside an App), whether it is shareware
+or free, and which installed App runs it. If nothing you have installed can run it, the info tells you so.
+
+When you start an engine App, AutoBleem looks for game data it can run. With one set of data the game starts at
+once. With several, a list (*Choose game data*) asks which one to play, and it starts on the one you chose last
+time. If there is none, AutoBleem tells you which data the App needs and where to put it, and nothing starts.
+
+**Your own games.** When AutoBleem does not recognise some data, its Package info says *Not recognized. If this is
+a game, see the manual: Your own games.* The table only knows the games it was made for. For another one, write a
+row for it in a `packages.ini` of your own in the `Packages` folder: AutoBleem reads yours first, so your rows win.
+
+![The Packages picker, where you choose the game data to start with](../images/en/packages-picker.jpg)
 
 ![Package info](../images/en/package-info.jpg)
 
-**Scanning one part.** *Re-scan games* can scan just one part - a set or a folder - and takes its bubble down at
-the end.
+**Scanning one part.** If you have only added games to one set or folder, *Re-scan games* can scan just that part,
+which is quicker than scanning everything, and its bubble goes away when it has finished.
 
-**Themes** go under `Themes/<name>/` (`theme.json` and the images) - or drop the theme's zip into `Themes/`.
+**Themes** go under `Themes/<name>/`, with their `theme.json` and their pictures - or drop the theme's zip into
+`Themes/` as it is.
 
 ### 3.10 The PS1 BIOS
 
-On a **PlayStation Classic** the emulator uses the console's own BIOS. On a **Raspberry Pi, a PC and
-Windows** put your own PS1 BIOS into `System/Bios/`: `romw.bin` (the US/European SCPH-5501/5502) and
-`romJP.bin` (the Japanese SCPH-5500). The installers fill them from the RetroArch BIOS packs unless your
-own files are already there. Without them the emulator runs on its built-in HLE BIOS, which many games
-tolerate and some do not.
+The BIOS is the PlayStation's own start-up program, and the emulator plays games most faithfully with the real
+one. On a **PlayStation Classic** you do not need to do anything: the emulator uses the console's own BIOS. On a
+**Raspberry Pi, a PC and Windows** put your own PS1 BIOS files into `System/Bios/`: `romw.bin` (the US/European
+SCPH-5501/5502) and `romJP.bin` (the Japanese SCPH-5500, used for Japanese games). The installers fill these in from
+the RetroArch BIOS packs, unless your own files are already there - they never replace yours. Without them the
+emulator runs on its built-in HLE BIOS, a stand-in that many games accept and some do not, so if a game will not
+start, a missing BIOS is the first thing to check.
 
 ### 3.11 Updates
 
-The launcher checks the site at start and once a day for a new version on its **channel** (Options →
-*Updates*: `release`, `testing`, `nightly` or `off`); *Software Update* in the system menu checks now. When
-there is one it asks: *Update now* downloads it, *Remind me tomorrow* and *Skip this version* are the other
-answers. Your games, saves and settings always stay; the launcher rescans once after an update. The channel
-tag in the top-left corner (section 3.1) shows what is installed.
+AutoBleem keeps itself up to date, so you get new features and fixes without reinstalling anything. When the
+launcher starts, and once a day after that, it checks the site for a new version on its **channel**. You choose the
+channel in Options → *Updates*: `release`, `testing`, `nightly`, or `off` if you do not want it to look at all.
+If you do not want to wait for the daily check, *Software Update* in the system menu checks now.
 
-- **Raspberry Pi, PC stick**: after the download the installer runs again with its first-boot progress
-  screen (a newer RetroArch is offered too), then the launcher is back.
-- **Windows**: the downloaded setup opens, installs, and starts the new launcher.
-- **PlayStation Classic**: only a console with the **AutoBleem kernel** (ABFlashKit, section 6.2) and a
-  **WiFi network** set up in PSC-Bios (section 6.1) checks - a stock console has no network, and the
-  launcher does not look. After *Update now* the launcher closes, the AutoBleem picture stays on screen
-  while the stick is updated (a few minutes), and the new launcher starts. Without a network *Software
-  Update* says *Not connected*. Any console stick can also be updated from a PC with
+When there is a new version, AutoBleem asks you what to do. *Update now* downloads it and installs it, which takes
+a few minutes. *Remind me tomorrow* asks again in a day, and *Skip this version* does not ask about this version
+again. Whatever you choose, your games, saves and settings always stay; after an update the launcher scans your
+games once more. The channel tag in the top-left corner (section 3.1) shows which build you have.
+
+How the update is installed depends on the machine:
+
+- On a **Raspberry Pi** and the **PC stick**, the installer runs again after the download, with the same progress
+  screen as the first start, and offers a newer RetroArch too. Then the launcher is back.
+- On **Windows**, the downloaded setup opens, installs the new version and starts the new launcher.
+- On a **PlayStation Classic**, only a console with the **AutoBleem kernel** (ABFlashKit, section 6.2) and a
+  **Wi-Fi network** set up in PSC-Bios (section 6.1) can update itself - a stock console has no network, so the
+  launcher does not look. After *Update now* the launcher closes and the AutoBleem picture stays on the screen
+  while the stick is updated, which takes a few minutes; then the new launcher starts. Without a network,
+  *Software Update* tells you *Not connected*. Any console stick can also be updated from a PC with
   `AutoBleemInstaller.exe` (section 2.1).
 
 ### 3.12 Extensions and the AutoBleem Store
 
-**Extensions** add their own screens to the launcher. They live in `Extensions/<name>/` on the stick (on a
-Raspberry Pi its data partition, on Windows the data folder); to install one, unpack its zip there.
-**L2 + R2 → Extensions** lists them: Cross runs one, Triangle turns it off or on again. An extension that
-needs the network is not started without one, and one that stopped the launcher is turned off - the list
-says so.
+**Extensions** add new things to the launcher - their own screens and features - without changing AutoBleem
+itself. The AutoBleem Store and PSC-Bios are extensions. An extension lives in `Extensions/<name>/` on the stick
+(on a Raspberry Pi on its data partition, on Windows in the data folder); to install one, unpack its zip there.
+
+To see them, open the system menu (**L2 + R2**) and choose *Extensions*. The ones that come from the AutoBleem team
+are at the top, and any others follow under *Third-party extensions*. Cross runs the selected one, and Triangle
+switches it off, or on again. PSC-Bios on the console is the exception: you set up the Wi-Fi, the pads and the
+clock with it, so it cannot be switched off there. When an extension cannot run, its row tells you why - it needs
+a network and there is none, it is not made for this system, it was made for a different version of AutoBleem
+and needs an update, or it could not be loaded. If an extension ever stops the launcher, AutoBleem switches it off
+and the list tells you so; you can switch it on again here.
 
 ![The Extensions list](../images/en/extensions.jpg)
 
-**The AutoBleem Store** is the first extension: Apps and games to install with one press, on every system
-AutoBleem runs on (a PlayStation Classic needs the AutoBleem kernel's WiFi). Its four tabs, L1 / R1 between
-them:
+**The AutoBleem Store** is the first extension: a place to browse Apps and games and install them with one press,
+on every system AutoBleem runs on. A PlayStation Classic needs the AutoBleem kernel for it, because the Wi-Fi
+comes with the kernel. Open it from the Quick menu (*Store*, section 3.4). It has four tabs, and L1 and R1 move
+between them.
 
-- **Apps** and **Games**: what the sources offer (the Apps tab also lists PE apps, with their license and source, and game-data packages, section 3.9), each with its picture, version, size and source favicon. Installed items carry an *Installed* badge. Cross installs (or updates, or tries again after a failure, or cancels a download that is queued or running), Triangle removes what the Store installed, Square refreshes the lists. L2 / R2 jump by letter, **Select** shows one source at a time, **Start** searches the titles. The footer shows the keys that apply to the selected row. Item pictures are cached and can be retried if they fail to load.
-- **Downloads**: what is downloading, waiting, failed or installed. The progress bar updates steadily, and while you are elsewhere in the launcher a bubble shows the running download with its speed and the time left (`1.4 MB/s · 0:42`). Downloads go on in the background, also after you leave the Store; starting a game or powering off only pauses them, and a stopped download resumes where it stopped. If the network drops, the item says *Waiting for the network* and carries on from where it stopped when the network is back (it gives up after 30 minutes). An installed game appears on the shelf after the next scan, with the Store's picture as its cover. Downloads over 2 GB work on all platforms, including 32-bit builds.
-- **Sources**: where the lists come from - AutoBleem's own catalog, a TSV list dropped into
-  `System/Extensions/store/sources/`, and the addresses you add with **Add a source URL**. Each source shows its favicon in the list. Cross on one you added renames it, changes its address, switches it between `http://` and `https://`, or removes it.
+The **Apps** and **Games** tabs list what the sources offer, each item with its picture, its version, its size and
+the small icon of the source it comes from. The Apps tab also lists PE apps, with their license and source, and
+game-data packages (section 3.9). What you have already installed carries an *Installed* badge. The hint bar shows
+the buttons that apply to the selected row:
+
+| Button | In the Apps and Games tabs |
+|---|---|
+| Cross | Installs the item - or updates it, tries again after a failure, or cancels a download that is waiting or running. |
+| Triangle | Removes something the Store installed. |
+| Square | Refreshes the lists from the sources. |
+| L2 / R2 | Jump to the previous or next first letter. |
+| Select | Shows one source at a time, when you want to see what a single source offers. |
+| Start | Searches the titles. |
+
+The pictures are kept once they have been loaded, so the lists come up quickly next time, and a picture that did
+not load can be tried again.
+
+The **Downloads** tab shows what is downloading, waiting, failed or installed, with a progress bar that moves
+steadily. You do not have to watch it: downloads go on in the background, also after you leave the Store, and
+while you are elsewhere in the launcher a bubble shows the running download with its speed and the time left
+(for example `1.4 MB/s · 0:42`). Starting a game or powering off only pauses them, and a stopped download carries
+on where it stopped. If the network drops, the item says *Waiting for the network* and goes on from where it was
+when the network is back; after 30 minutes without a network it gives up. Downloads over 2 GB work on every
+platform, including the 32-bit builds. A game you install appears on the shelf after the next scan, with the
+Store's picture as its cover.
+
+The **Sources** tab shows where the lists come from, each with its icon: AutoBleem's own catalog, any TSV list
+dropped into `System/Extensions/store/sources/`, and the addresses you add yourself with *Add a source URL*. Cross
+on a source you added lets you rename it, change its address, switch it between `http://` and `https://`, or
+remove it.
 
 ![The Store's Apps tab](../images/en/store-apps.jpg)
 
-![A source's menu](../images/en/store-source-menu.jpg)
+![The menu of a source you added](../images/en/store-source-menu.jpg)
 
-What AutoBleem's catalog offers is also listed on the download site, `https://autobleem.retromenele.pl/store/`.
-**You are responsible for what the sources you add contain.**
+What AutoBleem's own catalog offers is also listed on the download site, at
+`https://autobleem.retromenele.pl/store/`. A source you add yourself is another matter: **you are responsible for
+what the sources you add contain.**
 
-**Your own games on your network**: `abstored`, the Store's LAN server, serves a folder of PS1 games to
-the Store on the same network. It runs on any Linux machine - a Raspberry Pi, a home server - and only reads
-the folder. Start it with `abstored <games folder>`, open `http://<that machine>:8124/` in a browser to see
-what it serves and any problems it found, and add `http://<that machine>:8124/store.tsv` as a source. Ready
-programs for Linux and Windows are on the Store's page, in its **LAN server** tab; setting it up as a service
-is `INSTALL-linux.md` (`ext_store/server/` in the source). **LAN Share** (section 5.2) puts games and discs
-from a PC on such a server.
+**Your own games on your network.** If you keep your PS1 games on another computer at home, `abstored`, the Store's
+LAN server, can offer them to the Store over your network, so you install them like any other item. It runs on any
+Linux machine - a Raspberry Pi, a home server - and only reads the folder, never changing it. Start it with
+`abstored <games folder>`, then open `http://<that machine>:8124/` in a browser: the page shows what it serves and
+any problems it found. In the Store, add `http://<that machine>:8124/store.tsv` as a source. Ready programs for
+Linux and Windows are on the Store's page, in its **LAN server** tab, and `INSTALL-linux.md` (`ext_store/server/`
+in the source) explains how to set it up as a service. **LAN Share** (section 5.2) puts games and discs from a PC
+on such a server.
 
 ### 3.13 Scanner processors
 
-**Scanner processors** are small programs that every scan runs before it reads your games. One can turn a
-format AutoBleem does not read into one it does - a zipped game, for example - or change a game's data, such
-as a translation patch. They live in `System/Processors/<name>/` on the stick (on a Raspberry Pi its data
-partition, on Windows the data folder); to install one, unpack its folder there. The next scan runs it.
+Scanner processors prepare your games before AutoBleem reads them. A processor is a small program that every scan
+runs first. It can turn a format AutoBleem does not read into one it does - unpacking a zipped game, for example -
+or change a game's data, such as applying a translation patch. Processors live in `System/Processors/<name>/` on
+the stick (on a Raspberry Pi on its data partition, on Windows in the data folder); to install one, unpack its
+folder there, and the next scan runs it.
 
-- **Unzip comes with AutoBleem**: it unpacks zipped PS1 games in `Games/` before the scan reads them, and
-  zipped ROMs one at a time (arcade sets stay zipped). Updating AutoBleem updates it too, and leaves it
-  switched off if you switched it off.
-- A processor that has already dealt with a game is not run on it again until the game changes.
-- While a processor works, the bubble at the top right shows what it is doing; a warning or a failure appears
-  on the line under it. `processors.log` in the logs folder has the details.
-- Starting a game or RetroArch stops a processor that changes files; the next scan finishes its work.
+**Unzip comes with AutoBleem.** It unpacks zipped PS1 games in `Games/` before the scan reads them, and zipped ROMs
+one at a time; arcade sets stay zipped, because that is how the arcade cores read them. Updating AutoBleem updates
+Unzip too, and if you switched it off, it stays off.
 
-**L2 + R2 → Scanner processors** shows them in the order they run, one tab for the PS1 games and one for the
-ROMs (L1 / R1). **Square** picks a processor up and Up / Down move it - the order matters: a processor that
-unpacks has to come before one that patches what was unpacked. **Cross** switches one off or on, **Triangle**
-has it look at every game again at the next scan, **Circle** goes back and starts a scan if you changed
-anything. A processor built for another machine stays on the list, greyed.
+A processor does its work once: when it has dealt with a game, it is not run on it again until the game changes.
+While a processor works, the bubble at the top right shows what it is doing, and a warning or a failure appears on
+the line under it; `processors.log` in the logs folder has the details. Starting a game or RetroArch stops a
+processor that changes files, so the game has the machine to itself, and the next scan finishes the work.
+
+To manage them, open the system menu (**L2 + R2**) and choose *Scanner processors*. You see them in the order they
+run, with one tab for the PS1 games and one for the ROMs; L1 and R1 switch between the tabs. The order matters: a
+processor that unpacks has to come before one that patches what was unpacked.
+
+| Button | In Scanner processors |
+|---|---|
+| Square | Picks the selected processor up, so Up and Down move it to its new place; Square puts it down again. |
+| Cross | Switches the processor off, or on again. |
+| Triangle | Has the processor look at every game again at the next scan, also the ones it has already dealt with. |
+| Circle | Goes back, and starts a scan if you changed anything. |
+
+A processor that was built for another machine stays on the list, greyed out, so you can see it is there but
+that it does not run here.
 
 ![Scanner processors](../images/en/processors.jpg)
 
-Writing your own: Unzip's page, `https://github.com/autobleem2/proc_unzip`, explains everything a processor
-has to do, and
-`tools/proc_check.py` in AutoBleem's source checks one before you share it.
+If you want to write a processor of your own, Unzip's page, `https://github.com/autobleem2/proc_unzip`, explains
+everything a processor has to do, and `tools/proc_check.py` in AutoBleem's source checks yours before you share
+it.
 
 <!-- pagebreak -->
 
