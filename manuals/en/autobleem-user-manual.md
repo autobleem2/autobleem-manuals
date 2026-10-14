@@ -19,7 +19,8 @@ the tools that come with it.
   AutoBleem has always shipped. You pick one in the options; both use the same settings and memory cards.
 - **RetroArch** (optional on every platform) for the other systems: NES, SNES, Mega Drive, Game Boy, arcade
   and many more. AutoBleem builds its RetroArch lists from the ROMs you copy in and starts each game with
-  the right core.
+  the right core. The core list starts with *PlayStation 1* (section 3.8). Doom-type games run from your own
+  game data in a *Packages* folder (section 3.9).
 - **The console tools**: *PSC-Bios* (shown in the menus as *Network & Controllers*) for WiFi, the clock,
   Bluetooth and gamepad mapping - on the console, and also on a Raspberry Pi and the PC stick - and
   *ABFlashKit* for installing the AutoBleem kernel (PlayStation Classic only).
@@ -61,18 +62,34 @@ installed (ABFlashKit, chapter 6) also boots from an exFAT stick, which lifts FA
    - **Sample games** - a few free homebrew games so the shelf is not empty.
 3. Press **Install** and wait. The progress bars and the log show every step; the stick is named `SONY`
    at the end, and `UpdateRoms` is put on it (see chapter 5).
-4. Take the stick out safely, plug it into the console's **second USB port** (the right one, player 2) and
-   switch the console on. AutoBleem starts instead of the stock menu.
+4. Take the stick out safely, plug it into one of the console's **front USB ports** and switch the console
+   on. AutoBleem starts instead of the stock menu. Player 2's pad needs the other front port. Keep the stick
+   out of the micro-USB port at the back (see below).
 
 **Switching on and off.** With the stick in, the console boots, blinks its light for a few seconds
 (AutoBleem is being picked up) and then goes to standby before anything is shown - that is the console's
 own way of staging an update, which is how AutoBleem gets to run. Press **Power** once and the launcher
 comes up. *Power off* in the system menu, or the console's Power button, puts the console into
-**AutoBleem's standby**: the stick is disconnected first, then the light turns **red** - the sign that
+**AutoBleem's standby**: the stick is disconnected first, then the light turns **orange** - the sign that
 AutoBleem is working as intended - and the next press of Power brings the launcher straight back, in a
-few seconds. **While the light is red the stick can be pulled** and put into a PC without Windows asking
+few seconds. **While the light is orange the stick can be pulled** and put into a PC without Windows asking
 to check it; put it back before pressing Power. Unplugging the console's power goes through the boot
-standby again next time.
+standby again next time. A light that is **red** means the console really powered off.
+
+**Use a front USB port for the stick.** The micro-USB port at the back (a host there only works with the
+AutoBleem kernel) keeps the console awake: with a stick or a hub on it the console powers off instead of
+going to standby, and Power starts a cold boot.
+
+**No stick.** With no stick in the console, a picture says to insert one - in any USB port. After 5 minutes,
+or at once on Power, the console goes to sleep. The same picture appears if the stick is pulled while
+AutoBleem runs.
+
+![The picture that asks for the stick](../images/en/insert-stick.jpg)
+
+**Stick check.** A stick that was not removed cleanly is checked at boot, at wake and after a pull, with a
+progress bar. On a big stick this can take a while; do not interrupt it.
+
+![The stick check](../images/en/stick-check.jpg)
 
 To **update** a stick, run the installer over it again (the button says *Update*): it installs the chosen
 channel's newest version, and your games, saves, settings and RetroArch content stay; only AutoBleem's own
@@ -194,7 +211,7 @@ players, when it was last played (a fact a game does not have is left out) - and
 look is the **ab2.0.0** theme; a fresh install and an update that brings it switch to it once. The hint bar at the bottom has
 two lines of four slots. The first line is what the buttons do for the selected game (play, play in
 RetroArch, open the icon row, the Quick menu); the second always shows Select (the set), Start (a random game), Triangle (the
-guide) and L2 + R2 (the system menu), dimmed in a state where one does nothing. A scan of the games folder runs in the
+guide) and L2 + R2 (the system menu), dimmed in a state where one does nothing. A game with no cover shows a disc lying in the case's black tray. A scan of the games folder runs in the
 background on every start; while it runs, a bubble at the top right shows its progress, and new games
 appear on the shelf as they are found.
 
@@ -221,9 +238,11 @@ A wireless pad with a battery reading - the console, a Pi or the PC stick, not W
 | Button | On the shelf |
 |---|---|
 | Left / Right | Previous / next game. Holding scrolls on. |
-| L1 / R1 | Jump to the previous / next first letter of the titles. |
+| L1 / R1 | Jump to the previous / next first letter of the titles. On an empty shelf with a drive, R1 opens *Disc* (section 3.8a). |
+| Hold Start + Select, or Home, for 2 seconds | Back to AutoBleem from a game or an App. Works on every pad: the console's, a USB pad, a Bluetooth pad. A short press opens the emulator's menu (in an App there is no short-press menu). |
 | Cross | Start the selected game (a PS1 game in the PS1 emulator; a RetroArch game in its core; an App after its read-me). |
-| Square | Start the selected PS1 game in RetroArch instead. |
+| Square | Start the selected PS1 game in RetroArch instead. On a disc in a USB drive: *Copy disc* (section 3.8a). |
+| Circle | Back to the disc view, when a disc is in the drive (section 3.8a). |
 | Triangle | The button guide. |
 | Start | A random game from the current set. |
 | Select | The set picker: PlayStation / RetroArch / Apps tabs (L1 / R1), the groups of the tab (Up / Down, L2 / R2 a page), Cross picks. |
@@ -246,7 +265,9 @@ under it (a game in a sub-folder belongs to that group), then *Favorite games*, 
 games*. On a Raspberry Pi, a PC stick and Windows there are no internal games, so the list starts at *USB games*, which is
 the whole library. The RetroArch tab (only where RetroArch is installed) lists one group per system that has games, plus
 RetroArch's own Favorites and History. The Apps tab groups applications by type: *All apps*, then *Games*,
-*Emulators*, *Tools*, *Media* and *Other* (the category is set in each app's `app.ini` file). Each row shows how
+*Emulators*, *Tools*, *Media* and *Other* (the category is set in each app's `app.ini` file). The Apps tab also shows **PE apps** - Windows programs run
+by the PE runner; one the console cannot start is marked *cannot run on this console*. Where the launcher shows it, a *Packages* row
+is in the list too (section 3.9). Each row shows how
 many items it holds; a group with none opens on an empty shelf with the icon row showing Settings only.
 The footer shows the keys: L1 / R1 for the tabs, L2 / R2 for a page, Cross to pick, Circle for *Back*.
 
@@ -275,11 +296,12 @@ description, and the menu is grouped into sections:
 | | Scanner processors | The programs every scan runs first - their order, on or off (section 3.13). Disabled while a scan is running. |
 | **System** | Options | AutoBleem's settings (section 3.6). |
 | | Network & Controllers | Only where an installed extension provides the `network` entry (`Provides=network` in its `extension.ini` - PSC-Bios on the console, a Pi and the PC stick) - Wi-Fi, Bluetooth controller pairing, DualShock 3 setup, and the gamepad mapping wizard - see chapter 6. When that extension is installed but disabled, this item stays greyed with a note "enable it in Extensions" - Cross opens the Extensions list at it. |
-| | Hardware Information | The machine's facts: system, CPU, storage, network interfaces, time zone, display, the pads and their mappings - the same page on every platform (section 4.2). |
+| | Hardware Information | The machine's facts: system, CPU, storage, network interfaces, time zone, display, the pads and their mappings - the same page on every platform (section 4.2). Circle returns to the system menu. |
+| | Virtual gamepad | The pads Apps are given and the pads the daemon sees (section 4.5). Circle returns to the system menu. |
 | | Software Update | (Raspberry Pi and PC) Check the site for a newer AutoBleem or RetroArch now; the row says *Update available* when the launcher already knows of one. |
-| | About | Credits and licence. |
+| | About | Credits and license. |
 | **Leave** | RetroArch | (Only where RetroArch is installed.) Leaves the launcher for RetroArch's own menu. Closing RetroArch comes back. |
-| | Power off | After a confirmation: on the console AutoBleem's standby - the stick disconnected, the light red, Power brings the launcher back (section 2.1); on a Pi or PC the machine shuts down. |
+| | Power off | After a confirmation: on the console AutoBleem's standby - the stick disconnected, the light orange, Power brings the launcher back (section 2.1); on a Pi or PC the machine shuts down. |
 
 ![The system menu](../images/en/system-menu.jpg)
 
