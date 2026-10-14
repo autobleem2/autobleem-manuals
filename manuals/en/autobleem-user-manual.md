@@ -12,20 +12,26 @@ the tools that come with it.
 
 ## 1. What you get
 
-- **The launcher** - the carousel of covers, the sets (PlayStation, RetroArch, Apps), the game details, the
-  Quick menu and the system menu, the options, the memory-card and save-state tools, and the Store for
-  downloading apps and games. The same program on every platform.
-- **Two PS1 emulators** - `pcsx-abnxt`, the current one (the default), and `pcsx-ab`, the classic one
-  AutoBleem has always shipped. You pick one in the options; both use the same settings and memory cards.
-- **RetroArch** (optional on every platform) for the other systems: NES, SNES, Mega Drive, Game Boy, arcade
-  and many more. AutoBleem builds its RetroArch lists from the ROMs you copy in and starts each game with
-  the right core. The core list starts with *PlayStation 1* (section 3.8). Doom-type games run from your own
-  game data in a *Packages* folder (section 3.9).
-- **The console tools**: *PSC-Bios* (shown in the menus as *Network & Controllers*) for WiFi, the clock,
-  Bluetooth and gamepad mapping - on the console, and also on a Raspberry Pi and the PC stick - and
-  *ABFlashKit* for installing the AutoBleem kernel (PlayStation Classic only).
-- **UpdateRoms** for Windows: refreshes the RetroArch lists and box art of a console stick on a PC, because
-  the console itself has no network.
+AutoBleem turns your PlayStation Classic - or a Raspberry Pi, an old PC or your Windows computer - into a small
+game console with a proper menu for your own games. This is what you get:
+
+- **The launcher.** This is what you see when you switch on: a shelf of game covers you scroll through, with
+  each game's details beside it. From here you start games, sort them into sets (PlayStation, RetroArch,
+  Apps), change settings, look after memory cards and save states, and download apps and games from the Store.
+  It looks and works the same on every platform.
+- **Two PS1 emulators.** `pcsx-abnxt` is the current one and the default; `pcsx-ab` is the classic emulator
+  AutoBleem has always shipped. You choose between them in the options. Both use the same settings and memory
+  cards, so you can switch at any time without losing anything.
+- **RetroArch**, if you want games from other systems too - NES, SNES, Mega Drive, Game Boy, arcade machines and
+  many more. It is optional on every platform. Copy in your ROMs, and AutoBleem sorts them into lists and starts
+  each game with the right core. PlayStation games can run in RetroArch as well; its *PlayStation 1* core is at
+  the top of the core list (section 3.8). Games such as Doom run from your own game files in a `Packages` folder
+  (section 3.9).
+- **The console tools.** *PSC-Bios* - in the menus it is called *Network & Controllers* - sets up WiFi, the
+  clock, Bluetooth pads and pad mapping, on the console as well as on a Raspberry Pi and the PC stick.
+  *ABFlashKit* installs the AutoBleem kernel on a PlayStation Classic (chapter 6).
+- **UpdateRoms** for Windows. The PlayStation Classic has no network of its own, so this PC program refreshes
+  the RetroArch lists and fetches box art for a console stick while it is plugged into your PC.
 
 ![The launcher: the shelf of covers, the selected game's details, the button hints](../images/en/launcher.jpg)
 
@@ -35,87 +41,101 @@ the tools that come with it.
 
 ### 2.1 PlayStation Classic
 
-You need a Windows PC, a USB stick (USB 2.0, 8 GB or more) and the stock console. The stick does not have
-to be empty and is **not formatted** unless you ask for it: AutoBleem is installed next to what is on it, and
-a stick you already use with AutoBleem 1.0 is upgraded in place (below). AutoBleem runs from the stick
-without any change to the console. The stick must be
-**FAT32** for a stock console - its kernel cannot read exFAT. Only a console with the AutoBleem kernel
-installed (ABFlashKit, chapter 6) also boots from an exFAT stick, which lifts FAT32's 4 GB file limit.
+AutoBleem runs entirely from a USB stick. Nothing inside the console is changed: take the stick out and the
+console works exactly as it did before. All you need is a Windows PC, a USB stick (USB 2.0, 8 GB or more) and
+the console.
 
-1. Download **AutoBleemInstaller-<version>.zip** from the PlayStation Classic panel of the site and unpack
-   it anywhere. It holds `AutoBleemInstaller.exe` and its README; AutoBleem itself is downloaded while it
-   installs, so the PC needs the internet.
-2. Plug the stick in and start `AutoBleemInstaller.exe`. Pick the **channel** - *Release* (the tested
-   version), *Testing* (the next version, being tested) or *Nightly* (the newest development build, which
-   may not work) - and the drive. The line under them says which AutoBleem version the channel would
-   install, and what is on the stick now: *a fresh install* (the stick's other files are left alone) or
-   *AutoBleem <version> is on this stick: it will be updated* (games, saves, memory cards and settings stay).
-   **Formatting is optional**: the **Format** button next to the drive is only for a new stick with no file
-   system, one the console cannot read (NTFS, for example) or one you want to wipe - it asks first, then
-   erases everything on the stick. Pick FAT32 there unless the console has the AutoBleem kernel.
-   Tick what you want:
-   - **Cover databases** - the box art and details of the PS1 library (ticked by default; about 300 MB).
-   - **RetroArch** - RetroArch with its cores, the extra applications (Doom, Quake, Amiga, ...) and the
-     libretro assets, for the other systems' games. Off by default; it can be added later by running the
-     installer again.
-   - **BIOS files** - the BIOS files the RetroArch cores need (needs RetroArch).
-   - **Sample games** - a few free homebrew games so the shelf is not empty.
-3. Press **Install** and wait. The progress bars and the log show every step; the stick is named `SONY`
-   at the end, and `UpdateRoms` is put on it (see chapter 5).
-4. Take the stick out safely, plug it into the console's **second front USB port** (right, player 2) - the
-   first one is for the pad - and switch the console on. AutoBleem starts instead of the stock menu. A second
-   pad needs a USB hub on the front port or a Bluetooth pad. Keep the stick out of the micro-USB port at the
-   back (see below).
+The stick does not have to be empty, and it is **not formatted** unless you ask for it: AutoBleem is installed
+next to whatever is already on it, and a stick you already use with AutoBleem 1.0 is upgraded in place (see
+below). For a stock console the stick must be **FAT32**, because the console's own kernel cannot read exFAT.
+Once the AutoBleem kernel is installed (ABFlashKit, chapter 6), the console also starts from an exFAT stick,
+which gets rid of FAT32's limit of 4 GB per file.
 
-**Switching on and off.** With the stick in, the console boots, blinks its light for a few seconds
-(AutoBleem is being picked up) and then goes to standby before anything is shown - that is the console's
-own way of staging an update, which is how AutoBleem gets to run. Press **Power** once and the launcher
-comes up. *Power off* in the system menu, or the console's Power button, puts the console into
-**AutoBleem's standby**: the stick is disconnected first, then the light turns **orange** - the sign that
-AutoBleem is working as intended - and the next press of Power brings the launcher straight back, in a
-few seconds. **While the light is orange the stick can be pulled** and put into a PC without Windows asking
-to check it; put it back before pressing Power. Unplugging the console's power goes through the boot
-standby again next time. A light that is **red** means the console really powered off.
+1. Download **AutoBleemInstaller-<version>.zip** from the PlayStation Classic panel of the site and unpack it
+   anywhere. Inside are `AutoBleemInstaller.exe` and its README. AutoBleem itself is downloaded during the
+   installation, so the PC needs an internet connection.
+2. Plug in the stick and start `AutoBleemInstaller.exe`. Choose the **channel** - *Release* is the tested
+   version and the right choice for most people, *Testing* is the next version while it is being tested, and
+   *Nightly* is the newest development build, which may not work - and then choose the stick's drive. The line
+   underneath tells you which AutoBleem version you are about to install and what is on the stick now: *a fresh
+   install* (the other files on the stick are left alone) or *AutoBleem <version> is on this stick: it will be
+   updated* (your games, saves, memory cards and settings stay).
+   **You do not need to format.** The **Format** button next to the drive is only for a brand-new stick without a
+   file system, for one the console cannot read (NTFS, for example), or for one you want to wipe clean. It asks
+   first and then erases everything on the stick. Choose FAT32 there, unless the console already has the
+   AutoBleem kernel.
+   Then tick what you want installed:
+   - **Cover databases** - the box art and descriptions of the whole PS1 library, so your games get their covers
+     by themselves (ticked by default; about 300 MB).
+   - **RetroArch** - RetroArch with its cores, extra applications (Doom, Quake, Amiga, ...) and libretro's
+     assets, for games from other systems. Off by default; you can add it later by running the installer again.
+   - **BIOS files** - the BIOS files some RetroArch cores need before they start (only with RetroArch).
+   - **Sample games** - a few free homebrew games, so the shelf is not empty the first time you start.
+3. Press **Install** and wait. The progress bars and the log show every step. At the end the stick is named
+   `SONY` and gets a copy of `UpdateRoms` (see chapter 5).
+4. Remove the stick safely, plug it into the console's **second front USB port** (the right one, player 2) -
+   the first one stays free for your pad - and switch the console on. Instead of the stock menu, AutoBleem
+   starts. For a second pad, use a USB hub on the front port or a Bluetooth pad. Do not put the stick in the
+   micro-USB port at the back (see below).
 
-**Use a front USB port for the stick.** The micro-USB port at the back (a host there only works with the
-AutoBleem kernel) keeps the console awake: with a stick or a hub on it the console powers off instead of
-going to standby, and Power starts a cold boot.
+**Switching on and off.** With the stick in, the console starts, blinks its light for a few seconds while it
+notices AutoBleem, and then goes to standby before anything appears on the screen. That is normal: AutoBleem
+starts through the console's own update mechanism, and this is how that mechanism works. Press **Power** once
+and the launcher appears.
 
-**No stick.** With no stick in the console, a picture says to insert one - in any USB port. After 5 minutes,
-or at once on Power, the console goes to sleep. The same picture appears if the stick is pulled while
-AutoBleem runs.
+When you choose *Power off* in the system menu, or press the console's Power button, the console goes into
+**AutoBleem's standby**: AutoBleem first disconnects the stick safely, then the light turns **orange** - the
+sign that everything went as it should. The next press of Power brings the launcher back within a few seconds.
+**While the light is orange you can pull the stick out** and put it into your PC; Windows will not ask to
+check it, because it was disconnected properly. Put it back before you press Power. If you unplug the
+console's power cable, it goes through the start-up standby again next time. A **red** light means the
+console is really switched off.
+
+**Use a front USB port for the stick.** The micro-USB port at the back is the power port. With the AutoBleem
+kernel it can also take a USB device, but anything plugged in there keeps the console from sleeping: with a
+stick or a hub on it, the console switches off completely instead of going to standby, and Power then has to
+start it from scratch, which takes longer.
+
+**If the stick is missing.** When the console starts without a stick, or you pull the stick out while
+AutoBleem is running, a picture asks you to put it in - any USB port will do. AutoBleem waits for 5 minutes
+and then puts the console to sleep; press Power if you want it to sleep straight away.
 
 ![The picture that asks for the stick](../images/en/insert-stick.jpg)
 
-**Stick check.** A stick that was not removed cleanly is checked at boot, at wake and after a pull, with a
-progress bar. On a big stick this can take a while; do not interrupt it.
+**When the stick is checked.** If the stick was not disconnected properly - you pulled it out while AutoBleem
+was running, or the power went off - AutoBleem checks it for errors before it uses it again: at start-up,
+after waking up, or when you plug it back in. A progress bar shows how far the check has got. On a big stick
+this can take a while; let it finish and do not switch the console off in the meantime.
 
 ![The stick check](../images/en/stick-check.jpg)
 
-To **update** a stick, run the installer over it again (the button says *Update*): it installs the chosen
-channel's newest version, and your games, saves, settings and RetroArch content stay; only AutoBleem's own
-files are replaced. A console with the AutoBleem kernel and WiFi can also update itself (section 3.11).
+**Updating.** To update a stick, run the installer on it again - the button now says *Update*. It installs the
+newest version of the channel you choose; your games, saves, settings and RetroArch content stay, and only
+AutoBleem's own files are replaced. A console with the AutoBleem kernel and WiFi can also update itself
+(section 3.11).
 
-**Upgrading from AutoBleem 1.0 (or AutoBleem-NG).** The same installer, on the same stick - no format:
+**Upgrading from AutoBleem 1.0 (or AutoBleem-NG).** You use the same installer on the same stick, without
+formatting it:
 
-1. Copy the whole stick to the PC first, as a backup.
-2. Plug it in, start `AutoBleemInstaller.exe`, pick the channel and the drive. Do **not** press Format.
-3. Press **Install**. The installer brings the old layout up to date: RetroArch, the ROMs and the themes move
-   to where AutoBleem 2 looks for them, and the old ROM folders (`nes`, `snes`, ...) are renamed to RetroArch's
-   system names. Games, save states, memory cards, ROMs and RetroArch's saves stay; `config.ini` is kept, with
-   the PS1 emulator set to pcsx-abnxt.
-4. Put the stick back into the console. The first scan rebuilds the game list and the playlists (UpdateRoms
-   on the PC fetches box art for the RetroArch games, chapter 5).
+1. First copy the whole stick to your PC, as a backup - just in case.
+2. Plug it in, start `AutoBleemInstaller.exe`, and choose the channel and the drive. Do **not** press Format.
+3. Press **Install**. The installer moves the old layout to the new one: RetroArch, the ROMs and the themes go
+   where AutoBleem 2 expects them, and the old ROM folders (`nes`, `snes`, ...) get RetroArch's system names.
+   Your games, save states, memory cards, ROMs and RetroArch saves all stay, and so does `config.ini` - only its
+   PS1 emulator is switched to pcsx-abnxt.
+4. Put the stick back into the console. The first scan rebuilds the game list and the playlists. To get box
+   art for your RetroArch games, run UpdateRoms on the PC (chapter 5).
 
-> The stock console has no clock and no network: dates are only shown after the AutoBleem kernel is
-> installed (chapter 6), and box art for RetroArch games comes from UpdateRoms on the PC (chapter 5).
+> The stock console has no clock and no network. Dates appear only after the AutoBleem kernel is installed
+> (chapter 6), and box art for RetroArch games comes from UpdateRoms on the PC (chapter 5).
 
-Games go into the `Games` folder of the stick, one folder per game - see section 3.9 for the layout.
+Your PS1 games go into the stick's `Games` folder, one folder per game - section 3.9 explains the layout.
 
 ### 2.2 Raspberry Pi
 
-AutoBleem turns a Pi into a small console: it boots straight into the launcher, with no desktop. Two ready
-images are on the site - 32-bit and 64-bit - plus a tarball for an existing Raspberry Pi OS Lite.
+With AutoBleem a Raspberry Pi becomes a small console: it starts straight into the launcher, with no desktop in
+between. The site has two ready-made card images, 32-bit and 64-bit, and a package for a Raspberry Pi OS Lite
+you already have.
 
 | Model | 32-bit image | 64-bit image | Notes |
 |---|---|---|---|
@@ -126,8 +146,9 @@ images are on the site - 32-bit and 64-bit - plus a tarball for an existing Rasp
 | Raspberry Pi 2 Model B | yes | v1.2 only | slow for anything 3D |
 | Raspberry Pi 1, Zero, Zero W | no | no | ARMv6 - neither image runs |
 
-The **32-bit image is the recommended one** for PS1 games: `pcsx-ab`'s fast ARM recompiler is 32-bit only,
-so the 64-bit build runs PS1 games slower. The 64-bit image has the larger set of RetroArch cores.
+**For PS1 games, take the 32-bit image.** The fast ARM recompiler of the classic `pcsx-ab` exists only in
+32-bit, so PS1 games run slower on the 64-bit build. The 64-bit image has more RetroArch cores, so take it if
+the other systems matter more to you than PS1.
 
 **With Raspberry Pi Imager:**
 
@@ -142,13 +163,14 @@ so the 64-bit build runs PS1 games slower. The 64-bit image has the larger set o
    password, the WiFi network and country, and enable SSH**. AutoBleem needs a network on its first boot.
 3. Write the card, put it in the Pi with a screen and a keyboard or pad connected, and power it on.
 
-**The first boot** takes 5 to 25 minutes and shows what it does on the screen. Without a network it asks
-for one (a WiFi list, the password), then asks whether to install RetroArch (a minute without an answer
-means yes), grows the system partition, makes the `AUTOBLEEM` data partition from the rest of the card,
-installs RetroArch and its cores, the BIOS packs and the sample games, and reboots into the launcher.
+**The first start** takes 5 to 25 minutes, and the screen tells you what is happening. If there is no network,
+it asks you for one: pick your WiFi from the list and type the password. Then it asks whether to install
+RetroArch - if you do not answer within a minute, it does. After that it enlarges the system partition, turns
+the rest of the card into the `AUTOBLEEM` partition for your games, installs RetroArch with its cores, the BIOS
+packs and the sample games, and restarts into the launcher.
 
-The answers can be given in advance in **`autobleem.txt`** on the card's boot partition (editable on any
-PC before the first boot):
+If you would rather not answer questions at the first start, put the answers into **`autobleem.txt`** on the
+card's boot partition beforehand - any PC can open and edit it:
 
 | Key | Default | Meaning |
 |---|---|---|
@@ -158,17 +180,19 @@ PC before the first boot):
 | `thumbnails` | none | `boxarts` mirrors the whole box-art set for offline covers (~9000 files). |
 | `bios`, `downloads`, `samples` | yes | Set to `no` to skip the BIOS packs, every download, or the sample games. |
 
-**On an existing Raspberry Pi OS Lite** (Bookworm or Trixie): copy `autobleem-rpi.tar.gz` (or the arm64 one)
-to the Pi, unpack it and run `sudo bash install.sh`. It asks the same questions, makes the data partition
-by shrinking the root at the next boot (`--shrink-root <GiB>`), and puts the launcher on the first console.
+**On a Raspberry Pi OS Lite you already have** (Bookworm or Trixie): copy `autobleem-rpi.tar.gz` (or the arm64
+one) to the Pi, unpack it and run `sudo bash install.sh`. It asks the same questions, makes room for the data
+partition by shrinking the system partition at the next start (`--shrink-root <GiB>`), and puts the launcher on
+the first console.
 
-After the install the card's **`AUTOBLEEM` partition** (exFAT) is what you fill: pull the card and open it on
-any PC, or copy over the network (SSH is on). `Games/` for PS1 games, `RetroArch/roms/<system>/` for the
-other systems, `System/Bios/` for the PS1 BIOS (section 3.10), `Themes/` for themes.
+After the installation you fill the card's **`AUTOBLEEM` partition** (exFAT) with your games: take the card out
+and open it on any PC, or copy over the network (SSH is on). PS1 games go into `Games/`, other systems' ROMs
+into `RetroArch/roms/<system>/`, the PS1 BIOS into `System/Bios/` (section 3.10) and themes into `Themes/`.
 
 ### 2.3 PC USB stick
 
-The same appliance for any PC that boots from USB - a 32-bit system, so old machines work too:
+The same thing for any PC that can start from USB: the stick starts the PC straight into AutoBleem and leaves
+the PC's own disk alone. It is a 32-bit system, so old machines work too.
 
 1. Write the image to a stick of 8 GB or more. **On Windows** use **AutoBleemFlasher** (PC panel of the
    site - unzip it and run `AutoBleemFlasher.exe`; it asks for administrator rights, since it writes a
@@ -179,16 +203,17 @@ The same appliance for any PC that boots from USB - a 32-bit system, so old mach
    `xzcat autobleem-*.img.xz | sudo dd of=/dev/sdX bs=4M status=progress` (or balenaEtcher).
 2. Boot the PC from the stick (the boot menu key of your PC - F12, F8, Esc...). Both BIOS and UEFI boot
    work; **Secure Boot must be off**.
-3. The first boot is the Pi's: a network question if there is no cable, the RetroArch question, then the
-   install - about eight minutes with a wired network - and a reboot into the launcher.
+3. The first start works like the Pi's: it asks for a network if no cable is plugged in, asks about RetroArch,
+   installs everything - about eight minutes with a wired network - and restarts into the launcher.
 
-The stick then has an `AUTOBLEEM` partition for your games, visible on Windows 10 (1903 and newer) as a
-second drive when you plug the stick into a running PC. `autobleem.txt` is on the first partition, with the
-same keys as on the Pi (no `hdmi_mode` - the PC uses the screen's native mode).
+Afterwards the stick has an `AUTOBLEEM` partition for your games. Plug the stick into a running Windows 10 PC
+(version 1903 or newer) and it shows up as a second drive you can copy games to. `autobleem.txt` is on the
+first partition, with the same keys as on the Pi (except `hdmi_mode` - a PC always uses the screen's own mode).
 
 ### 2.4 Windows
 
-AutoBleem as a Windows program: full screen, the emulators and RetroArch started as programs.
+If you simply want AutoBleem on your Windows computer, it also runs as an ordinary program: full screen, with
+the emulators and RetroArch started as programs of their own.
 
 1. Download **AutoBleemSetup-<version>.exe** and run it. It installs per user, without administrator
    rights: the program under `%LOCALAPPDATA%\Programs\AutoBleem`, the data (games, settings, themes,
@@ -197,8 +222,8 @@ AutoBleem as a Windows program: full screen, the emulators and RetroArch started
    BIOS files, the sample games - and let the setup helper download them.
 3. Start AutoBleem from the Start Menu or the Desktop. On a PC the keyboard works as a pad (section 3.2).
 
-Running a newer setup over it updates the program and keeps the data folder. The launcher also checks the
-site once a day and offers an update when there is one (section 3.11).
+To update, run a newer setup over it: the program is replaced and your data folder stays as it is. The
+launcher also checks the site once a day and offers an update when there is one (section 3.11).
 
 <!-- pagebreak -->
 
