@@ -20,7 +20,8 @@ tägliche Verwendung und die mitgelieferten Tools.
   Einstellungen und Memory Cards.
 - **RetroArch** (optional auf jeder Plattform) für die anderen Systeme: NES, SNES, Mega Drive, Game Boy, Arcade
   und viele mehr. AutoBleem erstellt seine RetroArch-Listen aus den ROMs, die Sie kopieren, und startet
-  jedes Spiel mit dem richtigen Core.
+  jedes Spiel mit dem richtigen Core. Die Core-Liste beginnt mit *PlayStation 1* (Abschnitt 3.8). Doom-artige
+  Spiele laufen mit Ihren eigenen Spieldaten in einem Ordner *Pakete* (Abschnitt 3.9).
 - **Die Console Tools**: *PSC-Bios* (in den Menüs als *Netzwerk & Controller* angezeigt) für WiFi, Uhr, Bluetooth und
   Gamepad-Zuordnung - auf der Console und auch auf einem Raspberry Pi und dem PC-Stick - und *ABFlashKit* zur
   Installation des AutoBleem-Kernels (nur PlayStation Classic).
@@ -62,18 +63,35 @@ von FAT32 hebt.
    - **Beispielspiele** - ein paar kostenlose Homebrew-Spiele, damit das Regal nicht leer ist.
 3. Drücken Sie **Installieren** und warten Sie. Die Fortschrittsbalken und das Protokoll zeigen jeden Schritt;
    der Stick wird am Ende `SONY` genannt und `UpdateRoms` wird darauf installiert (siehe Kapitel 5).
-4. Nehmen Sie den Stick sicher heraus, verbinden Sie ihn mit dem **zweiten USB-Port** der Console (der rechte,
-   Spieler 2) und schalten Sie die Console ein. AutoBleem startet statt des Stock-Menüs.
+4. Nehmen Sie den Stick sicher heraus, verbinden Sie ihn mit dem **zweiten vorderen USB-Port** der Console (rechts,
+   Spieler 2) - der erste ist für das Pad - und schalten Sie die Console ein. AutoBleem startet statt des
+   Stock-Menüs. Ein zweites Pad braucht einen USB-Hub am vorderen Port oder ein Bluetooth-Pad. Halten Sie den Stick
+   vom Micro-USB-Port auf der Rückseite fern (siehe unten).
 
 **Einschalten und Ausschalten.** Mit dem Stick drin bootet die Console, blinkt ein paar Sekunden lang (AutoBleem
 wird aufgegriffen) und geht dann in den Standby-Modus, bevor etwas angezeigt wird - das ist die eigene Art der
 Console, ein Update zu inszenieren, auf diese Weise läuft AutoBleem. Drücken Sie **Power** einmal und der
 Launcher kommt herauf. *Ausschalten* im Systemmenü oder die Power-Taste der Console versetzt die Console in
-**AutoBleem's Standby**: Der Stick wird getrennt, dann leuchtet das Licht **rot** - das Zeichen, dass AutoBleem
+**AutoBleem's Standby**: Der Stick wird getrennt, dann leuchtet das Licht **orange** - das Zeichen, dass AutoBleem
 so funktioniert, wie beabsichtigt - und der nächste Power-Druck bringt den Launcher direkt zurück, in wenigen
-Sekunden. **Während das Licht rot ist, kann der Stick herausgezogen** und ohne Windows-Überprüfung auf einen PC
+Sekunden. **Während das Licht orange ist, kann der Stick herausgezogen** und ohne Windows-Überprüfung auf einen PC
 eingegeben werden; schieben Sie ihn vor dem Drücken von Power zurück. Die Power der Console abtrennen geht beim
-nächsten Mal durch den Boot-Standby.
+nächsten Mal durch den Boot-Standby. Ein **rotes** Licht bedeutet, dass sich die Console wirklich ausgeschaltet hat.
+
+**Nehmen Sie für den Stick einen vorderen USB-Port.** Der Micro-USB-Port auf der Rückseite (ein Host dort
+funktioniert nur mit dem AutoBleem-Kernel) hält die Console wach: Mit einem Stick oder Hub daran schaltet sich die
+Console aus, statt in den Standby zu gehen, und Power startet einen Kaltstart.
+
+**Kein Stick.** Steckt kein Stick in der Console, sagt ein Bild, dass Sie einen einstecken sollen - in einen beliebigen
+USB-Port. Nach 5 Minuten, oder sofort bei Power, geht die Console schlafen. Dasselbe Bild erscheint, wenn der Stick
+gezogen wird, während AutoBleem läuft.
+
+![Das Bild, das nach dem Stick fragt](../images/en/insert-stick.jpg)
+
+**Stick-Prüfung.** Ein Stick, der nicht sauber entfernt wurde, wird beim Boot, beim Aufwachen und nach dem Ziehen mit
+einem Fortschrittsbalken geprüft. Bei einem großen Stick kann das dauern; unterbrechen Sie es nicht.
+
+![Die Stick-Prüfung](../images/en/stick-check.jpg)
 
 Um einen Stick zu **aktualisieren**, führen Sie einen neueren Installer darauf aus: Ihre Spiele, Speichern,
 Einstellungen und RetroArch-Inhalte bleiben; nur AutoBleems eigene Dateien werden ersetzt.
@@ -198,7 +216,7 @@ Standard-Aussehen ist das Theme **ab2.0.0**; eine frische Installation und ein U
 einmalig darauf um. Die Hinweisleiste unten hat zwei Zeilen mit vier Plätzen. Die erste zeigt, was die Buttons für
 das ausgewählte Spiel tun (spielen, in RetroArch spielen, die Icon-Zeile öffnen, das Quick-Menü); die zweite zeigt
 immer Select (das Set), Start (ein zufälliges Spiel), Triangle (den Leitfaden) und L2 + R2 (das Systemmenü),
-abgedunkelt, wenn einer gerade nichts tut. Ein Scan des Spielordners läuft bei jedem Start im Hintergrund;
+abgedunkelt, wenn einer gerade nichts tut. Ein Spiel ohne Cover zeigt eine Disc, die im schwarzen Fach der Hülle liegt. Ein Scan des Spielordners läuft bei jedem Start im Hintergrund;
 während er läuft, zeigt eine Blase oben rechts seinen Fortschritt, und neue Spiele erscheinen auf dem Regal, wenn
 sie gefunden werden.
 
@@ -228,9 +246,10 @@ Ein drahtloser Controller mit einem Batteriewert - auf der Konsole, einem Pi ode
 | Button | Auf dem Regal |
 |---|---|
 | Links / Rechts | Vorheriges / nächstes Spiel. Halten dreht es weiter. |
-| L1 / R1 | Zum vorherigen / nächsten ersten Buchstaben der Titel springen. |
+| L1 / R1 | Zum vorherigen / nächsten ersten Buchstaben der Titel springen. Auf einem leeren Regal mit einem Laufwerk öffnet R1 *Disc* (Abschnitt 3.8a). |
 | Cross | Startet das ausgewählte Spiel (ein PS1-Spiel im PS1-Emulator; ein RetroArch-Spiel in seinem Core; eine App nach ihrer Anleitung). |
-| Square | Startet das ausgewählte PS1-Spiel stattdessen in RetroArch. |
+| Square | Startet das ausgewählte PS1-Spiel stattdessen in RetroArch. Bei einer Disc in einem USB-Laufwerk: *Disc kopieren* (Abschnitt 3.8a). |
+| Circle | Zurück zur Disc-Ansicht, wenn eine Disc im Laufwerk liegt (Abschnitt 3.8a). |
 | Triangle | Der Button-Leitfaden. |
 | Start | Ein zufälliges Spiel aus dem aktuellen Set. |
 | Select | Der Set-Picker: PlayStation / RetroArch / Apps-Tabs (L1 / R1), die Gruppen des Tabs (Hoch / Runter, L2 / R2 eine Seite), Cross wählt. |
@@ -247,6 +266,10 @@ In jeder Liste und jedem Menü: Hoch / Runter bewegen, **L2 / R2 drehen Seiten**
 letzten Zeile, **Cross wählt, Circle geht zurück**. Ein Bildschirm mit Einstellungen speichert sie, wenn Sie
 ihn mit Circle verlassen.
 
+**In einem Spiel oder einer App**: Halten Sie **Start + Select oder Home 2 Sekunden lang**, um zu AutoBleem
+zurückzukehren. Das funktioniert auf jedem Pad - dem der Console, einem USB-Pad, einem Bluetooth-Pad. Ein kurzer
+Druck öffnet das Menü des Emulators; eine App hat kein solches Menü, nur das Halten wirkt.
+
 ![Die Icon-Zeile unter dem ausgewählten Spiel](../images/en/launcher-icons.jpg)
 
 ### 3.3 Die Sets
@@ -258,7 +281,9 @@ wenn ein Spiel als eines gekennzeichnet ist, *Lightgun-Spiele*. Auf einem Raspbe
 Windows gibt es keine internen Spiele, die Liste beginnt also mit *USB-Spiele*, der ganzen Bibliothek. Der
 RetroArch-Tab (nur wo RetroArch installiert ist) listet eine Gruppe pro System, das Spiele hat, plus RetroArch's eigene
 Favoriten und Verlauf. Der Apps-Tab gruppiert Anwendungen nach Typ: *Alle Apps*, dann *Spiele*, *Emulatoren*, *Tools*,
-*Medien* und *Andere* (die Kategorie wird in jeder App's `app.ini` gesetzt). Jede Zeile zeigt, wie viele Elemente sie
+*Medien* und *Andere* (die Kategorie wird in jeder App's `app.ini` gesetzt). Der Apps-Tab zeigt auch **PE-Apps** - Windows-Programme,
+die der PE-Runner ausführt; eine, die die Console nicht starten kann, ist mit *läuft nicht auf dieser Konsole*
+markiert. Wo der Launcher sie zeigt, steht auch eine Zeile *Pakete* in der Liste (Abschnitt 3.9). Jede Zeile zeigt, wie viele Elemente sie
 hält; eine Gruppe ohne öffnet sich auf einem leeren Regal mit der Icon-Zeile nur Einstellungen zeigend. Die Fußzeile
 nennt die Tasten: L1 / R1 Tabs, L2 / R2 eine Seite, Cross wählt, Circle *Zurück*.
 
@@ -291,11 +316,12 @@ Beschreibung, und das Menü ist in Abschnitte gruppiert:
 | | Scan-Prozessoren | Die Programme, die jeder Scan zuerst ausführt - ihre Reihenfolge, an oder aus (Abschnitt 3.13). Deaktiviert während eines Scans. |
 | **System** | Optionen | AutoBleems Einstellungen (Abschnitt 3.6). |
 | | Netzwerk & Controller | Nur wo eine installierte Erweiterung den `network`-Eintrag bereitstellt (`Provides=network` in ihrem `extension.ini` - PSC-Bios auf der Console, einem Pi und dem PC-Stick) - WiFi, Bluetooth-Controller-Pairing, DualShock 3-Setup und der Gamepad-Zuordnungs-Assistent - siehe Kapitel 6. Wenn diese Erweiterung installiert aber deaktiviert ist, bleibt dieses Element grau mit einer Notiz "unter Erweiterungen einschalten" - Cross öffnet die Erweiterungs-Liste. |
-| | Hardwareinformationen | Die Fakten der Maschine: System, CPU, Speicher, Netzwerk-Schnittstellen, Zeitzone, Display, die Pads und ihre Zuordnungen - auf jeder Plattform dieselbe Seite (Abschnitt 4.2). |
+| | Hardwareinformationen | Die Fakten der Maschine: System, CPU, Speicher, Netzwerk-Schnittstellen, Zeitzone, Display, die Pads und ihre Zuordnungen - auf jeder Plattform dieselbe Seite (Abschnitt 4.2). Circle führt zurück ins Systemmenü. |
+| | Virtuelles Gamepad | Die Gamepads, die Apps bekommen, und die, die der Dienst sieht (Abschnitt 4.5). Circle führt zurück ins Systemmenü. |
 | | Software-Update | (Raspberry Pi und PC) Überprüfen Sie die Website jetzt auf ein neueres AutoBleem oder RetroArch; die Zeile sagt *Update verfügbar*, wenn der Launcher schon von einem weiß. |
 | | Über | Credits und Lizenz. |
 | **Verlassen** | RetroArch | (Nur wo RetroArch installiert ist.) Verlässt den Launcher für RetroArch's eigenes Menü. Schließen von RetroArch kommt zurück. |
-| | Ausschalten | Nach einer Bestätigung: auf der Console AutoBleems Standby - der Stick getrennt, das Licht rot, Power bringt den Launcher zurück (Abschnitt 2.1); auf einem Pi oder PC fährt die Maschine herunter. |
+| | Ausschalten | Nach einer Bestätigung: auf der Console AutoBleems Standby - der Stick getrennt, das Licht orange, Power bringt den Launcher zurück (Abschnitt 2.1); auf einem Pi oder PC fährt die Maschine herunter. |
 
 ![Das Systemmenü](../images/en/system-menu.jpg)
 
@@ -308,9 +334,12 @@ Zeile, L2 / R2 blättern, Circle verlässt und speichert. Jede Änderung wird so
 
 | Gruppe / Einstellung | Was es macht |
 |---|---|
-| **Oberfläche**: Anzeige | Die Auflösung des Bildschirms, für den Launcher und den PS1-Emulator: *Auto* (der eigene Modus des Bildschirms, angezeigt als *Auto (1920x1080)*) oder jeder Modus, den der Bildschirm auflistet; die Console bietet 720p und 1080p. Bei einem neuen Modus wird nachgefragt: *Diesen Anzeigemodus behalten?* - bestätigen Sie nicht, geht er nach einem Countdown zurück. Nicht in einem Entwicklungsfenster. |
+| **Oberfläche**: Anzeige | Die Auflösung des Bildschirms, für den Launcher und den PS1-Emulator: *Auto* (der eigene Modus des Bildschirms, angezeigt als *Auto (1920x1080)*) oder jeder Modus, den der Bildschirm auflistet; die Console bietet 720p, 1080p und *CRT 4:3* (720x480, für einen Röhrenfernseher oder ein 4:3-Aufnahmegerät). Bei einem neuen Modus wird nachgefragt: *Diesen Anzeigemodus behalten?* - bestätigen Sie nicht, geht er nach einem Countdown zurück. Nicht in einem Entwicklungsfenster. |
+| CRT-Rand: | Der sichere Bereich bei einer 4:3-Ausgabe, 0 bis 10 % in Schritten von 1 %. Sofort angewendet und vor dem Startbild gelesen. |
+| Bildhöhe: | Die Höhe des Bildes bei jeder 4:3-Ausgabe (*CRT 4:3* oder ein 4:3-Fenster an einem VGA- / PC-Ausgang), -40 bis +40 in Schritten von 2, sofort angewendet. Das Spielbild von RetroArch folgt ihr. |
 | Bildskalierung des Emulators | Wie der PS1-Emulator das Bild eines Spiels an den Bildschirm anpasst: *1x1* (die eigenen Pixel der PlayStation), *2x (ganzzahlig)*, *4:3*, *4:3 (ganzzahlig)* oder *Vollbild*. Ganzzahlige Skalierung verwendet nur ganze Vielfache (am schärfsten). Sie ersetzt den alten Widescreen-Schalter; der klassische `pcsx-ab` und RetroArch kennen nur Vollbild und 4:3. |
-| AutoBleem Theme | Das Aussehen. Designs leben in `Themes/`; ein Designs-Zip dort abgelegt wird beim nächsten Besuch entpackt. Die Designs, die AutoBleem mitliefert, werden mit jedem Update aufgefrischt - um eines anzupassen, kopieren Sie es zuerst unter einen neuen Namen. Der Standard ist **ab2.0.0**. |
+| AutoBleem Theme | Das Aussehen. Designs leben in `Themes/`; ein Designs-Zip dort abgelegt wird beim nächsten Besuch entpackt. Die Designs, die AutoBleem mitliefert, werden mit jedem Update aufgefrischt - um eines anzupassen, kopieren Sie es zuerst unter einen neuen Namen. Der Standard ist **ab2.0.0**. Bei *CRT 4:3* zeigt die Liste nur Designs mit 4:3-Layout; hat das benutzte Design keines, ersetzt das Standard-Design es nach der Bestätigung (auch beim Start), und ein Hinweis sagt *Theme auf das Standard-Theme umgestellt (CRT 4:3)*. |
+| Bildschirm-Halo: | AN füllt die Streifen neben dem Bild eines Spiels (wo es den Bildschirm nicht ausfüllt) mit dem eigenen Schimmer des Bildes (`pcsx-abnxt`). |
 | Cover-Stil | Der Jewel-Case-Rahmen, der um PS1-Cover gezeichnet wird. |
 | Cover-Glanz | Ein Glanz, der über das ausgewählte Cover wandert, wenn das Regal zur Ruhe kommt. |
 | Sprache | Die Launcher-Sprache, sofort angewendet (17 Sprachen). |
@@ -321,15 +350,20 @@ Zeile, L2 / R2 blättern, Circle verlässt und speichert. Jede Änderung wird so
 | Schriftart | Jede `.ttf`/`.otf` aus `resources/fonts`, `RetroArch/fonts` oder dem Designs-Ordner; die Zeile nennt die verwendete Schriftart. |
 | **Ton**: Musik, Hintergrundmusik | Welcher Track unter dem Launcher spielt (der des Designs oder eine Datei aus `resources/music`), und ob überhaupt einer spielt. |
 | **Emulation**: PS1-Emulator | `pcsx-abnxt` (Standard: aktueller PCSX-ReARMed mit AutoBleems Zusätzen) oder `pcsx-ab` (der klassische). Ein Fortsetzungspunkt, der von einem gespeichert wird, setzt sich im anderen fort, es sei denn, das Spiel lief ohne BIOS-Datei. |
-| Spieler 1 / Spieler 2 tauschen (PS1-Emulatoren) | Vertauscht, welcher der ersten beiden Controller Spieler 1 ist und welcher Spieler 2, in beiden PS1-Emulatoren (pcsx-abnxt und dem klassischen pcsx-ab). Es wirkt sich nur aus, wenn zwei oder mehr Controller angeschlossen sind; mit einem Controller ist es immer Spieler 1. RetroArch ist nicht betroffen. |
-| Alle PSX-Spiele mit RA spielen, RA-Konfiguration aktualisieren, RetroArch-Konfiguration behalten | (Nur wo RetroArch installiert ist.) Jedes PS1-Spiel startet in RetroArch's PS1-Core; AutoBleem schreibt seine Einstellungen in RetroArch's Konfiguration, wenn es dort ein Spiel startet; eine Änderung im eigenen Menü von RetroArch bleibt erhalten, wenn RetroArch beendet wird. |
+| Spieler 1 / Spieler 2 tauschen (PS1-Emulatoren) | Vertauscht, welcher der ersten beiden Controller Spieler 1 ist und welcher Spieler 2, in beiden PS1-Emulatoren (pcsx-abnxt und dem klassischen pcsx-ab). Es wirkt sich nur aus, wenn zwei oder mehr Controller angeschlossen sind; mit einem Controller ist es immer Spieler 1. RetroArch ist nicht betroffen. Ein PS1-Emulator, der noch nicht tauschen kann, zeigt *Dieser PS1-Emulator unterstützt das Tauschen von Controllern noch nicht*. |
+| Alle PSX-Spiele mit RA spielen, RA-Konfiguration aktualisieren, RetroArch-Konfiguration behalten | (Nur wo RetroArch installiert ist.) Jedes PS1-Spiel startet in RetroArch's PS1-Core (*PlayStation 1*; auf einem PC ist es SwanStation); AutoBleem schreibt seine Einstellungen in RetroArch's Konfiguration, wenn es dort ein Spiel startet; eine Änderung im eigenen Menü von RetroArch bleibt erhalten, wenn RetroArch beendet wird. |
 | **Bibliothek**: Interne Spiele anzeigen | Die eingebauten Spiele der Console in den PlayStation-Listen (nur PlayStation Classic). |
+| Spielnamen bereinigen: | AN (der Standard): Die Spiellisten von RetroArch zeigen Namen ohne Tags in Klammern wie (USA), (Rev 1) oder [!]. AUS zeigt die Dateinamen. Der Dateiname bleibt in den Details des Spiels. PS1-Spiele sind nicht betroffen - ihre Titel kommen aus der Datenbank. |
 | Cover online laden | Der Scan ruft fehlende Cover von libretro's Servern ab (Raspberry Pi, PC, Windows). |
 | **Updates** | Der Update-Kanal: `release` (die getestete Version), `testing` (die nächste Version, im Test), `nightly` (der neueste Entwicklungs-Build) oder `off`. Der Standard folgt der installierten Version. Auf einem Entwicklungsrechner nicht angezeigt. |
 | **Diagnose**: Protokolle auf dem Stick behalten | Behält alle Protokolle ab dem nächsten Start auf dem Stick, nicht nur nach einem Absturz (Kapitel 7). |
 | Leistung anzeigen | Ein Overlay in der unteren linken Ecke: Bildrate, CPU-Last, Threads und Speicher; der Emulator zeigt im Spiel auch seine FPS und CPU. |
 
 ![Die Optionen, in Gruppen](../images/en/options.jpg)
+
+![Die Gruppe Anzeige: CRT-Rand und Bildhöhe](../images/en/options-display.jpg)
+
+![Der Hinweis nach dem Wechsel zu CRT 4:3 mit einem Design ohne 4:3-Layout](../images/en/crt43-theme-notice.jpg)
 
 ### 3.7 Einstellungen eines Spiels
 
@@ -342,10 +376,12 @@ Der **Spiel-Editor** zeigt die Details des Spiels rechts (Titel, Publisher, Jahr
 - **Spiel**: *Favorit* (in der Lieblingsspiele-Gruppe), *Lightgun-Spiel* und *Mit RA spielen* (nur wo RetroArch
   installiert ist: ein Light-Gun-Spiel tritt der Lightgun-Gruppe bei und läuft immer in RetroArch, dessen PS1-Core
   den GunCon hat; *Mit RA spielen* lässt dieses Spiel in RetroArch laufen), *Infos Sperren* (der Scanner lässt den
-  Spieltitel, die Seriennummer und die Liste der Discs so, wie Sie sie gesetzt haben).
+  Spieltitel, die Seriennummer und die Liste der Discs so, wie Sie sie gesetzt haben)
+  und *Fortsetzen:* - was geschieht, wenn ein Spiel mit Fortsetzungspunkten startet: *Fragen* zeigt die Auswahl des
+  Fortsetzungs-Slots, *Letzter Slot* setzt sofort vom neuesten Slot fort, *Nie* startet das Spiel von vorn.
 - **Anzeige**: *Auflösung* (1x oder 2x, auf der eingebauten GPU), *Nähte entfernen* (nur mit 2x), *Dithering* (Aus, An,
   Immer), *Glättung*, der *Filter* - wie das Bild skaliert wird: Nächster Nachbar (einfache Pixel), Linear (geglättet),
-  Scharf oder Scharf (einfach) (scharfe Pixel ohne Flimmern), Quilez oder die CRT-Filter CRT (fast) und CRT-Pi (sie
+  Scharf oder Scharf (einfach) (scharfe Pixel ohne Flimmern), Quilez oder die CRT-Filter CRT (fast), CRT (raster) und CRT-Pi (sie
   zeichnen ihre eigenen Scanlines, daher werden die Scanline-Zeilen grau) - und *Scanlines* mit ihrer
   *Scanline-Helligkeit*. Auflösung, Nähte entfernen, Dithering, Glättung und die Filter außer Linear und Nächster
   Nachbar sind für `pcsx-abnxt`; die klassische `pcsx-ab` und RetroArch zeigen den Rest als Nächster Nachbar.
@@ -358,7 +394,14 @@ Die Bildform und die Auflösung des Bildschirms sind global (Optionen → *Bilds
 Ein Spiel ohne Titel in seinen Daten wird unter dem Namen seines Ordners gezeigt.
 
 Triangle benennt das Spiel um, Square ändert seine Memory Card, Start teilt eine neue Card. Circle speichert
-und verlässt.
+und verlässt. Wer Links / Rechts oder Hoch / Runter hält, wiederholt die Bewegung - im Editor und auch in den
+Bildschirmen für die Spieloptionen und Cores von RetroArch. Ein Laufwerks-Spiel ohne `pcsx.cfg` kann nichts
+speichern: Der Editor sagt *Nicht gespeichert: Dieses Spiel hat keine pcsx.cfg*.
+
+Bei einer **Disc im Laufwerk** (Abschnitt 3.8a) zeigt der Editor die Zeilen grau, die die Disc nicht nutzen kann, und
+sagt *Nicht verfügbar für eine Disc im Laufwerk*.
+
+![Der Spiel-Editor für eine Disc im Laufwerk](../images/en/game-editor-disc.jpg)
 
 **Einstellungen im Emulator gespeichert.** Das eigene Menü des Emulators hat *Einstellungen für dieses Spiel
 speichern*. Sobald ein Spiel dort gespeicherte Einstellungen hat, sind dies die, mit denen es spielt, und der
@@ -376,7 +419,8 @@ Jedes PS1-Spiel hat standardmäßig seine eigene Memory Card (behalten mit seine
 **Memory Cards** im Systemmenü verwaltet **freigegebene Sets** - eine Card, die mehrere Spiele verwenden, behalten
 in `Games/!MemCards/`: erstellen Sie eine (Square, mit der On-Screen-Tastatur), benennen Sie um (Cross), löschen
 Sie (Triangle). Ein Spiel wird mit *Memory Card wechseln* in seinem Editor oder von seinem Memory Card-Icon auf
-einen Set gestellt.
+einen Set gestellt. Ein Set ohne Card sagt *noch keine Karte*, und beim Speichern fragt es *Möchtest du die
+Memory-Card-Daten speichern?*
 
 Der **Memory-Card-Editor** (das Memory Card-Icon) zeigt die Card des Spiels und eine zweite Card nebeneinander,
 mit jedem Save-Icon und -Titel: kopieren Sie einen Save zwischen den beiden (Square), löschen Sie einen (Triangle),
@@ -390,7 +434,11 @@ Emulators auf einem Pi oder PC), behält AutoBleem einen Save State, wo Sie ware
 Datum; der neueste ist mit **NEUESTE** markiert, und ein unbenutzter Slot sagt *Kein Fortsetzpunkt*. Cross setzt einen
 aus dem Slot fort, Triangle löscht ihn. Ein Spiel mit einem Fortsetzungspunkt zeigt ein kleines Bild auf seinem
 Fortsetzen-Icon; ein Spiel ohne hat das Fortsetzen-Icon grau. Während der Fortsetzungspunkt beim Verlassen eines
-Spiels geschrieben wird, zeigt der Emulator *Bitte warten...*.
+Spiels geschrieben wird, zeigt der Emulator *Bitte warten...*. Auch PS1-Spiele, die in RetroArch gespielt werden,
+haben Fortsetzungs-Slots. Ein Slot trägt ein Abzeichen - das AutoBleem-2- oder das RetroArch-Logo -, so sehen Sie,
+welcher Emulator ihn geschrieben hat.
+
+![Die Auswahl des Fortsetzungs-Slots](../images/en/resume-picker.jpg)
 
 ### 3.8 Starten von Spielen, RetroArch und Apps
 
@@ -399,6 +447,12 @@ Vollbildschirm, bis Sie ihn verlassen - auf der Console mit der vorderen **Reset
 mit einem Fortsetzungspunkt; geht auch aus dem Menü im Spiel heraus) oder **Power** (die Console schaltet sich aus);
 auf einem Pi oder PC durch das Menü des Emulators im Spiel (unten). **Square** startet ein PS1-Spiel
 stattdessen in RetroArch.
+
+**Der Weg aus einem Spiel** ist auf jedem Pad gleich - dem der Console, einem USB-Pad, einem Bluetooth-Pad:
+**Start + Select oder Home 2 Sekunden halten** (*Select+Start oder Home 2 Sekunden halten: zurück zu AutoBleem*).
+Ein kurzer Druck auf Select + Start oder Home öffnet das Menü des Emulators (*Select+Start oder Home kurz drücken:
+das Menü des Emulators*); eine App hat kein solches Menü, nur das Halten wirkt. Auf der Console stoppt **Reset**
+immer auch eine App.
 
 **Das Menü im Spiel** (`pcsx-abnxt`). Drücken Sie die Menü-Taste - die Home-Taste des Pads, **Select + Start** auf
 einem Pad ohne eine, oder **Esc** auf einer Tastatur - und das Spiel hält hinter einem Menü mit dem letzten Bild des
@@ -422,12 +476,68 @@ Schnellspeicherstands.
 
 Ein **RetroArch**-Spiel startet in RetroArch mit dem Core, den der Launcher für sein System gewählt hat; *Inhalt
 schließen* oder *RetroArch beenden* in seinem Menü kommt zum Launcher zurück. Das RetroArch-Element im Systemmenü
-öffnet RetroArch's eigenes Menü (XMB) mit nichts geladen, für seine Einstellungen und seine eigenen Inhaltslisten.
+öffnet RetroArch's eigenes Menü (XMB) mit nichts geladen, für seine Einstellungen und seine eigenen Inhaltslisten. Das Core-Fenster öffnet mit *PlayStation 1* zuerst.
+
+![Das Core-Fenster von RetroArch](../images/en/retroarch-cores.jpg)
 
 Eine **App** (das Apps-Set: die Console-Tools und auf einer Console die zusätzlichen Anwendungen, die RetroArch's
 Paket bringt - Doom, Quake, Amiga, ...) zeigt zuerst ihre Anleitung; Cross startet sie, Circle geht zurück.
 
 ![Eine App-Anleitung vor dem Start](../images/en/app-start.jpg)
+
+**Die Einstellungen einer App.** *Spieleinstellungen* („Ändern, wie dieses Programm gestartet wird“) hat
+*Controller-Modus:* (*Automatisch*, *PSC-Controller*, *Xbox-360-Controller*, *PSC-Controller (System)*,
+*Xbox-360-Controller (System)*), *Steuerkreuz als Stick:* und *Stick als Steuerkreuz:*. Manche Apps fragen einmal,
+beim ersten Start, *Welche Steuerung hat dein Controller?* (*Ein Steuerkreuz* oder *Analogsticks*); eine App vom
+Windows-Typ fragt *Was möchtest du tun?* (*Windows starten*, *Windows installieren*, *DOS starten*, *Windows
+deinstallieren*). Um eine Taste zuzuordnen, sagt der Bildschirm *Drücke eine der Tasten.*
+
+![Die Spieleinstellungen einer App](../images/en/app-game-settings.jpg)
+
+Die Texte und Fragen eines Windows-Programms (einer PE-App) erscheinen als AutoBleem-Bildschirme (*Meldung*,
+*Option wählen*), betitelt mit dem Namen der App.
+
+![Eine Frage von einer PE-App](../images/en/pe-dialog.jpg)
+
+### 3.8a Eine Disc in einem USB-Laufwerk
+
+Ein USB-CD/DVD-Laufwerk mit einer PlayStation- oder Audio-Disc darin stellt diese Disc als Spiel auf das Regal. Nicht
+unter Windows, das keine Laufwerksunterstützung hat.
+
+- **Die Disc-Ansicht** öffnet sich von selbst, wenn eine Disc erkannt wird; R1 *Disc* öffnet sie vom Regal aus. Sie
+  zeigt das Cover der Disc (aus den Cover-Datenbanken oder online geholt), ihre Seriennummer und ihren Titel. Cross
+  spielt die Disc. Ein PS1-Spiel, das von der Disc gespielt wird, setzt fort und speichert in den Ordner der Disc.
+  Nach einem Spiel, den Optionen oder den Einstellungen einer Erweiterung sind Sie zurück in der Disc-Ansicht; Circle
+  auf dem Regal bringt sie zurück, und dort ist R1 wieder der Sprung zum ersten Buchstaben.
+- **Der Laufwerks-Chip** zeigt den Zustand des Laufwerks: versteckt ohne Laufwerk, gedimmt mit Laufwerk und ohne Disc,
+  blinkend *Disc wird gelesen...* während des Lesens, dann der Titel der Disc. Weitere Meldungen sind *Das ist keine
+  PlayStation-Disc* und *Die Disc kann jetzt nicht gelesen werden*.
+
+![Die Disc-Ansicht](../images/en/disc-view.jpg)
+
+![Der Laufwerks-Chip](../images/en/disc-chip.jpg)
+
+- **Eine Audio-CD** öffnet den **CD-Player** (*CD-PLAYER*, *Audio-CD*, mit *TITEL* und *GESAMTZEIT*). Seine Tasten
+  sind *Titel spielen*, *Stopp*, *Zurück/Weiter*, *Suchen*, *Pause*, *Wiederholen:* (aus oder an) und *Zufall:*, und
+  *Gewählt:* nennt den Titel. Eine Disc, die nicht spielt, sagt *Diese Disc kann nicht abgespielt werden*.
+
+![Der CD-Player](../images/en/cd-player.jpg)
+
+- **Disc kopieren** (Square) kopiert eine PlayStation-Disc als **CHD** nach `Games`, mit einer `.m3u`-Datei für ein
+  Spiel auf mehreren Discs (Disc 1 zuerst). Es fragt zuerst: *"%1" nach %2 kopieren? Das braucht %3 der freien %4.*
+  Ein Fortschrittsfenster, *Disc wird kopiert*, zeigt die *Geschwindigkeit* und die *Verbleibende Zeit* und sperrt den
+  Launcher; *Abbrechen* bricht ab (*Wird abgebrochen...*, dann *Abgebrochen*). Am Ende sagt es *Die Disc wurde nach
+  Games kopiert.* Es lehnt ab mit *Schon in Games: %1*, *Zu wenig Platz in Games: Die Kopie braucht %1, frei sind %2.*
+  oder *Das Kopieren ist fehlgeschlagen: %1*. Sektoren, die nicht gelesen werden können, werden als Nullen
+  geschrieben, und die Meldung *%1 Sektoren konnten nicht gelesen werden und wurden als Nullen geschrieben.* sagt,
+  wie viele (*Nicht lesbare Sektoren*). Eine Disc, die die Datenbanken nicht kennen, wird nach ihrer Seriennummer benannt.
+
+![Eine Disc kopieren](../images/en/disc-copy.jpg)
+
+- **LibCrypt-Discs**: Die `.sbi`-Datei eines LibCrypt-Spiels wird von der Website geholt, bevor die Disc spielt und
+  wenn sie kopiert wird. Das braucht ein Netzwerk: auf einem Raspberry Pi oder PC das, das es schon hat, auf der
+  Console das in PSC-Bios eingerichtete WiFi.
+- Der Spiel-Editor einer Disc zeigt die Zeilen grau, die er nicht nutzen kann (Abschnitt 3.7).
 
 ### 3.9 Spiele hinzufügen
 
@@ -446,7 +556,7 @@ Games/
 - Ein Multi-Disc-Spiel ist ein Ordner mit jedem Disc darin; Ordner, benannt `Game (Disc 1)`, `Game (Disc 2)`
   ... werden vom Scan zu einem `Game`-Ordner zusammengefasst.
 - Spiele, die direkt in `Games/` abgelegt werden (lose Dateien), werden vom Scan in Ordner nach Spiel sortiert.
-- Ein **Cover** ist ein PNG neben dem Spiel-Image, benannt wie dieses. Ohne eines kommt die Schachtelart aus den
+- Ein **Cover** ist ein PNG oder JPEG neben dem Spiel-Image, benannt wie dieses. Ohne eines kommt die Schachtelart aus den
   Cover-Datenbanken oder - mit RetroArch installiert - aus libretro's Thumbnail-Set; auf einem Pi, PC oder
   Windows wird ein fehlender Online abgerufen (Optionen → *Box Art online abrufen*).
 - Der Scan liest die Seriennummer jeder Disc und nimmt den Titel, Publisher, Jahr, Spieler und Region aus
@@ -461,6 +571,23 @@ schreibt RetroArch's Spiellisten; auf einem Console-Stick führen Sie **UpdateRo
 
 **Apps** gehen unter `Apps/<name>/` mit einer `app.ini` (der Name, das Icon, was zu laufen ist) und einer
 `run.sh`.
+
+**Pakete.** Spieldaten für Engines - Doom, Quake, OpenArena, Heretic, Hexen, Strife, Duke Nukem 3D, Shadow Warrior,
+Theme Hospital, DOS-Spiele und mehr - kommen in einen Ordner `Packages` auf dem Stick, zum Beispiel
+`Packages/Doom/DOOM2.WAD`. AutoBleem erkennt die Daten an einer Tabelle, die mitgeliefert wird (`rc/packages.ini`);
+die losen Spieldateien eines erkannten Ordners sind jeweils ein eigenes Paket. Ihre eigenen Dateien werden nur
+gelesen, nie verändert. Ein Paket kann auch aus dem Store kommen. Die **Paketauswahl** listet auf, was gefunden wurde.
+Die **Paket-Info** zeigt *Inhalt*, *Beschreibung*, *Ort*, *Quelle*, *Läuft mit*, *Mod*, *Shareware*, *In dieser App*
+und *Deine Dateien* eines Pakets, und *Spieldaten wählen* wählt die Daten, mit denen gestartet wird. Die Meldungen
+sind *Keine Spieldaten gefunden*, *Unbekannte Daten*, *Keine installierte App führt das aus*, *%1 braucht Spieldaten,
+die es ausführen kann: %2.* und *Nicht erkannt. Falls es ein Spiel ist, siehe Handbuch: Eigene Spiele.*
+
+![Die Paketauswahl](../images/en/packages-picker.jpg)
+
+![Die Paket-Info](../images/en/package-info.jpg)
+
+**Einen Teil scannen.** *Spiele erneut scannen* kann nur einen Teil scannen - ein Set oder einen Ordner - und nimmt
+seine Blase am Ende weg.
 
 **Designs** gehen unter `Themes/<name>/` (`theme.json` und die Bilder) - oder legen Sie das Designs-Zip in
 `Themes/`.
@@ -480,7 +607,7 @@ die viele Spiele tolerieren und einige nicht.
   oder RetroArch gibt, fragt es: *Jetzt aktualisieren* lädt alles herunter und führt den Installer mit dem
   Fortschrittsbildschirm des ersten Starts erneut aus; *Morgen erinnern* und *Diese Version überspringen* sind
   die anderen Antworten. Ihre Spiele und Einstellungen bleiben; der Launcher scannt einmal nach einem Update
-  erneut.
+  erneut. Das Kanal-Kennzeichen in der oberen linken Ecke (Abschnitt 3.1) zeigt, was installiert ist.
 - **PlayStation Classic**: Führen Sie einen neueren `AutoBleemInstaller.exe` über dem Stick aus (Abschnitt 2.1).
 
 ### 3.12 Erweiterungen und der AutoBleem Store
@@ -497,7 +624,8 @@ Launcher stoppte, wird ausgeschaltet - die Liste sagt es.
 System, auf dem AutoBleem läuft (eine PlayStation Classic benötigt das WiFi des AutoBleem-Kernels). Seine vier
 Tabs, L1 / R1 dazwischen:
 
-- **Apps** und **Spiele**: das, das die Quellen anbieten, jeder mit seinem Bild, Version, Größe und Quellen-Favicon.
+- **Apps** und **Spiele**: das, das die Quellen anbieten (der Apps-Tab listet auch PE-Apps mit ihrer Lizenz und Quelle
+  sowie Spieldaten-Pakete, Abschnitt 3.9), jeder mit seinem Bild, Version, Größe und Quellen-Favicon.
   Installierte Elemente tragen ein *Installiert*-Abzeichen. Cross installiert (oder aktualisiert, oder versucht wieder
   nach einem Fehler, oder bricht einen wartenden oder laufenden Download ab), Triangle entfernt, das der Store
   installiert hat, Square aktualisiert die Listen. L2 / R2 springen nach Buchstaben, **Select** zeigt eine Quelle auf
@@ -567,9 +695,9 @@ Prozessor tun muss, und `tools/proc_check.py` in AutoBleem's Quelle überprüft 
 
 ### 4.1 Spiel-Manager
 
-Die PS1-Spiele als Liste nur mit ihren Titeln (der Ordner des ausgewählten steht in seinen Details) und das ausgewählte mit Cover. Cross öffnet den
+Der Bildschirm heißt *Spielemanager - Spiel auswählen*. Die PS1-Spiele als Liste nur mit ihren Titeln (der Ordner des ausgewählten steht in seinen Details) und das ausgewählte mit Cover. Cross öffnet den
 Spiel-Editor, **Square löscht das Spiel** (seinen Ordner und, nach einer zweiten Frage, seine Save States),
-Triangle löscht jedes Cover-PNG neben den Spielen (der Scan nimmt sie wieder aus den Datenbanken), L2 / R2
+Triangle löscht jedes Cover-Bild (PNG oder JPEG) neben den Spielen (der Scan nimmt sie wieder aus den Datenbanken), L2 / R2
 Seite. Der freie Platz des Laufwerks ist oben rechts. Der Spiel-Manager wartet, während ein Scan läuft.
 
 ![Der Spiel-Manager](../images/en/game-manager.jpg)
@@ -583,14 +711,15 @@ Console eingeschlossen; die Bildschirme für Netzwerk und Controller sind **Netz
 Die erste und zweite Steuerung werden als Spieler 1 und Spieler 2 angezeigt – die Anschlüsse, die der PS1-Emulator ihnen gibt.
 Jede weitere Steuerung wird als „wird vom PS1-Emulator nicht verwendet“ angezeigt. RetroArch weist Steuerungen nach seinen eigenen
 Einstellungen zu und kann sie anders anordnen. Wenn eine Steuerung angeschlossen oder abgezogen wird, zeigt der Launcher kurz,
-welches Pad Spieler 1 und Spieler 2 ist.
+welches Pad Spieler 1 und Spieler 2 ist. Circle führt zurück ins Systemmenü.
 
 ![Hardware-Informationen](../images/en/hardware-info.jpg)
 
 ### 4.3 Der Button-Leitfaden
 
 Triangle auf dem Regal: jeder Button von jedem Bildschirm auf einer Seite. Wenn eine USB-Tastatur verbunden ist
-oder verwendet wurde, zeigt eine Tastatur-Spalte die Tasten neben den Pad-Tasten.
+oder verwendet wurde, zeigt eine Tastatur-Spalte die Tasten neben den Pad-Tasten. Zwei Zeilen erklären den Weg aus einem Spiel: *Select+Start oder Home 2 Sekunden halten: zurück
+zu AutoBleem* und *Select+Start oder Home kurz drücken: das Menü des Emulators*.
 
 ![Der Button-Leitfaden](../images/en/button-guide.jpg)
 
@@ -605,6 +734,16 @@ Triangle löscht, Square ist ein Space, **L1** ist Shift (zweimal für Großschr
 bestätigt, Esc bricht ab.
 
 ![Die On-Screen-Tastatur](../images/en/keyboard.jpg)
+
+### 4.5 Virtuelles Gamepad
+
+*Virtuelles Gamepad* im Systemmenü zeigt die Gamepads so, wie das Programm sie sieht, das sie bedient. Es hat drei
+Teile: *Die Gamepads, die Apps bekommen*, *Gamepads, die der Dienst sieht* und *Dienst*. Ein Gamepad kann die Vermerke
+*verbunden*, *nicht lesbar*, *aus der Controller-Datenbank*, *vom Dienst geraten* oder *unbekannter Treiber* tragen,
+und *Neu suchen* liest die Gamepads noch einmal. Ein Teil, den der Build nicht hat, sagt *Nicht in diesem Build*.
+Circle führt zurück ins Systemmenü.
+
+![Virtuelles Gamepad](../images/en/virtual-gamepad.jpg)
 
 <!-- pagebreak -->
 
@@ -743,6 +882,21 @@ Eine Fortschrittsleiste unter jedem Schritt zeigt, wie weit die Aktion ist. Das 
 zu flashen, die eine andere benutzerdefinierte Firmware ausführt (BleemSync, Project Eris): stellen Sie sie zuerst
 auf Stock wieder her.
 
+**Anmelden von einem PC.** Mit installiertem AutoBleem-Kernel (nicht auf einer Stock-Console) können Sie sich über ein
+USB-Kabel an der Console anmelden:
+
+1. Verbinden Sie den Micro-USB-Port der Console mit einem USB-Kabel mit dem PC. Der PC zeigt die Console als neuen
+   Netzwerkadapter; die Adresse der Console steht in den Einstellungen dieses Adapters auf dem PC.
+2. Melden Sie sich mit `ssh root@<die Adresse der Console>` an. Das Standardpasswort ist `autobleem`.
+
+Statt des Passworts können Sie einen Schlüssel nehmen: Legen Sie Ihren öffentlichen Schlüssel in die Datei
+`System/ssh/authorized_keys` auf dem Stick und starten Sie die Console neu. Beim nächsten Boot wird er zum root-Konto
+hinzugefügt. Ein Update oder eine Neuinstallation des Launchers entfernt ihn nicht.
+
+> **Das Standardpasswort ist auf jeder Console dasselbe**: Jeder, der ein Kabel anstecken kann, kann sich als root
+> anmelden. Nehmen Sie, wo es geht, einen Schlüssel, und lassen Sie keine Console mit dem Standardpasswort dort
+> stehen, wo andere sie erreichen.
+
 <!-- pagebreak -->
 
 ## 7. Wenn etwas schiefgeht
@@ -757,6 +911,14 @@ auf Stock wieder her.
   Die Dateien: `autobleem.log` (der Launcher), `launch.log` und `pcsx.log` (ein PS1-Spielstart und die Ausgabe
   des Emulators), `retroarch.log`, und - immer auf dem Stick - `update.log` (ein Online-Update) und
   `updateroms.log` (UpdateRoms).
+- **Das Bild fragt nach einem Stick, oder die Console ist schlafen gegangen**: Es steckt kein Stick in der Console,
+  oder er wurde gezogen. Stecken Sie ihn ein (beliebiger USB-Port; ein vorderer ist am besten, Abschnitt 2.1), bevor
+  die 5 Minuten um sind, oder drücken Sie Power. Ein Stick, der nicht sauber entfernt wurde, wird zuerst geprüft -
+  warten Sie, bis der Fortschrittsbalken fertig ist.
+- **RetroArch sagt, es braucht eine neuere Systembibliothek, als diese Console hat**: Die eigene Bibliothek der Console
+  ist für dieses RetroArch zu alt. Nehmen Sie das RetroArch, das mit AutoBleem kommt.
+- **Ein PSN-Spiel sagt, es sei durch seine PSN-Lizenz geschützt und könne nicht gestartet werden**: Dieses Spiel kann
+  nicht auf AutoBleem laufen.
 - **Ein Spiel ist nicht auf dem Regal**: überprüfen Sie das Ordner-Layout (ein Ordner pro Spiel, die
   Bild-Formate von Abschnitt 3.9). Der *Spiel-Manager* listet die Ordner auf, die der Scan ablehnte, nach den
   Spielen, markiert *Nicht addiert*, mit dem Grund; Square löscht einen solchen Ordner. *Spiele neu scannen*
