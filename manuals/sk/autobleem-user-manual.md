@@ -74,8 +74,7 @@ zbavíte sa obmedzenia FAT32, ktoré nedovolí súbor väčší ako 4 GB.
    na `SONY` a dostane kópiu programu `UpdateRoms` (pozri kapitolu 5).
 4. Kľúč bezpečne odoberte, zapojte ho do **druhého predného USB portu** konzoly (toho pravého, pre hráča 2) -
    prvý zostane voľný pre ovládač - a konzolu zapnite. Namiesto pôvodnej ponuky nabehne AutoBleem. Druhý
-   ovládač pripojíte cez USB hub v prednom porte, alebo použite ovládač cez Bluetooth. Kľúč nezapájajte do portu
-   micro-USB vzadu (pozri nižšie).
+   ovládač pripojíte cez USB hub v prednom porte, alebo použite ovládač cez Bluetooth.
 
 **Zapínanie a vypínanie.** So zapojeným kľúčom konzola nabehne, pár sekúnd bliká kontrolkou, kým zaregistruje
 AutoBleem, a ešte predtým, ako sa na obrazovke čokoľvek objaví, prejde do pohotovostného režimu. To je v poriadku:
@@ -90,9 +89,8 @@ bol odpojený správne. Predtým, ako znova stlačíte Power, ho vráťte späť
 ďalšom zapnutí znova prejde štartovacím pohotovostným režimom. **Červená** kontrolka znamená, že konzola je
 naozaj vypnutá.
 
-**Kľúč dávajte do predného USB portu.** Port micro-USB vzadu slúži na napájanie. S jadrom AutoBleem sa doň síce dá
-zapojiť aj USB zariadenie, lenže čokoľvek v ňom konzole nedovolí zaspať: s kľúčom alebo hubom vzadu sa konzola
-namiesto prechodu do pohotovosti úplne vypne a Power ju potom musí spúšťať od začiatku, čo trvá dlhšie.
+**Port vzadu.** Port micro-USB vzadu je napájací konektor konzoly. S jadrom AutoBleem sa doň dá zapojiť aj USB
+zariadenie, ale kľúč patrí do predného portu.
 
 **Keď kľúč chýba.** Ak konzola nabehne bez kľúča, alebo kľúč vytiahnete počas behu AutoBleemu, objaví sa obrázok,
 ktorý vás požiada, aby ste ho zasunuli - do ktoréhokoľvek USB portu. AutoBleem čaká 5 minút a potom konzolu

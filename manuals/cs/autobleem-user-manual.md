@@ -75,8 +75,7 @@ a vy se zbavíte limitu FAT32, který nedovolí soubor větší než 4 GB.
    přejmenuje na `SONY` a dostane kopii programu `UpdateRoms` (viz kapitola 5).
 4. Flashku bezpečně odeberte, zapojte ji do **druhého předního USB portu** konzole (toho pravého, pro hráče 2)
    - první zůstane volný pro ovladač - a konzoli zapněte. Místo původní nabídky naběhne AutoBleem. Druhý
-   ovladač připojíte přes USB hub v předním portu, nebo použijte ovladač přes Bluetooth. Flashku nezapojujte do
-   portu micro-USB vzadu (viz níže).
+   ovladač připojíte přes USB hub v předním portu, nebo použijte ovladač přes Bluetooth.
 
 **Zapínání a vypínání.** Se zapojenou flashkou konzole naběhne, pár sekund bliká kontrolkou, než AutoBleem
 zaregistruje, a ještě než se na obrazovce cokoli objeví, přejde do pohotovostního režimu. To je v pořádku:
@@ -91,10 +90,8 @@ odpojená správně. Než znovu stisknete Power, vraťte ji zpátky. Pokud konzo
 zapnutí projde znovu startovním pohotovostním režimem. **Červená** kontrolka znamená, že je konzole opravdu
 vypnutá.
 
-**Flashku dávejte do předního USB portu.** Port micro-USB vzadu slouží k napájení. S jádrem AutoBleem do něj
-sice jde zapojit i USB zařízení, jenže cokoli v něm konzoli nedovolí usnout: s flashkou nebo hubem vzadu se
-konzole místo přechodu do pohotovostního režimu úplně vypne a Power ji pak musí spouštět od začátku, což trvá
-déle.
+**Port vzadu.** Port micro-USB vzadu je napájecí konektor konzole. S jádrem AutoBleem do něj jde zapojit i USB
+zařízení, ale flashka patří do předního portu.
 
 **Když flashka chybí.** Pokud konzole naběhne bez flashky, nebo flashku vytáhnete za běhu AutoBleemu, objeví se
 obrázek, který vás požádá, ať ji zasunete - do kteréhokoli USB portu. AutoBleem čeká 5 minut a pak konzoli uspí;

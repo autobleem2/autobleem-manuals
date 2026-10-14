@@ -75,8 +75,7 @@ FAT32:n 4 gigatavun tiedostokokoraja.
    `SONY`, ja sille kopioidaan `UpdateRoms` (katso luku 5).
 4. Poista tikku turvallisesti ja kytke se konsolin **etupaneelin toiseen USB-porttiin** (oikeanpuoleinen, pelaaja
    2) – ensimmäinen jää vapaaksi ohjaimellesi. Kytke konsoli päälle: vakiovalikon sijaan käynnistyy AutoBleem.
-   Toista ohjainta varten käytä etuportissa USB-hubia tai Bluetooth-ohjainta. Älä laita tikkua takana olevaan
-   micro-USB-porttiin (katso alempaa).
+   Toista ohjainta varten käytä etuportissa USB-hubia tai Bluetooth-ohjainta.
 
 **Päälle ja pois.** Kun tikku on paikallaan, konsoli käynnistyy, vilkuttaa valoaan muutaman sekunnin ajan
 huomatessaan AutoBleemin ja siirtyy sitten valmiustilaan ennen kuin ruudulle ilmestyy mitään. Tämä on normaalia:
@@ -91,10 +90,8 @@ tarkistamaan sitä, koska se irrotettiin oikein. Laita tikku takaisin ennen kuin
 konsolin virtajohdon, se käy seuraavalla kerralla taas läpi käynnistyksen valmiustilan. **Punainen** valo
 tarkoittaa, että konsoli on todella sammuksissa.
 
-**Käytä tikulle etupaneelin USB-porttia.** Takana oleva micro-USB-portti on virtaliitäntä. AutoBleem-kernelin
-kanssa siihen voi kytkeä myös USB-laitteen, mutta mikä tahansa siinä kiinni oleva laite estää konsolia menemästä
-lepoon: jos siinä on tikku tai hubi, konsoli sammuu kokonaan valmiustilan sijaan, ja Power joutuu käynnistämään sen
-alusta, mikä kestää pidempään.
+**Takaportti.** Takana oleva micro-USB-portti on konsolin virtaliitäntä. AutoBleem-kernelin kanssa siihen voi
+kytkeä myös USB-laitteen, mutta tikun paikka on etupaneelin portissa.
 
 **Jos tikku puuttuu.** Kun konsoli käynnistyy ilman tikkua tai vedät tikun irti AutoBleemin ollessa käynnissä,
 ruudulle tulee kuva, joka pyytää laittamaan tikun paikalleen – mikä tahansa USB-portti käy. AutoBleem odottaa 5

@@ -76,8 +76,7 @@ exFAT, iar așa scapi de limita FAT32 de 4 GB pe fișier.
    numele `SONY` și o copie a programului `UpdateRoms` (vezi capitolul 5).
 4. Scoate stick-ul în siguranță, conectează-l în **al doilea port USB din față** al consolei (cel din dreapta, al
    jucătorului 2) - primul rămâne liber pentru controler - și pornește consola. În locul meniului original pornește
-   AutoBleem. Pentru un al doilea controler folosește un hub USB în portul din față sau un controler Bluetooth. Nu
-   pune stick-ul în portul micro-USB din spate (vezi mai jos).
+   AutoBleem. Pentru un al doilea controler folosește un hub USB în portul din față sau un controler Bluetooth.
 
 **Pornirea și oprirea.** Cu stick-ul introdus, consola pornește, clipește din led câteva secunde până observă
 AutoBleem și apoi intră în standby înainte să apară ceva pe ecran. E normal: AutoBleem pornește prin mecanismul de
@@ -90,10 +89,8 @@ portocaliu, poți scoate stick-ul** și îl poți pune în PC; Windows nu va cer
 deconectat corect. Pune-l la loc înainte să apeși Power. Dacă scoți cablul de alimentare al consolei, data
 viitoare trece din nou prin standby-ul de pornire. Un led **roșu** înseamnă că consola e oprită de-a binelea.
 
-**Pune stick-ul într-un port USB din față.** Portul micro-USB din spate este cel de alimentare. Cu kernelul
-AutoBleem poate primi și un dispozitiv USB, dar orice e conectat acolo împiedică consola să intre în repaus: cu un
-stick sau un hub în spate, consola se oprește complet în loc să intre în standby, iar Power trebuie apoi s-o
-pornească de la zero, ceea ce durează mai mult.
+**Portul din spate.** Portul micro-USB din spate este mufa de alimentare a consolei. Cu kernelul AutoBleem
+poate primi și un dispozitiv USB, dar locul stick-ului este într-un port din față.
 
 **Dacă lipsește stick-ul.** Când consola pornește fără stick sau scoți stick-ul cât timp AutoBleem rulează, o
 imagine îți cere să-l introduci - în orice port USB. AutoBleem așteaptă 5 minute și apoi pune consola în repaus;
