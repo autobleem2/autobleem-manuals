@@ -79,7 +79,7 @@ FAT32 heeft.
 4. Werp de stick veilig uit en steek hem in de **tweede USB-poort aan de voorkant** van de console (de rechter, voor
    speler 2) - de eerste houd je vrij voor je controller. Zet de console aan: in plaats van het originele menu start
    AutoBleem. Wil je met twee controllers spelen, gebruik dan een USB-hub in de poort aan de voorkant of een
-   Bluetooth-controller. Steek de stick niet in de micro-USB-poort aan de achterkant (zie hieronder).
+   Bluetooth-controller.
 
 **Aan- en uitzetten.** Zit de stick erin, dan start de console, knippert het lampje een paar seconden terwijl hij
 AutoBleem opmerkt, en gaat hij vervolgens in standby nog voordat er iets op het scherm verschijnt. Dat is normaal:
@@ -94,10 +94,8 @@ controleren, want hij is netjes losgekoppeld. Steek hem terug voordat je op Powe
 de console eruit, dan gaat hij de volgende keer weer door de standby bij het opstarten. Een **rood** lampje betekent
 dat de console echt uit staat.
 
-**Gebruik een USB-poort aan de voorkant voor de stick.** De micro-USB-poort aan de achterkant is de stroomaansluiting.
-Met de AutoBleem-kernel kun je er ook een USB-apparaat op aansluiten, maar alles wat daar zit, houdt de console uit
-de slaapstand: met een stick of een hub op die poort gaat de console helemaal uit in plaats van in standby, en moet
-Power hem daarna helemaal opnieuw opstarten, wat langer duurt.
+**De poort aan de achterkant.** De micro-USB-poort aan de achterkant is de stroomaansluiting van de console. Met
+de AutoBleem-kernel kun je er ook een USB-apparaat op aansluiten, maar de stick hoort in een poort aan de voorkant.
 
 **Als de stick ontbreekt.** Start de console zonder stick, of haal je de stick eruit terwijl AutoBleem draait, dan
 vraagt een afbeelding je om hem erin te steken - elke USB-poort is goed. AutoBleem wacht 5 minuten en laat de

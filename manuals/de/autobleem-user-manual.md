@@ -82,7 +82,7 @@ die FAT32 setzt, fällt weg.
 4. Wirf den Stick sicher aus, steck ihn in den **zweiten USB-Anschluss vorn** an der Konsole (den rechten, für
    Spieler 2) - der erste bleibt für deinen Controller frei - und schalte die Konsole ein. Statt des
    Originalmenüs startet AutoBleem. Für einen zweiten Controller nimmst du einen USB-Hub am vorderen Anschluss oder
-   einen Bluetooth-Controller. Steck den Stick nicht in den Micro-USB-Anschluss auf der Rückseite (siehe unten).
+   einen Bluetooth-Controller.
 
 **Ein- und Ausschalten.** Mit eingestecktem Stick fährt die Konsole hoch, ihre Leuchte blinkt ein paar Sekunden,
 während sie AutoBleem erkennt, und dann geht sie in den Standby, noch bevor überhaupt etwas auf dem Bildschirm
@@ -97,10 +97,8 @@ prüfen, weil er ordentlich abgemeldet wurde. Steck ihn wieder ein, bevor du Pow
 der Konsole, durchläuft sie beim nächsten Mal wieder den Standby beim Hochfahren. Eine **rote** Leuchte bedeutet,
 dass die Konsole wirklich aus ist.
 
-**Nimm für den Stick einen vorderen USB-Anschluss.** Der Micro-USB-Anschluss hinten ist der Stromanschluss. Mit dem
-AutoBleem-Kernel kann er zwar auch ein USB-Gerät aufnehmen, aber alles, was dort steckt, lässt die Konsole nicht
-schlafen: Mit einem Stick oder Hub daran schaltet sie sich ganz aus, statt in den Standby zu gehen, und Power muss
-sie dann von Grund auf neu starten - das dauert länger.
+**Der Anschluss hinten.** Der Micro-USB-Anschluss auf der Rückseite ist der Stromanschluss der Konsole. Mit dem
+AutoBleem-Kernel nimmt er auch ein USB-Gerät auf, aber der Stick gehört in einen vorderen Anschluss.
 
 **Wenn der Stick fehlt.** Startet die Konsole ohne Stick oder ziehst du ihn ab, während AutoBleem läuft, bittet dich
 ein Bild, ihn einzustecken - welcher USB-Anschluss, ist egal. AutoBleem wartet 5 Minuten und schickt die Konsole

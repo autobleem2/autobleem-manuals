@@ -77,7 +77,7 @@ exFAT-minne, och då försvinner FAT32:s gräns på 4 GB per fil.
 4. Mata ut minnet på ett säkert sätt och sätt i det i konsolens **andra USB-port på framsidan** (den högra, för
    spelare 2) - den första behöver du till handkontrollen - och slå på konsolen. I stället för den vanliga
    menyn startar AutoBleem. Vill du ha en andra handkontroll använder du en USB-hubb i porten på framsidan
-   eller en Bluetooth-handkontroll. Sätt inte minnet i micro-USB-porten på baksidan (se nedan).
+   eller en Bluetooth-handkontroll.
 
 **Slå på och stänga av.** Med minnet isatt startar konsolen, blinkar med lampan några sekunder medan den
 upptäcker AutoBleem och går sedan i viloläge innan något syns på skärmen. Det är helt normalt: AutoBleem
@@ -91,10 +91,8 @@ lyser orange kan du dra ut minnet** och sätta det i datorn; Windows vill inte k
 kopplades bort korrekt. Sätt tillbaka det innan du trycker på Power. Drar du ur konsolens strömkabel går den
 igenom startvilan igen nästa gång. Lyser lampan **röd** är konsolen helt avstängd.
 
-**Sätt minnet i en USB-port på framsidan.** Micro-USB-porten på baksidan är strömporten. Med AutoBleem-kerneln
-klarar den också en USB-enhet, men allt som sitter där hindrar konsolen från att gå i viloläge: med ett minne
-eller en hubb i den porten stängs konsolen av helt i stället, och Power måste då starta den från början, vilket
-tar längre tid.
+**Porten på baksidan.** Micro-USB-porten på baksidan är konsolens strömingång. Med AutoBleem-kerneln klarar den
+också en USB-enhet, men minnet hör hemma i en port på framsidan.
 
 **Om minnet saknas.** Startar konsolen utan minne, eller drar du ut minnet medan AutoBleem körs, ber en bild dig
 att sätta i det - vilken USB-port som helst går bra. AutoBleem väntar i 5 minuter och låter sedan konsolen gå i

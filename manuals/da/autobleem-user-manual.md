@@ -75,8 +75,7 @@ exFAT-nøgle, og så slipper du for FAT32's grænse på 4 GB pr. fil.
    ligger en kopi af `UpdateRoms` på den (se kapitel 5).
 4. Skub nøglen sikkert ud, og sæt den i konsollens **anden USB-port foran** (den højre, til spiller 2) - den første
    holder du fri til din controller. Tænd konsollen: I stedet for den oprindelige menu starter AutoBleem. Vil du
-   spille med to controllere, så brug en USB-hub i porten foran eller en Bluetooth-controller. Sæt ikke nøglen i
-   micro-USB-porten bagpå (se nedenfor).
+   spille med to controllere, så brug en USB-hub i porten foran eller en Bluetooth-controller.
 
 **Tænd og sluk.** Med nøglen i starter konsollen, lampen blinker et par sekunder, mens den opdager AutoBleem, og
 derefter går den på standby, før der overhovedet kommer noget frem på skærmen. Det er helt normalt: AutoBleem starter
@@ -90,10 +89,8 @@ sætte den i din pc; Windows beder ikke om at kontrollere den, fordi den er kobl
 du trykker på Power. Trækker du konsollens strømkabel ud, går den gennem opstartsstandby igen næste gang. En **rød**
 lampe betyder, at konsollen er helt slukket.
 
-**Brug en USB-port foran til nøglen.** Micro-USB-porten bagpå er strømindgangen. Med AutoBleem-kernen kan den også
-tage en USB-enhed, men alt, hvad der sidder i den, forhindrer konsollen i at sove: Med en nøgle eller en hub dér
-slukker konsollen helt i stedet for at gå på standby, og Power skal så starte den helt forfra, hvilket tager længere
-tid.
+**Porten bagpå.** Micro-USB-porten bagpå er konsollens strømindgang. Med AutoBleem-kernen kan den også tage en
+USB-enhed, men nøglen hører hjemme i en port foran.
 
 **Hvis nøglen mangler.** Starter konsollen uden nøgle, eller trækker du nøglen ud, mens AutoBleem kører, beder et
 billede dig om at sætte den i - enhver USB-port duer. AutoBleem venter i 5 minutter og lader så konsollen sove; tryk
