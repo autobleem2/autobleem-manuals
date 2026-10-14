@@ -676,52 +676,100 @@ has to do, and
 
 ### 4.1 Game Manager
 
-The screen is titled *Game Manager - Select game*. The PS1 games as a list of their titles (the selected game's folder is in its details) and the selected one's cover. Cross opens the game
-editor, **Square deletes the game** (its folder and, after a second question, its save states), Triangle
-deletes every cover picture (PNG or JPEG) next to the games (the scan takes them from the databases again), L2 / R2 page.
-The free space of the drive is at the top right. The Game Manager waits while a scan runs.
+The Game Manager is where you tidy up your PS1 library. Use it when you want to remove a game you no longer
+play, open a game's settings without first finding it on the shelf, or make AutoBleem fetch every cover
+again. Open it from the system menu (L2 + R2, *Game Manager*). While a scan is running it is greyed out, and
+it waits until the scan has finished.
 
-![The Game Manager](../images/en/game-manager.jpg)
+The screen is titled *Game Manager - Select game*. On the left you see all your PS1 games as a list of titles
+in alphabetical order; on the right, the selected game's cover with its publisher, year, serial and the folder
+it is in. The free space left on the drive is shown at the top right, so you can see how much room a delete
+gives you back. Up and Down move through the list, L2 / R2 turn a page and L1 / R1 jump to the first or the
+last game.
+
+- **Cross** opens the selected game in the game editor - the same editor as the Game icon on the shelf
+  (section 3.7). When you leave it, you are back on the same game in the list.
+- **Square deletes the game.** AutoBleem asks you first, then removes the game's whole folder. If the game's
+  save states and memory card are not used by any other game, it asks a second question: whether to delete
+  those too. Say no if you might want the game back later with your saves.
+- **Triangle deletes every cover picture** (PNG or JPEG) that sits next to your games, after a question. This
+  is useful when you have collected covers you do not like: the next scan takes the covers from the cover
+  databases again.
+
+At the end of the list, after the games, you may see folders marked *Not added*. These are folders in `Games`
+that the scan looked at but could not turn into a game. Select one and the right side tells you where it is
+and why it was not added - a missing cue file, for example (chapter 7). Square deletes such a folder after a
+question. When you leave with Circle after changing something, AutoBleem scans the games again.
+
+![The Game Manager: the list of games on the left, the selected game's cover and details on the right](../images/en/game-manager.jpg)
 
 ### 4.2 Hardware Information
 
-The machine's facts - system, hardware, storage with its free space, network addresses, the display and
-audio drivers, the connected pads - re-read every second. It is the same page on every platform,
-the console included; the network and controller setup screens are **Network & Controllers** (PSC-Bios, chapter 6).
+Hardware Information is the page to look at when you want to know what your machine is and what it sees: how
+much room is left on the stick, which network address it has, which display and audio drivers it uses, and
+which pads are connected. It is the same page on every platform, the console included. Open it from the
+system menu (L2 + R2, *Hardware Information*); Circle takes you back to the system menu.
 
-The first two controllers are shown as Player 1 and Player 2 - the ports the PS1 emulator gives them.
-Any further controller is shown as not used by the PS1 emulator. RetroArch assigns controllers by its own
-settings and may order them differently. When a controller is plugged in or pulled out, the launcher
-briefly shows which pad is Player 1 and Player 2. Circle returns to the system menu.
+The page shows the system, the hardware, the storage with its free space, the network addresses, the display
+and audio drivers and the connected pads. It reads everything again every second, so you can leave it open
+while you plug a pad in or connect a cable and watch the change appear. It only shows things - to set up the
+network or a pad, use *Network & Controllers* (PSC-Bios, chapter 6).
 
-![Hardware Information](../images/en/hardware-info.jpg)
+The pads part answers the question "which pad is which player?". The first two pads are shown as *Player 1*
+and *Player 2* - the ports the PS1 emulator gives them. Any further pad is shown as *not used by the PS1
+emulator*. RetroArch gives out the ports by its own settings, so in a RetroArch game the order may be
+different. You do not have to open this page every time: whenever a pad is plugged in or pulled out, the
+launcher briefly shows which pad is now Player 1 and which is Player 2.
+
+![Hardware Information: the machine's facts and the connected pads](../images/en/hardware-info.jpg)
 
 ### 4.3 The button guide
 
-Triangle on the shelf: every button of every screen on one page. When a USB keyboard is connected or has been used, a Keyboard column shows the keys alongside the pad buttons. Two lines explain the way out of a game: *Hold
-Select+Start or Home for 2 seconds: back to AutoBleem* and *Short press of Select+Start or Home: the emulator's menu*.
+If you forget what a button does somewhere, press **Triangle** on the shelf. The button guide shows every
+button of every screen on one page, so you can look it up without leaving the launcher. If a USB keyboard is
+connected, or has been used, a *Keyboard* column shows the matching key next to each pad button.
 
-![The button guide](../images/en/button-guide.jpg)
+The guide also reminds you of the one thing worth remembering for every game: how to get out of it. Hold
+Select + Start, or Home, for 2 seconds to go back to AutoBleem; a short press opens the emulator's menu
+instead.
+
+![The button guide: every screen's buttons, with the keyboard keys beside them](../images/en/button-guide.jpg)
 
 ### 4.4 The on-screen keyboard
 
-Wherever text is typed - a memory card set, a game's title, a WiFi password, a source's address - the same
-keyboard, laid out like a phone's: letters, a page of symbols (`/ \ : ? & = % @ #` and the rest an address
-or a password needs) and two pages of accented letters, with Shift, the page key, Space, Backspace and
-Confirm on the bottom row. The directions move, Cross types, Triangle deletes, Square is a space, **L1** is
-Shift (twice for caps lock), **R1** the next page, **L2 / R2** move the cursor, Start confirms, Circle
-cancels. A USB keyboard types at any time: Enter confirms, Esc cancels.
+Whenever AutoBleem needs you to type something - the name of a memory card set, a game's title, a WiFi
+password, the address of a Store source - the same on-screen keyboard appears, so you can type with the pad
+alone. It is laid out like a phone's keyboard. Besides the letters it has a page of symbols, with
+`/ \ : ? & = % @ #` and the rest of what an address or a password needs, and two pages of accented letters.
+The bottom row holds Shift, the key that changes the page, Space, Backspace and Confirm.
+
+Move over the keys with the directions and press **Cross** to type the one under the cursor. **Triangle**
+deletes a letter and **Square** types a space. **L1** is Shift; press it twice for caps lock. **R1** goes to
+the next page of keys, and **L2 / R2** move the cursor inside the text. **Start** confirms what you typed and
+**Circle** cancels. If a USB keyboard is connected, you can type on it at any time instead: Enter confirms and
+Esc cancels.
 
 ![The on-screen keyboard](../images/en/keyboard.jpg)
 
 ### 4.5 Virtual gamepad
 
-*Virtual gamepad* in the system menu shows the pads as the program that serves them sees them. It has three
-parts: *The pads Apps are given*, *Pads the daemon sees* and *Daemon*. A pad can carry the marks *connected*,
-*not readable*, *from the controller database*, *guessed by the daemon* or *unknown driver*, and *Look again*
-reads the pads once more. A part the build does not have says *Not in this build*. Circle returns to the system menu.
+Apps - the programs in the Apps set, such as Doom or Quake - do not read your pad themselves. A small helper
+program, the virtual gamepad daemon, reads the real pads and hands each App a pad it understands. This page
+shows you which pads that helper sees and how it reads them. Look here when an App does not react to your pad,
+or when its buttons are mixed up. Open it from the system menu (L2 + R2, *Virtual gamepad*); Circle takes you
+back to the system menu.
 
-![Virtual gamepad](../images/en/virtual-gamepad.jpg)
+Under *Pads the daemon sees* every pad is listed with a number and its name. Beside it you read three things:
+whether the helper could open the pad (*connected*) or not (*not readable*); the driver the pad came through;
+and where its button layout comes from - *from the controller database* means the pad is known and its buttons
+are where they should be, *guessed by the daemon* means it is not known and the helper made its best guess. If
+the buttons in an App feel wrong, a guessed layout is the likely reason.
+
+The helper only runs while an App does, so the page asks it once when it opens. If you plug in a pad while the
+page is open, press **Cross** (*Look again*) to ask again. On Windows there is no such helper, and the page
+says *Not in this build*.
+
+![Virtual gamepad: the pads the Apps' helper sees](../images/en/virtual-gamepad.jpg)
 
 <!-- pagebreak -->
 
@@ -729,172 +777,237 @@ reads the pads once more. A part the build does not have says *Not in this build
 
 ### 5.1 UpdateRoms - refreshing a console stick
 
-The PlayStation Classic has no network, so the RetroArch lists and box art of its stick are made on the PC:
-**UpdateRoms** does on the PC what the launcher's scan does on a Pi, with the PC's network and the console's
-paths, so the console boots and finds everything in place.
+On a Raspberry Pi, a PC or Windows the launcher's scan sorts your RetroArch games into lists and fetches their
+box art by itself. The PlayStation Classic cannot do that, because it has no network of its own. **UpdateRoms**
+does that work on your Windows PC instead: it uses the PC's network but writes everything with the paths the
+console expects, so when you put the stick back, the console starts and finds everything in place. Run it
+whenever you have added or removed RetroArch games on a console stick.
 
 1. Copy your ROMs onto the stick under `RetroArch/roms/<system>/` (section 3.9). The folder names must be
-   RetroArch's database names; the installer makes the common ones.
-2. Start **`UpdateRoms\UpdateRoms.exe` from the stick** (the installer put it there). It finds the stick from
-   where it sits, shows a stage line, a progress bar and a log, and:
-   - downloads RetroArch's database bundle when the stick has none, and identifies every ROM by it - a
-     game the database knows gets its proper name;
-   - writes one play list per system into `RetroArch/bin/playlists/` with the console's paths, keeping
-     whatever RetroArch itself added there;
-   - fetches the box art of every ROM that has none from libretro's thumbnail servers into
+   RetroArch's database names; the installer has already made the common ones.
+2. Start **`UpdateRoms\UpdateRoms.exe` from the stick** - the installer put it there. It works out by itself
+   which stick it is on. While it works you see a line saying what it is doing, a progress bar and a log.
+   - If the stick has no RetroArch database yet, it downloads RetroArch's database bundle first. It then
+     identifies every ROM with it, so a game the database knows gets its proper name.
+   - It writes one play list per system into `RetroArch/bin/playlists/`, with the console's paths. Anything
+     RetroArch itself added to those lists is kept.
+   - For every ROM without box art, it fetches a cover from libretro's thumbnail servers into
      `RetroArch/bin/thumbnails/`.
-3. Take the stick out safely and put it back into the console. The RetroArch tab of the set picker lists
+3. Remove the stick safely and put it back into the console. The RetroArch tab of the set picker now lists
    every system that has games.
 
-Run it again after every change to the ROM folders; a folder nothing changed in is skipped, so a re-run is
-quick. The log is `System/Logs/updateroms.log`. A Raspberry Pi card in a card reader can be refreshed the
-same way (`UpdateRoms.exe <drive> --target rpi`), though a Pi does it by itself when it has a network.
+You can run it as often as you like: a folder where nothing has changed is skipped, so a second run is quick.
+If something goes wrong, the log is `System/Logs/updateroms.log` on the stick. A Raspberry Pi card in a card
+reader can be refreshed the same way, with `UpdateRoms.exe <drive> --target rpi`, though a Pi does this by
+itself when it has a network.
 
 ### 5.2 LAN Share - your games and discs on the server on your network
 
-**LAN Share** (`LanShare.exe`, on the Store's page in its **LAN server** tab) puts your PS1 games on the
-Store's server on your home network - an `abstored` on a Raspberry Pi, a NAS or another PC - and reads a PS1
-disc in the PC's CD/DVD drive for it. The Store on the console, the Pi or the PC then installs them from there.
-Nothing to install; the settings are kept in `%LOCALAPPDATA%\AutoBleem LAN Share\`.
+The Store can install games from a server on your own home network (section 3.12). **LAN Share** is the
+Windows program that fills that server from your PC: it puts the PS1 games you have on the PC onto the server,
+and it can read a PS1 disc in the PC's CD/DVD drive and put it there too. The server is an `abstored` running
+on a Raspberry Pi, a NAS or another PC. Once a game is on it, the Store on the console, the Pi or the PC can
+install it from there.
 
-![The LAN Share window](../images/en/lanshare.jpg)
+You get `LanShare.exe` from the Store's page, in its **LAN server** tab. There is nothing to install: start it,
+and it keeps its settings in `%LOCALAPPDATA%\AutoBleem LAN Share\`.
 
-1. **The server**: enter its address (`http://<its address>:<port>`, as the Store has it) and press
-   **Connect**. Its games and any problems its scan found are listed on the left. To put games on it, give
-   one of:
-   - **Share** - the server's games folder as it is shared on the network (Samba), e.g. `\\raspberrypi\games`:
-     LAN Share copies the games there and asks the server to scan. The server itself stays read only.
-   - **Token** - when the server was started with `--allow-uploads`: its token (the server prints it at start
-     and keeps it in `<state>/upload-token`). LAN Share uploads over HTTP, and a stopped upload goes on where
-     it stopped.
-2. **Games on this PC**: choose a folder of games (one folder per game), tick games and press **Publish the
-   ticked games**. **On the server** says whether the server has a game already (by its serial, else by its
-   title); such a game is never sent twice. **Tick those not on the server** ticks the rest.
-3. **A disc**: put a PS1 disc in the drive and press **Read a disc and publish it**. The disc is read whole
-   into a `.bin` + `.cue` (and an `.sbi` for a LibCrypt game, when the drive gives the subchannel), named
-   after its title, checked against the known good dump (when the databases are chosen) and published. For
-   a game on several discs tick **The game has more than one disc**: LAN Share asks for each next disc and
-   publishes them together as one game.
-4. **Remove from the server...** takes the selected games off the server. Nothing is deleted: each is moved
-   into a `.removed` folder next to the server's games, and moving it back puts it back.
+![The LAN Share window: the server's games on the left, the games on this PC on the right](../images/en/lanshare.jpg)
 
-The **Databases** - AutoBleem's covers folder (`coversU/P/J.db`) and RetroArch's `Sony - PlayStation.rdb` -
-give the titles and the check of a read disc; both are optional. **Also share the games on this PC with the
-Store** (off by default) serves the folder on this PC to the Store directly. The first time, Windows asks about
-its firewall: allow private networks only.
+1. **Connect to the server.** Enter its address the way the Store has it, `http://<its address>:<port>`, and
+   press **Connect**. The games already on the server, and any problems its own scan found, appear on the left.
+   To put games on the server, LAN Share needs one of two ways in:
+   - **Share** is the server's games folder as it is shared on your network (Samba), for example
+     `\\raspberrypi\games`. LAN Share copies the games into it and asks the server to scan; the server itself
+     still only reads its folder.
+   - **Token** is for a server started with `--allow-uploads`. Enter its token - the server prints it when it
+     starts and keeps it in `<state>/upload-token`. LAN Share then uploads over HTTP, and an upload that stops
+     part-way goes on from where it stopped.
+2. **Publish the games on your PC.** Choose the folder your games are in (one folder per game), tick the ones
+   you want and press **Publish the ticked games**. **On the server** tells you whether the server
+   already has a game - it compares the serial, or the title when there is no serial - and a game the server
+   has is never sent twice. **Tick those not on the server** ticks all the others for you.
+3. **Publish a disc.** Put a PS1 disc in the PC's drive and press **Read a disc and publish it**. LAN Share
+   reads the whole disc into a `.bin` + `.cue`, named after the game's title. For a LibCrypt game it also
+   writes the `.sbi` file, when the drive can read the subchannel. If you chose the databases (below), it
+   checks the copy against the known good dump. Then it publishes the game. For a game on several discs, tick
+   **The game has more than one disc** first: LAN Share asks you for each next disc and publishes them
+   together as one game.
+4. **Take games off the server.** Select them and press **Remove from the server...**. Nothing is deleted:
+   each game is moved into a `.removed` folder next to the server's games, and moving it back puts it back.
+
+The **Databases** are optional. If you point LAN Share at AutoBleem's covers folder (`coversU/P/J.db`) and
+RetroArch's `Sony - PlayStation.rdb`, it uses them to name the games and to check a disc it has read.
+
+If you would rather not copy anything, tick **Also share the games on this PC with the Store** (it is off by
+default): LAN Share then serves the games folder on your PC to the Store directly. The first time you do this,
+Windows asks about its firewall - allow private networks only.
 
 <!-- pagebreak -->
 
 ## 6. The console tools (PlayStation Classic)
 
-Two tools for a PlayStation Classic stick. Both draw in the launcher's theme and language, and both are
-driven by the pad - and, in the gamepad wizard, by the console's front buttons. **PSC-Bios** is an
-extension that comes with the console package: the *Network & Controllers* item of the Quick menu and the system menu opens it, and it
-is in the Extensions list. **ABFlashKit** is an App in the Apps set.
+Two tools come with a PlayStation Classic stick and help you set the console up beyond what it can do out of
+the box. Both look like the rest of the launcher, in its theme and language, and you work them with the pad -
+in the gamepad wizard also with the console's front buttons. **PSC-Bios** is an extension that comes with the
+console package: the *Network & Controllers* item in the Quick menu and in the system menu opens it, and you
+also find it in the Extensions list. **ABFlashKit** is an App, in the Apps set.
 
 ### 6.1 PSC-Bios
 
-An extension that comes with the console package, also available on a Raspberry Pi and the PC stick. It is
-opened from the System menu's *Network & Controllers* item (or from the Extensions list). When that extension is installed but disabled, the *Network & Controllers* item in the Quick menu and System menu is greyed out with a note "enable it in Extensions" - Cross there opens the Extensions list at it.
+PSC-Bios is where you connect the machine to the world: your WiFi network, the time zone, Bluetooth pads, and
+the button layout of a pad AutoBleem does not know. It comes with the console package and is also there on a
+Raspberry Pi and the PC stick. Open it with *Network & Controllers* in the system menu (or the Quick menu), or
+from the Extensions list. If the extension is installed but switched off, the *Network & Controllers* item is
+greyed out and says it *is switched off - enable it in Extensions*; press Cross on it and the Extensions list
+opens at PSC-Bios, so you can switch it back on.
 
-The opening screen shows machine facts: time, timezone, WiFi/Ethernet/Bluetooth network adapters with their
-addresses, and every connected controller with whether it has a button mapping. The network and Bluetooth
-parts need the AutoBleem kernel on the console (section 6.2) or system tools on a Raspberry Pi / PC stick;
-the gamepad wizard works on any system.
+The first screen gives you an overview: the time and the time zone, the network adapters (WiFi, Ethernet,
+Bluetooth) with their addresses, and every connected pad, with a note whether it has a button mapping. On the
+console, the network and Bluetooth parts need the AutoBleem kernel (section 6.2); on a Raspberry Pi or the PC
+stick they use the system's own tools. The gamepad wizard works everywhere.
 
 ![PSC-Bios: the Network & Controllers hub](../images/en/pscbios-main.jpg)
 
-- **Select - Wi-Fi Network** (kernel or NetworkManager): the network name (typed, or picked from a
-  scan), password, driver mode, and *Apply / Restart Network*. The time zone is set here too. The console's IP address is shown once connected.
-- **Square - Bluetooth Controllers**: a scan for Bluetooth gamepads (DualShock 4, etc.), to pair or remove.
-- **L1 - DualShock 3 Pairing**: USB-only connection for the first DualShock 3, through the kernel's sixaxis plugin.
-- **R1 - Controller Mapping**: the mapping wizard (below).
-- **Triangle - About**, **Circle - back** to the launcher.
+From the first screen, one button takes you to each part:
 
-**The gamepad wizard** shows the connected pad raw - every axis, button and hat as numbers, and a
-DualShock picture that lights up as you press. Because the pad under test cannot be trusted, the wizard
-is driven by the console's **front buttons**: **RESET** switches to the next pad, **OPEN** starts the mapping
-(then answers each question - press the button lit on the picture, or OPEN when the pad has no such
-button), **POWER** cancels or leaves. Holding Circle on the pad for 2 seconds leaves the wizard (a bar fills and the footer hint says "Hold 2 s: Exit"). While the pad has no mapping yet, holding any button for 2 seconds does it ("Hold any button 2 s: Exit"). A short press is mapped as usual. On a keyboard, Esc / Space / Enter stand in for POWER / RESET / OPEN. At the end the new mapping is added for a test and OPEN saves it under a name of your choice; the launcher loads it from then on.
+| Button | What it opens |
+|---|---|
+| Select | **Wi-Fi Network** connects you to your WiFi (through the kernel, or NetworkManager on a Pi or PC): type the network's name or pick it from a scan, enter the password, choose the driver mode and press *Apply / Restart Network*. You set the time zone here too, and once you are connected you see the console's IP address. |
+| Square | **Bluetooth Controllers** searches for Bluetooth pads such as the DualShock 4, so you can pair a new one or remove one you no longer use. |
+| L1 | **DualShock 3 Pairing** connects your first DualShock 3, which has to be plugged in by USB for this, through the kernel's sixaxis plugin. |
+| R1 | **Controller Mapping** opens the gamepad wizard, described below. |
+| Triangle | **About** shows what PSC-Bios is. |
+| Circle | **Back** takes you out of PSC-Bios, back to the launcher. |
+
+**The gamepad wizard.** Use it when a pad does nothing in AutoBleem or has its buttons in the wrong places. It
+shows the connected pad as it really is - every axis, button and hat as numbers - and a DualShock picture that
+lights up as you press. Because the pad you are testing cannot be trusted yet, you drive the wizard with the
+console's **front buttons**: **RESET** switches to the next pad, **OPEN** starts the mapping, and **POWER**
+cancels or leaves. During the mapping the wizard asks for one button after another: press the button that is
+lit on the picture, or OPEN if your pad has no such button. A short press is mapped as usual.
+
+You can also leave from the pad: hold Circle for 2 seconds - a bar fills up and the footer says *Hold 2 s:
+Exit*. While the pad has no mapping yet, holding any button for 2 seconds does the same (*Hold any button 2 s:
+Exit*). On a keyboard, Esc, Space and Enter stand in for POWER, RESET and OPEN.
+
+At the end the new mapping is put into use so you can try it out, and OPEN saves it under a name you choose.
+From then on the launcher loads it every time.
 
 ![PSC-Bios: the controller mapping wizard](../images/en/pscbios-wizard.jpg)
 
 ### 6.2 ABFlashKit - the AutoBleem kernel
 
-The AutoBleem kernel is an optional replacement of the console's Linux kernel: it brings a working clock,
-USB WiFi and Bluetooth dongles (for PSC-Bios and Bluetooth pads) and the front-button support the emulator
-uses for resume points. ABFlashKit installs it, backs the console up first, and can put the console back
-to stock through Sony's own recovery.
+The AutoBleem kernel replaces the console's own Linux kernel, and it is optional. You want it if you want more
+from the console: it gives it a working clock, makes USB WiFi and Bluetooth dongles work (for PSC-Bios and
+Bluetooth pads), and adds the front-button support the emulator uses for resume points. ABFlashKit is the tool
+that installs it. It backs up the console first, and it can also put the console back to stock through Sony's
+own recovery.
 
-> **This tool writes to the console's flash memory.** A flash that is interrupted - the power cut, the
-> stick pulled - can leave the console unable to start, and installing a custom kernel voids its warranty.
-> Keep the console powered and the stick in until it reboots by itself. ABFlashKit opens on this warning;
-> *I understand* goes on, *Quit* leaves.
+> **This tool writes to the console's flash memory.** If writing is interrupted - the power is cut, or the
+> stick is pulled out - the console may no longer start, and installing a custom kernel voids its warranty.
+> Keep the console powered and the stick in until the console restarts by itself. ABFlashKit opens on this
+> warning: *I understand* goes on, *Quit* leaves.
 
 ![ABFlashKit's menu](../images/en/abflashkit-menu.jpg)
 
-- **Flash Kernel**: makes a recovery backup of the console's partitions on the stick (`LBOOT.EPB`) if there
-  is none yet, checks it and the kernel image, writes the kernel and AutoBleem's system files, and reboots.
-  *All done - when the screen goes black replace power cord*: pull the console's power and plug it back in.
-- **Full backup**: all four partitions to `LBOOT.EPB`, for a restore later (the previous backup is
-  overwritten after a question).
-- **Restore Mode**: checks the backup is a stock one, sets the recovery flag and reboots into Sony's
-  recovery, which restores the console from `LBOOT.EPB` on the stick - the way back to the stock firmware.
+ABFlashKit has three actions:
 
-A progress bar under every step shows how far the action is. The tool refuses to flash a console that
-runs another custom firmware (BleemSync, Project Eris): restore it to stock first.
+- **Flash Kernel** installs the kernel. If there is no recovery backup on the stick yet, it first makes one of
+  the console's partitions (`LBOOT.EPB`). It checks the backup and the kernel image, writes the kernel and
+  AutoBleem's system files, and restarts the console. When it says *All done - when the screen goes black
+  replace power cord*, wait for the black screen, then pull the console's power cable and plug it back in.
+- **Full backup** saves all four of the console's partitions to `LBOOT.EPB`, so you can restore them later. If
+  there is already a backup, it asks before it overwrites it.
+- **Restore Mode** is the way back to the stock firmware. It checks that the backup on the stick is a stock
+  one, sets the recovery flag and restarts into Sony's recovery, which restores the console from `LBOOT.EPB`.
 
-**Logging in from a PC.** With the AutoBleem kernel installed (not on a stock console) you can log in to the
-console over a USB cable:
+A progress bar under every step shows how far it has got. ABFlashKit will not flash a console that runs
+another custom firmware, such as BleemSync or Project Eris: restore that console to stock first.
 
-1. Connect the console's micro-USB port to the PC with a USB cable. The PC shows the console as a new network
-   adapter; the console's address is in that adapter's settings on the PC.
+**Logging in from a PC.** If you know Linux and want to look inside the console, you can log in to it from a
+PC over a USB cable. This needs the AutoBleem kernel; it does not work on a stock console.
+
+1. Connect the console's micro-USB port to the PC with a USB cable. The PC sees the console as a new network
+   adapter, and you find the console's address in that adapter's settings on the PC.
 2. Log in with `ssh root@<the console's address>`. The default password is `autobleem`.
 
-Instead of the password you can use a key: put your public key into the file `System/ssh/authorized_keys` on the
-stick and restart the console. At the next boot it is added to the root account. Updating or reinstalling the launcher does not remove it.
+Instead of the password you can use a key. Put your public key into the file `System/ssh/authorized_keys` on
+the stick and restart the console: at the next start it is added to the root account. Updating or reinstalling
+the launcher does not remove it.
 
-> **The default password is the same on every console**: anyone who can plug a cable into it can log in as
-> root. Use a key where you can, and do not leave a console with the default password where others can reach it.
+> **The default password is the same on every console**, so anyone who can plug a cable into yours can log in
+> as root. Use a key where you can, and do not leave a console with the default password where others can
+> reach it.
 
 <!-- pagebreak -->
 
 ## 7. If something goes wrong
 
-- **Logs**: AutoBleem keeps its logs in memory, so the stick is not written to all the time - they reach
-  `System/Logs/` on the stick, card or data folder only when something went wrong: a crash of the launcher,
-  of a PS1 game or of RetroArch saves them to `System/Logs/crash-<n>/` (the last three are kept), and the
-  launcher says so once when it comes back. To keep every log, switch on *Options -> Diagnostics -> Keep
-  logs on the stick* (from the next start), or create an empty file `System/Logs/keep` on a PC. On a Pi or
-  a PC, *Hardware Information* shows where the logs are and Square saves them to `System/Logs/saved-<n>/`.
-  The files: `autobleem.log` (the launcher), `launch.log` and `pcsx.log` (a PS1 game's start and the
-  emulator's output), `retroarch.log`, and - always on the stick - `update.log` (an online update) and
-  `updateroms.log` (UpdateRoms).
-- **The picture asks for a stick, or the console went to sleep**: there is no stick in the console, or it was
-  pulled. Put it in (any USB port; a front one is best, section 2.1) before the 5 minutes are over, or press Power.
-  A stick that was not removed cleanly is checked first - wait for the progress bar to finish.
-- **RetroArch says it needs a newer system library than this console has**: the console's own library is too
-  old for that RetroArch. Use the RetroArch that comes with AutoBleem.
-- **A PSN game says it is protected by its PSN license and cannot be started**: that game cannot run on
-  AutoBleem.
-- **A game is not on the shelf**: check the folder layout (one folder per game, the image formats of
-  section 3.9). The *Game Manager* lists the folders the scan refused after the games, marked *Not added*,
-  with the reason; Square deletes such a folder. *Re-scan games* in the system menu runs the scan again.
-- **No covers**: the cover databases were not installed (run the installer again with them ticked), or,
-  for RetroArch games on a console, UpdateRoms has not been run on the PC.
-- **A pad does nothing or has its buttons mixed up**: PSC-Bios's gamepad wizard (a console) maps it; on a
-  Pi or PC the Hardware Information page lists what SDL sees.
-- **The console shows a black screen after a game**: AutoBleem rebuilds its window by itself (up to three
-  times); if it stays black, hold the power button and switch the console on again.
-- **Raspberry Pi**: `Alt+F2` gives a login prompt on the second console; SSH is enabled from the first boot.
-  `sudo journalctl -u autobleem` shows the launcher's service; `sudo systemctl restart autobleem` restarts it.
-  A first boot that could not finish (no network) retries on the next boot.
-- **Windows**: `Esc` leaves the launcher; the data folder is the one chosen in the setup
-  (`Documents\AutoBleem` by default), the logs are in its `System\Logs`.
+Most problems have a simple cause. Below, each one starts with what you see, says why it happens and then what
+to do. If you need to ask for help, the logs are the first thing anyone will ask for, so that comes first.
 
-**The console restarts again and again after an online update (stick formatted as ext4).** Some users format the stick as ext4 (Linux) instead of FAT32 or exFAT. Until the next AutoBleem release, the online update on such a stick unpacked every file without its executable permission, so AutoBleem does not start and the console restarts over and over. FAT32 and exFAT sticks are not affected.
+**Finding the logs.** AutoBleem keeps its logs in memory while it runs, so that the stick is not written to all
+the time. They reach `System/Logs/` on the stick, the card or the data folder only when something went wrong:
+when the launcher, a PS1 game or RetroArch crashes, the logs are saved to `System/Logs/crash-<n>/` (the last
+three crashes are kept), and the launcher tells you once when it comes back. If you are chasing a problem that
+is not a crash, keep every log: switch on *Options -> Diagnostics -> Keep logs on the stick* (it works from the
+next start), or create an empty file `System/Logs/keep` from a PC. *Hardware Information* (section 4.2) also
+shows where the logs are, and Square there saves the current ones to `System/Logs/saved-<n>/`.
 
-**Fix A** (needs a Linux PC): plug the stick in and make the AutoBleem programs executable again. Use your own mount path instead of `/media/USER/STICK` (the last line is only needed if RetroArch is installed):
+These are the files you will find:
+
+| File | What it tells you |
+|---|---|
+| `autobleem.log` | What the launcher itself did. |
+| `launch.log`, `pcsx.log` | How a PS1 game was started, and what the emulator said while it ran. |
+| `retroarch.log` | What RetroArch said while it ran. |
+| `update.log` | How an online update went; it is always kept on the stick. |
+| `updateroms.log` | How UpdateRoms went on the PC (chapter 5); it is always kept on the stick. |
+
+**A picture asks you to put in the stick, or the console went to sleep.** AutoBleem cannot find its stick:
+none was in when the console started, or it was pulled out. Put it into any USB port (a front one is best,
+section 2.1) before the 5 minutes are over, or press Power. If the stick was not removed cleanly, AutoBleem
+checks it first - wait for the progress bar to finish.
+
+**RetroArch says it *needs a newer system library than this console has*.** That RetroArch was built for a
+newer system than the console's, so it cannot run there. Use the RetroArch that comes with AutoBleem.
+
+**A game says it *is protected by its PSN license and cannot be started*.** Games bought on the PlayStation
+Network are locked to their license, and AutoBleem cannot run them. There is nothing to fix.
+
+**A game is not on the shelf.** Usually its folder is not laid out the way the scan expects. Check that every
+game has a folder of its own and is in one of the formats of section 3.9. The *Game Manager* (section 4.1) lists
+the folders the scan refused after the games, marked *Not added*, and tells you why each was refused; Square
+deletes such a folder. After fixing a folder, *Re-scan games* in the system menu runs the scan again.
+
+**Games have no covers.** Either the cover databases were not installed - run the installer again with them
+ticked - or, for RetroArch games on a console, UpdateRoms has not been run on the PC yet (chapter 5).
+
+**A pad does nothing, or its buttons are mixed up.** AutoBleem does not know that pad's layout. On a console,
+map it with PSC-Bios's gamepad wizard (section 6.1). On a Pi or a PC, the Hardware Information page (section
+4.2) shows what SDL sees of the pad, which helps you tell whether it is detected at all.
+
+**The screen stays black after a game on the console.** The launcher's picture did not come back when the game
+ended. AutoBleem rebuilds its window by itself, up to three times. If the screen still stays black, hold the Power button and
+switch the console on again.
+
+**On a Raspberry Pi** you can get behind the launcher when you need to: `Alt+F2` gives you a login prompt on
+the second console, and SSH is on from the first start. `sudo journalctl -u autobleem` shows what the
+launcher's service did, and `sudo systemctl restart autobleem` restarts it. If the first start could not finish
+because there was no network, it tries again at the next start.
+
+**On Windows**, `Esc` leaves the launcher. Your data folder is the one you chose during the setup
+(`Documents\AutoBleem` unless you changed it), and the logs are in its `System\Logs` folder.
+
+**The console restarts again and again after an online update (stick formatted as ext4).** Some people format
+the stick as ext4, the Linux file system, instead of FAT32 or exFAT. Until the next AutoBleem release, an
+online update on such a stick unpacks every file without the permission that lets it run as a program. AutoBleem
+then cannot start, and the console restarts over and over. FAT32 and exFAT sticks are not affected. There are
+two ways to fix it.
+
+**Fix A** needs a Linux PC. Plug the stick in and make the AutoBleem programs runnable again. Put your own
+mount path in place of `/media/USER/STICK`; you only need the last line if RetroArch is installed:
 
 ```
 chmod +x /media/USER/STICK/Autobleem/*.sh /media/USER/STICK/Autobleem/rc/*.sh
@@ -902,9 +1015,12 @@ chmod +x /media/USER/STICK/Autobleem/bin/autobleem/* /media/USER/STICK/Autobleem
 chmod +x /media/USER/STICK/RetroArch/bin/retroarch
 ```
 
-**Fix B**: install the newest AutoBleem release onto the stick again, as in section 2.1 (the installer needs a PC that can read the stick; a stick it cannot read has to be formatted first, which erases it - copy your games off first).
+**Fix B**: install the newest AutoBleem release onto the stick again, as in section 2.1. The installer needs a
+PC that can read the stick. If it cannot read yours, the stick has to be formatted first, which erases
+everything on it - copy your games off it before you do.
 
-> Use **FAT32** (a stock console reads FAT32 only; exFAT needs the AutoBleem kernel, chapter 6) - the next release keeps the permissions and AutoBleem repairs them at every start.
+> To avoid this, use **FAT32** (a stock console reads only FAT32; exFAT needs the AutoBleem kernel, chapter 6).
+> The next release keeps the permissions and AutoBleem repairs them at every start.
 
-AutoBleem is free software (GNU GPL v3 or later), with no warranty. Support and news: the Discord server
-linked on the About screen, and https://autobleem.retromenele.pl/.
+AutoBleem is free software (GNU GPL v3 or later) and comes with no warranty. For support and news, join the
+Discord server linked on the About screen, or visit https://autobleem.retromenele.pl/.
