@@ -1227,6 +1227,17 @@ Vom ersten Bildschirm aus bringt dich je eine Taste in jeden Teil:
 | Triangle | **About** zeigt, was PSC-Bios ist. |
 | Circle | **Back** bringt dich aus PSC-Bios heraus, zurück in den Launcher. |
 
+**WLAN und ein Bluetooth-Controller gleichzeitig.** Auf der PlayStation Classic laufen WLAN und Bluetooth über
+ein und dasselbe Funkmodul mit einer einzigen Antenne, und dieses Modul kann immer nur eines auf einmal. Solange
+ein Bluetooth-Controller verbunden ist und benutzt wird, wechselt es sich ab - einen Augenblick für den
+Controller, einen für das WLAN -, und so bleibt dem WLAN weniger Zeit: Es wird langsamer. Am deutlichsten merkst
+du das bei einem großen Download aus dem *Store* (Abschnitt 3.13) oder bei einem Update (Abschnitt 3.12), die
+dann spürbar länger dauern. Schalte deshalb vor einem großen Download den Controller aus, indem du seine PS-Taste
+etwa 10 Sekunden lang gedrückt hältst, oder nimm für diese Zeit einen USB-Controller; dann hat das WLAN das
+Funkmodul für sich allein. AutoBleem sagt dem WLAN bereits Bescheid, wenn ein Controller verbunden ist, damit
+sich die beiden das Funkmodul besser teilen. Das hilft viel, ganz beseitigen lässt sich der Effekt aber nicht,
+denn es bleibt bei einem einzigen Funkmodul.
+
 **Der Controller-Assistent.** Nimm ihn, wenn ein Controller in AutoBleem gar nichts tut oder seine Tasten an den
 falschen Stellen liegen. Er zeigt den angeschlossenen Controller so, wie er wirklich ist - jede Achse, jede Taste und
 jeden Hat-Schalter als Zahlen - und ein DualShock-Bild, das aufleuchtet, wenn du drückst. Weil du dem Controller, den

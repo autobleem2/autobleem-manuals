@@ -1183,6 +1183,16 @@ Från den första skärmen tar en knapp dig till varje del:
 | Triangle | **About** visar vad PSC-Bios är. |
 | Circle | **Back** tar dig ut ur PSC-Bios, tillbaka till launchern. |
 
+**WiFi och en Bluetooth-handkontroll samtidigt.** På PlayStation Classic går WiFi och Bluetooth genom en och
+samma radio med en enda antenn, och den radion kan bara göra en sak i taget. Så länge en Bluetooth-handkontroll
+är ansluten och används turas radion om - en stund för handkontrollen, en stund för WiFi - och därför får WiFi
+mindre tid och blir långsammare. Det märks mest vid en stor nedladdning från *Store* (avsnitt 3.13) eller vid en
+uppdatering (avsnitt 3.12), som då tar märkbart längre tid. Stäng därför av handkontrollen före en stor
+nedladdning genom att hålla in dess PS-knapp i ungefär 10 sekunder, eller använd en USB-handkontroll så länge;
+då har WiFi radion för sig själv. AutoBleem talar redan om för WiFi när en handkontroll är ansluten, så att de två
+delar på radion bättre. Det hjälper mycket, men det kan inte ta bort effekten helt, eftersom det fortfarande bara
+finns en radio.
+
 **Guiden för handkontroller.** Använd den när en handkontroll inte gör något i AutoBleem eller har knapparna på
 fel ställen. Den visar den anslutna handkontrollen precis som den är - alla axlar, knappar och hattar som siffror
 - och en bild av en DualShock som lyser upp när du trycker. Eftersom handkontrollen du testar inte går att lita

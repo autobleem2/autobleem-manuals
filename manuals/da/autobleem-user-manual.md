@@ -1146,6 +1146,15 @@ Fra den første skærm fører én knap dig til hver del:
 | Triangle | **About** viser, hvad PSC-Bios er. |
 | Circle | **Back** tager dig ud af PSC-Bios, tilbage til launcheren. |
 
+**Wi-fi og en Bluetooth-controller på samme tid.** På PlayStation Classic går wi-fi og Bluetooth gennem én og
+samme radio med én antenne, og den radio kan kun én ting ad gangen. Så længe en Bluetooth-controller er
+forbundet og i brug, skiftes radioen til - et øjeblik til controlleren, et øjeblik til wi-fi'en - og derfor får
+wi-fi'en mindre tid og bliver langsommere. Det mærker du mest ved en stor download fra *Store* (afsnit 3.13)
+eller ved en opdatering (afsnit 3.12), som så tager tydeligt længere tid. Sluk derfor controlleren før en stor
+download ved at holde dens PS-knap inde i cirka 10 sekunder, eller brug en USB-controller imens; så har wi-fi'en
+radioen for sig selv. AutoBleem fortæller allerede wi-fi'en, når en controller er forbundet, så de to deler
+radioen bedre. Det hjælper meget, men det kan ikke fjerne virkningen helt, for der er stadig kun én radio.
+
 **Gamepad-guiden.** Brug den, når en controller ikke gør noget i AutoBleem eller har sine knapper de forkerte steder.
 Den viser den tilsluttede controller, som den virkelig er - hver akse, knap og hat som tal - og et billede af en
 DualShock, der lyser op, når du trykker. Fordi du endnu ikke kan stole på den controller, du tester, styrer du guiden
