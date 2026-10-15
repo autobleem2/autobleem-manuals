@@ -902,8 +902,8 @@ voi yrittää ladata uudelleen.
 
 **Downloads**-välilehti näyttää, mitä on latautumassa, odottamassa, epäonnistunut tai asennettu, ja sen
 edistymispalkki etenee tasaisesti. Sitä ei tarvitse jäädä katsomaan: lataukset jatkuvat taustalla myös Kaupasta
-poistuttuasi, ja kun olet muualla käynnistäjässä, kupla näyttää käynnissä olevan latauksen nopeuksineen ja jäljellä
-olevine aikoineen (esimerkiksi `1.4 MB/s · 0:42`). Pelin käynnistäminen tai laitteen sammuttaminen vain keskeyttää
+poistuttuasi, ja kun olet muualla käynnistäjässä, kupla näyttää käynnissä olevan latauksen nopeuden ja jäljellä
+olevan ajan (esimerkiksi `1.4 MB/s · 0:42`). Pelin käynnistäminen tai laitteen sammuttaminen vain keskeyttää
 lataukset, ja pysähtynyt lataus jatkuu siitä, mihin se jäi. Jos verkkoyhteys katkeaa, kohteessa lukee *Waiting for
 the network*, ja lataus jatkuu siitä, mihin se jäi, kun verkko palaa; 30 minuutin jälkeen ilman verkkoa se luovuttaa.
 Yli 2 gigatavun lataukset toimivat kaikilla alustoilla, myös 32-bittisissä versioissa. Asentamasi peli ilmestyy
@@ -1035,7 +1035,7 @@ emulaattorin valikon.
 
 ### 4.4 Näytön näppäimistö
 
-Aina kun AutoBleem tarvitsee sinulta tekstiä – muistikorttisarjan nimen, pelin nimen, WiFi-salasanan tai Kaupan
+Aina kun AutoBleem tarvitsee sinulta tekstiä – muistikorttisarjan nimen, pelin nimen, Wi-Fi-salasanan tai Kaupan
 lähteen osoitteen – ruudulle tulee sama näppäimistö, jotta voit kirjoittaa pelkällä ohjaimella. Sen asettelu on
 kuin puhelimen näppäimistössä. Kirjainten lisäksi siinä on merkkisivu, jolla ovat `/ \ : ? & = % @ #` ja muut
 osoitteissa ja salasanoissa tarvittavat merkit, sekä kaksi sivua tarkkeellisia kirjaimia. Alimmalla rivillä ovat
@@ -1061,7 +1061,7 @@ Kohdassa *Daemonin näkemät ohjaimet* jokainen ohjain on listattu numeroineen j
 asiaa: saiko apuohjelma ohjaimen auki (*yhdistetty*) vai ei (*ei luettavissa*), minkä ajurin kautta ohjain tuli ja
 mistä sen painikeasettelu on peräisin. *ohjaintietokannasta* tarkoittaa, että ohjain tunnetaan ja sen painikkeet ovat
 oikeilla paikoillaan; *daemonin arvaama* tarkoittaa, ettei ohjainta tunneta ja apuohjelma teki parhaan arvauksensa.
-Jos painikkeet tuntuvat sovelluksessa väärältä, arvattu asettelu on todennäköinen syy.
+Jos painikkeet ovat sovelluksessa väärissä paikoissa, arvattu asettelu on todennäköinen syy.
 
 Apuohjelma toimii vain silloin, kun jokin sovellus on käynnissä, joten sivu kysyy siltä tiedot kerran avautuessaan.
 Jos kytket ohjaimen sivun ollessa auki, kysy uudelleen painamalla **Cross** (*Etsi uudelleen*). Windowsissa tällaista
@@ -1198,7 +1198,7 @@ Siitä lähtien käynnistäjä lataa sen joka kerta.
 ### 6.2 ABFlashKit – AutoBleem-kernel
 
 AutoBleem-kernel korvaa konsolin oman Linux-kernelin, ja se on valinnainen. Haluat sen, jos haluat konsolista
-enemmän irti: se antaa konsolille toimivan kellon, saa USB-WiFi- ja Bluetooth-sovittimet toimimaan (PSC-Biosia ja
+enemmän irti: se antaa konsolille toimivan kellon, saa USB-liitäntäiset Wi-Fi- ja Bluetooth-sovittimet toimimaan (PSC-Biosia ja
 Bluetooth-ohjaimia varten) ja lisää etupaneelin painikkeiden tuen, jota emulaattori käyttää jatkopisteisiin.
 ABFlashKit on työkalu, joka asentaa sen. Se varmuuskopioi ensin konsolin, ja sillä voi myös palauttaa konsolin
 tehdastilaan Sonyn oman palautustilan kautta.
