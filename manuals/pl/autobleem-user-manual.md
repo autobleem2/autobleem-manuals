@@ -1164,6 +1164,15 @@ Z pierwszego ekranu do każdej części prowadzi jeden przycisk:
 | Trójkąt | **O programie** mówi, czym jest PSC-Bios. |
 | Kółko | **Powrót** zamyka PSC-Bios i wraca do launchera. |
 
+**WiFi i pad Bluetooth naraz.** W PlayStation Classic WiFi i Bluetooth korzystają z jednego i tego samego
+radia z jedną anteną, a to radio może w danej chwili robić tylko jedno. Dopóki pad Bluetooth jest połączony i
+w użyciu, radio działa na zmianę - chwila dla pada, chwila dla WiFi - więc WiFi dostaje mniej czasu i zwalnia.
+Najbardziej odczujesz to przy dużym pobieraniu ze *Sklepu* (punkt 3.13) albo przy aktualizacji (punkt 3.12),
+które trwają wtedy wyraźnie dłużej. Dlatego przed dużym pobieraniem wyłącz pad, przytrzymując jego przycisk PS
+przez około 10 sekund, albo na ten czas użyj pada USB; wtedy WiFi ma radio tylko dla siebie. AutoBleem już
+teraz daje znać WiFi, kiedy pad jest połączony, żeby WiFi i Bluetooth lepiej dzieliły się radiem. To bardzo pomaga, ale nie
+usuwa efektu całkiem, bo radio wciąż jest tylko jedno.
+
 **Kreator mapowania pada.** Użyj go, gdy pad nic nie robi w AutoBleem albo ma przyciski nie na swoich miejscach.
 Kreator pokazuje podłączony pad taki, jaki jest naprawdę - każdą oś, przycisk i krzyżak jako liczby - oraz
 obrazek DualShocka, który podświetla się, gdy coś naciskasz. Ponieważ testowanemu padowi nie można jeszcze ufać,

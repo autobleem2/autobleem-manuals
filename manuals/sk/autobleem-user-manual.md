@@ -1147,6 +1147,15 @@ Z prvej obrazovky vás do každej časti dostane jedno tlačidlo:
 | Triangle | **About** ukáže, čo je PSC-Bios. |
 | Circle | **Back** vás vyvedie z PSC-Bios späť do spúšťača. |
 
+**WiFi a ovládač cez Bluetooth súčasne.** Na PlayStation Classic idú WiFi aj Bluetooth cez jedno a to isté
+rádio s jedinou anténou a toto rádio zvládne v jednej chvíli iba jednu vec. Kým je ovládač cez Bluetooth
+pripojený a používate ho, rádio sa strieda - chvíľku pre ovládač, chvíľku pre WiFi - a na WiFi tak zostáva menej
+času, preto je pomalšia. Najviac to spoznáte pri veľkom sťahovaní z *Obchodu* (oddiel 3.13) alebo pri
+aktualizácii (oddiel 3.12), ktoré potom trvajú citeľne dlhšie. Pred veľkým sťahovaním preto ovládač vypnite tak,
+že podržíte jeho tlačidlo PS asi 10 sekúnd, alebo na ten čas použite ovládač cez USB; WiFi potom má rádio len pre
+seba. AutoBleem už WiFi dáva vedieť, keď je ovládač pripojený, aby sa WiFi a Bluetooth o rádio delili lepšie.
+To veľmi pomáha, ale spomalenie úplne odstrániť nedokáže, pretože rádio je stále iba jedno.
+
 **Sprievodca mapovaním ovládača.** Použite ho, keď ovládač v AutoBleeme nerobí nič alebo má tlačidlá na zlých
 miestach. Ukáže pripojený ovládač taký, aký naozaj je - každú os, tlačidlo a smerový prepínač ako čísla - a obrázok
 DualShocku, ktorý sa rozsvecuje, ako stláčate. Keďže testovanému ovládaču sa ešte nedá veriť, sprievodcu ovládate
