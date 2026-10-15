@@ -520,8 +520,12 @@ en ny delad uppsättning, så att andra spel också kan använda det (*Dela minn
 finns inte för konsolens interna spel. Håller du in Vänster / Höger eller Upp / Ner upprepas rörelsen här, och
 likaså i RetroArchs spelalternativ och core-skärmar.
 
-Ett spel på en enhet som saknar filen `pcsx.cfg` kan inte spara sina inställningar; ändrar du en av dem säger
-redigeraren *Inte sparat: spelet saknar pcsx.cfg*.
+Ett spel håller sina inställningar i en egen fil, `pcsx.cfg`. Alla spel på USB-minnet har en, eftersom skanningen
+skapar den. En originalskiva i en USB-enhet (avsnitt 3.9a) får däremot sin egen mapp med en `pcsx.cfg` först
+första gången du startar den; fram till dess kan en ändring i redigeraren inte sparas, och redigeraren säger
+*Inte sparat: spelet saknar pcsx.cfg*. Starta därför skivan en gång - sedan sparas dess inställningar som för
+vilket annat spel som helst. En skiva som hör till ett spel som redan finns i din samling använder det spelets
+mapp och inställningar från början.
 
 För en **skiva i enheten** (avsnitt 3.9a) är vissa inställningar meningslösa, så redigeraren tonar ner de
 raderna, och raden längst ner säger *Inte tillgängligt för en skiva i enheten* när du går till en av dem.

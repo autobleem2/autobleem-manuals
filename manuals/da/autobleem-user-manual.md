@@ -510,8 +510,11 @@ sæt, så andre spil også kan bruge det (*Del memory card*, afsnit 3.8). De to 
 spil. Holder du Venstre / Højre eller Op / Ned inde, gentages bevægelsen her, og det samme gælder i RetroArchs
 spilindstillinger og core-skærm.
 
-Et spil på drevet uden en fil `pcsx.cfg` kan ikke gemme sine indstillinger; ændrer du en, siger editoren *Ikke gemt:
-spillet har ingen pcsx.cfg*.
+Et spil gemmer sine indstillinger i sin egen fil `pcsx.cfg`. Alle spil på USB-nøglen har en, fordi scanningen
+laver den. En original disk i et USB-drev (afsnit 3.9a) får først sin egen mappe med en `pcsx.cfg`, første gang
+du starter den; indtil da kan en ændring i editoren ikke gemmes, og editoren siger *Ikke gemt: spillet har ingen
+pcsx.cfg*. Start derfor disken én gang - fra da af bliver dens indstillinger gemt som for ethvert andet spil. En
+disk, der hører til et spil, du allerede har i din samling, bruger det spils mappe og indstillinger fra starten.
 
 For en **disk i drevet** (afsnit 3.9a) giver nogle indstillinger ingen mening, så editoren gør de linjer grå, og
 linjen nederst siger *Ikke tilgængelig for en disk i drevet*, når du går hen på en af dem.

@@ -519,8 +519,12 @@ uuden jaetun sarjan, jotta muutkin pelit voivat käyttää sitä (*Jaa muistikor
 tarjota konsolin sisäisille peleille. Vasemman / Oikean tai Ylös / Alas pitäminen pohjassa toistaa liikkeen täällä
 sekä RetroArchin pelivalintojen ja ytimien näkymissä.
 
-Asemassa olevan pelin, jolla ei ole `pcsx.cfg`-tiedostoa, asetuksia ei voi tallentaa; kun muutat jotakin,
-muokkain ilmoittaa *Ei tallennettu: pelillä ei ole pcsx.cfg-tiedostoa*.
+Peli säilyttää asetuksensa omassa `pcsx.cfg`-tiedostossaan. Jokaisella tikulla olevalla pelillä on sellainen,
+koska skannaus luo sen. USB-asemassa oleva alkuperäinen levy (osio 3.9a) saa oman kansionsa ja
+`pcsx.cfg`-tiedostonsa vasta, kun käynnistät sen ensimmäisen kerran. Siihen asti muokkaimessa tehtyä muutosta ei
+voi tallentaa, ja muokkain ilmoittaa *Ei tallennettu: pelillä ei ole pcsx.cfg-tiedostoa*. Käynnistä siis levy
+kerran – siitä lähtien sen asetukset säilyvät kuten minkä tahansa muun pelin. Levy, joka kuuluu kokoelmassasi jo
+olevaan peliin, käyttää alusta asti sen pelin kansiota ja asetuksia.
 
 **Asemassa olevalle levylle** (osio 3.9a) osa asetuksista ei ole järkeviä, joten muokkain näyttää ne harmaina, ja
 alarivillä lukee *Ei käytettävissä asemassa olevalle levylle*, kun siirryt sellaiselle riville.

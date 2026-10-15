@@ -530,8 +530,12 @@ van die kaart een nieuwe gedeelde set, zodat andere games hem ook kunnen gebruik
 Die twee zijn er niet voor de interne games van de console. Links / Rechts of Omhoog / Omlaag ingedrukt houden
 herhaalt de beweging hier, en ook in de game-opties en het coresscherm van RetroArch.
 
-Een game op het station zonder bestand `pcsx.cfg` kan zijn instellingen niet bewaren; verander je er een, dan
-meldt de editor *Niet opgeslagen: deze game heeft geen pcsx.cfg*.
+Een game bewaart zijn instellingen in een eigen bestand `pcsx.cfg`. Elke game op de stick heeft er een, want de
+scan maakt het aan. Een originele schijf in een USB-station (sectie 3.9a) krijgt pas een eigen map met een
+`pcsx.cfg` als je hem voor het eerst start; tot dan kan een wijziging in de editor niet bewaard worden, en meldt
+de editor *Niet opgeslagen: deze game heeft geen pcsx.cfg*. Start de schijf dus één keer - vanaf dan blijven
+zijn instellingen bewaard zoals bij elke andere game. Een schijf die bij een game hoort die al in je collectie
+staat, gebruikt meteen de map en de instellingen van die game.
 
 Voor een **schijf in het station** (sectie 3.9a) hebben sommige instellingen geen zin. De editor maakt die regels dan
 grijs, en de regel onderaan zegt *Niet beschikbaar voor een schijf in het station* als je erop komt.

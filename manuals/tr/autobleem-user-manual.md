@@ -515,8 +515,12 @@ kartı verir (*Hafıza kartını değiştir*). Oyun hâlâ kendi kartını kulla
 oyunlarında sunulmaz. Left / Right ya da Up / Down'ı basılı tutmak burada da, RetroArch'ın oyun seçenekleri ve
 çekirdek ekranlarında da hareketi tekrarlar.
 
-`pcsx.cfg` dosyası olmayan bir sürücü oyunu ayarlarını saklayamaz; birini değiştirdiğinizde düzenleyici *Kaydedilmedi:
-bu oyunun pcsx.cfg dosyası yok* der.
+Bir oyun ayarlarını kendi `pcsx.cfg` dosyasında saklar. USB bellekteki her oyunun böyle bir dosyası vardır,
+çünkü taramada oluşturulur. USB sürücüdeki orijinal bir disk (bölüm 3.9a) ise kendi klasörünü ve `pcsx.cfg`
+dosyasını ancak onu ilk kez başlattığınızda alır; o zamana kadar düzenleyicide yaptığınız bir değişiklik
+saklanamaz ve düzenleyici *Kaydedilmedi: bu oyunun pcsx.cfg dosyası yok* der. Bu yüzden diski bir kez başlatın -
+o andan itibaren ayarları her oyununki gibi saklanır. Koleksiyonunuzda zaten bulunan bir oyuna ait bir disk, en
+baştan o oyunun klasörünü ve ayarlarını kullanır.
 
 **Sürücüdeki bir disk** (bölüm 3.9a) için bazı ayarların anlamı yoktur; düzenleyici bu satırları soluk gösterir ve
 birinin üzerine geldiğinizde alttaki satırda *Sürücüdeki disk için kullanılamaz* yazar.

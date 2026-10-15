@@ -538,8 +538,12 @@ memòria*, seccion 3.8). Aquestes dos son pas prepausats pels jòcs intèrnes de
 Esquèrra / Drecha o Amont / Avall repetís lo movement aquí, e tanben dins los ecrans d'opcions de jòc e de cores
 de RetroArch.
 
-Un jòc del lector qu'a pas de fichièr `pcsx.cfg` pòt pas gardar sos paramètres ; quand ne cambiatz un, l'editor
-vos ditz *Pas enregistrat : aqueste jòc a pas de pcsx.cfg*.
+Un jòc garda sos paramètres dins son pròpri fichièr `pcsx.cfg`. Totes los jòcs de la clau n'an un, que l'escan
+lo crea. Un disc original dins un lector USB (seccion 3.9a), el, recep son dorsièr e son `pcsx.cfg` sonque al
+primièr aviada ; fins alara, un cambiament fach dins l'editor se pòt pas gardar, e l'editor vos ditz *Pas
+enregistrat : aqueste jòc a pas de pcsx.cfg*. Aviatz doncas lo disc un còp - puèi, sos paramètres son gardats
+coma los de quin autre jòc que siá. Un disc que fa partida d'un jòc ja present dins vòstra colleccion utiliza
+tre la debuta lo dorsièr e los paramètres d'aquel jòc.
 
 Per un **disc dins lo lector** (seccion 3.9a), d'unes paramètres an pas de sens : l'editor grisa aquelas linhas, e
 la linha d'en bas ditz *Pas disponible per un disc dins lo lector* quand i anatz.

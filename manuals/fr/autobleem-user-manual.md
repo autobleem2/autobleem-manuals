@@ -544,8 +544,12 @@ cette carte en un nouveau jeu de cartes partagé, pour que d'autres jeux puissen
 mémoire*, section 3.8). Ces deux boutons ne sont pas proposés pour les jeux internes de la console. Ici, comme dans les
 écrans des options de jeu et des cœurs de RetroArch, maintenir Gauche / Droite ou Haut / Bas répète le mouvement.
 
-Un jeu sur lecteur qui n'a pas de fichier `pcsx.cfg` ne peut pas conserver ses réglages ; si vous en modifiez un,
-l'éditeur vous prévient : *Non enregistré : ce jeu n'a pas de pcsx.cfg*.
+Un jeu garde ses réglages dans son propre fichier `pcsx.cfg`. Tous les jeux de la clé en ont un, puisque le scan
+le crée. Un disque original dans un lecteur USB (section 3.9a), lui, ne reçoit son dossier et son `pcsx.cfg`
+qu'au premier lancement ; d'ici là, une modification faite dans l'éditeur ne peut pas être conservée, et
+l'éditeur vous prévient : *Non enregistré : ce jeu n'a pas de pcsx.cfg*. Lancez donc le disque une fois - ensuite,
+ses réglages sont conservés comme ceux de n'importe quel autre jeu. Un disque qui appartient à un jeu déjà
+présent dans votre collection utilise d'emblée le dossier et les réglages de ce jeu.
 
 Pour un **disque dans le lecteur** (section 3.9a), certains réglages n'ont pas de sens : l'éditeur grise ces lignes, et
 la ligne du bas indique *Indisponible pour un disque dans le lecteur* quand vous passez dessus.

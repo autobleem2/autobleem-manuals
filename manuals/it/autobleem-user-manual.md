@@ -522,8 +522,12 @@ set condiviso, così possono usarla anche altri giochi (*Condividi memory card*,
 disponibili per i giochi interni della console. Qui, come nelle schermate delle opzioni di gioco e dei core di
 RetroArch, tenere premuto Sinistra / Destra o Su / Giù ripete il movimento.
 
-Un gioco su unità che non ha un file `pcsx.cfg` non può conservare le sue impostazioni; quando ne cambi una, l'editor
-ti avverte: *Non salvato: questo gioco non ha pcsx.cfg*.
+Ogni gioco tiene le sue impostazioni in un proprio file `pcsx.cfg`. Tutti i giochi sulla chiavetta ce l'hanno,
+perché lo crea la scansione. Un disco originale in un lettore USB (sezione 3.9a), invece, riceve la sua cartella
+con il `pcsx.cfg` solo la prima volta che lo avvii; fino ad allora una modifica fatta nell'editor non si può
+conservare, e l'editor ti avverte: *Non salvato: questo gioco non ha pcsx.cfg*. Avvia quindi il disco una volta:
+da lì in poi le sue impostazioni restano come per qualsiasi altro gioco. Un disco che appartiene a un gioco già
+presente nella tua collezione usa fin dall'inizio la cartella e le impostazioni di quel gioco.
 
 Per un **disco nell'unità** (sezione 3.9a) alcune impostazioni non hanno senso, quindi l'editor mette quelle righe in
 grigio, e quando ti sposti su una di esse la riga in fondo dice *Non disponibile per un disco nell'unità*.

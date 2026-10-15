@@ -519,8 +519,12 @@ memorie (*Schimbă cardul de memorie*). Cât timp jocul își folosește încă 
 două nu sunt oferite pentru jocurile interne ale consolei. Ținerea apăsată a butoanelor Stânga / Dreapta sau
 Sus / Jos repetă mișcarea aici, ca și în ecranele de opțiuni ale jocurilor și de nuclee din RetroArch.
 
-Un joc de pe unitate care nu are fișier `pcsx.cfg` nu-și poate păstra setările; când schimbi una, editorul îți
-spune *Nesalvat: acest joc nu are pcsx.cfg*.
+Un joc își ține setările în propriul fișier `pcsx.cfg`. Orice joc de pe stick are unul, pentru că îl creează
+scanarea. Un disc original într-o unitate USB (secțiunea 3.9a) primește însă un dosar propriu cu un `pcsx.cfg`
+abia prima dată când îl pornești; până atunci o schimbare făcută în editor nu poate fi păstrată, iar editorul îți
+spune *Nesalvat: acest joc nu are pcsx.cfg*. Așa că pornește discul o dată - de atunci încolo setările lui se
+păstrează ca la orice alt joc. Un disc care aparține unui joc aflat deja în colecția ta folosește de la început
+dosarul și setările acelui joc.
 
 Pentru un **disc din unitate** (secțiunea 3.9a) unele setări n-au sens, așa că editorul face acele rânduri gri, iar
 rândul de jos spune *Indisponibil pentru un disc din unitate* când ajungi pe unul dintre ele.

@@ -541,8 +541,13 @@ dieser Karte ein neues gemeinsames Set, das auch andere Spiele nutzen können (*
 Für die internen Spiele der Konsole gibt es diese beiden nicht. Hältst du Links / Rechts oder Hoch / Runter,
 wiederholt sich die Bewegung - hier und ebenso in den Bildschirmen für die Spieloptionen und Cores von RetroArch.
 
-Ein Laufwerks-Spiel ohne Datei `pcsx.cfg` kann seine Einstellungen nicht behalten; änderst du eine, meldet der
-Editor *Nicht gespeichert: Dieses Spiel hat keine pcsx.cfg*.
+Ein Spiel bewahrt seine Einstellungen in einer eigenen Datei `pcsx.cfg` auf. Jedes Spiel auf dem Stick hat eine,
+denn der Scan legt sie an. Eine Original-Disc im USB-Laufwerk (Abschnitt 3.9a) bekommt ihren eigenen Ordner mit
+einer `pcsx.cfg` erst, wenn du sie zum ersten Mal startest; bis dahin kann eine Änderung im Editor nicht
+gespeichert werden, und der Editor meldet *Nicht gespeichert: Dieses Spiel hat keine pcsx.cfg*. Starte die Disc
+deshalb einmal - von da an bleiben ihre Einstellungen erhalten wie bei jedem anderen Spiel. Eine Disc, die zu
+einem Spiel gehört, das schon in deiner Sammlung ist, nutzt von Anfang an den Ordner und die Einstellungen dieses
+Spiels.
 
 Für eine **Disc im Laufwerk** (Abschnitt 3.9a) ergeben manche Einstellungen keinen Sinn. Der Editor graut diese
 Zeilen aus, und gehst du auf eine davon, steht unten *Nicht verfügbar für eine Disc im Laufwerk*.

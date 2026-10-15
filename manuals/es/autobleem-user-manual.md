@@ -540,8 +540,12 @@ sección 3.8). Estas dos opciones no están disponibles para los juegos internos
 Izquierda / Derecha o Arriba / Abajo repite el movimiento aquí, y también en las pantallas de opciones de juego y
 de núcleos de RetroArch.
 
-Un juego de la unidad que no tiene archivo `pcsx.cfg` no puede guardar sus ajustes; si cambias uno, el editor te
-avisa con *No guardado: este juego no tiene pcsx.cfg*.
+Cada juego guarda sus ajustes en su propio archivo `pcsx.cfg`. Todos los juegos del USB lo tienen, porque lo crea
+el escaneo. Un disco original en una unidad USB (sección 3.9a), en cambio, solo recibe su carpeta con un
+`pcsx.cfg` la primera vez que lo inicias; hasta entonces, un cambio en el editor no se puede guardar, y el editor
+te avisa con *No guardado: este juego no tiene pcsx.cfg*. Así que inicia el disco una vez: a partir de ahí sus
+ajustes se conservan como los de cualquier otro juego. Un disco que pertenece a un juego que ya está en tu
+colección usa la carpeta y los ajustes de ese juego desde el principio.
 
 Para un **disco en la unidad** (sección 3.9a) algunos ajustes no tienen sentido, así que el editor pone esas filas
 en gris, y cuando pasas por una la línea de abajo dice *No disponible para un disco en la unidad*.

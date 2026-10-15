@@ -516,8 +516,11 @@ wspólny zestaw, z którego mogą korzystać także inne gry (*Udostępnij kart�
 możliwości nie ma przy grach wbudowanych w konsolę. Przytrzymanie Lewo / Prawo albo Góra / Dół powtarza ruch -
 tutaj, a także na ekranach opcji gier i rdzeni RetroArch.
 
-Gra z napędu, która nie ma pliku `pcsx.cfg`, nie może zachować swoich ustawień; gdy któreś zmienisz, edytor
-powie Ci *Nie zapisano: ta gra nie ma pliku pcsx.cfg*.
+Gra trzyma swoje ustawienia we własnym pliku `pcsx.cfg`. Każda gra na pendrivie go ma, bo tworzy go skanowanie.
+Oryginalna płyta w napędzie USB (punkt 3.9a) dostaje własny folder z plikiem `pcsx.cfg` dopiero wtedy, gdy
+uruchomisz ją pierwszy raz; do tego czasu zmiany w edytorze nie da się zachować, a edytor powie Ci *Nie zapisano:
+ta gra nie ma pliku pcsx.cfg*. Uruchom więc płytę raz - od tej pory jej ustawienia zostają, tak jak w każdej
+innej grze. Płyta należąca do gry, którą masz już w kolekcji, od początku korzysta z folderu i ustawień tej gry.
 
 Dla **płyty w napędzie** (punkt 3.9a) część ustawień nie ma sensu, więc edytor je wyszarza, a gdy na któreś z
 nich przejdziesz, wiersz na dole mówi *Niedostępne dla płyty w napędzie*.

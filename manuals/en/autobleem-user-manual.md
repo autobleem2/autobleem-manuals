@@ -512,8 +512,11 @@ a new shared set, so other games can use it too (*Share memory card*, section 3.
 for the console's internal games. Holding Left / Right or
 Up / Down repeats the move here, and also in RetroArch's game options and cores screens.
 
-A drive game that has no `pcsx.cfg` file cannot keep its settings; when you change one, the editor tells you
-*Not saved: this game has no pcsx.cfg*.
+A game keeps its settings in its own `pcsx.cfg` file. Every game on the stick has one, because the scan makes it.
+An original disc in a USB drive (section 3.9a) gets its own folder with a `pcsx.cfg` only the first time you
+start it; until then, a change you make in the editor cannot be kept, and the editor tells you *Not saved: this
+game has no pcsx.cfg*. So start the disc once - from then on its settings are kept like any other game's. A disc
+that belongs to a game already in your library uses that game's folder and settings from the start.
 
 For a **disc in the drive** (section 3.9a) some settings make no sense, so the editor greys those rows out, and
 the line at the bottom says *Not available for a disc in the drive* when you move onto one.

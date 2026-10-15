@@ -507,8 +507,11 @@ sadu, aby ji mohly používat i jiné hry (*Sdílet paměťovou kartu*, oddíl 3
 her konzole nenabízejí. Podržením Vlevo / Vpravo nebo Nahoru / Dolů se pohyb opakuje - tady i v obrazovkách
 s možnostmi her a jádry RetroArch.
 
-Hra z mechaniky, která nemá soubor `pcsx.cfg`, si nastavení uložit neumí; když nějaké změníte, editor vám
-oznámí *Neuloženo: hra nemá pcsx.cfg*.
+Svá nastavení si hra drží ve vlastním souboru `pcsx.cfg`. Každá hra na flashce ho má, protože ho vytvoří už
+skenování. Originální disk v USB mechanice (oddíl 3.9a) dostane vlastní složku se souborem `pcsx.cfg` teprve
+tehdy, když ho poprvé spustíte; do té doby se změna v editoru nedá uložit a editor vám oznámí *Neuloženo: hra
+nemá pcsx.cfg*. Disk proto jednou spusťte - od té chvíle si svá nastavení pamatuje stejně jako každá jiná hra.
+Disk, který patří ke hře, jež už ve sbírce máte, používá složku a nastavení této hry hned od začátku.
 
 U **disku v mechanice** (oddíl 3.9a) některá nastavení nedávají smysl, takže je editor zašedí, a když na takový
 řádek přejdete, řádek dole napíše *Není k dispozici pro disk v mechanice*.

@@ -525,8 +525,12 @@ um novo conjunto compartilhado, para que outros jogos também possam usá-lo (*C
 seção 3.8). Esses dois não aparecem para os jogos internos do console. Segurar Esquerda / Direita ou Cima / Baixo
 repete o movimento aqui, e também nas telas de opções de jogo e de núcleos do RetroArch.
 
-Um jogo da unidade que não tem o arquivo `pcsx.cfg` não consegue guardar as configurações; quando você muda uma, o
-editor avisa *Não salvo: este jogo não tem pcsx.cfg*.
+Cada jogo guarda as configurações no seu próprio arquivo `pcsx.cfg`. Todo jogo do pendrive tem um, porque a busca
+o cria. Já um disco original numa unidade USB (seção 3.9a) só ganha a sua pasta com um `pcsx.cfg` na primeira vez
+que você o inicia; até lá, uma mudança feita no editor não pode ser guardada, e o editor avisa *Não salvo: este
+jogo não tem pcsx.cfg*. Então inicie o disco uma vez - daí em diante as configurações dele ficam guardadas como
+as de qualquer outro jogo. Um disco que pertence a um jogo que já está na sua coleção usa a pasta e as
+configurações desse jogo desde o começo.
 
 Para um **disco na unidade** (seção 3.9a), algumas configurações não fazem sentido, então o editor deixa essas
 linhas em cinza, e a linha de baixo diz *Indisponível para um disco na unidade* quando você passa por uma delas.
