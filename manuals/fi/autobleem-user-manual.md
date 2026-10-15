@@ -1,8 +1,8 @@
 # AutoBleem 2 – käyttöopas
 
 AutoBleem 2 on pelien käynnistäjä **PlayStation Classicille**, ja versiosta 2 alkaen myös **Raspberry Pille**,
-**USB-tikulta käynnistettävälle PC:lle** ja **Windowsille**. Se esittää PS1-pelisi hyllyllisenä kansia
-tietoineen ja käynnistää ne mukana tulevalla PCSX-emulaattorilla. Kun asennat rinnalle RetroArchin, voit pelata
+**USB-tikulta käynnistettävälle PC:lle** ja **Windowsille**. Se kokoaa PS1-pelisi kansikuvien hyllyksi, jossa
+jokaisen pelin tiedot ovat esillä, ja käynnistää ne mukana tulevalla PCSX-emulaattorilla. Kun asennat rinnalle RetroArchin, voit pelata
 myös muiden laitteiden pelejä. Tässä oppaassa käydään läpi asennus kullekin alustalle, arkikäyttö ja mukana
 tulevat työkalut.
 
@@ -15,7 +15,7 @@ tulevat työkalut.
 AutoBleemin avulla PlayStation Classicista – tai Raspberry Pistä, vanhasta PC:stä tai Windows-koneestasi – tulee
 pieni pelikonsoli, jossa omilla peleilläsi on kunnollinen valikko. Paketti sisältää seuraavat osat:
 
-- **Käynnistäjä.** Se tulee näkyviin, kun kytket laitteen päälle: hylly pelien kansia, joita selaat sivusuunnassa,
+- **Käynnistäjä.** Se tulee näkyviin, kun kytket laitteen päälle: kansikuvien hylly, jota selaat sivusuunnassa,
   ja valitun pelin tiedot vieressä. Täältä käynnistät pelit, jaat ne sarjoihin (PlayStation, RetroArch,
   sovellukset), muutat asetuksia, hoidat muistikortteja ja tilatallennuksia sekä lataat sovelluksia ja pelejä
   Kaupasta. Käynnistäjä näyttää ja toimii samalla tavalla kaikilla alustoilla.
@@ -28,7 +28,7 @@ pieni pelikonsoli, jossa omilla peleilläsi on kunnollinen valikko. Paketti sis�
   *PlayStation 1* -ydin on ydinlistan kärjessä (osio 3.9). Doomin kaltaiset pelit pyörivät omista pelitiedostoistasi
   `Packages`-kansiosta (osio 3.10).
 - **Konsolin työkalut.** *PSC-Bios* – valikoissa sen nimi on *Verkko ja ohjaimet* – hoitaa WiFin, kellon,
-  Bluetooth-ohjaimet ja ohjainten näppäinasettelut. Se toimii konsolilla sekä Raspberry Pillä ja PC-tikulla.
+  Bluetooth-ohjaimet ja ohjainmääritykset. Se toimii konsolilla sekä Raspberry Pillä ja PC-tikulla.
   *ABFlashKit* asentaa AutoBleem-kernelin PlayStation Classiciin (luku 6).
 - **UpdateRoms** Windowsille. PlayStation Classicissa ei ole omaa verkkoyhteyttä, joten tämä PC-ohjelma päivittää
   konsolitikun RetroArch-listat ja hakee kansikuvat sillä aikaa, kun tikku on kiinni PC:ssä.
@@ -41,12 +41,12 @@ pieni pelikonsoli, jossa omilla peleilläsi on kunnollinen valikko. Paketti sis�
 
 ### 2.1 PlayStation Classic
 
-AutoBleem toimii kokonaan USB-tikulta. Konsolin sisälle ei kosketa: kun otat tikun pois, konsoli toimii täsmälleen
+AutoBleem toimii kokonaan USB-tikulta. Konsolin omaan muistiin ei kosketa: kun otat tikun pois, konsoli toimii täsmälleen
 kuten ennenkin. Tarvitset vain Windows-PC:n, USB-tikun (USB 2.0, vähintään 8 Gt) ja konsolin.
 
 Tikun ei tarvitse olla tyhjä, eikä sitä **alusteta**, ellet itse pyydä: AutoBleem asennetaan tikulla jo olevien
 tiedostojen rinnalle, ja jos tikulla on ennestään AutoBleem 1.0, se päivitetään paikallaan (katso alempaa).
-Vakiokonsolia varten tikun on oltava **FAT32**-muotoinen, koska konsolin oma kernel ei osaa lukea exFAT:ia. Kun
+Vakiokonsolia varten tikun on oltava alustettu **FAT32**:ksi, koska konsolin oma kernel ei osaa lukea exFAT:ia. Kun
 AutoBleem-kernel on asennettu (ABFlashKit, luku 6), konsoli käynnistyy myös exFAT-tikulta, ja samalla poistuu
 FAT32:n 4 gigatavun tiedostokokoraja.
 
@@ -87,7 +87,7 @@ Kun valitset järjestelmävalikosta *Sammuta* tai painat konsolin Power-painiket
 merkiksi siitä, että kaikki meni kuten pitää. Seuraava Power-painallus tuo käynnistäjän takaisin muutamassa
 sekunnissa. **Kun valo palaa oranssina, voit vetää tikun irti** ja kytkeä sen PC:hen; Windows ei pyydä
 tarkistamaan sitä, koska se irrotettiin oikein. Laita tikku takaisin ennen kuin painat Poweria. Jos irrotat
-konsolin virtajohdon, se käy seuraavalla kerralla taas läpi käynnistyksen valmiustilan. **Punainen** valo
+konsolin virtajohdon, konsoli käy seuraavalla käynnistyskerralla taas valmiustilan kautta. **Punainen** valo
 tarkoittaa, että konsoli on todella sammuksissa.
 
 **Takaportti.** Takana oleva micro-USB-portti on konsolin virtaliitäntä. AutoBleem-kernelin kanssa siihen voi
@@ -120,8 +120,8 @@ sitä:
    mistä AutoBleem 2 niitä etsii, ja vanhat ROM-kansiot (`nes`, `snes`, ...) saavat RetroArchin käyttämät
    järjestelmänimet. Pelisi, tilatallennuksesi, muistikorttisi, ROMisi ja RetroArch-tallennuksesi säilyvät, samoin
    `config.ini` – siitä vaihdetaan vain PS1-emulaattoriksi pcsx-abnxt.
-4. Laita tikku takaisin konsoliin. Ensimmäinen skannaus rakentaa pelilistan ja soittolistat uudelleen. RetroArch-
-   pelien kansikuvat saat ajamalla UpdateRomsin PC:llä (luku 5).
+4. Laita tikku takaisin konsoliin. Ensimmäinen skannaus rakentaa pelilistan ja soittolistat uudelleen.
+   RetroArch-pelien kansikuvat saat ajamalla UpdateRomsin PC:llä (luku 5).
 
 > Vakiokonsolissa ei ole kelloa eikä verkkoa. Päivämäärät näkyvät vasta, kun AutoBleem-kernel on asennettu
 > (luku 6), ja RetroArch-pelien kansikuvat tulevat PC:llä ajettavasta UpdateRomsista (luku 5).
@@ -154,7 +154,7 @@ RetroArch-ytimiä, joten valitse se, jos muut laitteet ovat sinulle PS1:tä tär
    lisätä ohjelman asetuksiin repositorion osoitteen ja valita AutoBleemin listalta. Jokaisella kanavalla on
    omansa: `https://autobleem.retromenele.pl/rpi-imager/os_list.json` uusimmalle julkaisulle,
    `.../os_list-testing.json` testattavalle versiolle ja `.../os_list-nightly.json` uusimmalle kehitysversiolle.
-   Latussivun Raspberry Pi -välilehdellä luetellaan olemassa olevat osoitteet, kunkin vieressä *Copy*-painike.
+   Lataussivun Raspberry Pi -välilehdellä luetellaan olemassa olevat osoitteet, kunkin vieressä *Copy*-painike.
 2. Avaa Imagerin mukautusnäkymä (hammasratas tai *Next*-painikkeen jälkeen tuleva kysymys) ja aseta siinä
    **käyttäjänimi ja salasana, WiFi-verkko ja maa sekä ota SSH käyttöön**. AutoBleem tarvitsee verkkoyhteyden
    ensimmäisellä käynnistyskerralla.
@@ -309,7 +309,7 @@ R1, Home ja End ovat L2 ja R2, ja F10 avaa järjestelmävalikon.
 Windowsissa muutama näppäin toimii toisin. Siellä Esc sulkee AutoBleemin (luku 7), joten Circle on vain
 Backspace, välilyönti on Start ja S on Square. Lisäksi kirjainnäppäimet korvaavat koko ohjaimen, joten
 nuolinäppäimiin ei tarvitse kurottaa: X, O, S ja T ovat Cross, Circle, Square ja Triangle, I, J, K ja L
-ristiohjain (ylös, vasemmalle, alas, oikealle), B on Select, Q ja E ovat L1 ja R1 ja 1 ja 2 ovat L2 ja R2.
+ristiohjain (ylös, vasemmalle, alas, oikealle), B on Select, Q ja E ovat L1 ja R1 sekä 1 ja 2 ovat L2 ja R2.
 
 **Kaikissa listoissa ja valikoissa** liikutaan samalla tavalla: Ylös ja Alas siirtävät kohdistinta, L2 ja R2
 kääntävät sivua, L1 ja R1 hyppäävät ensimmäiselle tai viimeiselle riville, Cross valitsee ja Circle palaa
@@ -363,7 +363,7 @@ sulkee valikon. Valikon alla oleva rivi kertoo, mitä valittu kohde tekee. Kohte
   pelejä etkä halua odottaa.
 - *Kauppa* avaa AutoBleemin Kaupan, jossa selaat ja asennat pelejä, sovelluksia ja laajennuksia (osio 3.13).
 - *RetroArch-ytimet* (jos RetroArch on asennettu) antaa valita, millä ytimellä kunkin laitteen pelit pelataan.
-- *Verkko ja ohjaimet* avaa Wi-Fin, Bluetooth-parituksen ja ohjainten näppäinasettelun näkymät (luku 6). Se on
+- *Verkko ja ohjaimet* avaa Wi-Fin, Bluetooth-parituksen ja ohjainmääritysten näkymät (luku 6). Se on
   valikossa vain, jos jokin asennettu laajennus tarjoaa ne – PSC-Bios tekee sen konsolilla, Raspberry Pillä ja
   PC-tikulla. Jos laajennus on asennettu mutta poistettu käytöstä, kohde on harmaana ja sen kuvaus neuvoo ottamaan
   laajennuksen käyttöön Laajennuksissa; Cross avaa silloin Laajennukset-listan suoraan sen kohdalta.
@@ -372,7 +372,7 @@ sulkee valikon. Valikon alla oleva rivi kertoo, mitä valittu kohde tekee. Kohte
 - *Järjestelmävalikko...* avaa koko järjestelmävalikon kaikkine muine toimintoineen – Vaihtoehdot, Pelien hallinta,
   Sammuta ja muuta (osio 3.5).
 
-Kauppaa, RetroArch-ytimiä ja launcherin uudelleenkäynnistystä lukuun ottamatta kaikki nämä löytyvät myös
+Kauppaa, RetroArch-ytimiä ja käynnistäjän uudelleenkäynnistystä lukuun ottamatta kaikki nämä löytyvät myös
 järjestelmävalikosta.
 
 ![Pikavalikko](../images/en/quick-menu.jpg)
@@ -393,8 +393,8 @@ joten voit katsella rauhassa ennen kuin valitset.
 | | *Muistikortit* | Hallitsee jaettuja muistikorttisarjojasi (osio 3.8). |
 | | *Skannauksen prosessorit* | Määrää, missä järjestyksessä jokainen skannaus ajaa ensin omat apuohjelmansa, ja kytkee niitä päälle ja pois (osio 3.14). Sitä ei voi avata skannauksen aikana. |
 | *Järjestelmä* | *Vaihtoehdot* | Avaa AutoBleemin asetukset (osio 3.6). |
-| | *Verkko ja ohjaimet* | Avaa Wi-Fin, Bluetooth-ohjainten parituksen, DualShock 3:n käyttöönoton ja ohjainten näppäinasettelun näkymät (luku 6). Kohde on näkyvissä vain, kun jokin laajennus tarjoaa ne – katso alta. |
-| | *Laitteistotiedot* | Näyttää laitteen tiedot – järjestelmän, suorittimen, tallennustilan, verkkoliitännät, aikavyöhykkeen, näytön sekä ohjaimet ja niiden asettelut – samalla sivulla kaikilla alustoilla (osio 4.2). Circle vie takaisin järjestelmävalikkoon. |
+| | *Verkko ja ohjaimet* | Avaa Wi-Fin, Bluetooth-ohjainten parituksen, DualShock 3:n käyttöönoton ja ohjainmääritysten näkymät (luku 6). Kohde on näkyvissä vain, kun jokin laajennus tarjoaa ne – katso alta. |
+| | *Laitteistotiedot* | Näyttää laitteen tiedot – järjestelmän, suorittimen, tallennustilan, verkkoliitännät, aikavyöhykkeen, näytön sekä ohjaimet ja niiden määritykset – samalla sivulla kaikilla alustoilla (osio 4.2). Circle vie takaisin järjestelmävalikkoon. |
 | | *Virtuaalinen ohjain* | Näyttää ohjaimet, jotka sovellukset saavat, ja ohjaimet, jotka daemon näkee. Tästä on apua, kun ohjain ei toimi sovelluksessa (osio 4.5). Circle vie takaisin järjestelmävalikkoon. |
 | | *Ohjelmistopäivitys* | Tarkistaa heti sivustolta, onko uudempaa AutoBleemia tai RetroArchia, eikä odota päivittäistä tarkistusta (osio 3.12). Kun käynnistäjä tietää jo päivityksestä, rivillä lukee *Päivitys saatavilla*. PlayStation Classicilla tämä vaatii AutoBleem-kernelin ja Wi-Fi-verkon. |
 | | *Tietoja* | Näyttää tekijät ja lisenssin. |
@@ -433,7 +433,7 @@ RetroArch on asennettu, ja sisäiset pelit vain PlayStation Classicilla.
 |---|---|
 | *Käyttöliittymä*: *Näyttö:* | Asettaa näytön tarkkuuden käynnistäjälle ja PS1-emulaattorille. *Auto* käyttää näytön omaa tilaa ja kertoo, mikä se on, esimerkiksi *Auto (1920x1080)*; voit myös valita minkä tahansa tilan, jonka näyttö ilmoittaa. Konsoli tarjoaa tilat 720p, 1080p ja *CRT 4:3* (720x480), joka on tarkoitettu vanhalle kuvaputkitelevisiolle tai 4:3-kaappauslaitteelle. Vaihda tilaa, jos kuva ei sovi televisioosi tai näyttää sumealta. Riviä ei ole, kun AutoBleem pyörii ikkunassa kehityskoneella. |
 | *CRT-reunus:* | Pienentää kaikkea hiukan, 0–10 % yhden prosentin askelin, koska vanhat televisiot leikkaavat kuvan reunoja. Kasvata arvoa, kunnes vihjepalkki ja kulmat näkyvät kokonaan. Rivi näkyy vain 4:3-kuvalla, muutos tulee voimaan heti, ja se on käytössä jo ennen käynnistyskuvaa. |
-| *Kuvan korkeus:* | Tekee kuvasta korkeamman tai matalamman, -40...+40 kahden askelin, millä tahansa 4:3-lähdöllä – *CRT 4:3* tai 4:3-tila VGA- tai PC-lähdössä. Käytä sitä, kun kuva on vanhassa televisiossa litistynyt tai valuu ylä- ja alareunan yli. Muutos tulee voimaan heti, ja RetroArchin pelikuva seuraa sitä. |
+| *Kuvan korkeus:* | Tekee kuvasta korkeamman tai matalamman, -40...+40 kahden yksikön askelin, millä tahansa 4:3-lähdöllä – *CRT 4:3* tai 4:3-tila VGA- tai PC-lähdössä. Käytä sitä, kun kuva on vanhassa televisiossa litistynyt tai valuu ylä- ja alareunan yli. Muutos tulee voimaan heti, ja RetroArchin pelikuva seuraa sitä. |
 | *Emulaattorin näytön skaalaus:* | Määrää, miten PS1-emulaattori sovittaa pelin kuvan näytöllesi. *1x1* näyttää PlayStationin omat pikselit pieninä ja tarkkoina; *2x (kokonaisluku)* ja *4:3 (kokonaisluku)* skaalaavat vain kokonaisilla kerrannaisilla, mikä antaa terävimmän kuvan; *4:3* säilyttää kuvan alkuperäisen muodon; *Koko näyttö* venyttää kuvan koko ruudulle. Asetus korvaa vanhan Widescreen-kytkimen. Klassinen `pcsx-ab` ja RetroArch tuntevat vain koko näytön ja 4:3:n. |
 | *Näytön hehku:* | Kun asetus on PÄÄLLÄ, pelikuvan viereiset tyhjät reunat (kun kuva ei täytä ruutua) täytetään kuvan omalla pehmeällä hehkulla mustan sijaan. Toimii `pcsx-abnxt`:n kanssa. |
 | *AutoBleem-teema:* | Vaihtaa käynnistäjän ulkoasun. Teemat ovat kansiossa `Themes/`, ja sinne pudotettu teeman zip-tiedosto näkyy listalla myös nimellään. AutoBleemin mukana tulevat teemat päivittyvät jokaisen päivityksen yhteydessä, joten jos haluat muokata jotakin niistä, kopioi se ensin uudelle nimelle. Oletus on **ab2.0.0**. |
