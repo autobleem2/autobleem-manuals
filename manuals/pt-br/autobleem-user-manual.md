@@ -1186,6 +1186,16 @@ Da primeira tela, cada parte fica a um botão de distância:
 | Triangle | **About** mostra o que é o PSC-Bios. |
 | Circle | **Back** tira você do PSC-Bios, de volta ao launcher. |
 
+**Wi-Fi e um controle Bluetooth ao mesmo tempo.** No PlayStation Classic, o Wi-Fi e o Bluetooth usam o mesmo
+rádio, com uma única antena, e esse rádio só consegue fazer uma coisa de cada vez. Enquanto um controle
+Bluetooth está conectado e em uso, o rádio vai se revezando - um instante para o controle, um instante para o
+Wi-Fi -, então sobra menos tempo para o Wi-Fi e ele fica mais lento. Você percebe isso principalmente num
+download grande da *Loja* (seção 3.13) ou numa atualização (seção 3.12), que passam a demorar bem mais. Por
+isso, antes de um download grande, desligue o controle segurando o botão PS dele por uns 10 segundos, ou use um
+controle USB enquanto isso; assim o Wi-Fi fica com o rádio só para ele. O AutoBleem já avisa o Wi-Fi quando há
+um controle conectado, para que os dois dividam melhor o rádio. Isso ajuda bastante, mas não consegue acabar com
+o efeito, porque continua havendo um rádio só.
+
 **O assistente de controles.** Use quando um controle não faz nada no AutoBleem ou está com os botões nos lugares
 errados. Ele mostra o controle conectado do jeito que ele realmente é (cada eixo, botão e direcional como números)
 e um desenho de DualShock que acende conforme você aperta. Como ainda não dá para confiar no controle que você está

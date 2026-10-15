@@ -1221,6 +1221,15 @@ Desde la primera pantalla, cada parte está a un botón de distancia:
 | Triangle | **About** te cuenta qué es PSC-Bios. |
 | Circle | **Back** te saca de PSC-Bios y te devuelve al lanzador. |
 
+**El WiFi y un mando Bluetooth a la vez.** En la PlayStation Classic, el WiFi y el Bluetooth pasan por una misma
+radio con una sola antena, y esa radio solo puede hacer una cosa cada vez. Mientras un mando Bluetooth está
+conectado y lo usas, la radio se va turnando - un momento para el mando, otro para el WiFi -, así que al WiFi le
+toca menos tiempo y va más lento. Donde más se nota es en una descarga grande de la *Tienda* (sección 3.13) o en
+una actualización (sección 3.12), que entonces tardan bastante más. Por eso, antes de una descarga grande, apaga
+el mando manteniendo pulsado su botón PS unos 10 segundos, o usa mientras tanto un mando USB; así el WiFi tiene
+la radio para él solo. AutoBleem ya avisa al WiFi cuando hay un mando conectado, para que los dos se repartan
+mejor la radio. Esto ayuda mucho, pero no puede eliminar el efecto, porque sigue habiendo una sola radio.
+
 **El asistente de mandos.** Úsalo cuando un mando no hace nada en AutoBleem o tiene los botones en el sitio
 equivocado. Muestra el mando conectado tal como es en realidad (cada eje, botón y cruceta como números) y un
 dibujo de un DualShock que se ilumina según pulsas. Como todavía no te puedes fiar del mando que estás probando,

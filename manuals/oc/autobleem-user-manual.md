@@ -1213,6 +1213,16 @@ Dempuèi lo primièr ecran, un boton vos mena a cada partida :
 | Triangle | **About** (a prepaus) mòstra çò qu'es PSC-Bios. |
 | Circle | **Back** (tornar) vos fa sortir de PSC-Bios e vos torna menar al lançador. |
 
+**Lo WiFi e una maneta Bluetooth a l'encòp.** Sus la PlayStation Classic, lo WiFi e lo Bluetooth passan per una
+sola e meteissa ràdio, amb una sola antena, e aquela ràdio pòt pas far qu'una causa a la fois. Tant qu'una
+maneta Bluetooth es connectada e que l'utilizatz, la ràdio alterna - un moment per la maneta, un moment pel
+WiFi -, e atal lo WiFi n'a mens per el e ven mai lent. Es subretot pendent un grand telecargament dempuèi la
+*Botiga* (seccion 3.13) o una mesa a jorn (seccion 3.12) que o remarcatz: prenon alara fòrça mai de temps. Abans
+un grand telecargament, amortatz doncas la maneta en tenent son boton PS quichat una desena de segondas, o
+prenètz una maneta USB pendent aquel temps; lo WiFi a alara la ràdio per el sol. AutoBleem avisa ja lo WiFi
+quand una maneta es connectada, per que los dos se partejan melhor la ràdio. Aquò ajuda fòrça, mas pòt pas far
+desaparéisser l'efièch, perque i a totjorn pas qu'una ràdio.
+
 **L'assistent de manetas.** Servissètz-vos-en quand una maneta fa pas res dins AutoBleem o qu'a sos botons a la
 marrida plaça. Mòstra la maneta brancada tal coma es vertadièrament (cada axe, boton e capèl en nombres) e un
 imatge de DualShock que s'aluca a mesura que quichatz. Coma la maneta qu'ensajatz es pas encara de fisança,

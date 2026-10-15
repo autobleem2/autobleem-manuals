@@ -1175,6 +1175,16 @@ De pe primul ecran, câte un buton te duce în fiecare parte:
 | Triangle | **About** arată ce este PSC-Bios. |
 | Circle | **Back** te scoate din PSC-Bios, înapoi în lansator. |
 
+**WiFi și un controler Bluetooth în același timp.** Pe PlayStation Classic, WiFi-ul și Bluetooth-ul trec prin
+același radio, cu o singură antenă, iar radioul acesta poate face un singur lucru odată. Cât timp un controler
+Bluetooth e conectat și îl folosești, radioul se împarte pe rând - o clipă pentru controler, o clipă pentru
+WiFi -, așa că WiFi-ului îi rămâne mai puțin timp și merge mai încet. Se simte cel mai tare la o descărcare mare
+din *Magazin* (secțiunea 3.13) sau la o actualizare (secțiunea 3.12), care durează atunci vizibil mai mult. De
+aceea, înainte de o descărcare mare, oprește controlerul ținând apăsat butonul PS cam 10 secunde, sau folosește
+între timp un controler USB; așa WiFi-ul are radioul doar pentru el. AutoBleem anunță deja WiFi-ul când e
+conectat un controler, ca cele două să-și împartă mai bine radioul. Asta ajută mult, dar nu poate face efectul
+să dispară, pentru că rămâne tot un singur radio.
+
 **Asistentul de mapare a controlerului.** Folosește-l când un controler nu face nimic în AutoBleem sau are butoanele
 în locuri greșite. Îți arată controlerul conectat așa cum este de fapt - fiecare axă, buton și hat, ca numere - și o
 imagine de DualShock care se aprinde pe măsură ce apeși. Pentru că controlerul pe care îl testezi nu e încă de

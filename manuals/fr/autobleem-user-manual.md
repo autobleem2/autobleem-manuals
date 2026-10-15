@@ -1227,6 +1227,17 @@ Depuis le premier écran, chaque partie s'ouvre d'un bouton :
 | Triangle | **About** présente PSC-Bios. |
 | Circle | **Back** vous fait sortir de PSC-Bios et vous ramène au lanceur. |
 
+**Le Wi-Fi et une manette Bluetooth en même temps.** Sur la PlayStation Classic, le Wi-Fi et le Bluetooth passent
+par une seule et même radio, avec une seule antenne, et cette radio ne peut faire qu'une chose à la fois. Tant
+qu'une manette Bluetooth est connectée et que vous jouez avec, la radio alterne sans cesse - un instant pour la
+manette, un instant pour le Wi-Fi -, si bien que le Wi-Fi en a moins pour lui et devient plus lent. C'est surtout
+lors d'un gros téléchargement depuis la *Boutique* (section 3.13) ou d'une mise à jour (section 3.12) que vous
+le remarquez : ils prennent alors nettement plus de temps. Avant un gros téléchargement, éteignez donc la manette
+en maintenant son bouton PS enfoncé une dizaine de secondes, ou prenez une manette USB le temps qu'il faut ; le
+Wi-Fi a alors la radio pour lui seul. AutoBleem prévient déjà le Wi-Fi quand une manette est connectée, pour que
+les deux se partagent mieux la radio. Cela aide beaucoup, mais ne peut pas faire disparaître l'effet, puisqu'il
+n'y a toujours qu'une seule radio.
+
 **L'assistant de configuration des manettes.** Servez-vous-en quand une manette ne fait rien dans AutoBleem ou que ses
 boutons ne sont pas au bon endroit. Il montre la manette branchée telle qu'elle est réellement - chaque axe, chaque
 bouton et chaque chapeau sous forme de numéros - ainsi qu'une image de DualShock qui s'allume au fil de vos appuis.
