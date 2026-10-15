@@ -1161,6 +1161,16 @@ kullanılır. Kumanda sihirbazı her yerde çalışır.
 | Triangle | **About** PSC-Bios'un ne olduğunu gösterir. |
 | Circle | **Back** sizi PSC-Bios'tan çıkarıp başlatıcıya döndürür. |
 
+**Wi-Fi ve Bluetooth kumanda aynı anda.** PlayStation Classic'te Wi-Fi ile Bluetooth tek bir radyoyu ve tek bir
+anteni paylaşır; bu radyo da aynı anda yalnızca bir iş yapabilir. Bir Bluetooth kumanda bağlı olduğu ve
+kullanıldığı sürece radyo sırayla çalışır - bir an kumandaya, bir an Wi-Fi'ye - bu yüzden Wi-Fi'ye daha az zaman
+kalır ve yavaşlar. Bunu en çok *Mağaza*'dan büyük bir indirme yaparken (bölüm 3.13) ya da bir güncelleme
+sırasında (bölüm 3.12) fark edersiniz; bunlar o zaman belirgin şekilde daha uzun sürer. Bu nedenle büyük bir
+indirmeden önce kumandanın PS düğmesini yaklaşık 10 saniye basılı tutarak onu kapatın ya da o süre boyunca USB
+kumanda kullanın; böylece radyo yalnızca Wi-Fi'nin olur. AutoBleem, bir kumanda bağlandığında bunu Wi-Fi'ye
+zaten bildirir, böylece ikisi radyoyu daha iyi paylaşır. Bu çok işe yarar, ancak yavaşlamayı tamamen ortadan
+kaldıramaz, çünkü radyo hâlâ tek.
+
 **Kumanda sihirbazı.** Bir kumanda AutoBleem'de hiçbir şey yapmıyorsa ya da düğmeleri yanlış yerdeyse bunu kullanın.
 Sihirbaz bağlı kumandayı gerçekte olduğu gibi - her ekseni, düğmeyi ve yön tuşunu sayılar hâlinde - ve siz bastıkça
 yanan bir DualShock resmi gösterir. Denediğiniz kumandaya henüz güvenilemeyeceği için sihirbazı konsolun **öndeki

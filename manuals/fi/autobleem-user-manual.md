@@ -1178,6 +1178,15 @@ Ensimmäisestä näkymästä pääset jokaiseen osaan yhdellä painikkeella:
 | Triangle | **About** kertoo, mikä PSC-Bios on. |
 | Circle | **Back** vie sinut pois PSC-Biosista takaisin käynnistäjään. |
 
+**Wi-Fi ja Bluetooth-ohjain yhtä aikaa.** PlayStation Classicissa Wi-Fi ja Bluetooth kulkevat saman radion ja
+saman antennin kautta, ja radio pystyy tekemään vain yhden asian kerrallaan. Niin kauan kuin Bluetooth-ohjain on
+yhdistettynä ja käytössä, radio vuorottelee - hetken ohjaimelle, hetken Wi-Fille - joten Wi-Fi saa vähemmän
+aikaa ja hidastuu. Eniten sen huomaat, kun lataat jotain suurta *Kaupasta* (osio 3.13) tai päivität (osio
+3.12): ne kestävät silloin selvästi pidempään. Sammuta siksi ohjain ennen suurta latausta pitämällä sen
+PS-painiketta pohjassa noin 10 sekuntia, tai käytä sen ajan USB-ohjainta; silloin Wi-Fi saa radion itselleen.
+AutoBleem kertoo jo Wi-Fille, kun ohjain on yhdistettynä, jotta Wi-Fi ja Bluetooth jakaisivat radion paremmin.
+Se auttaa paljon, mutta hidastumista se ei voi kokonaan poistaa, koska radioita on edelleen vain yksi.
+
 **Ohjainvelho.** Käytä sitä, kun ohjain ei tee AutoBleemissa mitään tai sen painikkeet ovat väärissä paikoissa.
 Velho näyttää kytketyn ohjaimen sellaisena kuin se oikeasti on – jokaisen akselin, painikkeen ja hatun numeroina – ja
 DualShock-kuvan, joka syttyy painaessasi. Koska testattavaan ohjaimeen ei vielä voi luottaa, velhoa ohjataan
