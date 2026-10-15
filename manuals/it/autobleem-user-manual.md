@@ -265,7 +265,7 @@ primo gioco.
 scansione, il nome del set appena scelto (*Sto mostrando: ...*), un controller con la batteria quasi scarica, un
 avviso dopo un crash, un processore di scansione al lavoro e un download dallo Store. La bolla di un download mostra
 la velocità e il tempo rimanente, per esempio `1.4 MB/s · 0:42`. Per quanto tempo restano a schermo le bolle
-informative lo decidi tu: Opzioni → *Durata avviso*.
+informative lo decidi tu: Opzioni → *Durata avviso:*.
 
 **Le batterie dei controller.** Sulla console, su un Raspberry Pi e sulla chiavetta PC (non su Windows), ogni
 controller wireless che comunica lo stato della batteria compare come una piccola icona con la percentuale, su una
@@ -776,8 +776,8 @@ i giochi messi alla rinfusa direttamente in `Games/` vengono sistemati dalla sca
 anno, numero di giocatori e regione dal database PlayStation di RetroArch o dai database delle copertine. Se vuoi una
 copertina tua, metti un PNG o un JPEG accanto all'immagine del gioco, con lo stesso nome. Altrimenti la copertina
 arriva dai database delle copertine o, con RetroArch installato, dalla raccolta di miniature di libretro; su un
-Raspberry Pi, un PC o Windows una copertina mancante viene scaricata online (Opzioni → *Scarica copertine online*). Se
-la scansione sbaglia qualcosa, correggilo nell'editor del gioco e attiva *Blocca dati*, così la scansione successiva
+Raspberry Pi, un PC o Windows una copertina mancante viene scaricata online (Opzioni → *Scarica copertine online:*). Se
+la scansione sbaglia qualcosa, correggilo nell'editor del gioco e attiva *Blocca dati:*, così la scansione successiva
 mantiene la tua modifica.
 
 **I giochi di altri sistemi** vanno in `RetroArch/roms/`, **una cartella per sistema, con il nome che gli danno i
@@ -1247,7 +1247,7 @@ chiavetta. Finiscono in `System/Logs/` sulla chiavetta, sulla scheda o nella car
 andato storto: quando il launcher, un gioco PS1 o RetroArch va in crash, i log vengono salvati in
 `System/Logs/crash-<n>/` (si tengono gli ultimi tre crash), e il launcher te lo dice una volta quando torna. Se stai
 dando la caccia a un problema che non è un crash, conserva tutti i log: attiva Opzioni → *Diagnostica* → *Conserva i
-log sulla chiavetta* (vale dall'avvio successivo), oppure crea da un PC un file vuoto `System/Logs/keep`. Anche
+log sulla chiavetta:* (vale dall'avvio successivo), oppure crea da un PC un file vuoto `System/Logs/keep`. Anche
 *Informazioni hardware* (sezione 4.2) mostra dove sono i log, e lì Square salva quelli attuali in
 `System/Logs/saved-<n>/`.
 

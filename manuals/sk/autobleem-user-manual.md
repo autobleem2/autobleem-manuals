@@ -259,7 +259,7 @@ vašom priečinku AutoBleem (Windows). Karta zmizne hneď, ako skenovanie nájde
 na ktorú ste práve prepli (*Zobrazujem: ...*), o ovládači so slabou batériou, o páde programu, o práci procesora
 skenovania a o sťahovaní z Obchodu. Bublina sťahovania ukazuje rýchlosť a zostávajúci čas, napríklad
 `1.4 MB/s · 0:42`. Ako dlho zostanú informačné bubliny na obrazovke, je na vás: Možnosti → *Doba zobrazenia
-oznámenia*.
+oznámenia:*.
 
 **Batérie ovládačov.** Na konzole, Raspberry Pi a PC kľúči (nie vo Windows) sa každý bezdrôtový ovládač, ktorý
 hlási stav batérie, zobrazí ako malá ikona s percentami na vlastnej doštičke; doštičky sa radia pod seba od
@@ -759,8 +759,8 @@ priečinka `Game`. Aj hry nahrané rovno do `Games/` ako voľné súbory skenova
 alebo z databáz obalov si vezme názov, vydavateľa, rok, počet hráčov a región. Ak chcete vlastný obal, dajte
 vedľa obrazu hry súbor PNG alebo JPEG s rovnakým názvom. Bez neho príde obal z databáz obalov alebo, ak je
 nainštalovaný RetroArch, zo sady náhľadov libretro; na Raspberry Pi, PC alebo vo Windows sa chýbajúci obal
-stiahne online (Možnosti → *Sťahovať obaly online*). Ak skenovanie niečo popletie, opravte to v editore hry
-a zapnite *Uzamknúť zmeny*, aby ďalšie skenovanie vašu zmenu zachovalo.
+stiahne online (Možnosti → *Sťahovať obaly online:*). Ak skenovanie niečo popletie, opravte to v editore hry
+a zapnite *Uzamknúť zmeny:*, aby ďalšie skenovanie vašu zmenu zachovalo.
 
 **Hry iných systémov** patria do `RetroArch/roms/`, **každý systém do vlastného priečinka pomenovaného tak, ako ho
 pomenúvajú databázy RetroArch** - napríklad `Nintendo - Nintendo Entertainment System`, `Nintendo - Super
@@ -1217,7 +1217,7 @@ a potom, čo robiť. Ak budete potrebovať pomoc, ako prvé od vás budú chcie�
 `System/Logs/` na kľúči, karte alebo v dátovom priečinku sa dostanú iba vtedy, keď sa niečo pokazilo: keď spadne
 spúšťač, hra z PS1 alebo RetroArch, logy sa uložia do `System/Logs/crash-<n>/` (uchovávajú sa posledné tri pády)
 a spúšťač vám to po návrate raz oznámi. Ak pátrate po probléme, ktorý nie je pádom, uchovávajte všetky logy:
-zapnite Možnosti → *Diagnostika* → *Uchovávať logy na kľúči* (platí od ďalšieho štartu), alebo z PC vytvorte
+zapnite Možnosti → *Diagnostika* → *Uchovávať logy na kľúči:* (platí od ďalšieho štartu), alebo z PC vytvorte
 prázdny súbor `System/Logs/keep`. *Informácie o hardvéri* (oddiel 4.2) tiež ukazujú, kde logy sú, a Square tam
 uloží aktuálne logy do `System/Logs/saved-<n>/`.
 

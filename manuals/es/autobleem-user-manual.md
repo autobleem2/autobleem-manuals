@@ -805,8 +805,8 @@ editorial, el año, el número de jugadores y la región de la base de datos de 
 bases de datos de carátulas. Si quieres una carátula tuya, pon un PNG o un JPEG junto a la imagen del juego, con
 el mismo nombre. Si no, la carátula sale de las bases de datos de carátulas o, con RetroArch instalado, de las
 miniaturas de libretro; en una Raspberry Pi, un PC o Windows, una carátula que falta se descarga de internet
-(Opciones → *Obtener carátulas en línea*). Si el escaneo se equivoca en algo, corrígelo en el editor de juego y
-activa *Bloquear datos*, para que el siguiente escaneo respete tu cambio.
+(Opciones → *Obtener carátulas en línea:*). Si el escaneo se equivoca en algo, corrígelo en el editor de juego y
+activa *Bloquear datos:*, para que el siguiente escaneo respete tu cambio.
 
 **Los juegos de otros sistemas** van en `RetroArch/roms/`, **una carpeta por sistema, con el nombre que le dan
 las bases de datos de RetroArch**: por ejemplo `Nintendo - Nintendo Entertainment System`, `Nintendo - Super
@@ -1297,7 +1297,7 @@ escribiendo todo el rato en la memoria USB. Solo llegan a `System/Logs/` en la m
 carpeta de datos cuando algo ha ido mal: si el lanzador, un juego de PS1 o RetroArch se cierran de forma
 inesperada, los registros se guardan en `System/Logs/crash-<n>/` (se conservan los de los tres últimos cierres),
 y el lanzador te avisa una vez cuando vuelve. Si estás persiguiendo un problema que no es un cierre inesperado,
-conserva todos los registros: activa Opciones → *Diagnóstico* → *Conservar los registros en el USB* (funciona a
+conserva todos los registros: activa Opciones → *Diagnóstico* → *Conservar los registros en el USB:* (funciona a
 partir del siguiente arranque), o crea desde un PC un archivo vacío `System/Logs/keep`. *Información de hardware*
 (sección 4.2) también te dice dónde están los registros, y Square guarda ahí los actuales en
 `System/Logs/saved-<n>/`.

@@ -783,8 +783,8 @@ pasta `Game`. Jogos jogados soltos direto em `Games/` também são separados em 
 ano, o número de jogadores e a região no banco de dados de PlayStation do RetroArch ou nos bancos de capas. Se
 quiser uma capa sua, coloque um PNG ou um JPEG ao lado da imagem do jogo, com o mesmo nome. Sem isso, a capa vem
 dos bancos de capas ou, com o RetroArch instalado, das miniaturas do libretro; em um Raspberry Pi, um PC ou no
-Windows, uma capa que falta é baixada da internet (Opções → *Buscar capas online*). Se a varredura errar alguma
-coisa, corrija no editor do jogo e ligue *Trancar dados*, para que a próxima varredura mantenha a sua correção.
+Windows, uma capa que falta é baixada da internet (Opções → *Buscar capas online:*). Se a varredura errar alguma
+coisa, corrija no editor do jogo e ligue *Trancar dados:*, para que a próxima varredura mantenha a sua correção.
 
 **Os jogos de outros sistemas** vão em `RetroArch/roms/`, **uma pasta por sistema, com o nome que os bancos de
 dados do RetroArch dão a ele**: por exemplo `Nintendo - Nintendo Entertainment System`, `Nintendo - Super Nintendo
@@ -1260,7 +1260,7 @@ primeiro.
 tempo todo. Eles só chegam a `System/Logs/`, no pendrive, no cartão ou na pasta de dados, quando algo deu errado:
 quando o launcher, um jogo de PS1 ou o RetroArch travam, os logs são salvos em `System/Logs/crash-<n>/` (os dos três
 últimos travamentos ficam guardados), e o launcher avisa uma vez quando volta. Se você está caçando um problema que
-não é um travamento, guarde todos os logs: ligue Opções → *Diagnóstico* → *Manter os logs no pendrive* (vale a
+não é um travamento, guarde todos os logs: ligue Opções → *Diagnóstico* → *Manter os logs no pendrive:* (vale a
 partir da próxima inicialização), ou crie pelo PC um arquivo vazio `System/Logs/keep`. *Informações de hardware*
 (seção 4.2) também mostra onde ficam os logs, e Square ali salva os atuais em `System/Logs/saved-<n>/`.
 

@@ -268,7 +268,7 @@ spelet.
 förlopp, namnet på samlingen du just bytte till (*Visar: ...*), en handkontroll med svagt batteri, en notis
 efter en krasch, en skanningsprocessor som arbetar och en nedladdning från Store. Bubblan för en nedladdning
 visar hastigheten och tiden som återstår, till exempel `1.4 MB/s · 0:42`. Hur länge informationsbubblorna
-stannar bestämmer du själv: Alternativ → *Visningstid för meddelande*.
+stannar bestämmer du själv: Alternativ → *Visningstid för meddelande:*.
 
 **Batterier i handkontrollerna.** På konsolen, en Raspberry Pi och PC-minnet (inte i Windows) visas varje
 trådlös handkontroll som rapporterar sitt batteri som en liten ikon med procenttal, på en egen platta, staplade
@@ -779,8 +779,8 @@ Spel som du lägger som lösa filer direkt i `Games/` sorterar skanningen också
 år, antal spelare och region från RetroArchs PlayStation-databas eller från omslagsdatabaserna. Vill du ha ett
 eget omslag lägger du en PNG- eller JPEG-bild bredvid spelets avbild, med samma namn. Annars kommer omslaget
 från omslagsdatabaserna eller, med RetroArch installerat, från libretros samling av miniatyrbilder; på en
-Raspberry Pi, en PC eller i Windows hämtas ett omslag som saknas online (Alternativ → *Hämta omslag online*). Blir
-något fel i skanningen rättar du det i spelredigeraren och slår på *Lås data*, så att nästa skanning behåller
+Raspberry Pi, en PC eller i Windows hämtas ett omslag som saknas online (Alternativ → *Hämta omslag online:*). Blir
+något fel i skanningen rättar du det i spelredigeraren och slår på *Lås data:*, så att nästa skanning behåller
 din ändring.
 
 **Spel för andra system** hamnar under `RetroArch/roms/`, **en mapp per system, med samma namn som i RetroArchs
@@ -1258,7 +1258,7 @@ kommer först.
 tiden. De hamnar i `System/Logs/` på minnet, kortet eller i datamappen bara när något har gått fel: när
 launchern, ett PS1-spel eller RetroArch kraschar sparas loggarna i `System/Logs/crash-<n>/` (de tre senaste
 krascherna sparas), och launchern säger till en gång när den är tillbaka. Jagar du ett problem som inte är en
-krasch kan du behålla alla loggar: slå på Alternativ → *Diagnostik* → *Behåll loggar på USB-minnet* (det gäller
+krasch kan du behålla alla loggar: slå på Alternativ → *Diagnostik* → *Behåll loggar på USB-minnet:* (det gäller
 från nästa start), eller skapa en tom fil `System/Logs/keep` från en dator. *Hårdvaruinformation* (avsnitt 4.2)
 visar också var loggarna ligger, och Square där sparar de aktuella i `System/Logs/saved-<n>/`.
 

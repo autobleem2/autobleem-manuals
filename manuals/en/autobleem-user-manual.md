@@ -263,7 +263,7 @@ AutoBleem folder (Windows). The card goes away as soon as a scan finds the first
 scan's progress, the name of the set you have just switched to (*Showing: ...*), a pad whose battery is low, a
 note after a crash, a scanner processor at work, and a download from the Store. A download's bubble shows its
 speed and the time left, for example `1.4 MB/s · 0:42`. How long the informational bubbles stay is up to you:
-Options → *Notification timeout*.
+Options → *Notification timeout:*.
 
 **Pad batteries.** On the console, a Raspberry Pi and the PC stick (not on Windows), every wireless pad that
 reports its battery shows as a small icon with its percentage, on its own plate, stacked down from the top-left
@@ -762,8 +762,8 @@ dropped straight into `Games/` as loose files are sorted into folders of their o
 publisher, the year, the number of players and the region from RetroArch's PlayStation database or from the cover
 databases. If you want your own cover, put a PNG or JPEG next to the game's image, with the same name. Without one,
 the box art comes from the cover databases or, with RetroArch installed, from libretro's thumbnail set; on a
-Raspberry Pi, a PC or Windows a missing cover is fetched online (Options → *Fetch box art online*). If the scan
-gets something wrong, correct it in the game editor and switch on *Lock data*, so the next scan keeps your change.
+Raspberry Pi, a PC or Windows a missing cover is fetched online (Options → *Fetch box art online:*). If the scan
+gets something wrong, correct it in the game editor and switch on *Lock data:*, so the next scan keeps your change.
 
 **Other systems' games** go under `RetroArch/roms/`, **one folder per system, named the way RetroArch's databases
 name it** - for example `Nintendo - Nintendo Entertainment System`, `Nintendo - Super Nintendo Entertainment
@@ -1225,7 +1225,7 @@ to do. If you need to ask for help, the logs are the first thing anyone will ask
 the time. They reach `System/Logs/` on the stick, the card or the data folder only when something went wrong:
 when the launcher, a PS1 game or RetroArch crashes, the logs are saved to `System/Logs/crash-<n>/` (the last
 three crashes are kept), and the launcher tells you once when it comes back. If you are chasing a problem that
-is not a crash, keep every log: switch on Options → *Diagnostics* → *Keep logs on the stick* (it works from the
+is not a crash, keep every log: switch on Options → *Diagnostics* → *Keep logs on the stick:* (it works from the
 next start), or create an empty file `System/Logs/keep` from a PC. *Hardware Information* (section 4.2) also
 shows where the logs are, and Square there saves the current ones to `System/Logs/saved-<n>/`.
 

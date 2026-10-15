@@ -281,7 +281,7 @@ qu'une analyse trouve un premier jeu.
 progression de l'analyse, le nom de la liste que vous venez d'afficher (*Affichage : ...*), une manette dont la
 batterie faiblit, un message après un plantage, un processeur d'analyse au travail, un téléchargement depuis la
 Boutique. La bulle d'un téléchargement montre sa vitesse et le temps restant, par exemple `1.4 MB/s · 0:42`. La durée
-d'affichage des bulles d'information, c'est vous qui la choisissez : Options → *Durée de l'annonce*.
+d'affichage des bulles d'information, c'est vous qui la choisissez : Options → *Durée de l'annonce :*.
 
 **Les batteries des manettes.** Sur la console, un Raspberry Pi et la clé PC (pas sous Windows), chaque manette sans
 fil qui indique le niveau de sa batterie apparaît sous forme d'une petite icône avec son pourcentage, sur sa propre
@@ -810,8 +810,8 @@ titre, l'éditeur, l'année, le nombre de joueurs et la région dans la base de 
 les bases de jaquettes. Si vous voulez votre propre jaquette, placez une image PNG ou JPEG à côté de l'image du jeu,
 sous le même nom. À défaut, la jaquette vient des bases de jaquettes ou, si RetroArch est installé, de la collection de
 vignettes de libretro ; sur un Raspberry Pi, un PC ou Windows, une jaquette manquante est récupérée en ligne
-(Options → *Récupérer les jaquettes en ligne*). Si l'analyse se trompe, corrigez dans l'éditeur de jeu et activez
-*Verrouiller les données*, pour que l'analyse suivante respecte votre correction.
+(Options → *Récupérer les jaquettes en ligne :*). Si l'analyse se trompe, corrigez dans l'éditeur de jeu et activez
+*Verrouiller les données :*, pour que l'analyse suivante respecte votre correction.
 
 **Les jeux des autres systèmes** vont dans `RetroArch/roms/`, **un dossier par système, nommé comme dans les bases de
 données de RetroArch** - par exemple `Nintendo - Nintendo Entertainment System`, `Nintendo - Super Nintendo
@@ -1306,7 +1306,7 @@ sur la clé. Ils ne sont copiés dans `System/Logs/`, sur la clé, la carte ou l
 s'est mal passé : quand le lanceur, un jeu PS1 ou RetroArch plante, les journaux sont enregistrés dans
 `System/Logs/crash-<n>/` (les trois derniers plantages sont conservés), et le lanceur vous le signale une fois à son
 retour. Si vous traquez un problème qui n'est pas un plantage, gardez tous les journaux : activez Options →
-*Diagnostic* → *Garder les journaux sur la clé* (effectif à partir du démarrage suivant), ou créez depuis un PC un
+*Diagnostic* → *Garder les journaux sur la clé :* (effectif à partir du démarrage suivant), ou créez depuis un PC un
 fichier vide `System/Logs/keep`. La page *Informations matérielles* (section 4.2) indique aussi où se trouvent les
 journaux, et Square y enregistre ceux du moment dans `System/Logs/saved-<n>/`.
 

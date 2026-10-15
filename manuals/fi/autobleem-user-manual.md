@@ -264,7 +264,7 @@ AutoBleem-kansiossasi (Windows). Kortti katoaa heti, kun skannaus löytää ensi
 sen sarjan nimi, johon juuri vaihdoit (*Näytetään: ...*), ohjain, jonka akku on vähissä, huomautus kaatumisen
 jälkeen, työssä oleva skannauksen prosessori ja Kaupan lataus. Latauksen kupla näyttää nopeuden ja jäljellä olevan
 ajan, esimerkiksi `1.4 MB/s · 0:42`. Sen, kuinka kauan tiedottavat kuplat pysyvät näkyvissä, päätät itse:
-Vaihtoehdot → *Ilmoituksen näyttöaika*.
+Vaihtoehdot → *Ilmoituksen näyttöaika:*.
 
 **Ohjainten akut.** Konsolilla, Raspberry Pillä ja PC-tikulla (ei Windowsissa) jokainen langaton ohjain, joka
 ilmoittaa akkunsa varaustason, näkyy pienenä kuvakkeena prosenttilukemineen omalla laatallaan. Laatat pinoutuvat
@@ -777,8 +777,8 @@ Suoraan `Games/`-kansioon irrallisina tiedostoina pudotetut pelit skannaus lajit
 pelaajamäärän ja alueen RetroArchin PlayStation-tietokannasta tai kansitietokannoista. Jos haluat oman kannen, laita
 PNG- tai JPEG-kuva pelin levykuvan viereen samalla nimellä. Muuten kansikuva tulee kansitietokannoista tai, jos
 RetroArch on asennettu, libreton pikkukuvakokoelmasta; Raspberry Pissä, PC:llä ja Windowsissa puuttuva kansi
-haetaan verkosta (Vaihtoehdot → *Hae kansikuvat verkosta*). Jos skannaus tekee virheen, korjaa se pelin
-muokkaimessa ja kytke päälle *Lukitse data*, jotta seuraava skannaus säilyttää muutoksesi.
+haetaan verkosta (Vaihtoehdot → *Hae kansikuvat verkosta:*). Jos skannaus tekee virheen, korjaa se pelin
+muokkaimessa ja kytke päälle *Lukitse data:*, jotta seuraava skannaus säilyttää muutoksesi.
 
 **Muiden laitteiden pelit** menevät kansioon `RetroArch/roms/`, **jokaiselle laitteelle oma kansio, joka on
 nimetty samoin kuin RetroArchin tietokannoissa** – esimerkiksi `Nintendo - Nintendo Entertainment System`,
@@ -1252,7 +1252,7 @@ käy, ja sitten, mitä tehdä. Jos joudut kysymään apua, lokeja pyydetään en
 Kansioon `System/Logs/` tikulla, kortilla tai datakansiossa ne päätyvät vain, kun jokin meni pieleen: kun
 käynnistäjä, PS1-peli tai RetroArch kaatuu, lokit tallennetaan kansioon `System/Logs/crash-<n>/` (kolme viimeisintä
 kaatumista säilytetään), ja käynnistäjä kertoo siitä kerran palatessaan. Jos selvität ongelmaa, joka ei ole
-kaatuminen, säilytä kaikki lokit: kytke päälle Vaihtoehdot → *Vianmääritys* → *Säilytä lokit tikulla* (toimii
+kaatuminen, säilytä kaikki lokit: kytke päälle Vaihtoehdot → *Vianmääritys* → *Säilytä lokit tikulla:* (toimii
 seuraavasta käynnistyksestä alkaen) tai luo PC:llä tyhjä tiedosto `System/Logs/keep`. Myös *Laitteistotiedot*
 (osio 4.2) näyttää, missä lokit ovat, ja Square tallentaa siellä nykyiset lokit kansioon `System/Logs/saved-<n>/`.
 

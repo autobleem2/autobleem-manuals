@@ -264,7 +264,7 @@ AutoBleem (Windows). Cartea dispare de îndată ce o scanare găsește primul jo
 setului pe care tocmai ai trecut (*Se arată: ...*), un controler cu bateria aproape descărcată, o notă după o
 cădere a programului, un procesor de scanare la lucru și o descărcare din Magazin. Bula unei descărcări arată
 viteza și timpul rămas, de exemplu `1.4 MB/s · 0:42`. Cât timp rămân pe ecran bulele informative hotărăști tu:
-Opțiuni → *Durata anunțului*.
+Opțiuni → *Durata anunțului:*.
 
 **Bateriile controlerelor.** Pe consolă, pe Raspberry Pi și pe stick-ul pentru PC (nu și pe Windows), fiecare
 controler fără fir care își raportează bateria apare ca o mică pictogramă cu procentul, pe o plăcuță proprie;
@@ -775,8 +775,8 @@ folder `Game`. Și jocurile puse direct în `Games/` ca fișiere libere sunt mut
 anul, numărul de jucători și regiunea din baza de date PlayStation a RetroArch sau din bazele de date cu coperți.
 Dacă vrei o copertă a ta, pune un PNG sau un JPEG lângă imaginea jocului, cu același nume. Fără ea, coperta vine din
 bazele de date cu coperți sau, cu RetroArch instalat, din setul de miniaturi libretro; pe un Raspberry Pi, pe un PC
-sau pe Windows, o copertă lipsă e descărcată online (Opțiuni → *Preia coperțile online*). Dacă scanarea greșește
-ceva, corectează în editorul de joc și pornește *Blochează datele*, ca următoarea scanare să-ți păstreze
+sau pe Windows, o copertă lipsă e descărcată online (Opțiuni → *Preia coperțile online:*). Dacă scanarea greșește
+ceva, corectează în editorul de joc și pornește *Blochează datele:*, ca următoarea scanare să-ți păstreze
 modificarea.
 
 **Jocurile altor sisteme** merg în `RetroArch/roms/`, **câte un folder pentru fiecare sistem, numit cum îl numesc
@@ -1248,7 +1248,7 @@ primele.
 Ajung în `System/Logs/` pe stick, pe card sau în folderul de date doar când ceva n-a mers: când lansatorul, un joc
 PS1 sau RetroArch se blochează și se închide, jurnalele sunt salvate în `System/Logs/crash-<n>/` (se păstrează
 ultimele trei căderi), iar lansatorul îți spune o dată, când revine. Dacă urmărești o problemă care nu e o cădere,
-păstrează toate jurnalele: pornește Opțiuni → *Diagnosticare* → *Păstrează jurnalele pe stick* (are efect de la
+păstrează toate jurnalele: pornește Opțiuni → *Diagnosticare* → *Păstrează jurnalele pe stick:* (are efect de la
 următoarea pornire) sau creează de pe un PC un fișier gol `System/Logs/keep`. *Informatii hardware* (secțiunea 4.2)
 arată și el unde sunt jurnalele, iar Square acolo salvează jurnalele curente în `System/Logs/saved-<n>/`.
 

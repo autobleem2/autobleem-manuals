@@ -271,7 +271,7 @@ SD-kaart (Raspberry Pi) of in je AutoBleem-map (Windows). Zodra een scan de eers
 scan, de naam van de set waar je net naartoe bent gegaan (*Toont: ...*), een controller met een bijna lege batterij,
 een bericht na een crash, een scanprocessor die aan het werk is, en een download uit de Store. De bubbel van een
 download toont de snelheid en de resterende tijd, bijvoorbeeld `1.4 MB/s · 0:42`. Hoe lang de informatieve bubbels
-blijven staan, bepaal je zelf: Opties → *Weergavetijd melding*.
+blijven staan, bepaal je zelf: Opties → *Weergavetijd melding:*.
 
 **Batterijen van controllers.** Op de console, een Raspberry Pi en de pc-stick (niet op Windows) verschijnt elke
 draadloze controller die zijn batterijstand doorgeeft als een klein pictogram met het percentage, op een eigen
@@ -793,8 +793,8 @@ Games die je als losse bestanden direct in `Games/` zet, krijgen van de scan ook
 jaar, het aantal spelers en de regio uit de PlayStation-database van RetroArch of uit de cover databases. Wil je een
 eigen hoesje, zet dan een PNG of JPEG met dezelfde naam naast het image van de game. Zonder eigen hoesje komt het
 artwork uit de cover databases of, met RetroArch geïnstalleerd, uit de thumbnailset van libretro; op een Raspberry Pi,
-een pc of Windows wordt een ontbrekend hoesje online opgehaald (Opties → *Hoesjes online ophalen*). Doet de scan iets
-verkeerd, verbeter het dan in de game-editor en zet *Gegevens vergrendelen* aan, zodat de volgende scan je wijziging
+een pc of Windows wordt een ontbrekend hoesje online opgehaald (Opties → *Hoesjes online ophalen:*). Doet de scan iets
+verkeerd, verbeter het dan in de game-editor en zet *Gegevens vergrendelen:* aan, zodat de volgende scan je wijziging
 laat staan.
 
 **Games van andere systemen** horen onder `RetroArch/roms/`, **één map per systeem, met de naam die de databases van
@@ -1272,7 +1272,7 @@ tijd naar de stick geschreven wordt. Ze komen pas in `System/Logs/` op de stick,
 iets misging: crasht de launcher, een PS1-game of RetroArch, dan worden de logbestanden bewaard in
 `System/Logs/crash-<n>/` (de laatste drie crashes worden bewaard), en de launcher meldt het één keer als hij terug is.
 Zit je achter een probleem aan dat geen crash is, bewaar dan alle logbestanden: zet Opties → *Diagnose* →
-*Logbestanden op de stick bewaren* aan (werkt vanaf de volgende start), of maak vanaf een pc een leeg bestand
+*Logbestanden op de stick bewaren:* aan (werkt vanaf de volgende start), of maak vanaf een pc een leeg bestand
 `System/Logs/keep`. *Hardware-informatie* (sectie 4.2) laat ook zien waar de logbestanden staan, en Square bewaart daar
 de huidige in `System/Logs/saved-<n>/`.
 

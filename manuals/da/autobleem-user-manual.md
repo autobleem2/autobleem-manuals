@@ -262,7 +262,7 @@ AutoBleem-mappe (Windows). Kortet forsvinder, så snart en scanning finder det f
 navnet på det sæt, du lige har skiftet til (*Viser: ...*), en controller med lavt batteri, en besked efter et nedbrud,
 en scanningsprocessor i arbejde og en download fra Store. Boblen for en download viser hastigheden og den resterende
 tid, for eksempel `1.4 MB/s · 0:42`. Hvor længe de informerende bobler bliver stående, bestemmer du selv:
-Indstillinger → *Visningstid for besked*.
+Indstillinger → *Visningstid for besked:*.
 
 **Controllernes batterier.** På konsollen, en Raspberry Pi og pc-nøglen (ikke på Windows) vises hver trådløs
 controller, der oplyser sit batteriniveau, som et lille ikon med procenttallet på sin egen plade, stablet nedad fra
@@ -760,8 +760,8 @@ Spil, der lægges direkte i `Games/` som løse filer, får også hver deres mapp
 spillere og region fra RetroArchs PlayStation-database eller fra cover-databaserne. Vil du have dit eget omslag, så
 læg en PNG eller JPEG med samme navn ved siden af spillets billedfil. Uden et kommer omslaget fra cover-databaserne
 eller, med RetroArch installeret, fra libretros samling af miniaturer; på en Raspberry Pi, en pc eller Windows hentes
-et manglende omslag online (Indstillinger → *Hent covers online*). Tager scanningen fejl, så ret det i spileditoren,
-og slå *Lås data* til, så næste scanning beholder din ændring.
+et manglende omslag online (Indstillinger → *Hent covers online:*). Tager scanningen fejl, så ret det i spileditoren,
+og slå *Lås data:* til, så næste scanning beholder din ændring.
 
 **Spil fra andre systemer** skal under `RetroArch/roms/`, **én mappe pr. system, navngivet sådan som RetroArchs
 databaser navngiver det** - for eksempel `Nintendo - Nintendo Entertainment System`, `Nintendo - Super Nintendo
@@ -1219,7 +1219,7 @@ først.
 bliver skrevet til nøglen. De havner først i `System/Logs/` på nøglen, kortet eller i datamappen, når noget er gået
 galt: Går launcheren, et PS1-spil eller RetroArch ned, gemmes logfilerne i `System/Logs/crash-<n>/` (de seneste tre
 nedbrud gemmes), og launcheren siger det én gang, når den er tilbage. Er du på jagt efter et problem, der ikke er et
-nedbrud, så behold alle logfiler: Slå Indstillinger → *Diagnostik* → *Behold logfiler på USB-nøglen* til (det virker
+nedbrud, så behold alle logfiler: Slå Indstillinger → *Diagnostik* → *Behold logfiler på USB-nøglen:* til (det virker
 fra næste opstart), eller opret en tom fil `System/Logs/keep` fra en pc. *Hardwareinformation* (afsnit 4.2) viser også,
 hvor logfilerne ligger, og Square dér gemmer de aktuelle i `System/Logs/saved-<n>/`.
 
