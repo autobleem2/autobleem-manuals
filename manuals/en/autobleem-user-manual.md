@@ -1154,6 +1154,15 @@ From the first screen, one button takes you to each part:
 | Triangle | **About** shows what PSC-Bios is. |
 | Circle | **Back** takes you out of PSC-Bios, back to the launcher. |
 
+**Wi-Fi and a Bluetooth pad at the same time.** On the PlayStation Classic, Wi-Fi and Bluetooth go through one
+radio with one antenna, and that radio can only do one thing at a time. While a Bluetooth pad is connected and
+in use, the radio takes turns - a moment for the pad, a moment for the Wi-Fi - so the Wi-Fi gets less of it and
+becomes slower. You notice it most during a big download from the *Store* (section 3.13) or an update (section
+3.12), which then take clearly longer. So before a large download, switch the pad off by holding its PS button
+for about 10 seconds, or use a USB pad for that time; the Wi-Fi then has the radio to itself. AutoBleem already
+tells the Wi-Fi when a pad is connected, so that the two share the radio better. This helps a lot, but it cannot
+remove the effect, because there is still only one radio.
+
 **The gamepad wizard.** Use it when a pad does nothing in AutoBleem or has its buttons in the wrong places. It
 shows the connected pad as it really is - every axis, button and hat as numbers - and a DualShock picture that
 lights up as you press. Because the pad you are testing cannot be trusted yet, you drive the wizard with the
