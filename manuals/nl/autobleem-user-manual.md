@@ -620,19 +620,25 @@ pauzeert achter het menu, met het laatste beeld op de achtergrond. Houd je de me
 dat hetzelfde als Reset: je verlaat de game. Het menu heeft drie tabbladen, en met L1 en R1 wissel je ertussen. Het
 onthoudt waar je was, dus de volgende keer opent het op hetzelfde tabblad en dezelfde regel.
 
-- Het tabblad **Game** gaat over de game zelf. *Hervatten* sluit het menu en je speelt verder. Onder *Saves* legt
-  *Quick save* het moment vast waarin je zit, en *Quick load* haalt het terug. *Load autosave* brengt je terug naar
-  hoe de game er tot 30 seconden geleden voor stond - de emulator houdt die kopie tijdens het spelen in het geheugen,
-  en zo red je jezelf uit een fout die je niet ongedaan kunt maken. Onder *CD disc* is *Change disc* voor een game op
-  meerdere schijven als hij om de volgende vraagt, en *Reset game* begint de game opnieuw. *Save settings for this
-  game* bewaart de instellingen die je voor deze ene game hebt gekozen (sectie 3.7). *PCSX menu* opent de eigen
-  pagina's van PCSX-ReARMed, met zijn opties, cheats en About, en *Exit* brengt je terug naar AutoBleem.
-- Op het tabblad **Beeld** verander je hoe de game eruitziet terwijl je kijkt: *Beeld*, *Resolutie* (1x of 2x),
-  *Naden verwijderen*, *Dithering*, *Scaling*, *Vloeiend maken*, *Filter*, *Scanlines* en *Helderheid scanlines*.
-  Het zijn dezelfde instellingen als in de game-editor (sectie 3.7), en bij elke regel staat rechts een hulpregel die
-  zegt wat hij doet. *Beeld* is de resolutie van het scherm; op de console kies je die in Opties, en hier wordt hij
-  alleen getoond. Het filter CRT-Pi is te zwaar voor de console op 1080p. Een regel die niet van toepassing is, is
-  grijs, en zijn hulpregel vertelt je waarom.
+- Het tabblad **Spel** gaat over de game zelf. *Verder spelen* sluit het menu en je speelt verder. Onder *Opslagen*
+  legt *Snel opslaan* het moment vast waarin je zit, en *Snel laden* haalt het terug. *Automatische opslag laden*
+  brengt je terug naar hoe de game er tot 30 seconden geleden voor stond - de emulator houdt die kopie tijdens het
+  spelen in het geheugen, en zo red je jezelf uit een fout die je niet ongedaan kunt maken. Onder *Cd* is *Disc
+  wisselen* voor een game op meerdere schijven als hij om de volgende vraagt, en *Spel resetten* begint de game
+  opnieuw. *Instellingen voor dit spel opslaan* bewaart de instellingen die je voor deze ene game hebt gekozen
+  (sectie 3.7). *PCSX-menu* opent de eigen pagina's van PCSX-ReARMed, met zijn opties, cheats en About, en
+  *Afsluiten* brengt je terug naar AutoBleem.
+- Op het tabblad **Beeld** verander je hoe de game eruitziet terwijl je kijkt: *Scherm*, *Resolutie* (1x of 2x),
+  *Naden verwijderen*, *Dithering*, *Schalen*, *Schermhalo*, *Verzachten*, *Filter*, *CRT-masker*, *Scanlines* en
+  *Helderheid scanlines*. Het zijn dezelfde instellingen als in de game-editor (sectie 3.7), en bij elke regel staat
+  rechts een hulpregel die zegt waar hij voor dient. *Scherm* is de resolutie van het scherm; op de console kies je
+  die in Opties, en hier wordt hij alleen getoond. *Schermhalo* is er voor de donkere balken naast een 4:3-beeld
+  op een breedbeeld-tv: hij vult ze met de randen van het beeld zelf, gespiegeld en gedimd, zodat de game als het
+  ware in de balken doorloopt in plaats van tussen twee zwarte stroken te zitten. *CRT-masker* legt het
+  fosforpatroon van een oude beeldbuis over het beeld - *Apertuur* geeft de fijne strepen van een Trinitron,
+  *Sleuf* en *Delta* de stippen van andere buizen; het is er alleen met het filter CRT (raster). Het filter CRT-Pi
+  is te zwaar voor de console op 1080p. Een regel die niet van toepassing is, is grijs, en zijn hulpregel vertelt
+  je waarom.
 - Het tabblad **Controllers** bepaalt wat er in de twee poorten van de PlayStation zit, *Controller 1* en
   *Controller 2*: een gewone (digitale) controller, een analoge controller (DualShock), een lightgun of niets.
   Sommige games werken alleen met één soort controller. De wijziging gaat in zodra je teruggaat naar de game.

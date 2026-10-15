@@ -608,20 +608,26 @@ menu, con l'ultima immagine sullo sfondo. Tenere premuto il pulsante del menu pe
 gioco. Il menu ha tre schede, e L1 e R1 passano dall'una all'altra. Si ricorda dov'eri, così la volta dopo si riapre
 sulla stessa scheda e sulla stessa riga.
 
-- La scheda **Game** riguarda il gioco stesso. *Resume game* chiude il menu e ti lascia continuare. Sotto *Saves*,
-  *Quick save* fissa il momento in cui sei e *Quick load* ti ci riporta. *Load autosave* ti riporta a com'era il
-  gioco fino a 30 secondi prima - l'emulatore tiene questa copia in memoria mentre giochi, e ti salva da un errore
-  irrimediabile. Sotto *CD disc*, *Change disc* serve per un gioco su più dischi quando chiede il successivo, e
-  *Reset game* fa ricominciare il gioco. *Save settings for this game* conserva le impostazioni che hai scelto per
-  questo solo gioco (sezione 3.7). *PCSX menu* apre le pagine di PCSX-ReARMed, con le sue opzioni, i trucchi e le
-  informazioni, ed *Exit* ti riporta ad AutoBleem.
-- La scheda **Picture** ti fa cambiare l'aspetto del gioco mentre lo guardi: *Display*, *Resolution* (1x o 2x),
-  *Remove seams*, *Dithering*, *Scaling*, *Smoothing*, *Filter*, *Scanlines* e *Scanline brightness*. Sono le stesse
-  impostazioni dell'editor del gioco (sezione 3.7), e ogni riga ha sulla destra una riga di aiuto che spiega cosa fa.
-  *Display* è la risoluzione dello schermo; sulla console la scegli nelle opzioni, e qui viene solo mostrata. Il filtro
-  CRT-Pi è troppo pesante per la console a 1080p. Una riga che non si applica è in grigio, e la sua riga di aiuto ti
-  dice perché.
-- La scheda **Controllers** decide cosa è collegato alle due porte della PlayStation, *Controller 1* e *Controller 2*:
+- La scheda **Gioco** riguarda il gioco stesso. *Riprendi il gioco* chiude il menu e ti lascia continuare. Sotto
+  *Salvataggi*, *Salvataggio rapido* fissa il momento in cui sei e *Caricamento rapido* ti ci riporta. *Carica il
+  salvataggio automatico* ti riporta a com'era il gioco fino a 30 secondi prima - l'emulatore tiene questa copia in
+  memoria mentre giochi, e ti salva da un errore irrimediabile. Sotto *Disco CD*, *Cambia disco* serve per un
+  gioco su più dischi quando chiede il successivo, e *Riavvia il gioco* lo fa ricominciare da capo. *Salva le
+  impostazioni per questo gioco* conserva le impostazioni che hai scelto per questo solo gioco (sezione 3.7). *Menu
+  PCSX* apre le pagine di PCSX-ReARMed, con le sue opzioni, i trucchi e le informazioni, ed *Esci* ti riporta ad
+  AutoBleem.
+- La scheda **Immagine** ti fa cambiare l'aspetto del gioco mentre lo guardi: *Schermo*, *Risoluzione* (1x o 2x),
+  *Rimuovi le giunture*, *Dithering*, *Scalatura*, *Alone dello schermo*, *Smussatura*, *Filtro*, *Maschera CRT*,
+  *Scanline* e *Luminosità delle scanline*. Sono le stesse impostazioni dell'editor del gioco (sezione 3.7), e ogni
+  riga ha sulla destra una riga di aiuto che spiega a cosa serve. *Schermo* è la risoluzione dello schermo; sulla
+  console la scegli nelle opzioni, e qui viene solo mostrata. *Alone dello schermo* pensa alle bande scure che
+  restano ai lati di un'immagine 4:3 su un televisore largo: le riempie con i bordi stessi dell'immagine,
+  specchiati e scuriti, così il gioco sembra allargarsi dentro di esse invece di stare chiuso tra due barre nere.
+  *Maschera CRT* stende sull'immagine il disegno dei fosfori di un vecchio tubo catodico - *Apertura* dà le sottili
+  strisce di un Trinitron, *A fessura* e *Delta* i puntini di altri tubi; c'è solo con il filtro CRT (raster). Il
+  filtro CRT-Pi è troppo pesante per la console a 1080p. Una riga che non si applica è in grigio, e la sua riga di
+  aiuto ti dice perché.
+- La scheda **Controller** decide cosa è collegato alle due porte della PlayStation, *Controller 1* e *Controller 2*:
   un controller standard (digitale), un controller analogico (DualShock), una pistola o niente. Alcuni giochi
   funzionano solo con un certo tipo di controller. La modifica ha effetto quando torni al gioco.
 

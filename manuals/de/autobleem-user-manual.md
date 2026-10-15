@@ -631,20 +631,26 @@ hinter dem Menü an, mit seinem letzten Bild im Hintergrund. Hältst du die Men�
 Reset: Du verlässt das Spiel. Das Menü hat drei Reiter, zwischen denen du mit L1 und R1 wechselst. Es merkt sich,
 wo du warst, und öffnet beim nächsten Mal wieder auf demselben Reiter und in derselben Zeile.
 
-- Der Reiter **Spiel** dreht sich um das Spiel selbst. *Fortsetzen* schließt das Menü, und du spielst weiter. Unter
-  *Saves* hält *Quick save* den aktuellen Moment fest, und *Quick load* holt ihn zurück. *Load autosave* bringt
-  dich zu dem Stand, den das Spiel vor höchstens 30 Sekunden hatte - der Emulator hält diese Kopie beim Spielen im
-  Speicher, und sie rettet dich vor einem Fehler, den du sonst nicht rückgängig machen könntest. Unter *CD disc*
-  ist *Change disc* für ein Spiel auf mehreren Discs gedacht, wenn es nach der nächsten fragt, und *Reset game*
-  startet das Spiel von vorn. *Save settings for this game* speichert die Einstellungen, die du für dieses eine
-  Spiel gewählt hast (Abschnitt 3.7). *PCSX menu* öffnet die eigenen Seiten von PCSX-ReARMed mit seinen Optionen,
-  Cheats und der Info-Seite, und *Exit* bringt dich zurück zu AutoBleem.
+- Der Reiter **Spiel** dreht sich um das Spiel selbst. *Weiterspielen* schließt das Menü, und du spielst weiter.
+  Unter *Spielstände* hält *Schnellspeichern* den aktuellen Moment fest, und *Schnellladen* holt ihn zurück.
+  *Autospeicherstand laden* bringt dich zu dem Stand, den das Spiel vor höchstens 30 Sekunden hatte - der Emulator
+  hält diese Kopie beim Spielen im Speicher, und sie rettet dich vor einem Fehler, den du sonst nicht rückgängig
+  machen könntest. Unter *CD* ist *Disc wechseln* für ein Spiel auf mehreren Discs gedacht, wenn es nach der
+  nächsten fragt, und *Spiel zurücksetzen* startet das Spiel von vorn. *Einstellungen für dieses Spiel speichern*
+  merkt sich die Einstellungen, die du für dieses eine Spiel gewählt hast (Abschnitt 3.7). *PCSX-Menü* öffnet die
+  eigenen Seiten von PCSX-ReARMed mit seinen Optionen, Cheats und der Info-Seite, und *Beenden* bringt dich zurück
+  zu AutoBleem.
 - Im Reiter **Bild** änderst du, wie das Spiel aussieht, während du zuschaust: *Anzeige*, *Auflösung* (1x oder 2x),
-  *Nähte entfernen*, *Dithering*, *Scaling*, *Glättung*, *Filter*, *Scanlines* und *Scanline-Helligkeit*. Es sind
-  dieselben Einstellungen wie im Spiel-Editor (Abschnitt 3.7), und jede Zeile hat rechts einen Hilfetext, der
-  erklärt, was sie tut. *Anzeige* ist die Auflösung des Bildschirms; auf der Konsole wählst du sie in den Optionen,
-  hier wird sie nur angezeigt. Der Filter CRT-Pi ist für die Konsole bei 1080p zu aufwendig. Eine Zeile, die nicht
-  zutrifft, ist ausgegraut, und ihr Hilfetext sagt dir, warum.
+  *Nähte entfernen*, *Dithering*, *Skalierung*, *Bildschirm-Halo*, *Glättung*, *Filter*, *CRT-Maske*,
+  *Scanlines* und *Scanline-Helligkeit*. Es sind dieselben Einstellungen wie im Spiel-Editor (Abschnitt 3.7), und
+  jede Zeile hat rechts einen Hilfetext, der erklärt, was sie tut. *Anzeige* ist die Auflösung des Bildschirms;
+  auf der Konsole wählst du sie in den Optionen, hier wird sie nur angezeigt. *Bildschirm-Halo* ist für die
+  dunklen Streifen neben einem 4:3-Bild auf einem breiten Fernseher gedacht: Es füllt sie mit den Rändern des
+  Bildes selbst, gespiegelt und abgedunkelt, sodass das Spiel in sie hinein zu leuchten scheint, statt zwischen
+  zwei schwarzen Balken zu sitzen. *CRT-Maske* legt das Leuchtstoffmuster einer alten Bildröhre über das Bild -
+  die *Streifenmaske* zeigt die feinen Streifen einer Trinitron, *Schlitzmaske* und *Lochmaske* die Punkte anderer
+  Röhren; es gibt sie nur zusammen mit dem Filter CRT (raster). Der Filter CRT-Pi ist für die Konsole bei 1080p zu
+  aufwendig. Eine Zeile, die nicht zutrifft, ist ausgegraut, und ihr Hilfetext sagt dir, warum.
 - Der Reiter **Controller** legt fest, was an den beiden Anschlüssen der PlayStation steckt, *Controller 1* und
   *Controller 2*: ein normaler (digitaler) Controller, ein Analog-Controller (DualShock), eine Lightgun oder gar
   nichts. Manche Spiele funktionieren nur mit einer bestimmten Art von Controller. Die Änderung wirkt, sobald du

@@ -590,19 +590,24 @@ obrázkem v pozadí. Když tlačítko nabídky podržíte 2 sekundy, stane se to
 Nabídka má tři karty a L1 a R1 mezi nimi přepínají. Pamatuje si, kde jste byli, takže se příště otevře na stejné
 kartě a stejném řádku.
 
-- Karta **Game** se týká samotné hry. *Resume game* nabídku zavře a hrajete dál. Pod *Saves* je *Quick save*,
-  které uloží chvíli, ve které jste, a *Quick load*, které ji vrátí. *Load autosave* vás vrátí do stavu hry až
-  30 sekund nazpátek - emulátor si tuhle kopii během hraní drží v paměti a zachrání vás před chybou, kterou už
-  nejde vzít zpět. Pod *CD disc* je *Change disc* pro hru na více discích, když chce další disk, a *Reset game*
-  spustí hru znovu od začátku. *Save settings for this game* uloží nastavení, která jste pro tuhle jednu hru
-  zvolili (oddíl 3.7). *PCSX menu* otevře vlastní stránky PCSX-ReARMed s jeho možnostmi, cheaty a informacemi
-  o programu a *Exit* vás vrátí do AutoBleemu.
-- Na kartě **Picture** měníte, jak hra vypadá, a změnu hned vidíte: *Display*, *Resolution* (1x nebo 2x),
-  *Remove seams*, *Dithering*, *Scaling*, *Smoothing*, *Filter*, *Scanlines* a *Scanline brightness*. Jde
-  o stejná nastavení jako v editoru hry (oddíl 3.7) a každý řádek má vpravo řádek nápovědy, který vysvětluje, co
-  dělá. *Display* je rozlišení obrazovky; na konzoli ho volíte v Možnostech a tady je jen vidět. Filtr CRT-Pi je
-  pro konzoli při 1080p příliš náročný. Řádek, který se nehodí, je zašedlý a jeho nápověda vysvětlí proč.
-- Karta **Controllers** rozhoduje, co je zapojené do dvou portů PlayStationu, *Controller 1* a *Controller 2*:
+- Karta **Hra** se týká samotné hry. *Pokračovat ve hře* nabídku zavře a hrajete dál. Pod *Uložené pozice*
+  najdete *Rychlé uložení*, které uloží chvíli, ve které právě jste, a *Rychlé načtení*, které ji vrátí. *Načíst
+  autozáznam* vás vrátí do stavu hry až 30 sekund nazpátek - emulátor si tuhle kopii během hraní drží v paměti,
+  a tak vás zachrání před chybou, kterou už nejde vzít zpět. Pod *Disk CD* je *Vyměnit disk* pro hru na více
+  discích, když si řekne o další disk, a *Resetovat hru* spustí hru znovu od začátku. *Uložit nastavení pro tuto
+  hru* si zapamatuje nastavení, která jste zvolili pro tuhle jednu hru (oddíl 3.7). *Menu PCSX* otevře vlastní
+  stránky PCSX-ReARMed s jeho možnostmi, cheaty a informacemi o programu a *Ukončit* vás vrátí do AutoBleemu.
+- Na kartě **Obraz** měníte, jak hra vypadá, a změnu hned vidíte: *Obrazovka*, *Rozlišení* (1x nebo 2x),
+  *Odstranit švy*, *Dithering*, *Škálování*, *Halo obrazovky*, *Vyhlazování*, *Filtr*, *Maska CRT*, *Scanlines*
+  a *Jas scanlines*. Jde o stejná nastavení jako v editoru hry (oddíl 3.7) a každý řádek má vpravo řádek
+  nápovědy, který vysvětluje, k čemu je. *Obrazovka* je rozlišení obrazovky; na konzoli ho volíte v Možnostech
+  a tady je jen vidět. *Halo obrazovky* se hodí, když má obraz 4:3 na širokoúhlé televizi po stranách tmavé pruhy:
+  vyplní je okraji samotného obrazu, zrcadlenými a ztmavenými, takže hra jako by do nich prosvítala a nesedí mezi
+  dvěma černými pruhy. *Maska CRT* položí přes obraz vzor luminoforu staré obrazovky - *Apertura* dává jemné
+  pruhy Trinitronu, *Štěrbinová* a *Delta* body jiných obrazovek; nabízí se jen s filtrem CRT (raster). Filtr
+  CRT-Pi je pro konzoli při 1080p příliš náročný. Řádek, který se nehodí, je zašedlý a jeho nápověda vysvětlí
+  proč.
+- Karta **Ovladače** rozhoduje, co je zapojené do dvou portů PlayStationu, *Ovladač 1* a *Ovladač 2*:
   standardní (digitální) ovladač, analogový ovladač (DualShock), pistole, nebo nic. Některé hry fungují jen
   s jedním druhem ovladače. Změna se projeví, až se vrátíte do hry.
 

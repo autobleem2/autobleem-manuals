@@ -605,11 +605,15 @@ next time it opens on the same tab and row.
   chosen for this one game (section 3.7). *PCSX menu* opens PCSX-ReARMed's own pages, with its options, cheats
   and About, and *Exit* takes you back to AutoBleem.
 - The **Picture** tab lets you change how the game looks while you watch it: *Display*, *Resolution* (1x or 2x),
-  *Remove seams*, *Dithering*, *Scaling*, *Smoothing*, *Filter*, *Scanlines* and *Scanline brightness*. They are
-  the same settings as in the game editor (section 3.7), and every row has a help line on the right that says
-  what it does. *Display* is the screen's resolution; on the console you choose it in Options, and here it is only
-  shown. The CRT-Pi filter is too heavy for the console at 1080p. A row that does not apply is greyed out, and its
-  help line tells you why.
+  *Remove seams*, *Dithering*, *Scaling*, *Screen halo*, *Smoothing*, *Filter*, *CRT mask*, *Scanlines* and
+  *Scanline brightness*. They are the same settings as in the game editor (section 3.7), and every row has a help
+  line on the right that says what it does. *Display* is the screen's resolution; on the console you choose it in
+  Options, and here it is only shown. *Screen halo* is for the dark bands beside a 4:3 picture on a wide screen:
+  it fills them with the picture's own edges, mirrored and dimmed, so the game seems to glow out into them instead
+  of sitting between two black bars. *CRT mask* lays the pattern of an old tube's phosphors over the picture -
+  *Aperture* gives the fine stripes of a Trinitron, *Slot* and *Delta* the dots of other tubes; it is there only
+  with the CRT (raster) filter. The CRT-Pi filter is too heavy for the console at 1080p. A row that does not
+  apply is greyed out, and its help line tells you why.
 - The **Controllers** tab decides what is plugged into the PlayStation's two ports, *Controller 1* and
   *Controller 2*: a standard (digital) pad, an analog pad (DualShock), a gun, or nothing. Some games only work
   with one kind of pad. The change takes effect when you go back to the game.

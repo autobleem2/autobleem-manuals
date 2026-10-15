@@ -601,7 +601,7 @@ obrazem w tle. Przytrzymanie przycisku menu przez 2 sekundy działa jak Reset: w
 zakładki, między którymi przechodzisz L1 i R1. Zapamiętuje, gdzie byłeś, więc następnym razem otwiera się na tej
 samej zakładce i w tym samym wierszu.
 
-- Zakładka **Gra** dotyczy samej gry. *Wróć do gry* zamyka menu i pozwala grać dalej. W części *Zapis* *Szybki
+- Zakładka **Gra** dotyczy samej gry. *Wróć do gry* zamyka menu i pozwala grać dalej. W części *Zapisy* *Szybki
   zapis* zapamiętuje bieżącą chwilę, a *Szybkie wczytanie* do niej wraca. *Wczytaj autozapis* cofa grę do stanu
   sprzed najwyżej 30 sekund - emulator trzyma tę kopię w pamięci w trakcie gry, co ratuje przed błędem, którego
   nie da się cofnąć. W części *Płyta CD* *Zmień płytę* służy grom na kilku płytach, gdy gra poprosi o następną,
@@ -609,10 +609,14 @@ samej zakładce i w tym samym wierszu.
   jednej gry (punkt 3.7). *Menu PCSX* otwiera własne strony PCSX-ReARMed, z jego opcjami, kodami i informacjami o
   programie, a *Wyjdź* zabiera Cię z powrotem do AutoBleem.
 - Zakładka **Obraz** pozwala zmieniać wygląd gry na bieżąco, kiedy na nią patrzysz: *Ekran*, *Rozdzielczość* (1x
-  albo 2x), *Usuwanie szczelin*, *Dithering*, *Skalowanie*, *Wygładzanie*, *Filtr*, *Scanlines* i *Jasność
-  scanlines*. To te same ustawienia co w edytorze gry (punkt 3.7), a każdy wiersz ma po prawej opis, co robi.
-  *Ekran* to rozdzielczość ekranu; na konsoli wybierasz ją w Opcjach, a tutaj jest tylko pokazana. Filtr CRT-Pi
-  jest dla konsoli za ciężki przy 1080p. Wiersz, który nie ma zastosowania, jest wyszarzony, a jego opis mówi
+  albo 2x), *Usuwanie szczelin*, *Dithering*, *Skalowanie*, *Poświata ekranu*, *Wygładzanie*, *Filtr*, *Maska
+  CRT*, *Scanlines* i *Jasność scanlines*. To te same ustawienia co w edytorze gry (punkt 3.7), a każdy wiersz ma
+  po prawej opis, do czego służy. *Ekran* to rozdzielczość ekranu; na konsoli wybierasz ją w Opcjach, a tutaj jest
+  tylko pokazana. *Poświata ekranu* przydaje się przy ciemnych pasach po bokach obrazu 4:3 na szerokim
+  telewizorze: wypełnia je krawędziami samego obrazu, odbitymi jak w lustrze i przyciemnionymi, więc gra jakby
+  rozlewa się na boki, zamiast tkwić między dwoma czarnymi pasami. *Maska CRT* nakłada na obraz wzór luminoforu
+  starego kineskopu - *Apertura* daje drobne paski Trinitronu, a *Szczelinowa* i *Delta* kropki innych
+  kineskopów; jest dostępna tylko z filtrem CRT (raster). Filtr CRT-Pi jest dla konsoli za ciężki przy 1080p. Wiersz, który nie ma zastosowania, jest wyszarzony, a jego opis mówi
   dlaczego.
 - Zakładka **Kontrolery** decyduje, co jest podłączone do dwóch portów PlayStation, *Kontroler 1* i *Kontroler
   2*: zwykły (cyfrowy) pad, pad analogowy (DualShock), pistolet albo nic. Niektóre gry działają tylko z jednym

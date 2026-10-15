@@ -606,21 +606,26 @@ spatele meniului, cu ultima lui imagine în fundal. Dacă ții butonul de meniu 
 ca Reset: ieși din joc. Meniul are trei file, iar L1 și R1 trec de la una la alta. Își amintește unde ai rămas, așa
 că data viitoare se deschide pe aceeași filă și pe același rând.
 
-- Fila **Game** se ocupă de jocul în sine. *Resume game* închide meniul și te lasă să joci mai departe. La *Saves*,
-  *Quick save* păstrează momentul în care te afli, iar *Quick load* te aduce înapoi la el. *Load autosave* te duce
-  înapoi la starea jocului de acum cel mult 30 de secunde - emulatorul ține această copie în memorie cât joci și te
-  scapă de o greșeală pe care altfel n-ai mai putea-o repara. La *CD disc*, *Change disc* e pentru un joc pe mai
-  multe discuri, când îți cere discul următor, iar *Reset game* pornește jocul de la capăt. *Save settings for this
-  game* păstrează setările alese pentru acest joc (secțiunea 3.7). *PCSX menu* deschide paginile proprii ale
-  PCSX-ReARMed, cu opțiunile, cheat-urile și pagina About, iar *Exit* te duce înapoi în AutoBleem.
-- Fila **Picture** îți permite să schimbi cum arată jocul și să vezi imediat rezultatul: *Display*, *Resolution*
-  (1x sau 2x), *Remove seams*, *Dithering*, *Scaling*, *Smoothing*, *Filter*, *Scanlines* și *Scanline
-  brightness*. Sunt aceleași setări ca în editorul de joc (secțiunea 3.7), iar fiecare rând are în dreapta un text
-  de ajutor care spune ce face. *Display* este rezoluția ecranului; pe consolă o alegi în Opțiuni, iar aici e doar
-  afișată. Filtrul CRT-Pi e prea greu pentru consolă la 1080p. Un rând care nu se aplică e gri, iar textul lui de
-  ajutor îți spune de ce.
-- Fila **Controllers** stabilește ce e conectat la cele două porturi ale PlayStation-ului, *Controller 1* și
-  *Controller 2*: un controler standard (digital), un controler analogic (DualShock), un pistol sau nimic. Unele
+- Fila **Joc** se ocupă de jocul în sine. *Continuă jocul* închide meniul și te lasă să joci mai departe. La
+  *Salvări*, *Salvare rapidă* păstrează momentul în care te afli, iar *Încărcare rapidă* te aduce înapoi la el.
+  *Încarcă autozapis* te duce înapoi la starea jocului de acum cel mult 30 de secunde - emulatorul ține această
+  copie în memorie cât joci și te scapă de o greșeală pe care altfel n-ai mai putea-o repara. La *Disc CD*,
+  *Schimbă discul* e pentru un joc pe mai multe discuri, când îți cere discul următor, iar *Resetează jocul* îl
+  pornește de la capăt. *Salvează setările pentru acest joc* păstrează setările alese doar pentru acest joc
+  (secțiunea 3.7). *Meniu PCSX* deschide paginile proprii ale PCSX-ReARMed, cu opțiunile, cheat-urile și pagina
+  About, iar *Ieși* te duce înapoi în AutoBleem.
+- Fila **Imagine** îți permite să schimbi cum arată jocul și să vezi imediat rezultatul: *Afișaj*, *Rezoluție* (1x
+  sau 2x), *Elimină cusăturile*, *Dithering*, *Scalare*, *Halou ecran*, *Netezire*, *Filtru*, *Mască CRT*,
+  *Scanlines* și *Luminozitate scanlines*. Sunt aceleași setări ca în editorul de joc (secțiunea 3.7), iar fiecare
+  rând are în dreapta un text de ajutor care spune la ce folosește. *Afișaj* este rezoluția ecranului; pe consolă
+  o alegi în Opțiuni, iar aici e doar afișată. *Halou ecran* e pentru benzile întunecate de lângă o imagine 4:3 pe
+  un televizor lat: le umple cu marginile imaginii înseși, în oglindă și întunecate, așa că jocul pare să se
+  reverse în ele, în loc să stea înghesuit între două bare negre. *Mască CRT* pune peste imagine modelul de fosfor
+  al unui tub vechi - *Apertură* dă dungile fine ale unui Trinitron, *Fantă* și *Delta* punctele altor tuburi; o
+  găsești doar împreună cu filtrul CRT (raster). Filtrul CRT-Pi e prea greu pentru consolă la 1080p. Un rând care
+  nu se aplică e gri, iar textul lui de ajutor îți spune de ce.
+- Fila **Controlere** stabilește ce e conectat la cele două porturi ale PlayStation-ului, *Controler 1* și
+  *Controler 2*: un controler standard (digital), un controler analogic (DualShock), un pistol sau nimic. Unele
   jocuri merg doar cu un anumit fel de controler. Schimbarea are efect când te întorci în joc.
 
 Meniul e desenat în aspectul ab2.0.0 al lansatorului, așa că nu pare un alt program, și îți arată bateriile

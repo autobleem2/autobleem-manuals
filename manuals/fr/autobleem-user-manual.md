@@ -633,21 +633,27 @@ pause derrière le menu, sa dernière image restant en fond. Maintenir le bouton
 appuyer sur Reset : vous quittez le jeu. Le menu a trois onglets, que L1 et R1 permettent de parcourir. Il se souvient
 de l'endroit où vous étiez et se rouvre la fois suivante sur le même onglet et la même ligne.
 
-- L'onglet **Game** concerne le jeu lui-même. *Resume game* referme le menu et vous laisse continuer. Sous *Saves*,
-  *Quick save* enregistre l'instant présent et *Quick load* vous y ramène. *Load autosave* vous ramène à l'état du jeu
-  d'il y a 30 secondes au plus - l'émulateur garde cette copie en mémoire pendant la partie, ce qui vous sauve d'une
-  erreur irréparable. Sous *CD disc*, *Change disc* sert aux jeux sur plusieurs disques quand ils réclament le
-  suivant, et *Reset game* recommence la partie depuis le début. *Save settings for this game* conserve les réglages
-  que vous avez choisis pour ce jeu-là (section 3.7). *PCSX menu* ouvre les pages de PCSX-ReARMed lui-même, avec ses
-  options, ses codes de triche et sa page À propos, et *Exit* vous ramène à AutoBleem.
-- L'onglet **Picture** vous permet de changer l'apparence du jeu tout en le regardant : *Display*, *Resolution* (1x
-  ou 2x), *Remove seams*, *Dithering*, *Scaling*, *Smoothing*, *Filter*, *Scanlines* et *Scanline brightness*. Ce sont
-  les mêmes réglages que dans l'éditeur de jeu (section 3.7), et chaque ligne a, à droite, une ligne d'aide qui
-  explique ce qu'elle fait. *Display* est la résolution de l'écran ; sur la console, elle se choisit dans les options
-  et n'est qu'affichée ici. Le filtre CRT-Pi est trop lourd pour la console en 1080p. Une ligne qui ne s'applique pas
-  est grisée, et sa ligne d'aide vous explique pourquoi.
-- L'onglet **Controllers** décide de ce qui est branché sur les deux ports de la PlayStation, *Controller 1* et
-  *Controller 2* : une manette standard (numérique), une manette analogique (DualShock), un pistolet, ou rien du tout.
+- L'onglet **Jeu** concerne le jeu lui-même. *Reprendre le jeu* referme le menu et vous laisse continuer. Sous
+  *Sauvegardes*, *Sauvegarde rapide* enregistre l'instant présent et *Chargement rapide* vous y ramène. *Charger la
+  sauvegarde automatique* vous ramène à l'état du jeu d'il y a 30 secondes au plus - l'émulateur garde cette copie
+  en mémoire pendant la partie, ce qui vous sauve d'une erreur irréparable. Sous *Disque CD*, *Changer de disque*
+  sert aux jeux sur plusieurs disques quand ils réclament le suivant, et *Réinitialiser le jeu* recommence la
+  partie depuis le début. *Enregistrer les réglages pour ce jeu* conserve les réglages que vous avez choisis pour
+  ce jeu-là (section 3.7). *Menu PCSX* ouvre les pages de PCSX-ReARMed lui-même, avec ses options, ses codes de
+  triche et sa page À propos, et *Quitter* vous ramène à AutoBleem.
+- L'onglet **Image** vous permet de changer l'apparence du jeu tout en le regardant : *Affichage*, *Résolution* (1x
+  ou 2x), *Supprimer les coutures*, *Tramage*, *Mise à l'échelle*, *Halo d'écran*, *Lissage*, *Filtre*, *Masque
+  CRT*, *Scanlines* et *Luminosité des scanlines*. Ce sont les mêmes réglages que dans l'éditeur de jeu (section
+  3.7), et chaque ligne a, à droite, une ligne d'aide qui explique à quoi elle sert. *Affichage* est la résolution
+  de l'écran ; sur la console, elle se choisit dans les options et n'est qu'affichée ici. *Halo d'écran* s'occupe
+  des bandes sombres qui encadrent une image 4:3 sur un écran large : il les remplit avec les bords mêmes de
+  l'image, en miroir et assombris, si bien que le jeu semble déborder dans ces bandes au lieu de rester coincé
+  entre deux barres noires. *Masque CRT* pose sur l'image le motif des luminophores d'un vieux tube - *Grille*
+  donne les fines bandes d'un Trinitron, *Fentes* et *Delta* les points d'autres tubes ; il n'est proposé qu'avec
+  le filtre CRT (raster). Le filtre CRT-Pi est trop lourd pour la console en 1080p. Une ligne qui ne s'applique
+  pas est grisée, et sa ligne d'aide vous explique pourquoi.
+- L'onglet **Manettes** décide de ce qui est branché sur les deux ports de la PlayStation, *Manette 1* et
+  *Manette 2* : une manette standard (numérique), une manette analogique (DualShock), un pistolet, ou rien du tout.
   Certains jeux ne fonctionnent qu'avec un type de manette précis. Le changement prend effet quand vous retournez au
   jeu.
 

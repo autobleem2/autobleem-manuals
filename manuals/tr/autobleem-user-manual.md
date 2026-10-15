@@ -609,10 +609,14 @@ açılır.
   ayarları saklar (bölüm 3.7). *PCSX menüsü* PCSX-ReARMed'in kendi sayfalarını - seçeneklerini, hilelerini ve
   Hakkında sayfasını - açar; *Çık* ise sizi AutoBleem'e döndürür.
 - **Görüntü** sekmesinde oyunun görünüşünü izlerken değiştirirsiniz: *Ekran*, *Çözünürlük* (1x ya da 2x), *Dikişleri
-  kaldır*, *Dithering*, *Ölçekleme*, *Yumuşatma*, *Filtre*, *Scanlines* ve *Scanline parlaklığı*. Bunlar oyun
-  düzenleyicisindeki ayarların aynısıdır (bölüm 3.7) ve her satırın sağında ne işe yaradığını anlatan bir yardım
-  satırı vardır. *Ekran* ekranın çözünürlüğüdür; konsolda onu Seçenekler'de seçersiniz, burada yalnızca gösterilir.
-  CRT-Pi filtresi 1080p'de konsol için fazla ağırdır. Geçerli olmayan bir satır soluk görünür ve yardım satırı
+  kaldır*, *Dithering*, *Ölçekleme*, *Ekran halesi*, *Yumuşatma*, *Filtre*, *CRT maskesi*, *Scanlines* ve
+  *Scanline parlaklığı*. Bunlar oyun düzenleyicisindeki ayarların aynısıdır (bölüm 3.7) ve her satırın sağında ne
+  işe yaradığını anlatan bir yardım satırı vardır. *Ekran* ekranın çözünürlüğüdür; konsolda onu Seçenekler'de
+  seçersiniz, burada yalnızca gösterilir. *Ekran halesi*, geniş bir televizyonda 4:3 görüntünün yanlarında kalan
+  karanlık şeritler içindir: onları görüntünün kendi kenarlarıyla, aynalanmış ve karartılmış olarak doldurur;
+  böylece oyun iki siyah bant arasına sıkışmış durmaz, sanki şeritlere doğru taşar. *CRT maskesi* görüntünün
+  üzerine eski bir tüpün fosfor desenini serer - *Açıklık* bir Trinitron'un ince şeritlerini, *Yarık* ve *Delta*
+  diğer tüplerin noktalarını verir; bu satır yalnızca CRT (raster) filtresiyle vardır. CRT-Pi filtresi 1080p'de konsol için fazla ağırdır. Geçerli olmayan bir satır soluk görünür ve yardım satırı
   nedenini söyler.
 - **Kontrolcüler** sekmesi PlayStation'ın iki girişine, *Kontrolcü 1* ve *Kontrolcü 2*'ye, ne takılı olduğuna karar
   verir: standart (dijital) bir kumanda, analog bir kumanda (DualShock), bir tabanca ya da hiçbir şey. Bazı oyunlar

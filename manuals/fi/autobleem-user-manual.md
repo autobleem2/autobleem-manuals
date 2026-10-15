@@ -605,20 +605,26 @@ niin peli pysähtyy valikon taakse, ja sen viimeinen kuva jää taustalle. Valik
 sekuntia tekee saman kuin Reset: se poistuu pelistä. Valikossa on kolme välilehteä, joiden välillä L1 ja R1
 liikkuvat. Valikko muistaa, missä olit, joten seuraavalla kerralla se aukeaa samalle välilehdelle ja riville.
 
-- **Game**-välilehti koskee itse peliä. *Resume game* sulkee valikon, ja pelaaminen jatkuu. *Saves*-kohdan alla
-  *Quick save* tallentaa senhetkisen tilanteen ja *Quick load* palauttaa sen. *Load autosave* vie pelin takaisin
-  siihen, millainen se oli enintään 30 sekuntia sitten – emulaattori pitää tätä kopiota muistissa pelatessasi, ja se
-  pelastaa sinut virheeltä, jota et muuten saisi peruttua. *CD disc* -kohdan alla *Change disc* on monilevyisille
-  peleille, kun peli pyytää seuraavaa levyä, ja *Reset game* aloittaa pelin alusta. *Save settings for this game*
-  tallentaa juuri tälle pelille valitsemasi asetukset (osio 3.7). *PCSX menu* avaa PCSX-ReARMedin omat sivut
-  asetuksineen, huijauskoodeineen ja tietoineen, ja *Exit* vie sinut takaisin AutoBleemiin.
-- **Picture**-välilehdellä voit muuttaa pelin ulkoasua samalla kun katsot sitä: *Display*, *Resolution* (1x tai 2x),
-  *Remove seams*, *Dithering*, *Scaling*, *Smoothing*, *Filter*, *Scanlines* ja *Scanline brightness*. Ne ovat samat
-  asetukset kuin pelin muokkaimessa (osio 3.7), ja jokaisen rivin oikealla puolella on ohjerivi, joka kertoo, mitä
-  asetus tekee. *Display* on näytön tarkkuus; konsolilla se valitaan Vaihtoehdoissa, ja täällä se vain näytetään.
-  CRT-Pi-suodatin on konsolille liian raskas 1080p-tilassa. Rivi, joka ei ole käytettävissä, on harmaa, ja sen
-  ohjerivi kertoo syyn.
-- **Controllers**-välilehdellä päätät, mitä PlayStationin kahteen porttiin, *Controller 1* ja *Controller 2*, on
+- **Peli**-välilehti koskee itse peliä. *Jatka peliä* sulkee valikon, ja pelaaminen jatkuu. *Tallennukset*-kohdan
+  alla *Pikatallennus* tallentaa senhetkisen tilanteen ja *Pikalataus* palauttaa sen. *Lataa automaattitallennus*
+  vie pelin takaisin siihen, millainen se oli enintään 30 sekuntia sitten – emulaattori pitää tätä kopiota
+  muistissa pelatessasi, ja se pelastaa sinut virheeltä, jota et muuten saisi peruttua. *CD-levy*-kohdan alla
+  *Vaihda levy* on monilevyisiä pelejä varten, kun peli pyytää seuraavaa levyä, ja *Nollaa peli* aloittaa pelin
+  alusta. *Tallenna asetukset tälle pelille* tallentaa juuri tätä peliä varten valitsemasi asetukset (osio 3.7).
+  *PCSX-valikko* avaa PCSX-ReARMedin omat sivut asetuksineen, huijauskoodeineen ja tietoineen, ja *Lopeta* vie
+  sinut takaisin AutoBleemiin.
+- **Kuva**-välilehdellä voit muuttaa pelin ulkoasua ja näet muutoksen heti: *Näyttö*, *Tarkkuus* (1x tai 2x),
+  *Poista saumat*, *Rasterointi*, *Skaalaus*, *Näytön hehku*, *Pehmennys*, *Suodatin*, *CRT-maski*, *Scanlines*
+  ja *Scanlines-kirkkaus*. Ne ovat samat asetukset kuin pelin muokkaimessa (osio 3.7), ja jokaisen rivin
+  oikealla puolella on ohjerivi, joka kertoo, mitä asetus tekee. *Näyttö* on näytön tarkkuus; konsolilla se
+  valitaan asetuksissa, ja täällä se vain näytetään. *Näytön hehku* on tarkoitettu tummille palkeille, jotka
+  jäävät 4:3-kuvan sivuille laajakuvatelevisiossa: se täyttää ne kuvan omilla reunoilla peilattuina ja
+  himmennettyinä, joten peli näyttää hehkuvan palkkeihin asti eikä istu kahden mustan palkin välissä. *CRT-maski*
+  piirtää kuvan päälle vanhan kuvaputken loisteainekuvion – *Aukko* antaa Trinitronin hienot raidat, *Rako* ja
+  *Delta* muiden kuvaputkien pisteet. Se on käytettävissä vain CRT (raster) -suodattimen kanssa. CRT-Pi-suodatin
+  on konsolille liian raskas 1080p-tilassa. Rivi, joka ei ole käytettävissä, on harmaa, ja sen ohjerivi kertoo
+  syyn.
+- **Ohjaimet**-välilehdellä päätät, mitä PlayStationin kahteen porttiin, *Ohjain 1* ja *Ohjain 2*, on
   kytketty: tavallinen (digitaalinen) ohjain, analoginen ohjain (DualShock), valopistooli tai ei mitään. Jotkin pelit
   toimivat vain tietynlaisella ohjaimella. Muutos tulee voimaan, kun palaat peliin.
 

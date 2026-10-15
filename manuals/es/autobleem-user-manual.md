@@ -629,21 +629,27 @@ tenga, **Select + Start** en uno que no, o **Esc** en un teclado) y el juego se 
 menú tiene tres pestañas, y L1 y R1 pasan de una a otra. Recuerda dónde estabas, así que la próxima vez se abre en
 la misma pestaña y la misma fila.
 
-- La pestaña **Game** trata del juego en sí. *Reanudar* cierra el menú y te deja seguir jugando. En *Saves*,
-  *Quick save* guarda el momento en el que estás y *Quick load* te devuelve a él. *Load autosave* te lleva a cómo
-  estaba el juego hasta 30 segundos antes: el emulador guarda esa copia en memoria mientras juegas, y te salva de
-  un error que ya no tiene remedio. En *CD disc*, *Change disc* sirve para un juego de varios discos cuando te
-  pide el siguiente, y *Reset game* empieza el juego de nuevo. *Save settings for this game* guarda los ajustes
-  que has elegido para este juego concreto (sección 3.7). *PCSX menu* abre las páginas propias de PCSX-ReARMed,
-  con sus opciones, sus trucos y su información, y *Exit* te devuelve a AutoBleem.
-- La pestaña **Picture** te deja cambiar el aspecto del juego mientras lo ves: *Display*, *Resolution* (1x o 2x),
-  *Remove seams*, *Dithering*, *Scaling*, *Smoothing*, *Filter*, *Scanlines* y *Scanline brightness*. Son los
-  mismos ajustes que en el editor de juego (sección 3.7), y cada fila tiene a la derecha una línea de ayuda que
-  explica lo que hace. *Display* es la resolución de la pantalla; en la consola se elige en Opciones, y aquí solo
-  se muestra. El filtro CRT-Pi es demasiado pesado para la consola a 1080p. Una fila que no se aplica aparece en
-  gris, y su línea de ayuda te explica por qué.
-- La pestaña **Controllers** decide qué hay conectado a los dos puertos de la PlayStation, *Controller 1* y
-  *Controller 2*: un mando estándar (digital), un mando analógico (DualShock), una pistola o nada. Algunos juegos
+- La pestaña **Juego** trata del juego en sí. *Continuar el juego* cierra el menú y te deja seguir jugando. En
+  *Partidas guardadas*, *Guardado rápido* guarda el momento en el que estás y *Carga rápida* te devuelve a él.
+  *Cargar autoguardado* te lleva a cómo estaba el juego hasta 30 segundos antes: el emulador guarda esa copia en
+  memoria mientras juegas, y te salva de un error que ya no tiene remedio. En *Disco CD*, *Cambiar de disco* sirve
+  para un juego de varios discos cuando te pide el siguiente, y *Reiniciar el juego* lo empieza de nuevo.
+  *Guardar ajustes para este juego* conserva los ajustes que has elegido para este juego concreto (sección 3.7).
+  *Menú PCSX* abre las páginas propias de PCSX-ReARMed, con sus opciones, sus trucos y su información, y *Salir*
+  te devuelve a AutoBleem.
+- La pestaña **Imagen** te deja cambiar el aspecto del juego mientras lo ves: *Pantalla*, *Resolución* (1x o 2x),
+  *Eliminar costuras*, *Tramado*, *Escalado*, *Halo de pantalla*, *Suavizado*, *Filtro*, *Máscara CRT*,
+  *Scanlines* y *Brillo de las scanlines*. Son los mismos ajustes que en el editor de juego (sección 3.7), y cada
+  fila tiene a la derecha una línea de ayuda que explica para qué sirve. *Pantalla* es la resolución de la
+  pantalla; en la consola se elige en Opciones, y aquí solo se muestra. *Halo de pantalla* es para las franjas
+  oscuras que quedan a los lados de una imagen 4:3 en una tele panorámica: las rellena con los propios bordes de
+  la imagen, reflejados y oscurecidos, de modo que el juego parece desbordarse hacia ellas en lugar de quedar
+  encajonado entre dos barras negras. *Máscara CRT* pone sobre la imagen el dibujo de los fósforos de un tubo
+  antiguo: *Apertura* da las finas franjas de un Trinitron, y *Ranura* y *Delta*, los puntos de otros tubos. Solo
+  está disponible con el filtro CRT (raster). El filtro CRT-Pi es demasiado pesado para la consola a 1080p. Una
+  fila que no se aplica aparece en gris, y su línea de ayuda te explica por qué.
+- La pestaña **Mandos** decide qué hay conectado a los dos puertos de la PlayStation, *Mando 1* y
+  *Mando 2*: un mando estándar (digital), un mando analógico (DualShock), una pistola o nada. Algunos juegos
   solo funcionan con un tipo de mando concreto. El cambio se aplica al volver al juego.
 
 El menú usa el mismo aspecto ab2.0.0 del lanzador, para que no parezca otro programa, y muestra la batería de tus

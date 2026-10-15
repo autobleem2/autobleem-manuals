@@ -595,19 +595,24 @@ sidste billede i baggrunden. Holder du menuknappen inde i 2 sekunder, gør det d
 Menuen har tre faner, og L1 og R1 skifter mellem dem. Den husker, hvor du var, så næste gang åbner den på samme fane
 og linje.
 
-- Fanen **Spil** handler om selve spillet. *Genoptag* lukker menuen, så du kan spille videre. Under *Saves* gemmer
-  *Quick save* øjeblikket, du er i, og *Quick load* henter det tilbage. *Load autosave* tager dig tilbage til, hvordan
-  spillet så ud for op til 30 sekunder siden - emulatoren holder den kopi i hukommelsen, mens du spiller, og den kan
-  redde dig ud af en fejl, du ellers ikke kan gøre om. Under *CD disc* er *Change disc* til et spil på flere diske,
-  når det beder om den næste, og *Reset game* starter spillet forfra. *Save settings for this game* gemmer de
-  indstillinger, du har valgt til netop dette spil (afsnit 3.7). *PCSX menu* åbner PCSX-ReARMeds egne sider med dens
-  indstillinger, snydekoder og About, og *Exit* tager dig tilbage til AutoBleem.
+- Fanen **Spil** handler om selve spillet. *Fortsæt spillet* lukker menuen, så du kan spille videre. Under *Gemte
+  spil* gemmer *Hurtig gemning* øjeblikket, du er i, og *Hurtig indlæsning* henter det tilbage. *Indlæs autogem*
+  tager dig tilbage til, hvordan spillet så ud for op til 30 sekunder siden - emulatoren holder den kopi i
+  hukommelsen, mens du spiller, og den kan redde dig ud af en fejl, du ellers ikke kan gøre om. Under *Cd* er
+  *Skift disk* til et spil på flere diske, når det beder om den næste, og *Nulstil spillet* starter spillet forfra.
+  *Gem indstillinger for dette spil* gemmer de indstillinger, du har valgt til netop dette spil (afsnit 3.7).
+  *PCSX-menu* åbner PCSX-ReARMeds egne sider med dens indstillinger, snydekoder og About, og *Afslut* tager dig
+  tilbage til AutoBleem.
 - På fanen **Billede** ændrer du, hvordan spillet ser ud, mens du kigger på det: *Skærm*, *Opløsning* (1x eller 2x),
-  *Fjern sømme*, *Dithering*, *Scaling*, *Udjævning*, *Filter*, *Scanlines* og *Scanline-lysstyrke*. Det er de samme
-  indstillinger som i spileditoren (afsnit 3.7), og hver linje har en hjælpelinje til højre, der fortæller, hvad den
-  gør. *Skærm* er skærmens opløsning; på konsollen vælger du den under Indstillinger, og her bliver den kun vist.
-  Filteret CRT-Pi er for tungt for konsollen ved 1080p. En linje, der ikke gælder, er grå, og dens hjælpelinje
-  fortæller hvorfor.
+  *Fjern sømme*, *Dithering*, *Skalering*, *Skærmglorie*, *Udglatning*, *Filter*, *CRT-maske*, *Scanlines* og
+  *Scanline-lysstyrke*. Det er de samme indstillinger som i spileditoren (afsnit 3.7), og hver linje har en
+  hjælpelinje til højre, der fortæller, hvad den gør. *Skærm* er skærmens opløsning; på konsollen vælger du den
+  under Indstillinger, og her bliver den kun vist. *Skærmglorie* er til de mørke bjælker ved siden af et 4:3-billede
+  på en bred skærm: Den fylder dem med billedets egne kanter, spejlet og dæmpet, så spillet ligesom stråler ud i
+  dem i stedet for at stå mellem to sorte bjælker. *CRT-maske* lægger et gammelt billedrørs fosformønster over
+  billedet - *Apertur* giver en Trinitrons fine striber, *Spalte* og *Delta* andre billedrørs prikker. Den findes
+  kun sammen med filteret CRT (raster). Filteret CRT-Pi er for tungt for konsollen ved 1080p. En linje, der ikke
+  gælder, er grå, og dens hjælpelinje fortæller hvorfor.
 - Fanen **Controllere** bestemmer, hvad der sidder i PlayStationens to porte, *Controller 1* og *Controller 2*: en
   almindelig (digital) controller, en analog controller (DualShock), en pistol eller ingenting. Nogle spil virker kun
   med én slags controller. Ændringen træder i kraft, når du går tilbage til spillet.

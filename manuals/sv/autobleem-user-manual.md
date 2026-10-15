@@ -607,21 +607,26 @@ bilden i bakgrunden. Håller du in menyknappen i 2 sekunder blir det samma sak s
 har tre flikar, och L1 och R1 byter mellan dem. Den kommer ihåg var du var, så nästa gång öppnas den på samma
 flik och rad.
 
-- Fliken **Spel** handlar om själva spelet. *Resume game* stänger menyn och låter dig spela vidare. Under
-  *Saves* sparar *Quick save* ögonblicket du är i och *Quick load* tar tillbaka det. *Load autosave* tar dig
-  tillbaka till hur spelet såg ut för upp till 30 sekunder sedan - emulatorn håller den kopian i minnet medan du
-  spelar, och den räddar dig från ett misstag som inte går att ångra. Under *CD disc* är *Change disc* till för
-  spel på flera skivor när de ber om nästa, och *Reset game* startar om spelet. *Save settings for this game*
-  sparar inställningarna som du har valt för just det här spelet (avsnitt 3.7). *PCSX menu* öppnar
-  PCSX-ReARMeds egna sidor, med dess alternativ, fusk och About, och *Exit* tar dig tillbaka till AutoBleem.
-- På fliken **Bild** ändrar du hur spelet ser ut medan du tittar på det: *Bild*, *Upplösning* (1x eller 2x),
-  *Ta bort sömmar*, *Dithering*, *Scaling*, *Utjämning*, *Filter*, *Scanlines* och *Ljusstyrka för scanlines*.
-  Det är samma inställningar som i spelredigeraren (avsnitt 3.7), och varje rad har en hjälptext till höger som
-  säger vad den gör. *Bild* är skärmens upplösning; på konsolen väljer du den i Alternativ, och här visas den
-  bara. Filtret CRT-Pi är för tungt för konsolen i 1080p. En rad som inte gäller är nedtonad, och hjälptexten
-  förklarar varför.
-- Fliken **Handkontroller** bestämmer vad som sitter i PlayStationens två portar, *Controller 1* och
-  *Controller 2*: en vanlig (digital) handkontroll, en analog handkontroll (DualShock), en pistol eller
+- Fliken **Spel** handlar om själva spelet. *Fortsätt spelet* stänger menyn och låter dig spela vidare. Under
+  *Sparningar* sparar *Snabbspara* ögonblicket du är i och *Snabbladda* tar tillbaka det. *Läs in autosparning*
+  tar dig tillbaka till hur spelet såg ut för upp till 30 sekunder sedan - emulatorn håller den kopian i minnet
+  medan du spelar, och den räddar dig från ett misstag som inte går att ångra. Under *Cd-skiva* är *Byt skiva*
+  till för spel på flera skivor när de ber om nästa, och *Återställ spelet* startar om det från början. *Spara
+  inställningar för det här spelet* sparar inställningarna som du har valt för just det här spelet (avsnitt 3.7).
+  *PCSX-meny* öppnar PCSX-ReARMeds egna sidor, med dess alternativ, fusk och About, och *Avsluta* tar dig
+  tillbaka till AutoBleem.
+- På fliken **Bild** ändrar du hur spelet ser ut medan du tittar på det: *Skärm*, *Upplösning* (1x eller 2x),
+  *Ta bort sömmar*, *Dithering*, *Skalning*, *Skärmgloria*, *Utjämning*, *Filter*, *CRT-mask*, *Scanlines* och
+  *Scanline-ljusstyrka*. Det är samma inställningar som i spelredigeraren (avsnitt 3.7), och varje rad har en
+  hjälptext till höger som säger vad den är till för. *Skärm* är skärmens upplösning; på konsolen väljer du den i
+  Alternativ, och här visas den bara. *Skärmgloria* är till för de mörka fälten bredvid en 4:3-bild på en bred
+  tv: den fyller dem med bildens egna kanter, speglade och nedtonade, så att spelet liksom lyser ut i dem i
+  stället för att sitta mellan två svarta balkar. *CRT-mask* lägger ett gammalt bildrörs fosformönster över
+  bilden - *Apertur* ger en Trinitrons fina ränder, *Slits* och *Delta* andra bildrörs punkter. Den finns bara
+  tillsammans med filtret CRT (raster). Filtret CRT-Pi är för tungt för konsolen i 1080p. En rad som inte gäller
+  är nedtonad, och hjälptexten förklarar varför.
+- Fliken **Handkontroller** bestämmer vad som sitter i PlayStationens två portar, *Handkontroll 1* och
+  *Handkontroll 2*: en vanlig (digital) handkontroll, en analog handkontroll (DualShock), en pistol eller
   ingenting. Vissa spel fungerar bara med en viss sorts handkontroll. Ändringen gäller när du går tillbaka till
   spelet.
 

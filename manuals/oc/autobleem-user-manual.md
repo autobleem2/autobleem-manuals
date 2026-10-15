@@ -636,11 +636,16 @@ onglet e la meteissa linha.
   dobrís las paginas pròprias de PCSX-ReARMed, amb sas opcions, sos còdis de trica e son A prepaus, e *Sortir* vos
   torna menar a AutoBleem.
 - L'onglet **Imatge** vos daissa cambiar l'aspècte del jòc en l'agachant : *Afichatge*, *Definicion* (1x o 2x),
-  *Levar las juntas*, *Dithering*, *Escalada*, *Doçor*, *Filtre*, *Scanlines* e *Luminositat de las scanlines*.
-  Son los meteisses paramètres que dins l'editor de jòc (seccion 3.7), e cada linha a a drecha una linha d'ajuda
-  que ditz çò que fa. *Afichatge* es la definicion de l'ecran ; sus la consòla, la causissètz dins las opcions, e
-  aquí es sonque mostrada. Lo filtre CRT-Pi es tròp pesuc per la consòla en 1080p. Una linha que s'aplica pas es
-  grisada, e sa linha d'ajuda vos ditz perqué.
+  *Levar las juntas*, *Dithering*, *Escalada*, *Halo d'ecran*, *Doçor*, *Filtre*, *Masca CRT*, *Scanlines* e
+  *Luminositat de las scanlines*. Son los meteisses paramètres que dins l'editor de jòc (seccion 3.7), e cada
+  linha a a drecha una linha d'ajuda que ditz a qué servís. *Afichatge* es la definicion de l'ecran ; sus la
+  consòla, la causissètz dins las opcions, e aquí es sonque mostrada. *Halo d'ecran* es per las bandas escuras
+  que demòran als costats d'un imatge 4:3 sus un ecran larg : las emplena amb los bòrds meteisses de l'imatge, en
+  miralh e enfosquits, çò que fa que lo jòc sembla s'espandir dins elas allòc de demorar estrechat entre doas
+  barras negras. *Masca CRT* pausa sus l'imatge lo motiu dels luminofòrs d'un vièlh tub - *Grasilha* dona las
+  bendas finas d'un Trinitron, *Fendas* e *Delta* los punts d'autres tubs ; es pas prepausada qu'amb lo filtre
+  CRT (raster). Lo filtre CRT-Pi es tròp pesuc per la consòla en 1080p. Una linha que s'aplica pas es grisada, e
+  sa linha d'ajuda vos ditz perqué.
 - L'onglet **Manètas** decidís çò qu'es brancat suls dos pòrts de la PlayStation, *Maneta 1* e *Maneta 2* : una
   maneta estandard (numerica), una maneta analogica (DualShock), un pistolet, o res. D'unes jòcs foncionan sonque
   amb una mena de maneta. Lo cambiament pren efièch quand tornatz al jòc.
