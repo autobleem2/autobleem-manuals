@@ -2,9 +2,9 @@
 
 AutoBleem 2 on pelien käynnistäjä **PlayStation Classicille**, ja versiosta 2 alkaen myös **Raspberry Pille**,
 **USB-tikulta käynnistettävälle PC:lle** ja **Windowsille**. Se kokoaa PS1-pelisi kansikuvien hyllyksi, jossa
-jokaisen pelin tiedot ovat esillä, ja käynnistää ne mukana tulevalla PCSX-emulaattorilla. Kun asennat rinnalle RetroArchin, voit pelata
-myös muiden laitteiden pelejä. Tässä oppaassa käydään läpi asennus kullekin alustalle, arkikäyttö ja mukana
-tulevat työkalut.
+jokaisen pelin tiedot ovat esillä, ja käynnistää ne mukana tulevalla PCSX-emulaattorilla. Kun asennat rinnalle
+RetroArchin, voit pelata myös muiden laitteiden pelejä. Tässä oppaassa käydään läpi asennus kullekin alustalle,
+arkikäyttö ja mukana tulevat työkalut.
 
 > Kaikkien alustojen lataukset löytyvät osoitteesta **https://autobleem.retromenele.pl/**. Sivu on jaettu
 > alustoittain: kunkin alustan *Install*-paneelista lataat itse asennuksen, ja sen alla olevat *Build inputs*
@@ -41,8 +41,8 @@ pieni pelikonsoli, jossa omilla peleilläsi on kunnollinen valikko. Paketti sis�
 
 ### 2.1 PlayStation Classic
 
-AutoBleem toimii kokonaan USB-tikulta. Konsolin omaan muistiin ei kosketa: kun otat tikun pois, konsoli toimii täsmälleen
-kuten ennenkin. Tarvitset vain Windows-PC:n, USB-tikun (USB 2.0, vähintään 8 Gt) ja konsolin.
+AutoBleem toimii kokonaan USB-tikulta. Konsolin omaan muistiin ei kosketa: kun otat tikun pois, konsoli toimii
+täsmälleen kuten ennenkin. Tarvitset vain Windows-PC:n, USB-tikun (USB 2.0, vähintään 8 Gt) ja konsolin.
 
 Tikun ei tarvitse olla tyhjä, eikä sitä **alusteta**, ellet itse pyydä: AutoBleem asennetaan tikulla jo olevien
 tiedostojen rinnalle, ja jos tikulla on ennestään AutoBleem 1.0, se päivitetään paikallaan (katso alempaa).
@@ -489,8 +489,8 @@ Asetukset on jaettu neljään ryhmään:
 
 - **Peli** koskee sitä, miten AutoBleem kohtelee peliä. *Suosikki:* lisää sen sarjavalitsimen
   *Suosikkipelit*-ryhmään. *Lukitse data:* käskee skannausta jättämään pelin nimen, sarjanumeron ja levylistan
-  juuri sellaisiksi kuin olet ne asettanut, jottei myöhempi skannaus kirjoita muutoksiasi yli. *Jatkaminen:* päättää, mitä
-  tapahtuu, kun käynnistät pelin, jolla on jatkopisteitä: *Kysy* näyttää jatkopaikkojen valitsimen, *Viimeisin
+  juuri sellaisiksi kuin olet ne asettanut, jottei myöhempi skannaus kirjoita muutoksiasi yli. *Jatkaminen:* päättää,
+  mitä tapahtuu, kun käynnistät pelin, jolla on jatkopisteitä: *Kysy* näyttää jatkopaikkojen valitsimen, *Viimeisin
   paikka* jatkaa heti uusimmasta paikasta, ja *Ei koskaan* aloittaa pelin aina alusta. Jos RetroArch on asennettu,
   rivejä on kaksi lisää. *Lightgun-peli:* on valopistoolipeleille: peli siirtyy *Lightgun-pelit*-ryhmään ja
   käynnistyy aina RetroArchissa, koska RetroArchin PS1-ytimessä on GunCon-tuki (asetuksen kytkeminen päälle
@@ -803,8 +803,8 @@ tiedostot ovat ja mistä ne tulivat (omat tiedostosi, Kauppa, modi vai sovelluks
 kyse shareware- vai ilmaisesta pelistä ja mikä asennettu sovellus pyörittää sitä. Jos mikään asentamasi ei pysty
 pyörittämään sitä, tiedot kertovat senkin.
 
-Kun käynnistät pelimoottorisovelluksen, AutoBleem etsii pelitietoja, joita se osaa pyörittää. Jos tietoja on vain yhdet,
-peli käynnistyy heti. Jos niitä on useampia, lista (*Valitse pelitiedot*) kysyy, mitä pelataan, ja kohdistin on
+Kun käynnistät pelimoottorisovelluksen, AutoBleem etsii pelitietoja, joita se osaa pyörittää. Jos tietoja on vain
+yhdet, peli käynnistyy heti. Jos niitä on useampia, lista (*Valitse pelitiedot*) kysyy, mitä pelataan, ja kohdistin on
 valmiiksi siinä, jonka valitsit viimeksi. Jos tietoja ei ole lainkaan, AutoBleem kertoo, mitä tietoja sovellus
 tarvitsee ja minne ne laitetaan, eikä mitään käynnisty.
 
@@ -869,8 +869,8 @@ Pissä sen dataosiolla, Windowsissa datakansiossa); asennat laajennuksen purkama
 
 Näet laajennukset, kun avaat järjestelmävalikon (**L2 + R2**) ja valitset *Laajennukset*. AutoBleem-tiimin tekemät
 ovat ylimpänä, ja muut tulevat niiden jälkeen otsikon *Kolmannen osapuolen laajennukset* alla. Cross käynnistää
-valitun laajennuksen, ja Triangle poistaa sen käytöstä tai ottaa sen taas käyttöön. Poikkeus on PSC-Bios
-konsolilla: sillä määrität Wi-Fin, ohjaimet ja kellon, joten sitä ei voi siellä poistaa käytöstä. Kun laajennus ei
+valitun laajennuksen, ja Triangle poistaa sen käytöstä tai ottaa sen taas käyttöön. Poikkeus on konsolin
+PSC-Bios: sillä määrität Wi-Fin, ohjaimet ja kellon, joten sitä ei voi siellä poistaa käytöstä. Kun laajennus ei
 pysty toimimaan, sen rivi kertoo syyn: se tarvitsee verkkoa eikä verkkoa ole, sitä ei ole tehty tälle
 järjestelmälle, se on tehty toiselle AutoBleem-versiolle ja tarvitsee päivityksen, tai sitä ei saatu ladattua. Jos
 laajennus joskus kaataa käynnistäjän, AutoBleem poistaa sen käytöstä ja lista kertoo siitä; voit ottaa sen täällä
@@ -905,7 +905,7 @@ edistymispalkki etenee tasaisesti. Sitä ei tarvitse jäädä katsomaan: latauks
 poistuttuasi, ja kun olet muualla käynnistäjässä, kupla näyttää käynnissä olevan latauksen nopeuden ja jäljellä
 olevan ajan (esimerkiksi `1.4 MB/s · 0:42`). Pelin käynnistäminen tai laitteen sammuttaminen vain keskeyttää
 lataukset, ja pysähtynyt lataus jatkuu siitä, mihin se jäi. Jos verkkoyhteys katkeaa, kohteessa lukee *Waiting for
-the network*, ja lataus jatkuu siitä, mihin se jäi, kun verkko palaa; 30 minuutin jälkeen ilman verkkoa se luovuttaa.
+the network*, ja lataus jatkuu siitä, mihin se jäi, kun verkko palaa; jos verkkoa ei ole 30 minuuttiin, se luovuttaa.
 Yli 2 gigatavun lataukset toimivat kaikilla alustoilla, myös 32-bittisissä versioissa. Asentamasi peli ilmestyy
 hyllylle seuraavan skannauksen jälkeen, ja sen kantena on Kaupan kuva.
 
@@ -1044,7 +1044,7 @@ Vaihto, sivua vaihtava näppäin, välilyönti, askelpalautin ja Varmista.
 Liiku näppäimillä suuntapainikkeilla ja kirjoita kohdistimen alla oleva merkki **Crossilla**. **Triangle** poistaa
 merkin ja **Square** kirjoittaa välilyönnin. **L1** on Vaihto; painamalla sitä kahdesti saat isot kirjaimet
 lukittua. **R1** siirtyy seuraavalle näppäinsivulle, ja **L2 / R2** liikuttavat kohdistinta tekstin sisällä.
-**Start** vahvistaa kirjoittamasi ja **Circle** peruu. Jos USB-näppäimistö on kytketty, voit milloin tahansa
+**Start** hyväksyy kirjoittamasi ja **Circle** peruu. Jos USB-näppäimistö on kytketty, voit milloin tahansa
 kirjoittaa sillä: Enter vahvistaa ja Esc peruu.
 
 ![Näytön näppäimistö](../images/fi/keyboard.jpg)
@@ -1059,9 +1059,9 @@ Circle vie takaisin järjestelmävalikkoon.
 
 Kohdassa *Daemonin näkemät ohjaimet* jokainen ohjain on listattu numeroineen ja nimineen. Sen vieressä näet kolme
 asiaa: saiko apuohjelma ohjaimen auki (*yhdistetty*) vai ei (*ei luettavissa*), minkä ajurin kautta ohjain tuli ja
-mistä sen painikeasettelu on peräisin. *ohjaintietokannasta* tarkoittaa, että ohjain tunnetaan ja sen painikkeet ovat
-oikeilla paikoillaan; *daemonin arvaama* tarkoittaa, ettei ohjainta tunneta ja apuohjelma teki parhaan arvauksensa.
-Jos painikkeet ovat sovelluksessa väärissä paikoissa, arvattu asettelu on todennäköinen syy.
+mistä sen painikeasettelu on peräisin. Merkintä *ohjaintietokannasta* tarkoittaa, että ohjain tunnetaan ja sen
+painikkeet ovat oikeilla paikoillaan; *daemonin arvaama* tarkoittaa, ettei ohjainta tunneta ja apuohjelma teki
+parhaan arvauksensa. Jos painikkeet ovat sovelluksessa väärissä paikoissa, arvattu asettelu on todennäköinen syy.
 
 Apuohjelma toimii vain silloin, kun jokin sovellus on käynnissä, joten sivu kysyy siltä tiedot kerran avautuessaan.
 Jos kytket ohjaimen sivun ollessa auki, kysy uudelleen painamalla **Cross** (*Etsi uudelleen*). Windowsissa tällaista
@@ -1153,14 +1153,14 @@ Laajennukset-listasta. **ABFlashKit** on sovellus, ja se on Sovellukset-sarjassa
 
 ### 6.1 PSC-Bios
 
-PSC-Biosilla liität laitteen ulkomaailmaan: WiFi-verkkoosi, oikeaan aikavyöhykkeeseen, Bluetooth-ohjaimiin, ja
+PSC-Biosilla liität laitteen ulkomaailmaan: Wi-Fi-verkkoosi, oikeaan aikavyöhykkeeseen, Bluetooth-ohjaimiin, ja
 sillä määrität painikeasettelun ohjaimelle, jota AutoBleem ei tunne. Se tulee konsolipaketin mukana, ja se on
 käytettävissä myös Raspberry Pissä ja PC-tikulla. Avaa se järjestelmävalikon (tai pikavalikon) kohdasta *Verkko ja
 ohjaimet* tai Laajennukset-listasta. Jos laajennus on asennettu mutta poistettu käytöstä, *Verkko ja ohjaimet*
 -kohde on harmaa, ja siinä lukee, että se *on pois päältä - ota se käyttöön Laajennuksissa*; paina siinä Crossia,
 niin Laajennukset-lista aukeaa PSC-Biosin kohdalta, ja voit ottaa sen taas käyttöön.
 
-Ensimmäinen näkymä antaa yleiskuvan: kellonajan ja aikavyöhykkeen, verkkosovittimet (WiFi, Ethernet, Bluetooth)
+Ensimmäinen näkymä antaa yleiskuvan: kellonajan ja aikavyöhykkeen, verkkosovittimet (Wi-Fi, Ethernet, Bluetooth)
 osoitteineen ja jokaisen kytketyn ohjaimen sekä tiedon siitä, onko sille painikeasettelu. Konsolilla verkko- ja
 Bluetooth-osat vaativat AutoBleem-kernelin (osio 6.2); Raspberry Pissä ja PC-tikulla ne käyttävät järjestelmän omia
 työkaluja. Ohjainvelho toimii kaikkialla.
@@ -1171,7 +1171,7 @@ Ensimmäisestä näkymästä pääset jokaiseen osaan yhdellä painikkeella:
 
 | Painike | Mitä se avaa |
 |---|---|
-| Select | **Wi-Fi Network** yhdistää WiFi-verkkoosi (kernelin kautta, Pissä ja PC:llä NetworkManagerin kautta): kirjoita verkon nimi tai valitse se hakutuloksista, anna salasana, valitse ajurin tila ja paina *Apply / Restart Network*. Täällä asetat myös aikavyöhykkeen, ja kun yhteys on muodostettu, näet konsolin IP-osoitteen. |
+| Select | **Wi-Fi Network** yhdistää Wi-Fi-verkkoosi (kernelin kautta, Pissä ja PC:llä NetworkManagerin kautta): kirjoita verkon nimi tai valitse se hakutuloksista, anna salasana, valitse ajurin tila ja paina *Apply / Restart Network*. Täällä asetat myös aikavyöhykkeen, ja kun yhteys on muodostettu, näet konsolin IP-osoitteen. |
 | Square | **Bluetooth Controllers** etsii Bluetooth-ohjaimia, kuten DualShock 4:ää, jotta voit parittaa uuden tai poistaa ohjaimen, jota et enää käytä. |
 | L1 | **DualShock 3 Pairing** yhdistää ensimmäisen DualShock 3 -ohjaimesi kernelin sixaxis-liitännäisen kautta; ohjaimen on oltava tätä varten kytkettynä USB:llä. |
 | R1 | **Controller Mapping** avaa ohjainvelhon, joka kuvataan alla. |
@@ -1183,7 +1183,8 @@ Velho näyttää kytketyn ohjaimen sellaisena kuin se oikeasti on – jokaisen a
 DualShock-kuvan, joka syttyy painaessasi. Koska testattavaan ohjaimeen ei vielä voi luottaa, velhoa ohjataan
 konsolin **etupaneelin painikkeilla**: **RESET** vaihtaa seuraavaan ohjaimeen, **OPEN** aloittaa asettelun ja
 **POWER** peruu tai poistuu. Asettelun aikana velho pyytää painikkeita yksi kerrallaan: paina kuvassa palavaa
-painiketta tai OPENia, jos ohjaimessasi ei ole sellaista painiketta. Lyhyt painallus asetetaan tavalliseen tapaan.
+painiketta tai OPENia, jos ohjaimessasi ei ole sellaista painiketta. Lyhyt painallus kirjataan asetteluun
+tavalliseen tapaan.
 
 Voit poistua myös ohjaimelta: pidä Circleä pohjassa 2 sekuntia – palkki täyttyy, ja alapalkissa lukee *Hold 2 s:
 Exit*. Niin kauan kuin ohjaimella ei ole asettelua, minkä tahansa painikkeen pitäminen pohjassa 2 sekuntia tekee
@@ -1198,10 +1199,10 @@ Siitä lähtien käynnistäjä lataa sen joka kerta.
 ### 6.2 ABFlashKit – AutoBleem-kernel
 
 AutoBleem-kernel korvaa konsolin oman Linux-kernelin, ja se on valinnainen. Haluat sen, jos haluat konsolista
-enemmän irti: se antaa konsolille toimivan kellon, saa USB-liitäntäiset Wi-Fi- ja Bluetooth-sovittimet toimimaan (PSC-Biosia ja
-Bluetooth-ohjaimia varten) ja lisää etupaneelin painikkeiden tuen, jota emulaattori käyttää jatkopisteisiin.
-ABFlashKit on työkalu, joka asentaa sen. Se varmuuskopioi ensin konsolin, ja sillä voi myös palauttaa konsolin
-tehdastilaan Sonyn oman palautustilan kautta.
+enemmän irti: se antaa konsolille toimivan kellon, saa USB-liitäntäiset Wi-Fi- ja Bluetooth-sovittimet
+toimimaan (PSC-Biosia ja Bluetooth-ohjaimia varten) ja lisää etupaneelin painikkeiden tuen, jota emulaattori
+käyttää jatkopisteisiin. ABFlashKit on työkalu, joka asentaa sen. Se varmuuskopioi ensin konsolin, ja sillä voi
+myös palauttaa konsolin tehdastilaan Sonyn oman palautustilan kautta.
 
 > **Tämä työkalu kirjoittaa konsolin flash-muistiin.** Jos kirjoitus keskeytyy – virta katkeaa tai tikku vedetään
 > irti – konsoli ei välttämättä enää käynnisty, ja oman kernelin asentaminen mitätöi takuun. Pidä konsoli virrassa
@@ -1222,9 +1223,9 @@ ABFlashKitissä on kolme toimintoa:
   tehdasversiosta, asettaa palautuslipun ja käynnistää konsolin Sonyn palautustilaan, joka palauttaa konsolin
   tiedostosta `LBOOT.EPB`.
 
-Jokaisen vaiheen alla oleva edistymispalkki näyttää, kuinka pitkällä se on. ABFlashKit ei asenna kerneliä konsoliin,
-jossa on jokin muu muokattu ohjelmisto, kuten BleemSync tai Project Eris: palauta tällainen konsoli ensin
-tehdastilaan.
+Jokaisen vaiheen alla oleva edistymispalkki näyttää, kuinka pitkällä vaihe on. ABFlashKit ei asenna kerneliä
+konsoliin, jossa on jokin muu muokattu ohjelmisto, kuten BleemSync tai Project Eris: palauta tällainen konsoli
+ensin tehdastilaan.
 
 **Kirjautuminen PC:ltä.** Jos tunnet Linuxin ja haluat kurkistaa konsolin sisään, voit kirjautua siihen PC:ltä
 USB-kaapelin kautta. Tämä vaatii AutoBleem-kernelin; vakiokonsolissa se ei toimi.
@@ -1238,18 +1239,19 @@ käynnistä konsoli uudelleen: seuraavalla käynnistyksellä avain lisätään r
 päivittäminen tai uudelleenasennus ei poista sitä.
 
 > **Oletussalasana on sama jokaisessa konsolissa**, joten kuka tahansa, joka voi kytkeä kaapelin konsoliisi, voi
-> kirjautua sisään roottina. Käytä avainta aina kun voit, äläkä jätä oletussalasanalla olevaa konsolia muiden
-> ulottuville.
+> kirjautua sisään roottina. Käytä avainta aina kun voit, äläkä jätä konsolia, jossa on yhä oletussalasana,
+> muiden ulottuville.
 
 <!-- pagebreak -->
 
 ## 7. Jos jokin menee vikaan
 
-Useimmilla ongelmilla on yksinkertainen syy. Alla jokainen ongelma alkaa siitä, mitä näet, kertoo, miksi niin
-käy, ja sitten, mitä tehdä. Jos joudut kysymään apua, lokeja pyydetään ensimmäisenä, joten ne käsitellään ensin.
+Useimmilla ongelmilla on yksinkertainen syy. Alla jokainen ongelma alkaa siitä, mitä näet; sen jälkeen kerrotaan,
+miksi niin käy ja mitä voit tehdä. Jos joudut kysymään apua, lokeja pyydetään ensimmäisenä, joten ne käsitellään
+ensin.
 
 **Lokien löytäminen.** AutoBleem pitää lokejaan käytön aikana muistissa, jottei tikulle kirjoiteta koko ajan.
-Kansioon `System/Logs/` tikulla, kortilla tai datakansiossa ne päätyvät vain, kun jokin meni pieleen: kun
+Kansioon `System/Logs/` tikulla, kortilla tai datakansiossa ne päätyvät vain, kun jokin menee pieleen: kun
 käynnistäjä, PS1-peli tai RetroArch kaatuu, lokit tallennetaan kansioon `System/Logs/crash-<n>/` (kolme viimeisintä
 kaatumista säilytetään), ja käynnistäjä kertoo siitä kerran palatessaan. Jos selvität ongelmaa, joka ei ole
 kaatuminen, säilytä kaikki lokit: kytke päälle Vaihtoehdot → *Vianmääritys* → *Säilytä lokit tikulla:* (toimii
@@ -1266,7 +1268,7 @@ Löydät seuraavat tiedostot:
 | `update.log` | Miten verkkopäivitys sujui; se säilytetään tikulla aina. |
 | `updateroms.log` | Miten UpdateRoms sujui PC:llä (luku 5); se säilytetään tikulla aina. |
 
-**Kuva pyytää laittamaan tikun paikalleen, tai konsoli meni lepotilaan.** AutoBleem ei löydä tikkuaan: sitä ei
+**Ruutu pyytää laittamaan tikun paikalleen, tai konsoli meni lepotilaan.** AutoBleem ei löydä tikkuaan: sitä ei
 ollut paikallaan konsolin käynnistyessä, tai se vedettiin irti. Laita tikku mihin tahansa USB-porttiin (mieluiten
 etupaneeliin, osio 2.1) ennen kuin 5 minuuttia on kulunut, tai paina Poweria. Jos tikkua ei irrotettu oikein,
 AutoBleem tarkistaa sen ensin – odota, että edistymispalkki valmistuu.
@@ -1305,7 +1307,7 @@ ellet muuttanut sitä), ja lokit ovat sen kansiossa `System\Logs`.
 
 **Konsoli käynnistyy yhä uudelleen verkkopäivityksen jälkeen (tikku alustettu ext4:ksi).** Jotkut alustavat tikun
 FAT32:n tai exFAT:n sijaan Linuxin ext4-tiedostojärjestelmään. Seuraavaan AutoBleem-julkaisuun asti verkkopäivitys
-purkaa tällaiselle tikulle jokaisen tiedoston ilman oikeutta, jonka ansiosta tiedostoa voi ajaa ohjelmana. AutoBleem
+purkaa tällaiselle tikulle jokaisen tiedoston ilman suoritusoikeutta, eli oikeutta ajaa tiedostoa ohjelmana. AutoBleem
 ei silloin pysty käynnistymään, ja konsoli käynnistyy uudelleen kerta toisensa jälkeen. FAT32- ja exFAT-tikkuja
 tämä ei koske. Korjaukseen on kaksi tapaa.
 
@@ -1328,5 +1330,5 @@ kaiken – kopioi pelisi talteen ennen sitä.
 > Välttääksesi tämän käytä **FAT32**-muotoa (vakiokonsoli lukee vain FAT32:ta; exFAT vaatii AutoBleem-kernelin,
 > luku 6). Seuraava julkaisu säilyttää oikeudet, ja AutoBleem korjaa ne jokaisella käynnistyksellä.
 
-AutoBleem on vapaa ohjelmisto (GNU GPL v3 tai uudempi), eikä sillä ole takuuta. Tukea ja uutisia saat Tietoja-näkymässä
-linkitetyltä Discord-palvelimelta tai osoitteesta https://autobleem.retromenele.pl/.
+AutoBleem on vapaa ohjelmisto (GNU GPL v3 tai uudempi), eikä sillä ole takuuta. Tukea ja uutisia saat
+Tietoja-näkymässä linkitetyltä Discord-palvelimelta tai osoitteesta https://autobleem.retromenele.pl/.
