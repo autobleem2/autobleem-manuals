@@ -473,7 +473,7 @@ käynnistyksellä tässä tilassa), ja ilmoitus kertoo siitä: *Teema vaihdettu 
 ### 3.7 Pelin asetukset
 
 Jokaisella pelillä voi olla omat asetuksensa. Useimmat pelit toimivat sellaisinaan, mutta joskus peli kaipaa
-vähän apua – terävämpää tai pehmeämpää kuvaa, ruudun ohitusta, jotta se pysyy sulavana, tai toista muistikorttia –
+vähän apua – terävämpää tai pehmeämpää kuvaa, ruutujen ohitusta, jotta se pysyy sulavana, tai toista muistikorttia –
 tai haluat merkitä sen suosikiksi. Pelin muokkaimessa muutat näitä juuri sille pelille koskematta muihin.
 
 Kun peli on valittuna, avaa sen alla oleva kuvakerivi painamalla **Alas**. Rivillä on neljä kuvaketta:
@@ -487,9 +487,9 @@ tallentaa muutokset ja vie sinut takaisin. Jos pelin tiedoissa ei ole nimeä, se
 
 Asetukset on jaettu neljään ryhmään:
 
-- **Peli** koskee sitä, miten AutoBleem kohtelee peliä. *Suosikki:* lisää sen sarjavalitsimen *Suosikkipelit*-
-  ryhmään. *Lukitse data:* käskee skannausta jättämään pelin nimen, sarjanumeron ja levylistan juuri sellaisiksi
-  kuin olet ne asettanut, jottei myöhempi skannaus kirjoita muutoksiasi yli. *Jatkaminen:* päättää, mitä
+- **Peli** koskee sitä, miten AutoBleem kohtelee peliä. *Suosikki:* lisää sen sarjavalitsimen
+  *Suosikkipelit*-ryhmään. *Lukitse data:* käskee skannausta jättämään pelin nimen, sarjanumeron ja levylistan
+  juuri sellaisiksi kuin olet ne asettanut, jottei myöhempi skannaus kirjoita muutoksiasi yli. *Jatkaminen:* päättää, mitä
   tapahtuu, kun käynnistät pelin, jolla on jatkopisteitä: *Kysy* näyttää jatkopaikkojen valitsimen, *Viimeisin
   paikka* jatkaa heti uusimmasta paikasta, ja *Ei koskaan* aloittaa pelin aina alusta. Jos RetroArch on asennettu,
   rivejä on kaksi lisää. *Lightgun-peli:* on valopistoolipeleille: peli siirtyy *Lightgun-pelit*-ryhmään ja
@@ -504,7 +504,7 @@ Asetukset on jaettu neljään ryhmään:
   (yksinkertainen)* pitävät pikselit terävinä ilman värinää, ja lisäksi on *Quilez*. CRT-suodattimet *CRT
   (nopea)*, *CRT (raster)* ja *CRT-Pi* jäljittelevät vanhaa televisiota ja piirtävät omat juovansa, joten
   juovarivit muuttuvat harmaiksi, kun jokin niistä on valittuna. Muuten *Skannauslinjat:* lisää vanhan television
-  tummat juovat, ja *Skannauslinjojen kirkkaus* säätää, kuinka tummia ne ovat. *Tarkkuus*, *Poista saumat*,
+  tummat juovat, ja *Skannauslinjojen kirkkaus:* säätää, kuinka tummia ne ovat. *Tarkkuus*, *Poista saumat*,
   *Rasterointi*, *Pehmennys* ja muut suodattimet kuin *Lineaarinen* ja *Lähin* ovat `pcsx-abnxt`:tä varten;
   klassinen `pcsx-ab` ja RetroArch näyttävät minkä tahansa muun suodattimen *Lähin*-suodattimena.
 - **Renderöinti** sisältää grafiikan *Liitännäinen:*-asetuksen ja *Frameskip:*-asetuksen (*Auto*, *Pois* tai 1–3
@@ -530,7 +530,7 @@ voi tallentaa, ja muokkain ilmoittaa *Ei tallennettu: pelillä ei ole pcsx.cfg-t
 kerran – siitä lähtien sen asetukset säilyvät kuten minkä tahansa muun pelin. Levy, joka kuuluu kokoelmassasi jo
 olevaan peliin, käyttää alusta asti sen pelin kansiota ja asetuksia.
 
-**Asemassa olevalle levylle** (osio 3.9a) osa asetuksista ei ole järkeviä, joten muokkain näyttää ne harmaina, ja
+**Asemassa olevalle levylle** (osio 3.9a) osalla asetuksista ei ole merkitystä, joten muokkain näyttää ne harmaina, ja
 alarivillä lukee *Ei käytettävissä asemassa olevalle levylle*, kun siirryt sellaiselle riville.
 
 ![Pelin muokkain asemassa olevalle levylle](../images/en/game-editor-disc.jpg)
@@ -745,7 +745,7 @@ tiedoston sivustolta itse ennen kuin tällainen levy pelataan ja kun kopioit sen
 Tätä varten tarvitaan verkkoyhteys: Raspberry Pillä ja PC:llä se, joka laitteella jo on, konsolilla PSC-Biosissa
 määritetty Wi-Fi.
 
-Asemassa olevalle levylle osa pelin asetuksista ei ole järkeviä, joten sen pelin muokkain näyttää kyseiset rivit
+Asemassa olevalle levylle osalla pelin asetuksista ei ole merkitystä, joten sen pelin muokkain näyttää kyseiset rivit
 harmaina (osio 3.7).
 
 ### 3.10 Pelien lisääminen
@@ -803,7 +803,7 @@ tiedostot ovat ja mistä ne tulivat (omat tiedostosi, Kauppa, modi vai sovelluks
 kyse shareware- vai ilmaisesta pelistä ja mikä asennettu sovellus pyörittää sitä. Jos mikään asentamasi ei pysty
 pyörittämään sitä, tiedot kertovat senkin.
 
-Kun käynnistät pelimoottorisovelluksen, AutoBleem etsii pelitietoja, joita se osaa pyörittää. Jos tietoja on yhdet,
+Kun käynnistät pelimoottorisovelluksen, AutoBleem etsii pelitietoja, joita se osaa pyörittää. Jos tietoja on vain yhdet,
 peli käynnistyy heti. Jos niitä on useampia, lista (*Valitse pelitiedot*) kysyy, mitä pelataan, ja kohdistin on
 valmiiksi siinä, jonka valitsit viimeksi. Jos tietoja ei ole lainkaan, AutoBleem kertoo, mitä tietoja sovellus
 tarvitsee ja minne ne laitetaan, eikä mitään käynnisty.
