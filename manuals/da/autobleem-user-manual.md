@@ -460,7 +460,7 @@ tilstand), og en besked fortæller dig det: *Tema skiftet til standardtemaet (CR
 
 ![Indstillingerne, i grupper](../images/da/options.jpg)
 
-![Gruppen Skærm: CRT-margen og Billedhøjde](../images/en/options-display.jpg)
+![Gruppen Grænseflade: CRT-margen og Billedhøjde](../images/en/options-display.jpg)
 
 ![Beskeden efter skift til CRT 4:3 med et tema uden 4:3-layout](../images/en/crt43-theme-notice.jpg)
 

@@ -476,7 +476,7 @@ elke start in die modus), en een melding vertelt het je: *Thema gewijzigd naar h
 
 ![De opties, in groepen](../images/en/options.jpg)
 
-![De groep Beeld: CRT-marge en Beeldhoogte](../images/en/options-display.jpg)
+![De groep Interface: CRT-marge en Beeldhoogte](../images/en/options-display.jpg)
 
 ![De melding na het overschakelen naar CRT 4:3 met een thema zonder 4:3-indeling](../images/en/crt43-theme-notice.jpg)
 

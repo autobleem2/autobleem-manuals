@@ -484,7 +484,7 @@ arranque en ese modo), y un aviso te lo dice: *Tema cambiado al predeterminado (
 
 ![Las opciones, por grupos](../images/en/options.jpg)
 
-![El grupo Pantalla: Margen CRT y Altura de la imagen](../images/en/options-display.jpg)
+![El grupo Interfaz: Margen CRT y Altura de la imagen](../images/en/options-display.jpg)
 
 ![El aviso tras cambiar a CRT 4:3 con un tema sin diseño 4:3](../images/en/crt43-theme-notice.jpg)
 

@@ -487,7 +487,7 @@ démarrage dans ce mode), et une annonce vous en informe : *Thème remplacé par
 
 ![Les options, par groupes](../images/en/options.jpg)
 
-![Le groupe Affichage : Marge CRT et Hauteur de l'image](../images/en/options-display.jpg)
+![Le groupe Interface : Marge CRT et Hauteur de l'image](../images/en/options-display.jpg)
 
 ![L'annonce affichée après le passage en CRT 4:3 avec un thème sans mise en page 4:3](../images/en/crt43-theme-notice.jpg)
 

@@ -457,7 +457,7 @@ vám to řekne: *Téma změněno na výchozí (CRT 4:3)*.
 
 ![Možnosti rozdělené do skupin](../images/en/options.jpg)
 
-![Skupina Obraz: Okraj CRT a Výška obrazu](../images/en/options-display.jpg)
+![Skupina Rozhraní: Okraj CRT a Výška obrazu](../images/en/options-display.jpg)
 
 ![Oznámení po přepnutí na CRT 4:3 s tématem, které nemá rozvržení 4:3](../images/en/crt43-theme-notice.jpg)
 

@@ -466,7 +466,7 @@ o notificare te anunță: *Tema a fost schimbată cu cea implicită (CRT 4:3)*.
 
 ![Opțiunile, pe grupuri](../images/en/options.jpg)
 
-![Grupul Afișaj: Margine CRT și Înălțimea imaginii](../images/en/options-display.jpg)
+![Grupul Interfață: Margine CRT și Înălțimea imaginii](../images/en/options-display.jpg)
 
 ![Notificarea de după trecerea pe CRT 4:3 cu o temă fără aspect 4:3](../images/en/crt43-theme-notice.jpg)
 

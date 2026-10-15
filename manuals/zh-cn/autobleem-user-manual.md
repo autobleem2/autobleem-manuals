@@ -271,7 +271,7 @@ AutoBleem 的设计初衷就是只用手柄操作，而且各个按键在每个�
 
 ![按组排列的选项](../images/en/options.jpg)
 
-![显示设置：CRT 边距和画面高度](../images/en/options-display.jpg)
+![界面一组：CRT 边距和画面高度](../images/en/options-display.jpg)
 
 ![切换到 CRT 4:3 时，当前主题没有 4:3 布局而弹出的提示](../images/en/crt43-theme-notice.jpg)
 

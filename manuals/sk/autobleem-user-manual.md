@@ -460,7 +460,7 @@ a upozorní vás na to oznámenie *Téma zmenená na predvolenú (CRT 4:3)*.
 
 ![Možnosti rozdelené do skupín](../images/en/options.jpg)
 
-![Skupina Obraz: Okraj CRT a Výška obrazu](../images/en/options-display.jpg)
+![Skupina Rozhranie: Okraj CRT a Výška obrazu](../images/en/options-display.jpg)
 
 ![Oznámenie po prepnutí na CRT 4:3 s témou, ktorá nemá rozloženie 4:3](../images/en/crt43-theme-notice.jpg)
 

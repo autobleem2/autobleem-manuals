@@ -465,7 +465,7 @@ a komunikat Ci o tym mówi: *Motyw zmieniony na domyślny (CRT 4:3)*.
 
 ![Opcje podzielone na grupy](../images/pl/options.jpg)
 
-![Grupa Obraz: Margines CRT i Wysokość obrazu](../images/pl/options-display.jpg)
+![Grupa Interfejs: Margines CRT i Wysokość obrazu](../images/pl/options-display.jpg)
 
 ![Komunikat po przełączeniu na CRT 4:3 z motywem bez układu 4:3](../images/pl/crt43-theme-notice.jpg)
 

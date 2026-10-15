@@ -464,7 +464,7 @@ gelir ve bir bildirim bunu söyler: *Tema varsayılan temaya değiştirildi (CRT
 
 ![Gruplar hâlinde seçenekler](../images/en/options.jpg)
 
-![Ekran ayarları: CRT kenar boşluğu ve Görüntü yüksekliği](../images/en/options-display.jpg)
+![Arayüz grubu: CRT kenar boşluğu ve Görüntü yüksekliği](../images/en/options-display.jpg)
 
 ![4:3 yerleşimi olmayan bir temayla CRT 4:3'e geçince çıkan bildirim](../images/en/crt43-theme-notice.jpg)
 

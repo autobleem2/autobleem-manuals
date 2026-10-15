@@ -482,7 +482,7 @@ aviada dins aquel mòde), e un avís vos o ditz : *Tèma remplaçat pel tèma pe
 
 ![Las opcions, per grops](../images/en/options.jpg)
 
-![Lo grop Afichatge : marge CRT e nautor de l'imatge](../images/en/options-display.jpg)
+![Lo grop Interfàcia : marge CRT e nautor de l'imatge](../images/en/options-display.jpg)
 
 ![L'avís après lo passatge en CRT 4:3 amb un tèma sens disposicion 4:3](../images/en/crt43-theme-notice.jpg)
 

@@ -473,7 +473,7 @@ modo), e um aviso conta isso para você: *Tema alterado para o padrão (CRT 4:3)
 
 ![As opções, separadas em grupos](../images/en/options.jpg)
 
-![O grupo Tela: Margem CRT e Altura da imagem](../images/en/options-display.jpg)
+![O grupo Interface: Margem CRT e Altura da imagem](../images/en/options-display.jpg)
 
 ![O aviso depois de mudar para CRT 4:3 com um tema sem layout 4:3](../images/en/crt43-theme-notice.jpg)
 

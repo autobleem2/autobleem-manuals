@@ -466,7 +466,7 @@ käynnistyksellä tässä tilassa), ja ilmoitus kertoo siitä: *Teema vaihdettu 
 
 ![Vaihtoehdot ryhmiteltyinä](../images/fi/options.jpg)
 
-![Näyttö-ryhmä: CRT-reunus ja kuvan korkeus](../images/en/options-display.jpg)
+![Käyttöliittymä-ryhmä: CRT-reunus ja kuvan korkeus](../images/en/options-display.jpg)
 
 ![Ilmoitus, kun CRT 4:3 -tilaan vaihdetaan teemalla, jossa ei ole 4:3-asettelua](../images/en/crt43-theme-notice.jpg)
 

@@ -468,7 +468,7 @@ tema predefinito, e un avviso te lo comunica: *Tema cambiato con quello predefin
 
 ![Le opzioni, divise in gruppi](../images/en/options.jpg)
 
-![Il gruppo Schermo: Margine CRT e Altezza dell'immagine](../images/en/options-display.jpg)
+![Il gruppo Interfaccia: Margine CRT e Altezza dell'immagine](../images/en/options-display.jpg)
 
 ![L'avviso dopo il passaggio a CRT 4:3 con un tema senza layout 4:3](../images/en/crt43-theme-notice.jpg)
 

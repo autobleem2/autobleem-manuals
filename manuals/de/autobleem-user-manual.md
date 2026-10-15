@@ -485,7 +485,7 @@ bei jedem Start in diesem Modus), und ein Hinweis teilt dir das mit: *Theme auf 
 
 ![Die Optionen, in Gruppen](../images/en/options.jpg)
 
-![Die Gruppe Anzeige: CRT-Rand und Bildhöhe](../images/en/options-display.jpg)
+![Die Gruppe Oberfläche: CRT-Rand und Bildhöhe](../images/en/options-display.jpg)
 
 ![Der Hinweis nach dem Wechsel zu CRT 4:3 mit einem Theme ohne 4:3-Layout](../images/en/crt43-theme-notice.jpg)
 

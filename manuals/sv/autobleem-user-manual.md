@@ -468,7 +468,7 @@ och ett meddelande talar om det: *Tema ändrat till standardtemat (CRT 4:3)*.
 
 ![Alternativen, i grupper](../images/en/options.jpg)
 
-![Gruppen Bild: CRT-marginal och Bildhöjd](../images/en/options-display.jpg)
+![Gruppen Gränssnitt: CRT-marginal och Bildhöjd](../images/en/options-display.jpg)
 
 ![Meddelandet efter bytet till CRT 4:3 med ett tema som saknar 4:3-layout](../images/en/crt43-theme-notice.jpg)
 

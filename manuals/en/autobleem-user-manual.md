@@ -460,7 +460,7 @@ in that mode), and a notice tells you: *Theme switched to the default (CRT 4:3)*
 
 ![The options, in groups](../images/en/options.jpg)
 
-![The Display group: CRT margin and Picture height](../images/en/options-display.jpg)
+![The Interface group: CRT margin and Picture height](../images/en/options-display.jpg)
 
 ![The notice after switching to CRT 4:3 with a theme that has no 4:3 layout](../images/en/crt43-theme-notice.jpg)
 
