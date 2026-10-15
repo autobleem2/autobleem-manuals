@@ -539,7 +539,7 @@ grigio, e quando ti sposti su una di esse la riga in fondo dice *Non disponibile
 ![L'editor del gioco per un disco nell'unità](../images/en/game-editor-disc.jpg)
 
 **Impostazioni salvate nell'emulatore.** Puoi anche mettere a punto un gioco mentre ci giochi: il menu dell'emulatore
-ha *Save settings for this game* (sezione 3.9). Quando un gioco ha impostazioni salvate lì, sono quelle a valere.
+ha *Salva le impostazioni per questo gioco* (sezione 3.9). Quando un gioco ha impostazioni salvate lì, sono quelle a valere.
 L'editor mostra allora le righe di Schermo, Rendering ed Emulatore in grigio, con i valori salvati, sotto il titolo
 *Salvate nell'emulatore*: puoi leggerle ma non cambiarle. Se preferisci tornare alle impostazioni dell'editor,
 scegli *Sblocca le impostazioni* e conferma: le impostazioni salvate dall'emulatore vengono eliminate e le righe

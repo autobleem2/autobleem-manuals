@@ -543,7 +543,7 @@ linhas em cinza, e a linha de baixo diz *Indisponível para um disco na unidade*
 ![O editor do jogo para um disco na unidade](../images/en/game-editor-disc.jpg)
 
 **Configurações salvas no emulador.** Você também pode ajustar um jogo enquanto joga: o menu do próprio emulador
-tem *Save settings for this game* (seção 3.9). Quando um jogo tem configurações salvas ali, são elas que valem. O
+tem *Salvar configurações para este jogo* (seção 3.9). Quando um jogo tem configurações salvas ali, são elas que valem. O
 editor do jogo passa então a mostrar as linhas de Tela, Renderização e Emulador em cinza, com os valores salvos,
 sob o título *Salvo no emulador*: dá para ler, mas não para mudar. Se você preferir voltar a usar as configurações
 do editor, escolha *Desbloquear as configurações* e confirme: as configurações que o emulador salvou são apagadas,

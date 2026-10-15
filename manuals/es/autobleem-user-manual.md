@@ -557,7 +557,7 @@ en gris, y cuando pasas por una la línea de abajo dice *No disponible para un d
 ![El editor de juego para un disco en la unidad](../images/en/game-editor-disc.jpg)
 
 **Ajustes guardados en el emulador.** También puedes afinar un juego mientras juegas: el menú del propio emulador
-tiene *Save settings for this game* (sección 3.9). Cuando un juego tiene ajustes guardados ahí, son esos los que
+tiene *Guardar ajustes para este juego* (sección 3.9). Cuando un juego tiene ajustes guardados ahí, son esos los que
 usa. El editor de juego muestra entonces sus filas de Pantalla, Renderizado y Emulador en gris, con los valores
 guardados, bajo el título *Guardado en el emulador*: puedes leerlos, pero no cambiarlos. Si prefieres volver a los
 ajustes del editor, elige *Desbloquear los ajustes* y confirma: se borran los ajustes que guardó el emulador y las

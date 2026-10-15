@@ -547,7 +547,7 @@ grijs, en de regel onderaan zegt *Niet beschikbaar voor een schijf in het statio
 ![De game-editor voor een schijf in het station](../images/en/game-editor-disc.jpg)
 
 **Instellingen die in de emulator zijn opgeslagen.** Je kunt een game ook tijdens het spelen bijstellen: het eigen
-menu van de emulator heeft *Save settings for this game* (sectie 3.9). Heeft een game daar instellingen opgeslagen,
+menu van de emulator heeft *Instellingen voor dit spel opslaan* (sectie 3.9). Heeft een game daar instellingen opgeslagen,
 dan speelt hij voortaan met die instellingen. De game-editor toont de regels van Beeld, Rendering en Emulator dan
 grijs, met de opgeslagen waarden, onder het kopje *Opgeslagen in de emulator*: je kunt ze lezen maar niet
 veranderen. Wil je liever weer de instellingen van de game-editor gebruiken, kies dan *Instellingen ontgrendelen* en

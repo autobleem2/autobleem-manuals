@@ -559,7 +559,7 @@ Zeilen aus, und gehst du auf eine davon, steht unten *Nicht verfügbar für eine
 ![Der Spiel-Editor für eine Disc im Laufwerk](../images/en/game-editor-disc.jpg)
 
 **Im Emulator gespeicherte Einstellungen.** Du kannst ein Spiel auch während des Spielens einstellen: Das Menü des
-Emulators hat dafür *Save settings for this game* (Abschnitt 3.9). Hat ein Spiel dort gespeicherte Einstellungen,
+Emulators hat dafür *Einstellungen für dieses Spiel speichern* (Abschnitt 3.9). Hat ein Spiel dort gespeicherte Einstellungen,
 spielt es auch mit genau diesen. Der Spiel-Editor zeigt dann seine Zeilen für Anzeige, Rendering und Emulator
 ausgegraut mit den gespeicherten Werten unter der Überschrift *Im Emulator gespeichert* - du kannst sie lesen, aber
 nicht ändern. Willst du lieber wieder die Einstellungen des Spiel-Editors nutzen, wähl *Einstellungen entsperren*

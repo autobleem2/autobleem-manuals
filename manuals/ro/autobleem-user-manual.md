@@ -535,8 +535,8 @@ rândul de jos spune *Indisponibil pentru un disc din unitate* când ajungi pe u
 
 ![Editorul de joc pentru un disc din unitate](../images/en/game-editor-disc.jpg)
 
-**Setări salvate în emulator.** Poți regla un joc și în timp ce îl joci: meniul propriu al emulatorului are *Save
-settings for this game* (secțiunea 3.9). Odată ce un joc are setări salvate acolo, cu ele se joacă. Editorul de joc
+**Setări salvate în emulator.** Poți regla un joc și în timp ce îl joci: meniul propriu al emulatorului are *Salvează
+setările pentru acest joc* (secțiunea 3.9). Odată ce un joc are setări salvate acolo, cu ele se joacă. Editorul de joc
 arată atunci rândurile Afișaj, Randare și Emulator în gri, cu valorile salvate, sub titlul *Salvat în emulator*,
 ca să le poți citi, dar nu și schimba. Dacă vrei să folosești din nou setările din editorul de joc, alege
 *Deblochează setările* și confirmă: setările salvate de emulator sunt șterse, iar rândurile pot fi schimbate din

@@ -528,7 +528,7 @@ taký riadok presuniete, v spodnom riadku sa ukáže *Nie je k dispozícii pre d
 ![Editor hry pre disk v mechanike](../images/en/game-editor-disc.jpg)
 
 **Nastavenia uložené v emulátore.** Hru si môžete vyladiť aj priamo počas hrania: vlastná ponuka emulátora má
-položku *Save settings for this game* (oddiel 3.9). Keď má hra nastavenia uložené tam, hrá s nimi. Editor hry
+položku *Uložiť nastavenia pre túto hru* (oddiel 3.9). Keď má hra nastavenia uložené tam, hrá s nimi. Editor hry
 potom ukazuje riadky skupín Obraz, Vykresľovanie a Emulátor sivé, s uloženými hodnotami, pod nadpisom *Uložené
 v emulátore* - môžete si ich prečítať, ale nie zmeniť. Ak chcete znova používať nastavenia z editora, vyberte
 *Odomknúť nastavenia* a potvrďte: nastavenia uložené emulátorom sa zmažú a riadky sa dajú opäť meniť. Oba

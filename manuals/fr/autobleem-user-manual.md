@@ -561,7 +561,7 @@ la ligne du bas indique *Indisponible pour un disque dans le lecteur* quand vous
 ![L'éditeur de jeu pour un disque dans le lecteur](../images/en/game-editor-disc.jpg)
 
 **Les réglages enregistrés dans l'émulateur.** Vous pouvez aussi peaufiner un jeu en cours de partie : le menu de
-l'émulateur propose *Save settings for this game* (section 3.9). Dès qu'un jeu a des réglages enregistrés de cette
+l'émulateur propose *Enregistrer les réglages pour ce jeu* (section 3.9). Dès qu'un jeu a des réglages enregistrés de cette
 façon, ce sont eux qui s'appliquent. L'éditeur de jeu affiche alors ses lignes Affichage, Rendu et Émulateur grisées,
 avec les valeurs enregistrées, sous le titre *Enregistré dans l'émulateur* : vous pouvez les lire, mais pas les
 modifier. Si vous préférez revenir aux réglages de l'éditeur, choisissez *Déverrouiller les réglages* et confirmez :

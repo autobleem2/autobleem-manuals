@@ -523,8 +523,8 @@ U **disku v mechanice** (oddíl 3.9a) některá nastavení nedávají smysl, tak
 
 ![Editor hry pro disk v mechanice](../images/en/game-editor-disc.jpg)
 
-**Nastavení uložená v emulátoru.** Hru můžete doladit i během hraní: vlastní nabídka emulátoru má položku *Save
-settings for this game* (oddíl 3.9). Jakmile má hra nastavení uložená tam, hraje se s nimi. Editor hry pak
+**Nastavení uložená v emulátoru.** Hru můžete doladit i během hraní: vlastní nabídka emulátoru má položku *Uložit
+nastavení pro tuto hru* (oddíl 3.9). Jakmile má hra nastavení uložená tam, hraje se s nimi. Editor hry pak
 ukazuje její řádky Obraz, Vykreslování a Emulátor zašedlé, s uloženými hodnotami, pod nadpisem *Uloženo
 v emulátoru* - můžete si je přečíst, ale ne změnit. Pokud chcete znovu používat nastavení z editoru hry, zvolte
 *Odemknout nastavení* a potvrďte to: nastavení uložená emulátorem se smažou a řádky půjde zase měnit. Oba

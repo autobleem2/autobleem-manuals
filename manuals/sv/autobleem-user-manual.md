@@ -537,7 +537,7 @@ raderna, och raden längst ner säger *Inte tillgängligt för en skiva i enhete
 ![Spelredigeraren för en skiva i enheten](../images/en/game-editor-disc.jpg)
 
 **Inställningar sparade i emulatorn.** Du kan också finjustera ett spel medan du spelar: emulatorns egen meny har
-*Save settings for this game* (avsnitt 3.9). När ett spel har inställningar sparade där är det dem det spelas
+*Spara inställningar för det här spelet* (avsnitt 3.9). När ett spel har inställningar sparade där är det dem det spelas
 med. Spelredigeraren visar då raderna under Bild, Rendering och Emulator nedtonade, med de sparade värdena,
 under rubriken *Sparat i emulatorn*, så att du kan läsa dem men inte ändra dem. Vill du hellre använda
 spelredigerarens inställningar igen väljer du *Lås upp inställningarna* och bekräftar: då raderas

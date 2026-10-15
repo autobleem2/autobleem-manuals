@@ -527,7 +527,7 @@ linjen nederst siger *Ikke tilgængelig for en disk i drevet*, når du går hen 
 ![Spileditoren for en disk i drevet](../images/en/game-editor-disc.jpg)
 
 **Indstillinger, der er gemt i emulatoren.** Du kan også finjustere et spil, mens du spiller: Emulatorens egen menu
-har *Save settings for this game* (afsnit 3.9). Når et spil har indstillinger gemt dér, er det dem, det spiller med.
+har *Gem indstillinger for dette spil* (afsnit 3.9). Når et spil har indstillinger gemt dér, er det dem, det spiller med.
 Spileditoren viser så linjerne under Skærm, Gengivelse og Emulator grå med de gemte værdier under overskriften *Gemt i
 emulatoren*, så du kan læse dem, men ikke ændre dem. Vil du hellere bruge spileditorens indstillinger igen, så vælg
 *Lås indstillingerne op* og bekræft: Det sletter de indstillinger, emulatoren har gemt, og linjerne kan ændres igen.

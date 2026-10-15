@@ -535,8 +535,8 @@ alarivillä lukee *Ei käytettävissä asemassa olevalle levylle*, kun siirryt s
 
 ![Pelin muokkain asemassa olevalle levylle](../images/en/game-editor-disc.jpg)
 
-**Emulaattoriin tallennetut asetukset.** Peliä voi säätää myös pelatessa: emulaattorin omassa valikossa on *Save
-settings for this game* (osio 3.9). Kun pelille on tallennettu asetukset sitä kautta, peli käyttää niitä.
+**Emulaattoriin tallennetut asetukset.** Peliä voi säätää myös pelatessa: emulaattorin omassa valikossa on *Tallenna
+asetukset tälle pelille* (osio 3.9). Kun pelille on tallennettu asetukset sitä kautta, peli käyttää niitä.
 Pelin muokkain näyttää silloin Näyttö-, Renderöinti- ja Emulaattori-rivit harmaina tallennetuin arvoin otsikon
 *Tallennettu emulaattoriin* alla, joten voit lukea ne mutta et muuttaa niitä. Jos haluat palata pelin muokkaimen
 asetuksiin, valitse *Avaa asetusten lukitus* ja vahvista: emulaattorin tallentamat asetukset poistetaan, ja rivejä
