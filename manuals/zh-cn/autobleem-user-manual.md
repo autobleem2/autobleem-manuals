@@ -701,6 +701,8 @@ chmod +x /media/USER/STICK/Autobleem/bin/autobleem/* /media/USER/STICK/Autobleem
 chmod +x /media/USER/STICK/RetroArch/bin/retroarch
 ```
 
+第二行中的 `bin/emu*/pcsx-ab` 同时涵盖两个模拟器：经典的 `pcsx-ab`，以及安装为 `Autobleem/bin/emunxt/pcsx-ab` 的 `pcsx-abnxt`，所以较新的那个不需要单独的命令。
+
 **方法 B**：按照第 2.1 节的方法，把最新的 AutoBleem 正式版重新安装到 U 盘上。安装程序需要一台能读取这个 U 盘的电脑。如果电脑读不了您的 U 盘，就必须先格式化，这会清除上面的所有内容——格式化之前，请先把游戏复制出来。
 
 > 为了避免这个问题，请使用 **FAT32**（原版主机只能读取 FAT32；exFAT 需要 AutoBleem 内核，第 6 章）。下一个正式版会保留文件权限，AutoBleem 每次启动时也会修复它们。

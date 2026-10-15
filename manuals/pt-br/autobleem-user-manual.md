@@ -1328,6 +1328,9 @@ chmod +x /media/USER/STICK/Autobleem/bin/autobleem/* /media/USER/STICK/Autobleem
 chmod +x /media/USER/STICK/RetroArch/bin/retroarch
 ```
 
+O padrão `bin/emu*/pcsx-ab` da segunda linha cobre os dois emuladores: o `pcsx-ab` clássico e o `pcsx-abnxt`, que é
+instalado como `Autobleem/bin/emunxt/pcsx-ab`; por isso o mais novo não precisa de um comando separado.
+
 **Solução B**: instale de novo a versão mais recente do AutoBleem no pendrive, como na seção 2.1. O instalador
 precisa de um PC que consiga ler o pendrive. Se ele não conseguir ler o seu, o pendrive precisa ser formatado
 primeiro, o que apaga tudo o que há nele; copie seus jogos para outro lugar antes.

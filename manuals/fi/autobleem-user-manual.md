@@ -1318,6 +1318,9 @@ chmod +x /media/USER/STICK/Autobleem/bin/autobleem/* /media/USER/STICK/Autobleem
 chmod +x /media/USER/STICK/RetroArch/bin/retroarch
 ```
 
+Toisen rivin malli `bin/emu*/pcsx-ab` kattaa molemmat emulaattorit: perinteisen `pcsx-ab`:n ja `pcsx-abnxt`:n, joka
+asennetaan nimellä `Autobleem/bin/emunxt/pcsx-ab`, joten uudempi emulaattori ei tarvitse omaa komentoaan.
+
 **Korjaus B**: asenna uusin AutoBleem-julkaisu tikulle uudelleen kuten osiossa 2.1. Asennusohjelma tarvitsee PC:n,
 joka pystyy lukemaan tikun. Jos se ei pysty lukemaan sinun tikkuasi, tikku on alustettava ensin, mikä poistaa siltä
 kaiken – kopioi pelisi talteen ennen sitä.

@@ -1325,6 +1325,9 @@ chmod +x /media/USER/STICK/Autobleem/bin/autobleem/* /media/USER/STICK/Autobleem
 chmod +x /media/USER/STICK/RetroArch/bin/retroarch
 ```
 
+Mönstret `bin/emu*/pcsx-ab` på andra raden täcker båda emulatorerna: den klassiska `pcsx-ab` och `pcsx-abnxt`, som
+installeras som `Autobleem/bin/emunxt/pcsx-ab`, så den nyare behöver inget eget kommando.
+
 **Lösning B**: installera den senaste AutoBleem-releasen på minnet igen, som i avsnitt 2.1.
 Installationsprogrammet behöver en dator som kan läsa minnet. Kan den inte läsa ditt måste minnet formateras
 först, vilket raderar allt på det - kopiera av dina spel innan du gör det.

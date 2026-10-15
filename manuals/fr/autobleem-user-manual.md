@@ -1375,6 +1375,10 @@ chmod +x /media/USER/STICK/Autobleem/bin/autobleem/* /media/USER/STICK/Autobleem
 chmod +x /media/USER/STICK/RetroArch/bin/retroarch
 ```
 
+Le motif `bin/emu*/pcsx-ab` de la deuxième ligne couvre les deux émulateurs : le `pcsx-ab` classique et
+`pcsx-abnxt`, installé sous le nom `Autobleem/bin/emunxt/pcsx-ab` ; le plus récent n'a donc pas besoin d'une
+commande à part.
+
 **Solution B** : réinstallez la dernière version d'AutoBleem sur la clé, comme à la section 2.1. L'installateur a
 besoin d'un PC capable de lire la clé. Si le vôtre n'y arrive pas, il faut d'abord formater la clé, ce qui efface tout
 ce qu'elle contient - copiez vos jeux ailleurs avant de le faire.

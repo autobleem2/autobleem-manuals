@@ -1315,6 +1315,9 @@ chmod +x /media/USER/STICK/Autobleem/bin/autobleem/* /media/USER/STICK/Autobleem
 chmod +x /media/USER/STICK/RetroArch/bin/retroarch
 ```
 
+Lo schema `bin/emu*/pcsx-ab` della seconda riga copre entrambi gli emulatori: il classico `pcsx-ab` e `pcsx-abnxt`,
+che viene installato come `Autobleem/bin/emunxt/pcsx-ab`, quindi per il più recente non serve un comando a parte.
+
 **Soluzione B**: reinstalla sulla chiavetta l'ultima release di AutoBleem, come nella sezione 2.1. L'installer ha
 bisogno di un PC che legga la chiavetta. Se il tuo non la legge, la chiavetta va prima formattata, il che cancella
 tutto ciò che contiene: copia altrove i tuoi giochi prima di farlo.

@@ -1359,6 +1359,9 @@ chmod +x /media/USER/STICK/Autobleem/bin/autobleem/* /media/USER/STICK/Autobleem
 chmod +x /media/USER/STICK/RetroArch/bin/retroarch
 ```
 
+Lo motiu `bin/emu*/pcsx-ab` de la segonda linha cobrís los dos emuladors : lo `pcsx-ab` classic e `pcsx-abnxt`,
+installat jol nom `Autobleem/bin/emunxt/pcsx-ab` ; lo pus recent a doncas pas besonh d'una comanda a part.
+
 **La correccion B** : tornatz installar la darrièra version d'AutoBleem sus la clau, coma a la seccion 2.1.
 L'installador a besonh d'un PC que pòsca legir la clau. Se pòt pas legir la vòstra, la clau deu èsser formatada
 d'en primièr, çò qu'escafa tot çò qu'es dessús : copiatz-ne vòstres jòcs abans de o far.

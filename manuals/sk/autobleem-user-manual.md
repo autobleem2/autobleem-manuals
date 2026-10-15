@@ -1281,6 +1281,9 @@ chmod +x /media/USER/STICK/Autobleem/bin/autobleem/* /media/USER/STICK/Autobleem
 chmod +x /media/USER/STICK/RetroArch/bin/retroarch
 ```
 
+Vzor `bin/emu*/pcsx-ab` v druhom riadku pokrýva oba emulátory: klasický `pcsx-ab` aj `pcsx-abnxt`, ktorý sa
+inštaluje ako `Autobleem/bin/emunxt/pcsx-ab`, takže novší emulátor nepotrebuje vlastný príkaz.
+
 **Oprava B**: nainštalujte na kľúč znova najnovšie vydanie AutoBleemu, ako v oddiele 2.1. Inštalátor potrebuje PC,
 ktoré kľúč dokáže prečítať. Ak ten váš prečítať nedokáže, kľúč treba najprv naformátovať, čo z neho zmaže všetko -
 predtým si z neho skopírujte hry.

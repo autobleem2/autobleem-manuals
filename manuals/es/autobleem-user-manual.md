@@ -1367,6 +1367,9 @@ chmod +x /media/USER/STICK/Autobleem/bin/autobleem/* /media/USER/STICK/Autobleem
 chmod +x /media/USER/STICK/RetroArch/bin/retroarch
 ```
 
+El patrón `bin/emu*/pcsx-ab` de la segunda línea abarca los dos emuladores: el clásico `pcsx-ab` y `pcsx-abnxt`, que
+se instala como `Autobleem/bin/emunxt/pcsx-ab`, así que el más nuevo no necesita una orden aparte.
+
 **Solución B**: vuelve a instalar en la memoria la versión más reciente de AutoBleem, como en la sección 2.1. El
 instalador necesita un PC que pueda leer la memoria. Si no puede leer la tuya, primero hay que formatearla, lo que
 borra todo lo que contiene, así que copia antes tus juegos a otro sitio.

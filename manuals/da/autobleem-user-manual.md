@@ -1285,6 +1285,9 @@ chmod +x /media/USER/STICK/Autobleem/bin/autobleem/* /media/USER/STICK/Autobleem
 chmod +x /media/USER/STICK/RetroArch/bin/retroarch
 ```
 
+Mønsteret `bin/emu*/pcsx-ab` i anden linje dækker begge emulatorer: den klassiske `pcsx-ab` og `pcsx-abnxt`, der
+installeres som `Autobleem/bin/emunxt/pcsx-ab`, så den nyere emulator behøver ikke sin egen kommando.
+
 **Løsning B**: Installér den nyeste udgivelse af AutoBleem på nøglen igen, som i afsnit 2.1. Installationsprogrammet
 kræver en pc, der kan læse nøglen. Kan den ikke læse din, skal nøglen formateres først, hvilket sletter alt på den -
 kopiér dine spil af den, før du gør det.

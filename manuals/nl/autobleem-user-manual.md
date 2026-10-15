@@ -1342,6 +1342,9 @@ chmod +x /media/USER/STICK/Autobleem/bin/autobleem/* /media/USER/STICK/Autobleem
 chmod +x /media/USER/STICK/RetroArch/bin/retroarch
 ```
 
+Het patroon `bin/emu*/pcsx-ab` op de tweede regel dekt beide emulators: de klassieke `pcsx-ab` en `pcsx-abnxt`, die
+als `Autobleem/bin/emunxt/pcsx-ab` wordt geïnstalleerd. Voor de nieuwere heb je dus geen apart commando nodig.
+
 **Oplossing B**: installeer de nieuwste release van AutoBleem opnieuw op de stick, zoals in sectie 2.1. Het
 installatieprogramma heeft een pc nodig die de stick kan lezen. Kan hij de jouwe niet lezen, dan moet de stick eerst
 geformatteerd worden, en dan wordt alles erop gewist - kopieer je games er eerst af.

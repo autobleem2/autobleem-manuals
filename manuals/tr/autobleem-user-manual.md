@@ -1297,6 +1297,9 @@ chmod +x /media/USER/STICK/Autobleem/bin/autobleem/* /media/USER/STICK/Autobleem
 chmod +x /media/USER/STICK/RetroArch/bin/retroarch
 ```
 
+İkinci satırdaki `bin/emu*/pcsx-ab` kalıbı iki emülatörü de kapsar: klasik `pcsx-ab`'yi ve
+`Autobleem/bin/emunxt/pcsx-ab` olarak kurulan `pcsx-abnxt`'yi. Yani yenisi için ayrı bir komut gerekmez.
+
 **B yolu**: en yeni AutoBleem sürümünü bölüm 2.1'deki gibi belleğe yeniden kurun. Kurulum programı için belleği
 okuyabilen bir PC gerekir. Sizinkini okuyamıyorsa bellek önce biçimlendirilmelidir; bu da üzerindeki her şeyi siler -
 bunu yapmadan önce oyunlarınızı başka yere kopyalayın.

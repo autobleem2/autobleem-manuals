@@ -1315,6 +1315,9 @@ chmod +x /media/USER/STICK/Autobleem/bin/autobleem/* /media/USER/STICK/Autobleem
 chmod +x /media/USER/STICK/RetroArch/bin/retroarch
 ```
 
+Modelul `bin/emu*/pcsx-ab` de pe al doilea rând acoperă ambele emulatoare: `pcsx-ab` clasic și `pcsx-abnxt`, care se
+instalează ca `Autobleem/bin/emunxt/pcsx-ab`, așa că cel nou nu are nevoie de o comandă separată.
+
 **Soluția B**: instalează din nou pe stick cea mai nouă versiune AutoBleem, ca în secțiunea 2.1. Programul de
 instalare are nevoie de un PC care poate citi stick-ul. Dacă nu-l poate citi pe al tău, stick-ul trebuie formatat
 mai întâi, ceea ce șterge tot de pe el - copiază-ți jocurile de pe el înainte.
