@@ -318,8 +318,12 @@ Bildschirme (Abschnitt 4.3). Im Regal bewirken die Tasten Folgendes:
 **Mit Tastatur.** Am PC ohne Controller oder mit einer USB-Tastatur an der Konsole, am Pi oder am PC-Stick
 übernehmen Tasten die Rolle der Controller-Tasten. Die Pfeiltasten sind das Steuerkreuz, Enter ist Cross, Esc oder
 Backspace ist Circle, Tab ist Triangle und die Leertaste ist Square. F1 und F2 sind Select und Start, Bild auf und
-Bild ab sind L1 und R1, Pos1 und Ende sind L2 und R2, und F10 öffnet das Systemmenü. Auf einem Entwicklungsrechner
-schließt Esc das Programm, und die Leertaste ist Start.
+Bild ab sind L1 und R1, Pos1 und Ende sind L2 und R2, und F10 öffnet das Systemmenü.
+
+Unter Windows sind ein paar Tasten anders belegt. Esc beendet dort AutoBleem (Kapitel 7), deshalb ist Circle nur
+Backspace, die Leertaste ist Start und S ist Square. Außerdem vertreten Buchstabentasten den ganzen Controller, so
+musst du nicht zu den Pfeiltasten greifen: X, O, S und T sind Cross, Circle, Square und Triangle, I, J, K und L
+das Steuerkreuz (hoch, links, runter, rechts), B ist Select, Q und E sind L1 und R1, 1 und 2 sind L2 und R2.
 
 **In jeder Liste und jedem Menü** funktioniert dasselbe: Hoch und Runter bewegen den Cursor, L2 und R2 blättern
 eine Seite weiter, L1 und R1 springen zur ersten oder letzten Zeile, Cross wählt aus und Circle geht zurück. Eine

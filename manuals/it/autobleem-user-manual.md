@@ -307,8 +307,12 @@ schermate (sezione 4.3). Sullo scaffale i pulsanti funzionano così:
 **Con la tastiera.** Su un PC senza controller, o con una tastiera USB collegata alla console, a un Pi o alla
 chiavetta PC, i tasti prendono il posto dei pulsanti. Le frecce sono la croce direzionale, Invio è Cross, Esc o
 Backspace è Circle, Tab è Triangle e la barra spaziatrice è Square. F1 e F2 sono Select e Start, Pagina su e Pagina giù
-sono L1 e R1, Home e Fine sono L2 e R2, e F10 apre il menu di sistema. Su una macchina di sviluppo Esc chiude il
-programma e la barra spaziatrice fa da Start.
+sono L1 e R1, Home e Fine sono L2 e R2, e F10 apre il menu di sistema.
+
+Su Windows alcuni tasti cambiano. Lì Esc chiude AutoBleem (capitolo 7), quindi Circle è solo Backspace, la barra
+spaziatrice fa da Start e la S da Square. Le lettere possono inoltre sostituire l'intero controller, senza
+bisogno delle frecce: X, O, S e T sono Cross, Circle, Square e Triangle, I, J, K e L la croce direzionale (su,
+sinistra, giù, destra), B è Select, Q ed E sono L1 e R1, 1 e 2 sono L2 e R2.
 
 **In tutti gli elenchi e i menu** ci si muove allo stesso modo: Su e Giù spostano il cursore, L2 e R2 girano pagina, L1
 e R1 saltano alla prima o all'ultima riga, Cross seleziona e Circle torna indietro. Non devi mai cercare un pulsante

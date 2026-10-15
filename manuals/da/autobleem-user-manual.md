@@ -303,7 +303,12 @@ gør knapperne følgende:
 **Med tastatur.** På en pc uden controller, eller med et USB-tastatur på konsollen, en Pi eller pc-nøglen, træder
 tasterne i stedet for knapperne. Piletasterne er d-pad'en, Enter er Cross, Esc eller Backspace er Circle, Tab er
 Triangle, og mellemrumstasten er Square. F1 og F2 er Select og Start, Page Up og Page Down er L1 og R1, Home og End er
-L2 og R2, og F10 åbner systemmenuen. På en udviklermaskine lukker Esc programmet, og mellemrumstasten er Start.
+L2 og R2, og F10 åbner systemmenuen.
+
+På Windows virker nogle taster anderledes. Esc lukker AutoBleem dér (kapitel 7), så Circle er kun Backspace,
+mellemrumstasten er Start, og S er Square. Bogstavtasterne kan desuden stå for hele controlleren, så du ikke
+behøver piletasterne: X, O, S og T er Cross, Circle, Square og Triangle, I, J, K og L er retningsknapperne (op,
+venstre, ned, højre), B er Select, Q og E er L1 og R1, og 1 og 2 er L2 og R2.
 
 **I alle lister og menuer** virker det på samme måde: Op og Ned flytter markøren, L2 og R2 bladrer en side, L1 og R1
 springer til første eller sidste linje, Cross vælger, og Circle går tilbage. Du skal aldrig lede efter en knap til at

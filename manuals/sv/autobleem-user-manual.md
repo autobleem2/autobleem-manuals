@@ -309,8 +309,12 @@ fungerar knapparna på hyllan:
 **Med tangentbord.** På en PC utan handkontroll, eller med ett USB-tangentbord på konsolen, en Pi eller
 PC-minnet, gör tangenterna knapparnas jobb. Piltangenterna är styrkorset, Enter är Cross, Esc eller Backspace
 är Circle, Tab är Triangle och mellanslag är Square. F1 och F2 är Select och Start, Page Up och Page Down är L1
-och R1, Home och End är L2 och R2, och F10 öppnar systemmenyn. På en utvecklingsdator stänger Esc programmet,
-och mellanslag är Start.
+och R1, Home och End är L2 och R2, och F10 öppnar systemmenyn.
+
+På Windows fungerar några tangenter annorlunda. Där stänger Esc AutoBleem (kapitel 7), så Circle är bara
+Backsteg, mellanslag är Start och S är Square. Bokstavstangenterna kan dessutom ersätta hela handkontrollen, så
+att du slipper piltangenterna: X, O, S och T är Cross, Circle, Square och Triangle, I, J, K och L styrkorset
+(upp, vänster, ned, höger), B är Select, Q och E är L1 och R1, och 1 och 2 är L2 och R2.
 
 **I alla listor och menyer** fungerar samma grepp: Upp och Ner flyttar markören, L2 och R2 bläddrar en sida,
 L1 och R1 hoppar till första eller sista raden, Cross väljer och Circle går tillbaka. Du behöver aldrig leta

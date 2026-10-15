@@ -165,7 +165,9 @@ AutoBleem 的设计初衷就是只用手柄操作，而且各个按键在每个�
 | 下 | 打开游戏下方的图标栏（*设置*、*游戏*、*记忆卡*、*继续*）；按上可以再次关闭。 |
 | L2 + R2 | 打开系统菜单（第 3.5 节）。 |
 
-**使用键盘。** 在没有手柄的电脑上，或者在主机、树莓派、PC U 盘上接了 USB 键盘时，可以用键盘代替手柄。方向键相当于十字键，Enter 是 Cross，Esc 或 Backspace 是 Circle，Tab 是 Triangle，空格键是 Square。F1 和 F2 分别是 Select 和 Start，Page Up 和 Page Down 是 L1 和 R1，Home 和 End 是 L2 和 R2，F10 打开系统菜单。在开发用的机器上，Esc 会关闭程序，空格键则是 Start。
+**使用键盘。** 在没有手柄的电脑上，或者在主机、树莓派、PC U 盘上接了 USB 键盘时，可以用键盘代替手柄。方向键相当于十字键，Enter 是 Cross，Esc 或 Backspace 是 Circle，Tab 是 Triangle，空格键是 Square。F1 和 F2 分别是 Select 和 Start，Page Up 和 Page Down 是 L1 和 R1，Home 和 End 是 L2 和 R2，F10 打开系统菜单。
+
+在 Windows 上有几个键的作用不同。Esc 在那里会关闭 AutoBleem（见第 7 章），所以 Circle 只能用 Backspace；空格键是 Start，S 键是 Square。此外，字母键也可以代替整个手柄，不用去够方向键：X、O、S、T 分别是 Cross、Circle、Square、Triangle，I、J、K、L 是十字键（上、左、下、右），B 是 Select，Q 和 E 是 L1 和 R1，1 和 2 是 L2 和 R2。
 
 **在所有列表和菜单里**，操作方式都一样：上下移动光标，L2 和 R2 翻页，L1 和 R1 跳到第一行或最后一行，Cross 选择，Circle 返回。您永远不用去找“保存”按钮：在设置界面里按 Circle 离开时，设置就会自动保存。
 

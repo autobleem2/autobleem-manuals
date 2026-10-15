@@ -302,7 +302,12 @@ otwiera przewodnik po przyciskach wszystkich ekranów (punkt 4.3). Tak działaj�
 **Z klawiaturą.** Na komputerze bez pada albo z klawiaturą USB podłączoną do konsoli, Pi czy pendrive'a dla PC
 klawisze zastępują przyciski. Strzałki to krzyżak, Enter to Krzyżyk, Esc albo Backspace to Kółko, Tab to Trójkąt,
 a spacja to Kwadrat. F1 i F2 to Select i Start, Page Up i Page Down to L1 i R1, Home i End to L2 i R2, a F10
-otwiera menu systemowe. Na komputerze deweloperskim Esc zamyka program, a spacja działa jak Start.
+otwiera menu systemowe.
+
+W Windows kilka klawiszy działa inaczej. Esc zamyka tam AutoBleem (rozdział 7), więc Kółko to wyłącznie
+Backspace, spacja działa jak Start, a S to Kwadrat. Do tego litery mogą zastąpić cały pad, więc nie trzeba
+sięgać do strzałek: X, O, S i T to Krzyżyk, Kółko, Kwadrat i Trójkąt, I, J, K i L to krzyżak (góra, lewo, dół,
+prawo), B to Select, Q i E to L1 i R1, a 1 i 2 to L2 i R2.
 
 **Na każdej liście i w każdym menu** obowiązują te same ruchy: Góra i Dół przesuwają kursor, L2 i R2 przewijają
 stronę, L1 i R1 skaczą do pierwszego albo ostatniego wiersza, Krzyżyk wybiera, a Kółko cofa. Nie musisz szukać

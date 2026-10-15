@@ -312,8 +312,12 @@ onderaan het je, en Triangle op de plank opent het knoppenoverzicht met alle kno
 **Met een toetsenbord.** Op een pc zonder controller, of met een USB-toetsenbord aan de console, een Pi of de
 pc-stick, nemen de toetsen het werk van de knoppen over. De pijltjestoetsen zijn de d-pad, Enter is Cross, Esc of
 Backspace is Circle, Tab is Triangle en de spatiebalk is Square. F1 en F2 zijn Select en Start, Page Up en
-Page Down zijn L1 en R1, Home en End zijn L2 en R2, en F10 opent het systeemmenu. Op een ontwikkelcomputer sluit Esc
-het programma en is de spatiebalk Start.
+Page Down zijn L1 en R1, Home en End zijn L2 en R2, en F10 opent het systeemmenu.
+
+Op Windows werken een paar toetsen anders. Esc sluit daar AutoBleem af (hoofdstuk 7), dus Circle is daar alleen
+Backspace, de spatiebalk is Start en S is Square. Bovendien kunnen lettertoetsen de hele controller vervangen,
+zodat je niet naar de pijltjestoetsen hoeft: X, O, S en T zijn Cross, Circle, Square en Triangle, I, J, K en L
+het richtingskruis (omhoog, links, omlaag, rechts), B is Select, Q en E zijn L1 en R1, en 1 en 2 zijn L2 en R2.
 
 **In elke lijst en elk menu** werkt het op dezelfde manier: Omhoog en Omlaag verplaatsen de cursor, L2 en R2
 bladeren een pagina verder, L1 en R1 springen naar de eerste of de laatste regel, Cross kiest en Circle gaat terug.

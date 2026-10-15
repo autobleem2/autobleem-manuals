@@ -300,7 +300,12 @@ takhle:
 **Na klávesnici.** Na PC bez ovladače, nebo s USB klávesnicí na konzoli, Pi či flashce pro PC zastoupí tlačítka
 klávesy. Šipky jsou směrový kříž, Enter je Cross, Esc nebo Backspace je Circle, Tab je Triangle a mezerník je
 Square. F1 a F2 jsou Select a Start, Page Up a Page Down jsou L1 a R1, Home a End jsou L2 a R2 a F10 otevře
-systémovou nabídku. Na vývojářském počítači Esc zavře program a mezerník je Start.
+systémovou nabídku.
+
+Ve Windows fungují některé klávesy jinak. Esc tam zavře AutoBleem (kapitola 7), takže Circle je jen Backspace,
+mezerník je Start a S je Square. Celý ovladač navíc zastoupí písmena, takže pro šipky nemusíte sahat: X, O, S a
+T jsou Cross, Circle, Square a Triangle, I, J, K a L jsou směrový kříž (nahoru, doleva, dolů, doprava), B je
+Select, Q a E jsou L1 a R1 a 1 a 2 jsou L2 a R2.
 
 **Ve všech seznamech a nabídkách** platí stejné pohyby: Nahoru a Dolů posouvají kurzor, L2 a R2 listují po
 stránkách, L1 a R1 skočí na první nebo poslední řádek, Cross vybírá a Circle vrací zpět. Tlačítko Uložit nikde

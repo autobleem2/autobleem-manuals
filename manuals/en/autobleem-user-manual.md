@@ -302,8 +302,12 @@ screen tells you, and Triangle on the shelf opens the button guide with every bu
 **With a keyboard.** On a PC without a pad, or with a USB keyboard on the console, a Pi or the PC stick, the keys
 stand in for the buttons. The arrow keys are the d-pad, Enter is Cross, Esc or Backspace is Circle, Tab is
 Triangle and Space is Square. F1 and F2 are Select and Start, Page Up and Page Down are L1 and R1, Home and End
-are L2 and R2, and F10 opens the system menu. On a development machine Esc closes the program and Space is
-Start.
+are L2 and R2, and F10 opens the system menu.
+
+On Windows a few keys work differently. Esc closes AutoBleem (chapter 7), so Circle is Backspace there, Space is
+Start and S is Square. The letter keys also stand in for the whole pad, so you can play the launcher without
+reaching for the arrow keys: X, O, S and T are Cross, Circle, Square and Triangle, I, J, K and L are the d-pad (up,
+left, down, right), B is Select, Q and E are L1 and R1, and 1 and 2 are L2 and R2.
 
 **In every list and menu** the same moves work: Up and Down move the cursor, L2 and R2 turn a page, L1 and R1
 jump to the first or the last row, Cross selects and Circle goes back. You never need to look for a Save

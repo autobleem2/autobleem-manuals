@@ -315,7 +315,12 @@ baixo da tela mostra, e Triangle na prateleira abre o guia de botões, com todos
 **Com teclado.** Em um PC sem controle, ou com um teclado USB no console, em um Pi ou no pendrive de PC, as teclas
 fazem o papel dos botões. As setas são o direcional, Enter é Cross, Esc ou Backspace é Circle, Tab é Triangle e a
 barra de espaço é Square. F1 e F2 são Select e Start, Page Up e Page Down são L1 e R1, Home e End são L2 e R2, e
-F10 abre o menu do sistema. Em uma máquina de desenvolvimento, Esc fecha o programa e a barra de espaço é Start.
+F10 abre o menu do sistema.
+
+No Windows algumas teclas mudam. Lá o Esc fecha o AutoBleem (capítulo 7), então Circle é só o Backspace, a barra
+de espaço é Start e o S é Square. Além disso, as letras podem fazer o papel do controle inteiro, sem precisar ir
+até as setas: X, O, S e T são Cross, Circle, Square e Triangle, I, J, K e L são o direcional (cima, esquerda,
+baixo, direita), B é Select, Q e E são L1 e R1, e 1 e 2 são L2 e R2.
 
 **Em todas as listas e menus** os movimentos são os mesmos: Cima e Baixo movem o cursor, L2 e R2 viram a página,
 L1 e R1 pulam para a primeira ou para a última linha, Cross seleciona e Circle volta. Você nunca precisa procurar

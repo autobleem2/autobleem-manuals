@@ -304,8 +304,12 @@ vihjepalkki kertoo sen, ja hyllyllä Triangle avaa painikeoppaan, jossa ovat kai
 **Näppäimistöllä.** Jos PC:ssä ei ole ohjainta tai konsoliin, Pihin tai PC-tikkuun on kytketty USB-näppäimistö,
 näppäimet hoitavat painikkeiden työt. Nuolinäppäimet ovat ristiohjain, Enter on Cross, Esc tai Backspace on
 Circle, Tab on Triangle ja välilyönti on Square. F1 ja F2 ovat Select ja Start, Page Up ja Page Down ovat L1 ja
-R1, Home ja End ovat L2 ja R2, ja F10 avaa järjestelmävalikon. Kehityskoneella Esc sulkee ohjelman ja välilyönti
-on Start.
+R1, Home ja End ovat L2 ja R2, ja F10 avaa järjestelmävalikon.
+
+Windowsissa muutama näppäin toimii toisin. Siellä Esc sulkee AutoBleemin (luku 7), joten Circle on vain
+Backspace, välilyönti on Start ja S on Square. Lisäksi kirjainnäppäimet korvaavat koko ohjaimen, joten
+nuolinäppäimiin ei tarvitse kurottaa: X, O, S ja T ovat Cross, Circle, Square ja Triangle, I, J, K ja L
+ristiohjain (ylös, vasemmalle, alas, oikealle), B on Select, Q ja E ovat L1 ja R1 ja 1 ja 2 ovat L2 ja R2.
 
 **Kaikissa listoissa ja valikoissa** liikutaan samalla tavalla: Ylös ja Alas siirtävät kohdistinta, L2 ja R2
 kääntävät sivua, L1 ja R1 hyppäävät ensimmäiselle tai viimeiselle riville, Cross valitsee ja Circle palaa

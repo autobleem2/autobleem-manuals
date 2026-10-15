@@ -318,8 +318,12 @@ todas las pantallas (sección 4.3). En la estantería, los botones hacen esto:
 **Con teclado.** En un PC sin mando, o con un teclado USB en la consola, en una Pi o en la memoria USB para PC,
 las teclas hacen de botones. Las flechas son la cruceta, Intro es Cross, Esc o Retroceso es Circle, Tab es
 Triangle y la barra espaciadora es Square. F1 y F2 son Select y Start, Re Pág y Av Pág son L1 y R1, Inicio y Fin
-son L2 y R2, y F10 abre el menú del sistema. En una máquina de desarrollo, Esc cierra el programa y la barra
-espaciadora es Start.
+son L2 y R2, y F10 abre el menú del sistema.
+
+En Windows algunas teclas cambian. Allí Esc cierra AutoBleem (capítulo 7), así que Circle es solo Retroceso, la
+barra espaciadora es Start y la S es Square. Además, las letras hacen de mando completo, para que no tengas que
+ir a las flechas: X, O, S y T son Cross, Circle, Square y Triangle; I, J, K y L, la cruceta (arriba, izquierda,
+abajo, derecha); B es Select; Q y E son L1 y R1, y 1 y 2 son L2 y R2.
 
 **En todas las listas y menús** se usan los mismos movimientos: Arriba y Abajo mueven el cursor, L2 y R2 pasan
 página, L1 y R1 saltan a la primera o a la última fila, Cross selecciona y Circle vuelve atrás. Nunca tienes que

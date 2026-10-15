@@ -304,7 +304,12 @@ Rafta düğmeler şöyle çalışır:
 **Klavyeyle.** Kumandası olmayan bir PC'de ya da konsola, Pi'ye veya PC belleğine takılmış bir USB klavyeyle tuşlar
 düğmelerin yerini tutar. Ok tuşları yön tuşlarıdır, Enter Cross'tur, Esc ya da Backspace Circle'dır, Tab Triangle,
 Space de Square'dir. F1 ile F2 Select ve Start, Page Up ile Page Down L1 ve R1, Home ile End L2 ve R2 olur; F10
-sistem menüsünü açar. Geliştirme makinesinde ise Esc programı kapatır, Space de Start olur.
+sistem menüsünü açar.
+
+Windows'ta birkaç tuş farklı çalışır. Orada Esc AutoBleem'i kapatır (bölüm 7); bu yüzden Circle yalnızca
+Backspace'tir, Space Start, S de Square olur. Ayrıca harf tuşları kumandanın tamamının yerini tutabilir, böylece
+ok tuşlarına uzanmanız gerekmez: X, O, S ve T Cross, Circle, Square ve Triangle; I, J, K ve L yön tuşları
+(yukarı, sol, aşağı, sağ); B Select; Q ve E L1 ve R1; 1 ve 2 de L2 ve R2'dir.
 
 **Bütün liste ve menülerde** aynı hareketler geçerlidir: Up ve Down imleci oynatır, L2 ve R2 sayfa çevirir, L1 ve R1
 ilk ya da son satıra atlar, Cross seçer, Circle geri götürür. Hiçbir yerde bir Kaydet düğmesi aramanıza gerek yok:

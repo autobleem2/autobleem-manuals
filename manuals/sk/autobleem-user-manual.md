@@ -298,7 +298,12 @@ všetkých obrazoviek (oddiel 4.3). Na polici robia tlačidlá toto:
 **S klávesnicou.** Na PC bez ovládača, alebo s USB klávesnicou na konzole, Pi či PC kľúči, zastúpia tlačidlá
 klávesy. Šípky sú smerový ovládač, Enter je Cross, Esc alebo Backspace je Circle, Tab je Triangle a medzerník je
 Square. F1 a F2 sú Select a Start, Page Up a Page Down sú L1 a R1, Home a End sú L2 a R2 a F10 otvorí systémovú
-ponuku. Na vývojárskom stroji Esc zatvorí program a medzerník je Start.
+ponuku.
+
+Vo Windows fungujú niektoré klávesy inak. Esc tam zatvorí AutoBleem (kapitola 7), takže Circle je iba
+Backspace, medzerník je Start a S je Square. Celý ovládač navyše zastúpia písmená, takže na šípky nemusíte
+siahať: X, O, S a T sú Cross, Circle, Square a Triangle, I, J, K a L sú smerový kríž (hore, doľava, dole,
+doprava), B je Select, Q a E sú L1 a R1 a 1 a 2 sú L2 a R2.
 
 **V každom zozname a ponuke** platia tie isté pohyby: Hore a Dole posúvajú kurzor, L2 a R2 listujú po stranách,
 L1 a R1 skočia na prvý alebo posledný riadok, Cross vyberá a Circle vracia späť. Tlačidlo Uložiť nikdy hľadať

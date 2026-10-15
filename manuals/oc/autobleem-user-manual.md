@@ -317,8 +317,12 @@ los ecrans (seccion 4.3). Vaquí çò que fan los botons sus l'estatgièra :
 **Amb un clavièr.** Sus un PC sens maneta, o amb un clavièr USB sus la consòla, una Pi o la clau PC, las tòcas
 remplaçan los botons. Las sagetas fan la crotz direccionala, Entrada es Cross, Esc o Retorn arrièr es Circle, Tab
 es Triangle e Espaci es Square. F1 e F2 son Select e Start, Pagina amont e Pagina avall son L1 e R1, Origina e Fin
-son L2 e R2, e F10 dobrís lo menú sistèma. Sus una maquina de desvolopament, Esc tampa lo programa e Espaci es
-Start.
+son L2 e R2, e F10 dobrís lo menú sistèma.
+
+Sus Windows, qualques tòcas cambian. Esc i tampa AutoBleem (capítol 7) ; Circle es doncas sonque Retorn arrièr,
+Espaci es Start e S es Square. Las letras pòdon tanben remplaçar tota la maneta, sens passar per las sagetas : X,
+O, S e T son Cross, Circle, Square e Triangle, I, J, K e L la crotz direccionala (amont, esquèrra, aval, drecha),
+B es Select, Q e E son L1 e R1, 1 e 2 son L2 e R2.
 
 **Dins totas las listas e totes los menús**, los meteisses gestes foncionan : Amont e Avall desplaçan lo cursor,
 L2 e R2 viran una pagina, L1 e R1 sautan a la primièra o a la darrièra linha, Cross causís e Circle tòrna en

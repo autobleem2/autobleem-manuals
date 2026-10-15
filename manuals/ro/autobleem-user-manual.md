@@ -305,8 +305,12 @@ ecranului îți spune, iar Triangle pe raft deschide ghidul butoanelor, cu toate
 **Cu tastatura.** Pe un PC fără controler, sau cu o tastatură USB conectată la consolă, la Pi ori la stick-ul
 pentru PC, tastele țin locul butoanelor. Săgețile sunt crucea direcțională, Enter este Cross, Esc sau Backspace
 este Circle, Tab este Triangle, iar Space este Square. F1 și F2 sunt Select și Start, Page Up și Page Down sunt L1
-și R1, Home și End sunt L2 și R2, iar F10 deschide meniul sistem. Pe o mașină de dezvoltare, Esc închide programul,
-iar Space este Start.
+și R1, Home și End sunt L2 și R2, iar F10 deschide meniul sistem.
+
+Pe Windows câteva taste se schimbă. Acolo Esc închide AutoBleem (capitolul 7), așa că Circle e doar Backspace,
+Space este Start, iar S este Square. Pe deasupra, literele pot ține locul întregului controler, fără să mai ajungi
+la săgeți: X, O, S și T sunt Cross, Circle, Square și Triangle, I, J, K și L sunt crucea direcțională (sus,
+stânga, jos, dreapta), B este Select, Q și E sunt L1 și R1, iar 1 și 2 sunt L2 și R2.
 
 **În orice listă și meniu** merg aceleași mișcări: Sus și Jos mută cursorul, L2 și R2 dau pagina, L1 și R1 sar la
 primul sau la ultimul rând, Cross alege, iar Circle te duce înapoi. Nu trebuie să cauți niciodată un buton de

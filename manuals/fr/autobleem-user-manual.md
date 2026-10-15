@@ -322,8 +322,12 @@ boutons de tous les écrans (section 4.3). Voici ce que font les boutons sur l'�
 **Au clavier.** Sur un PC sans manette, ou avec un clavier USB branché sur la console, un Pi ou la clé PC, les touches
 remplacent les boutons. Les flèches font office de croix directionnelle, Entrée de Cross, Échap ou Retour arrière de
 Circle, Tab de Triangle et Espace de Square. F1 et F2 correspondent à Select et Start, Page précédente et Page
-suivante à L1 et R1, Origine et Fin à L2 et R2, et F10 ouvre le menu système. Sur une machine de développement,
-Échap ferme le programme et Espace fait office de Start.
+suivante à L1 et R1, Origine et Fin à L2 et R2, et F10 ouvre le menu système.
+
+Sous Windows, quelques touches changent. Échap y ferme AutoBleem (chapitre 7) ; Circle n'est donc plus que Retour
+arrière, Espace fait office de Start et S de Square. Les lettres peuvent en plus remplacer toute la manette, sans
+avoir à passer par les flèches : X, O, S et T sont Cross, Circle, Square et Triangle, I, J, K et L la croix
+directionnelle (haut, gauche, bas, droite), B est Select, Q et E sont L1 et R1, 1 et 2 sont L2 et R2.
 
 **Dans toutes les listes et tous les menus**, on se déplace de la même façon : Haut et Bas déplacent le curseur, L2 et
 R2 tournent la page, L1 et R1 sautent à la première ou à la dernière ligne, Cross sélectionne et Circle revient en
