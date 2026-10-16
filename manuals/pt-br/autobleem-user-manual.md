@@ -656,6 +656,16 @@ sistema.
 - **R1 - Mapeamento de Controle**: o assistente de mapeamento (abaixo).
 - **Triangle - Sobre**, **Circle - voltar** ao lançador.
 
+> **Controles Bluetooth deixam o WiFi mais lento (PlayStation Classic).** No console, o WiFi e o Bluetooth são um
+> único chip Realtek com uma só antena compartilhada em 2,4 GHz. Enquanto um controle Bluetooth está conectado e
+> em uso, o controle e o WiFi se revezam nessa antena, e o WiFi fica com só parte do tempo: downloads da Loja e
+> atualizações ficam mais lentos (num teste, cerca de 1,5 MB/s em vez de 5 MB/s). O AutoBleem avisa o WiFi
+> quando há um controle Bluetooth conectado, para que o WiFi fique com a maior parte do tempo, mas o efeito não
+> some por completo; o controle em si responde tão rápido quanto sempre. Para um download grande, desligue o
+> controle Bluetooth (segure o botão PS por uns 10 segundos) ou use um controle com cabo USB, e depois ligue o
+> controle de novo - ele se reconecta sozinho. Um Raspberry Pi ou um PC costuma ter rádios separados ou WiFi de
+> 5 GHz e não é afetado.
+
 **O assistente de controle** mostra o controle conectado bruto - cada eixo, botão e chapéu como números, e uma imagem DualShock
 que se ilumina quando você pressiona. Como o controle testado não pode ser confiável, o assistente é dirigido pelos **botões
 anteriores do console**: **RESET** passa para o próximo controle, **OPEN** inicia o mapeamento (então responde cada pergunta -

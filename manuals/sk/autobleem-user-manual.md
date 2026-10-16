@@ -729,6 +729,15 @@ systémové nástroje na Raspberry Pi / PC kľúči; sprievodca herného ovláda
 - **R1 - Controller Mapping**: sprievodca mapovaním (nižšie).
 - **Triangle - About**, **Circle - späť** do spúšťača.
 
+> **Bluetooth herné ovládače spomaľujú WiFi (PlayStation Classic).** WiFi a Bluetooth konzoly sú jeden čip
+> Realtek s jedinou spoločnou anténou v pásme 2,4 GHz. Kým je Bluetooth herný ovládač pripojený a používa sa,
+> ovládač a WiFi sa o anténu striedajú, takže WiFi dostane len časť času: sťahovanie zo Store a aktualizácie
+> sa spomalia (v teste asi 1,5 MB/s namiesto 5 MB/s). AutoBleem dá WiFi vedieť, že je pripojený Bluetooth
+> ovládač, aby WiFi dostala väčšinu času, ale úplne to odstrániť nejde; samotný ovládač reaguje rovnako rýchlo
+> ako vždy. Pred veľkým sťahovaním vypnite Bluetooth ovládač (podržte jeho tlačidlo PS asi 10 sekúnd) alebo
+> použite ovládač na USB kábli a potom ho znova zapnite - pripojí sa sám. Raspberry Pi alebo PC majú zvyčajne
+> oddelené rádiá alebo WiFi na 5 GHz a toto sa ich netýka.
+
 **Sprievodca herného ovládača** ukazuje pripojený herný ovládač surový - každá os, tlačítko
 a klobúk ako čísla a obrázok DualShock, ktorý sa rozsvietí, keď stlačíte. Pretože testovaný
 herný ovládač je neveriaci, sprievodca je riadený **tlačidlami konzoly**: **RESET** prepne

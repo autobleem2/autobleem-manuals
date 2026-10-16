@@ -681,6 +681,15 @@ mapowania pada działa wszędzie.
 - **R1 - Mapowanie pada**: kreator mapowania (poniżej).
 - **Trójkąt - O programie**, **Kółko - powrót** do launchera.
 
+> **Pady Bluetooth spowalniają WiFi (PlayStation Classic).** WiFi i Bluetooth konsoli to jeden układ Realtek
+> z jedną wspólną anteną na 2,4 GHz. Gdy pad Bluetooth jest połączony i używany, pad i WiFi korzystają z tej
+> anteny na zmianę, więc WiFi dostaje tylko część czasu: pobieranie ze Sklepu i aktualizacje zwalniają (w teście
+> ok. 1,5 MB/s zamiast 5 MB/s). AutoBleem informuje WiFi, że pad Bluetooth jest połączony, dzięki czemu WiFi
+> dostaje większość czasu, ale całkiem usunąć tego efektu się nie da; sam pad reaguje tak szybko jak zawsze.
+> Przed dużym pobieraniem wyłącz pad Bluetooth (przytrzymaj jego przycisk PS przez ok. 10 sekund) albo użyj
+> pada na kablu USB, a potem włącz pad z powrotem - połączy się sam. Raspberry Pi i PC mają zwykle osobne
+> moduły radiowe albo WiFi 5 GHz i ten problem ich nie dotyczy.
+
 **Kreator mapowania** pokazuje podłączony pad "na surowo" - każdą oś, przycisk i krzyżak jako liczby - oraz
 rysunek DualShocka, który podświetla się przy naciskaniu. Ponieważ testowanemu padowi nie można ufać,
 kreator obsługują **przednie przyciski** konsoli: **RESET** przełącza na następny pad, **OPEN** zaczyna

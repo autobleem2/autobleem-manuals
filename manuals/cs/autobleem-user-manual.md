@@ -724,6 +724,15 @@ na Raspberry Pi / PC disku; průvodce gamepádem funguje na jakémkoliv systému
 - **R1 - Controller Mapping**: průvodce mapováním (níže).
 - **Triangle - About**, **Circle - zpět** do spouštěče.
 
+> **Bluetooth pady zpomalují WiFi (PlayStation Classic).** WiFi a Bluetooth konzole jsou jeden čip Realtek
+> s jedinou společnou anténou v pásmu 2,4 GHz. Dokud je Bluetooth pad připojený a používaný, pad a WiFi se
+> o anténu střídají, takže WiFi dostane jen část času: stahování ze Store a aktualizace se zpomalí (v testu
+> asi 1,5 MB/s místo 5 MB/s). AutoBleem dá WiFi vědět, že je připojený Bluetooth pad, aby WiFi dostala většinu
+> času, ale úplně odstranit to nejde; samotný pad reaguje stejně rychle jako vždy. Před velkým stahováním
+> vypněte Bluetooth pad (podržte jeho tlačítko PS asi 10 sekund) nebo použijte pad na USB kabelu a potom pad
+> zase zapněte - připojí se sám. Raspberry Pi nebo PC mají obvykle oddělená rádia nebo WiFi na 5 GHz a to se
+> jich netýká.
+
 **Průvodce gamepádem** ukazuje připojený pad surový - každá osa, tlačítko a klobouk jako
 čísla a obrázek DualShock, který se rozsvítí, když stisknete. Protože testovaný pad nelze
 věřit, průvodce je řízen **tlačítky konzole**: **RESET** přepne na následující pad, **OPEN**

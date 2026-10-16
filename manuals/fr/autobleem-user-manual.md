@@ -696,6 +696,17 @@ clé PC ; l'assistant de manette fonctionne sur tout système.
 - **R1 - Configuration de la manette** : l'assistant de configuration (ci-dessous).
 - **Triangle - À propos**, **Circle - revenir** au lanceur.
 
+> **Les manettes Bluetooth ralentissent le WiFi (PlayStation Classic).** Sur la console, le WiFi et le Bluetooth
+> sont une seule puce Realtek avec une seule antenne partagée, sur 2,4 GHz. Tant qu'une manette Bluetooth est
+> connectée et utilisée, la manette et le WiFi se relaient sur cette antenne, et le WiFi n'en a qu'une partie
+> du temps : les téléchargements du Store et les mises à jour ralentissent (lors d'un test, environ 1,5 Mo/s au
+> lieu de 5 Mo/s). AutoBleem signale au WiFi qu'une manette Bluetooth est connectée, pour qu'il obtienne la
+> plus grande partie du temps, mais l'effet ne peut pas disparaître complètement ; la manette elle-même réagit
+> toujours aussi vite. Pour un gros téléchargement, éteignez la manette Bluetooth (maintenez sa touche PS
+> environ 10 secondes) ou utilisez une manette filaire USB, puis rallumez la manette ensuite - elle se
+> reconnecte toute seule. Un Raspberry Pi ou un PC a généralement des radios séparées ou un WiFi 5 GHz et n'est
+> pas concerné.
+
 **L'assistant de manette** affiche la manette connectée brute - chaque axe, bouton et chapeau sous forme de chiffres,
 et une image DualShock qui s'illumine quand vous appuyez. Parce que la manette testée ne peut pas être fiable,
 l'assistant est piloté par les **boutons avant de la console** : **RESET** passe à la manette suivante, **OPEN**

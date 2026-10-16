@@ -707,6 +707,16 @@ bastó PC ; l'assistant de maneta fonciona sus qualcuna sistèma.
 - **R1 - Mapeig de Maneta** : l'assistant de mapeig (avall).
 - **Triangle - A prepaus**, **Circle - tornar** al lançador.
 
+> **Las manetas Bluetooth alentisson lo WiFi (PlayStation Classic).** Sus la consòla, lo WiFi e lo Bluetooth
+> son una sola puça Realtek amb una sola antena partejada, sus 2,4 GHz. Tant qu'una maneta Bluetooth es
+> connectada e utilizada, la maneta e lo WiFi se relajan sus aquesta antena, e lo WiFi n'a pas qu'una part del
+> temps : los telecargaments de l'Store e las mesas a jorn van mai plan (pendent un tèst, environ 1,5 Mo/s
+> en luòc de 5 Mo/s). AutoBleem senhala al WiFi qu'una maneta Bluetooth es connectada, per que lo WiFi aja la
+> màger part del temps, mas l'efièch se pòt pas suprimir del tot ; la maneta ela-meteissa reagís totjorn tan
+> rapidament. Per un telecargament grand, atudatz la maneta Bluetooth (tenètz quichat son boton PS environ
+> 10 segondas) o utilizatz una maneta amb fial USB, puèi tornatz alucar la maneta - se reconnècta tota sola.
+> Un Raspberry Pi o un PC a generalament de ràdios separadas o un WiFi 5 GHz e es pas concernit.
+
 **L'assistant de maneta** aficha la maneta connectada en cru - cada ax, boton e sòth coma numèrs, e una
 pictura DualShock qu'o s'illumina quand quichatz. Perque la maneta bas test se pòt pas fiançar, l'assistant
 se conducís per los **botons de davant de la consòla** : **REINICIALIZAR** se cambe vers la maneta segenta,

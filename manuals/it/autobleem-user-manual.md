@@ -676,6 +676,16 @@ guidata del controller funziona su qualsiasi sistema.
 - **R1 - Mappatura controller**: la procedura guidata di mappatura (sotto).
 - **Triangle - Informazioni**, **Circle - torna indietro** al launcher.
 
+> **I controller Bluetooth rallentano il WiFi (PlayStation Classic).** Sulla console WiFi e Bluetooth sono un
+> unico chip Realtek con una sola antenna condivisa a 2,4 GHz. Finché un controller Bluetooth è collegato e in
+> uso, il controller e il WiFi si alternano su quell'antenna, quindi il WiFi ha solo una parte del tempo: i
+> download dal Negozio e gli aggiornamenti rallentano (in una prova, circa 1,5 MB/s invece di 5 MB/s). AutoBleem
+> avvisa il WiFi quando è collegato un controller Bluetooth, così il WiFi ottiene la maggior parte del tempo, ma
+> l'effetto non si può eliminare del tutto; il controller in sé risponde veloce come sempre. Per un download
+> grande spegni il controller Bluetooth (tieni premuto il suo tasto PS per circa 10 secondi) o usa un controller
+> con cavo USB, e poi riaccendi il controller: si ricollega da solo. Un Raspberry Pi o un PC di solito hanno
+> radio separate o WiFi a 5 GHz e non ne risentono.
+
 **La procedura guidata del controller** mostra il controller collegato grezzo - ogni asse, pulsante e cappello come
 numeri, e un'immagine DualShock che si illumina quando premi. Poiché il controller testato non può essere attendibile,
 la procedura guidata è gestita dai **pulsanti anteriori della console**: **RESET** passa al controller successivo,

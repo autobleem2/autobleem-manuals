@@ -650,6 +650,15 @@ ve bağlı her kontrolcü bir düğme eşleştirmesi olup olmadığı. Ağ ve Bl
 - **R1 - Kontrolcü Eşlemesi**: eşleme sihirbazı (aşağı).
 - **Triangle - Hakkında**, **Circle - başlatıcıya geri**.
 
+> **Bluetooth pad'ler WiFi'yi yavaşlatır (PlayStation Classic).** Konsolda WiFi ve Bluetooth, 2,4 GHz'de tek bir
+> ortak anteni olan tek bir Realtek çiptir. Bir Bluetooth pad bağlı ve kullanımdayken pad ve WiFi bu anteni
+> sırayla kullanır, bu yüzden WiFi zamanın yalnızca bir kısmını alır: Store indirmeleri ve güncellemeler
+> yavaşlar (bir testte 5 MB/s yerine yaklaşık 1,5 MB/s). AutoBleem bir Bluetooth pad bağlandığında bunu WiFi'ye
+> bildirir, böylece WiFi zamanın büyük kısmını alır, ancak etki tamamen ortadan kaldırılamaz; pad'in kendisi her
+> zamanki kadar hızlı tepki verir. Büyük bir indirme için Bluetooth pad'i kapatın (PS düğmesini yaklaşık 10
+> saniye basılı tutun) ya da USB kablolu bir pad kullanın, sonra pad'i yeniden açın - kendiliğinden yeniden
+> bağlanır. Raspberry Pi veya PC'de genellikle ayrı radyolar ya da 5 GHz WiFi bulunur ve bunlar etkilenmez.
+
 **Gamepad sihirbazı** bağlı pad'ı ham gösterir - her eksen, düğme ve şapka sayılar olarak ve DualShock resmi
 basarken aydınlanan şekilde. Test altındaki pad güvenilir olmadığından, sihirbaz konsolun **ön düğmeleri**
 tarafından yönetilir: **RESET** sonraki pad'a geçer, **OPEN** eşlemeyi başlatır (sonra her soru cevapla - resimde

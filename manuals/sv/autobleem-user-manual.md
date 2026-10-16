@@ -677,6 +677,16 @@ Raspberry Pi / PC-stickan; styrenhetsguiden fungerar på vilket system som helst
 - **R1 - Controller Mapping**: kartläggningsguiden (nedan).
 - **Triangle - About**, **Circle - back** till startaren.
 
+> **Bluetooth-styrenheter gör WiFi långsammare (PlayStation Classic).** Konsolens WiFi och Bluetooth är ett
+> enda Realtek-chip med en gemensam antenn på 2,4 GHz. Medan en Bluetooth-styrenhet är ansluten och används
+> turas styrenheten och WiFi om att använda antennen, så WiFi får bara en del av tiden: nedladdningar från
+> Store och uppdateringar går långsammare (i ett test ca 1,5 MB/s i stället för 5 MB/s). AutoBleem talar om för
+> WiFi när en Bluetooth-styrenhet är ansluten, så att WiFi får det mesta av tiden, men effekten går inte att ta
+> bort helt; själva styrenheten reagerar lika snabbt som alltid. Inför en stor nedladdning kan du stänga av
+> Bluetooth-styrenheten (håll in dess PS-knapp i ungefär 10 sekunder) eller använda en styrenhet med USB-kabel,
+> och sedan slå på den igen - den ansluter av sig själv. En Raspberry Pi eller en PC har oftast separata radioer
+> eller WiFi på 5 GHz och påverkas inte.
+
 **Styrenhetsguiden** visar den anslutna styrenheten rå - varje axel, knapp och hatt som siffror, och en
 DualShock-bild som lyser upp när du trycker. Eftersom styrenheten under test inte kan litas på, drivs
 guiden av konsolens **framknapparna**: **RESET** växlar till nästa styrenhet, **OPEN** startar kartläggningen
